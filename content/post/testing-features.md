@@ -9,6 +9,8 @@ this is body text for a
 
 ## second header
 
+![Example image](/static/images/test_image.png)
+
 ### and a third
 
 ```python

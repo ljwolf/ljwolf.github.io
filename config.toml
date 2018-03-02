@@ -1,4 +1,4 @@
-baseurl = "/posts/"
+baseurl = "/"
 title = "Yet Another Geographer"
 copyright = ""
 languageCode = "en-US"
@@ -16,17 +16,23 @@ pygmentsStyle = "monokai" # other dark style options: vim, fruity, monokai
 # enable syntax highlight for code blocks
 pygmentsCodeFences = true
 
-[[menu.main]]
-  name = "Posts"
-  weight = -120
-  identifier = "post"
-  url = "/post/"
+#[[menu.main]]
+#  name = "Posts"
+#  weight = -120
+#  identifier = "post"
+#  url = "/posts/"
+
+#[[menu.main]]
+#  name = "Tags"
+#  weight = -110
+#  identifier = "tag"
+#  url = "/tags/"
 
 [[menu.main]]
-  name = "Tags"
-  weight = -110
-  identifier = "tag"
-  url = "/tags/"
+    name = "Spatial@UChicago"
+    weight = -120
+    identifier = "uchicago"
+    url = "https://spatial.uchicago.edu"
 
 [author]
   name = ""
@@ -36,10 +42,10 @@ pygmentsCodeFences = true
   description = "Personal blog."
 
 [params]
-  email = "myemail"
-  github = "github id"
+  #email = "myemail"
+  #github = "github id"
   #gitlab = "gitlab id"
-  twitter = "twitter id"
+  #twitter = "twitter id"
   #linkedin = "linkedin id"
 
 [params.colors]
