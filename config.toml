@@ -56,7 +56,7 @@ pygmentsCodeFences = true
     name = " UCR |  "
     weight = -160
     identifier = "ucr"
-    url = "https://spatial.uchicago.edu"
+    url = "https://spatial.ucr.edu"
 
 [[menu.main]]
     name = " Talks | "
