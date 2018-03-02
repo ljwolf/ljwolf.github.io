@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>But Definitely Not All the Way on Yet Another Geographer</title>
+    <link>/tags/but-definitely-not-all-the-way/</link>
+    <description>Recent content in But Definitely Not All the Way on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 23 Jun 2016 20:59:03 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/but-definitely-not-all-the-way/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Partially Applied classes with __new__</title>
+      <link>/partially-applied-classes-with-new/</link>
+      <pubDate>Thu, 23 Jun 2016 20:59:03 +0000</pubDate>
+      
+      <guid>/partially-applied-classes-with-new/</guid>
+      <description>Python’s got some pretty cool ways to enable unorthodox behavior. For my project, I’ve found myself writing a lot of closures around our existing class init functions, and have decided it might be easier &amp;amp; more consistent to express this as what it really is: partial application. Partial application is pretty simple to enable for python class constructors, since the separate new method allows you to construct closures around initialization routines.</description>
+    </item>
+    
+  </channel>
+</rss>

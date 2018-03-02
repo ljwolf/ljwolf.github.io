@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graphics on Yet Another Geographer</title>
+    <link>/tags/graphics/</link>
+    <description>Recent content in Graphics on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 10 Oct 2016 19:25:04 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/graphics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/every-time-i-use-a-sixel-based-library-it-just/</link>
+      <pubDate>Mon, 10 Oct 2016 19:25:04 +0000</pubDate>
+      
+      <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
+      <description>Photo Caption: every time I use a sixel-based library, it just feels super neat. Sixel is a terminal image format that you can use to show images straight in a command line. Since it’s actually just an image encoded in a terminal escape sequence, there’s no futzing with X11 window forwarding. 
+While the format is occasionally buggy when displaying complex images, the ability to quickly work with models and display full images directly inline with the ipython qtconsole is just amazing.</description>
+    </item>
+    
+  </channel>
+</rss>

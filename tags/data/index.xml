@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Yet Another Geographer</title>
+    <link>/tags/data/</link>
+    <description>Recent content in Data on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 11 Jun 2015 15:58:41 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cenpy is now pip installable!</title>
+      <link>/cenpy-is-now-pip-installable/</link>
+      <pubDate>Thu, 11 Jun 2015 15:58:41 +0000</pubDate>
+      
+      <guid>/cenpy-is-now-pip-installable/</guid>
+      <description>pip install cenpy
+Check it out on github or its demo notebook on nbviewer.
+yetanothergeographer:
+ CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/so-say-youre-working-with-two-states/</link>
+      <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
+      
+      <guid>/so-say-youre-working-with-two-states/</guid>
+      <description>Photo Caption: So, say you&amp;rsquo;re working with two state&amp;rsquo;s congressional data. All of it&amp;rsquo;s been cleaned and made through a list comprehension and write statement in python using pandas. Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail.</description>
+    </item>
+    
+  </channel>
+</rss>

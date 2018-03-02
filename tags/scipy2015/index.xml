@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scipy2015 on Yet Another Geographer</title>
+    <link>/tags/scipy2015/</link>
+    <description>Recent content in Scipy2015 on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 13 Jul 2015 21:36:32 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/scipy2015/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>I have written more code in the day after SciPy</title>
+      <link>/i-have-written-more-code-in-the-day-after-scipy/</link>
+      <pubDate>Mon, 13 Jul 2015 21:36:32 +0000</pubDate>
+      
+      <guid>/i-have-written-more-code-in-the-day-after-scipy/</guid>
+      <description>Than in the time I was in Austin. But, importantly, this isn&amp;rsquo;t measured by line count. It&amp;rsquo;s measured by what it&amp;rsquo;s (hopefully) replacing 😀😀
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Gearing up for the last day of SciPy 2015</title>
+      <link>/gearing-up-for-the-last-day-of-scipy-2015/</link>
+      <pubDate>Sun, 12 Jul 2015 00:22:13 +0000</pubDate>
+      
+      <guid>/gearing-up-for-the-last-day-of-scipy-2015/</guid>
+      <description>It&amp;rsquo;ll be a good one
+ imported from: yetanothergeographer</description>
+    </item>
+    
+  </channel>
+</rss>

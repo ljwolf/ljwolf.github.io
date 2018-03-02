@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python 3 on Yet Another Geographer</title>
+    <link>/tags/python-3/</link>
+    <description>Recent content in Python 3 on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 30 Jul 2015 20:17:38 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/python-3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On the subject of porting,</title>
+      <link>/on-the-subject-of-porting/</link>
+      <pubDate>Thu, 30 Jul 2015 20:17:38 +0000</pubDate>
+      
+      <guid>/on-the-subject-of-porting/</guid>
+      <description>On this, the first few minutes of Guido&amp;rsquo;s PyCon Keynote really hit home.
+ Yes you should all be using Python 3, and I know that you all want to, but I know it&amp;rsquo;s difficult. You all have large amounts of Python 2 code in production that you&amp;rsquo;ve ported to Python 2.7.9 &amp;hellip; but the step to Python 3 from there is still phenomenal.
+You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s from long integers.</description>
+    </item>
+    
+    <item>
+      <title>Reflections on a hard-won win for PySAL</title>
+      <link>/reflections-on-a-hard-won-win-for-pysal/</link>
+      <pubDate>Mon, 27 Jul 2015 21:10:56 +0000</pubDate>
+      
+      <guid>/reflections-on-a-hard-won-win-for-pysal/</guid>
+      <description>As a way to learn Python (and I mean really come to know it), I took on the project of converting PySAL to be compatible with Python 3.
+I started work on this two years ago. A tentative candidate for release is available in my fork
+Now, I’m glad I did this. I still worry about the day when Apple decides to ship the next OSX (Half Moon Bay? Big Sur?</description>
+    </item>
+    
+  </channel>
+</rss>

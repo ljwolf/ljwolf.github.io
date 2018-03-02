@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>See I Wont Forget to Tag It This Time on Yet Another Geographer</title>
+    <link>/tags/see-i-wont-forget-to-tag-it-this-time/</link>
+    <description>Recent content in See I Wont Forget to Tag It This Time on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 25 Jul 2016 02:52:31 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/see-i-wont-forget-to-tag-it-this-time/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Post-SciPy Chicago Update</title>
+      <link>/a-post-scipy-chicago-update/</link>
+      <pubDate>Mon, 25 Jul 2016 02:52:31 +0000</pubDate>
+      
+      <guid>/a-post-scipy-chicago-update/</guid>
+      <description>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&amp;rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&amp;rsquo;ve had in the library recently.
+I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on handling burnout as a graduate student. But, I&amp;rsquo;ve been forgetting to tag posts so that they&amp;rsquo;d show up in the GSOC aggregator!</description>
+    </item>
+    
+  </channel>
+</rss>

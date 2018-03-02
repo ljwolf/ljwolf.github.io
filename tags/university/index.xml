@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>University on Yet Another Geographer</title>
+    <link>/tags/university/</link>
+    <description>Recent content in University on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 06 Feb 2014 02:48:16 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/university/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Time Management or Fortitude</title>
+      <link>/time-management-or-fortitude/</link>
+      <pubDate>Thu, 06 Feb 2014 02:48:16 +0000</pubDate>
+      
+      <guid>/time-management-or-fortitude/</guid>
+      <description>Sometimes, graduate school seems like it&amp;rsquo;s less about time management than it is about fortitude.
+The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;rsquo;ve been so busy, though, had I decided not to go to a concert I really had wanted to go to. So, I stuck out an amazing show, turned around after PBR and punk rock, and banged out 1000 words, a presentation, a proposal draft, took three classes, gave two presentations, and spent 5 hours formalizing an algorithm for a draft due Friday.</description>
+    </item>
+    
+    <item>
+      <title>Initialization</title>
+      <link>/initialization/</link>
+      <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
+      
+      <guid>/initialization/</guid>
+      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
+1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
+2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+    </item>
+    
+  </channel>
+</rss>

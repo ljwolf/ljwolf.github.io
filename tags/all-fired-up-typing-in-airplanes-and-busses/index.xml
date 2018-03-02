@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>All Fired Up Typing in Airplanes and Busses on Yet Another Geographer</title>
+    <link>/tags/all-fired-up-typing-in-airplanes-and-busses/</link>
+    <description>Recent content in All Fired Up Typing in Airplanes and Busses on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 13 Jul 2015 21:36:32 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/all-fired-up-typing-in-airplanes-and-busses/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>I have written more code in the day after SciPy</title>
+      <link>/i-have-written-more-code-in-the-day-after-scipy/</link>
+      <pubDate>Mon, 13 Jul 2015 21:36:32 +0000</pubDate>
+      
+      <guid>/i-have-written-more-code-in-the-day-after-scipy/</guid>
+      <description>Than in the time I was in Austin. But, importantly, this isn&amp;rsquo;t measured by line count. It&amp;rsquo;s measured by what it&amp;rsquo;s (hopefully) replacing 😀😀
+ imported from: yetanothergeographer</description>
+    </item>
+    
+  </channel>
+</rss>

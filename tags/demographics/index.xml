@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demographics on Yet Another Geographer</title>
+    <link>/tags/demographics/</link>
+    <description>Recent content in Demographics on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 16 Jun 2015 15:27:27 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/demographics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cenpy Big Query</title>
+      <link>/cenpy-big-query/</link>
+      <pubDate>Tue, 16 Jun 2015 15:27:27 +0000</pubDate>
+      
+      <guid>/cenpy-big-query/</guid>
+      <description>If you’ve been using my tools for census data exploration, as intensely as I&amp;rsquo;d hope you have, you might’ve noticed that the Census limits queries to 50 columns per query.
+I’ve got your back, though. The newest release, cenpy 0.7, now supports n-column queries by chunking through 50-coulumns at a time. Be careful, though, as I&amp;rsquo;m sure if you pull down the entire Census 2010 short form in one go, you will probably get rate limited.</description>
+    </item>
+    
+  </channel>
+</rss>

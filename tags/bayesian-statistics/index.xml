@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayesian Statistics on Yet Another Geographer</title>
+    <link>/tags/bayesian-statistics/</link>
+    <description>Recent content in Bayesian Statistics on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 29 Sep 2016 00:13:20 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bayesian-statistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
+      <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
+      
+      <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
+      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
+ imported from: yetanothergeographer </description>
+    </item>
+    
+    <item>
+      <title>The importance of centering variables</title>
+      <link>/the-importance-of-centering-variables/</link>
+      <pubDate>Mon, 26 Sep 2016 01:32:56 +0000</pubDate>
+      
+      <guid>/the-importance-of-centering-variables/</guid>
+      <description>So, maybe this is part of the learning experience of developing applied intuition, but I never really appreciated how important it is to center your variables, especially when dealing with finicky models like simultaneous autoregressive models common in spatial econometrics.
+The following are three traces from a spatial econometric model, the spatial lag model, on some example data. 
+The first one hasn’t centered its variables. The lag coefficient is trying very hard to escape the (-1,1) bounding on stable autoregressive coefficients.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/working-on-a-paper-about-models-that-can-have-very/</link>
+      <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
+      
+      <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
+      <description>Photo Caption: Working on a paper about models that can have very weakly-identified priors, and I see that this trace outcome pops up. This is a Spatially-Varying Coefficient Process model from Gelfand, and serves as a Bayesian equivalent to GWR. Surprisingly (to me) is that the covariance matrix between the hierarchical effects is not at all affected by the spatial range parameter, Phi. The reason why this surprises me is that in other HLM contexts, like variance components models with spatial effects, the spatial and aspatial components of the covariance matrix are inversely related, and it’s really easy to derive that.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
+      <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
+      
+      <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
+      <description>Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
+Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
+    </item>
+    
+    <item>
+      <title>A Short Realization on Gelman-King (1994)</title>
+      <link>/a-short-realization-on-gelman-king-1994/</link>
+      <pubDate>Fri, 12 Sep 2014 04:01:00 +0000</pubDate>
+      
+      <guid>/a-short-realization-on-gelman-king-1994/</guid>
+      <description>Elections, Bayes, and one realization about the Gelman-King Model People make a lot of hay out of the rise of Nate Silver and Bayesian poll averaging when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&amp;rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. Gelman-King (1994)&amp;rsquo;s model Say, for instance, we&amp;rsquo;re examining some vector of electoral outcomes, (y) given some predictor matrix (\mathbf{X}).</description>
+    </item>
+    
+  </channel>
+</rss>

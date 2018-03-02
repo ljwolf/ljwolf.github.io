@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gerrymandering on Yet Another Geographer</title>
+    <link>/tags/gerrymandering/</link>
+    <description>Recent content in Gerrymandering on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 05 Jul 2017 18:56:45 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/gerrymandering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/i-think-thisll-end-up-being-the-big-story-from-my/</link>
+      <pubDate>Wed, 05 Jul 2017 18:56:45 +0000</pubDate>
+      
+      <guid>/i-think-thisll-end-up-being-the-big-story-from-my/</guid>
+      <description>Photo Caption: I think this’ll end up being the big story from my dissertation:
+District shape isn’t at all related to political impact (in aggregate) when it comes to redistricting.
+While some weird districts may exist and those may be gerrymandered, the relationship is not statistically sound in aggregate: weird districts might be completely benign, in terms of the partisan advantage measures I’m considereding my dissertation &amp;amp; other classical measures of model influence.</description>
+    </item>
+    
+    <item>
+      <title>Making Sense of NMMI</title>
+      <link>/making-sense-of-nmmi/</link>
+      <pubDate>Wed, 29 Oct 2014 05:36:00 +0000</pubDate>
+      
+      <guid>/making-sense-of-nmmi/</guid>
+      <description>The Normalized Mass Moment of Inertia proposed by Li et al (2013) is deceptively hard to express. Given some shape and a distribution of attributes around the shape, they state the NMMI ratio in Fan et al (forthcoming) as:
+$$NMMI = \frac{I_O^&amp;rsquo;} {I^{G_i}_{i_mass}}$$
+where $I$ represents the area-standardized mass moment of inertia. The $O$ subscript denotes that the numerator is the mass moment of inertia of some null reference shape. I will discuss the denominator later.</description>
+    </item>
+    
+  </channel>
+</rss>

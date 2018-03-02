@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spatial Econometrics on Yet Another Geographer</title>
+    <link>/tags/spatial-econometrics/</link>
+    <description>Recent content in Spatial Econometrics on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 24 Mar 2017 15:52:55 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/spatial-econometrics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spatial Econometric HMC in Python</title>
+      <link>/spatial-econometric-hmc-in-python/</link>
+      <pubDate>Fri, 24 Mar 2017 15:52:55 +0000</pubDate>
+      
+      <guid>/spatial-econometric-hmc-in-python/</guid>
+      <description>I almost forgot to mention this here: I’ve put up code on how to use some common spatial econometric models in Stan and PyMC3. For PyMC3, the implementations provide two methods that make the evaluation of thelikelihood very fast when compared to PyMC3′s native logdet function. These two methods are implemented as custom theano ops that are cache some information to improve the speed of the gradient evaluation. One uses sparse LU factorization to provides the log determinant very quickly without precomputation.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -50,11 +50,11 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
 
 <meta itemprop="datePublished" content="2016-09-26T01:32:56&#43;00:00" />
 <meta itemprop="dateModified" content="2016-09-26T01:32:56&#43;00:00" />
-<meta itemprop="wordCount" content="272">
+<meta itemprop="wordCount" content="265">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="geography, statistics, estimation, markov chain monte carlo, bayesian statistics,imported," />
 
 
 <link rel="stylesheet" href="css/layout.css" />
@@ -178,14 +178,39 @@ th {
 
 <article class="post">
     <h1 class="title"> The importance of centering variables </h1>
-    <div class="content"> <p><p>So, maybe this is part of the learning experience of developing applied intuition, but I never really appreciated <i>how </i>important it is to center your variables, especially when dealing with finicky models like simultaneous autoregressive models common in spatial econometrics.</p><p>The following are three traces from a spatial econometric model, the spatial lag model, on some example data. <br/></p><p>The first one hasn’t centered its variables. The lag coefficient is trying very hard to escape the (-1,1) bounding on stable autoregressive coefficients. While the other parameters look alright, you’d clearly look into misspecification checks here. </p><figure data-orig-width="1024" data-orig-height="756" class="tmblr-full"><img src="http://78.media.tumblr.com/8c1d58ecdc80023736d49c9f3f36524c/tumblr_inline_oe3it8aKIS1qeher0_540.png" alt="image" data-orig-width="1024" data-orig-height="756"/></figure><p>Removing the bounding, you find that Rho gravitates towards ~1.01, and the rest of the parameters still hit their mark&hellip; this is hard to square. The movement of that Rho parameter still is pretty bad, and there’s no accompanying movement in the other substantive parameters. </p><figure data-orig-width="1021" data-orig-height="736" class="tmblr-full"><img src="http://78.media.tumblr.com/f3092741f9d3ed075d8d0bac36d406b8/tumblr_inline_oe3izhzJaY1qeher0_540.png" alt="image" data-orig-width="1021" data-orig-height="736"/></figure><p>But, if you center the response, everything looks sane. Here, since I know the true mean and the MLE estimate, Rho looks okay. While it’s underestimating the spatial effect, the MLE is centered right at the mode of Rho, too. And, since I’m using a flat prior, that’s to be expected with this model. </p><figure data-orig-width="1008" data-orig-height="738" class="tmblr-full"><img src="http://78.media.tumblr.com/5d148bdc20553852c89eb767f4274c6c/tumblr_inline_oe3j19OGbj1qeher0_540.png" alt="image" data-orig-width="1008" data-orig-height="738"/></figure><p>It’s pretty weird to me. While people recommend you center responses and covariates sometimes when dealing with models in a maximum likelihood context, I’ve never found it to be <i>that </i>profound. But, in this context, the model goes from <b>something is really wrong</b> to <b>this looks alright</b>. Anecdotally, MCMC techniques seem to be sensitive to different kinds of ill-conditioning than what I’m used to in the classical econometric case. </p>
-Tags: geography, statistics, estimation, markov chain monte carlo, bayesian statistics</p>
+    <div class="content"> <p>So, maybe this is part of the learning experience of developing applied intuition, but I never really appreciated <i>how </i>important it is to center your variables, especially when dealing with finicky models like simultaneous autoregressive models common in spatial econometrics.</p><p>The following are three traces from a spatial econometric model, the spatial lag model, on some example data. <br/></p><p>The first one hasn’t centered its variables. The lag coefficient is trying very hard to escape the (-1,1) bounding on stable autoregressive coefficients. While the other parameters look alright, you’d clearly look into misspecification checks here. </p><figure data-orig-width="1024" data-orig-height="756" class="tmblr-full"><img src="http://78.media.tumblr.com/8c1d58ecdc80023736d49c9f3f36524c/tumblr_inline_oe3it8aKIS1qeher0_540.png" alt="image" data-orig-width="1024" data-orig-height="756"/></figure><p>Removing the bounding, you find that Rho gravitates towards ~1.01, and the rest of the parameters still hit their mark&hellip; this is hard to square. The movement of that Rho parameter still is pretty bad, and there’s no accompanying movement in the other substantive parameters. </p><figure data-orig-width="1021" data-orig-height="736" class="tmblr-full"><img src="http://78.media.tumblr.com/f3092741f9d3ed075d8d0bac36d406b8/tumblr_inline_oe3izhzJaY1qeher0_540.png" alt="image" data-orig-width="1021" data-orig-height="736"/></figure><p>But, if you center the response, everything looks sane. Here, since I know the true mean and the MLE estimate, Rho looks okay. While it’s underestimating the spatial effect, the MLE is centered right at the mode of Rho, too. And, since I’m using a flat prior, that’s to be expected with this model. </p><figure data-orig-width="1008" data-orig-height="738" class="tmblr-full"><img src="http://78.media.tumblr.com/5d148bdc20553852c89eb767f4274c6c/tumblr_inline_oe3j19OGbj1qeher0_540.png" alt="image" data-orig-width="1008" data-orig-height="738"/></figure><p>It’s pretty weird to me. While people recommend you center responses and covariates sometimes when dealing with models in a maximum likelihood context, I’ve never found it to be <i>that </i>profound. But, in this context, the model goes from <b>something is really wrong</b> to <b>this looks alright</b>. Anecdotally, MCMC techniques seem to be sensitive to different kinds of ill-conditioning than what I’m used to in the classical econometric case. </p>
+
+<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/150949047464/the-importance-of-centering-variables'<tt>yetanothergeographer</tt></a></small></p>
  </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">
     
 <div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/geography">#geography</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/statistics"># statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/estimation"># estimation</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/markov-chain-monte-carlo"># markov chain monte carlo</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/bayesian-statistics"># bayesian statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
     
 </div>
 

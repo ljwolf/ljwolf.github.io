@@ -50,11 +50,11 @@ But, in doing two small tests/stabs at refactoring for speed &amp; memory usage,
 
 <meta itemprop="datePublished" content="2016-02-16T00:09:02&#43;00:00" />
 <meta itemprop="dateModified" content="2016-02-16T00:09:02&#43;00:00" />
-<meta itemprop="wordCount" content="1218">
+<meta itemprop="wordCount" content="1213">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="tanstaafl, optimization, python, gis, foss, learning, studyblr,imported," />
 
 
 <link rel="stylesheet" href="css/layout.css" />
@@ -221,18 +221,51 @@ Since I’d talked to a few other grad students recently about how to write fast
 
 <p>So, before I consider this type of testing for what I’m calling “deadlift” optimization, I’ll remind myself of three things:</p>
 
-<p><ol><li><strong><em>Is this something that a user is going to encounter often enough to make it painfully slow?</em></strong> If you can optimize an obscure part of the code, you should probably be doing something more important (like working on your dissertation :)</li>
+<ol><li><strong><em>Is this something that a user is going to encounter often enough to make it painfully slow?</em></strong> If you can optimize an obscure part of the code, you should probably be doing something more important (like working on your dissertation :)</li>
 <li><strong><em>Is the optimization suggested enough for a user to notice?</em></strong> The difference between ~900 seconds and ~800 seconds seems like a lot. But, if you’re getting a coffee while the routine completes anyway, it’s not clear to me whether that tradeoff is important. Since you’re more likely to gain significant optimization advantages from using any of the type/compile-based optimizers anyway, I wonder whether it’s a waste of time to optimize the pure-python implementation, unless there’s an indirect benefit (i.e. learning) or the code is <em>that</em> critical where the circumstance should obviate this question.</li>
 <li><strong><em>Is the optimization suggested easier to maintain than a static/type-based compiling version in Cython/Numba?</em></strong> In general, it’s undesirable to have separate, faster implementations that rely on extra dependencies. But, before chasing the performance dragon, you should really consider whether a compile-based solution would get you where your operational constraints are pushing you to be.</li>
 <li><strong><em>Is the optimization potentially fast enough to warrant reimplementation?</em></strong> This is possibly the least important, and with stuff like <a href="https://github.com/joealcorn/laboratory" target="_blank">laboratory</a>, I’m hoping it continues to recede. But, again, you don’t want to spend more time than I did to realize a speedup smaller than 1.13X like I found.</li>
 </ol>
-Tags: tanstaafl, optimization, python, GIS, FOSS, learning, studyblr</p>
+
+<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/139404598754/a-bite-of-a-free-lunch-optimizing-numerical'<tt>yetanothergeographer</tt></a></small></p>
  </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">
     
 <div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/tanstaafl">#tanstaafl</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/optimization"># optimization</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/python"># python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/gis"># gis</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/foss"># foss</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/learning"># learning</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/studyblr"># studyblr</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
     
 </div>
 

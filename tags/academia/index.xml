@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academia on Yet Another Geographer</title>
+    <link>/tags/academia/</link>
+    <description>Recent content in Academia on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 25 Oct 2016 19:53:11 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/academia/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yet another elections simulator</title>
+      <link>/yet-another-elections-simulator/</link>
+      <pubDate>Tue, 25 Oct 2016 19:53:11 +0000</pubDate>
+      
+      <guid>/yet-another-elections-simulator/</guid>
+      <description>After reading Wasserman’s 2012 blog post about mixture models, I’m glad that I’ve finally figured out &amp;amp; implemented the Gelman-King 1994 electoral model as well. Based on pretty straghtforward regression modeling, the setup trades the representational simplicity of the Linzer GMM model for a much more complex modeling structure, but that I guess provides better guarantees about its own properties. Regardless, it’s a bummer that these guys stuff, theLinzer 2012 paper on simulating seats/votes curves using gaussian mixtures &amp;amp; the JudgeIt stuff for the GK1994 paper was never merged into the political science computational library.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/im-trying-to-recover-from-a-bit-of-burnout-this/</link>
+      <pubDate>Sun, 17 Jul 2016 19:27:14 +0000</pubDate>
+      
+      <guid>/im-trying-to-recover-from-a-bit-of-burnout-this/</guid>
+      <description>I’m trying to recover from a bit of burnout. This summer, I’m ostensibly double-booked, working on a Google Summer of Code project in addition to a project with the new Center for Spatial Data Science at the University of Chicago, and I&amp;rsquo;m still keeping up with my Dissertation &amp;amp; my involvement in the Python Spatial Analysis Library outside of my GSOC project. I just finished my comprehensives back in May, so I’m also trying to maintain momentum on my dissertation work.</description>
+    </item>
+    
+    <item>
+      <title>The “Compilation Error”Reading Technical Articles</title>
+      <link>/the-compilation-errorreading-technical-articles/</link>
+      <pubDate>Sat, 24 Oct 2015 15:20:46 +0000</pubDate>
+      
+      <guid>/the-compilation-errorreading-technical-articles/</guid>
+      <description>This article by Terrence Tao is incredibly enlightening, especially for those in technical fields.
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Things I remind myself always</title>
+      <link>/things-i-remind-myself-always/</link>
+      <pubDate>Fri, 18 Sep 2015 03:29:53 +0000</pubDate>
+      
+      <guid>/things-i-remind-myself-always/</guid>
+      <description>1. “Geography is what geographers do” - Waldo Tobler
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
+      <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
+      
+      <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
+      <description>Photo Caption: A fun little bug in my apparently outdated QGIS (version 2.2).
+I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
+At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</description>
+    </item>
+    
+    <item>
+      <title>Some New Realizations on Oooooold Material</title>
+      <link>/some-new-realizations-on-oooooold-material/</link>
+      <pubDate>Fri, 26 Sep 2014 17:40:00 +0000</pubDate>
+      
+      <guid>/some-new-realizations-on-oooooold-material/</guid>
+      <description>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression.</description>
+    </item>
+    
+    <item>
+      <title>Going to Scipy 2014</title>
+      <link>/going-to-scipy-2014/</link>
+      <pubDate>Thu, 29 May 2014 10:02:09 +0000</pubDate>
+      
+      <guid>/going-to-scipy-2014/</guid>
+      <description>anyone in Austin in July?
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Modified an existing ASU beamer template</title>
+      <link>/modified-an-existing-asu-beamer-template/</link>
+      <pubDate>Wed, 05 Mar 2014 04:14:20 +0000</pubDate>
+      
+      <guid>/modified-an-existing-asu-beamer-template/</guid>
+      <description>For SGSUP use. It’s silly the feelings of accomplishment that simple things like that provides.
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Welcome Week Tips</title>
+      <link>/welcome-week-tips/</link>
+      <pubDate>Mon, 03 Mar 2014 01:34:50 +0000</pubDate>
+      
+      <guid>/welcome-week-tips/</guid>
+      <description>So, having just completed our welcome weekend for prospective Ph.D. students, I think I might have suggestions for anyone going to one in the future.
+1. Try to have fun. It can be a wild, stressful, busy few days. But, above all, you should be trying to figure how much you like the people you&amp;rsquo;re with.
+2. Balance breadth and depth. Yes, you may want to work with only a few people, but departments are communities.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/i-guess-this-is-how-productivity-works-terminal/</link>
+      <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
+      
+      <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
+      <description>Photo Caption: I guess this is how productivity works? Terminal sessions and web browsers. Seems like nothing else is needed nowadays. Though, I guess the guys over at LightTable would beg to disagree. I tried LightTable today for some LaTeX stuff. Seems like a brilliant tool there, if things like LyX or TexStudio didn&amp;rsquo;t exist. TexStudio in particular, my choice of LaTeX editor, does a wonderful job showing the structure of the workspace in one cohesive, intuitive way.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
+      <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
+      
+      <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
+      <description>Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp;amp; Zhang&amp;rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
+A couple realizations:
+1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/went-crawling-back-into-workflowys-arms-today/</link>
+      <pubDate>Thu, 13 Feb 2014 15:35:53 +0000</pubDate>
+      
+      <guid>/went-crawling-back-into-workflowys-arms-today/</guid>
+      <description>Photo Caption: Went crawling back into workflowy&amp;rsquo;s arms today after a vailiant year-long experiment in other organizing systems.
+I simply wasn&amp;rsquo;t as efficient with others as I was with workflowy. The ease of use, the speed, the interface&amp;hellip; all superior for just a simple outlining tool.
+It&amp;rsquo;s not open source, but it&amp;rsquo;s so well designed. This kills me.
+If I could get HackFlowy working with tags and external port forwarding, I would leave.</description>
+    </item>
+    
+    <item>
+      <title>Time Management or Fortitude</title>
+      <link>/time-management-or-fortitude/</link>
+      <pubDate>Thu, 06 Feb 2014 02:48:16 +0000</pubDate>
+      
+      <guid>/time-management-or-fortitude/</guid>
+      <description>Sometimes, graduate school seems like it&amp;rsquo;s less about time management than it is about fortitude.
+The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;rsquo;ve been so busy, though, had I decided not to go to a concert I really had wanted to go to. So, I stuck out an amazing show, turned around after PBR and punk rock, and banged out 1000 words, a presentation, a proposal draft, took three classes, gave two presentations, and spent 5 hours formalizing an algorithm for a draft due Friday.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/just-shipped-my-first-draft-off-deadlined-march/</link>
+      <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
+      
+      <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
+      <description>Photo Caption: Just shipped my first draft off. Deadlined March 31, I&amp;rsquo;m kind of nervous for a couple of reasons:
+High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr.</description>
+    </item>
+    
+    <item>
+      <title>On Perpsective</title>
+      <link>/on-perpsective/</link>
+      <pubDate>Mon, 03 Feb 2014 14:00:00 +0000</pubDate>
+      
+      <guid>/on-perpsective/</guid>
+      <description>Trying to express an area of specialization is surprisingly difficult. But, these exercises in perspective-stretching are important to realize the limits to both your knowledge and the knowledge at the frontier of research. When intently focused on the smallest of details about the implementation of an out-of-kilter algorithm, it&amp;rsquo;s easy to forget that, while it&amp;rsquo;s hard to figure out how to implement a stochastic constraint solver in Haskell, there are broader problems.</description>
+    </item>
+    
+    <item>
+      <title>Initialization</title>
+      <link>/initialization/</link>
+      <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
+      
+      <guid>/initialization/</guid>
+      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
+1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
+2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+    </item>
+    
+  </channel>
+</rss>

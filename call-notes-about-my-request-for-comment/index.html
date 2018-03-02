@@ -13,8 +13,7 @@
 <base href="/" />
 <meta property="og:title" content="Call notes about my Request for Comment" />
 <meta property="og:description" content="The followng were comments I recieved on my Request for Comment submitted a bit ago.
-Questions about Request for Comment:
-What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged." />
+Questions about Request for Comment: What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/call-notes-about-my-request-for-comment/" />
 
@@ -37,24 +36,22 @@ What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This i
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Call notes about my Request for Comment"/>
 <meta name="twitter:description" content="The followng were comments I recieved on my Request for Comment submitted a bit ago.
-Questions about Request for Comment:
-What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged."/>
+Questions about Request for Comment: What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged."/>
 
 
 
 <meta itemprop="name" content="Call notes about my Request for Comment">
 <meta itemprop="description" content="The followng were comments I recieved on my Request for Comment submitted a bit ago.
-Questions about Request for Comment:
-What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged.">
+Questions about Request for Comment: What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged.">
 
 
 <meta itemprop="datePublished" content="2016-05-25T04:23:38&#43;00:00" />
 <meta itemprop="dateModified" content="2016-05-25T04:23:38&#43;00:00" />
-<meta itemprop="wordCount" content="256">
+<meta itemprop="wordCount" content="255">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="gsoc, gis, python,imported," />
 
 
 <link rel="stylesheet" href="css/layout.css" />
@@ -180,10 +177,10 @@ th {
     <h1 class="title"> Call notes about my Request for Comment </h1>
     <div class="content"> <p>The followng were comments I recieved on my <a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Request for Comment</a> submitted a bit ago.</p>
 
-<p><ul><li>Questions about <a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Request for
-Comment</a>:</p>
+<ul><li>Questions about <a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Request for
+Comment</a>:
 
-<p><ul><li>What should I prioritize? NOGR or Labeled Array Interface?</li>
+<ul><li>What should I prioritize? NOGR or Labeled Array Interface?</li>
 <li>Labeled Array. This is critical to get correct, and will make NOGR need
 and scope clearer.</li>
 <li>How deep into PySAL should the Labeled Array interface go?</li>
@@ -198,23 +195,23 @@ get flagged with a depwarning.</li>
 <li>If the tabular IO is smooth and works parallel to the older interface,
 then throw a deprecation warning on the FileIO components.</li>
 </ul></li>
-<li>Deliverables in the medium term (targeting midterm eval for GSOC):</p>
+<li>Deliverables in the medium term (targeting midterm eval for GSOC):
 
-<p><ul><li>Two Contrib Modules:</li>
+<ul><li>Two Contrib Modules:</li>
 <li>GeoTable: interfaces between PySAL labeled arrays &amp; Geopandas arrays</li>
 <li>Pdio: extend and improve tabular interface already in PySAL</li>
 <li>Some work in core:</li>
-<li>Polymorphic weights constructors</p>
+<li>Polymorphic weights constructors
 
-<p><ul><li>i.e. work on any arbitrary iterable of shapes</li>
+<ul><li>i.e. work on any arbitrary iterable of shapes</li>
 <li>return correct weights object from the iterable</li>
 <li>possibly indexed by a second collection of indices</li>
 </ul></li>
 <li>Revamp &amp; scaffold new IO system revolving around multiple alternative
-packages &amp; their drivers:</p>
+packages &amp; their drivers:
 
-<p><ul><li>expose all pandas <code>read<em></code> functions</li>
-<li>ensure pysal objects get serialized correctly into wkb/wkt by <code>to</em></code> on
+<ul><li>expose all pandas <code>read_</code> functions</li>
+<li>ensure pysal objects get serialized correctly into wkb/wkt by <code>to_</code> on
 dataframes</li>
 <li>wrap Fiona &amp; geopandas constructors to provide identical output to
 pdio.read_files</li>
@@ -224,13 +221,30 @@ pdio.read_files</li>
 <li>Investigate possibility of serializing with Libfeather (remote, if time
 remaining)</li>
 </ul>
-Tags: gsoc, gis, python</p>
+
+<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/144898901434/call-notes-about-my-request-for-comment'<tt>yetanothergeographer</tt></a></small></p>
  </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">
     
 <div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/gsoc">#gsoc</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/gis"># gis</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/python"># python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
     
 </div>
 

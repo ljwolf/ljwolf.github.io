@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Long Form on Yet Another Geographer</title>
+    <link>/tags/long-form/</link>
+    <description>Recent content in Long Form on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 28 Jun 2017 17:18:34 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/long-form/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Some thoughts on “Rise of the Thought Leader”</title>
+      <link>/some-thoughts-on-rise-of-the-thought-leader/</link>
+      <pubDate>Wed, 28 Jun 2017 17:18:34 +0000</pubDate>
+      
+      <guid>/some-thoughts-on-rise-of-the-thought-leader/</guid>
+      <description>This is a great article on the corporatization of the intellectual, or really the origin of the &amp;ldquo;thought leader&amp;rdquo; by David Sessions. An illumination of Dan Drezner&amp;rsquo;s new book, the Ideas Industry, reviewer David Sessions outlines Drezner&amp;rsquo;s main arguments and connects them back to a Gramscian perspective on the social responsibility of the intellectual.
+In doing so, Sessions sees Drezner extending and furthering Jacoby&amp;rsquo;s concerns about the lunchpail academic &amp;amp; professionalization of academic work into the construction of an entirely new &amp;ldquo;private&amp;rdquo; intellectual.</description>
+    </item>
+    
+  </channel>
+</rss>

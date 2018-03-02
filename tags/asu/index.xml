@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asu on Yet Another Geographer</title>
+    <link>/tags/asu/</link>
+    <description>Recent content in Asu on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 05 Mar 2014 04:14:20 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/asu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modified an existing ASU beamer template</title>
+      <link>/modified-an-existing-asu-beamer-template/</link>
+      <pubDate>Wed, 05 Mar 2014 04:14:20 +0000</pubDate>
+      
+      <guid>/modified-an-existing-asu-beamer-template/</guid>
+      <description>For SGSUP use. It’s silly the feelings of accomplishment that simple things like that provides.
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Initialization</title>
+      <link>/initialization/</link>
+      <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
+      
+      <guid>/initialization/</guid>
+      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
+1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
+2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tumblr Markdown Doesnt Support Codeblocks With Returns on Yet Another Geographer</title>
+    <link>/tags/tumblr-markdown-doesnt-support-codeblocks-with-returns/</link>
+    <description>Recent content in Tumblr Markdown Doesnt Support Codeblocks With Returns on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 16 Feb 2016 21:18:10 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tumblr-markdown-doesnt-support-codeblocks-with-returns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trivial Python Multiprocessing</title>
+      <link>/trivial-python-multiprocessing/</link>
+      <pubDate>Tue, 16 Feb 2016 21:18:10 +0000</pubDate>
+      
+      <guid>/trivial-python-multiprocessing/</guid>
+      <description>I just wrote up a notebook for a fellow PhD student on how I use python&amp;rsquo;s builtin multiprocessing library to do embarassingly parallel computations much faster. Every time I think about it, I&amp;rsquo;m floored at how simple using the builtin multiprocessing library is for certain operations.
+There&amp;rsquo;s a ton of uncertainty out there around the state of parallel computing in Python, and I&amp;rsquo;m not an expert. But, I figure if it&amp;rsquo;s good enough for the unicorn I worked for, it&amp;rsquo;s good enough for a computational social scientist.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ph.d. on Yet Another Geographer</title>
+    <link>/tags/ph.d./</link>
+    <description>Recent content in Ph.d. on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 03 Mar 2014 01:34:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ph.d./index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome Week Tips</title>
+      <link>/welcome-week-tips/</link>
+      <pubDate>Mon, 03 Mar 2014 01:34:50 +0000</pubDate>
+      
+      <guid>/welcome-week-tips/</guid>
+      <description>So, having just completed our welcome weekend for prospective Ph.D. students, I think I might have suggestions for anyone going to one in the future.
+1. Try to have fun. It can be a wild, stressful, busy few days. But, above all, you should be trying to figure how much you like the people you&amp;rsquo;re with.
+2. Balance breadth and depth. Yes, you may want to work with only a few people, but departments are communities.</description>
+    </item>
+    
+  </channel>
+</rss>

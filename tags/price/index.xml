@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Price on Yet Another Geographer</title>
+    <link>/tags/price/</link>
+    <description>Recent content in Price on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 29 Jan 2018 20:05:03 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/price/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/its-neat-that-this-new-algorithm-is-working/</link>
+      <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
+      
+      <guid>/its-neat-that-this-new-algorithm-is-working/</guid>
+      <description>Photo Caption: It&amp;rsquo;s neat that this new algorithm is working correctly. Here, a few cluster solutions for spatially-contiguous clustering are shown in Brooklyn using some price data for some Airbnbs. I&amp;rsquo;m pretty excited about this new technique, so hopefully I&amp;rsquo;ll get it all prepped soon.
+I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.</description>
+    </item>
+    
+  </channel>
+</rss>

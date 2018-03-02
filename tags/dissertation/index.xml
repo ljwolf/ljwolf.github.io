@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dissertation on Yet Another Geographer</title>
+    <link>/tags/dissertation/</link>
+    <description>Recent content in Dissertation on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 05 Jul 2017 18:56:45 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/dissertation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/i-think-thisll-end-up-being-the-big-story-from-my/</link>
+      <pubDate>Wed, 05 Jul 2017 18:56:45 +0000</pubDate>
+      
+      <guid>/i-think-thisll-end-up-being-the-big-story-from-my/</guid>
+      <description>Photo Caption: I think this’ll end up being the big story from my dissertation:
+District shape isn’t at all related to political impact (in aggregate) when it comes to redistricting.
+While some weird districts may exist and those may be gerrymandered, the relationship is not statistically sound in aggregate: weird districts might be completely benign, in terms of the partisan advantage measures I’m considereding my dissertation &amp;amp; other classical measures of model influence.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/finally-got-this-elections-simulator-working-the/</link>
+      <pubDate>Tue, 18 Oct 2016 14:00:17 +0000</pubDate>
+      
+      <guid>/finally-got-this-elections-simulator-working-the/</guid>
+      <description>Photo Caption: Finally got this elections simulator working. The concept, a neat paper by Drew Linzer, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the why of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Texas on Yet Another Geographer</title>
+    <link>/tags/texas/</link>
+    <description>Recent content in Texas on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 29 May 2014 10:02:09 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/texas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Going to Scipy 2014</title>
+      <link>/going-to-scipy-2014/</link>
+      <pubDate>Thu, 29 May 2014 10:02:09 +0000</pubDate>
+      
+      <guid>/going-to-scipy-2014/</guid>
+      <description>anyone in Austin in July?
+ imported from: yetanothergeographer</description>
+    </item>
+    
+  </channel>
+</rss>

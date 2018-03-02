@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Estimation on Yet Another Geographer</title>
+    <link>/tags/estimation/</link>
+    <description>Recent content in Estimation on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 26 Sep 2016 01:32:56 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/estimation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The importance of centering variables</title>
+      <link>/the-importance-of-centering-variables/</link>
+      <pubDate>Mon, 26 Sep 2016 01:32:56 +0000</pubDate>
+      
+      <guid>/the-importance-of-centering-variables/</guid>
+      <description>So, maybe this is part of the learning experience of developing applied intuition, but I never really appreciated how important it is to center your variables, especially when dealing with finicky models like simultaneous autoregressive models common in spatial econometrics.
+The following are three traces from a spatial econometric model, the spatial lag model, on some example data. 
+The first one hasn’t centered its variables. The lag coefficient is trying very hard to escape the (-1,1) bounding on stable autoregressive coefficients.</description>
+    </item>
+    
+  </channel>
+</rss>

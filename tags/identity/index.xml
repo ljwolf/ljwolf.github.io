@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Identity on Yet Another Geographer</title>
+    <link>/tags/identity/</link>
+    <description>Recent content in Identity on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 18 Jun 2015 23:49:13 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/identity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/i-usually-dont-think-much-about/</link>
+      <pubDate>Thu, 18 Jun 2015 23:49:13 +0000</pubDate>
+      
+      <guid>/i-usually-dont-think-much-about/</guid>
+      <description>I usually don’t think much about credentialization online. I have a few internet aliases (like yetanothergeographer) that I consider almost totally synonymous with my real name and persona. And even other personas on tumblr or other social networking sites are easily traced back to my “full” identity.
+But, something that I found pretty shocking recently was the fact that any github profile you can find shows your public ssh keys to everyone.</description>
+    </item>
+    
+  </channel>
+</rss>

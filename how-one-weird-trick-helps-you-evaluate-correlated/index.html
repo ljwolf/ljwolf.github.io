@@ -47,11 +47,11 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
 
 <meta itemprop="datePublished" content="2016-10-07T20:09:36&#43;00:00" />
 <meta itemprop="dateModified" content="2016-10-07T20:09:36&#43;00:00" />
-<meta itemprop="wordCount" content="260">
+<meta itemprop="wordCount" content="259">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="python, statistics, computation,imported," />
 
 
 <link rel="stylesheet" href="css/layout.css" />
@@ -181,14 +181,31 @@ kernel = -.5*np.linalg.multi_dot(e.T, Sigma_i, e.T)
 </code></pre><p>But, there&rsquo;s actually a siginficant gain if you use the solve method instead of inverting <code>Sigma</code> by itself.</p><pre><code>e = Y - XBeta
 kernel = np.linalg.solve(Sigma, e).T.dot(e)
 </code></pre><p>Who knew?
-How much faster? Timings are attached for covariance matrices from 5^2 to 20^2 in dimension. Left is the solve method, right is the inverse method. While I’m scaling these up for much larger spatially-correlated error models as I write, it looks to me like a promising speed gain!</p><p><i>edit: scaling quite nicely up to 50^2. I’ll have to see where the sparse math goes with this trick. </i></p>
-Tags: python, statistics, computation</p>
+How much faster? Timings are attached for covariance matrices from 5^2 to 20^2 in dimension. Left is the solve method, right is the inverse method. While I’m scaling these up for much larger spatially-correlated error models as I write, it looks to me like a promising speed gain!</p><p><i>edit: scaling quite nicely up to 50^2. I’ll have to see where the sparse math goes with this trick. </i></p></p>
+
+<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/151491815214/how-one-weird-trick-helps-you-evaluate-correlated'<tt>yetanothergeographer</tt></a></small></p>
  </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">
     
 <div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/statistics"># statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/computation"># computation</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
     
 </div>
 

@@ -19,7 +19,7 @@
 
 
 
-<meta property="og:updated_time" content="2016-04-22T16:32:41&#43;00:00"/>
+<meta property="og:updated_time" content="2016-06-19T20:37:12&#43;00:00"/>
 
 
 
@@ -167,21 +167,30 @@ th {
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/google-summer-of-code/'> &lt;p&gt;Excited to be working on PySAL for Google Summer of Code!&lt;/p&gt;</a> </h2>
+    <h2 class="title"> <a href='/more-on-the-log-determinant-stuff-i-think-ive/'> Untitled</a> </h2>
     <div class="meta">
-      Apr 22, 2016 - 1 minutes
+      Jun 19, 2016 - 1 minutes
     </div>
     
 <div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/image">#image</a>
+      </div>
     
 </div>
 
   </header>
 
   <div class="summary">
-    Google Summer of Code https://summerofcode.withgoogle.com/organizations/4890191244296192/#6298483845758976
-Tags: gsoc, google summer of code, python, geography, gis
-    <a href='/google-summer-of-code/' class="rmore">Read more ...</a>
+    Photo Caption: More on the log determinant stuff, I think I’ve figured it out. You see, the full likelihood of the model I&rsquo;m working with is something like:
+$$|I - \rho W| \times \mathcal{N}(X\beta + \rho W y, \sigma^2) $$
+And, since (W) and (I) are constants, I actually need the gradient of the log determinant with respect to ( \rho ), not (A). Since the derivative of the log determinant with respect to (A), the full laplacian matrix, is an (N \times N) matrix, I was getting a conformality error in PyMC3, which wanted the derivative with respect to $\rho$ and was expecting a scalar.
+    <a href='/more-on-the-log-determinant-stuff-i-think-ive/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">
@@ -193,23 +202,50 @@ Tags: gsoc, google summer of code, python, geography, gis
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/bringing-classifiers-alive-in-pysal/'> Bringing Classifiers Alive in PySAL</a> </h2>
+    <h2 class="title"> <a href='/thisll-be-a-more-lucid-writeup-of-what-i-was/'> Untitled</a> </h2>
     <div class="meta">
-      Mar 24, 2016 - 6 minutes
+      Jun 17, 2016 - 5 minutes
     </div>
     
 <div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/programming">#programming</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/python"># python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/bayesian-statistics"># bayesian statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/statistics"># statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/geography"># geography</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/image">#image</a>
+      </div>
     
 </div>
 
   </header>
 
   <div class="summary">
-    I&rsquo;ve talked a lot to fellow developers about making PySAL objects more than containers for the results of a statistical procedure.
-One way I think we can do this is to focus on methods like predict, find, update, or reclassify.
-So, here, I&rsquo;ll show the way I&rsquo;ve implemented a simple API to update map classifiers by defining their __call__ method.
-   In [2]: import pysal as ps
-    <a href='/bringing-classifiers-alive-in-pysal/' class="rmore">Read more ...</a>
+    Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
+Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.
+    <a href='/thisll-be-a-more-lucid-writeup-of-what-i-was/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">
@@ -221,21 +257,40 @@ So, here, I&rsquo;ll show the way I&rsquo;ve implemented a simple API to update 
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/a-quick-note-on-hierarchical-linear-models/'> A quick note on Hierarchical Linear Models</a> </h2>
+    <h2 class="title"> <a href='/man-im-so-close-to-a-pretty-massive-speedup-of/'> Untitled</a> </h2>
     <div class="meta">
-      Feb 22, 2016 - 3 minutes
+      Jun 17, 2016 - 1 minutes
     </div>
     
 <div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/bayesian-computing"># bayesian computing</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/statistics"># statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/image">#image</a>
+      </div>
     
 </div>
 
   </header>
 
   <div class="summary">
-    Owen, Harris, &amp; Jones have a pretty cool new paper out discussing strengths &amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&rsquo;t directly answer the classic question at the heart of tons of geographic research:
- Given that you live where you do, talk to who you do, and interact with the social milleau that you do, how is your behavior different?
-    <a href='/a-quick-note-on-hierarchical-linear-models/' class="rmore">Read more ...</a>
+    Photo Caption: Man&hellip; I’m so close to a pretty massive speedup of something I’m working on&hellip; something that’d make a very nice deliverable. But, I can’t figure out how to correctly compute gradients in theano. I mean, I know what the gradient is, and I’ve written it correctly, but I can’t figure out whether it’s theano or pymc3 is throwing the errors In fact, I can get a gradient in Theano just fine.
+    <a href='/man-im-so-close-to-a-pretty-massive-speedup-of/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">
@@ -254,7 +309,7 @@ So, here, I&rsquo;ll show the way I&rsquo;ve implemented a simple API to update 
   </div> 
 
   <div class="page-num">
-    13/30
+    13/39
   </div> 
 
   <div class="page-next">

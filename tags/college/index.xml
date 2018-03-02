@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>College on Yet Another Geographer</title>
+    <link>/tags/college/</link>
+    <description>Recent content in College on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 03 Mar 2014 01:34:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/college/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome Week Tips</title>
+      <link>/welcome-week-tips/</link>
+      <pubDate>Mon, 03 Mar 2014 01:34:50 +0000</pubDate>
+      
+      <guid>/welcome-week-tips/</guid>
+      <description>So, having just completed our welcome weekend for prospective Ph.D. students, I think I might have suggestions for anyone going to one in the future.
+1. Try to have fun. It can be a wild, stressful, busy few days. But, above all, you should be trying to figure how much you like the people you&amp;rsquo;re with.
+2. Balance breadth and depth. Yes, you may want to work with only a few people, but departments are communities.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
+      <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
+      
+      <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
+      <description>Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp;amp; Zhang&amp;rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
+A couple realizations:
+1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.</description>
+    </item>
+    
+    <item>
+      <title>Time Management or Fortitude</title>
+      <link>/time-management-or-fortitude/</link>
+      <pubDate>Thu, 06 Feb 2014 02:48:16 +0000</pubDate>
+      
+      <guid>/time-management-or-fortitude/</guid>
+      <description>Sometimes, graduate school seems like it&amp;rsquo;s less about time management than it is about fortitude.
+The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;rsquo;ve been so busy, though, had I decided not to go to a concert I really had wanted to go to. So, I stuck out an amazing show, turned around after PBR and punk rock, and banged out 1000 words, a presentation, a proposal draft, took three classes, gave two presentations, and spent 5 hours formalizing an algorithm for a draft due Friday.</description>
+    </item>
+    
+    <item>
+      <title>Initialization</title>
+      <link>/initialization/</link>
+      <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
+      
+      <guid>/initialization/</guid>
+      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
+1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
+2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+    </item>
+    
+  </channel>
+</rss>

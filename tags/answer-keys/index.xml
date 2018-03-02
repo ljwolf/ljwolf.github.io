@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Answer Keys on Yet Another Geographer</title>
+    <link>/tags/answer-keys/</link>
+    <description>Recent content in Answer Keys on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 16 Apr 2014 03:12:11 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/answer-keys/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Answer keys that simply tell you</title>
+      <link>/answer-keys-that-simply-tell-you/</link>
+      <pubDate>Wed, 16 Apr 2014 03:12:11 +0000</pubDate>
+      
+      <guid>/answer-keys-that-simply-tell-you/</guid>
+      <description>This is a difficult problem. and give you the answer with no work may as well be simple sources of guided intuition. It&amp;rsquo;s also probably the number one reason behind the rise of the math stackexchange.  imported from: yetanothergeographer</description>
+    </item>
+    
+  </channel>
+</rss>

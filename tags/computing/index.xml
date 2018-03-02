@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computing on Yet Another Geographer</title>
+    <link>/tags/computing/</link>
+    <description>Recent content in Computing on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 30 Sep 2014 18:57:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/computing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
+      <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
+      
+      <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
+      <description>Photo Caption: A fun little bug in my apparently outdated QGIS (version 2.2).
+I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
+At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/so-say-youre-working-with-two-states/</link>
+      <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
+      
+      <guid>/so-say-youre-working-with-two-states/</guid>
+      <description>Photo Caption: So, say you&amp;rsquo;re working with two state&amp;rsquo;s congressional data. All of it&amp;rsquo;s been cleaned and made through a list comprehension and write statement in python using pandas. Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail.</description>
+    </item>
+    
+  </channel>
+</rss>

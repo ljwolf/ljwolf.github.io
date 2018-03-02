@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phd on Yet Another Geographer</title>
+    <link>/tags/phd/</link>
+    <description>Recent content in Phd on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 05 Jan 2017 19:27:59 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/phd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An update on PhD Burnout</title>
+      <link>/an-update-on-phd-burnout/</link>
+      <pubDate>Thu, 05 Jan 2017 19:27:59 +0000</pubDate>
+      
+      <guid>/an-update-on-phd-burnout/</guid>
+      <description>After writing briefly about burnout in July, when I had done a Google Summer of Code while working as a Research Assistant on a grant about spatial multilevel modeling, I was super burnt out. Now, I’d like to safely say, while I’m still stressed and spread too thin over too many projects, I don’t feel burnt out any longer. The main thing I realized is the importance of switching into “write-only” mode.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/im-trying-to-recover-from-a-bit-of-burnout-this/</link>
+      <pubDate>Sun, 17 Jul 2016 19:27:14 +0000</pubDate>
+      
+      <guid>/im-trying-to-recover-from-a-bit-of-burnout-this/</guid>
+      <description>I’m trying to recover from a bit of burnout. This summer, I’m ostensibly double-booked, working on a Google Summer of Code project in addition to a project with the new Center for Spatial Data Science at the University of Chicago, and I&amp;rsquo;m still keeping up with my Dissertation &amp;amp; my involvement in the Python Spatial Analysis Library outside of my GSOC project. I just finished my comprehensives back in May, so I’m also trying to maintain momentum on my dissertation work.</description>
+    </item>
+    
+  </channel>
+</rss>

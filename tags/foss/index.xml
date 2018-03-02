@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foss on Yet Another Geographer</title>
+    <link>/tags/foss/</link>
+    <description>Recent content in Foss on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 25 Oct 2016 19:53:11 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/foss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yet another elections simulator</title>
+      <link>/yet-another-elections-simulator/</link>
+      <pubDate>Tue, 25 Oct 2016 19:53:11 +0000</pubDate>
+      
+      <guid>/yet-another-elections-simulator/</guid>
+      <description>After reading Wasserman’s 2012 blog post about mixture models, I’m glad that I’ve finally figured out &amp;amp; implemented the Gelman-King 1994 electoral model as well. Based on pretty straghtforward regression modeling, the setup trades the representational simplicity of the Linzer GMM model for a much more complex modeling structure, but that I guess provides better guarantees about its own properties. Regardless, it’s a bummer that these guys stuff, theLinzer 2012 paper on simulating seats/votes curves using gaussian mixtures &amp;amp; the JudgeIt stuff for the GK1994 paper was never merged into the political science computational library.</description>
+    </item>
+    
+    <item>
+      <title>A bite of a “free lunch” optimizing numerical routines in Python</title>
+      <link>/a-bite-of-a-free-lunch-optimizing-numerical/</link>
+      <pubDate>Tue, 16 Feb 2016 00:09:02 +0000</pubDate>
+      
+      <guid>/a-bite-of-a-free-lunch-optimizing-numerical/</guid>
+      <description>tl;dr: ask yourself these before you deadlift optimize code
+I use Python pretty much daily, but I’m definitely not a Python wizard. Now that I’m done with converting the Python Spatial Analytics Library to use Python 3 compatible idioms, I took a break from refactoring more generally.
+But, in doing two small tests/stabs at refactoring for speed &amp;amp; memory usage, I’m reminded why optimizing numerical code is so hard. I’ve heard &amp;ldquo;there ain’t no such thing as a free lunch,” so I’m usually wary about getting into performance optimization stuff, but these two recent instances really drive this point home for me again.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/mulitprocessing-business-in-the-front-parallel/</link>
+      <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
+      
+      <guid>/mulitprocessing-business-in-the-front-parallel/</guid>
+      <description> Photo Caption: mulitprocessing: business in the front, parallel in the back.
+ imported from: yetanothergeographer </description>
+    </item>
+    
+    <item>
+      <title>About the voronoi diagram problem</title>
+      <link>/about-the-voronoi-diagram-problem/</link>
+      <pubDate>Wed, 01 Oct 2014 01:47:36 +0000</pubDate>
+      
+      <guid>/about-the-voronoi-diagram-problem/</guid>
+      <description>Yeah&amp;hellip; the bug with the voronoi diagrams is still in the current version of QGIS&amp;hellip;
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
+      <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
+      
+      <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
+      <description>Photo Caption: A fun little bug in my apparently outdated QGIS (version 2.2).
+I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
+At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uptime on Yet Another Geographer</title>
+    <link>/tags/uptime/</link>
+    <description>Recent content in Uptime on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 16 Mar 2017 01:12:41 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/uptime/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/is-my-uptime-excited-or-scared-you-decide/</link>
+      <pubDate>Thu, 16 Mar 2017 01:12:41 +0000</pubDate>
+      
+      <guid>/is-my-uptime-excited-or-scared-you-decide/</guid>
+      <description> Photo Caption: Is my uptime excited or scared? you decide.
+ imported from: yetanothergeographer </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spatial Statistics on Yet Another Geographer</title>
+    <link>/tags/spatial-statistics/</link>
+    <description>Recent content in Spatial Statistics on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 22 Nov 2016 15:57:26 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/spatial-statistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Want to draw spatially-correlated values wihtout all the fuss?</title>
+      <link>/want-to-draw-spatially-correlated-values-wihtout/</link>
+      <pubDate>Tue, 22 Nov 2016 15:57:26 +0000</pubDate>
+      
+      <guid>/want-to-draw-spatially-correlated-values-wihtout/</guid>
+      <description>I think I’ve figured out a simple way to sample from a spatially-correlated normal distribution without needing to invert the large precision matrix directly. 
+gist here. 
+ imported from: yetanothergeographer</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
+      <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
+      
+      <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
+      <description>Photo Caption: As I’m having to wind down on summer of code work and ramp up on dissertation &amp;amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve.</description>
+    </item>
+    
+  </channel>
+</rss>

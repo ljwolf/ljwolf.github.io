@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Political Geography on Yet Another Geographer</title>
+    <link>/tags/political-geography/</link>
+    <description>Recent content in Political Geography on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 29 Jul 2015 02:49:09 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/political-geography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/getting-excited-about-some-cool-new-exploration/</link>
+      <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
+      
+      <guid>/getting-excited-about-some-cool-new-exploration/</guid>
+      <description> Photo Caption: getting excited about some cool new exploration while getting to know seaborn.
+ imported from: yetanothergeographer </description>
+    </item>
+    
+  </channel>
+</rss>

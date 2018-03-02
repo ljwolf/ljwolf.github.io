@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Hacking on Yet Another Geographer</title>
+    <link>/tags/data-hacking/</link>
+    <description>Recent content in Data Hacking on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 11 Jun 2015 15:58:41 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/data-hacking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cenpy is now pip installable!</title>
+      <link>/cenpy-is-now-pip-installable/</link>
+      <pubDate>Thu, 11 Jun 2015 15:58:41 +0000</pubDate>
+      
+      <guid>/cenpy-is-now-pip-installable/</guid>
+      <description>pip install cenpy
+Check it out on github or its demo notebook on nbviewer.
+yetanothergeographer:
+ CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.</description>
+    </item>
+    
+  </channel>
+</rss>

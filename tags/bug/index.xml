@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bug on Yet Another Geographer</title>
+    <link>/tags/bug/</link>
+    <description>Recent content in Bug on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 01 Oct 2014 01:47:36 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bug/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About the voronoi diagram problem</title>
+      <link>/about-the-voronoi-diagram-problem/</link>
+      <pubDate>Wed, 01 Oct 2014 01:47:36 +0000</pubDate>
+      
+      <guid>/about-the-voronoi-diagram-problem/</guid>
+      <description>Yeah&amp;hellip; the bug with the voronoi diagrams is still in the current version of QGIS&amp;hellip;
+ imported from: yetanothergeographer</description>
+    </item>
+    
+  </channel>
+</rss>

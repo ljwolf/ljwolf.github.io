@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compression on Yet Another Geographer</title>
+    <link>/tags/compression/</link>
+    <description>Recent content in Compression on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 27 Jul 2015 18:54:01 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/compression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/that-compression-is-bewilderingly-good-the-full/</link>
+      <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
+      
+      <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
+      <description> Photo Caption: That compression is bewilderingly good. The full census short form at block level (generated using a static file reader soon-to-be in cenpy) can be compressed from nearly 60 GB down to 3.1 GB.
+Simply amazing.
+ imported from: yetanothergeographer </description>
+    </item>
+    
+  </channel>
+</rss>

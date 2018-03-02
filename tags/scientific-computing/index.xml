@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scientific Computing on Yet Another Geographer</title>
+    <link>/tags/scientific-computing/</link>
+    <description>Recent content in Scientific Computing on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 22 Aug 2014 19:55:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/scientific-computing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/so-say-youre-working-with-two-states/</link>
+      <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
+      
+      <guid>/so-say-youre-working-with-two-states/</guid>
+      <description>Photo Caption: So, say you&amp;rsquo;re working with two state&amp;rsquo;s congressional data. All of it&amp;rsquo;s been cleaned and made through a list comprehension and write statement in python using pandas. Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail.</description>
+    </item>
+    
+    <item>
+      <title>Going to Scipy 2014</title>
+      <link>/going-to-scipy-2014/</link>
+      <pubDate>Thu, 29 May 2014 10:02:09 +0000</pubDate>
+      
+      <guid>/going-to-scipy-2014/</guid>
+      <description>anyone in Austin in July?
+ imported from: yetanothergeographer</description>
+    </item>
+    
+  </channel>
+</rss>

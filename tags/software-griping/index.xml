@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Griping on Yet Another Geographer</title>
+    <link>/tags/software-griping/</link>
+    <description>Recent content in Software Griping on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 17 Jun 2014 21:26:16 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/software-griping/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/my-time-using-linux-has-apparently-made-me-quite/</link>
+      <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
+      
+      <guid>/my-time-using-linux-has-apparently-made-me-quite/</guid>
+      <description>Photo Caption: My time using linux has apparently made me quite lazy in OSX.
+I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
+Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists.</description>
+    </item>
+    
+  </channel>
+</rss>

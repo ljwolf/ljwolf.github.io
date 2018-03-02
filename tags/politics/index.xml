@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Politics on Yet Another Geographer</title>
+    <link>/tags/politics/</link>
+    <description>Recent content in Politics on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 29 Nov 2016 00:07:16 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A short exploration of the 2016 electoral swing</title>
+      <link>/a-short-exploration-of-the-2016-electoral-swing/</link>
+      <pubDate>Tue, 29 Nov 2016 00:07:16 +0000</pubDate>
+      
+      <guid>/a-short-exploration-of-the-2016-electoral-swing/</guid>
+      <description>I’m pretty skeptical of the generalized uniform partisan swing assumption in gerrymandering models. Part of this is due to some skepticism about how swing actually occurs in elections generally. If we don’t have an explicit “shock” model for our counterfactuals, they’re probably not going to replicate true experienced electoral swings well. 
+I’ve put together a notebook where I go through and explore some modeling of the 2012-2016 electoral swing at the county level.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/found-another-error-in-the-clea-as-i-am-building/</link>
+      <pubDate>Mon, 12 Sep 2016 02:28:19 +0000</pubDate>
+      
+      <guid>/found-another-error-in-the-clea-as-i-am-building/</guid>
+      <description>Photo Caption: Found another error in the CLEA as I am building case studies for my dissertation.
+The smallest little errors give you some pretty weird results when you&amp;rsquo;re looking deeply into the data. In this case, Doug Bosco only ran against David Redick. Creighton and Binderup were oppononents of another Democrat that year, the then-congresswoman now-senator Barbara Boxer.
+But, the incorrect story in the data is kind of interesting to consider&amp;hellip; two Republicans ran in CA-CD01 in 1984, and won a combined total of &amp;gt;50% of the vote.</description>
+    </item>
+    
+    <item>
+      <title>Trajectories &amp; Transitions</title>
+      <link>/trajectories-transitions/</link>
+      <pubDate>Thu, 14 Jan 2016 18:41:26 +0000</pubDate>
+      
+      <guid>/trajectories-transitions/</guid>
+      <description>I started my PhD running away from Political Science/Political Geography as fast as I could, into Industrial Engineering and Computer Science-y topics. I’m still what many would call a “methodologist,” am wholly entertained by computational geometry &amp;amp; statistics, and enjoy math and programming a little too much to be fully motivated by applied work. But, gradually, I’ve started filtering back, situated with some top-flight quantitative geographers at the GeoDa Center for Spatial Analysis and Geocomputation, into work by Micah Altman, Andrew Gelman, Gary King, Jowei Chen, and Jonathan Rodden&amp;hellip; tons of political scientists.</description>
+    </item>
+    
+    <item>
+      <title>First CartoDB map</title>
+      <link>/first-cartodb-map/</link>
+      <pubDate>Wed, 26 Aug 2015 02:26:08 +0000</pubDate>
+      
+      <guid>/first-cartodb-map/</guid>
+      <description>First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.  This is a map of the Polsby-Popper metric for US Congressional districts. In essence, people use it to identify how &amp;ldquo;normal&amp;rdquo; a political district&amp;rsquo;s shape is, with larger values being more &amp;ldquo;regular.&amp;rdquo; It&amp;rsquo;s the same as used in a washington post piece. My methodology differs a bit from their published map, and I&amp;rsquo;d love to figure out how to get the neat little hover info on the WaPo map.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/getting-excited-about-some-cool-new-exploration/</link>
+      <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
+      
+      <guid>/getting-excited-about-some-cool-new-exploration/</guid>
+      <description> Photo Caption: getting excited about some cool new exploration while getting to know seaborn.
+ imported from: yetanothergeographer </description>
+    </item>
+    
+    <item>
+      <title>Making Sense of NMMI</title>
+      <link>/making-sense-of-nmmi/</link>
+      <pubDate>Wed, 29 Oct 2014 05:36:00 +0000</pubDate>
+      
+      <guid>/making-sense-of-nmmi/</guid>
+      <description>The Normalized Mass Moment of Inertia proposed by Li et al (2013) is deceptively hard to express. Given some shape and a distribution of attributes around the shape, they state the NMMI ratio in Fan et al (forthcoming) as:
+$$NMMI = \frac{I_O^&amp;rsquo;} {I^{G_i}_{i_mass}}$$
+where $I$ represents the area-standardized mass moment of inertia. The $O$ subscript denotes that the numerator is the mass moment of inertia of some null reference shape. I will discuss the denominator later.</description>
+    </item>
+    
+    <item>
+      <title>A Short Realization on Gelman-King (1994)</title>
+      <link>/a-short-realization-on-gelman-king-1994/</link>
+      <pubDate>Fri, 12 Sep 2014 04:01:00 +0000</pubDate>
+      
+      <guid>/a-short-realization-on-gelman-king-1994/</guid>
+      <description>Elections, Bayes, and one realization about the Gelman-King Model People make a lot of hay out of the rise of Nate Silver and Bayesian poll averaging when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&amp;rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. Gelman-King (1994)&amp;rsquo;s model Say, for instance, we&amp;rsquo;re examining some vector of electoral outcomes, (y) given some predictor matrix (\mathbf{X}).</description>
+    </item>
+    
+  </channel>
+</rss>

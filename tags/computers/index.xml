@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computers on Yet Another Geographer</title>
+    <link>/tags/computers/</link>
+    <description>Recent content in Computers on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 08 May 2014 18:59:51 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/computers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/ok-so-i-think-my-days-of-using-texstudio-are/</link>
+      <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
+      
+      <guid>/ok-so-i-think-my-days-of-using-texstudio-are/</guid>
+      <description> Photo Caption: OK&amp;hellip; so I think my days of using texstudio are over. Vim-latex&amp;rsquo;s reference manager is leaps and bounds easier to use than texsudio.
+Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
+I guess color scheme fights are about as lame as you can get. Except maybe fights over brace or comment styles&amp;hellip;
+ imported from: yetanothergeographer </description>
+    </item>
+    
+  </channel>
+</rss>

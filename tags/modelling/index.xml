@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modelling on Yet Another Geographer</title>
+    <link>/tags/modelling/</link>
+    <description>Recent content in Modelling on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 22 Feb 2016 16:23:53 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/modelling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A quick note on Hierarchical Linear Models</title>
+      <link>/a-quick-note-on-hierarchical-linear-models/</link>
+      <pubDate>Mon, 22 Feb 2016 16:23:53 +0000</pubDate>
+      
+      <guid>/a-quick-note-on-hierarchical-linear-models/</guid>
+      <description>Owen, Harris, &amp;amp; Jones have a pretty cool new paper out discussing strengths &amp;amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&amp;rsquo;t directly answer the classic question at the heart of tons of geographic research:
+ Given that you live where you do, talk to who you do, and interact with the social milleau that you do, how is your behavior different?</description>
+    </item>
+    
+  </channel>
+</rss>

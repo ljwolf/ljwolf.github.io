@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Animals on Yet Another Geographer</title>
+    <link>/tags/animals/</link>
+    <description>Recent content in Animals on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 09 Oct 2015 01:21:32 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/animals/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/having-a-last-name-of-wolf-has-never-been-an/</link>
+      <pubDate>Fri, 09 Oct 2015 01:21:32 +0000</pubDate>
+      
+      <guid>/having-a-last-name-of-wolf-has-never-been-an/</guid>
+      <description> Photo Caption: Having a last name of “Wolf” has never been an issue, but it feels silly throwing all these animal names around.
+ imported from: yetanothergeographer </description>
+    </item>
+    
+  </channel>
+</rss>

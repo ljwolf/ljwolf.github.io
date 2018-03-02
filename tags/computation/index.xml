@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computation on Yet Another Geographer</title>
+    <link>/tags/computation/</link>
+    <description>Recent content in Computation on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 07 Oct 2016 20:09:36 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/computation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How one weird trick helps you evaluate correlated Normal distributions quickly</title>
+      <link>/how-one-weird-trick-helps-you-evaluate-correlated/</link>
+      <pubDate>Fri, 07 Oct 2016 20:09:36 +0000</pubDate>
+      
+      <guid>/how-one-weird-trick-helps-you-evaluate-correlated/</guid>
+      <description>Sorry, couldn’t resist the opportunity to buzzfeed this research blog :)
+I’ve been trying to get really efficient at writing samplers for various Bayesian spatial models. And, typically, this involves clever numerical tricks, trying to avoid computing either log determinants or matrix inverses by keeping around matrix factorizations or finding derived products that you can persist between iterations. Some of this has come to fruition in my sparse log determinant work, but I’m always looking for computation speed gains, especially as some of the targets I&amp;rsquo;ve optimized are drying up.</description>
+    </item>
+    
+    <item>
+      <title>Initialization</title>
+      <link>/initialization/</link>
+      <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
+      
+      <guid>/initialization/</guid>
+      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
+1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
+2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+    </item>
+    
+  </channel>
+</rss>

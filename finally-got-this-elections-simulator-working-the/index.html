@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/finally-got-this-elections-simulator-working-the/">
+<base href="/" />
+<meta property="og:title" content="Untitled" />
+<meta property="og:description" content="Photo Caption: Finally got this elections simulator working. The concept, a neat paper by Drew Linzer, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the why of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/finally-got-this-elections-simulator-working-the/" />
+
+
+
+<meta property="article:published_time" content="2016-10-18T14:00:17&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-10-18T14:00:17&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Untitled"/>
+<meta name="twitter:description" content="Photo Caption: Finally got this elections simulator working. The concept, a neat paper by Drew Linzer, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the why of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes."/>
+
+
+
+<meta itemprop="name" content="Untitled">
+<meta itemprop="description" content="Photo Caption: Finally got this elections simulator working. The concept, a neat paper by Drew Linzer, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the why of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes.">
+
+
+<meta itemprop="datePublished" content="2016-10-18T14:00:17&#43;00:00" />
+<meta itemprop="dateModified" content="2016-10-18T14:00:17&#43;00:00" />
+<meta itemprop="wordCount" content="268">
+
+
+
+<meta itemprop="keywords" content="dissertation, python,imported,image," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Untitled 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Untitled </h1>
+    <div class="content"> <figure> <img src=//78.media.tumblr.com/cffc3893e93dafaa4d0bf4162323a999/tumblr_of98ohQ0mE1ts05oao1_1280.png> <figcaption>Photo Caption: <p>Finally got this elections simulator working. The concept, a <a href="http://pan.oxfordjournals.org/content/early/2012/05/09/pan.mps017.short" target="_blank">neat paper by Drew Linzer</a>, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the <i>why</i> of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes. </p><p>Here, I’ve pieced together an estimator/simulator that handles missing/uncontested districts, fits a GaussianMixture from scikit-learn to each pattern (giving each party their own component), and then correctly simulates from the mixture-of-mixtures plus uncontested possibilities. These are distributional fits &amp; QQ plots for the 1979 Canadian federal elections. </p><p>Multiparty estimation has, in the past, posed a somewhat thornier issue, since some minor parties may be incredibly competitive in some areas and not run candidates in others. To estimate the correct “strength,” you have to focus on the cases where they participate, hence Linzer’s use (deriving I think from a Tomz, Tucker, &amp; Wittenberg paper on accurate multiparty regressions from when I was 12?) of separate modeling of electoral patterns. </p><p>Of course, a better technique, if the party is truly a regional party, is to <i>discover its area</i>, using some exploratory scale estimator like GWR or SVC models. </p><p>After I knock this one out, I’ll move to implementing the original Gelman-King (1994) method, and then I’ll have the three basic methods that may provide leads for my thesis work!</p>
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/151986067019/finally-got-this-elections-simulator-working-the'<tt>yetanothergeographer</tt></a></small></figcaption></figure>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/dissertation">#dissertation</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/python"># python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/image">#image</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Oct 18, 2016 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

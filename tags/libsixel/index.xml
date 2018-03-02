@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Libsixel on Yet Another Geographer</title>
+    <link>/tags/libsixel/</link>
+    <description>Recent content in Libsixel on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 23 Mar 2016 03:41:38 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/libsixel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/yep-thats-image-view-from-within-a-terminal/</link>
+      <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
+      
+      <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
+      <description> Photo Caption: Yep, that’s image view from within a terminal using libsixel
+This is something I’ve always wanted, a way to just quickly dump scientific visualizations to a viewer within a CLI application. It looks like this does exactly that. 
+ imported from: yetanothergeographer </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julialang on Yet Another Geographer</title>
+    <link>/tags/julialang/</link>
+    <description>Recent content in Julialang on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 27 Feb 2014 05:10:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/julialang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Untitled</title>
+      <link>/i-guess-this-is-how-productivity-works-terminal/</link>
+      <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
+      
+      <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
+      <description>Photo Caption: I guess this is how productivity works? Terminal sessions and web browsers. Seems like nothing else is needed nowadays. Though, I guess the guys over at LightTable would beg to disagree. I tried LightTable today for some LaTeX stuff. Seems like a brilliant tool there, if things like LyX or TexStudio didn&amp;rsquo;t exist. TexStudio in particular, my choice of LaTeX editor, does a wonderful job showing the structure of the workspace in one cohesive, intuitive way.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
+      <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
+      
+      <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
+      <description>Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp;amp; Zhang&amp;rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
+A couple realizations:
+1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.</description>
+    </item>
+    
+  </channel>
+</rss>

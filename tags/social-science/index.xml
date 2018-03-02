@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social Science on Yet Another Geographer</title>
+    <link>/tags/social-science/</link>
+    <description>Recent content in Social Science on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 16 Jun 2015 15:27:27 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/social-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cenpy Big Query</title>
+      <link>/cenpy-big-query/</link>
+      <pubDate>Tue, 16 Jun 2015 15:27:27 +0000</pubDate>
+      
+      <guid>/cenpy-big-query/</guid>
+      <description>If you’ve been using my tools for census data exploration, as intensely as I&amp;rsquo;d hope you have, you might’ve noticed that the Census limits queries to 50 columns per query.
+I’ve got your back, though. The newest release, cenpy 0.7, now supports n-column queries by chunking through 50-coulumns at a time. Be careful, though, as I&amp;rsquo;m sure if you pull down the entire Census 2010 short form in one go, you will probably get rate limited.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/you-know-i-like-all-this-math-and-engineering/</link>
+      <pubDate>Thu, 23 Oct 2014 16:25:45 +0000</pubDate>
+      
+      <guid>/you-know-i-like-all-this-math-and-engineering/</guid>
+      <description>You know, I like all this math and engineering material I&amp;rsquo;m enrolled in, and I&amp;rsquo;m not too bad at it. But it&amp;rsquo;s fairly frustrating listening to engineers talk about systems where this material gets applied as if they&amp;rsquo;re fully generic.I&amp;rsquo;m starting to hit that point where the divisions between physical and natural systems are creeping in.
+Flashbacks to my decision to study political science and not Industrial Engineering are becoming more and more common.</description>
+    </item>
+    
+  </channel>
+</rss>
