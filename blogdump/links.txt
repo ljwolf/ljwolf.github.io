@@ -1,0 +1,278 @@
+Post ID: 171287250329, Date: Sun, 25 Feb 2018 18:05:34
+Url with slug: love-in-a-time-of-correlare-revisiting-hodges
+Reblog key: Me2yIb0c
+Reblog Url: 
+Reblog Name: 
+Link: <p>This is a quick exploration/exposition of the fact that estimated substantive effects (fixed effects in H&amp;R&rsquo;s terms) can and sometimes will change in models with spatially dependent error terms when (and only when) the dependence in the error term is collinear with one or more covariates in the design matrix.</p>
+
+<p>Intuitively, this makes sense. In a thought experiment, estimate a regression. Then, introduce a covariate that&rsquo;s collinear with the other covariates. If there&rsquo;s no structure used in the model to keep track of which are the &ldquo;original&rdquo; effects and which are the newcomers (e.g. a <a href="https://en.wikipedia.org/wiki/Partial_regression_plot" target="_blank">partial regression</a> structure), then the effect estimates <em>must</em> change, since each is conditional on the other/they&rsquo;re made jointly over the covariates.</p>
+love in a time of correlare: revisiting Hodges & Reich (2010) in SAR models
+http://ljwolf.org/hodges_reich_sar
+
+Tags: statistics, geography, data science, spatial models
+
+Post ID: 170685172609, Date: Fri, 09 Feb 2018 10:21:35
+Url with slug: a-brief-overview-of-one-way-you-might-extract-the
+Reblog key: x4LJyb6S
+Reblog Url: 
+Reblog Name: 
+Link: <p>I&rsquo;ve been really interested in these amenity zones Google added to their mapping service ever since I read <a href="https://www.justinobeirne.com/google-maps-moat" target="_blank">this blogpost</a> by Justin O'Beirne detailing their rollout.</p>
+
+<p>I&rsquo;m not so interested about the comparatives with Apple, but down in the <code>Data Alchemy</code> Section, O'Beirne talks about how these pink zones might just correspond to peoples&rsquo; conceptual notions of where commerce corridors (I&rsquo;ve now learned are called &ldquo;high streets&rdquo; over here in the UK) are.</p>
+
+<p>I&rsquo;m willing to bet urban accessibility and desirability is often a function of these &ldquo;ritz&rdquo; zones. I know that, when I lived in San Francisco (before these were rolled out), the commercial zone along Cortland down in Bernal Heights was a spot my girlfriend and I frequented.</p>
+
+<p>Jumping forward to when I moved to Brooklyn, I found these pink zones invaluable in judging where I might want to live close to, without ever really targeting any specific amenities within them.</p>
+
+<p>So, I&rsquo;m curious for a whole lotta reasons. Do they correspond to streetscores? Do they correspond to price-clusters in Airbnb data? Are they really accessible (both temporally and monetarily) to the people who live around them? Is there a way to distinguish them from commute-zones, like the pink clusters around every major intersection in Tempe, AZ?</p>
+
+<p>This kind of algorithmic designation of commerce zones is super interesting to me, and I&rsquo;d love to keep integrating it into my scholarship.</p>
+A brief overview of one way you might extract the new "Amenity Zones" from Google Maps.
+https://gist.github.com/ljwolf/e8246d8b09f2148d7bbb9edf36b81a32
+
+Tags: geography, urban studies, urban data science, amenity zones
+
+Post ID: 169523348789, Date: Tue, 09 Jan 2018 20:23:56
+Url with slug: understanding-and-misunderstanding-randomized
+Reblog key: g3hWGSJq
+Reblog Url: 
+Reblog Name: 
+Link: <p>I really liked this paper. It&rsquo;s great when someone so clearly and thoroughly writes about the pitfalls of believing a better procedure will cure inherently theoretical issues with analyses or study design.</p>
+
+<p>A similar version of this comes in from King&rsquo;s &ldquo;How Robust Standard Errors Expose Methodological Problems They Do Not Fix, and What to Do About It&rdquo; from 2014&rsquo;s <em>Political Analysis</em>, and I feel matters in the same way that Geographical Analysis &amp; Spatial Statistics cannot simply be about fixing specifications to account for correlated error.</p>
+
+<p>What&rsquo;s your theory for <em>why</em> the misspecification exists? <em>Why</em> is the error correlated? Is there a way you can directly account for that fact (e.g. <a href="https://asu.pure.elsevier.com/en/publications/a-new-set-of-spatial-interaction-models-the-theory-of-competing-d" target="_blank">competing destinations</a> from interaction modelling) instead of applying a theory-free treatment for it?</p>
+
+<p>I&rsquo;m not sure if spatial confouding &amp; corrections are necessarily as fundamental as the principles behind RCT, but I&rsquo;m sure that, as statistics struggles to define itself alongside (or inside of) data science, spatial stats will have to carve a similar niche.</p>
+Understanding and Misunderstanding Randomized Controlled Trials
+http://www.nber.org/papers/w22595
+
+Tags: papers-2018
+
+Post ID: 166041909434, Date: Wed, 04 Oct 2017 10:36:46
+Url with slug: jupyter-notebook-viewer
+Reblog key: JduKwq8y
+Reblog Url: 
+Reblog Name: 
+Link: <p>Here’s the first of a few blogs I hope to write at the end of my dissertation synthesizing (in as plain language as possible) the work I’ve done and some insight for the layperson on what to think and how to trust these partisan gerrymandering statistics.</p>
+
+<p>I hope to keep them involving statistics &amp; computation, so that you, too, can explore this stuff if you program.</p>
+
+<p>If you don’t (or aren’t too comfortable with math), I still aim to keep the main text accessible. So, skip the equations &amp; distributions if they’re too much :)</p>
+Jupyter Notebook Viewer
+http://nbviewer.jupyter.org/gist/ljwolf/79176f773d4a0dd61c8559e0fef07dca/hacking_gobbledegook.ipynb?flushcache=True
+
+Tags: partisan gerrymandering, geography, gis, python, politics, gerrymandering, advantage, partisan bias
+
+Post ID: 159545478344, Date: Thu, 13 Apr 2017 20:07:30
+Url with slug: why-i-stopped-using-multiple-monitors-hacker
+Reblog key: pyMaYejH
+Reblog Url: http://www.mylinuxrig.com/post/159532668265/why-i-stopped-using-multiple-monitors-hacker
+Reblog Name: mylinuxrig
+Link: <p><a href="http://www.mylinuxrig.com/post/159532668265/why-i-stopped-using-multiple-monitors-hacker" class="tumblr_blog" target="_blank">mylinuxrig</a>:</p>
+
+<blockquote><p>Cory was able to stop using multiple monitors thanks to virtual desktops, a staple of just about every Linux desktop environment. If I could focus on more than one thing at a time, I’d use them, too!</p></blockquote>
+
+<p>I definitely transitioned to using a single, 27 inch 4k monitor. When plugged in from my laptop, I don&rsquo;t use the laptop screen (or I just keep like&hellip; a pomodoro timer up on it.)</p>
+Why I Stopped Using Multiple Monitors – Hacker Noon
+https://hackernoon.com/why-i-stopped-using-multiple-monitors-bfd87efa2e5b
+
+Tags: 
+
+Post ID: 156292398244, Date: Mon, 23 Jan 2017 22:09:54
+Url with slug: spatiotemporal-data-on-congressional-elections
+Reblog key: hdAqBarr
+Reblog Url: 
+Reblog Name: 
+Link: <p>Hello all! In working on my my dissertation on gerrymandering, I’ve put together a new dataset on Congressional districting. In it, I’ve joined up the database of congressional district shapes from Jeff Lewis at UCLA with some data from the ICPSR and the Constituency-Level Electoral Archive. I’ve made the data available on the Open Science Framework (linked) and submitted to <i>Scientific Data</i>. </p><p><br/></p><p>Let me know if you use the data!</p>
+Spatiotemporal Data on Congressional Elections
+https://osf.io/mjvkb/
+
+Tags: redistricting, gis, python, geography, politics, gerrymandering
+
+Post ID: 151762049909, Date: Thu, 13 Oct 2016 16:05:02
+Url with slug: retrodesignpy-from-gelman-carlin-2014
+Reblog key: z6rj5gI0
+Reblog Url: 
+Reblog Name: 
+Link: <p>Getting deceptively easy to port simple code from R to python. The following is a python function implementing the retrodesign R function discussed in Gelman &amp; Carlin’s 2014 paper on sign and magnitude errors. </p>
+retrodesign.py, from Gelman & Carlin (2014), Beyond Power Calculations.
+https://gist.github.com/ljwolf/acc7a13676843c8e0d8bcb1d0d5e0542#file-retrodesign-py
+
+Tags: statistics, retrodesign
+
+Post ID: 143231494379, Date: Fri, 22 Apr 2016 16:32:41
+Url with slug: google-summer-of-code
+Reblog key: 2IrhZzJx
+Reblog Url: 
+Reblog Name: 
+Link: <p>Excited to be working on PySAL for Google Summer of Code!</p>
+Google Summer of Code
+https://summerofcode.withgoogle.com/organizations/4890191244296192/#6298483845758976
+
+Tags: gsoc, google summer of code, python, geography, gis
+
+Post ID: 131511576504, Date: Mon, 19 Oct 2015 17:16:22
+Url with slug: ljwolfspatialweightsjl
+Reblog key: yL2yDa2d
+Reblog Url: 
+Reblog Name: 
+Link: <p>Spatial weights are integral to many different kinds of spatial statistics. <br/></p><p>I’ve made a start at constructing the most basic types: contiguity weights/adjacency graphs. But, this’ll probably undergo quite a bit of change. Programming for a language in its 0.*s is quite a task :)<br/></p>
+ljwolf/SpatialWeights.jl
+https://github.com/ljwolf/SpatialWeights.jl
+
+Tags: julia, python, GIS, geo, geography
+
+Post ID: 130798207949, Date: Fri, 09 Oct 2015 01:47:23
+Url with slug: ljwolfcenpy
+Reblog key: 9BtWfICU
+Reblog Url: 
+Reblog Name: 
+Link: <p>Just added TIGER support!</p><p>Now you can get your GeoData and your Census tabular data in one place. It’s also pip-installable. <br/></p><p>If you’re a python user who works with census data or would like a structured way to work with census geodata, check it out!<br/></p>
+ljwolf/cenpy
+https://github.com/ljwolf/cenpy.
+
+Tags: cenpy, census, US Census, Python, PYGIS, GIS, geography, data science
+
+Post ID: 127108173244, Date: Wed, 19 Aug 2015 18:26:25
+Url with slug: science-isnt-broken-fivethirtyeight
+Reblog key: KZaCzDtJ
+Reblog Url: http://pol102.tumblr.com/post/127107482211/science-isnt-broken-fivethirtyeight
+Reblog Name: pol102
+Link: <p><a href="http://pol102.tumblr.com/post/127107482211/science-isnt-broken-fivethirtyeight" class="tumblr_blog" target="_blank">pol102</a>:</p>
+
+<blockquote><p>This is worth assigning to a methods class.</p></blockquote>
+Science Isn’t Broken | FiveThirtyEight
+http://fivethirtyeight.com/features/science-isnt-broken/
+
+Tags: 
+
+Post ID: 126620960329, Date: Thu, 13 Aug 2015 18:41:42
+Url with slug: nextdoor-interns
+Reblog key: cbQprw3d
+Reblog Url: 
+Reblog Name: 
+Link: 
+Nextdoor interns! 
+https://engblog.nextdoor.com/2015/08/13/meet-the-interns-part-1/
+
+Tags: 
+
+Post ID: 125820083854, Date: Tue, 04 Aug 2015 01:05:07
+Url with slug: ljwolfwampl
+Reblog key: SK6c7JAE
+Reblog Url: 
+Reblog Name: 
+Link: <p>Yeah, this is another python implementation of selections from <a href="https://wesandersonpalettes.tumblr.com/" target="_blank">Wes Anderson Palettes</a> for matplotlib/seaborn.</p>
+
+<p>It&rsquo;s pretty neat, I like it. I&rsquo;ll probably use it. I hope you find it useful.</p>
+ljwolf/wampl
+https://github.com/ljwolf/wampl
+
+Tags: python, wes anderson, matplotlib, visualization, geography, GIS
+
+Post ID: 125545355884, Date: Fri, 31 Jul 2015 18:03:47
+Url with slug: karthikwesanderson
+Reblog key: F7QTEPqi
+Reblog Url: 
+Reblog Name: 
+Link: <p>I’d love to replicate this in python, but matplotlib colormaps look so intimidating. <br/></p>
+karthik/wesanderson
+https://github.com/karthik/wesanderson
+
+Tags: python, matplotlib, colormap, wes anderson, geography, GIS
+
+Post ID: 124899792864, Date: Fri, 24 Jul 2015 01:58:03
+Url with slug: empowering-data-scientists-for-the-journey
+Reblog key: 8nnInJgf
+Reblog Url: http://ljwolf.org/post/124890865494/empowering-data-scientists-for-the-journey
+Reblog Name: yetanothergeographer
+Link: <p><a class="tumblr_blog" href="http://levijohnwolf.com/post/124890865494/empowering-data-scientists-for-the-journey" target="_blank">yetanothergeographer</a>:</p>
+
+<blockquote><p>This makes me so happy. You deserve it, Continuum.</p>
+
+<p>If only more of these companies would Red Hat it up and commit devs full-time to FOSS additions to the python scientific data ecosystem. I know that places like the place I work for rely <a href="https://engblog.nextdoor.com/2015/07/02/what-is-the-technology-behind-nextdoor/" target="_blank">heavily</a> on the scientific python stack for exploratory data analysis (even though that tends to get backgrounded a bit).</p></blockquote>
+
+<p>In related news, an OSX update today clobbered my current installs of Python 3 on my work laptop. I guess I should be using Anaconda. <br/></p>
+Empowering Data Scientists for the Journey
+http://continuum.io/blog/the-journey
+
+Tags: 
+
+Post ID: 124890865494, Date: Thu, 23 Jul 2015 23:50:41
+Url with slug: empowering-data-scientists-for-the-journey
+Reblog key: 8nnInJgf
+Reblog Url: 
+Reblog Name: 
+Link: <p>This makes me so happy. You deserve it, Continuum.</p>
+
+<p>If only more of these companies would Red Hat it up and commit devs full-time to FOSS additions to the python scientific data ecosystem. I know that places like the place I work for rely <a href="https://engblog.nextdoor.com/2015/07/02/what-is-the-technology-behind-nextdoor/" target="_blank">heavily</a> on the scientific python stack for exploratory data analysis (even though that tends to get backgrounded a bit).</p>
+Empowering Data Scientists for the Journey
+http://continuum.io/blog/the-journey
+
+Tags: another company I'd love to work for, continuumIO, continuum, python, foss, GIS, geography
+
+Post ID: 124298636149, Date: Fri, 17 Jul 2015 00:13:50
+Url with slug: ljwolfcenpy
+Reblog key: eTvS5pad
+Reblog Url: 
+Reblog Name: 
+Link: <p>The census changed a bit in their API spec recently, so the package broke. <br/></p><p>I’ve just posted a fix. As always, please open an issue on GitHub if there’re any problems!<br/></p>
+ljwolf/cenpy
+https://github.com/ljwolf/cenpy.git
+
+Tags: cenpy, US Census Bureau, census, US, python, data, social science, geography
+
+Post ID: 96040605524, Date: Thu, 28 Aug 2014 20:04:20
+Url with slug: i-cannot-believe-the-acm-published-this
+Reblog key: JXY841Dn
+Reblog Url: 
+Reblog Name: 
+Link: <p>Are there any institutional checks/rebuttals to obviously ignorant claims made by the Editor and Chief of the CACM?</p>
+<p>Like&hellip; who would&rsquo;ve reviewed this and said,</p>
+<blockquote>
+<p>yep, let&rsquo;s go with this. Let&rsquo;s publish this crazy, 1980s-style Red-baiting.</p>
+</blockquote>
+<p>This guy writes like he&rsquo;s the defender of the free world against all us millennial, youthful, pinko liberal communist Open Access/FOSS types. Ugh.</p>
+I cannot believe the ACM published this.
+http://m.cacm.acm.org/magazines/2014/8/177025-openism-ipism-fundamentalism-and-pragmatism/fulltext
+
+Tags: FOSS, open source, open access, software, intellectual property, IP, academia
+
+Post ID: 90601371894, Date: Wed, 02 Jul 2014 19:22:56
+Url with slug: getting-some-serious-hype-for-scipy
+Reblog key: vGhDTWBq
+Reblog Url: 
+Reblog Name: 
+Link: 
+Getting some serious hype for SciPy
+https://conference.scipy.org/scipy2014/schedule/
+
+Tags: scipy2014, scipy, scientific computing, computing, python
+
+Post ID: 83546175744, Date: Tue, 22 Apr 2014 16:31:17
+Url with slug: dont-be-a-technical-masochist-the-endeavour
+Reblog key: MvJ8Z6pP
+Reblog Url: 
+Reblog Name: 
+Link: <p>Great advice on why learning many tools is sometimes better than mastering one. </p>
+<p>At the same time, I use <a href="http://imgs.xkcd.com/comics/cautionary.png" target="_blank">Arch</a>&hellip;</p>
+Don’t be a technical masochist | The Endeavour
+http://www.johndcook.com/blog/2014/03/12/dont-be-a-technical-masochist/
+
+Tags: arch, linux, tools, simplicity, mastery, graduate school, statistics, math
+
+Post ID: 78062682127, Date: Thu, 27 Feb 2014 20:42:45
+Url with slug: metaprogramming-in-julia
+Reblog key: x8C8DTzH
+Reblog Url: 
+Reblog Name: 
+Link: <p>After doing the <a href="http://www.youtube.com/playlist?list=PLB63C06FAF154F047" target="_blank">MIT SICP lectures</a> over the summer, I&rsquo;m always amazed at how language development frequently attempts to implement functionality implementable in LISP. It seems like LISP really was a consummately expressive language, and it&rsquo;s frustrating sometimes to not have simple things I got used to when learning the functionals like Scheme and Haskell.</p>
+<p>That aside, this macro capability is amazing, and it&rsquo;s illustrated here to quite the effect. The stupidly simple knapsack I implemented is done here in three lines that are much more semantically meaningful than my larger program. They macros are extended at run time into full expressions, and their data structure is much better for the solution of general knapsack problems. </p>
+<p>My implementation would not quite win out in a diff battle.</p>
+<p>This paper by Miles Lubin at MIT really demonstrates the ability of these macros to reduce general overhead and waste for IP/MIP. I&rsquo;d really recommend a read, if you&rsquo;re interested in math programming. The more I learn about this language, the more I&rsquo;m convinced it&rsquo;s posed, from an infrastructural perspective, to replace <em>at least </em>R. But, then again, I&rsquo;m not getting my degree in telling futures to the present.</p>
+Metaprogramming in Julia
+http://arxiv.org/pdf/1312.1431v1.pdf
+
+Tags: math, mathematical programming, julia, julialang, integer programming, linear programming, optimization, MIT
+
