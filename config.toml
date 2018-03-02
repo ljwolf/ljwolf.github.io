@@ -29,23 +29,54 @@ pygmentsCodeFences = true
 #  url = "/tags/"
 
 [[menu.main]]
-    name = "Spatial@UChicago"
-    weight = -120
+    name = "About | "
+    weight = -200
+    identifier = "about"
+    url = "/about/"
+
+[[menu.main]]
+    name = " CV |  "
+    weight = -190
+    identifier = "cv"
+    url = "https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"
+
+[[menu.main]]
+    name = " Bristol |  "
+    weight = -180
+    identifier = "brizzle"
+    url = "http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"
+
+[[menu.main]]
+    name = " Chicago |  "
+    weight = -170
     identifier = "uchicago"
     url = "https://spatial.uchicago.edu"
 
+[[menu.main]]
+    name = " UCR |  "
+    weight = -160
+    identifier = "ucr"
+    url = "https://spatial.uchicago.edu"
+
+[[menu.main]]
+    name = " Talks | "
+    weight = -150
+    identifier = "talks"
+    url = "/talks/"
+
 [author]
-  name = ""
+  name = "Levi John Wolf"
 
 [params.meta]
   keywords = ""
-  description = "Personal blog."
+  description = "just a geograblog"
 
 [params]
-  #email = "myemail"
-  #github = "github id"
+  email = "levi.john.wolf@gmail.com"
+  github = "ljwolf"
   #gitlab = "gitlab id"
-  #twitter = "twitter id"
+  twitter = "levijohnwolf"
+  job = "https://bristol.ac.uk/geography/"
   #linkedin = "linkedin id"
 
 [params.colors]
