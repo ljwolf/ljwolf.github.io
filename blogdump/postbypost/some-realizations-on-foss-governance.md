@@ -3,6 +3,7 @@ id: 130708836859
 date: 2015-10-07T18:10:06Z
 url: some-realizations-on-foss-governance
 title: Some realizations on FOSS-Governance
+tags: ["numpy"," python"," scientific python"," gis"," geography", "imported"]
 ---
 <p>If you haven’t read/paid attention to the <a href="https://mail.scipy.org/pipermail/numpy-discussion/2015-September/073599.html" target="_blank">Numpy Governance Discussions</a> goingon in the numpy discussion mailing list, I wouldn’t blame you. They’re probably dry and boring.</p>
 
@@ -59,4 +60,7 @@ title: Some realizations on FOSS-Governance
 <p>Founders/longstanding contributors have unique, irreplacable institutional knowledge about the software they have helped create. In my own life, coordinating new ideas with code debt and legacies of involvement has both been frustrating, but ultimately rewarding for the project.</p>
 
 <p>And, I hope projects like Numpy find ways to involve their tall trees that don&rsquo;t blot out the sun for saplings like me.</p>
-Tags: numpy, python, scientific python, gis, geography
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/130708836859/some-realizations-on-foss-governance'<tt>yetanothergeographer</tt></a></small>

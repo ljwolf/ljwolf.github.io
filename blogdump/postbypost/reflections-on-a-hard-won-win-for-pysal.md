@@ -3,6 +3,7 @@ id: 125215868119
 date: 2015-07-27T21:10:56Z
 url: reflections-on-a-hard-won-win-for-pysal
 title: Reflections on a hard-won win for PySAL
+tags: ["python"," gis"," python 3"," py3k"," geography"," pysal"," statistics"," spatial analysis", "imported"]
 ---
 <p>As a way to learn Python (and I mean <strong>really come to know it</strong>), I took on the project of converting <a href="https://github.com/ljwolf/pysal/tree/py3conv" target="_blank">PySAL</a> to be compatible with Python 3.</p>
 
@@ -33,4 +34,7 @@ title: Reflections on a hard-won win for PySAL
 <li>Don’t be concerned about “learning” idiomatic Python 3 if you know Python 2.7.  </li>
 <li>If given the option to write something in a new feature of a language instead of an old feature, always pick the new feature. By the time you wrap your head around it, it’ll be considered “default” and the old feature will be deprecated.</li>
 </ol><p>And, since I’m sitting here, staring at our <code>setup.py</code>, trying to figure out why it won’t correctly <code>build</code> from source, nor install correctly using the <code>build_2to3</code> builder, packaging in Python <a href="https://mail.python.org/pipermail/distutils-sig/2008-October/010210.html" target="_blank">SUCKS</a> and apparently has since 2008.</p>
-Tags: python, gis, python 3, py3k, geography, pysal, statistics, spatial analysis
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/125215868119/reflections-on-a-hard-won-win-for-pysal'<tt>yetanothergeographer</tt></a></small>

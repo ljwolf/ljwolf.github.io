@@ -3,6 +3,7 @@ id: 139404598754
 date: 2016-02-16T00:09:02Z
 url: a-bite-of-a-free-lunch-optimizing-numerical
 title: A bite of a “free lunch” optimizing numerical routines in Python
+tags: ["tanstaafl"," optimization"," python"," gis"," foss"," learning"," studyblr", "imported"]
 ---
 <p><em>tl;dr: ask yourself <a href="#tldr" target="_blank">these</a> before you deadlift optimize code</em></p>
 
@@ -52,4 +53,7 @@ Since I’d talked to a few other grad students recently about how to write fast
 <li><strong><em>Is the optimization suggested easier to maintain than a static/type-based compiling version in Cython/Numba?</em></strong> In general, it’s undesirable to have separate, faster implementations that rely on extra dependencies. But, before chasing the performance dragon, you should really consider whether a compile-based solution would get you where your operational constraints are pushing you to be.</li>
 <li><strong><em>Is the optimization potentially fast enough to warrant reimplementation?</em></strong> This is possibly the least important, and with stuff like <a href="https://github.com/joealcorn/laboratory" target="_blank">laboratory</a>, I’m hoping it continues to recede. But, again, you don’t want to spend more time than I did to realize a speedup smaller than 1.13X like I found.</li>
 </ol>
-Tags: tanstaafl, optimization, python, GIS, FOSS, learning, studyblr
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/139404598754/a-bite-of-a-free-lunch-optimizing-numerical'<tt>yetanothergeographer</tt></a></small>

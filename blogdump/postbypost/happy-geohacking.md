@@ -3,6 +3,7 @@ id: 119345228474
 date: 2015-05-19T03:06:16Z
 url: happy-geohacking
 title: Happy GeoHacking
+tags: ["geospatial"," gis"," python", "imported"]
 ---
 <p>I just got done teaching a short <a href="https://github.com/ljwolf/tutorials/tree/master/pygis" target="_blank">workshop on GIS in Python</a>. Something may be odd to those of you who use FOSS packages to do GIS: I didn&rsquo;t use any <a href="https://github.com/geopandas/geopandas" target="_blank"><code>GeoPandas</code></a>.</p>
 
@@ -23,4 +24,7 @@ title: Happy GeoHacking
 <p>I guess I&rsquo;m happy with the fact that this was bourne out of a realization had during that workshop. And, this was a great exercise in (yet more) <code>io</code> hacking with <code>PySAL</code>. Where some might not be able to handle an <code>OGR</code> install and thus not be able to grab <code>Fiona</code> or <code>GeoPandas</code>, this <code>geodf</code> contrib module could work. But, I think, in the future, I&rsquo;ll be focused more on linking GeoDataframe instances to <code>PySAL</code> analytics methods (using <code>Patsy</code> &amp; a fast <code>shapely-&gt;PySAL</code> weights constructor) rather than simply replicating an <code>io</code> framework that <code>Fiona</code> makes more general and more easy to use.</p>
 
 <p>In full, swapping <code>PySAL.core.IOHandlers</code> in as the main engine driving <code>IO</code> has convinced me that an internal GeoJSON representation fully abstracted from whether the underlying data is geojson, shapefile, coverage, PostGIS, or whatever, as is provided by <code>Fiona</code>, is still probably the right way to do geospatial <code>FileIO</code>.</p>
-Tags: geospatial, gis, python
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/119345228474/happy-geohacking'<tt>yetanothergeographer</tt></a></small>

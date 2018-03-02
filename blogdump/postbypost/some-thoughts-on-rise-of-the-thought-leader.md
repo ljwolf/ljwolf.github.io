@@ -3,6 +3,7 @@ id: 162370153119
 date: 2017-06-28T17:18:34Z
 url: some-thoughts-on-rise-of-the-thought-leader
 title: Some thoughts on “Rise of the Thought Leader”
+tags: ["long form"," thought leader"," intellectual"," academic", "imported"]
 ---
 <p><a href="https://newrepublic.com/article/143004/rise-thought-leader-how-superrich-funded-new-class-intellectual" target="_blank">This is a great article</a> on the corporatization of the intellectual, or really the origin of the &ldquo;thought leader&rdquo; by David Sessions. An illumination of Dan Drezner&rsquo;s new book, <a href="https://global.oup.com/academic/product/the-ideas-industry-9780190264604" target="_blank">the Ideas Industry</a>, reviewer David Sessions outlines Drezner&rsquo;s main arguments and connects them back to a Gramscian perspective on the social responsibility of the intellectual.</p>
 
@@ -21,4 +22,7 @@ title: Some thoughts on “Rise of the Thought Leader”
 <p>As someone who <em>does</em> do empirical, totally quantitative analysis, I still routinely acknowledge these issues as  serious concerns. Of course, it sometimes is the case that allowing for violations of these assumptions yields no substantively different results in an analysis. But, it is the <em>active awareness</em> that manifests through self-doubt, model criticism, &amp; a commitment to epistemological rigor that is the hallmark of a total empiricist. You need to do the legwork to validate these assumptions, if at all possible. The model you use stands atop its own theory, regardless of whether or not you&rsquo;re aware of it.</p>
 
 <p>That said, I&rsquo;ve been wondering recently myself; as someone who&rsquo;ll be finishing up and joining faculty in the coming months, what does it mean to be a successful <em>intellectual</em> academic when Uncle TED drives impact measures? I have no clue. But, I do know I anticipate it will be real tough to sell the species of self-doubt and criticism &amp; think is needed here.</p>
-Tags: long form, thought leader, intellectual, academic
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/162370153119/some-thoughts-on-rise-of-the-thought-leader'<tt>yetanothergeographer</tt></a></small>

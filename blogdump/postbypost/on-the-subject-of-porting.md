@@ -3,6 +3,7 @@ id: 125470664109
 date: 2015-07-30T20:17:38Z
 url: on-the-subject-of-porting
 title: On the subject of porting,
+tags: ["python"," python 3"," gis"," geography"," porting"," python 2 to 3"," 2 to 3", "imported"]
 ---
 <p>On this, the first few minutes of Guido&rsquo;s <a href="https://www.youtube.com/watch?v=G-uKNd5TSBw" target="_blank">PyCon Keynote </a>really hit home.</p>
 
@@ -15,4 +16,7 @@ title: On the subject of porting,
 </blockquote>
 
 <p>If you&rsquo;re out there porting some code, I hope you listen to the first half of Guido&rsquo;s talk.</p>
-Tags: python, python 3, GIS, geography, porting, python 2 to 3, 2 to 3
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/125470664109/on-the-subject-of-porting'<tt>yetanothergeographer</tt></a></small>

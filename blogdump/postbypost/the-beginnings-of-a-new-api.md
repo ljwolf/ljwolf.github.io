@@ -3,6 +3,7 @@ id: 145377908429
 date: 2016-06-03T20:07:42Z
 url: the-beginnings-of-a-new-api
 title: The Beginnings of a new API
+tags: ["gsoc"," python"," gis"," geography"," pysal", "imported"]
 ---
 <p><em>NOTE: A demo of the relevant code I&rsquo;m referring to for the new labelled array API in <code>pysal.weights</code> in this update is available in <a href="https://github.com/ljwolf/pysal/blob/pdio/from%20classmethods.ipynb" target="_blank">this notebook</a>, and the actual code lives in a <code>weights2</code> module in my <a href="https://github.com/ljwolf/pysal/tree/pdio" target="_blank">gsoc feature branch</a>.</em></p>
 
@@ -17,4 +18,7 @@ title: The Beginnings of a new API
 <p>Altogether, this means that I&rsquo;ve done quite a bit of redesigning of the <code>weights</code> module. But, in general, it still supports the same basic interaction style, but now can build weights from arbitrary iterables of shapes or PostGIS-style dataframes.</p>
 
 <p>Trying to balance this work and my own independent work on <a href="http://ljwolf.org/post/145342859409/visual-display-of-complex-data-can-be-pretty" target="_blank">my dissertation</a> has been challenging so far, but fortunately, the GSOC work has been more forthcoming than I expected. Hopefully, as the project matures, balancing this will be simpler.</p>
-Tags: gsoc, python, GIS, geography, pysal
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/145377908429/the-beginnings-of-a-new-api'<tt>yetanothergeographer</tt></a></small>

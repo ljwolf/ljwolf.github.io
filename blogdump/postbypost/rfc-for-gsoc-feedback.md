@@ -3,6 +3,7 @@ id: 144624526699
 date: 2016-05-19T19:12:11Z
 url: rfc-for-gsoc-feedback
 title: RFC for GSOC Feedback
+tags: ["gis"," python"," spatial analysis"," geography", "imported"]
 ---
 <div tabindex="-1" id="notebook" class="border-box-sizing">
 <div class="container" id="notebook-container">
@@ -943,4 +944,7 @@ Name: geometry, dtype: object</pre>
 </div>
 </div>
 </div>
-Tags: GIS, python, spatial analysis, geography
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/144624526699/rfc-for-gsoc-feedback'<tt>yetanothergeographer</tt></a></small>

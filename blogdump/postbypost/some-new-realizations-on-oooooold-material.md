@@ -3,6 +3,7 @@ id: 98496154574
 date: 2014-09-26T17:40:00Z
 url: some-new-realizations-on-oooooold-material
 title: Some New Realizations on Oooooold Material
+tags: ["spatial autocorrelation"," geography"," mathematics"," statistics"," spatial analysis"," grad school"," academia", "imported"]
 ---
 <p>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum,  I wrote about two weeks of lectures and assignments on spatial statistics,  pushing from a start point of the <strong>Kolmogorov Axioms</strong>, <a href="https://en.wikipedia.org/wiki/Probability_axioms" target="_blank">fundamental results in elementary probability theory</a> all the way up through spatial regression.</p>
 
@@ -105,4 +106,7 @@ sensitive to local autocorrelation than is desirable for a local measure? That i
 <p>In my lecture notes, I go on to explain LISA statistics through discussing the local Moran&rsquo;s $I$ statistic from Anselin(1995). But, I pretty much understood the logic behind LISA statistics, given that I could abstract away the original Moran&rsquo;s I as a given, inherited piece of knowledge.</p>
 
 <p>I really wish I had the opportunity to take a high-level PhD-level course on this stuff.  But, with figuring out what applications to do as my advisor splits from ASU and  this TA-ship sucking up all of my oxygen (and doing so even before the point where  I kinda started functioning as a full statistics instructor) I can&rsquo;t even say that I&rsquo;d have the time to chase up these leads until I get a little bit less off of my plate.</p>
-Tags: spatial autocorrelation, geography, mathematics, statistics, spatial analysis, grad school, academia
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/98496154574/some-new-realizations-on-oooooold-material'<tt>yetanothergeographer</tt></a></small>

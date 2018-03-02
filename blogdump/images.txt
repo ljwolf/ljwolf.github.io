@@ -1,0 +1,670 @@
+Post ID: 171389427489, Date: Wed, 28 Feb 2018 15:46:40
+Url with slug: this-is-an-interesting-little-exploration-i-did
+Reblog key: 3ovqIpyb
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/190a56be50695e248630bc895ca7f3e5/tumblr_p4vodsgP6L1ts05oao1_r2_1280.png 
+Photo Caption: <p>This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&rsquo;s not going into my analysis, but I like the concept, so I&rsquo;ll post it here (cause that&rsquo;s the entire point of this blog!)</p>
+
+<p>I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&rsquo;m a bit limited because I don&rsquo;t really know what a place like <code>Barrow-in-Furness</code> is like, without looking into it.</p>
+
+<p>In general, it&rsquo;s more difficult to get a sense of what the model&rsquo;s telling me from the conditional estimates because I don&rsquo;t really have a sense of the joint picture: I don&rsquo;t really intuit how they covary across places, like I might in US counties or states.</p>
+
+<p>So, I found myself wanting a kind of <strong>&ldquo;joint&rdquo; marginal effect</strong>, something I could use to work out how my model predictions vary from &ldquo;places like A&rdquo; to &ldquo;places like B&rdquo; but define those generically, in terms of typical combinations of attributes in my sample.</p>
+
+<p>I started by shifting things linearly along my data&rsquo;s midranges, but this doesn&rsquo;t account for the fact that some attributes may be negatively correlated with other attributes in my design matrix, and so I would expect it to be more typical in my data that <code>Xj</code> increases as <code>Xk</code> decreases, on average. This isn&rsquo;t just a linear shifting using each conditional effect&hellip; it&rsquo;s something else.</p>
+
+<p>So, eigenspaces. I strung some code together to:</p>
+
+<ol><li>Grab the <code>sklearn.decomposition.PCA</code> of my model design matrix.</li>
+<li>Extract the most relevant dimension.</li>
+<li>Sort my data by this dimension and grab the names of observations.</li>
+<li>Plot the predicted Brexit % against these names.</li>
+</ol><p>Above is the plot of my data&rsquo;s main dimension, the one that explains the most variance in my design matrix. The lines are the predicted % Brexit, observed % Brexit, and &ldquo;breakeven point,&rdquo; along with the names of places sorted by this dimension on the vertical axis.</p>
+
+<p>Now, I can get a sense of how these types of places (sort of like area profiles) relate to one another in my data. This gives me an idea of what happens when I change from &ldquo;places like Kensington and Chelsea&rdquo; to &ldquo;places like Cornwall,&rdquo; without having to specify the precise covariance structure of my attribute data.</p>
+
+<p>I can slice one dimension off the PCA decomposition, check how varying it changes my model, and see what covariates are related to that dimension.</p>
+
+<p>In a way, gives me the &ldquo;joint&rdquo; marginal effect I want: what happens when you move your mean response along many different features, but in a way that reflects how these features covary in your source data.</p>
+Tags: statistics, simulation, machine learning, geography, brexit, analysis
+
+Post ID: 170924246034, Date: Thu, 15 Feb 2018 20:09:35
+Url with slug: this-brexit-analysis-for-the-gisruk-competitions
+Reblog key: 8J482bKU
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/bfae9fe35b797bbe3001ccec7aef2195/tumblr_p47xvzxH9f1ts05oao1_r1_1280.png 
+Photo Caption: <p>This brexit analysis for the <a href="http://leicester.gisruk.org/cdrc-gisruk-data-challenge/" target="_blank">GISRUK competition</a>&rsquo;s making some headway!</p>
+
+<p>That is after, of course, I just decided to focus on other data than data in the competition.</p>
+Tags: 
+
+Post ID: 170340352694, Date: Wed, 31 Jan 2018 07:07:03
+Url with slug: never-thought-id-be-complaining-about-only-having
+Reblog key: VonMN3aU
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/c7f6761ed762ca5107bbba626a8f3823/tumblr_p3f5nrBOKp1ts05oao1_1280.png 
+Photo Caption: <p>Never thought I&rsquo;d be complaining about <em>only</em> having 128 GB of memory (half swap).</p>
+
+<p>Not sure where this happens, since I&rsquo;m just using sparse matrices here. I guess they might get densified somewhere below me &amp; then that overhead allocation doesn&rsquo;t get returned to other processes, it&rsquo;s just claimed by the jupyter kernel.</p>
+
+<p>Which&hellip;. means that my two kernels compete for space.</p>
+Tags: 
+
+Post ID: 170285809114, Date: Mon, 29 Jan 2018 20:05:03
+Url with slug: its-neat-that-this-new-algorithm-is-working
+Reblog key: rSuW5jfW
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/72fb48779cd7f5a58abeaf6fdfcfa7f1/tumblr_p3cgcf3xNS1ts05oao1_1280.png http://78.media.tumblr.com/72fb48779cd7f5a58abeaf6fdfcfa7f1/tumblr_p3cgcf3xNS1ts05oao1_1280.png http://78.media.tumblr.com/47b8ce858e18bb0b1c322bb41eea2bde/tumblr_p3cgcf3xNS1ts05oao3_1280.png http://78.media.tumblr.com/feecd32d9f956f9ee363a7bd2c1c4f54/tumblr_p3cgcf3xNS1ts05oao2_1280.png http://78.media.tumblr.com/aa3b86b3c69f83bd705c246a087fb3bc/tumblr_p3cgcf3xNS1ts05oao4_1280.png
+Photo Caption: <p>It&rsquo;s neat that this new algorithm is working correctly. Here, a few cluster solutions for spatially-contiguous clustering are shown in Brooklyn using some price data for some Airbnbs. I&rsquo;m pretty excited about this new technique, so hopefully I&rsquo;ll get it all prepped soon.</p>
+
+<p>I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&rsquo;s like&hellip; once the new stuff is done, I get much less interested than when I&rsquo;m still trying to figure it out.</p>
+
+<p>I guess that&rsquo;s probably pretty common among researchers, but the thrill of wrestling with a genuinely new problem is interesting, enjoyable, and difficult. Sometimes, it feels like documenting that wrestling is a bit tedious. But, if you don&rsquo;t document it, it essentially never occurred&hellip;</p>
+Tags: ml, stats, clustering, brooklyn, neighbourhoods, neighborhoods, airbnb, price, economics, geography, gis
+
+Post ID: 164316207339, Date: Thu, 17 Aug 2017 23:38:37
+Url with slug: i-forgot-how-killer-the-builtin-matplotlib
+Reblog key: x7KDxoxV
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/feab3cc44ab39a93b7d10730d7aa781d/tumblr_ouv3gdNWny1ts05oao1_1280.png 
+Photo Caption: <p>I forgot how killer the builtin matplotlib backends are. I&rsquo;ve been (foolishly) writing each image to file and viewing using a cli viewer.</p>
+
+<p>Instead, why not just use their frontends and <code>plt.ion()</code>?
+Unix + tiling WM is truly a system-wide IDE, but I never learned the &ldquo;old&rdquo; tooling for working with matplotlib at the cli.</p>
+
+<p>The first time I learned matplotlib I learned it in a notebook. Now that I&rsquo;m wedded to tiling &amp; strongly prefer the terminal ipython to the notebook, I&rsquo;ve gotta learn all the older tooling for matplotlib.</p>
+Tags: 
+
+Post ID: 162645483709, Date: Wed, 05 Jul 2017 18:56:45
+Url with slug: i-think-thisll-end-up-being-the-big-story-from-my
+Reblog key: vc4TpnoX
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/ee8bdd8fd6091d06f6809ab2ce089382/tumblr_osn3qlCL691ts05oao1_1280.png 
+Photo Caption: <p>I think this’ll end up being the big story from my dissertation:</p>
+
+<p>District shape isn’t <em>at all</em> related to political impact (in aggregate) when it comes to redistricting.</p>
+
+<p>While some weird districts may exist and those may be gerrymandered, the relationship is not statistically sound in aggregate: weird districts might be completely benign, in terms of the partisan advantage measures I’m considereding my dissertation &amp; other classical measures of model influence.</p>
+
+<p>Totally discounting the “expressive harms” arguments in this sphere, though.</p>
+
+<p>I should add, the <em>reason</em> why this looks so clear from the outset is that, in this scattermatrix, the political variables are all related to one another, the geometric measures are all related to one another, but the relationships <em>between</em> political and geometric information are essentially square (or circular) scatters of points.</p>
+
+<p>Maybe throwing in some further controls will help, but I doubt it…</p>
+Tags: gerrymandering, acadeimca, dissertation
+
+Post ID: 158464131179, Date: Thu, 16 Mar 2017 01:12:41
+Url with slug: is-my-uptime-excited-or-scared-you-decide
+Reblog key: oQ16ZTgh
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/c5ec72299f7a99cf2e084e8a4546f271/tumblr_omw6h5wY0N1ts05oao1_1280.png 
+Photo Caption: <p>Is my uptime excited or scared? you decide.</p>
+Tags: uptime
+
+Post ID: 157594826829, Date: Wed, 22 Feb 2017 22:09:11
+Url with slug: all-those-p-values-will-be-lost-in-time-like
+Reblog key: ANy3lL4y
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/27fed221135ebd6c226a1895bbf34bde/tumblr_olt4rbnNV81ts05oao1_1280.png 
+Photo Caption: <p>All those p-values will be lost in time, like fixed effects in shrinkage estimators.</p>
+Tags: bayes, python, geography, statistics, data science
+
+Post ID: 151986067019, Date: Tue, 18 Oct 2016 14:00:17
+Url with slug: finally-got-this-elections-simulator-working-the
+Reblog key: RSyD4sy5
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/cffc3893e93dafaa4d0bf4162323a999/tumblr_of98ohQ0mE1ts05oao1_1280.png 
+Photo Caption: <p>Finally got this elections simulator working. The concept, a <a href="http://pan.oxfordjournals.org/content/early/2012/05/09/pan.mps017.short" target="_blank">neat paper by Drew Linzer</a>, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the <i>why</i> of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes. </p><p>Here, I’ve pieced together an estimator/simulator that handles missing/uncontested districts, fits a GaussianMixture from scikit-learn to each pattern (giving each party their own component), and then correctly simulates from the mixture-of-mixtures plus uncontested possibilities. These are distributional fits &amp; QQ plots for the 1979 Canadian federal elections. </p><p>Multiparty estimation has, in the past, posed a somewhat thornier issue, since some minor parties may be incredibly competitive in some areas and not run candidates in others. To estimate the correct “strength,” you have to focus on the cases where they participate, hence Linzer’s use (deriving I think from a Tomz, Tucker, &amp; Wittenberg paper on accurate multiparty regressions from when I was 12?) of separate modeling of electoral patterns. </p><p>Of course, a better technique, if the party is truly a regional party, is to <i>discover its area</i>, using some exploratory scale estimator like GWR or SVC models. </p><p>After I knock this one out, I’ll move to implementing the original Gelman-King (1994) method, and then I’ll have the three basic methods that may provide leads for my thesis work!</p>
+Tags: dissertation, python
+
+Post ID: 151632705649, Date: Mon, 10 Oct 2016 19:25:04
+Url with slug: every-time-i-use-a-sixel-based-library-it-just
+Reblog key: 9SDaVmkP
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/98e358f3268b7cbb063dabd42bfc9983/tumblr_oeuudsbUaB1ts05oao1_1280.png 
+Photo Caption: <p>every time I use a sixel-based library, it just feels super neat. <a href="https://en.wikipedia.org/wiki/Sixel" target="_blank">Sixel</a> is a terminal image format that you can use to show images straight in a command line. Since it’s actually just an image encoded in a terminal escape sequence, there’s no futzing with X11 window forwarding. </p><p><br/></p><p>While the format is occasionally buggy when displaying complex images, the ability to quickly work with models and display full images directly inline with the ipython qtconsole is just amazing. I’m <b>very </b>impressed!</p><p>For any matploltlib-style graphic, you can use <a href="https://pypi.python.org/pypi/sixelplot/0.0.2" target="_blank">sixelplot</a> to render output, replacing any call to `pyplot.show()`. </p>
+Tags: python, graphics, cli
+
+Post ID: 151582868789, Date: Sun, 09 Oct 2016 18:53:35
+Url with slug: at-top-a-metropolis-within-gibbs-sampled-sar
+Reblog key: QlO5vfDJ
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/56f27b8372f5b4e351f06b6572a99e95/tumblr_oesy9bJbHg1ts05oao1_1280.png http://78.media.tumblr.com/56f27b8372f5b4e351f06b6572a99e95/tumblr_oesy9bJbHg1ts05oao1_1280.png http://78.media.tumblr.com/6cfc194b5a497594bb910c42d7586726/tumblr_oesy9bJbHg1ts05oao2_1280.png
+Photo Caption: <p>At top, a Metropolis-within-Gibbs-sampled SAR model. </p><p>At bottom, a NUTS-sampled SAR model. </p><p>Both took the same time to sample, but the Gibbs drew 20X more samples. But, look at the difference in serial autocorrelation! It’s easy to see the Gibbs sampler, while hovering around the same value, is clearly less efficient in sampling the value. </p><p>I’ll have to see if slice-within-Gibbs fares any better while determining if the 20X more samples actually contain more information than the NUTS-drawn samples. </p>
+Tags: statistics, python, bayes
+
+Post ID: 151085840099, Date: Thu, 29 Sep 2016 00:13:20
+Url with slug: because-i-actually-post-all-of-my-stuff-to-gists
+Reblog key: wkQaIb62
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/ab66c6dd322586998f737ed502acf2dd/tumblr_oe8zq8e5KJ1ts05oao1_1280.png 
+Photo Caption: <p>Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!</p>
+Tags: python, r, bayesian statistics, bayes, statistics, geography, GIS
+
+Post ID: 150300301154, Date: Mon, 12 Sep 2016 02:28:19
+Url with slug: found-another-error-in-the-clea-as-i-am-building
+Reblog key: kCs6RhnK
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/699770293400812fc0e3afa344869c52/tumblr_oddon7FVWK1ts05oao1_1280.png 
+Photo Caption: <p>Found another error in the <a href="http://www.electiondataarchive.org/" target="_blank">CLEA</a> as I am building case studies for my dissertation.</p>
+
+<p>The smallest little errors give you some pretty weird results when you&rsquo;re looking deeply into the data. In this case, Doug Bosco only ran against David Redick. Creighton and Binderup were oppononents of another Democrat that year, the then-congresswoman now-senator Barbara Boxer.</p>
+
+<p>But, the incorrect story in the data is kind of interesting to consider&hellip; <em>two</em> Republicans ran in CA-CD01 in 1984, and won a combined total of &gt;50% of the vote. But, Bosco won the seat.</p>
+
+<p>This has happened before (kind of) in modern elections. While some candidates run in alternative parties/unaffiliated when they lose their party&rsquo;s nomination (such as Crist in his loss to Rubio or Murkowski&rsquo;s win as a write-in candidate in AK when she lost the primary to Joe Miller), it&rsquo;d be real weird indeed to see the Republican party in a state nominate <em>two</em> CD candidates in a First-past-the-post system. Indeed, I don&rsquo;t quite know if that&rsquo;s legal.</p>
+Tags: politics, clea, dissertatino
+
+Post ID: 149591324934, Date: Sun, 28 Aug 2016 02:57:29
+Url with slug: working-on-a-paper-about-models-that-can-have-very
+Reblog key: Y5GCw7Hc
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/ac164a69764641234f6fb9e0b7f3e883/tumblr_oclxzt3BP91ts05oao1_1280.png 
+Photo Caption: <p>Working on a paper about models that can have very weakly-identified priors, and I see that this trace outcome pops up. </p><p>This is a Spatially-Varying Coefficient Process model from Gelfand, and serves as a Bayesian equivalent to GWR. Surprisingly (to me) is that the covariance matrix between the hierarchical effects is not <i>at all</i> affected by the spatial range parameter, Phi. The reason why this surprises me is that in other HLM contexts, like variance components models with spatial effects, the spatial and aspatial components of the covariance matrix are inversely related, and it’s really easy to derive that.</p><p>But, here’s a trace where the incredibly-weakly identified spatial range parameter wanders up around 1000 times its mean value, and has obvious effects on some parameters. Part of the reason (I think) that the parameter is so prone to wander upwards is that the conditional posterior gets very flat once every observation is a neighbor of every other observation, or when every observation has no neighbors. In this dataset, that happens when Phi hits 100 or .1, respectively. It might be good to bound the parameter at that point, since wandering around in the area where there’s no substantive change in the parameter isn’t good. </p><p>Regardless, this model is a pretty neat model. </p>
+Tags: bayesian statistics, bayes, geography
+
+Post ID: 148526668179, Date: Sat, 06 Aug 2016 00:09:56
+Url with slug: as-im-having-to-wind-down-on-summer-of-code-work
+Reblog key: 4t77QonO
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/2a5fa6c714dcc5bb90a57309e422839a/tumblr_obgzkkLuVs1ts05oao1_1280.png 
+Photo Caption: <p>As I’m having to wind down on summer of code work and ramp up on dissertation &amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. </p><p>By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve. Not sure why this is so pleasing for me to use to understand what’s going on, but I think it helps me intuitively connect the trace to the distribution if you think of it as pouring its mass into the open kernel density curve. This is especially true for really long chains, where it can be kinda hard to connect the trace visual to a distributional picture. </p><p>Anyway, just thought I’d show these pretty well-converged traces from some multilevel linear modeling work I’m moving to as I try to also wind down the rest of the work in my GSOC!</p>
+Tags: bayes, trace, python, geography, spatial statistics, statistics
+
+Post ID: 146181184144, Date: Sun, 19 Jun 2016 20:37:12
+Url with slug: more-on-the-log-determinant-stuff-i-think-ive
+Reblog key: 4pF01frN
+Reblog Url: http://ljwolf.org/post/146080088369/thisll-be-a-more-lucid-writeup-of-what-i-was
+Reblog Name: yetanothergeographer
+Photo Url: http://78.media.tumblr.com/98dc66ae957766a0eff84e65c5324df1/tumblr_o8xt2hUN5T1ts05oao1_1280.png 
+Photo Caption: <p>More on the log determinant stuff, I think I’ve figured it out. </p>
+
+<p>You see, the full likelihood of the model I&rsquo;m working with is something like:</p>
+
+<p>$$|I - \rho W| \times \mathcal{N}(X\beta + \rho W y, \sigma^2) $$</p>
+
+<p>And, since (W) and (I) are constants, I actually need the gradient of the log determinant <em>with respect to ( \rho ), not (A)</em>. Since the derivative of the log determinant <em>with respect to (A)</em>, the full laplacian matrix, is an (N \times N) matrix, I was getting a conformality error in PyMC3, which wanted the derivative with respect to $\rho$ and was expecting a scalar.</p>
+
+<p>So, if I just declare (W) as a constant and proceed with the <code>Op</code> like a <code>Sparse_LapDet</code>, to denote that I&rsquo;m actually interested in computing the derivative of a <em>laplacian</em> log determinant, where the laplacian is defined in terms of scalar variable, this should work.</p>
+
+<p>What a frustrating time troubleshooting this was, though. Theano definintly feels like a different frame of mind sometimes.</p>
+Tags: 
+
+Post ID: 146080088369, Date: Fri, 17 Jun 2016 18:27:53
+Url with slug: thisll-be-a-more-lucid-writeup-of-what-i-was
+Reblog key: 4pF01frN
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/98dc66ae957766a0eff84e65c5324df1/tumblr_o8xt2hUN5T1ts05oao1_1280.png 
+Photo Caption: <p>This’ll be a more lucid writeup of what I was talking about last night.</p>
+
+<p>Recently, I’ve been working on getting spatial econometric models implemented using <a href="https://github.com/pymc-devs/pymc3" target="_blank">PyMC3</a>. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.</p>
+
+<p>You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix. Most of the time, these large matrices are essentially approximations/estimates of something that looks a lot like a <a href="https://en.wikipedia.org/wiki/Laplacian_matrix#Random_walk_normalized_Laplacian" target="_blank">Random Walk Normalized Laplacian Matrix</a>, essentially a matrix describing centrality and spatial proximity between observations.</p>
+
+<p>Now, to make these models fast, I did a lot of work characterizing the best way to do a sparse log determinant for our purposes, and I decided the best way was to use the SuperLU library in <code>scipy.sparse.linalg</code>. We’ve been shipping this as a method in our Maximum Likelihood econometric models for a <a href="https://github.com/pysal/pysal/blob/26c23b0bd86cfa1886bb5d722ab02142d902b090/pysal/spreg/ml_lag.py#L580" target="_blank">few months now</a>. Since adjacency matrices can sometimes be asymmetric, I picked this over <code>scikits.sparse.cholesky</code>, which has a much more straightforward <code>.logdet</code> method. I think this might have a ton of applicability elsewhere (I’m looking @ you, statsmodels), but I don’t know where I should send this type of code. It’d be neat to put it in as <code>scipy.sparse.linalg.logdet</code>, but I doubt that’d get merged.</p>
+
+<p>I’ve recently figured out how to fit spatial econometric models in PyMC3 as well, and I’ll push up that implementation soon. But, I’m currently quite a bit dissatisfied with it because it’s using <em>dense log determinants</em> in factor potentials. So, I’m trying to get this all to work with the sparse stuff I’ve put together, and it’s not very straightforward.</p>
+
+<p>First, I’d like to use the Hamiltonian Monte Carlo stuff in PyMC3. I can use the baked in log and determinant from Theano, and was excited to see <a href="https://github.com/Theano/Theano/issues/150" target="_blank">this op</a> get some movement, but it appears to have died. And, again, that implementation is dense. So, in my case, I need to define a Theano <code>Op</code> on a sparse matrix with a <code>grad</code> method. The grad of a log determinant (specifically, of a known-positive definite matrix), is very simple: it’s the transposed inverse.</p>
+
+<p>So, I’ve got three versions of the <code>Op</code> I need, and they all yield correct sparse log determinants and, as far as I can tell, correct gradients. They’re profiled above. The first method just calls out to numpy’s <code>linalg.slogdet</code>, so it actually is a dense computation. The second is a hybrid, where a dense matrix is cast to a sparse matrix each iteration, then factored in sparse form, and the log determinant computed. This is actually quite efficient, even though the conversion costs each round are high. We <em>know</em> the conversion costs are high because the third method uses straightforward sparse matrix LU factorization and is an order of magnitude faster.</p>
+
+<p>What seems to be tripping me up is the gradient. Unfortunately, the inverse of the input matrix is rarely sparse, so there are usually no gains in that aspect, so I always cast the matrix down to dense, compute the inverse using theano, and then push it back up into sparse if necessary.</p>
+
+<p>But, I’m having an issue using the <code>Op</code> in a PyMC3 model when the gradient is sparse. I’m unsure if the error is in my implementation, if it’s something with PyMC3, or if it’s related to <a href="https://github.com/Theano/Theano/issues/2782" target="_blank">this bug</a>. I believe it’s the latter, since NUTS is invariably combining the gradient of my LogDet op with other gradients in the model, but I haven’t figured it out yet.</p>
+
+<p>Regardless, the implementations of the <code>Op</code>s, focusing on the <code>perform</code> methods,</p>
+
+
+<pre><code>
+
+import scipy.sparse as spar
+import scipy.sparse.linalg as spla
+from theano import Op
+import theano.tensor as tt
+import theano.sparse as ts
+import numpy as np
+
+
+
+Class Dense_LogDet(Op):
+def make_node(self, A):
+    A = tt.as_tensor(A)
+    ld = tt.scalar(dtype=A.dtype)
+    return Apply(self, [A], [ld])
+    
+#dlogdet: use np.linalg.slogdet on a dense matrix
+def perform(self, node, inputs, outputs):
+    (A, ) = inputs
+    (z, ) = outputs
+    sgn, ld = np.linalg.slogdet(A)
+    if sgn not in (-1, 0, 1):
+        raise Exception('Significant loss of precision in log determinant')
+    ld *= sgn
+    z[0] = ld
+    
+def grad(self, inputs, outputs):
+    (gz, ) = outputs
+    (A, ) = inputs
+    dinv = tt.nlinalg.inv(A).T
+    dout = gz * dinv
+    return [dout]
+
+
+class Sparse_LogDet(Op):
+    def make_node(self, A):
+    A = ts.as_sparse(A)
+    ld = tt.scalar(dtype=A.dtype)
+    return Apply(self, [A], [ld])
+
+#spLUlogdet: use sparse LU decomp on a sparse input matrix
+def perform(self, node, inputs, outputs):
+    (As, ) = inputs
+    (z, ) = outputs
+    Ud = spla.splu(As).U.diagonal()
+    ld = np.sum(np.log(np.abs(Ud)))
+    z[0] = ld
+ 
+def grad(self, inputs, g_outputs):
+    (gz, ) = g_outputs
+    (A, ) = inputs
+    dA = ts.dense_from_sparse(A)
+    dinv = tt.nlinalg.matrix_inverse(dA).T
+    dout = gz * dinv
+    return [ts.csc_from_dense(dout)]  
+</code></pre>
+
+<p>So, when I use this in a PyMC3 model, the model builds successfully, but when it comes time to compute the joint posterior gradient in <code>pymc3.NUTS()</code>, theano complains about shape errors:
+<code>ValueError: MulSD.grad returned object of shape (N, N) as gradient term on input 1 of shape ()</code></p>
+
+<p>Where N,N is the size of the matrix before the log determinant is computed. In theory, I think this means that there’s an issue with the gradient being a sparse matrix, but I can’t tell what’s going on yet.</p>
+
+<p>This is a bummer, since, as I show above, the log determinant runs quite quickly. So, I’m stuck trying to figure out whether this is:</p>
+
+<ol><li>An error in how I’m doing the gradient of the sparse log determinant</li>
+<li>An error in how PyMC3 compares gradients of heterogeneous collections</li>
+<li>An error in how Theano computes the gradient of a compound heterogeneous collection</li>
+</ol><p>But, the main point is that the <code>Op</code>, as far as I can tell, has a working <code>perform</code> and <code>grad</code>, and I’m pretty close to having this available to do efficient sparse log determinants while using PyMC3 on spatial econometric models.</p>
+Tags: programming, python, bayesian statistics, statistics, geography
+
+Post ID: 146054502134, Date: Fri, 17 Jun 2016 05:02:53
+Url with slug: man-im-so-close-to-a-pretty-massive-speedup-of
+Reblog key: 4PkEHc9b
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/60776aa969015025f71db8d154a031d9/tumblr_o8wrstFjjA1ts05oao1_1280.png 
+Photo Caption: <p>Man&hellip; I’m so close to a pretty massive speedup of something I’m working on&hellip; something that’d make a very nice deliverable. </p><p>But, I can’t figure out how to correctly compute gradients in theano. I mean, I know what the gradient <i>is</i>, and I’ve written it correctly, but I can’t figure out whether it’s theano or pymc3 is throwing the errors </p><p>In fact, I can get a gradient in Theano just fine. But, when I try to use it with PyMC3′s No U-Turn Sampler, I get some pretty cryptic errors. </p><p>So, while the Op computes sparse log determinants just fine, I can’t get PyMC to play nice with the gradient. So, if there are any theano wizards out there, lmk. </p>
+Tags: python, bayesian computing, statistics
+
+Post ID: 145342859409, Date: Fri, 03 Jun 2016 01:40:17
+Url with slug: visual-display-of-complex-data-can-be-pretty
+Reblog key: 2tbLFJnE
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/cf10dc435036ea04c78a86e736fd750e/tumblr_o86l35Jg0B1ts05oao1_1280.png 
+Photo Caption: <p>Visual display of complex data can be pretty tricky&hellip;</p>
+
+<p>This is a visualization of one hierarchical parameter from a a <a href="http://link.springer.com/article/10.1007/s10109-006-0040-y" target="_blank">spatially-varying coefficient process model</a>, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&rsquo;ll probably be posting about SVCP-style models more frequently.</p>
+
+<p>The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means <strong>and</strong> the distributions of those parameters for each individual unit is hard. Essentially, you&rsquo;re making a map of distributions. And, for a regular lattice, this is somewhat more simple than you&rsquo;d expect: set the background of each unit to an indicator of centrality for the distribution in that unit, and then superimpose the distribution. Since each window is the same size, each distribution is on the same perceptive plane, so comparisons of both the pattern &amp; the distribution are relatively simple.</p>
+
+<p>But, if the windows were differently sized, we&rsquo;d want a way to handle the classic cartographic problem: bigger elements on maps are seen as more important than smaller elements. Once the cells are differently-sized, the distributions would be harder to compare directly. We&rsquo;d have to figure out how to make the distributions comparable, even when they sit in frames that are not identically sized.</p>
+
+<p>In reality, the reason why I&rsquo;m fretting about this is because I&rsquo;ve been immersed in the nitty-gritty of the statsistical theory behind spatial multilevel/hierarchical models &amp; am about to head deep into applying them for my RA &amp; my doctoral dissertation.</p>
+
+<p>For the SVCP, I’m prepping this as a reference implementation to move to two enhancements.</p>
+
+<ol><li>The original specification from <a href="http://www.people.vcu.edu/~dbandyop/pubh8472/Gelfand_SVC.pdf" target="_blank">Gelfand 2003</a> and that in the <a href="https://www.crcpress.com/Hierarchical-Modeling-and-Analysis-for-Spatial-Data-Second-Edition/Banerjee-Carlin-Gelfand/p/book/9781439819173" target="_blank">Bannerjee Spatial HLM book</a> use an Inverse Wishart prior on their coefficient process covariance matrix. This is <a href="http://andrewgelman.com/2012/08/22/the-scaled-inverse-wishart-prior-distribution-for-a-covariance-matrix-in-a-hierarchical-model/" target="_blank">less than ideal</a>, since IW covariance priors result in some <a href="https://dahtah.wordpress.com/2012/03/07/why-an-inverse-wishart-prior-may-not-be-such-a-good-idea/" target="_blank">pretty surprising statistical artifacts. </a>. Switching to an LKJ prior or a separation strategy prior for the project I need to use the SVCP on is a high priority.</li>
+<li>I want to pivot the sampler to use PyMC3. I wrote the Gibbs sampler for the model myself; since all except for one parameter are analytically tractable draws from known builtin distributions, this is super simple to write. But, it&rsquo;d be nice to not have to use MH on a range-restricted, weakly-identified parameter. In fact, this particular model would be very amenable to an approximation straetgy, since the prior on the spatial decay parameter, $\phi$, is <em>very nearly</em> a normal-gamma distribution, and could probably be well-approximated by one. Plus, PyMC3 has an LKJ prior already implemented, and I know I&rsquo;ll be wanting to use it in other spatial HLMs.</li>
+</ol>
+Tags: geography, statistics, grad school, python, GIS
+
+Post ID: 144494958589, Date: Tue, 17 May 2016 04:10:13
+Url with slug: kinda-nice-when-the-model-youre-working-with
+Reblog key: Z3bMXhMp
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/40147f38ff3f1a6c212d0e5c6d99a74d/tumblr_o7bap1SefG1ts05oao1_1280.png 
+Photo Caption: <p>Kinda nice when the model you’re working with clearly is <i>trying </i>to work. </p>
+Tags: science!, grad school, geography, statistics
+
+Post ID: 141535488839, Date: Wed, 23 Mar 2016 03:41:38
+Url with slug: yep-thats-image-view-from-within-a-terminal
+Reblog key: KTJTttab
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/1b4a2bcc8d476fd8652170a2367793e7/tumblr_o4hepeJ4Sr1ts05oao1_1280.png 
+Photo Caption: <p>Yep, that’s image view from <i>within a terminal using </i><a href="https://saitoha.github.io/libsixel/" target="_blank">libsixel</a><br/></p><p>This is something I’ve always wanted, a way to just quickly dump scientific visualizations to a viewer within a CLI application. It looks like this does exactly that. <br/></p>
+Tags: libsixel, python, programming, gis
+
+Post ID: 140876677624, Date: Fri, 11 Mar 2016 17:35:10
+Url with slug: npr-north-carolina-voters-are-likely-to-be
+Reblog key: 7woyKklB
+Reblog Url: http://npr.tumblr.com/post/140861662383/north-carolina-voters-are-likely-to-be-confused
+Reblog Name: npr
+Photo Url: http://78.media.tumblr.com/01d3de9fc20e1e88abd4491cd380b6a8/tumblr_o3tzf43d111qdkv8qo1_1280.gif 
+Photo Caption: <p><a class="tumblr_blog" href="http://npr.tumblr.com/post/140861662383" target="_blank">npr</a>:</p>
+<blockquote>
+<p>North Carolina voters are likely to be confused when they arrive at the polling place on March 15th. In addition to presidential candidates, voters will see congressional primary candidates on the ballot.</p>
+<p>But thanks to a federal court decision, the districts those candidates represent no longer exist and any voters in those races won’t count.</p>
+<p>Thanks to three judges, two animal shapes and one hastily redrawn map of U.S. House seats, North Carolina politics have been thrown into chaos.</p>
+<p>It started to go off the rails on February 5th when a panel of three federal judges determined that the boundaries of the state’s 1st and 12th congressional districts were drawn in such a way to concentrate African American voters and dilute their overall influence.</p>
+<p>Coming just five weeks ahead of voting, there was no choice but to “Stop the current election, go back, redraw the lines,” said Josh Lawson, general counsel for the North Carolina State Board of Elections.</p>
+<h2><a href="http://www.npr.org/2016/03/10/469548881/north-carolinas-congressional-primaries-are-a-mess-because-of-these-maps?utm_source=tumblr.com&amp;utm_medium=social&amp;utm_campaign=npr&amp;utm_term=nprnews&amp;utm_content=20160310" target="_blank">North Carolina’s Congressional Primaries Are A Mess Because Of These Maps</a></h2>
+<p><i>GIF: <a href="http://bl.ocks.org/veltman/949ce9c1b6f3e54c6e18" target="_blank">Noah Veltman/WNYC</a> and Alyson Hurt/NPR</i></p>
+</blockquote>
+Tags: 
+
+Post ID: 139003960829, Date: Tue, 09 Feb 2016 14:40:39
+Url with slug: one-of-my-favorite-diagrams-from-micah-altmans
+Reblog key: rqYtjOkG
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/3ed8f6e6636ff0ee3dac7782709476cc/tumblr_o2apbrGeTD1ts05oao1_1280.png 
+Photo Caption: <p>One of my favorite diagrams from Micah Altman’s fantastic PhD thesis on gerrymandering. <br/></p><p>Pretty sure that’s a manually-scribbled line&hellip; making computer graphics is definitely easier nowadays,  but sometimes it’s still easiest to draw your stuff by hand. <br/></p>
+Tags: studyblr
+
+Post ID: 137262070644, Date: Wed, 13 Jan 2016 23:10:08
+Url with slug: thelandofmaps-us-congressional-districts
+Reblog key: oNT7lGPn
+Reblog Url: http://thelandofmaps.tumblr.com/post/137237218600/us-congressional-districts-redrawn-by-a-computer
+Reblog Name: thelandofmaps
+Photo Url: http://78.media.tumblr.com/7d14e6d0a6708df5b23a27f458f2615b/tumblr_o0wrun8TSd1s6c1p2o1_1280.jpg 
+Photo Caption: <p><a class="tumblr_blog" href="http://thelandofmaps.tumblr.com/post/137237218600" target="_blank">thelandofmaps</a>:</p>
+<blockquote>
+<p>U.S. Congressional districts redrawn by a computer to eliminate gerrymandering [1603x2170][OC]<br/><a href="http://landofmaps.com/" target="_blank"><span style="color: #0000cd;">CLICK HERE FOR MORE MAPS!</span></a><br/><a href="http://thelandofmaps.tumblr.com/" target="_blank"><span style="color: #0000cd;">thelandofmaps.tumblr.com</span></a></p>
+</blockquote>
+
+<p>“”“Eliminate Gerrymandering”““<br/></p><p>These kinds of maps are interesting visualizations, but I guarantee you that these maps would exhibit such <i>strong </i>partisan &amp; racial bias. Thus, it burns me up to read that people think this is what Larry Lessig (or Barack Obama in the SOTU) mean when they talk about reducing/eliminating gerrymandering.<br/></p><p>It’s strange to me when people forget that gerrymandering is boundary manipulation <i>for the benefit of some group! </i>That’s the key; both that a district distorts the underlying human geography <i>and </i>it does so in a way that has political consequences. It’s not <i>just</i> boundary manipulation. <br/></p><p>Even if it were only about boundary manipulation, squiggly/elongated districts <i>are not necessarily manipulated! </i>Human habitation, land use, and the physical geography of places don’t always fit well inside of a voronoi tiling&hellip;</p>
+Tags: gotta get the word out
+
+Post ID: 135410899354, Date: Thu, 17 Dec 2015 19:18:26
+Url with slug: welp-that-was-fun-headed-back-to-phx
+Reblog key: Crhej2wv
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/8e7f5ea5a938b03e95d85732f166191c/tumblr_nzj26qjawt1ts05oao1_1280.jpg 
+Photo Caption: <p>Welp,  that was fun. Headed back to PHX.</p>
+Tags: CartoDB
+
+Post ID: 131314971584, Date: Fri, 16 Oct 2015 20:02:11
+Url with slug: fits-nicely-with-one-of-my-favorite-quotes-as-a
+Reblog key: aFrliu0L
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/a0497baab16ec62cb07ab5aa63df923c/tumblr_nwc83nfTsf1ts05oao1_1280.png 
+Photo Caption: <p>Fits nicely with one of my favorite quotes:</p><p>“As a human being, one has been endowed with just enough intelligence to be able to see clearly how utterly inadequate that intelligence is when confronted with what exists.”</p><p>from <a href="http://www.drdobbs.com/architecture-and-design/interview-with-alan-kay/240003442?pgno=4" target="_blank">dr. dobbs</a><br/></p>
+Tags: programming, alan kay, albert einstein, pattern, design patterns
+
+Post ID: 130797097034, Date: Fri, 09 Oct 2015 01:21:32
+Url with slug: having-a-last-name-of-wolf-has-never-been-an
+Reblog key: V1LPjZ5f
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/f56ae626dce7900b10e16d07f4ea640a/tumblr_nvxtjw5Y1n1ts05oao1_1280.png 
+Photo Caption: <p>Having a last name of “Wolf” has never been an issue, but it feels silly throwing all these animal names around.<br/></p>
+Tags: python, animals, CI is a jerk
+
+Post ID: 130290300219, Date: Thu, 01 Oct 2015 16:56:40
+Url with slug: ah-yes-i-am-in-fact-skilled-in-spatial
+Reblog key: 5t6I96Ux
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/4760b134b9c5f7096c4ffbc5c388eea4/tumblr_nvk7igACLi1ts05oao1_500.png 
+Photo Caption: <p>Ah yes, I am, in fact, skilled in Spatial Autocorrelation. <br/></p>
+Tags: This is a subject fetish, not a skill, what would that even mean?
+
+Post ID: 125326394569, Date: Wed, 29 Jul 2015 02:49:09
+Url with slug: getting-excited-about-some-cool-new-exploration
+Reblog key: qynSgz37
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/a867e6cc281dfc227f7ba45f65ed8546/tumblr_ns8llxfvJ31ts05oao1_1280.png 
+Photo Caption: <p>getting excited about some cool new exploration while getting to know seaborn.</p>
+Tags: seaborn, politics, political science, political geography, python, GIS, geography
+
+Post ID: 125206351674, Date: Mon, 27 Jul 2015 18:54:01
+Url with slug: that-compression-is-bewilderingly-good-the-full
+Reblog key: ToSCFSsL
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/68dfd75119be689f7440d74b8978ae3a/tumblr_ns64y1uZRF1ts05oao1_1280.png 
+Photo Caption: <p>That compression is <strong>bewilderingly</strong> good. The full census short form at block level (generated using a static file reader soon-to-be in <a href="https://github.com/ljwolf/cenpy.git" target="_blank">cenpy</a>) can be compressed from nearly 60 GB down to 3.1 GB.</p>
+
+<p>Simply amazing.</p>
+Tags: python, compression, unix, tar, census, census data, uscb, geography, gis
+
+Post ID: 121376901874, Date: Fri, 12 Jun 2015 17:30:00
+Url with slug: mulitprocessing-business-in-the-front-parallel
+Reblog key: yap1M3hL
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/ad082f8cd65a4ccef7e6244d2f3133fc/tumblr_npup20ymi81ts05oao1_1280.png 
+Photo Caption: <p><code>mulitprocessing</code>: business in the front, parallel in the back.</p>
+Tags: mullets, I know it's not the right spelling, multiprocessing, python, GIS, geography, FOSS
+
+Post ID: 109357444384, Date: Tue, 27 Jan 2015 22:01:33
+Url with slug: this-is-insane-the-speed-differences-between
+Reblog key: 141iHDPA
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/0aed0e76c74a68238135d3a556184251/tumblr_niv9qlne5P1ts05oao1_1280.png http://78.media.tumblr.com/0aed0e76c74a68238135d3a556184251/tumblr_niv9qlne5P1ts05oao1_1280.png http://78.media.tumblr.com/4b87efa46757f8d261da447444454b93/tumblr_niv9qlne5P1ts05oao4_1280.png http://78.media.tumblr.com/3596bc7ed368e9b35b009a6a681ea74e/tumblr_niv9qlne5P1ts05oao2_1280.png http://78.media.tumblr.com/6cd6e5563531e92804d1d49c6800c680/tumblr_niv9qlne5P1ts05oao3_1280.png
+Photo Caption: <p>This is insane. </p>
+<p>The speed differences between Scipy and Numpy&rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&rsquo;s hundreds of times faster. </p>
+<p>I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually <em>need</em> to finish will be ridiculous. Thanks, scipy. </p>
+Tags: python, speed comparisons, this is ridic, numpy masterrace
+
+Post ID: 98840800049, Date: Tue, 30 Sep 2014 18:57:00
+Url with slug: a-fun-little-bug-in-my-apparently-outdated-qgis
+Reblog key: JBhIDB7N
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/4aae090c78367228c3d52bd63ef5705f/tumblr_ncql4nMXCj1ts05oao1_1280.png http://78.media.tumblr.com/4aae090c78367228c3d52bd63ef5705f/tumblr_ncql4nMXCj1ts05oao1_1280.png http://78.media.tumblr.com/7202d2213a242e8dd3eabff5e36edee5/tumblr_ncql4nMXCj1ts05oao2_1280.png
+Photo Caption: <p>A fun little bug in my apparently outdated QGIS (version 2.2).</p>
+
+<p>I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.</p>
+
+<p>At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</p>
+
+<p>But, if you know things about <a href="https://en.wikipedia.org/wiki/Voronoi_diagram" target="_blank">voronoi polygons</a>, you know that they</p>
+
+<ol><li>always generate convex shapes</li>
+<li>extend an indifference frontier to infinity (i.e. the lines equidistant from the points being diagrammed continue forever if they do not intersect another indifference frontier)</li>
+</ol><p>But, for that southern part of the top map, we see that <em>something</em>&rsquo;s screwed up.</p>
+
+<p>Below, setting the buffer distance to 50% doesn&rsquo;t have this happen.</p>
+
+<p>There was apparently a <a href="https://hub.qgis.org/issues/8002" target="_blank">related bug</a> up on the QGIS project issue tracker, but this is unrelated to overlapping polygons, as it actually changes the <em>angle</em> of the indifference frontier between a few pairs of points. That bug may have also been present in <a href="http://opensourcegisblog.blogspot.com/2013/03/grass-vs-arcgis-thiessen-polygons.html" target="_blank">ArcGIS current as of its posting</a>, so maybe I can test against Arc 10.2.2 as well.</p>
+
+<p>I bet <a href="http://pysal.github.io" target="_blank">PySAL&rsquo;s</a> got this on lock.</p>
+
+<p>Now, I have to update QGIS, hope nothing breaks, and then try again. Maybe another reason why <a href="http://yetanothergeographer.tumblr.com/post/89112989819/my-time-using-linux-has-apparently-made-me-quite%5D" target="_blank">I wish my work computer was a rolling-release linux distro</a>&hellip;</p>
+Tags: computing, academia, QGIS, GIS, Open Source, OSS, FOSS, geography, grad school
+
+Post ID: 95500223474, Date: Fri, 22 Aug 2014 19:55:00
+Url with slug: so-say-youre-working-with-two-states
+Reblog key: Y5ehXZWu
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/4123ea708055228e108f16ee0b811d67/tumblr_naqfs9Q1p51ts05oao1_1280.png 
+Photo Caption: <p>So, say you&rsquo;re working with two state&rsquo;s congressional data. All of it&rsquo;s been cleaned and made through a list comprehension and write statement in python using pandas. </p>
+<p>Then, you have to read it into R because JudgeIt is only an R package so far. </p>
+<p>All the dataframes were made in <em>the same way</em>, yet R decided that indicators of California&rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. </p>
+<p>these errors read something like:a</p>
+<blockquote>
+<p><code>ERROR: Some $VOTE values not in [0,1] interval.</code></p>
+</blockquote>
+<p>So, I did what the reasonable person who is used to using <code>float()</code> would do and just <code>as.numeric()</code> over the offending columns.</p>
+<p>And got garbage. </p>
+<p>Now, I worked in R to do my undergraduate honors thesis, about two years ago. I don&rsquo;t remember this being an issue, but I really should go back and revisit my code. But, apparently,<code>as.numeric()</code> translates factors into some &ldquo;internal R&rdquo; representation rather than what the typical individual (I&rsquo;d assume) <em>would </em>want from a function that converts something to numeric type. instead, to convert factors to numbers, you have to </p>
+<blockquote>
+<p><code>as.numeric(as.character($1))</code></p>
+</blockquote>
+<p>or, convert the factor into its character-based representation, and then convert those characters into numbers. To me, that&rsquo;d be like converting from some object to numbers by using <code>float(str($1))</code>. Not impossible, but definitely unintuitive. </p>
+<p>More annoying than this double-conversion, though, is the fact that <em>only one</em> of my data frames, generated from the same base document, parsed in the <em>same <code>for</code> loop</em><em> in the same way</em>, was designated a factor. And, all that work to move the code into a standard dataframe type into some unique, non-standard object for the analysis package I&rsquo;m using. </p>
+<p>Just silly. Data-wrangling in R is easy, but unintuitive, coming from someone whose first language was R 2.8.</p>
+Tags: R, scientific computing, data, data wrangling, factor issues, computing
+
+Post ID: 91039857199, Date: Mon, 07 Jul 2014 07:49:29
+Url with slug: 
+Reblog key: TrP7G1z1
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/00ba8ec47a9623fbe1244f3b1780aba0/tumblr_n8cbihPDRN1ts05oao1_1280.jpg 
+Photo Caption: 
+Tags: scipy2014, he was a little kid tho
+
+Post ID: 89112989819, Date: Tue, 17 Jun 2014 21:26:16
+Url with slug: my-time-using-linux-has-apparently-made-me-quite
+Reblog key: Zuu6PyEo
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/c5f980fa7b12bd84886971568c1004c0/tumblr_n7cbzsYyi41ts05oao1_1280.png 
+Photo Caption: <p>My time using linux has apparently made me quite lazy in OSX.</p>
+<p>I was doing some work in pandas and the append() function wouldn&rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&rsquo;t merge. </p>
+<p>Turns out I&rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.</p>
+<p>Having <em>one </em>program that updates all your software is so desirable at this point that I can&rsquo;t understand why the independent application install model still exists. Even Microsoft has its standardized .msi framework and OSX its package installer api. Why not include a package registry and a cli tool?</p>
+<p>Proprietary package managers like Steam, the Windows Store, and the Apple Store are becoming more popular yet the architectures of Windows (particularly) and OSX (somewhat) aren&rsquo;t built for this heavy-duty procedural software management needed for scientific applications.</p>
+<p>The company tells you what gets to be upgraded automatically. Everything else is on you, without having a coherent system to manage it. And don&rsquo;t even get me started on stuff like Homebrew or Chocalety&hellip;</p>
+Tags: programming, python, package management, software griping
+
+Post ID: 85162213334, Date: Thu, 08 May 2014 18:59:51
+Url with slug: ok-so-i-think-my-days-of-using-texstudio-are
+Reblog key: TxW2Q7r2
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/6f275a5adf2364d9d64cad3047a86a87/tumblr_n5a2jr5iql1ts05oao1_1280.png 
+Photo Caption: <p>OK&hellip; so I think my days of using texstudio are over. Vim-latex&rsquo;s reference manager is leaps and bounds easier to use than texsudio.</p>
+<p>Also, I was informed that monokai soda, my terminal color scheme, is &ldquo;ugly&rdquo; by someone who uses <a href="http://ethanschoonover.com/solarized" target="_blank">solarized light.</a></p>
+<p>I guess color scheme fights are about as lame as you can get. Except maybe fights over brace or comment styles&hellip;</p>
+Tags: computers, coding, programming
+
+Post ID: 84405626889, Date: Thu, 01 May 2014 03:59:44
+Url with slug: track-changes-may-in-fact-be-the-worst
+Reblog key: 2fxFmQ45
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/f3092ecd3cca0abb09e739a90307c6ef/tumblr_n4vy7kR1yb1ts05oao1_500.png 
+Photo Caption: <p>Track Changes may, in fact, be the worst</p>
+Tags: glitch, memory issues, Microsoft Word for mac, microsoft, mac
+
+Post ID: 84292178194, Date: Tue, 29 Apr 2014 23:44:51
+Url with slug: something-about-custom-blue-gamuts-makes-for-a
+Reblog key: 8aH6gRAC
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/697a51c9030e8ee283963803d987f27c/tumblr_n4trqrGp8x1ts05oao1_1280.png 
+Photo Caption: <p>Something about custom blue gamuts makes for a nice-looking flow diagram, even when you&rsquo;ve got close to regular channels. </p>
+Tags: maps, cartography, notes to self, maxflow, mincut, optimization
+
+Post ID: 83633422918, Date: Wed, 23 Apr 2014 13:46:43
+Url with slug: gotta-wonder-if-her-parents-were-just-having-a
+Reblog key: nMrHt8cj
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/3df98642ef8883269c76c13c6afbc3be/tumblr_n4hw1vzvD31ts05oao1_1280.png 
+Photo Caption: <p>Gotta wonder if <a href="http://scholar.google.com/citations?user=YALiPW8AAAAJ&amp;hl=en&amp;oi=ao" target="_blank">her</a> parents were just having a laugh.</p>
+<p>At the same time, I&rsquo;ll never forget their name. </p>
+Tags: Frere Jacques, Farrah Jacquez, academe, google scholar, citation, health, research
+
+Post ID: 82171050849, Date: Wed, 09 Apr 2014 01:51:21
+Url with slug: its-so-frustrating-to-see-a-cool-idea-fall-by-the
+Reblog key: iYGZsjen
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/f775370df923a6c60f1e3e8cff808286/tumblr_n3r1llbDiD1ts05oao1_1280.png 
+Photo Caption: <p>It&rsquo;s so frustrating to see a cool idea fall by the wayside. </p>
+<p><a href="https://github.com/GeoDaSandbox/sandbox" target="_blank">GeoDa center sandbox?</a> Super cool. And yet, it&rsquo;s been long defunct. I guess that&rsquo;s what happens sometimes when things don&rsquo;t hit critical mass.</p>
+<p>Hopefully the things I&rsquo;m contributing to won&rsquo;t fall similarly by the wayside.</p>
+Tags: institutional design, coding, sandbox
+
+Post ID: 78888167020, Date: Fri, 07 Mar 2014 18:05:57
+Url with slug: the-face-of-needing-a-spring-break
+Reblog key: vNMKvC5W
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/7a66b9458fe9d92be1b8576f485fdd93/tumblr_n239hx66z31ts05oao1_1280.jpg 
+Photo Caption: <p>The face of needing a spring break.</p>
+Tags: personal, my face, me
+
+Post ID: 77996900074, Date: Thu, 27 Feb 2014 05:10:00
+Url with slug: i-guess-this-is-how-productivity-works-terminal
+Reblog key: TpR4nepS
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/2a3a1044351c6ea4bb905f57768fd836/tumblr_n1ng8ocGPN1ts05oao1_r1_1280.png 
+Photo Caption: <p>I guess this is how productivity works? Terminal sessions and web browsers. Seems like nothing else is needed nowadays. Though, I guess the guys over at <a href="http://lighttable.com" target="_blank">LightTable</a> would beg to disagree. I tried LightTable today for some LaTeX stuff. Seems like a brilliant tool there, if things like <a href="http://www.lyx.org/" target="_blank">LyX</a> or <a href="http://texstudio.sourceforge.net/" target="_blank">TexStudio</a> didn&rsquo;t exist. TexStudio in particular, my choice of LaTeX editor, does a wonderful job showing the structure of the workspace in one cohesive, intuitive way. I wish it was the design model for other editors I&rsquo;ve used. Absent that, Geany or Vim do my heavy lifting, but I&rsquo;m always finding myself coming back to Vim anyway&hellip;</p>
+<p>That aside, I&rsquo;ve forked the <a href="https://github.com/ljwolf/Shapefile.jl" target="_blank">Shapefile.jl</a> repo and put in some goals to further Julia&rsquo;s spatial analysis capabilities. I don&rsquo;t know what the community ethics/practices are for Julia, but I&rsquo;m always slightly nervous about being the first fork on a repo that hasn&rsquo;t been touched in a few months. I can&rsquo;t really explain why. Maybe it&rsquo;s just a concern that my preference for private repos and anonymous contribution makes my github page look sparse. I don&rsquo;t know. Regardless, we&rsquo;ll see where I can go with broadening Julia&rsquo;s spatial analysis toolset, either through pysal or around it. Maybe I can even pitch <em>this</em> as a GSOC instead of the proposal I&rsquo;ve been working on&hellip;</p>
+Tags: julia, julialang, academia, scientific computing., statistics, spatial analysis, shapefiles, text editors, editor wars are so silly!
+
+Post ID: 77264557503, Date: Thu, 20 Feb 2014 04:32:52
+Url with slug: first-simple-program-in-julia-a-greedy-knapsack
+Reblog key: TL4j3fJC
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/5ce4365476d1ec01436f7aef07446414/tumblr_n1afusw5EX1ts05oao1_500.png 
+Photo Caption: <p>First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CCQQFjAA&amp;url=http%3A%2F%2Fns1.sliponline.org%2FPublications%2FJournals%2Fj16.pdf&amp;ei=WsoFU6mRBYLwyQHGvoCwBw&amp;usg=AFQjCNFXdaaiPuWMYENMcjHuxFxH52C9EA&amp;sig2=P8lWvRdRPbyBLC9VNMi2TQ&amp;bvm=bv.61725948,d.aWc" target="_blank">OBA</a> or <a href="https://www.math.lsu.edu/~hozhang/papers/cg_descent.pdf" target="_blank">Hagar &amp; Zhang&rsquo;s Conjugate Gradient Descent </a>algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!</p>
+<p>A couple realizations:</p>
+<p>1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well.</p>
+<p>2.) I wanted to implement this using a queue, but apparently those aren&rsquo;t standard elements in Julia&rsquo;s base. And, for some reason, Julia&rsquo;s package/module interface wasn&rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages. Maybe that&rsquo;s because it&rsquo;s at 2am, but I never had a problem understanding python import, Haskell&rsquo;s Cabal, or R taskview/package structure at any time of night.</p>
+<p>3.) I haven&rsquo;t bench-marked this against my tail-recursed Haskell implementation that&rsquo;s &ldquo;Faster than C&quot;™ but I&rsquo;ll have to soon. For such a simple algorithm, I have a hard time believing anything can beat tail recursion.</p>
+<p>4.) Julia has some serious benefits over python in terms of speed and sparse matrix handling. It&rsquo;s also nicer to write in Julia than in R. If it achieves parity with statistics and visualization, it&rsquo;d be hard to go back. Of course, it&rsquo;s an open question as to whether or not Julia&rsquo;s going to.</p>
+<p>5.) There is already a shapefile library, a k-nearest library, and some other geography-related stuff. Add in a baked-in connection to NLOpt, Gurobi, Cplex, and BLAS and it looks like this environment was custom-made for spatial optimization. It&rsquo;s nice to see equal focus on optimization and statistics, where R&rsquo;s optimization libraries are anemic at best and slower than enumeration at worst :)</p>
+<p>6.) The community is small, and I see a gap where I can contribute some serious tools. One might be building an interface between it and PySAL. Of course, if Julia&rsquo;s the faster language, it might be smarter to go the other way around, doing analysis in Julia and piping it back into PySAL. Who knows. With IJulia, it might be better to do it that way. I&rsquo;ll think on it.</p>
+<p>7.) I&rsquo;m getting better at programming. This took me much less time than the last few times I implemented similar (or more simple algorithms). Maybe I should move to out of kilter implementation as my first-case work&hellip;</p>
+<p>8.) I might just have become a Julian!</p>
+Tags: Julia, programming, optimization, graduate school, academia, geography, operations research, college, JuliaLang
+
+Post ID: 76555996119, Date: Thu, 13 Feb 2014 15:35:53
+Url with slug: went-crawling-back-into-workflowys-arms-today
+Reblog key: FfNwShw4
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/7000f227e0669ce9867ad706ae1bd3ab/tumblr_n0ybvtixUt1ts05oao1_540.png 
+Photo Caption: <p>Went crawling back into workflowy&rsquo;s arms today after a vailiant year-long experiment in other organizing systems.</p>
+<p>I simply wasn&rsquo;t as efficient with others as I was with workflowy. The ease of use, the speed, the interface&hellip; all superior for just a simple outlining tool.</p>
+<p>It&rsquo;s not open source, but it&rsquo;s so well designed. This kills me.</p>
+<p>If I could get HackFlowy working with tags and external port forwarding, I would leave. But, for now, I'l consign myself to the proprietary beast.</p>
+Tags: open source, Workflowy, hackflowy, academia, prodcutivity, outline
+
+Post ID: 76025082525, Date: Sat, 08 Feb 2014 14:31:39
+Url with slug: this-is-a-brighter-moment-of-graduate-school
+Reblog key: R2NDeDCR
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/fc4b14e18a92f36c6452c280db61bec1/tumblr_n0o4c5LLlL1ts05oao1_1280.jpg 
+Photo Caption: <p>This is a brighter moment of graduate school. </p>
+Tags: 
+
+Post ID: 75570984570, Date: Tue, 04 Feb 2014 02:31:00
+Url with slug: just-shipped-my-first-draft-off-deadlined-march
+Reblog key: NhNMVzkj
+Reblog Url: 
+Reblog Name: 
+Photo Url: http://78.media.tumblr.com/06eded17fa46c44ec52b8466ed5e1f31/tumblr_n0gnk5MkIk1ts05oao1_400.png 
+Photo Caption: <p>Just shipped my first draft off. Deadlined March 31, I&rsquo;m kind of nervous for a couple of reasons:</p>
+<ol><li>High expectations (by myself and those around me) increase stakes.</li>
+<li>I have an idea of where the line is between &ldquo;ready to ship&rdquo; and &ldquo;needs more edits&rdquo; without needing hard deadlines, but need more worldly experience.</li>
+<li>Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</li>
+<li>Stylistic expectations are kind of important, and the guidelines were not thorough enough for me to generate rational expectations.</li>
+<li>After breaking what I now consider an <em>incredibly </em>unrealistic deadline in early September, questioning whether the quality of work justifies the delay is rational.</li>
+</ol><p>Nothing game-breaking. I guess learning to live as an academic (or as a person) is to get comfortable with these doubts and fears, maybe figuring out where to draw the lines in some cases.</p>
+<p>Adorno wrote about the strong disparities between how materially comfortable modern life is and how mentally discomfiting all the luxuries get. It appears my experience is no exception.</p>
+Tags: academia, graduate school, grad school, school, anxiety, nervousness, nerves, adorno, nervous, modernity, geography
+

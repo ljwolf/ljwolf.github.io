@@ -3,6 +3,7 @@ id: 121892041274
 date: 2015-06-18T23:49:13Z
 url: i-usually-dont-think-much-about
 title: Untitled
+tags: ["and this is about as"," human geography"," as i get these days"," geography"," gis"," python"," github"," ssh"," publicity"," anonymity"," pseudonymity"," feminist software foundation"," tox"," identity", "imported"]
 ---
 <p>I usually don’t think much about
 credentialization online. I have a few internet aliases (like
@@ -55,4 +56,7 @@ one (admittedly very arcane) example of the destruction of
 depersonalized/deidentified space on the internet.</p>
 
 <p>Digital unnamed space is rapidly disappearing one ssh key at a time.  </p>
-Tags: and this is about as, human geography, as I get these days, geography, gis, python, github, ssh, publicity, anonymity, pseudonymity, feminist software foundation, tox, identity
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/121892041274/i-usually-dont-think-much-about'<tt>yetanothergeographer</tt></a></small>

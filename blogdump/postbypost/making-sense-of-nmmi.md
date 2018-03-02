@@ -3,6 +3,7 @@ id: 101245858269
 date: 2014-10-29T05:36:00Z
 url: making-sense-of-nmmi
 title: Making Sense of NMMI
+tags: ["math"," geography"," politics"," political science"," gerrymandering"," compacness", "imported"]
 ---
 <p>The Normalized Mass Moment of Inertia proposed by Li et al (2013) is
 deceptively hard to express. Given some shape and a distribution of
@@ -193,4 +194,7 @@ related, but are not necessarily <em>strictly</em> so.</p>
 
 <p>When expressed this way, the purpose and the logic of the statistic
 becomes more clear.</p>
-Tags: math, geography, politics, political science, gerrymandering, compacness
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/101245858269/making-sense-of-nmmi'<tt>yetanothergeographer</tt></a></small>

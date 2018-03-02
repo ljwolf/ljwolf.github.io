@@ -3,6 +3,7 @@ id: 145529412394
 date: 2016-06-06T19:11:28Z
 url: gsoc-call-notes-june-6-2016
 title: GSOC Call Notes, June 6 2016
+tags: ["gsoc"," python"," geography"," pysal"," statistics"," grad school", "imported"]
 ---
 <p>I&rsquo;ve had to take a break from the <a href="https://twitter.com/levijohnwolf/status/738600024431427584" target="_blank">spatial hierarchical linear modeling</a> <a href="http://ljwolf.org/post/145342859409/visual-display-of-complex-data-can-be-pretty" target="_blank">kick I&rsquo;ve been on recently</a> to get back to some GSOC work.</p>
 
@@ -131,4 +132,7 @@ to be ordered from the start. This means that the resulting weights will have
 the same iteration order as weightsl <code>from_shapefile(filepath,
 idVariable='POLYGON_ID')</code>, but the dataframe call will set the <code>id_order_set</code>
 flag, while the shapefile classmethod does not.</p>
-Tags: gsoc, python, geography, pysal, statistics, grad school
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/145529412394/gsoc-call-notes-june-6-2016'<tt>yetanothergeographer</tt></a></small>

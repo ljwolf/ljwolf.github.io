@@ -3,6 +3,7 @@ id: 147934748469
 date: 2016-07-25T02:52:31Z
 url: a-post-scipy-chicago-update
 title: A Post-SciPy Chicago Update
+tags: ["gsoc"," see i won't forget to tag it this time"," python"," gis"," development"," software"," geography"," statistics", "imported"]
 ---
 <p>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&rsquo;ve had in the library recently.</p>
 
@@ -37,4 +38,7 @@ title: A Post-SciPy Chicago Update
 <p>Most of the barriers to this are, as a mentioned above, mental and social, not technical. Our code can be well-architected, even though we&rsquo;ve implemented special structures to do things that are more commonly (sometimes more efficiently) solved in other packages or using other techniques.</p>
 
 <p>And, there&rsquo;s some freaking cool stuff going on involving PySAL. Namely, the thing that&rsquo;s been animating me is its use in <a href="https://carto.com" target="_blank">Carto&rsquo;s</a> <a href="https://github.com/cartodb/crankshaft" target="_blank">Crankshaft</a>, which integrates some PySAL tooling into a PL/Python plugin for Postgres. They&rsquo;ll be exposing <em>our</em> API (or a subset of it) to users through this wrapper, and that feels super cool! So, we&rsquo;ve got good things going for our library. But, I think that continued progress needs to address these primarily <em>social</em> concerns, because the code, technologically, I think is more sound than one could expect from full-time academic authors.</p>
-Tags: gsoc, see I won't forget to tag it this time, python, GIS, development, software, geography, statistics
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/147934748469/a-post-scipy-chicago-update'<tt>yetanothergeographer</tt></a></small>

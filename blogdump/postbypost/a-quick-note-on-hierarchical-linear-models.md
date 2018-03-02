@@ -3,6 +3,7 @@ id: 139808556364
 date: 2016-02-22T16:23:53Z
 url: a-quick-note-on-hierarchical-linear-models
 title: A quick note on Hierarchical Linear Models
+tags: ["statistics"," modelling"," grad school", "imported"]
 ---
 <p>Owen, Harris, &amp; Jones have a pretty cool <a href="http://phg.sagepub.com/content/early/2015/04/21/0309132515580814" target="_blank">new paper</a> out discussing strengths &amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&rsquo;t <em>directly</em> answer the classic question at the heart of tons of geographic research:</p>
 
@@ -31,4 +32,7 @@ title: A quick note on Hierarchical Linear Models
 </blockquote>
 
 <p>this involves both soundness and application. Owens presents discussion wholly about the latter.</p>
-Tags: statistics, modelling, grad school
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/139808556364/a-quick-note-on-hierarchical-linear-models'<tt>yetanothergeographer</tt></a></small>
