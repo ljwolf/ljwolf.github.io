@@ -31,7 +31,7 @@ I’ve put together a notebook where I go through and explore some modeling of t
     </item>
     
     <item>
-      <title></title>
+      <title>log deterimnants</title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
@@ -63,12 +63,13 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title></title>
+      <title>yep, that&#39;s an image from within the terminal</title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>thanks, libsixel
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -83,7 +84,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title></title>
+      <title>how we got here isn&#39;t the only way we could&#39;ve gotten somewhere</title>
       <link>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</link>
       <pubDate>Fri, 16 Oct 2015 20:02:11 +0000</pubDate>
       
@@ -102,7 +103,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title></title>
+      <title>whyyyyy do we not use package managers everywhere?</title>
       <link>/my-time-using-linux-has-apparently-made-me-quite/</link>
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       
@@ -112,7 +113,7 @@ Having one program that updates all your software is so desirable at this poin
     </item>
     
     <item>
-      <title></title>
+      <title>the eternal return (to vim)</title>
       <link>/ok-so-i-think-my-days-of-using-texstudio-are/</link>
       <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
       
@@ -123,7 +124,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
     </item>
     
     <item>
-      <title></title>
+      <title>first simple program in julia- a greedy knapsack</title>
       <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       

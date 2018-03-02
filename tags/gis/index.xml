@@ -12,7 +12,7 @@
     
     
     <item>
-      <title></title>
+      <title>price clusters in airbnbs in brooklyn</title>
       <link>/its-neat-that-this-new-algorithm-is-working/</link>
       <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
       
@@ -32,12 +32,14 @@ I’ve put together a notebook where I go through and explore some modeling of t
     </item>
     
     <item>
-      <title></title>
+      <title>something&#39;s up with PyMC3&#39;s diagnostics...</title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
+Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -71,7 +73,7 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
     </item>
     
     <item>
-      <title></title>
+      <title>sampling distributions at each grid site</title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
@@ -124,12 +126,13 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title></title>
+      <title>yep, that&#39;s an image from within the terminal</title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>thanks, libsixel
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -244,7 +247,7 @@ You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s fro
     </item>
     
     <item>
-      <title></title>
+      <title>and the dissertation begins in earnest</title>
       <link>/getting-excited-about-some-cool-new-exploration/</link>
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
@@ -264,7 +267,7 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title></title>
+      <title>compressing the entire census</title>
       <link>/that-compression-is-bewilderingly-good-the-full/</link>
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
@@ -294,7 +297,7 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title></title>
+      <title>business in the front, party distributed across 32 backs</title>
       <link>/mulitprocessing-business-in-the-front-parallel/</link>
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
@@ -357,7 +360,7 @@ Adapting this, I should be good. Though, I&amp;rsquo;ll have to ask why it was d
     </item>
     
     <item>
-      <title></title>
+      <title>vornoi bugs</title>
       <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       

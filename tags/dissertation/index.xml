@@ -12,7 +12,7 @@
     
     
     <item>
-      <title></title>
+      <title>the highest dimension scatter</title>
       <link>/i-think-thisll-end-up-being-the-big-story-from-my/</link>
       <pubDate>Wed, 05 Jul 2017 18:56:45 +0000</pubDate>
       
@@ -23,12 +23,13 @@ Totally discounting the “expressive harms” arguments in this sphere, though.
     </item>
     
     <item>
-      <title></title>
+      <title>elections simulators</title>
       <link>/finally-got-this-elections-simulator-working-the/</link>
       <pubDate>Tue, 18 Oct 2016 14:00:17 +0000</pubDate>
       
       <guid>/finally-got-this-elections-simulator-working-the/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>finally got this elections simulator working, based on Linzer&amp;rsquo;s 2012 paper on gaussian mixture modelling for elections data.
+ imported from: yetanothergeographer</description>
     </item>
     
   </channel>

@@ -21,12 +21,13 @@
     </item>
     
     <item>
-      <title></title>
+      <title>all those p-values will be lost in time</title>
       <link>/all-those-p-values-will-be-lost-in-time-like/</link>
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>like tears in rain.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -60,30 +61,33 @@ Once the sampling finished, I looked at the acceptance rate and, sure enough, th
     </item>
     
     <item>
-      <title></title>
+      <title>elections simulators</title>
       <link>/finally-got-this-elections-simulator-working-the/</link>
       <pubDate>Tue, 18 Oct 2016 14:00:17 +0000</pubDate>
       
       <guid>/finally-got-this-elections-simulator-working-the/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>finally got this elections simulator working, based on Linzer&amp;rsquo;s 2012 paper on gaussian mixture modelling for elections data.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title></title>
+      <title>libsixel is real cool</title>
       <link>/every-time-i-use-a-sixel-based-library-it-just/</link>
       <pubDate>Mon, 10 Oct 2016 19:25:04 +0000</pubDate>
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>images directly in the terminal! no fuss! although you have to use a special terminal emulator&amp;hellip;
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title></title>
+      <title>metropolis-within-gibbs</title>
       <link>/at-top-a-metropolis-within-gibbs-sampled-sar/</link>
       <pubDate>Sun, 09 Oct 2016 18:53:35 +0000</pubDate>
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>my spatially-correlated variance components model is finally coming together :)
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -97,12 +101,14 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
     </item>
     
     <item>
-      <title></title>
+      <title>something&#39;s up with PyMC3&#39;s diagnostics...</title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
+Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -115,12 +121,13 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
     </item>
     
     <item>
-      <title></title>
+      <title>spatially-varying components models are finally coming together</title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>now that the google summer of code has winded down.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -153,7 +160,7 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
     </item>
     
     <item>
-      <title></title>
+      <title>log deterimnants</title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
@@ -163,7 +170,7 @@ You see, some spatial econometric models require that the log determinant of a v
     </item>
     
     <item>
-      <title></title>
+      <title>but yet so far</title>
       <link>/man-im-so-close-to-a-pretty-massive-speedup-of/</link>
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
@@ -194,7 +201,7 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
     </item>
     
     <item>
-      <title></title>
+      <title>sampling distributions at each grid site</title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
@@ -257,12 +264,13 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title></title>
+      <title>yep, that&#39;s an image from within the terminal</title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>thanks, libsixel
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -308,7 +316,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title></title>
+      <title>and bears, oh my</title>
       <link>/having-a-last-name-of-wolf-has-never-been-an/</link>
       <pubDate>Fri, 09 Oct 2015 01:21:32 +0000</pubDate>
       
@@ -348,7 +356,7 @@ You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s fro
     </item>
     
     <item>
-      <title></title>
+      <title>and the dissertation begins in earnest</title>
       <link>/getting-excited-about-some-cool-new-exploration/</link>
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
@@ -368,7 +376,7 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title></title>
+      <title>compressing the entire census</title>
       <link>/that-compression-is-bewilderingly-good-the-full/</link>
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
@@ -408,7 +416,7 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title></title>
+      <title>business in the front, party distributed across 32 backs</title>
       <link>/mulitprocessing-business-in-the-front-parallel/</link>
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
@@ -468,7 +476,7 @@ This wasn&amp;rsquo;t a constraint I wanted. But, just getting pure pip-installa
     </item>
     
     <item>
-      <title></title>
+      <title>there really is a big difference vis. scipy/numpy random sampling</title>
       <link>/this-is-insane-the-speed-differences-between/</link>
       <pubDate>Tue, 27 Jan 2015 22:01:33 +0000</pubDate>
       
@@ -477,7 +485,7 @@ This wasn&amp;rsquo;t a constraint I wanted. But, just getting pure pip-installa
     </item>
     
     <item>
-      <title></title>
+      <title>whyyyyy do we not use package managers everywhere?</title>
       <link>/my-time-using-linux-has-apparently-made-me-quite/</link>
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       

@@ -34,7 +34,7 @@ Regardless, I&amp;rsquo;m still seeking that best pub that does good coffee and 
     </item>
     
     <item>
-      <title></title>
+      <title>Finally making headway on Brexit Data</title>
       <link>/this-brexit-analysis-for-the-gisruk-competitions/</link>
       <pubDate>Thu, 15 Feb 2018 20:09:35 +0000</pubDate>
       
@@ -54,7 +54,7 @@ talking fast with a dense amount of facile textual references really makes peopl
     </item>
     
     <item>
-      <title></title>
+      <title>running on all cores</title>
       <link>/never-thought-id-be-complaining-about-only-having/</link>
       <pubDate>Wed, 31 Jan 2018 07:07:03 +0000</pubDate>
       
@@ -65,7 +65,7 @@ Which&amp;hellip;. means that my two kernels compete for space.
     </item>
     
     <item>
-      <title></title>
+      <title>price clusters in airbnbs in brooklyn</title>
       <link>/its-neat-that-this-new-algorithm-is-working/</link>
       <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
       
@@ -75,7 +75,7 @@ I guess that&amp;rsquo;s probably pretty common among researchers, but the thril
     </item>
     
     <item>
-      <title></title>
+      <title>matplotlib.ion mode</title>
       <link>/i-forgot-how-killer-the-builtin-matplotlib/</link>
       <pubDate>Thu, 17 Aug 2017 23:38:37 +0000</pubDate>
       
@@ -94,7 +94,7 @@ The first time I learned matplotlib I learned it in a notebook. Now that I&amp;r
     </item>
     
     <item>
-      <title></title>
+      <title>the highest dimension scatter</title>
       <link>/i-think-thisll-end-up-being-the-big-story-from-my/</link>
       <pubDate>Wed, 05 Jul 2017 18:56:45 +0000</pubDate>
       
@@ -150,21 +150,23 @@ So now I can delete that folder where I started to move my blog to pelican. don�
     </item>
     
     <item>
-      <title></title>
+      <title>is my uptime excited or scared?</title>
       <link>/is-my-uptime-excited-or-scared-you-decide/</link>
       <pubDate>Thu, 16 Mar 2017 01:12:41 +0000</pubDate>
       
       <guid>/is-my-uptime-excited-or-scared-you-decide/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>you decide.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title></title>
+      <title>all those p-values will be lost in time</title>
       <link>/all-those-p-values-will-be-lost-in-time-like/</link>
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>like tears in rain.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -218,30 +220,33 @@ Once the sampling finished, I looked at the acceptance rate and, sure enough, th
     </item>
     
     <item>
-      <title></title>
+      <title>elections simulators</title>
       <link>/finally-got-this-elections-simulator-working-the/</link>
       <pubDate>Tue, 18 Oct 2016 14:00:17 +0000</pubDate>
       
       <guid>/finally-got-this-elections-simulator-working-the/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>finally got this elections simulator working, based on Linzer&amp;rsquo;s 2012 paper on gaussian mixture modelling for elections data.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title></title>
+      <title>libsixel is real cool</title>
       <link>/every-time-i-use-a-sixel-based-library-it-just/</link>
       <pubDate>Mon, 10 Oct 2016 19:25:04 +0000</pubDate>
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>images directly in the terminal! no fuss! although you have to use a special terminal emulator&amp;hellip;
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title></title>
+      <title>metropolis-within-gibbs</title>
       <link>/at-top-a-metropolis-within-gibbs-sampled-sar/</link>
       <pubDate>Sun, 09 Oct 2016 18:53:35 +0000</pubDate>
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>my spatially-correlated variance components model is finally coming together :)
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -255,12 +260,14 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
     </item>
     
     <item>
-      <title></title>
+      <title>something&#39;s up with PyMC3&#39;s diagnostics...</title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
+Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -275,7 +282,7 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
     </item>
     
     <item>
-      <title></title>
+      <title>debugging the constituency level electoral archive</title>
       <link>/found-another-error-in-the-clea-as-i-am-building/</link>
       <pubDate>Mon, 12 Sep 2016 02:28:19 +0000</pubDate>
       
@@ -295,12 +302,13 @@ This poses a few challenges. First, CLEA records are one big, flat table of cand
     </item>
     
     <item>
-      <title></title>
+      <title>spatially-varying coefficients models</title>
       <link>/working-on-a-paper-about-models-that-can-have-very/</link>
       <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>have really bad traces sometimes&amp;hellip;. not sure what causes them to do this excursion out into the weird space, but it makes their eventual traces have real severe autocorrelation.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -323,12 +331,13 @@ I am spending a lot of my graduate school experience being told those edges shou
     </item>
     
     <item>
-      <title></title>
+      <title>spatially-varying components models are finally coming together</title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>now that the google summer of code has winded down.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -370,7 +379,7 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
     </item>
     
     <item>
-      <title></title>
+      <title>more on log determinants</title>
       <link>/more-on-the-log-determinant-stuff-i-think-ive/</link>
       <pubDate>Sun, 19 Jun 2016 20:37:12 +0000</pubDate>
       
@@ -381,7 +390,7 @@ And, since (W) and (I) are constants, I actually need the gradient of the log de
     </item>
     
     <item>
-      <title></title>
+      <title>log deterimnants</title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
@@ -391,7 +400,7 @@ You see, some spatial econometric models require that the log determinant of a v
     </item>
     
     <item>
-      <title></title>
+      <title>but yet so far</title>
       <link>/man-im-so-close-to-a-pretty-massive-speedup-of/</link>
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
@@ -422,7 +431,7 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
     </item>
     
     <item>
-      <title></title>
+      <title>sampling distributions at each grid site</title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
@@ -473,7 +482,7 @@ After trying multiple times to verify whether it was my code or if the published
     </item>
     
     <item>
-      <title></title>
+      <title>it&#39;s aliiiiiiiiive!</title>
       <link>/kinda-nice-when-the-model-youre-working-with/</link>
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
@@ -505,16 +514,17 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title></title>
+      <title>yep, that&#39;s an image from within the terminal</title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>thanks, libsixel
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title></title>
+      <title>reblogging from NPR</title>
       <link>/npr-north-carolina-voters-are-likely-to-be/</link>
       <pubDate>Fri, 11 Mar 2016 17:35:10 +0000</pubDate>
       
@@ -556,12 +566,13 @@ But, in doing two small tests/stabs at refactoring for speed &amp;amp; memory us
     </item>
     
     <item>
-      <title></title>
+      <title>one of my favorite diagrams</title>
       <link>/one-of-my-favorite-diagrams-from-micah-altmans/</link>
       <pubDate>Tue, 09 Feb 2016 14:40:39 +0000</pubDate>
       
       <guid>/one-of-my-favorite-diagrams-from-micah-altmans/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>from micah altman&amp;rsquo;s fantastic dissertation.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -584,7 +595,7 @@ One of the oldest and most well-used is the Reock measure, first developed in 19
     </item>
     
     <item>
-      <title></title>
+      <title>uggggggh</title>
       <link>/thelandofmaps-us-congressional-districts/</link>
       <pubDate>Wed, 13 Jan 2016 23:10:08 +0000</pubDate>
       
@@ -596,7 +607,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
     </item>
     
     <item>
-      <title></title>
+      <title>coverup and say goodnight</title>
       <link>/welp-that-was-fun-headed-back-to-phx/</link>
       <pubDate>Thu, 17 Dec 2015 19:18:26 +0000</pubDate>
       
@@ -636,7 +647,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title></title>
+      <title>how we got here isn&#39;t the only way we could&#39;ve gotten somewhere</title>
       <link>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</link>
       <pubDate>Fri, 16 Oct 2015 20:02:11 +0000</pubDate>
       
@@ -645,7 +656,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title></title>
+      <title>and bears, oh my</title>
       <link>/having-a-last-name-of-wolf-has-never-been-an/</link>
       <pubDate>Fri, 09 Oct 2015 01:21:32 +0000</pubDate>
       
@@ -674,12 +685,13 @@ But, for me, as someone who has been involved in a few Free/Open source communit
     </item>
     
     <item>
-      <title></title>
+      <title>ah yes, I am in fact skilled in spatial autocorrelation</title>
       <link>/ah-yes-i-am-in-fact-skilled-in-spatial/</link>
       <pubDate>Thu, 01 Oct 2015 16:56:40 +0000</pubDate>
       
       <guid>/ah-yes-i-am-in-fact-skilled-in-spatial/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>how did you know? I am very capable to make things more similar to themselves over geography.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -713,7 +725,7 @@ You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s fro
     </item>
     
     <item>
-      <title></title>
+      <title>and the dissertation begins in earnest</title>
       <link>/getting-excited-about-some-cool-new-exploration/</link>
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
@@ -733,7 +745,7 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title></title>
+      <title>compressing the entire census</title>
       <link>/that-compression-is-bewilderingly-good-the-full/</link>
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
@@ -783,7 +795,7 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title></title>
+      <title>business in the front, party distributed across 32 backs</title>
       <link>/mulitprocessing-business-in-the-front-parallel/</link>
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
@@ -853,7 +865,7 @@ This wasn&amp;rsquo;t a constraint I wanted. But, just getting pure pip-installa
     </item>
     
     <item>
-      <title></title>
+      <title>there really is a big difference vis. scipy/numpy random sampling</title>
       <link>/this-is-insane-the-speed-differences-between/</link>
       <pubDate>Tue, 27 Jan 2015 22:01:33 +0000</pubDate>
       
@@ -926,7 +938,7 @@ Adapting this, I should be good. Though, I&amp;rsquo;ll have to ask why it was d
     </item>
     
     <item>
-      <title></title>
+      <title>vornoi bugs</title>
       <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       
@@ -955,7 +967,7 @@ But, if you know things about voronoi polygons, you know that they</description>
     </item>
     
     <item>
-      <title></title>
+      <title>I got worse at R</title>
       <link>/so-say-youre-working-with-two-states/</link>
       <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
       
@@ -966,7 +978,7 @@ But, if you know things about voronoi polygons, you know that they</description>
     </item>
     
     <item>
-      <title></title>
+      <title>whyyyyy do we not use package managers everywhere?</title>
       <link>/my-time-using-linux-has-apparently-made-me-quite/</link>
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       
@@ -986,7 +998,7 @@ Having one program that updates all your software is so desirable at this poin
     </item>
     
     <item>
-      <title></title>
+      <title>the eternal return (to vim)</title>
       <link>/ok-so-i-think-my-days-of-using-texstudio-are/</link>
       <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
       
@@ -997,7 +1009,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
     </item>
     
     <item>
-      <title></title>
+      <title>I&#39;m sorry, what&#39;s your suggested change?</title>
       <link>/track-changes-may-in-fact-be-the-worst/</link>
       <pubDate>Thu, 01 May 2014 03:59:44 +0000</pubDate>
       
@@ -1006,7 +1018,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
     </item>
     
     <item>
-      <title></title>
+      <title>flows are blue, always</title>
       <link>/something-about-custom-blue-gamuts-makes-for-a/</link>
       <pubDate>Tue, 29 Apr 2014 23:44:51 +0000</pubDate>
       
@@ -1015,7 +1027,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
     </item>
     
     <item>
-      <title></title>
+      <title>gotta wonder whether her parents were just having a laugh</title>
       <link>/gotta-wonder-if-her-parents-were-just-having-a/</link>
       <pubDate>Wed, 23 Apr 2014 13:46:43 +0000</pubDate>
       
@@ -1033,7 +1045,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
     </item>
     
     <item>
-      <title></title>
+      <title>same as it ever was</title>
       <link>/its-so-frustrating-to-see-a-cool-idea-fall-by-the/</link>
       <pubDate>Wed, 09 Apr 2014 01:51:21 +0000</pubDate>
       
@@ -1044,7 +1056,7 @@ Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarl
     </item>
     
     <item>
-      <title></title>
+      <title>the spring break wanter has logged on</title>
       <link>/the-face-of-needing-a-spring-break/</link>
       <pubDate>Fri, 07 Mar 2014 18:05:57 +0000</pubDate>
       
@@ -1074,7 +1086,7 @@ Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarl
     </item>
     
     <item>
-      <title></title>
+      <title>starting to learn julia</title>
       <link>/i-guess-this-is-how-productivity-works-terminal/</link>
       <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
       
@@ -1094,7 +1106,7 @@ I&amp;rsquo;m hopeful for this literature review Wednesday, but I make no promis
     </item>
     
     <item>
-      <title></title>
+      <title>first simple program in julia- a greedy knapsack</title>
       <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
@@ -1105,7 +1117,7 @@ I&amp;rsquo;m hopeful for this literature review Wednesday, but I make no promis
     </item>
     
     <item>
-      <title></title>
+      <title>went crawling back into workflowy&#39;s arms today</title>
       <link>/went-crawling-back-into-workflowys-arms-today/</link>
       <pubDate>Thu, 13 Feb 2014 15:35:53 +0000</pubDate>
       
@@ -1117,7 +1129,7 @@ If I could get HackFlowy working with tags and external port forwarding, I would
     </item>
     
     <item>
-      <title></title>
+      <title>remain in light</title>
       <link>/this-is-a-brighter-moment-of-graduate-school/</link>
       <pubDate>Sat, 08 Feb 2014 14:31:39 +0000</pubDate>
       
@@ -1136,7 +1148,7 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
     </item>
     
     <item>
-      <title></title>
+      <title>whew.... first &#34;thing&#34; sent off in grad school</title>
       <link>/just-shipped-my-first-draft-off-deadlined-march/</link>
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       

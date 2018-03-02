@@ -12,16 +12,18 @@
     
     
     <item>
-      <title></title>
+      <title>something&#39;s up with PyMC3&#39;s diagnostics...</title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
+Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title></title>
+      <title>I got worse at R</title>
       <link>/so-say-youre-working-with-two-states/</link>
       <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
       

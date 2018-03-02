@@ -1,5 +1,11 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto%20Slab:200,400,500,700')
+@import url('http://fonts.googleapis.com/css?family=Roboto:200,400,500,700')
+@import url('http://fonts.googleapis.com/css?family=Roboto%20Condensed:200,400,500,700')
+
+
+
 body {
-  font-family: "Arial", Gadget, sans-serif;
+  font-family:"Roboto", "Arial", Gadget, sans-serif;
   counter-reset: heading;
   margin: 0;
   padding: 1em 0.5em 0.5em 0.5em;
@@ -45,21 +51,33 @@ p {
 }
 
 h1 { font-size: 2em;
+     font-family: Roboto Condensed;
+     font-style: italic;
      font-weight: normal;
 }
 h2 { font-size: 1.5em;
+     font-family: Roboto Condensed;
+     font-style: italic;
      font-weight: normal;
 }
 h3 { font-size: 1.17em;
+     font-family: Roboto Condensed;
+     font-style: italic;
      font-weight: normal;
 }
 h4 { font-size: 1.12em;
+     font-family: Roboto Condensed;
+     font-style: italic;
      font-weight: normal;
 }
 h5 { font-size: .83em;
+     font-family: Roboto Condensed;
+     font-style: italic;
      font-weight: normal;
 }
 h6 { font-size: .75em;
+     font-family: Roboto Condensed;
+     font-style: italic;
      font-weight: normal;
 }
 
@@ -70,6 +88,8 @@ a:hover, a:active, a:focus {
 header {
   justify-content: space-around;
   flex-direction: column;
+  font-family: Roboto Slab;
+  font-weight: 200;
 }
 
 /* navigation  */
