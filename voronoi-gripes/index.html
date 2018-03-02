@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/voronoi-gripes/">
+<base href="/" />
+<meta property="og:title" content="Voronoi Gripes" />
+<meta property="og:description" content="Wow, did not expect this to be as big of an issue as it has been.
+Pysal removed the code for generating voronoi diagrams for the standard library. Not sure why.
+Instead, on the mailing list, the project BDFL provides code for a diagram of randomized points.
+Adapting this, I should be good. Though, I&rsquo;ll have to ask why it was dropped from pysal.core or pysal.cg.
+Tags: GIS, pysal" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/voronoi-gripes/" />
+
+
+
+<meta property="article:published_time" content="2014-10-01T15:28:13&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-10-01T15:28:13&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Voronoi Gripes"/>
+<meta name="twitter:description" content="Wow, did not expect this to be as big of an issue as it has been.
+Pysal removed the code for generating voronoi diagrams for the standard library. Not sure why.
+Instead, on the mailing list, the project BDFL provides code for a diagram of randomized points.
+Adapting this, I should be good. Though, I&rsquo;ll have to ask why it was dropped from pysal.core or pysal.cg.
+Tags: GIS, pysal"/>
+
+
+
+<meta itemprop="name" content="Voronoi Gripes">
+<meta itemprop="description" content="Wow, did not expect this to be as big of an issue as it has been.
+Pysal removed the code for generating voronoi diagrams for the standard library. Not sure why.
+Instead, on the mailing list, the project BDFL provides code for a diagram of randomized points.
+Adapting this, I should be good. Though, I&rsquo;ll have to ask why it was dropped from pysal.core or pysal.cg.
+Tags: GIS, pysal">
+
+
+<meta itemprop="datePublished" content="2014-10-01T15:28:13&#43;00:00" />
+<meta itemprop="dateModified" content="2014-10-01T15:28:13&#43;00:00" />
+<meta itemprop="wordCount" content="69">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Voronoi Gripes 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Voronoi Gripes </h1>
+    <div class="content"> <p>Wow, did not expect <a href="http://yetanothergeographer.tumblr.com/post/98840800049/a-fun-little-bug-in-my-apparently-outdated-qgis" target="_blank">this</a> to be as big of an issue as it has been.</p>
+
+<p>Pysal <a href="https://groups.google.com/forum/#!msg/openspace-list/OwDen5Yr1Lw/JZ_2IZUroc4J" target="_blank">removed</a> the code for generating voronoi diagrams for the standard library. Not sure why.</p>
+
+<p>Instead, on the mailing list, the project <a href="https://en.wikipedia.org/wiki/Benevolent_dictator_for_life" target="_blank">BDFL</a> provides code for a diagram of randomized points.</p>
+
+<p><p>Adapting this, I should be good. Though, I&rsquo;ll have to ask why it was dropped from pysal.core or pysal.cg.</p>
+Tags: GIS, pysal</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Oct 1, 2014 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

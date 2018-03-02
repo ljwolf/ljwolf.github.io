@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/first-cartodb-map/">
+<base href="/" />
+<meta property="og:title" content="First CartoDB map" />
+<meta property="og:description" content="First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.  This is a map of the Polsby-Popper metric for US Congressional districts. In essence, people use it to identify how &ldquo;normal&rdquo; a political district&rsquo;s shape is, with larger values being more &ldquo;regular.&rdquo; It&rsquo;s the same as used in a washington post piece. My methodology differs a bit from their published map, and I&rsquo;d love to figure out how to get the neat little hover info on the WaPo map." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/first-cartodb-map/" />
+
+
+
+<meta property="article:published_time" content="2015-08-26T02:26:08&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-08-26T02:26:08&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="First CartoDB map"/>
+<meta name="twitter:description" content="First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.  This is a map of the Polsby-Popper metric for US Congressional districts. In essence, people use it to identify how &ldquo;normal&rdquo; a political district&rsquo;s shape is, with larger values being more &ldquo;regular.&rdquo; It&rsquo;s the same as used in a washington post piece. My methodology differs a bit from their published map, and I&rsquo;d love to figure out how to get the neat little hover info on the WaPo map."/>
+
+
+
+<meta itemprop="name" content="First CartoDB map">
+<meta itemprop="description" content="First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.  This is a map of the Polsby-Popper metric for US Congressional districts. In essence, people use it to identify how &ldquo;normal&rdquo; a political district&rsquo;s shape is, with larger values being more &ldquo;regular.&rdquo; It&rsquo;s the same as used in a washington post piece. My methodology differs a bit from their published map, and I&rsquo;d love to figure out how to get the neat little hover info on the WaPo map.">
+
+
+<meta itemprop="datePublished" content="2015-08-26T02:26:08&#43;00:00" />
+<meta itemprop="dateModified" content="2015-08-26T02:26:08&#43;00:00" />
+<meta itemprop="wordCount" content="120">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     First CartoDB map 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> First CartoDB map </h1>
+    <div class="content"> <p><p><iframe width="100%" height="520" frameborder="0" src="https://ljw.cartodb.com/viz/7300afac-4ba3-11e5-ae01-0e4fddd5de28/embed_map"></iframe>
+<br/>
+First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.
+<br/>
+This is a map of the Polsby-Popper metric for US Congressional districts. In essence, people use it to identify how &ldquo;normal&rdquo; a political district&rsquo;s shape is, with larger values being more &ldquo;regular.&rdquo; It&rsquo;s the same as used in a washington post piece. My methodology differs a bit from their published map, and I&rsquo;d love to figure out how to get the neat little hover info on the WaPo map.
+<br/>
+But, with this down, I don&rsquo;t know why I would use this over folium, since I know how to make the maps myself&hellip;</p>
+Tags: geography, GIS, cartodb, folium, mapping, cartography, politics</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Aug 26, 2015 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

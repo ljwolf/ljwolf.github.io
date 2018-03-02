@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/trivial-python-multiprocessing/">
+<base href="/" />
+<meta property="og:title" content="Trivial Python Multiprocessing" />
+<meta property="og:description" content="I just wrote up a notebook for a fellow PhD student on how I use python&rsquo;s builtin multiprocessing library to do embarassingly parallel computations much faster. Every time I think about it, I&rsquo;m floored at how simple using the builtin multiprocessing library is for certain operations.
+There&rsquo;s a ton of uncertainty out there around the state of parallel computing in Python, and I&rsquo;m not an expert. But, I figure if it&rsquo;s good enough for the unicorn I worked for, it&rsquo;s good enough for a computational social scientist." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/trivial-python-multiprocessing/" />
+
+
+
+<meta property="article:published_time" content="2016-02-16T21:18:10&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-02-16T21:18:10&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Trivial Python Multiprocessing"/>
+<meta name="twitter:description" content="I just wrote up a notebook for a fellow PhD student on how I use python&rsquo;s builtin multiprocessing library to do embarassingly parallel computations much faster. Every time I think about it, I&rsquo;m floored at how simple using the builtin multiprocessing library is for certain operations.
+There&rsquo;s a ton of uncertainty out there around the state of parallel computing in Python, and I&rsquo;m not an expert. But, I figure if it&rsquo;s good enough for the unicorn I worked for, it&rsquo;s good enough for a computational social scientist."/>
+
+
+
+<meta itemprop="name" content="Trivial Python Multiprocessing">
+<meta itemprop="description" content="I just wrote up a notebook for a fellow PhD student on how I use python&rsquo;s builtin multiprocessing library to do embarassingly parallel computations much faster. Every time I think about it, I&rsquo;m floored at how simple using the builtin multiprocessing library is for certain operations.
+There&rsquo;s a ton of uncertainty out there around the state of parallel computing in Python, and I&rsquo;m not an expert. But, I figure if it&rsquo;s good enough for the unicorn I worked for, it&rsquo;s good enough for a computational social scientist.">
+
+
+<meta itemprop="datePublished" content="2016-02-16T21:18:10&#43;00:00" />
+<meta itemprop="dateModified" content="2016-02-16T21:18:10&#43;00:00" />
+<meta itemprop="wordCount" content="369">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Trivial Python Multiprocessing 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Trivial Python Multiprocessing </h1>
+    <div class="content"> <p>I just wrote up a notebook for a fellow PhD student on how I use python&rsquo;s builtin <code>multiprocessing</code> library to do embarassingly parallel computations much faster. Every time I think about it, I&rsquo;m floored at how simple using the builtin <code>multiprocessing</code> library is for certain operations.</p>
+
+<p>There&rsquo;s a ton of uncertainty out there around the state of parallel computing in Python, and I&rsquo;m not an expert. But, I figure if it&rsquo;s good enough for the unicorn I worked for, it&rsquo;s good enough for a computational social scientist. Since you can prototype so fast, it&rsquo;s very simple to run tons more parallel simulations than you could ever expect to if you did it sequentially.</p>
+
+<p>Since I use <code>multiprocessing</code> for easy stuff like Monte Carlo simulation and GIS processing, many of the operations are <em>embarassingly parallel</em>, meaning that no information is shared between each run of the procedure. Computations like this are your classic Monte Carlo simulations, where each simulation computes some statistic about the realization of a stochastic data generating process.</p>
+
+<p>Many GIS operations and geoprocessing techniques can also be embarassingly parallel, like if you need to construct the minimum bounding circles for a set of polygons. You can do this easily, since each polygon&rsquo;s minimum bounding circle is independent of any other&rsquo;s minimum bounding circle.
+So, if you can define your function to take one set of parameters and compute one result, then you can <code>map</code> that function over your simulation matrix.</p>
+
+<p>For some experiment function, <code>experiment</code>, and a matrix of configurations, <code>data</code>,  <code>multiprocessing</code> in python is often as simple as adding this below your declaration of your function:</p>
+
+<p><code>import multiprocessing as mp</code></p>
+
+<p><code>pool = mp.Pool(mp.cpu_count())</code></p>
+
+<p><code>results = pool.map(experiment, data)</code></p>
+
+<p>So, say you&rsquo;re computing the Isoperimetric Quotient for a ton of shapes. You can just:</p>
+
+<p><code>def ipq(polygon):</code></p>
+
+<p><code>return (4 * PI * polygon.area) / (chain.perimeter**2)</code></p>
+
+<p><code>import multiprocessing as mp</code></p>
+
+<p><code>pool = mp.Pool(mp.cpu_count())</code></p>
+
+<p><code>results = pool.map(ipq, polygons)</code></p>
+
+<p><p>And then results contains the IPQ for each polygon.
+This is super simple, and can save tons of time when you can&rsquo;t figure out how to vectorize a particular operation, or just plain need to do a ton of processing.</p>
+Tags: python, multiprocessing, GIS, geoprocessing, geography, tumblr markdown doesn&rsquo;t support codeblocks with returns?</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Feb 16, 2016 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

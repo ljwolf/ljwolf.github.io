@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/rfc-for-gsoc-feedback/">
+<base href="/" />
+<meta property="og:title" content="RFC for GSOC Feedback" />
+<meta property="og:description" content="Clarifying a Core Data Model for PySAL  Gist here From my perspective, I see my proposal for GSOC as containing two oblique foci. My hope in drafting this notebook for my fellow authors is to make this clear.
+I think at this point, many people who use &amp; develop PySAL would like to see better tooling for Pandas$\leftrightarrow$PySAL interaction. This was started by Luc, Dani, &amp; myself in the pysal." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/rfc-for-gsoc-feedback/" />
+
+
+
+<meta property="article:published_time" content="2016-05-19T19:12:11&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-05-19T19:12:11&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RFC for GSOC Feedback"/>
+<meta name="twitter:description" content="Clarifying a Core Data Model for PySAL  Gist here From my perspective, I see my proposal for GSOC as containing two oblique foci. My hope in drafting this notebook for my fellow authors is to make this clear.
+I think at this point, many people who use &amp; develop PySAL would like to see better tooling for Pandas$\leftrightarrow$PySAL interaction. This was started by Luc, Dani, &amp; myself in the pysal."/>
+
+
+
+<meta itemprop="name" content="RFC for GSOC Feedback">
+<meta itemprop="description" content="Clarifying a Core Data Model for PySAL  Gist here From my perspective, I see my proposal for GSOC as containing two oblique foci. My hope in drafting this notebook for my fellow authors is to make this clear.
+I think at this point, many people who use &amp; develop PySAL would like to see better tooling for Pandas$\leftrightarrow$PySAL interaction. This was started by Luc, Dani, &amp; myself in the pysal.">
+
+
+<meta itemprop="datePublished" content="2016-05-19T19:12:11&#43;00:00" />
+<meta itemprop="dateModified" content="2016-05-19T19:12:11&#43;00:00" />
+<meta itemprop="wordCount" content="1864">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     RFC for GSOC Feedback 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> RFC for GSOC Feedback </h1>
+    <div class="content"> <div tabindex="-1" id="notebook" class="border-box-sizing">
+<div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Clarifying-a-Core-Data-Model-for-PySAL">Clarifying a Core Data Model for PySAL<a class="anchor-link" href="#Clarifying-a-Core-Data-Model-for-PySAL" target="_blank"></a></h1>
+<p>
+<a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Gist here</a>
+</p>
+
+
+<p>From my perspective, I see my proposal for GSOC as containing two oblique foci. My hope in drafting this notebook for my fellow authors is to make this clear.</p>
+<p>I think at this point, many people who use &amp; develop PySAL would like to see better tooling for Pandas$\leftrightarrow$PySAL interaction. This was started by Luc, Dani, &amp; myself in the <code>pysal.pdio</code> contrib module. At its most basic, <code>pdio</code> reads/writes <code>dbf</code>s using PySAL IO. In addition, all shapes in a shapefile are read in and stuffed into a column of the dataframe. Unlike Geopandas, this occurs on a standard Pandas dataframe, rather than constructing a special subclass.</p>
+<p>In addition, interfaces between shapely and PySAL exist via the <a href="http://pysal.geodacenter.org/1.3/users/tutorials/shapely.html" target="_blank"><code>shapely_ext</code></a> contrib module. The shapely extension provides an interface between pysal and shapely using geointerface at the individual polygon level.</p>
+<p>My GSOC proposal&rsquo;s main point was that <strong>I&rsquo;d like to see PySAL gain a labelled array interface</strong>, and that a specification for this interface <em>should</em> make it easy to do GIS, regardless of source. How we want this done remains an open question. I think there are really two aims in my proposal that I&rsquo;d like to come to a consensus on about proirities:</p>
+<p>The directions are what I&rsquo;d like to call:</p>
+<ul><li><strong>NOGR</strong>: A pure python/cython GIS</li>
+<li><strong>Pandas as Idiom</strong>: A Tabular data idiom for PySAL</li>
+</ul><p>The <strong>NOGR</strong> concern perennially hits a wicket for PySALers. I&rsquo;m sure those reading may have engaged in this no-win discussion before. The cycle is something like this:</p>
+<ol><li>PySAL targets minimal dependencies from the scientific python stack.</li>
+<li>Spatial Analysis sometimes has tabular operations &amp; GIS as a prerequisite.</li>
+<li>GeoPandas+Shapely/Pandas are the standard for GIS/tabular in Python.</li>
+</ol><p>The <strong>NOGR</strong> project is really providing a method of solving <strong>2</strong> within the constraints of <strong>1</strong>.</p>
+<p>The <strong>Pandas as Idiom</strong> direction leverages <strong>3</strong> within the constraints of <strong>1</strong> to provide a consistent labelled array interface.</p>
+<p>These largely oblique to each other:</p>
+<ul><li><p>Pure Python GIS would not, by itself, define a tabular data model for PySAL</p>
+</li>
+<li><p>A tabular data model would make it <strong>much</strong> easier to interface with current GIS tools in python, but still means that users who need GIS would need GDAL.</p>
+</li>
+</ul><p>Thus, I&rsquo;d like the mentors&rsquo; &amp; broader PySAL community&rsquo;s perspectives on how whether &amp; how urgently a NOGR GIS package is needed before commencing my GSOC work. This feedback will inform and direct what parts of the proposal get emphasized.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-we-already-have:">What we already have:<a class="anchor-link" href="#What-we-already-have:" target="_blank"></a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Just to be clear, though, I&rsquo;d like to show exactly how useful the shapely extension is. I don&rsquo;t really see it mentioned a lot, so I&rsquo;d like to show what&rsquo;s already possible using just it and the <code>pdio</code>-style PySAL + Pandas Dataframes:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pysal</span> <span class="k">as</span> <span class="nn">ps</span>
+<span class="kn">from</span> <span class="nn">pysal.contrib</span> <span class="k">import</span> <span class="n">shapely_ext</span> <span class="k">as</span> <span class="n">psh</span>
+<span class="kn">import</span> <span class="nn">shapely.geometry</span> <span class="k">as</span> <span class="nn">sh</span>
+<span class="kn">import</span> <span class="nn">shapely.ops</span> <span class="k">as</span> <span class="nn">GIS</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">pdio</span><span class="o">.</span><span class="n">read_files</span><span class="p">(</span><span class="n">ps</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s">&lsquo;columbus.shp&rsquo;</span><span class="p">))</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Basic-GIS:">Basic GIS:<a class="anchor-link" href="#Basic-GIS:" target="_blank">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We have wrappers for almost all of the GIS operations in Shapely. They all take/recieve PySAL shapes, but use shapely for the actual operations:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [36]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">GIS</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&lsquo;_&rsquo;</span><span class="p">)])</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">psh</span><span class="p">)))</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[36]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'BaseGeometry',
+'CollectionOperator',
+'Point',
+'ValidateOp',
+'asLineString',
+'asMultiLineString',
+'asShape',
+'byref',
+'c_double',
+'c_void_p',
+'geom_factory',
+'izip',
+'lgeos',
+'linemerge',
+'nearest_points',
+'operator',
+'polygonize',
+'polygonize_full',
+'snap',
+'sys',
+'transform',
+'triangulate',
+'validate'}</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also use most shapely methods as standalone functions:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [54]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">null</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">Polygon</span><span class="p">()</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [89]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">null</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&lsquo;_&rsquo;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">psh</span><span class="p">))]</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[89]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['almost_equals',
+'area',
+'boundary',
+'bounds',
+'buffer',
+'centroid',
+'contains',
+'convex_hull',
+'crosses',
+'difference',
+'disjoint',
+'distance',
+'envelope',
+'equals',
+'equals_exact',
+'has_z',
+'interpolate',
+'intersection',
+'intersects',
+'is_empty',
+'is_ring',
+'is_simple',
+'is_valid',
+'length',
+'overlaps',
+'project',
+'relate',
+'representative_point',
+'simplify',
+'symmetric_difference',
+'to_wkb',
+'to_wkt',
+'touches',
+'union',
+'within']</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [73]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="c">#merge</span>
+<span class="n">full_CO</span> <span class="o">=</span> <span class="n">psh</span><span class="o">.</span><span class="n">cascaded_union</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since Shapely Polygons have a visual <code><strong>repr</strong></code>, I&rsquo;ll be casting to shapely to quickly show the shapes. But, they&rsquo;re still python shapes:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [74]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">full_CO</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[74]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;pysal.cg.shapes.Polygon at 0x7f4a34285f28&gt;</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [75]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">sh</span><span class="o">.</span><span class="n">asShape</span><span class="p">(</span><span class="n">full_CO</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[75]:</div>
+
+<div class="output_svg output_subarea output_execute_result">
+
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [76]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="n">psh</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">full_CO</span><span class="p">,</span> <span class="n">geom</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">psh</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">full_CO</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">geometry</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [77]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">west_CO</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">)])</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [78]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">diff</span> <span class="o">=</span> <span class="n">psh</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">full_CO</span><span class="p">,</span> <span class="n">psh</span><span class="o">.</span><span class="n">unary_union</span><span class="p">(</span><span class="n">west_CO</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">tolist</span><span class="p">()))</span>
+<span class="n">sh</span><span class="o">.</span><span class="n">asShape</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[78]:</div>
+
+<div class="output_svg output_subarea output_execute_result">
+
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [79]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">psh</span><span class="o">.</span><span class="n">buffer</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[79]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;function pysal.contrib.shapely_ext.buffer&gt;</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [80]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">buffer_query</span> <span class="o">=</span> <span class="n">psh</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">geometry</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">.</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">psh</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">buffer_query</span><span class="p">,</span> <span class="n">x</span><span class="p">))]</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[80]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe"><thead><tr style="text-align: right;"><th></th>
+<th>AREA</th>
+<th>PERIMETER</th>
+<th>COLUMBUS_</th>
+<th>COLUMBUS_I</th>
+<th>POLYID</th>
+<th>NEIG</th>
+<th>HOVAL</th>
+<th>INC</th>
+<th>CRIME</th>
+<th>OPEN</th>
+<th>&hellip;</th>
+<th>DISCBD</th>
+<th>X</th>
+<th>Y</th>
+<th>NSA</th>
+<th>NSB</th>
+<th>EW</th>
+<th>CP</th>
+<th>THOUS</th>
+<th>NEIGNO</th>
+<th>geometry</th>
+</tr></thead><tbody><tr><th>0</th>
+<td>0.309441</td>
+<td>2.440629</td>
+<td>2</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>80.467003</td>
+<td>19.531</td>
+<td>15.725980</td>
+<td>2.850747</td>
+<td>&hellip;</td>
+<td>5.03</td>
+<td>38.799999</td>
+<td>44.070000</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>1000.0</td>
+<td>1005.0</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7f4a3536b&hellip;</td>
+</tr><tr><th>1</th>
+<td>0.259329</td>
+<td>2.236939</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>44.567001</td>
+<td>21.232</td>
+<td>18.801754</td>
+<td>5.296720</td>
+<td>&hellip;</td>
+<td>4.27</td>
+<td>35.619999</td>
+<td>42.380001</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1000.0</td>
+<td>1001.0</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7f4a3536b&hellip;</td>
+</tr><tr><th>2</th>
+<td>0.192468</td>
+<td>2.187547</td>
+<td>4</td>
+<td>6</td>
+<td>3</td>
+<td>6</td>
+<td>26.350000</td>
+<td>15.956</td>
+<td>30.626781</td>
+<td>4.534649</td>
+<td>&hellip;</td>
+<td>3.89</td>
+<td>39.820000</td>
+<td>41.180000</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>1000.0</td>
+<td>1006.0</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7f4a3536b&hellip;</td>
+</tr><tr><th>3</th>
+<td>0.083841</td>
+<td>1.427635</td>
+<td>5</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>33.200001</td>
+<td>4.477</td>
+<td>32.387760</td>
+<td>0.394427</td>
+<td>&hellip;</td>
+<td>3.70</td>
+<td>36.500000</td>
+<td>40.520000</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1000.0</td>
+<td>1002.0</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7f4a3536b&hellip;</td>
+</tr><tr><th>4</th>
+<td>0.488888</td>
+<td>2.997133</td>
+<td>6</td>
+<td>7</td>
+<td>5</td>
+<td>7</td>
+<td>23.225000</td>
+<td>11.252</td>
+<td>50.731510</td>
+<td>0.405664</td>
+<td>&hellip;</td>
+<td>2.83</td>
+<td>40.009998</td>
+<td>38.000000</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>1000.0</td>
+<td>1007.0</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7f4a3536b&hellip;</td>
+</tr><tr><th>6</th>
+<td>0.257084</td>
+<td>2.554577</td>
+<td>8</td>
+<td>4</td>
+<td>7</td>
+<td>4</td>
+<td>75.000000</td>
+<td>8.438</td>
+<td>0.178269</td>
+<td>0.000000</td>
+<td>&hellip;</td>
+<td>2.74</td>
+<td>33.360001</td>
+<td>38.410000</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1000.0</td>
+<td>1004.0</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7f4a3536b&hellip;</td>
+</tr><tr><th>7</th>
+<td>0.204954</td>
+<td>2.139524</td>
+<td>9</td>
+<td>3</td>
+<td>8</td>
+<td>3</td>
+<td>37.125000</td>
+<td>11.337</td>
+<td>38.425858</td>
+<td>3.483478</td>
+<td>&hellip;</td>
+<td>2.89</td>
+<td>36.709999</td>
+<td>38.709999</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1000.0</td>
+<td>1003.0</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7f4a3530c&hellip;</td>
+</tr></tbody></table><p>7 rows × 21 columns</p>
+</div>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that none of this raw shapely/pandas stuff uses any spatial indexing, which is <a href="https://github.com/geopandas/geopandas/blob/77b9b3b7e87456bb75f569725aa38285ea4e35d0/geopandas/sindex.py" target="_blank">something Geopandas uses</a>.</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [81]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">US</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">pdio</span><span class="o">.</span><span class="n">read_files</span><span class="p">(</span><span class="n">ps</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s">&lsquo;NAT.shp&rsquo;</span><span class="p">))</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [82]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">states</span> <span class="o">=</span> <span class="n">US</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&lsquo;STATE_NAME&rsquo;</span><span class="p">)</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">psh</span><span class="o">.</span><span class="n">unary_union</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [83]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">states</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[83]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>STATE_NAME
+Alabama       &lt;pysal.cg.shapes.Polygon object at 0x7f4a5d9e2...
+Arizona       &lt;pysal.cg.shapes.Polygon object at 0x7f4a351d1...
+Arkansas      &lt;pysal.cg.shapes.Polygon object at 0x7f4a3519b...
+California    &lt;pysal.cg.shapes.Polygon object at 0x7f4a351d1...
+Colorado      &lt;pysal.cg.shapes.Polygon object at 0x7f4a351ea...
+Name: geometry, dtype: object</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [84]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">states</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">GIS</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">sh</span><span class="o">.</span><span class="n">asShape</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[84]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>STATE_NAME
+Alabama                 Valid Geometry
+Arizona                 Valid Geometry
+Arkansas                Valid Geometry
+California              Valid Geometry
+Colorado                Valid Geometry
+Connecticut             Valid Geometry
+Delaware                Valid Geometry
+District of Columbia    Valid Geometry
+Florida                 Valid Geometry
+Georgia                 Valid Geometry
+Idaho                   Valid Geometry
+Illinois                Valid Geometry
+Indiana                 Valid Geometry
+Iowa                    Valid Geometry
+Kansas                  Valid Geometry
+Kentucky                Valid Geometry
+Louisiana               Valid Geometry
+Maine                   Valid Geometry
+Maryland                Valid Geometry
+Massachusetts           Valid Geometry
+Michigan                Valid Geometry
+Minnesota               Valid Geometry
+Mississippi             Valid Geometry
+Missouri                Valid Geometry
+Montana                 Valid Geometry
+Nebraska                Valid Geometry
+Nevada                  Valid Geometry
+New Hampshire           Valid Geometry
+New Jersey              Valid Geometry
+New Mexico              Valid Geometry
+New York                Valid Geometry
+North Carolina          Valid Geometry
+North Dakota            Valid Geometry
+Ohio                    Valid Geometry
+Oklahoma                Valid Geometry
+Oregon                  Valid Geometry
+Pennsylvania            Valid Geometry
+Rhode Island            Valid Geometry
+South Carolina          Valid Geometry
+South Dakota            Valid Geometry
+Tennessee               Valid Geometry
+Texas                   Valid Geometry
+Utah                    Valid Geometry
+Vermont                 Valid Geometry
+Virginia                Valid Geometry
+Washington              Valid Geometry
+West Virginia           Valid Geometry
+Wisconsin               Valid Geometry
+Wyoming                 Valid Geometry
+Name: geometry, dtype: object</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Weights">Weights<a class="anchor-link" href="#Weights" target="_blank">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [85]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a very naive way to construct spatial weights, since it doesn&rsquo;t use any prefiltering or spatial query and doesn&rsquo;t recognize symmetry in touches. So, don&rsquo;t use this on something big, like <code>NAT.shp</code>, because it will take forever.</p>
+<p>But, for the purposes of illustration, Queen Weights can be constructed using chained method calls on tabular data. This pattern is how most of the Queen Weights functions in PostGIS I&rsquo;ve seen work, using <a href="http://www.postgresql.org/docs/current/static/arrays.html" target="_blank">array queries</a>.</p>
+<p>Since, in PostGIS, the <code>ST_Touches</code> naturally uses a <a href="http://postgis.net/docs/manual-1.3/ch03.html" target="_blank">GIST</a>, it does a similar kind of binning reduction we use in PySAL, and could use if we wrapped arbitrary geometry columns in a pandas dataframe. The following does not, but still yields Queen weights:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [86]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">Wt</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span>
+<span class="o">.</span><span class="n">geometry</span> <span class="c">#for all geometries</span>
+<span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span>
+<span class="n">data</span>
+<span class="o">.</span><span class="n">geometry</span> <span class="c">#go back through geometry</span>
+<span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">psh</span><span class="o">.</span><span class="n">touches</span><span class="p">,</span> <span class="n">x</span><span class="p">)))</span> <span class="c"># check if any touch current x, partial to ensure closure</span>
+<span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span> <span class="c">#cast bools to ints</span>
+<span class="n">Wps</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">queen_from_shapefile</span><span class="p">(</span><span class="n">ps</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s">&lsquo;columbus.shp&rsquo;</span><span class="p">))</span><span class="o">.</span><span class="n">full</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [87]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">Wt</span><span class="p">,</span> <span class="n">Wps</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="NOGR">NOGR<a class="anchor-link" href="#NOGR" target="_blank"></a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So, in my vision, a <strong>NOGR</strong> focus would be to make the above code run without the lines:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">shapely.geom</span> <span class="kn">as</span> <span class="nn">geom</span>
+<span class="kn">import</span> <span class="nn">shapely.ops</span> <span class="kn">as</span> <span class="nn">GIS</span>
+<span class="kn">from</span> <span class="nn">pysal.contrib</span> <span class="kn">import</span> <span class="n">shapely_ext</span> <span class="k">as</span> <span class="n">psh</span>
+</pre></div>
+<p>In short, this means implementing a <code>GIS</code> module using only python/cython that can do what <code>shapely.ops</code> does on <code>shapely.geometry</code> objects. I would probably target replicating most of the functions provided in sections <a href="http://postgis.net/docs/reference.html#Geometry_Accessors" target="_blank">8.5, 8.6, and 8.9 of the PostGIS documentation</a>, ensuring they work when supplied with a dataframe with a column of known spatial type (i.e. containing shapely polygons (geopandas), pysal shapes (<code>pdio</code>), or <code>object.<strong>geointerface</strong></code> for all objects).</p>
+<p>Ultimately, returning to the cycle of discussion mentioned above, this would reflect PySAL prioritizing point 2 to achieve point 1:</p>
+<blockquote><p>Need: <strong>(1)</strong> PySAL needs its own tabular/GIS Module with minimal dependencies</p>
+<p>Reason: <strong>(2)</strong> Spatial Analysis often requires tabular/GIS operations</p>
+</blockquote>
+<p>This is where the proposal that suggests novel python/cython implementations of required algorithms from <a href="http://www.amazon.com/Computational-Geometry-Applications-Mark-Berg/dp/3540779736" target="_blank">De Berg&rsquo;s <em>Computational Geometry</em></a> or <a href="http://www.amazon.com/Algorithms-Advances-Geographic-Information-Technology/dp/1446274330/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1463684492&amp;sr=1-1&amp;keywords=ningchuan+xiao" target="_blank">Xiao&rsquo;s <em>GIS Algorithms</em></a> be the focus of the project. But, implementing a fast NOGR GIS library would be the core here. If there were time at the end, the datamodel could be extended to use the GIS operations provided here.</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="A-Tabular-Data-Model">A Tabular Data Model<a class="anchor-link" href="#A-Tabular-Data-Model" target="_blank"></a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>Pandas as Idiom</strong> direction is centrally about PySAL&rsquo;s interface with Pandas dataframes with geometric columns (or Geopandas Geodataframes) as if they were another native datamodel for PySAL. That is, if I prioritize in this direction, I would be attempting to make the boundary between PySAL, Pandas, &amp; GeoPandas/Shapely a little smoother, <strong>without</strong> introducing new hard dependencies. This focuses on leveraging against packages in <strong>3</strong> within the constraints of <strong>1</strong>:</p>
+<blockquote><p>Need: <strong>(1)</strong> PySAL needs to abstract its datastructures from its data representations/IO framework</p>
+<p>Reason: <strong>(3)</strong> It is unclear how to leverage existing Tabular &amp; GIS tools alongside of PySAL</p>
+</blockquote>
+<p>It may end up looking like an answer to <a href="https://github.com/pysal/pysal/issues/474" target="_blank">Issue #474: Add contrib module to explore interface with geopandas</a>. But, instead of an exploration it would be an instantiation, would support <strong>both</strong> the PySAL geometry-based <code>pdio</code> &amp; the Shapely-geometry Geopandas.</p>
+<p>Instead of focusing on pure python/cython implementations of core GIS operations, this would focus on making PySAL&rsquo;s interfaces become more polymorphic. It would reduce the gap between PySAL &amp; Geopandas/Shapely, while keeping a bright line between what uses GDAL and what does not. I imagine this happening through extensive use of <a href="https://github.com/ljwolf/pysal/blob/dev/pysal/spreg/optional_imports.ipynb" target="_blank">optional import</a> strategies.</p>
+<p>In it, I see three components:</p>
+<ol><li><p>An adapter module in contrib, <code>geotable</code>, that does a few things:</p>
+<ul><li>manages transitions between Geopandas dataframes and <code>pdio</code> dataframes</li>
+<li>minimizes the distance between GDAL-dependent libraries and PySAL saftely &amp; clearly</li>
+<li>extends <code>shapely_ext</code> to perform common tabular operations</li>
+</ul></li>
+<li><p>A contrib module, <code>pda</code>. This would:</p>
+<ul><li>subsume current <code>pdio</code> code</li>
+<li>extend the <code>pdio</code> strategy to use PySAL&rsquo;s full IO suite</li>
+<li>If datatype isn&rsquo;t supported, loudly call into <code>geotable</code>&rsquo;s GeoPandas interface &amp; fail safe if unavailable</li>
+<li>contain the necessary bridge code for PySAL to use pandas/patsy for any purpose</li>
+</ul></li>
+<li><p>In core:</p>
+<ul><li>expose consistent labelled array interfaces across core modules</li>
+<li>enforce consistent <em>unlabelled</em> array rules across core modules (i.e. resolve shaping &amp; array/list inconsistencies)</li>
+<li>finish &amp; merge polymorphic weights constructors for arbitrary shape iterables</li>
+</ul></li>
+</ol></div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="In-my-view">In my view<a class="anchor-link" href="#In-my-view" target="_blank"></a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I think</p>
+<ul><li>the tabular data model is more important</li>
+<li>GIS is best left to Shapely &amp; GeoPandas</li>
+<li>If <strong>NOGR</strong> is necessary, it will be easier to use it as a drop-in replacement for the shapely hooks in <code>geotable</code> than it would to build it first.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+Tags: GIS, python, spatial analysis, geography</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> May 19, 2016 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

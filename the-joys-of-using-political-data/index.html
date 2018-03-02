@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/the-joys-of-using-political-data/">
+<base href="/" />
+<meta property="og:title" content="The joys of using political data" />
+<meta property="og:description" content="When you work with Census-derived data, you can usually be sure it meets some standard of regularity, which makes it easy to use with other data. Where it doesn’t, people have built When you work with congressional district data, you’re in for a bad time. Right now, I’m working on relating the CLEA to the cdmaps maintained by UCLA.
+This poses a few challenges. First, CLEA records are one big, flat table of candidates who’ve run in a contest within some legislative constituency." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/the-joys-of-using-political-data/" />
+
+
+
+<meta property="article:published_time" content="2016-08-31T18:08:02&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-08-31T18:08:02&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The joys of using political data"/>
+<meta name="twitter:description" content="When you work with Census-derived data, you can usually be sure it meets some standard of regularity, which makes it easy to use with other data. Where it doesn’t, people have built When you work with congressional district data, you’re in for a bad time. Right now, I’m working on relating the CLEA to the cdmaps maintained by UCLA.
+This poses a few challenges. First, CLEA records are one big, flat table of candidates who’ve run in a contest within some legislative constituency."/>
+
+
+
+<meta itemprop="name" content="The joys of using political data">
+<meta itemprop="description" content="When you work with Census-derived data, you can usually be sure it meets some standard of regularity, which makes it easy to use with other data. Where it doesn’t, people have built When you work with congressional district data, you’re in for a bad time. Right now, I’m working on relating the CLEA to the cdmaps maintained by UCLA.
+This poses a few challenges. First, CLEA records are one big, flat table of candidates who’ve run in a contest within some legislative constituency.">
+
+
+<meta itemprop="datePublished" content="2016-08-31T18:08:02&#43;00:00" />
+<meta itemprop="dateModified" content="2016-08-31T18:08:02&#43;00:00" />
+<meta itemprop="wordCount" content="220">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     The joys of using political data 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> The joys of using political data </h1>
+    <div class="content"> <p><p>When you work with Census-derived data, you can usually be sure it meets some standard of regularity, which makes it easy to use with other data. Where it doesn’t, people have built </p><p>When you work with congressional district data, you’re in for a bad time. </p><p>Right now, I’m working on relating the <a href="http://www.electiondataarchive.org/index.html" target="_blank">CLEA</a> to the <a href="http://cdmaps.polisci.ucla.edu" target="_blank">cdmaps</a> maintained by UCLA.</p><p>This poses a few challenges. First, CLEA records are one big, flat table of candidates who’ve run in a contest within some legislative constituency. Thus, in the US, a first-past-the-post single-member-district elections system, you might think it reasonable that each “contest” in an election year can be mapped to one district in each election cycle. Then, one district in each election has one “contest” with one winner. If youi’re interested in modeling constituency-level electoral behavior, this seems like a reasonable databasing scheme. </p><p>But, political geographies don’t like regularity. For example, in 1962, <a href="https://en.wikipedia.org/wiki/United_States_House_of_Representatives_elections,_1962#Alabama" target="_blank">Alabama decided to elect all candidates at large</a>. So, while the US election system is <i>typically</i> a single-member district electoral system, it’s not always one. While papers like <a href="http://pan.oxfordjournals.org/content/20/3/400" target="_blank">Linzer (2012)</a> omit this particularly tricky one by removing southern districts, boiling the CLEA down to contest-level is a fun little databasing exercise. <br/></p><p>Alternatively, I might just pull down the replication data from Linzer and use that&hellip; haven’t decided yet. </p>
+Tags:</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Aug 31, 2016 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/i-guess-i-have-code-and-math-working-now/">
+<base href="/" />
+<meta property="og:title" content="I guess I have code and math working now" />
+<meta property="og:description" content="See, block-syntax-highlighted code on the website version:
+def async W(pgconnection): ...  and inline mathjax:
+$$prod_i^n\prod_j w_{ij}\phi_i\phi_j $$
+$\mathbf{W}$ next to text
+I just needed two scripts in my theme source:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js&#34;&gt;&lt;/script&gt;
+So now I can delete that folder where I started to move my blog to pelican. don’t tell staff please 
+Tags: mathjax, prettify.js" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/i-guess-i-have-code-and-math-working-now/" />
+
+
+
+<meta property="article:published_time" content="2017-03-24T17:18:18&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-24T17:18:18&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="I guess I have code and math working now"/>
+<meta name="twitter:description" content="See, block-syntax-highlighted code on the website version:
+def async W(pgconnection): ...  and inline mathjax:
+$$prod_i^n\prod_j w_{ij}\phi_i\phi_j $$
+$\mathbf{W}$ next to text
+I just needed two scripts in my theme source:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js&#34;&gt;&lt;/script&gt;
+So now I can delete that folder where I started to move my blog to pelican. don’t tell staff please 
+Tags: mathjax, prettify.js"/>
+
+
+
+<meta itemprop="name" content="I guess I have code and math working now">
+<meta itemprop="description" content="See, block-syntax-highlighted code on the website version:
+def async W(pgconnection): ...  and inline mathjax:
+$$prod_i^n\prod_j w_{ij}\phi_i\phi_j $$
+$\mathbf{W}$ next to text
+I just needed two scripts in my theme source:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js&#34;&gt;&lt;/script&gt;
+So now I can delete that folder where I started to move my blog to pelican. don’t tell staff please 
+Tags: mathjax, prettify.js">
+
+
+<meta itemprop="datePublished" content="2017-03-24T17:18:18&#43;00:00" />
+<meta itemprop="dateModified" content="2017-03-24T17:18:18&#43;00:00" />
+<meta itemprop="wordCount" content="57">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     I guess I have code and math working now 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> I guess I have code and math working now </h1>
+    <div class="content"> <p>See, block-syntax-highlighted code on the website version:</p>
+
+<pre class="prettyprint">
+def async W(pgconnection):
+...
+</pre>
+
+<p>and inline mathjax:</p>
+
+<p>$$prod_i^n\prod_j w_{ij}\phi_i\phi_j $$</p>
+
+<p>$\mathbf{W}$ next to text</p>
+
+<p>I just needed two scripts in my theme source:</p>
+
+<p><code>&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt;&lt;script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"&gt;&lt;/script&gt;</code></p>
+
+<p><p>So now I can delete that folder where I started to move my blog to pelican. <font color="grey"> don’t tell staff please </font></p>
+Tags: mathjax, prettify.js</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Mar 24, 2017 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

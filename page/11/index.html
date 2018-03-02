@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/">
+<base href="/" />
+<meta property="og:title" content="Yet Another Geographer" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/" />
+
+
+
+<meta property="og:updated_time" content="2016-06-03T20:07:42&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Yet Another Geographer"/>
+<meta name="twitter:description" content=""/>
+
+
+
+<meta itemprop="name" content="Yet Another Geographer">
+<meta itemprop="description" content="">
+
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Yet Another Geographer 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<main>
+
+
+  
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='/the-beginnings-of-a-new-api/'> The Beginnings of a new API</a> </h2>
+    <div class="meta">
+      Jun 3, 2016 - 2 minutes
+    </div>
+    
+<div class="tags">
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    NOTE: A demo of the relevant code I&rsquo;m referring to for the new labelled array API in pysal.weights in this update is available in this notebook, and the actual code lives in a weights2 module in my gsoc feature branch.
+I&rsquo;ve decided to target our weights module to prototype the labelled array interface. In general, we&rsquo;ll need extensions built into at least our exploratory spatial data analysis module, esda, our spatial regression module, spreg, and our spatial dynamics module, spatial_dynamics.
+    <a href='/the-beginnings-of-a-new-api/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='/call-notes-about-my-request-for-comment/'> Call notes about my Request for Comment</a> </h2>
+    <div class="meta">
+      May 25, 2016 - 2 minutes
+    </div>
+    
+<div class="tags">
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    The followng were comments I recieved on my Request for Comment submitted a bit ago.
+Questions about Request for Comment:
+What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged.
+    <a href='/call-notes-about-my-request-for-comment/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='/gsoc-introduction/'> GSOC Introduction</a> </h2>
+    <div class="meta">
+      May 23, 2016 - 2 minutes
+    </div>
+    
+<div class="tags">
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    Hey all!
+While I may have put the cart before the horse in doing an RFC before an introduction, it’s never too late :)
+My name is Levi John Wolf. I am a PhD candidate at Arizona State University. I study spatial statistics, econometrics, &amp; polimetrics, focusing on campaigns, elections, &amp; inequality. I am a Google Summer of Code student for the Python Spatial Analysis Library (PySAL), under the Python Software Foundation (PSF).
+    <a href='/gsoc-introduction/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+
+
+<div class="page-nav">
+  <div class="page-prev">
+    
+        <a href="/page/10/" title="Previous page" > &lt;&lt; </a>
+    
+  </div> 
+
+  <div class="page-num">
+    11/30
+  </div> 
+
+  <div class="page-next">
+    
+    <a href="/page/12/" title="Next page"> >> </a>
+    
+  </div> 
+</div> 
+
+
+</main>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

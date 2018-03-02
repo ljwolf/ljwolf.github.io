@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/the-beginnings-of-a-new-api/">
+<base href="/" />
+<meta property="og:title" content="The Beginnings of a new API" />
+<meta property="og:description" content="NOTE: A demo of the relevant code I&rsquo;m referring to for the new labelled array API in pysal.weights in this update is available in this notebook, and the actual code lives in a weights2 module in my gsoc feature branch.
+I&rsquo;ve decided to target our weights module to prototype the labelled array interface. In general, we&rsquo;ll need extensions built into at least our exploratory spatial data analysis module, esda, our spatial regression module, spreg, and our spatial dynamics module, spatial_dynamics." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/the-beginnings-of-a-new-api/" />
+
+
+
+<meta property="article:published_time" content="2016-06-03T20:07:42&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-06-03T20:07:42&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Beginnings of a new API"/>
+<meta name="twitter:description" content="NOTE: A demo of the relevant code I&rsquo;m referring to for the new labelled array API in pysal.weights in this update is available in this notebook, and the actual code lives in a weights2 module in my gsoc feature branch.
+I&rsquo;ve decided to target our weights module to prototype the labelled array interface. In general, we&rsquo;ll need extensions built into at least our exploratory spatial data analysis module, esda, our spatial regression module, spreg, and our spatial dynamics module, spatial_dynamics."/>
+
+
+
+<meta itemprop="name" content="The Beginnings of a new API">
+<meta itemprop="description" content="NOTE: A demo of the relevant code I&rsquo;m referring to for the new labelled array API in pysal.weights in this update is available in this notebook, and the actual code lives in a weights2 module in my gsoc feature branch.
+I&rsquo;ve decided to target our weights module to prototype the labelled array interface. In general, we&rsquo;ll need extensions built into at least our exploratory spatial data analysis module, esda, our spatial regression module, spreg, and our spatial dynamics module, spatial_dynamics.">
+
+
+<meta itemprop="datePublished" content="2016-06-03T20:07:42&#43;00:00" />
+<meta itemprop="dateModified" content="2016-06-03T20:07:42&#43;00:00" />
+<meta itemprop="wordCount" content="286">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     The Beginnings of a new API 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> The Beginnings of a new API </h1>
+    <div class="content"> <p><em>NOTE: A demo of the relevant code I&rsquo;m referring to for the new labelled array API in <code>pysal.weights</code> in this update is available in <a href="https://github.com/ljwolf/pysal/blob/pdio/from%20classmethods.ipynb" target="_blank">this notebook</a>, and the actual code lives in a <code>weights2</code> module in my <a href="https://github.com/ljwolf/pysal/tree/pdio" target="_blank">gsoc feature branch</a>.</em></p>
+
+<p>I&rsquo;ve decided to target our <code>weights</code> module to prototype the labelled array interface. In general, we&rsquo;ll need extensions built into at least our exploratory spatial data analysis module, <code>esda</code>, our spatial regression module, <code>spreg</code>, and our spatial dynamics module, <code>spatial_dynamics</code>.</p>
+
+<p>So far, I&rsquo;ve focused on <code>weights</code> because it&rsquo;s so central to everything else that the library does. It also poses unique challenges to deisgn around, and I&rsquo;ve already done a bit of work before GSOC in making a labelled array interface for it.</p>
+
+<p>I&rsquo;ve been building constructors that let us build spatial weights objects from the primitives defined in various other computational geometry packages. Fortunately, what&rsquo;s required is nothing more than building efficient type conversions &amp;, where possible, relying on duck typing.</p>
+
+<p>I&rsquo;m somewhat concerned that just relying on duck typing may make this API more fragile than we&rsquo;d like, so I&rsquo;m trying to be eager about conversions to our native geometric objects,  as long as the conversion is computationally cheap.</p>
+
+<p>Altogether, this means that I&rsquo;ve done quite a bit of redesigning of the <code>weights</code> module. But, in general, it still supports the same basic interaction style, but now can build weights from arbitrary iterables of shapes or PostGIS-style dataframes.</p>
+
+<p><p>Trying to balance this work and my own independent work on <a href="http://ljwolf.org/post/145342859409/visual-display-of-complex-data-can-be-pretty" target="_blank">my dissertation</a> has been challenging so far, but fortunately, the GSOC work has been more forthcoming than I expected. Hopefully, as the project matures, balancing this will be simpler.</p>
+Tags: gsoc, python, GIS, geography, pysal</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Jun 3, 2016 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

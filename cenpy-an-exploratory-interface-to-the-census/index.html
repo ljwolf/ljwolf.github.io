@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/cenpy-an-exploratory-interface-to-the-census/">
+<base href="/" />
+<meta property="og:title" content="Untitled" />
+<meta property="og:description" content="CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/cenpy-an-exploratory-interface-to-the-census/" />
+
+
+
+<meta property="article:published_time" content="2015-06-05T18:01:54&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-06-05T18:01:54&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Untitled"/>
+<meta name="twitter:description" content="CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API."/>
+
+
+
+<meta itemprop="name" content="Untitled">
+<meta itemprop="description" content="CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.">
+
+
+<meta itemprop="datePublished" content="2015-06-05T18:01:54&#43;00:00" />
+<meta itemprop="dateModified" content="2015-06-05T18:01:54&#43;00:00" />
+<meta itemprop="wordCount" content="238">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Untitled 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Untitled </h1>
+    <div class="content"> <h1>CenPy - An exploratory interface to the Census API</h1>
+
+<p>So, I was looking to do some programmatic access to US Census Bureau data and
+was finding myself a little frustrated with how limited current tools in Python
+were to work with the connections. Mainly, most supported only a few protocols,
+provided no documentation or exploration functionality, and left it primarily
+up to exeternal documentation to provide information on how to query the
+API. Now, I know the day of National Civic Hacking is <a href="http://links.govdelivery.com/track?type=click&amp;enid=ZWFzPTEmbWFpbGluZ2lkPTIwMTUwNTI3LjQ1MzI3MjYxJm1lc3NhZ2VpZD1NREItUFJELUJVTC0yMDE1MDUyNy40NTMyNzI2MSZkYXRhYmFzZWlkPTEwMDEmc2VyaWFsPTE3MDA5OTYwJmVtYWlsaWQ9ZGZvbGNoQGZzdS5lZHUmdXNlcmlkPWRmb2xjaEBmc3UuZWR1JmZsPSZleHRyYT1NdWx0aXZhcmlhdGVJZD0mJiY=&amp;&amp;&amp;109&amp;&amp;&amp;http://hackforchange.org/?eml=gd&amp;utm_medium=email&amp;utm_source=govdelivery" target="_blank">tomorrow</a>, but I figured I&rsquo;d get a jumpstart&hellip;</p>
+
+<p>So, I designed a small package to interface with <em>any</em> Census API that
+follows the same <code>get</code>, <code>for</code>, <code>in</code> key specifications. The tool,
+<a href="https://github.com/ljwolf/cenpy.git" target="_blank">cenpy</a> provides a <code>Connection</code> object,
+which pulls down the metadata needed to explore the dataset. Connection objects
+have a <code>query</code> method that is easily to use and outputs directly to a pandas
+dataframe. The connection object transparently records what queries are executed
+and is easy to extend. Plus, if new connections are announced that follow the
+specifications provided by the census currently, the package will discover and
+provide those connections too!</p>
+
+<p><p>Right now, I haven&rsquo;t packged it up for pip yet. But, adding it to your
+pythonpath should work just fine. Alternatively, check out the
+<a href="https://github.com/ljwolf/cenpy/blob/master/demo.ipynb" target="_blank">demo</a> and see its
+functionality. Honestly, I&rsquo;m super excited about the number of datasources that
+this makes easily accessible!</p>
+Tags: python, census, US Census Bureau, civic hacking, API, geography</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Jun 5, 2015 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

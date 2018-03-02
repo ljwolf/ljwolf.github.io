@@ -21,5 +21,926 @@
 second header and a third def some_code(a, *b, c=True, **d): if snowed_in: return a, b else: return c,d \[ \frac{a}{b}\]</description>
     </item>
     
+    <item>
+      <title>I often find myself looking for spaces like those I used to like in Brooklyn or Phoenix</title>
+      <link>/i-often-find-myself-looking-for-spaces-like-those/</link>
+      <pubDate>Tue, 27 Feb 2018 08:46:37 +0000</pubDate>
+      
+      <guid>/i-often-find-myself-looking-for-spaces-like-those/</guid>
+      <description>rather than taking what I like about places I find in Bristol at face value.
+I guess sometimes it&amp;rsquo;s hard to relinquish that inherent comparative streak.
+Regardless, I&amp;rsquo;m still seeking that best pub that does good coffee and serves beer by 1.
+Tags:</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;This is a quick exploration/exposition of the fact that estimated substantive effects (fixed effects in H&amp;amp;R&amp;rsquo;s terms) can and sometimes will change in models with spatially dependent error terms when (and only when) the dependence in the error term is collinear with one or more covariates in the design matrix.&lt;/p&gt;</title>
+      <link>/love-in-a-time-of-correlare-revisiting-hodges/</link>
+      <pubDate>Sun, 25 Feb 2018 18:05:34 +0000</pubDate>
+      
+      <guid>/love-in-a-time-of-correlare-revisiting-hodges/</guid>
+      <description>Intuitively, this makes sense. In a thought experiment, estimate a regression. Then, introduce a covariate that&amp;rsquo;s collinear with the other covariates. If there&amp;rsquo;s no structure used in the model to keep track of which are the &amp;ldquo;original&amp;rdquo; effects and which are the newcomers (e.g. a partial regression structure), then the effect estimates must change, since each is conditional on the other/they&amp;rsquo;re made jointly over the covariates.
+love in a time of correlare: revisiting Hodges &amp;amp; Reich (2010) in SAR models http://ljwolf.</description>
+    </item>
+    
+    <item>
+      <title>this should probably be a tweet</title>
+      <link>/this-should-probably-be-a-tweet/</link>
+      <pubDate>Tue, 13 Feb 2018 17:44:39 +0000</pubDate>
+      
+      <guid>/this-should-probably-be-a-tweet/</guid>
+      <description>Modern &amp;ldquo;nerd&amp;rdquo; media (rick &amp;amp; morty, bojack, &amp;ldquo;deep&amp;rdquo; analyses of pop media like the insufferable &amp;ldquo;man drones over film clip&amp;rdquo; channels on youtube or &amp;ldquo;Scar No One Else Can See&amp;rdquo; by &amp;ldquo;Fairy Lives Matter&amp;rdquo; movie writer Max Landis) &amp;amp; the politically-opposed alt-right adjacent podcast sphere (J. Peterson, Sam Harris, etc) have really demonstrated that the first stanza of Hot Fries is way too real:
+talking fast with a dense amount of facile textual references really makes people think you&amp;rsquo;re deep.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;I&amp;rsquo;ve been really interested in these amenity zones Google added to their mapping service ever since I read &lt;a href=&#34;https://www.justinobeirne.com/google-maps-moat&#34; target=&#34;_blank&#34;&gt;this blogpost&lt;/a&gt; by Justin O&#39;Beirne detailing their rollout.&lt;/p&gt;</title>
+      <link>/a-brief-overview-of-one-way-you-might-extract-the/</link>
+      <pubDate>Fri, 09 Feb 2018 10:21:35 +0000</pubDate>
+      
+      <guid>/a-brief-overview-of-one-way-you-might-extract-the/</guid>
+      <description>I&amp;rsquo;m not so interested about the comparatives with Apple, but down in the Data Alchemy Section, O&#39;Beirne talks about how these pink zones might just correspond to peoples&amp;rsquo; conceptual notions of where commerce corridors (I&amp;rsquo;ve now learned are called &amp;ldquo;high streets&amp;rdquo; over here in the UK) are.
+I&amp;rsquo;m willing to bet urban accessibility and desirability is often a function of these &amp;ldquo;ritz&amp;rdquo; zones. I know that, when I lived in San Francisco (before these were rolled out), the commercial zone along Cortland down in Bernal Heights was a spot my girlfriend and I frequented.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;I really liked this paper. It&amp;rsquo;s great when someone so clearly and thoroughly writes about the pitfalls of believing a better procedure will cure inherently theoretical issues with analyses or study design.&lt;/p&gt;</title>
+      <link>/understanding-and-misunderstanding-randomized/</link>
+      <pubDate>Tue, 09 Jan 2018 20:23:56 +0000</pubDate>
+      
+      <guid>/understanding-and-misunderstanding-randomized/</guid>
+      <description>A similar version of this comes in from King&amp;rsquo;s &amp;ldquo;How Robust Standard Errors Expose Methodological Problems They Do Not Fix, and What to Do About It&amp;rdquo; from 2014&amp;rsquo;s Political Analysis, and I feel matters in the same way that Geographical Analysis &amp;amp; Spatial Statistics cannot simply be about fixing specifications to account for correlated error.
+What&amp;rsquo;s your theory for why the misspecification exists? Why is the error correlated? Is there a way you can directly account for that fact (e.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;Here’s the first of a few blogs I hope to write at the end of my dissertation synthesizing (in as plain language as possible) the work I’ve done and some insight for the layperson on what to think and how to trust these partisan gerrymandering statistics.&lt;/p&gt;</title>
+      <link>/jupyter-notebook-viewer/</link>
+      <pubDate>Wed, 04 Oct 2017 10:36:46 +0000</pubDate>
+      
+      <guid>/jupyter-notebook-viewer/</guid>
+      <description>I hope to keep them involving statistics &amp;amp; computation, so that you, too, can explore this stuff if you program.
+If you don’t (or aren’t too comfortable with math), I still aim to keep the main text accessible. So, skip the equations &amp;amp; distributions if they’re too much :)
+Jupyter Notebook Viewer http://nbviewer.jupyter.org/gist/ljwolf/79176f773d4a0dd61c8559e0fef07dca/hacking_gobbledegook.ipynb?flushcache=True
+Tags: partisan gerrymandering, geography, gis, python, politics, gerrymandering, advantage, partisan bias</description>
+    </item>
+    
+    <item>
+      <title>An article I’ll never get to write because my hypothesis was wrong.</title>
+      <link>/an-article-ill-never-get-to-write-because-my/</link>
+      <pubDate>Tue, 18 Jul 2017 19:45:46 +0000</pubDate>
+      
+      <guid>/an-article-ill-never-get-to-write-because-my/</guid>
+      <description>For a while, I was really interested in writing this article, “strange as it ever was,” looking at whether geometric measures of district compactness are really worse nowadays than they were before the use of computer redistricting. And, while I can’t say that the development of computers did this, I’d be willing to bet that the aggregated decline is more related to the introduction of strict population constraints. Tags: geography, redistricting</description>
+    </item>
+    
+    <item>
+      <title>Some thoughts on “Rise of the Thought Leader”</title>
+      <link>/some-thoughts-on-rise-of-the-thought-leader/</link>
+      <pubDate>Wed, 28 Jun 2017 17:18:34 +0000</pubDate>
+      
+      <guid>/some-thoughts-on-rise-of-the-thought-leader/</guid>
+      <description>This is a great article on the corporatization of the intellectual, or really the origin of the &amp;ldquo;thought leader&amp;rdquo; by David Sessions. An illumination of Dan Drezner&amp;rsquo;s new book, the Ideas Industry, reviewer David Sessions outlines Drezner&amp;rsquo;s main arguments and connects them back to a Gramscian perspective on the social responsibility of the intellectual.
+In doing so, Sessions sees Drezner extending and furthering Jacoby&amp;rsquo;s concerns about the lunchpail academic &amp;amp; professionalization of academic work into the construction of an entirely new &amp;ldquo;private&amp;rdquo; intellectual.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;&lt;a href=&#34;http://www.mylinuxrig.com/post/159532668265/why-i-stopped-using-multiple-monitors-hacker&#34; class=&#34;tumblr_blog&#34; target=&#34;_blank&#34;&gt;mylinuxrig&lt;/a&gt;:&lt;/p&gt;</title>
+      <link>/why-i-stopped-using-multiple-monitors-hacker/</link>
+      <pubDate>Thu, 13 Apr 2017 20:07:30 +0000</pubDate>
+      
+      <guid>/why-i-stopped-using-multiple-monitors-hacker/</guid>
+      <description>Cory was able to stop using multiple monitors thanks to virtual desktops, a staple of just about every Linux desktop environment. If I could focus on more than one thing at a time, I’d use them, too!
+ I definitely transitioned to using a single, 27 inch 4k monitor. When plugged in from my laptop, I don&amp;rsquo;t use the laptop screen (or I just keep like&amp;hellip; a pomodoro timer up on it.</description>
+    </item>
+    
+    <item>
+      <title>I am sure my dissertation would be finished</title>
+      <link>/i-am-sure-my-dissertation-would-be-finished/</link>
+      <pubDate>Wed, 05 Apr 2017 15:45:53 +0000</pubDate>
+      
+      <guid>/i-am-sure-my-dissertation-would-be-finished/</guid>
+      <description>if I could locate half the files &amp;amp; notebooks I&amp;rsquo;ve started in my dropbox
+Tags:</description>
+    </item>
+    
+    <item>
+      <title>I guess I have code and math working now</title>
+      <link>/i-guess-i-have-code-and-math-working-now/</link>
+      <pubDate>Fri, 24 Mar 2017 17:18:18 +0000</pubDate>
+      
+      <guid>/i-guess-i-have-code-and-math-working-now/</guid>
+      <description>See, block-syntax-highlighted code on the website version:
+def async W(pgconnection): ...  and inline mathjax:
+$$prod_i^n\prod_j w_{ij}\phi_i\phi_j $$
+$\mathbf{W}$ next to text
+I just needed two scripts in my theme source:
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&#34;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+So now I can delete that folder where I started to move my blog to pelican. don’t tell staff please 
+Tags: mathjax, prettify.js</description>
+    </item>
+    
+    <item>
+      <title>Spatial Econometric HMC in Python</title>
+      <link>/spatial-econometric-hmc-in-python/</link>
+      <pubDate>Fri, 24 Mar 2017 15:52:55 +0000</pubDate>
+      
+      <guid>/spatial-econometric-hmc-in-python/</guid>
+      <description>I almost forgot to mention this here: I’ve put up code on how to use some common spatial econometric models in Stan and PyMC3. For PyMC3, the implementations provide two methods that make the evaluation of thelikelihood very fast when compared to PyMC3′s native logdet function. These two methods are implemented as custom theano ops that are cache some information to improve the speed of the gradient evaluation. One uses sparse LU factorization to provides the log determinant very quickly without precomputation.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;Hello all! In working on my my dissertation on gerrymandering, I’ve put together a new dataset on Congressional districting. In it, I’ve joined up the database of congressional district shapes from Jeff Lewis at UCLA with some data from the ICPSR and the Constituency-Level Electoral Archive. I’ve made the data available on the Open Science Framework (linked) and submitted to &lt;i&gt;Scientific Data&lt;/i&gt;. &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Let me know if you use the data!&lt;/p&gt;</title>
+      <link>/spatiotemporal-data-on-congressional-elections/</link>
+      <pubDate>Mon, 23 Jan 2017 22:09:54 +0000</pubDate>
+      
+      <guid>/spatiotemporal-data-on-congressional-elections/</guid>
+      <description>Spatiotemporal Data on Congressional Elections https://osf.io/mjvkb/
+Tags: redistricting, gis, python, geography, politics, gerrymandering</description>
+    </item>
+    
+    <item>
+      <title>An update on PhD Burnout</title>
+      <link>/an-update-on-phd-burnout/</link>
+      <pubDate>Thu, 05 Jan 2017 19:27:59 +0000</pubDate>
+      
+      <guid>/an-update-on-phd-burnout/</guid>
+      <description>After writing briefly about burnout in July, when I had done a Google Summer of Code while working as a Research Assistant on a grant about spatial multilevel modeling, I was super burnt out. Now, I’d like to safely say, while I’m still stressed and spread too thin over too many projects, I don’t feel burnt out any longer. The main thing I realized is the importance of switching into “write-only” mode.</description>
+    </item>
+    
+    <item>
+      <title>A short exploration of the 2016 electoral swing</title>
+      <link>/a-short-exploration-of-the-2016-electoral-swing/</link>
+      <pubDate>Tue, 29 Nov 2016 00:07:16 +0000</pubDate>
+      
+      <guid>/a-short-exploration-of-the-2016-electoral-swing/</guid>
+      <description>I’m pretty skeptical of the generalized uniform partisan swing assumption in gerrymandering models. Part of this is due to some skepticism about how swing actually occurs in elections generally. If we don’t have an explicit “shock” model for our counterfactuals, they’re probably not going to replicate true experienced electoral swings well. 
+I’ve put together a notebook where I go through and explore some modeling of the 2012-2016 electoral swing at the county level.</description>
+    </item>
+    
+    <item>
+      <title>Want to draw spatially-correlated values wihtout all the fuss?</title>
+      <link>/want-to-draw-spatially-correlated-values-wihtout/</link>
+      <pubDate>Tue, 22 Nov 2016 15:57:26 +0000</pubDate>
+      
+      <guid>/want-to-draw-spatially-correlated-values-wihtout/</guid>
+      <description>I think I’ve figured out a simple way to sample from a spatially-correlated normal distribution without needing to invert the large precision matrix directly. 
+gist here. 
+Tags: statistics, geography, spatial statistics</description>
+    </item>
+    
+    <item>
+      <title>Working between python 2 and python 3</title>
+      <link>/working-between-python-2-and-python-3/</link>
+      <pubDate>Fri, 18 Nov 2016 01:52:16 +0000</pubDate>
+      
+      <guid>/working-between-python-2-and-python-3/</guid>
+      <description>I am so done with programming for python 2.
+This is the convergence in a spatial parameter in a spatial model I’m working with. This is a very long run that took a few hours to complete. Tests of this on my (python 3) compute server went fine, tuned correctly, but didn’t have this dramatic convergence.
+Once the sampling finished, I looked at the acceptance rate and, sure enough, the AR on the metropolis step of this Gibbs sampler was like&amp;hellip; .</description>
+    </item>
+    
+    <item>
+      <title>Yet another elections simulator</title>
+      <link>/yet-another-elections-simulator/</link>
+      <pubDate>Tue, 25 Oct 2016 19:53:11 +0000</pubDate>
+      
+      <guid>/yet-another-elections-simulator/</guid>
+      <description>After reading Wasserman’s 2012 blog post about mixture models, I’m glad that I’ve finally figured out &amp;amp; implemented the Gelman-King 1994 electoral model as well. Based on pretty straghtforward regression modeling, the setup trades the representational simplicity of the Linzer GMM model for a much more complex modeling structure, but that I guess provides better guarantees about its own properties. Regardless, it’s a bummer that these guys stuff, theLinzer 2012 paper on simulating seats/votes curves using gaussian mixtures &amp;amp; the JudgeIt stuff for the GK1994 paper was never merged into the political science computational library.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;Getting deceptively easy to port simple code from R to python. The following is a python function implementing the retrodesign R function discussed in Gelman &amp;amp; Carlin’s 2014 paper on sign and magnitude errors. &lt;/p&gt;</title>
+      <link>/retrodesignpy-from-gelman-carlin-2014/</link>
+      <pubDate>Thu, 13 Oct 2016 16:05:02 +0000</pubDate>
+      
+      <guid>/retrodesignpy-from-gelman-carlin-2014/</guid>
+      <description>retrodesign.py, from Gelman &amp;amp; Carlin (2014), Beyond Power Calculations. https://gist.github.com/ljwolf/acc7a13676843c8e0d8bcb1d0d5e0542#file-retrodesign-py
+Tags: statistics, retrodesign</description>
+    </item>
+    
+    <item>
+      <title>How one weird trick helps you evaluate correlated Normal distributions quickly</title>
+      <link>/how-one-weird-trick-helps-you-evaluate-correlated/</link>
+      <pubDate>Fri, 07 Oct 2016 20:09:36 +0000</pubDate>
+      
+      <guid>/how-one-weird-trick-helps-you-evaluate-correlated/</guid>
+      <description>Sorry, couldn’t resist the opportunity to buzzfeed this research blog :)
+I’ve been trying to get really efficient at writing samplers for various Bayesian spatial models. And, typically, this involves clever numerical tricks, trying to avoid computing either log determinants or matrix inverses by keeping around matrix factorizations or finding derived products that you can persist between iterations. Some of this has come to fruition in my sparse log determinant work, but I’m always looking for computation speed gains, especially as some of the targets I&amp;rsquo;ve optimized are drying up.</description>
+    </item>
+    
+    <item>
+      <title>The importance of centering variables</title>
+      <link>/the-importance-of-centering-variables/</link>
+      <pubDate>Mon, 26 Sep 2016 01:32:56 +0000</pubDate>
+      
+      <guid>/the-importance-of-centering-variables/</guid>
+      <description>So, maybe this is part of the learning experience of developing applied intuition, but I never really appreciated how important it is to center your variables, especially when dealing with finicky models like simultaneous autoregressive models common in spatial econometrics.
+The following are three traces from a spatial econometric model, the spatial lag model, on some example data. 
+The first one hasn’t centered its variables. The lag coefficient is trying very hard to escape the (-1,1) bounding on stable autoregressive coefficients.</description>
+    </item>
+    
+    <item>
+      <title>The joys of using political data</title>
+      <link>/the-joys-of-using-political-data/</link>
+      <pubDate>Wed, 31 Aug 2016 18:08:02 +0000</pubDate>
+      
+      <guid>/the-joys-of-using-political-data/</guid>
+      <description>When you work with Census-derived data, you can usually be sure it meets some standard of regularity, which makes it easy to use with other data. Where it doesn’t, people have built When you work with congressional district data, you’re in for a bad time. Right now, I’m working on relating the CLEA to the cdmaps maintained by UCLA.
+This poses a few challenges. First, CLEA records are one big, flat table of candidates who’ve run in a contest within some legislative constituency.</description>
+    </item>
+    
+    <item>
+      <title>Progress in (a) Human Geography</title>
+      <link>/progress-in-a-human-geography/</link>
+      <pubDate>Thu, 25 Aug 2016 00:18:37 +0000</pubDate>
+      
+      <guid>/progress-in-a-human-geography/</guid>
+      <description>I spent a lot of my undergraduate trying to whittle down haughtier edges of my supposedly sharp mind.
+I am spending a lot of my graduate school experience being told those edges should be sharper. That my writing or my thinking has too many “could,” “may,” and “likely.” That I sell myself, my product, or my ideas short via qualifications and pervasive focus on the challenges my work faces or might face rather than the successes I may have at hand and or have had before.</description>
+    </item>
+    
+    <item>
+      <title>Formally Winding down GSOC</title>
+      <link>/formally-winding-down-gsoc/</link>
+      <pubDate>Wed, 17 Aug 2016 14:15:52 +0000</pubDate>
+      
+      <guid>/formally-winding-down-gsoc/</guid>
+      <description>This week, I’ve been really bringing the work on GSOC to a close. Thus, I’ve linked to a notebook where I walk through the various work I’ve done in the project. What a ride. Tags: gsoc, python</description>
+    </item>
+    
+    <item>
+      <title>A Post-SciPy Chicago Update</title>
+      <link>/a-post-scipy-chicago-update/</link>
+      <pubDate>Mon, 25 Jul 2016 02:52:31 +0000</pubDate>
+      
+      <guid>/a-post-scipy-chicago-update/</guid>
+      <description>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&amp;rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&amp;rsquo;ve had in the library recently.
+I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on handling burnout as a graduate student. But, I&amp;rsquo;ve been forgetting to tag posts so that they&amp;rsquo;d show up in the GSOC aggregator!</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/im-trying-to-recover-from-a-bit-of-burnout-this/</link>
+      <pubDate>Sun, 17 Jul 2016 19:27:14 +0000</pubDate>
+      
+      <guid>/im-trying-to-recover-from-a-bit-of-burnout-this/</guid>
+      <description>I’m trying to recover from a bit of burnout. This summer, I’m ostensibly double-booked, working on a Google Summer of Code project in addition to a project with the new Center for Spatial Data Science at the University of Chicago, and I&amp;rsquo;m still keeping up with my Dissertation &amp;amp; my involvement in the Python Spatial Analysis Library outside of my GSOC project. I just finished my comprehensives back in May, so I’m also trying to maintain momentum on my dissertation work.</description>
+    </item>
+    
+    <item>
+      <title>Using Soft Dependencies Effectively</title>
+      <link>/using-soft-dependencies-effectively/</link>
+      <pubDate>Tue, 12 Jul 2016 04:39:00 +0000</pubDate>
+      
+      <guid>/using-soft-dependencies-effectively/</guid>
+      <description>I wrote a little guide for my fellow library devs about how to use soft dependencies effectively. This moves in tandem with some work on enabling PySAL to have a consistent user experience while leveraging the newest &amp;amp; best libraries for scientific computation. Since most of the work I’ve been doing involves using soft dependencies with the library, it’s important to get this right. The gist is here.
+Tags: gsoc, python, pysal, gis</description>
+    </item>
+    
+    <item>
+      <title>Partially Applied classes with __new__</title>
+      <link>/partially-applied-classes-with-new/</link>
+      <pubDate>Thu, 23 Jun 2016 20:59:03 +0000</pubDate>
+      
+      <guid>/partially-applied-classes-with-new/</guid>
+      <description>Python’s got some pretty cool ways to enable unorthodox behavior. For my project, I’ve found myself writing a lot of closures around our existing class init functions, and have decided it might be easier &amp;amp; more consistent to express this as what it really is: partial application. Partial application is pretty simple to enable for python class constructors, since the separate new method allows you to construct closures around initialization routines.</description>
+    </item>
+    
+    <item>
+      <title>GSOC Call Notes, June 6 2016</title>
+      <link>/gsoc-call-notes-june-6-2016/</link>
+      <pubDate>Mon, 06 Jun 2016 19:11:28 +0000</pubDate>
+      
+      <guid>/gsoc-call-notes-june-6-2016/</guid>
+      <description>I&amp;rsquo;ve had to take a break from the spatial hierarchical linear modeling kick I&amp;rsquo;ve been on recently to get back to some GSOC work.
+Today, I had my weekly call with my mentors.
+On today&amp;rsquo;s call, my mentors and I discussed a few things.
+Testing &amp;amp; Merging of project code Since many of the improvements I&amp;rsquo;m making to the library are module-by-module, I was advised to submit PRs when a logical unit of contribution is ready to ship.</description>
+    </item>
+    
+    <item>
+      <title>The Beginnings of a new API</title>
+      <link>/the-beginnings-of-a-new-api/</link>
+      <pubDate>Fri, 03 Jun 2016 20:07:42 +0000</pubDate>
+      
+      <guid>/the-beginnings-of-a-new-api/</guid>
+      <description>NOTE: A demo of the relevant code I&amp;rsquo;m referring to for the new labelled array API in pysal.weights in this update is available in this notebook, and the actual code lives in a weights2 module in my gsoc feature branch.
+I&amp;rsquo;ve decided to target our weights module to prototype the labelled array interface. In general, we&amp;rsquo;ll need extensions built into at least our exploratory spatial data analysis module, esda, our spatial regression module, spreg, and our spatial dynamics module, spatial_dynamics.</description>
+    </item>
+    
+    <item>
+      <title>Call notes about my Request for Comment</title>
+      <link>/call-notes-about-my-request-for-comment/</link>
+      <pubDate>Wed, 25 May 2016 04:23:38 +0000</pubDate>
+      
+      <guid>/call-notes-about-my-request-for-comment/</guid>
+      <description>The followng were comments I recieved on my Request for Comment submitted a bit ago.
+Questions about Request for Comment:
+What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged.</description>
+    </item>
+    
+    <item>
+      <title>GSOC Introduction</title>
+      <link>/gsoc-introduction/</link>
+      <pubDate>Mon, 23 May 2016 17:20:58 +0000</pubDate>
+      
+      <guid>/gsoc-introduction/</guid>
+      <description>Hey all!
+While I may have put the cart before the horse in doing an RFC before an introduction, it’s never too late :)
+My name is Levi John Wolf. I am a PhD candidate at Arizona State University. I study spatial statistics, econometrics, &amp;amp; polimetrics, focusing on campaigns, elections, &amp;amp; inequality. I am a Google Summer of Code student for the Python Spatial Analysis Library (PySAL), under the Python Software Foundation (PSF).</description>
+    </item>
+    
+    <item>
+      <title>RFC for GSOC Feedback</title>
+      <link>/rfc-for-gsoc-feedback/</link>
+      <pubDate>Thu, 19 May 2016 19:12:11 +0000</pubDate>
+      
+      <guid>/rfc-for-gsoc-feedback/</guid>
+      <description>Clarifying a Core Data Model for PySAL  Gist here From my perspective, I see my proposal for GSOC as containing two oblique foci. My hope in drafting this notebook for my fellow authors is to make this clear.
+I think at this point, many people who use &amp;amp; develop PySAL would like to see better tooling for Pandas$\leftrightarrow$PySAL interaction. This was started by Luc, Dani, &amp;amp; myself in the pysal.</description>
+    </item>
+    
+    <item>
+      <title>Puzzles about (mis)Replication</title>
+      <link>/puzzles-about-misreplication/</link>
+      <pubDate>Wed, 18 May 2016 20:48:03 +0000</pubDate>
+      
+      <guid>/puzzles-about-misreplication/</guid>
+      <description>So, a while back, I was using a new compactness metric to extend some gerrymandering studies. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.
+After trying multiple times to verify whether it was my code or if the published statistic had some typographical error, I went to the original author, shared my concerns, and found that it did.</description>
+    </item>
+    
+    <item>
+      <title>Lit Review Habits</title>
+      <link>/lit-review-habits/</link>
+      <pubDate>Tue, 26 Apr 2016 21:36:13 +0000</pubDate>
+      
+      <guid>/lit-review-habits/</guid>
+      <description>thejennawynn:
+ Let’s go, academics. Share your tips on how you keep all your sources and notes straight while doing a literature review.
+Zotero’s a great bibliography program that can use a simple button on your browser to import the info and pdfs from places like JSTOR or even just webpages. I use the “extra” line to note whether I’ve read/notated/printed/etc. that particular work as well as using the ‘notes’ feature to put specific info i think might be quotable for my own work.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;Excited to be working on PySAL for Google Summer of Code!&lt;/p&gt;</title>
+      <link>/google-summer-of-code/</link>
+      <pubDate>Fri, 22 Apr 2016 16:32:41 +0000</pubDate>
+      
+      <guid>/google-summer-of-code/</guid>
+      <description>Google Summer of Code https://summerofcode.withgoogle.com/organizations/4890191244296192/#6298483845758976
+Tags: gsoc, google summer of code, python, geography, gis</description>
+    </item>
+    
+    <item>
+      <title>Bringing Classifiers Alive in PySAL</title>
+      <link>/bringing-classifiers-alive-in-pysal/</link>
+      <pubDate>Thu, 24 Mar 2016 22:32:23 +0000</pubDate>
+      
+      <guid>/bringing-classifiers-alive-in-pysal/</guid>
+      <description>I&amp;rsquo;ve talked a lot to fellow developers about making PySAL objects more than containers for the results of a statistical procedure.
+One way I think we can do this is to focus on methods like predict, find, update, or reclassify.
+So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to update map classifiers by defining their __call__ method.
+   In [2]: import pysal as ps</description>
+    </item>
+    
+    <item>
+      <title>A quick note on Hierarchical Linear Models</title>
+      <link>/a-quick-note-on-hierarchical-linear-models/</link>
+      <pubDate>Mon, 22 Feb 2016 16:23:53 +0000</pubDate>
+      
+      <guid>/a-quick-note-on-hierarchical-linear-models/</guid>
+      <description>Owen, Harris, &amp;amp; Jones have a pretty cool new paper out discussing strengths &amp;amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&amp;rsquo;t directly answer the classic question at the heart of tons of geographic research:
+ Given that you live where you do, talk to who you do, and interact with the social milleau that you do, how is your behavior different?</description>
+    </item>
+    
+    <item>
+      <title>Trivial Python Multiprocessing</title>
+      <link>/trivial-python-multiprocessing/</link>
+      <pubDate>Tue, 16 Feb 2016 21:18:10 +0000</pubDate>
+      
+      <guid>/trivial-python-multiprocessing/</guid>
+      <description>I just wrote up a notebook for a fellow PhD student on how I use python&amp;rsquo;s builtin multiprocessing library to do embarassingly parallel computations much faster. Every time I think about it, I&amp;rsquo;m floored at how simple using the builtin multiprocessing library is for certain operations.
+There&amp;rsquo;s a ton of uncertainty out there around the state of parallel computing in Python, and I&amp;rsquo;m not an expert. But, I figure if it&amp;rsquo;s good enough for the unicorn I worked for, it&amp;rsquo;s good enough for a computational social scientist.</description>
+    </item>
+    
+    <item>
+      <title>A bite of a “free lunch” optimizing numerical routines in Python</title>
+      <link>/a-bite-of-a-free-lunch-optimizing-numerical/</link>
+      <pubDate>Tue, 16 Feb 2016 00:09:02 +0000</pubDate>
+      
+      <guid>/a-bite-of-a-free-lunch-optimizing-numerical/</guid>
+      <description>tl;dr: ask yourself these before you deadlift optimize code
+I use Python pretty much daily, but I’m definitely not a Python wizard. Now that I’m done with converting the Python Spatial Analytics Library to use Python 3 compatible idioms, I took a break from refactoring more generally.
+But, in doing two small tests/stabs at refactoring for speed &amp;amp; memory usage, I’m reminded why optimizing numerical code is so hard. I’ve heard &amp;ldquo;there ain’t no such thing as a free lunch,” so I’m usually wary about getting into performance optimization stuff, but these two recent instances really drive this point home for me again.</description>
+    </item>
+    
+    <item>
+      <title>A Tricky Bit Implementing Skyum’s Algorithm</title>
+      <link>/a-tricky-bit-implementing-skyums-algorithm/</link>
+      <pubDate>Thu, 21 Jan 2016 02:07:35 +0000</pubDate>
+      
+      <guid>/a-tricky-bit-implementing-skyums-algorithm/</guid>
+      <description>My dissertation is on gerrymandering. While I’m very sure it’s not the best way to do it, many people use geometric measures of district shapes as a way to detect gerrymandering. 
+One of the oldest and most well-used is the Reock measure, first developed in 1960. It’s a bit tougher than other kinds of gerrymandering measures to construct. For instance, the most popular measure is the Polsby-Popper measure, as used in this Washinton Post piece, is actually identical to a shape measure calle the Isoperimetric Quotient.</description>
+    </item>
+    
+    <item>
+      <title>Trajectories &amp; Transitions</title>
+      <link>/trajectories-transitions/</link>
+      <pubDate>Thu, 14 Jan 2016 18:41:26 +0000</pubDate>
+      
+      <guid>/trajectories-transitions/</guid>
+      <description>I started my PhD running away from Political Science/Political Geography as fast as I could, into Industrial Engineering and Computer Science-y topics. I’m still what many would call a “methodologist,” am wholly entertained by computational geometry &amp;amp; statistics, and enjoy math and programming a little too much to be fully motivated by applied work. But, gradually, I’ve started filtering back, situated with some top-flight quantitative geographers at the GeoDa Center for Spatial Analysis and Geocomputation, into work by Micah Altman, Andrew Gelman, Gary King, Jowei Chen, and Jonathan Rodden&amp;hellip; tons of political scientists.</description>
+    </item>
+    
+    <item>
+      <title>The competence ceiling</title>
+      <link>/the-competence-ceiling/</link>
+      <pubDate>Wed, 09 Dec 2015 20:45:53 +0000</pubDate>
+      
+      <guid>/the-competence-ceiling/</guid>
+      <description>After programming Haskell, R, or Python for about 6 years now, I feel like I’m sufficiently skilled with Python to make anything that I want to do in python immediate.
+I understand its execution model. I feel very confident in my understandings of how python objects work. The fastest/lightest way to get what I want seems like it’s relatively easy to achieve.
+In a sense, I feel competent. And that makes me feel a little complacent, and a little stagnant.</description>
+    </item>
+    
+    <item>
+      <title>New York is very nice</title>
+      <link>/new-york-is-very-nice/</link>
+      <pubDate>Wed, 02 Dec 2015 21:42:39 +0000</pubDate>
+      
+      <guid>/new-york-is-very-nice/</guid>
+      <description>And working on getting spatial statistics in the hands of average users with CartoDB is much nicer. 
+Tags: mapping, gis, consulting</description>
+    </item>
+    
+    <item>
+      <title>The “Compilation Error”Reading Technical Articles</title>
+      <link>/the-compilation-errorreading-technical-articles/</link>
+      <pubDate>Sat, 24 Oct 2015 15:20:46 +0000</pubDate>
+      
+      <guid>/the-compilation-errorreading-technical-articles/</guid>
+      <description>This article by Terrence Tao is incredibly enlightening, especially for those in technical fields.
+Tags: math, grad school, academia</description>
+    </item>
+    
+    <item>
+      <title>contiguity weights/adjacency graphs. But, this’ll probably undergo quite a bit of change. Programming for a language in its 0.*s is quite a task :)&lt;br/&gt;&lt;/p&gt;</title>
+      <link>/ljwolfspatialweightsjl/</link>
+      <pubDate>Mon, 19 Oct 2015 17:16:22 +0000</pubDate>
+      
+      <guid>/ljwolfspatialweightsjl/</guid>
+      <description>ljwolf/SpatialWeights.jl https://github.com/ljwolf/SpatialWeights.jl
+Tags: julia, python, GIS, geo, geography</description>
+    </item>
+    
+    <item>
+      <title>Some realizations on FOSS-Governance</title>
+      <link>/some-realizations-on-foss-governance/</link>
+      <pubDate>Wed, 07 Oct 2015 18:10:06 +0000</pubDate>
+      
+      <guid>/some-realizations-on-foss-governance/</guid>
+      <description>If you haven’t read/paid attention to the Numpy Governance Discussions goingon in the numpy discussion mailing list, I wouldn’t blame you. They’re probably dry and boring.
+But, for me, as someone who has been involved in a few Free/Open source communities over the past 8 years, I’m sensing a very interesting divide in the Numpy discussion (and FOSS Python more broadly) that I think is presented more strongly there than I’ve seen it elsewhere.</description>
+    </item>
+    
+    <item>
+      <title>Two points in learning to program</title>
+      <link>/two-points-in-learning-to-program/</link>
+      <pubDate>Tue, 06 Oct 2015 01:17:56 +0000</pubDate>
+      
+      <guid>/two-points-in-learning-to-program/</guid>
+      <description>I feel like there are two big, “pivotal” realizations in my story so far of learning to program. While I’m sure not everyone moves from Haskell to Shen to R to Python before really feeling competent in a language, I have seen many peers grapple with them. 
+1. Separate your code and data. I think this would be more aptly stated as Think Abstractly, but that belies the immediacy that the first statement provides.</description>
+    </item>
+    
+    <item>
+      <title>Things I remind myself always</title>
+      <link>/things-i-remind-myself-always/</link>
+      <pubDate>Fri, 18 Sep 2015 03:29:53 +0000</pubDate>
+      
+      <guid>/things-i-remind-myself-always/</guid>
+      <description>1. “Geography is what geographers do” - Waldo Tobler
+Tags: thank you janet franklin, geography, gis, academia</description>
+    </item>
+    
+    <item>
+      <title>First CartoDB map</title>
+      <link>/first-cartodb-map/</link>
+      <pubDate>Wed, 26 Aug 2015 02:26:08 +0000</pubDate>
+      
+      <guid>/first-cartodb-map/</guid>
+      <description>First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.  This is a map of the Polsby-Popper metric for US Congressional districts. In essence, people use it to identify how &amp;ldquo;normal&amp;rdquo; a political district&amp;rsquo;s shape is, with larger values being more &amp;ldquo;regular.&amp;rdquo; It&amp;rsquo;s the same as used in a washington post piece. My methodology differs a bit from their published map, and I&amp;rsquo;d love to figure out how to get the neat little hover info on the WaPo map.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;&lt;a href=&#34;http://pol102.tumblr.com/post/127107482211/science-isnt-broken-fivethirtyeight&#34; class=&#34;tumblr_blog&#34; target=&#34;_blank&#34;&gt;pol102&lt;/a&gt;:&lt;/p&gt;</title>
+      <link>/science-isnt-broken-fivethirtyeight/</link>
+      <pubDate>Wed, 19 Aug 2015 18:26:25 +0000</pubDate>
+      
+      <guid>/science-isnt-broken-fivethirtyeight/</guid>
+      <description>This is worth assigning to a methods class.
+ Science Isn’t Broken | FiveThirtyEight http://fivethirtyeight.com/features/science-isnt-broken/
+Tags:</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/nextdoor-interns/</link>
+      <pubDate>Thu, 13 Aug 2015 18:41:42 +0000</pubDate>
+      
+      <guid>/nextdoor-interns/</guid>
+      <description>Nextdoor interns! https://engblog.nextdoor.com/2015/08/13/meet-the-interns-part-1/
+Tags:</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;Yeah, this is another python implementation of selections from &lt;a href=&#34;https://wesandersonpalettes.tumblr.com/&#34; target=&#34;_blank&#34;&gt;Wes Anderson Palettes&lt;/a&gt; for matplotlib/seaborn.&lt;/p&gt;</title>
+      <link>/ljwolfwampl/</link>
+      <pubDate>Tue, 04 Aug 2015 01:05:07 +0000</pubDate>
+      
+      <guid>/ljwolfwampl/</guid>
+      <description>It&amp;rsquo;s pretty neat, I like it. I&amp;rsquo;ll probably use it. I hope you find it useful.
+ljwolf/wampl https://github.com/ljwolf/wampl
+Tags: python, wes anderson, matplotlib, visualization, geography, GIS</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;I’d love to replicate this in python, but matplotlib colormaps look so intimidating. &lt;br/&gt;&lt;/p&gt;</title>
+      <link>/karthikwesanderson/</link>
+      <pubDate>Fri, 31 Jul 2015 18:03:47 +0000</pubDate>
+      
+      <guid>/karthikwesanderson/</guid>
+      <description>karthik/wesanderson https://github.com/karthik/wesanderson
+Tags: python, matplotlib, colormap, wes anderson, geography, GIS</description>
+    </item>
+    
+    <item>
+      <title>On the subject of porting,</title>
+      <link>/on-the-subject-of-porting/</link>
+      <pubDate>Thu, 30 Jul 2015 20:17:38 +0000</pubDate>
+      
+      <guid>/on-the-subject-of-porting/</guid>
+      <description>On this, the first few minutes of Guido&amp;rsquo;s PyCon Keynote really hit home.
+ Yes you should all be using Python 3, and I know that you all want to, but I know it&amp;rsquo;s difficult. You all have large amounts of Python 2 code in production that you&amp;rsquo;ve ported to Python 2.7.9 &amp;hellip; but the step to Python 3 from there is still phenomenal.
+You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s from long integers.</description>
+    </item>
+    
+    <item>
+      <title>Reflections on a hard-won win for PySAL</title>
+      <link>/reflections-on-a-hard-won-win-for-pysal/</link>
+      <pubDate>Mon, 27 Jul 2015 21:10:56 +0000</pubDate>
+      
+      <guid>/reflections-on-a-hard-won-win-for-pysal/</guid>
+      <description>As a way to learn Python (and I mean really come to know it), I took on the project of converting PySAL to be compatible with Python 3.
+I started work on this two years ago. A tentative candidate for release is available in my fork
+Now, I’m glad I did this. I still worry about the day when Apple decides to ship the next OSX (Half Moon Bay? Big Sur?</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;This makes me so happy. You deserve it, Continuum.&lt;/p&gt;</title>
+      <link>/empowering-data-scientists-for-the-journey/</link>
+      <pubDate>Thu, 23 Jul 2015 23:50:41 +0000</pubDate>
+      
+      <guid>/empowering-data-scientists-for-the-journey/</guid>
+      <description>If only more of these companies would Red Hat it up and commit devs full-time to FOSS additions to the python scientific data ecosystem. I know that places like the place I work for rely heavily on the scientific python stack for exploratory data analysis (even though that tends to get backgrounded a bit).
+Empowering Data Scientists for the Journey http://continuum.io/blog/the-journey
+Tags: another company I&amp;rsquo;d love to work for, continuumIO, continuum, python, foss, GIS, geography</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;The census changed a bit in their API spec recently, so the package broke. &lt;br/&gt;&lt;/p&gt;&lt;p&gt;I’ve just posted a fix. As always, please open an issue on GitHub if there’re any problems!&lt;br/&gt;&lt;/p&gt;</title>
+      <link>/ljwolfcenpy/</link>
+      <pubDate>Fri, 17 Jul 2015 00:13:50 +0000</pubDate>
+      
+      <guid>/ljwolfcenpy/</guid>
+      <description>ljwolf/cenpy https://github.com/ljwolf/cenpy.git
+Tags: cenpy, US Census Bureau, census, US, python, data, social science, geography</description>
+    </item>
+    
+    <item>
+      <title>I have written more code in the day after SciPy</title>
+      <link>/i-have-written-more-code-in-the-day-after-scipy/</link>
+      <pubDate>Mon, 13 Jul 2015 21:36:32 +0000</pubDate>
+      
+      <guid>/i-have-written-more-code-in-the-day-after-scipy/</guid>
+      <description>Than in the time I was in Austin. But, importantly, this isn&amp;rsquo;t measured by line count. It&amp;rsquo;s measured by what it&amp;rsquo;s (hopefully) replacing 😀😀
+Tags: Scipy2015, All fired up typing in airplanes and busses</description>
+    </item>
+    
+    <item>
+      <title>Gearing up for the last day of SciPy 2015</title>
+      <link>/gearing-up-for-the-last-day-of-scipy-2015/</link>
+      <pubDate>Sun, 12 Jul 2015 00:22:13 +0000</pubDate>
+      
+      <guid>/gearing-up-for-the-last-day-of-scipy-2015/</guid>
+      <description>It&amp;rsquo;ll be a good one
+Tags: Scipy2015, SciPy, Python</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/i-usually-dont-think-much-about/</link>
+      <pubDate>Thu, 18 Jun 2015 23:49:13 +0000</pubDate>
+      
+      <guid>/i-usually-dont-think-much-about/</guid>
+      <description>I usually don’t think much about credentialization online. I have a few internet aliases (like yetanothergeographer) that I consider almost totally synonymous with my real name and persona. And even other personas on tumblr or other social networking sites are easily traced back to my “full” identity.
+But, something that I found pretty shocking recently was the fact that any github profile you can find shows your public ssh keys to everyone.</description>
+    </item>
+    
+    <item>
+      <title>Cenpy Big Query</title>
+      <link>/cenpy-big-query/</link>
+      <pubDate>Tue, 16 Jun 2015 15:27:27 +0000</pubDate>
+      
+      <guid>/cenpy-big-query/</guid>
+      <description>If you’ve been using my tools for census data exploration, as intensely as I&amp;rsquo;d hope you have, you might’ve noticed that the Census limits queries to 50 columns per query.
+I’ve got your back, though. The newest release, cenpy 0.7, now supports n-column queries by chunking through 50-coulumns at a time. Be careful, though, as I&amp;rsquo;m sure if you pull down the entire Census 2010 short form in one go, you will probably get rate limited.</description>
+    </item>
+    
+    <item>
+      <title>Cenpy is now pip installable!</title>
+      <link>/cenpy-is-now-pip-installable/</link>
+      <pubDate>Thu, 11 Jun 2015 15:58:41 +0000</pubDate>
+      
+      <guid>/cenpy-is-now-pip-installable/</guid>
+      <description>pip install cenpy
+Check it out on github or its demo notebook on nbviewer.
+yetanothergeographer:
+ CenPy - An exploratory interface to the Census API
+So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.</description>
+    </item>
+    
+    <item>
+      <title>“Maybe the Shapefile was right after all” is right after all</title>
+      <link>/maybe-the-shapefile-was-right-after-all-is-right/</link>
+      <pubDate>Sat, 06 Jun 2015 17:26:38 +0000</pubDate>
+      
+      <guid>/maybe-the-shapefile-was-right-after-all-is-right/</guid>
+      <description>The more that I work with broad datasets, collected from many different means and used in many different contexts, the more I think that you really only need the &amp;ldquo;multi&amp;rdquo; instantiation of polygons, lines, and points. Usually, due to database typecasting, you want to coerce any heterogeneous datatypes into the same datatype. Since it&amp;rsquo;s much simpler to cast Polygons upwards into MultiPolygons, I&amp;rsquo;m rarely seeing any Polygons or Lines, even in datasets where the majority of features are single-component.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/cenpy-an-exploratory-interface-to-the-census/</link>
+      <pubDate>Fri, 05 Jun 2015 18:01:54 +0000</pubDate>
+      
+      <guid>/cenpy-an-exploratory-interface-to-the-census/</guid>
+      <description>CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.</description>
+    </item>
+    
+    <item>
+      <title>Pip bug</title>
+      <link>/heads-up-pip-bug/</link>
+      <pubDate>Sat, 23 May 2015 14:33:14 +0000</pubDate>
+      
+      <guid>/heads-up-pip-bug/</guid>
+      <description>Anyone running Debian testing/unstable, heads up on a breakage in pip that bit me this morning. Now I’m stuck with versions of ipython that dont work, as the apt package is broken and pip is broken.
+Since I&amp;rsquo;m loath to install it manually, rather than through a package manager, I&amp;rsquo;m out of luck at the moment until the maintainer fixes the package. :(
+Tags: pip, python, debian</description>
+    </item>
+    
+    <item>
+      <title>My (summer) Job, SF, and Gitter &#43; IRC</title>
+      <link>/scattershot-my-summer-job-sf-and-gitter-irc/</link>
+      <pubDate>Sat, 23 May 2015 02:46:29 +0000</pubDate>
+      
+      <guid>/scattershot-my-summer-job-sf-and-gitter-irc/</guid>
+      <description>Finally landed on my feet in the upstairs of a cozy duplex in Bernal Heights, waiting for my &amp;ldquo;onboarding&amp;rdquo; for Nextdoor after Memorial Day. So far, everything&amp;rsquo;s been nice. I was worried I&amp;rsquo;d be living in a very yuppie neighborhood, but, at first brush, Bernal Heights seems to have held onto a sense of localness.
+Which brings me to the question of how to answer &amp;ldquo;Are you local?&amp;rdquo; I heard this asked to a few people today, eavesdropping across bars and coffeeshops during my first day of urban orienteering.</description>
+    </item>
+    
+    <item>
+      <title>Happy GeoHacking</title>
+      <link>/happy-geohacking/</link>
+      <pubDate>Tue, 19 May 2015 03:06:16 +0000</pubDate>
+      
+      <guid>/happy-geohacking/</guid>
+      <description>I just got done teaching a short workshop on GIS in Python. Something may be odd to those of you who use FOSS packages to do GIS: I didn&amp;rsquo;t use any GeoPandas.
+This wasn&amp;rsquo;t a constraint I wanted. But, just getting pure pip-installable packages like Shapely and PySAL was difficult enough. The admins didn&amp;rsquo;t want to install one of the big scientific Python distributions and would only let something with minimal impact get used.</description>
+    </item>
+    
+    <item>
+      <title>And what did we learn today, kids?</title>
+      <link>/and-what-did-we-learn-today-kids/</link>
+      <pubDate>Fri, 21 Nov 2014 18:34:58 +0000</pubDate>
+      
+      <guid>/and-what-did-we-learn-today-kids/</guid>
+      <description>When you estimate a logit over ratios with significantly independent numerator and denominator with significant heterogeneity, your model can get really mangled.
+Tags:</description>
+    </item>
+    
+    <item>
+      <title>It&#39;s funny how a little math can simplify a function call</title>
+      <link>/its-funny-how-a-little-math-can-simplify-a/</link>
+      <pubDate>Wed, 29 Oct 2014 15:00:06 +0000</pubDate>
+      
+      <guid>/its-funny-how-a-little-math-can-simplify-a/</guid>
+      <description>from 30 lines to 5 lines.
+Tags:</description>
+    </item>
+    
+    <item>
+      <title>Making Sense of NMMI</title>
+      <link>/making-sense-of-nmmi/</link>
+      <pubDate>Wed, 29 Oct 2014 05:36:00 +0000</pubDate>
+      
+      <guid>/making-sense-of-nmmi/</guid>
+      <description>The Normalized Mass Moment of Inertia proposed by Li et al (2013) is deceptively hard to express. Given some shape and a distribution of attributes around the shape, they state the NMMI ratio in Fan et al (forthcoming) as:
+$$NMMI = \frac{I_O^&amp;rsquo;} {I^{G_i}_{i_mass}}$$
+where $I$ represents the area-standardized mass moment of inertia. The $O$ subscript denotes that the numerator is the mass moment of inertia of some null reference shape. I will discuss the denominator later.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/you-know-i-like-all-this-math-and-engineering/</link>
+      <pubDate>Thu, 23 Oct 2014 16:25:45 +0000</pubDate>
+      
+      <guid>/you-know-i-like-all-this-math-and-engineering/</guid>
+      <description>You know, I like all this math and engineering material I&amp;rsquo;m enrolled in, and I&amp;rsquo;m not too bad at it. But it&amp;rsquo;s fairly frustrating listening to engineers talk about systems where this material gets applied as if they&amp;rsquo;re fully generic.I&amp;rsquo;m starting to hit that point where the divisions between physical and natural systems are creeping in.
+Flashbacks to my decision to study political science and not Industrial Engineering are becoming more and more common.</description>
+    </item>
+    
+    <item>
+      <title>Voronoi Gripes</title>
+      <link>/voronoi-gripes/</link>
+      <pubDate>Wed, 01 Oct 2014 15:28:13 +0000</pubDate>
+      
+      <guid>/voronoi-gripes/</guid>
+      <description>Wow, did not expect this to be as big of an issue as it has been.
+Pysal removed the code for generating voronoi diagrams for the standard library. Not sure why.
+Instead, on the mailing list, the project BDFL provides code for a diagram of randomized points.
+Adapting this, I should be good. Though, I&amp;rsquo;ll have to ask why it was dropped from pysal.core or pysal.cg.
+Tags: GIS, pysal</description>
+    </item>
+    
+    <item>
+      <title>About the voronoi diagram problem</title>
+      <link>/about-the-voronoi-diagram-problem/</link>
+      <pubDate>Wed, 01 Oct 2014 01:47:36 +0000</pubDate>
+      
+      <guid>/about-the-voronoi-diagram-problem/</guid>
+      <description>Yeah&amp;hellip; the bug with the voronoi diagrams is still in the current version of QGIS&amp;hellip;
+Tags: bug, qgis, voronoi, GIS, FOSS</description>
+    </item>
+    
+    <item>
+      <title>Some New Realizations on Oooooold Material</title>
+      <link>/some-new-realizations-on-oooooold-material/</link>
+      <pubDate>Fri, 26 Sep 2014 17:40:00 +0000</pubDate>
+      
+      <guid>/some-new-realizations-on-oooooold-material/</guid>
+      <description>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression.</description>
+    </item>
+    
+    <item>
+      <title>A Short Realization on Gelman-King (1994)</title>
+      <link>/a-short-realization-on-gelman-king-1994/</link>
+      <pubDate>Fri, 12 Sep 2014 04:01:00 +0000</pubDate>
+      
+      <guid>/a-short-realization-on-gelman-king-1994/</guid>
+      <description>Elections, Bayes, and one realization about the Gelman-King Model People make a lot of hay out of the rise of Nate Silver and Bayesian poll averaging when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&amp;rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. Gelman-King (1994)&amp;rsquo;s model Say, for instance, we&amp;rsquo;re examining some vector of electoral outcomes, (y) given some predictor matrix (\mathbf{X}).</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;Are there any institutional checks/rebuttals to obviously ignorant claims made by the Editor and Chief of the CACM?&lt;/p&gt;</title>
+      <link>/i-cannot-believe-the-acm-published-this/</link>
+      <pubDate>Thu, 28 Aug 2014 20:04:20 +0000</pubDate>
+      
+      <guid>/i-cannot-believe-the-acm-published-this/</guid>
+      <description>Like&amp;hellip; who would&amp;rsquo;ve reviewed this and said,
+ yep, let&amp;rsquo;s go with this. Let&amp;rsquo;s publish this crazy, 1980s-style Red-baiting.
+ This guy writes like he&amp;rsquo;s the defender of the free world against all us millennial, youthful, pinko liberal communist Open Access/FOSS types. Ugh.
+I cannot believe the ACM published this. http://m.cacm.acm.org/magazines/2014/8/177025-openism-ipism-fundamentalism-and-pragmatism/fulltext
+Tags: FOSS, open source, open access, software, intellectual property, IP, academia</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/getting-some-serious-hype-for-scipy/</link>
+      <pubDate>Wed, 02 Jul 2014 19:22:56 +0000</pubDate>
+      
+      <guid>/getting-some-serious-hype-for-scipy/</guid>
+      <description>Getting some serious hype for SciPy https://conference.scipy.org/scipy2014/schedule/
+Tags: scipy2014, scipy, scientific computing, computing, python</description>
+    </item>
+    
+    <item>
+      <title>Going to Scipy 2014</title>
+      <link>/going-to-scipy-2014/</link>
+      <pubDate>Thu, 29 May 2014 10:02:09 +0000</pubDate>
+      
+      <guid>/going-to-scipy-2014/</guid>
+      <description>anyone in Austin in July?
+Tags: Scientific Python, scipy, austin, texas, python, academia, scientific computing</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;Great advice on why learning many tools is sometimes better than mastering one. &lt;/p&gt;</title>
+      <link>/dont-be-a-technical-masochist-the-endeavour/</link>
+      <pubDate>Tue, 22 Apr 2014 16:31:17 +0000</pubDate>
+      
+      <guid>/dont-be-a-technical-masochist-the-endeavour/</guid>
+      <description>At the same time, I use Arch&amp;hellip;
+Don’t be a technical masochist | The Endeavour http://www.johndcook.com/blog/2014/03/12/dont-be-a-technical-masochist/
+Tags: arch, linux, tools, simplicity, mastery, graduate school, statistics, math</description>
+    </item>
+    
+    <item>
+      <title>Answer keys that simply tell you</title>
+      <link>/answer-keys-that-simply-tell-you/</link>
+      <pubDate>Wed, 16 Apr 2014 03:12:11 +0000</pubDate>
+      
+      <guid>/answer-keys-that-simply-tell-you/</guid>
+      <description>This is a difficult problem. and give you the answer with no work may as well be simple sources of guided intuition. It&amp;rsquo;s also probably the number one reason behind the rise of the math stackexchange. Tags: math, statistics, answer keys</description>
+    </item>
+    
+    <item>
+      <title>Modified an existing ASU beamer template</title>
+      <link>/modified-an-existing-asu-beamer-template/</link>
+      <pubDate>Wed, 05 Mar 2014 04:14:20 +0000</pubDate>
+      
+      <guid>/modified-an-existing-asu-beamer-template/</guid>
+      <description>For SGSUP use. It’s silly the feelings of accomplishment that simple things like that provides.
+Tags: latex, tex, beamer, asu, academia, grad school</description>
+    </item>
+    
+    <item>
+      <title>Welcome Week Tips</title>
+      <link>/welcome-week-tips/</link>
+      <pubDate>Mon, 03 Mar 2014 01:34:50 +0000</pubDate>
+      
+      <guid>/welcome-week-tips/</guid>
+      <description>So, having just completed our welcome weekend for prospective Ph.D. students, I think I might have suggestions for anyone going to one in the future.
+1. Try to have fun. It can be a wild, stressful, busy few days. But, above all, you should be trying to figure how much you like the people you&amp;rsquo;re with.
+2. Balance breadth and depth. Yes, you may want to work with only a few people, but departments are communities.</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;After doing the &lt;a href=&#34;http://www.youtube.com/playlist?list=PLB63C06FAF154F047&#34; target=&#34;_blank&#34;&gt;MIT SICP lectures&lt;/a&gt; over the summer, I&amp;rsquo;m always amazed at how language development frequently attempts to implement functionality implementable in LISP. It seems like LISP really was a consummately expressive language, and it&amp;rsquo;s frustrating sometimes to not have simple things I got used to when learning the functionals like Scheme and Haskell.&lt;/p&gt;</title>
+      <link>/metaprogramming-in-julia/</link>
+      <pubDate>Thu, 27 Feb 2014 20:42:45 +0000</pubDate>
+      
+      <guid>/metaprogramming-in-julia/</guid>
+      <description>That aside, this macro capability is amazing, and it&amp;rsquo;s illustrated here to quite the effect. The stupidly simple knapsack I implemented is done here in three lines that are much more semantically meaningful than my larger program. They macros are extended at run time into full expressions, and their data structure is much better for the solution of general knapsack problems. My implementation would not quite win out in a diff battle.</description>
+    </item>
+    
+    <item>
+      <title>Untitled</title>
+      <link>/knowing-when-to-stop-reading-and-start-writing-is/</link>
+      <pubDate>Mon, 24 Feb 2014 23:39:19 +0000</pubDate>
+      
+      <guid>/knowing-when-to-stop-reading-and-start-writing-is/</guid>
+      <description>Knowing when to stop reading and start writing is hard. Especially when you&amp;rsquo;re very interested in what you&amp;rsquo;re reading.
+I&amp;rsquo;m hopeful for this literature review Wednesday, but I make no promises&amp;hellip;
+Tags:</description>
+    </item>
+    
+    <item>
+      <title>&lt;p&gt;&lt;strong&gt;1. Define the problem and solution space. &lt;/strong&gt;&lt;/p&gt;</title>
+      <link>/1-define-the-problem-and-solution-space/</link>
+      <pubDate>Sun, 16 Feb 2014 22:16:45 +0000</pubDate>
+      
+      <guid>/1-define-the-problem-and-solution-space/</guid>
+      <description>2. Break the problem down. 
+3. Make the problem personal. 
+4. Seek the perspectives of outsiders. 
+5. Diverge before you converge. 
+6. Create “idea resumes.” 
+7. Create a plan to learn. 
+MIT researchers identify a 7-step technique for putting ideas to action, an upgrade to the now frequently challenged concept of brainstorming. Complement with this timeless 5-step technique for producing ideas from 1939. (via explore-blog)</description>
+    </item>
+    
+    <item>
+      <title>Time Management or Fortitude</title>
+      <link>/time-management-or-fortitude/</link>
+      <pubDate>Thu, 06 Feb 2014 02:48:16 +0000</pubDate>
+      
+      <guid>/time-management-or-fortitude/</guid>
+      <description>Sometimes, graduate school seems like it&amp;rsquo;s less about time management than it is about fortitude.
+The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;rsquo;ve been so busy, though, had I decided not to go to a concert I really had wanted to go to. So, I stuck out an amazing show, turned around after PBR and punk rock, and banged out 1000 words, a presentation, a proposal draft, took three classes, gave two presentations, and spent 5 hours formalizing an algorithm for a draft due Friday.</description>
+    </item>
+    
+    <item>
+      <title>On Perpsective</title>
+      <link>/on-perpsective/</link>
+      <pubDate>Mon, 03 Feb 2014 14:00:00 +0000</pubDate>
+      
+      <guid>/on-perpsective/</guid>
+      <description>Trying to express an area of specialization is surprisingly difficult. But, these exercises in perspective-stretching are important to realize the limits to both your knowledge and the knowledge at the frontier of research. When intently focused on the smallest of details about the implementation of an out-of-kilter algorithm, it&amp;rsquo;s easy to forget that, while it&amp;rsquo;s hard to figure out how to implement a stochastic constraint solver in Haskell, there are broader problems.</description>
+    </item>
+    
+    <item>
+      <title>Initialization</title>
+      <link>/initialization/</link>
+      <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
+      
+      <guid>/initialization/</guid>
+      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
+1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
+2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/some-new-realizations-on-oooooold-material/">
+<base href="/" />
+<meta property="og:title" content="Some New Realizations on Oooooold Material" />
+<meta property="og:description" content="For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/some-new-realizations-on-oooooold-material/" />
+
+
+
+<meta property="article:published_time" content="2014-09-26T17:40:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-09-26T17:40:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Some New Realizations on Oooooold Material"/>
+<meta name="twitter:description" content="For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression."/>
+
+
+
+<meta itemprop="name" content="Some New Realizations on Oooooold Material">
+<meta itemprop="description" content="For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression.">
+
+
+<meta itemprop="datePublished" content="2014-09-26T17:40:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-09-26T17:40:00&#43;00:00" />
+<meta itemprop="wordCount" content="1673">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Some New Realizations on Oooooold Material 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Some New Realizations on Oooooold Material </h1>
+    <div class="content"> <p>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum,  I wrote about two weeks of lectures and assignments on spatial statistics,  pushing from a start point of the <strong>Kolmogorov Axioms</strong>, <a href="https://en.wikipedia.org/wiki/Probability_axioms" target="_blank">fundamental results in elementary probability theory</a> all the way up through spatial regression.</p>
+
+<p>I thought about providing a start from a subjectivist standpoint, considering my later statistical writing starts getting into ideas about prior beliefs and plausibility,  but I think Kolmogorov works pretty much anywhere and for anyone, until you start really getting a solid understanding of where the Bayesians part ways from Bayes’s theorem.
+And, considering Bayes&rsquo;s theorem recieved a two-sentence explanation in the first lecture of the course, it&rsquo;s unlikely that people will really hang onto a thirst for the more interesting aspects of Bayesian theory as it pertains to spatial statistics.</p>
+
+<p>But, I thought I’d share some realizations on the nature of common spatial autocorrelation statistics from my lecture notes. Namely, I’d never even <em>heard</em> of the generalized crossproduct statistic, or
+the fact that it’s essentially the driver for both Moran’s I and Geary’s C, two fundamentally important spatial autocorrelation measures.</p>
+
+<p>I guess this really speaks to why it might be a good idea to have a strong, formal, theoretical course offering in theoretical spatial statistics.</p>
+
+<p>It took the Mathematical Statistics from over in Industrial
+Engineering to really get my head in the game about how the Weights matrix is just a precomputation of an indicator function for the joint probability distributions at each polygon. We learn in geography that it&rsquo;s this piece of data, floating around representing the connectivity structure of our data. But, really, it&rsquo;s definable by a simple indicator function used <em>any</em> time statisticians need to define joint distributions with incompatible or varying domains.</p>
+
+<p>That was just never on my radar, cause I&rsquo;ve never had a super-theoretical, high-level mathematical course on spatial statistics.</p>
+
+<p>What I wouldn&rsquo;t give for one now, though. If, as a matter of curriculum,
+we moved from requiring a strong, mathematical-statistics
+based course (ideally taught out of my one true love, <a href="http://www.amazon.com/Statistical-Inference-George-Casella/dp/0534243126" target="_blank">Casella &amp; Berger</a> ;)) and then, after it, taught mathematical spatial stats, where we derived and proved things like Moran&rsquo;s I, Geary&rsquo;s C, LISA statistics, and Spatial Regression techniques, that would
+be beautiful. Just for fun, when I figured this out, I sketched a proof of statistical sufficiency for Moran&rsquo;s I, something I&rsquo;d never even seen discussed in a course.</p>
+
+<p>Maybe not a fault of the curriculum being <em>bad</em> at a university I&rsquo;ve thoroughly enjoyed attending. But, maybe a slight incompatibility between me and its thematic focus. As it stands, I guess these kinds of realizations are part of the &ldquo;personal development&rdquo; I&rsquo;m supposed to take on as an enterprising PhD student.</p>
+
+<p>What follows is just a short selection of what I realized throughout the course of writing my lecture notes.</p>
+
+<h2>Join Counts and the $C$ Statistic</h2>
+
+<p>One of the simplest measures of spatial autocorrelation is the join count
+statistic. The join count statistic codes the data into a binary classification, then counts the number of similar-group joins and different-group joins. Then, the number of inter-class joins can be used as a test statistic for spatial autocorrelation.</p>
+
+<p>In fact, the number of inter-color joins is related to a different kind
+of statistic known as the &ldquo;cross product statistic.&rdquo; Indeed, <em>all</em> major
+techniques for calculating spatial autocorrelation in lattices use some
+manner or manipulation of the cross product statistic.</p>
+
+<p>To calculate a crossproduct statistic, there must be some index of difference between observations, $Y_{i,j}$, and some connectivity matrix $\mathbf{W}$ constructed, where each $W_{i,j}$ is either 1, if observations are considered neighboring, or 0 if they are not neighboring. Then, the crossproduct statistic, $C$ is calculated by:</p>
+
+<p>$$ CR = \sum_i \sum_j W_{ij} Y_{ij} $$</p>
+
+<p>Join count statistics are constructed when $Y_{ij}$ returns a 1 when a join is between different elements and 0 when it is between similar elements. For data that is <em>not</em> binary, we typically set $Y_{ij} = (x_i - x_i)^2$.</p>
+
+<h2>Moran and Geary</h2>
+
+<p>Using insights related to the crossproduct statistic, two other families of
+methods for assessing global spatial autocorrelation have been developed. First, the methods typically recognize the importance of the <em>total</em> connectivity of the weights matrix. This clearly can play a role in the possible outcomes of spatial autocorrelation, as perfectly connected networks, where all elements are connected to all other elements, will always show <em>no</em> autocorrelation because <em>all</em> observations neighbor all other observations.</p>
+
+<p>So, two statisticians, R. Geary and A. Moran, developed two other measures of spatial autocorrelation. First, Geary&rsquo;s C:</p>
+
+<p>$$ C = \frac{ N - 1 \sum_i \sum_j w_{ij} (x_i - x_j)^2 } { 2 W \sum_i (x_i -\bar{x})^2 }$$</p>
+
+<p>Where $N$ is the total number of spatial units, $W$ is the sum of the
+connectivity matrix $\mathbf{W}$, $w_{ij}$ are the spatial weights matrix entry between units $i$ and $j$, $x_i$ and $x_j$ are observations, and
+$\mathbf{\bar{x}}$ is the average of all observations. This statistic ranges
+between 0 and 2, with values greater than 1 indicating <em>negative</em> spatial
+autocorrelation, and values between 0 and 1 indicating positive spatial
+autocorrelation. A value close to 1 indicates no spatial autocorrelation.</p>
+
+<p>This measure works well, but is sometimes more sensitive to local
+autocorrelation than is desirable for a statistic used across the entire problem frame. Therefore, we typically use Moran&rsquo;s I to calculate global
+autocorrelation:</p>
+
+<p>$$ I = \frac{N}{W} \cdot \frac{\sum_i \sum_j (x_i -\bar{x})(x_j - \bar{x})} {\sum_i (x_i - \bar{x})^2} $$</p>
+
+<p>Where all symbols are the same as above. Moran&rsquo;s I ranges from -1 to 1, with negative values indicating negative spatial autocorrelation and positive values indicating positive spatial autocorrelation. However, the expected value of Moran&rsquo;s I is actually:</p>
+
+<p>$$ \frac{-1} {N-1}$$</p>
+
+<p>which, critically, is <em>not zero</em>. This means that the expected value of this
+statistic in cases of no spatial autocorrelation is <em>slightly negative</em>.</p>
+
+<h2>The Point Where I Really Grok It</h2>
+
+<p>More importantly, though, examine what these statistics are doing intuitively. Put in the language of &ldquo;sums of squared deviations&rdquo; from regression literatures, we have that Geary&rsquo;s $C$ statistic is finding some sum of squared deviations between pairs of observations ($i, j$) and standardizing it by the sum of squared deviations from the mean. Let&rsquo;d call the the sum of squared deviations from the mean $S_{x\bar{x}}$.</p>
+
+<p>But, note that, for any pair of observations $(i,j)$, we only
+include their information if pairs ${i,j}$ are neighbors. That is, the sum of
+squared deviations between pairs $(i,j)$ are multiplied by the corresponding entry in the spatial weights matrix $\mathbf{W}$. If $(i,j)$ are neighbors, we keep their squared difference. If they are not neighbors, we drop them from the sum of squared deviations. In this way, let us call the term $\sum_i \sum_j W_{ij} (x_i - x_j)^2$ the <em>sum of squared deviations between neighbors</em>. This is the same as $CR$!</p>
+
+<p>We could also think of this as the &ldquo;sum of squared spatial lags&rdquo; rather than the &ldquo;sum of squared deviations between neighbors&rdquo;, but we&rsquo;ll call it $S_{CR}$ here to reflect its origin <em>and</em> the fact that it&rsquo;s a sum of squared deviations statistic. Thus, we can rephrase Geary&rsquo;s C as:</p>
+
+<p>$$C = \frac{N - 1}{2W} \frac{S_{CR}}{S_{x\bar{x}}} $$</p>
+
+<p>Then, we can interpret the first term as capturing or expressing the relationship between the degrees of freedom of our study area and its total spatial connectivity. The second term, then, reflects the relationship between deviations between neighbors and deviations in the data overall. Put this way, the statistic is more understandable.</p>
+
+<p>Then, Moran&rsquo;s I can be expressed similarly, but not identically. Recall the
+crossproduct statistic $CR$. It compares observations to their neighbors by taking the sum of squared differences between an observation $x_i$ and all of its neighbors $x_j$, and then adds this value for <em>all</em> $x_i$ in the sample frame. For Moran&rsquo;s $I$, we are computing something similar, but not exactly the same. We are still computing the crossproduct of squared deviations between $x_i$ and its neighbors, but these deviations are <em>relative to the sample mean</em>!</p>
+
+<p>This is an important difference. For Geary&rsquo;s $C$ statistic, we are
+comparing neighbors directly using $S_{CR}$. For the $I$ statistic, we are comparing neighbors indirectly, through their relationship to the global mean. Let&rsquo;s call this comparison of neighbors <em>through</em> the mean of observations $S_{\bar{CR}}$ Keeping this in mind, we can express Moran&rsquo;s $I$ as:</p>
+
+<p>$$ I = \frac{N}{W} \frac{S_{\bar{CR}}}{S_{x\bar{x}}} $$</p>
+
+<p>This difference is slight but important. Recall that Geary&rsquo;s $C$ is <em>more</em>
+sensitive to local autocorrelation than is desirable for a local measure? That is a <em>clear result</em> of its use of direct comparisons between neighboring observations, rather than Moran&rsquo;s $I$ using the deviations of neighbors from the mean.</p>
+
+<h2>Conclusions</h2>
+
+<p>I guess, when you learn how statistics work in a purely-applied context, you fail to see the neat trends of statistical reasoning building on top of one another as the literature progresses. I bet that both Geary and Moran were aware of the use of the general crossproduct statistic (or the theory behind it, which is much broader than geographic research alone), and then constructed their respective measures from there.</p>
+
+<p>In my lecture notes, I go on to explain LISA statistics through discussing the local Moran&rsquo;s $I$ statistic from Anselin(1995). But, I pretty much understood the logic behind LISA statistics, given that I could abstract away the original Moran&rsquo;s I as a given, inherited piece of knowledge.</p>
+
+<p><p>I really wish I had the opportunity to take a high-level PhD-level course on this stuff.  But, with figuring out what applications to do as my advisor splits from ASU and  this TA-ship sucking up all of my oxygen (and doing so even before the point where  I kinda started functioning as a full statistics instructor) I can&rsquo;t even say that I&rsquo;d have the time to chase up these leads until I get a little bit less off of my plate.</p>
+Tags: spatial autocorrelation, geography, mathematics, statistics, spatial analysis, grad school, academia</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Sep 26, 2014 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

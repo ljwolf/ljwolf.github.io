@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.36" />
+
+<link rel="canonical" href="/bringing-classifiers-alive-in-pysal/">
+<base href="/" />
+<meta property="og:title" content="Bringing Classifiers Alive in PySAL" />
+<meta property="og:description" content="I&rsquo;ve talked a lot to fellow developers about making PySAL objects more than containers for the results of a statistical procedure.
+One way I think we can do this is to focus on methods like predict, find, update, or reclassify.
+So, here, I&rsquo;ll show the way I&rsquo;ve implemented a simple API to update map classifiers by defining their __call__ method.
+   In [2]: import pysal as ps" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/bringing-classifiers-alive-in-pysal/" />
+
+
+
+<meta property="article:published_time" content="2016-03-24T22:32:23&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-03-24T22:32:23&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bringing Classifiers Alive in PySAL"/>
+<meta name="twitter:description" content="I&rsquo;ve talked a lot to fellow developers about making PySAL objects more than containers for the results of a statistical procedure.
+One way I think we can do this is to focus on methods like predict, find, update, or reclassify.
+So, here, I&rsquo;ll show the way I&rsquo;ve implemented a simple API to update map classifiers by defining their __call__ method.
+   In [2]: import pysal as ps"/>
+
+
+
+<meta itemprop="name" content="Bringing Classifiers Alive in PySAL">
+<meta itemprop="description" content="I&rsquo;ve talked a lot to fellow developers about making PySAL objects more than containers for the results of a statistical procedure.
+One way I think we can do this is to focus on methods like predict, find, update, or reclassify.
+So, here, I&rsquo;ll show the way I&rsquo;ve implemented a simple API to update map classifiers by defining their __call__ method.
+   In [2]: import pysal as ps">
+
+
+<meta itemprop="datePublished" content="2016-03-24T22:32:23&#43;00:00" />
+<meta itemprop="dateModified" content="2016-03-24T22:32:23&#43;00:00" />
+<meta itemprop="wordCount" content="1075">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Bringing Classifiers Alive in PySAL 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title">Spatial@UChicago</div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Bringing Classifiers Alive in PySAL </h1>
+    <div class="content"> <div tabindex="-1" id="notebook" class="border-box-sizing">
+<div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I&rsquo;ve talked a lot to fellow developers about making PySAL objects more than containers for the results of a statistical procedure.</p>
+<p>One way I think we can do this is to focus on methods like <code>predict</code>, <code>find</code>, <code>update</code>, or <code>reclassify</code>.</p>
+<p>So, here, I&rsquo;ll show the way I&rsquo;ve implemented a simple API to update map classifiers by defining their <code>__call__</code> method.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pysal</span> <span class="kn">as</span> <span class="nn">ps</span>
+</pre></div>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The patch I applied to mapclassify should be in this github branch. To get it, you&rsquo;ll need to <code>git fetch</code> my repository and check out the <code>reclassify</code> branch. Alternatively, what I added to <code>Map_Classifier</code> is so small, it&rsquo;s easy to show:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First, I added a call method:</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf"><strong>call</strong></span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o"><strong></span><span class="n">kwargs</span><span class="p">):</span>
+<span class="sd">&rdquo;&ldquo;&rdquo;</span>
+<span class="sd">    This will allow the classifier to be called like a</span>
+<span class="sd">    function <em>after</em> instantiation</span>
+<span class="sd">    &ldquo;&rdquo;&rdquo;</span>
+<span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="o"></strong></span><span class="n">kwargs</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">new</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="n">new</span><span class="o">.</span><span class="n">_update</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">new</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This will allow us to do something like:</p>
+<div class="highlight"><pre><span class="n">classifier</span> <span class="o">=</span> <span class="n">pysal</span><span class="o">.</span><span class="n">Quantiles</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">classifier</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">classifier</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">classifier</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+<p>and proceed to interact with the classifier object over and over again. Since there&rsquo;s an inplace toggle (<code>False</code> by default), users can choose when to mutate or when to copy.</p>
+<p>In theory, the <code><strong>call</strong></code> method can support <em>all</em> of the different <code><strong>init</strong></code> declarations possible. I&rsquo;ve defined it this way because most of the mapclassify methods I can think of use a mandatory data argument and optional keyword arguments. The only one that varies from this is <code>User_Defined</code>, which I overwrote to handle correctly.</p>
+<p>The main point here is that this enables users to quickly reclassify and view new classifications <em>using the object they created!</em> Thus, a common use case might be something like this:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">pdio</span><span class="o">.</span><span class="n">read_files</span><span class="p">(</span><span class="n">ps</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s">&lsquo;south.dbf&rsquo;</span><span class="p">))</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe"><thead><tr style="text-align: right;"><th></th>
+<th>FIPSNO</th>
+<th>NAME</th>
+<th>STATE_NAME</th>
+<th>STATE_FIPS</th>
+<th>CNTY_FIPS</th>
+<th>FIPS</th>
+<th>STFIPS</th>
+<th>COFIPS</th>
+<th>SOUTH</th>
+<th>HR60</th>
+<th>&hellip;</th>
+<th>BLK90</th>
+<th>GI59</th>
+<th>GI69</th>
+<th>GI79</th>
+<th>GI89</th>
+<th>FH60</th>
+<th>FH70</th>
+<th>FH80</th>
+<th>FH90</th>
+<th>geometry</th>
+</tr></thead><tbody><tr><th>0</th>
+<td>54029</td>
+<td>Hancock</td>
+<td>West Virginia</td>
+<td>54</td>
+<td>029</td>
+<td>54029</td>
+<td>54</td>
+<td>29</td>
+<td>1</td>
+<td>1.682864</td>
+<td>&hellip;</td>
+<td>2.557262</td>
+<td>0.223645</td>
+<td>0.295377</td>
+<td>0.332251</td>
+<td>0.363934</td>
+<td>9.981297</td>
+<td>7.8</td>
+<td>9.785797</td>
+<td>12.604552</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7fc5495eb&hellip;</td>
+</tr><tr><th>1</th>
+<td>54009</td>
+<td>Brooke</td>
+<td>West Virginia</td>
+<td>54</td>
+<td>009</td>
+<td>54009</td>
+<td>54</td>
+<td>9</td>
+<td>1</td>
+<td>4.607233</td>
+<td>&hellip;</td>
+<td>0.748370</td>
+<td>0.220407</td>
+<td>0.318453</td>
+<td>0.314165</td>
+<td>0.350569</td>
+<td>10.929337</td>
+<td>8.0</td>
+<td>10.214990</td>
+<td>11.242293</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7fc5495eb&hellip;</td>
+</tr><tr><th>2</th>
+<td>54069</td>
+<td>Ohio</td>
+<td>West Virginia</td>
+<td>54</td>
+<td>069</td>
+<td>54069</td>
+<td>54</td>
+<td>69</td>
+<td>1</td>
+<td>0.974132</td>
+<td>&hellip;</td>
+<td>3.310334</td>
+<td>0.272398</td>
+<td>0.358454</td>
+<td>0.376963</td>
+<td>0.390534</td>
+<td>15.621643</td>
+<td>12.9</td>
+<td>14.716681</td>
+<td>17.574021</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7fc5495eb&hellip;</td>
+</tr><tr><th>3</th>
+<td>54051</td>
+<td>Marshall</td>
+<td>West Virginia</td>
+<td>54</td>
+<td>051</td>
+<td>54051</td>
+<td>54</td>
+<td>51</td>
+<td>1</td>
+<td>0.876248</td>
+<td>&hellip;</td>
+<td>0.546097</td>
+<td>0.227647</td>
+<td>0.319580</td>
+<td>0.320953</td>
+<td>0.377346</td>
+<td>11.962834</td>
+<td>8.8</td>
+<td>8.803253</td>
+<td>13.564159</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7fc549565&hellip;</td>
+</tr><tr><th>4</th>
+<td>10003</td>
+<td>New Castle</td>
+<td>Delaware</td>
+<td>10</td>
+<td>003</td>
+<td>10003</td>
+<td>10</td>
+<td>3</td>
+<td>1</td>
+<td>4.228385</td>
+<td>&hellip;</td>
+<td>16.480294</td>
+<td>0.256106</td>
+<td>0.329678</td>
+<td>0.365830</td>
+<td>0.332703</td>
+<td>12.035714</td>
+<td>10.7</td>
+<td>15.169480</td>
+<td>16.380903</td>
+<td>&lt;pysal.cg.shapes.Polygon object at 0x7fc549565&hellip;</td>
+</tr></tbody></table><p>5 rows × 70 columns</p>
+</div>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&lsquo;HR60&rsquo;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">Quantiles</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  2.497               283
+2.497 &lt; x[i] &lt;=  5.104               282
+5.104 &lt; x[i] &lt;=  7.621               282
+7.621 &lt; x[i] &lt;= 10.981               282
+10.981 &lt; x[i] &lt;= 92.937               283</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Once estimated, the user can reclassify based on the same API as the constructor:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  4.265               471
+4.265 &lt; x[i] &lt;=  8.679               470
+8.679 &lt; x[i] &lt;= 92.937               471</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  0.000               180
+0.000 &lt; x[i] &lt;=  2.836               134
+2.836 &lt; x[i] &lt;=  4.265               157
+4.265 &lt; x[i] &lt;=  5.628               157
+5.628 &lt; x[i] &lt;=  7.137               156
+7.137 &lt; x[i] &lt;=  8.679               157
+8.679 &lt; x[i] &lt;= 10.600               157
+10.600 &lt; x[i] &lt;= 13.924               157
+13.924 &lt; x[i] &lt;= 92.937               157</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It doesn&rsquo;t mutate the object unless <code>inplace</code> is provided and is true:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  2.497               283
+2.497 &lt; x[i] &lt;=  5.104               282
+5.104 &lt; x[i] &lt;=  7.621               282
+7.621 &lt; x[i] &lt;= 10.981               282
+10.981 &lt; x[i] &lt;= 92.937               283</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  1.993               236
+1.993 &lt; x[i] &lt;=  4.265               235
+4.265 &lt; x[i] &lt;=  6.245               235
+6.245 &lt; x[i] &lt;=  8.679               235
+8.679 &lt; x[i] &lt;= 11.850               235
+11.850 &lt; x[i] &lt;= 92.937               236</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This also enables users to add new data to the classifier.</p>
+<p>Now, I <em>bet</em> there are better updating equations for the different classifiers than reestimating the entire classifier, like there are for <a href="https://rhettinger.wordpress.com/tag/running-median/" target="_blank">running median problems</a>. I anticipated extending this work with more sophisticated updaters than just reclassifying the entire set. This is why I split the <code><strong>call</strong></code> method from what <em>really</em> does the updating:</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o"><strong></span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span>
+<span class="bp">self</span><span class="o">.</span><span class="n"><strong>init</strong></span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o"></strong></span><span class="n">kwargs</span><span class="p">)</span> <span class="c">#this is the most naive updater</span>
+</pre></div>
+<p>As the comment denotes, this is the most universally-acceptible updater, hence it&rsquo;s definition in the Map_Classify baseclass. Fortunately, this means that any new classifier defined as a subclass of this gets a very naive in-place reclassification method <strong>for free.</strong></p>
+<p>Thus, you can do stuff like:</p></p>
+
+<p></div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">new_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&lsquo;HR90&rsquo;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  3.228               565
+3.228 &lt; x[i] &lt;=  5.912               565
+5.912 &lt; x[i] &lt;=  8.710               564
+8.710 &lt; x[i] &lt;= 12.735               565
+12.735 &lt; x[i] &lt;= 92.937               565</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  0.000               296
+0.000 &lt; x[i] &lt;=  2.200               108
+2.200 &lt; x[i] &lt;=  3.469               201
+3.469 &lt; x[i] &lt;=  4.483               202
+4.483 &lt; x[i] &lt;=  5.394               202
+5.394 &lt; x[i] &lt;=  6.282               201
+6.282 &lt; x[i] &lt;=  7.297               202
+7.297 &lt; x[i] &lt;=  8.266               202
+8.266 &lt; x[i] &lt;=  9.348               201
+9.348 &lt; x[i] &lt;= 10.628               202
+10.628 &lt; x[i] &lt;= 12.217               202
+12.217 &lt; x[i] &lt;= 14.603               201
+14.603 &lt; x[i] &lt;= 18.544               202
+18.544 &lt; x[i] &lt;= 92.937               202</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [22]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">classifier</span>
+</pre></div></p>
+
+<p></div>
+</div>
+</div></p>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>                Quantiles
+
+Lower            Upper              Count
+=========================================
+x[i] &lt;=  2.691               471
+2.691 &lt; x[i] &lt;=  5.069               471
+5.069 &lt; x[i] &lt;=  7.297               470
+7.297 &lt; x[i] &lt;=  9.736               471
+9.736 &lt; x[i] &lt;= 13.736               470
+13.736 &lt; x[i] &lt;= 92.937               471</pre>
+</div>
+
+<p></div></p>
+
+<p></div>
+</div></p>
+
+<p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So, this is what I mean by &ldquo;responsive&rdquo; classes. They should:</p>
+<ol><li>support updating/reuse w/ new data</li>
+<li>support augmentation of initial/init-time options/parameters</li>
+<li>provide <code><strong>call</strong></code> methods that consistently either <code>update</code> or <code>use</code>. </li>
+</ol><p>In map classification, I think <code><strong>call</strong></code> would be better suited to <code>find_bin</code> than <code>update_bins</code>.
+In spatial regression, I think <code><strong>call</strong></code> would be better suited to <code>predict</code> than something else.</p>
+<p><code><strong>call</strong></code> should <strong>never</strong> alias <code>summary()</code> methods, which probably belong in <code><strong>repr</strong></code>, anyway.</p></p>
+
+<p></div>
+</div>
+</div></p>
+
+<p></div>
+</div>
+Tags: python, gis, programming, geography</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Mar 24, 2016 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+
