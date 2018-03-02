@@ -2,7 +2,7 @@
 id: 85162213334
 date: 2014-05-08T18:59:51Z
 url: ok-so-i-think-my-days-of-using-texstudio-are
-title: 
+title: the eternal return (to vim)
 tags: ["computers"," coding"," programming", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/6f275a5adf2364d9d64cad3047a86a87/tumblr_n5a2jr5iql1ts05oao1_1280.png> </figure>

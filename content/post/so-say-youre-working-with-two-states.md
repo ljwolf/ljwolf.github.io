@@ -2,7 +2,7 @@
 id: 95500223474
 date: 2014-08-22T19:55:00Z
 url: so-say-youre-working-with-two-states
-title: 
+title: I got worse at R
 tags: ["r"," scientific computing"," data"," data wrangling"," factor issues"," computing", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/4123ea708055228e108f16ee0b811d67/tumblr_naqfs9Q1p51ts05oao1_1280.png> </figure>

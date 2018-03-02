@@ -2,7 +2,7 @@
 id: 76555996119
 date: 2014-02-13T15:35:53Z
 url: went-crawling-back-into-workflowys-arms-today
-title: 
+title: went crawling back into workflowy's arms today
 tags: ["open source"," workflowy"," hackflowy"," academia"," prodcutivity"," outline", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/7000f227e0669ce9867ad706ae1bd3ab/tumblr_n0ybvtixUt1ts05oao1_540.png> </figure>

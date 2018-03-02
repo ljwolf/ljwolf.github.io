@@ -2,7 +2,7 @@
 id: 162645483709
 date: 2017-07-05T18:56:45Z
 url: i-think-thisll-end-up-being-the-big-story-from-my
-title: 
+title: the highest dimension scatter
 tags: ["gerrymandering"," acadeimca"," dissertation", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/ee8bdd8fd6091d06f6809ab2ce089382/tumblr_osn3qlCL691ts05oao1_1280.png> </figure>

@@ -2,7 +2,7 @@
 id: 170924246034
 date: 2018-02-15T20:09:35Z
 url: this-brexit-analysis-for-the-gisruk-competitions
-title: 
+title: Finally making headway on Brexit Data 
 tags: ["imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/bfae9fe35b797bbe3001ccec7aef2195/tumblr_p47xvzxH9f1ts05oao1_r1_1280.png> </figure>

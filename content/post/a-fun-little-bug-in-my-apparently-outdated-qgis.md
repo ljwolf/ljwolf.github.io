@@ -2,7 +2,7 @@
 id: 98840800049
 date: 2014-09-30T18:57:00Z
 url: a-fun-little-bug-in-my-apparently-outdated-qgis
-title: 
+title: vornoi bugs
 tags: ["computing"," academia"," qgis"," gis"," open source"," oss"," foss"," geography"," grad school", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/7202d2213a242e8dd3eabff5e36edee5/tumblr_ncql4nMXCj1ts05oao2_1280.png> </figure>

@@ -2,7 +2,7 @@
 id: 150300301154
 date: 2016-09-12T02:28:19Z
 url: found-another-error-in-the-clea-as-i-am-building
-title: 
+title: debugging the constituency level electoral archive
 tags: ["politics"," clea"," dissertatino", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/699770293400812fc0e3afa344869c52/tumblr_oddon7FVWK1ts05oao1_1280.png> </figure>

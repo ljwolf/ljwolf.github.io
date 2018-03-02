@@ -2,7 +2,7 @@
 id: 164316207339
 date: 2017-08-17T23:38:37Z
 url: i-forgot-how-killer-the-builtin-matplotlib
-title: 
+title: matplotlib.ion mode
 tags: ["imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/feab3cc44ab39a93b7d10730d7aa781d/tumblr_ouv3gdNWny1ts05oao1_1280.png> </figure>

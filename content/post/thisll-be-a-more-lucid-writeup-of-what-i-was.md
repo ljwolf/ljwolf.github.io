@@ -2,7 +2,7 @@
 id: 146080088369
 date: 2016-06-17T18:27:53Z
 url: thisll-be-a-more-lucid-writeup-of-what-i-was
-title: 
+title: log deterimnants
 tags: ["programming"," python"," bayesian statistics"," statistics"," geography", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/98dc66ae957766a0eff84e65c5324df1/tumblr_o8xt2hUN5T1ts05oao1_1280.png> </figure>

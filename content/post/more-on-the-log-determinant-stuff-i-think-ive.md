@@ -2,7 +2,7 @@
 id: 146181184144
 date: 2016-06-19T20:37:12Z
 url: more-on-the-log-determinant-stuff-i-think-ive
-title: 
+title: more on log determinants
 tags: ["imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/98dc66ae957766a0eff84e65c5324df1/tumblr_o8xt2hUN5T1ts05oao1_1280.png> </figure>

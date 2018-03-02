@@ -2,7 +2,7 @@
 id: 75570984570
 date: 2014-02-04T02:31:00Z
 url: just-shipped-my-first-draft-off-deadlined-march
-title: 
+title: whew.... first "thing" sent off in grad school
 tags: ["academia"," graduate school"," grad school"," school"," anxiety"," nervousness"," nerves"," adorno"," nervous"," modernity"," geography", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/06eded17fa46c44ec52b8466ed5e1f31/tumblr_n0gnk5MkIk1ts05oao1_400.png> </figure>

@@ -2,7 +2,7 @@
 id: 109357444384
 date: 2015-01-27T22:01:33Z
 url: this-is-insane-the-speed-differences-between
-title: 
+title: there really is a big difference vis. scipy/numpy random sampling
 tags: ["python"," speed comparisons"," this is ridic"," numpy masterrace", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/6cd6e5563531e92804d1d49c6800c680/tumblr_niv9qlne5P1ts05oao3_1280.png> </figure>

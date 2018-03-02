@@ -2,7 +2,7 @@
 id: 77996900074
 date: 2014-02-27T05:10:00Z
 url: i-guess-this-is-how-productivity-works-terminal
-title: 
+title: starting to learn julia
 tags: ["julia"," julialang"," academia"," scientific computing."," statistics"," spatial analysis"," shapefiles"," text editors"," editor wars are so silly!", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/2a3a1044351c6ea4bb905f57768fd836/tumblr_n1ng8ocGPN1ts05oao1_r1_1280.png> </figure>

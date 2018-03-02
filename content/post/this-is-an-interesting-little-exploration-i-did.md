@@ -2,7 +2,7 @@
 id: 171389427489
 date: 2018-02-28T15:46:40Z
 url: this-is-an-interesting-little-exploration-i-did
-title: 
+title: Reverse-PCA for making sense of the typical structure in multivariate models 
 tags: ["statistics"," simulation"," machine learning"," geography"," brexit"," analysis", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/190a56be50695e248630bc895ca7f3e5/tumblr_p4vodsgP6L1ts05oao1_r2_1280.png> </figure>

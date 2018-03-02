@@ -2,7 +2,7 @@
 id: 77264557503
 date: 2014-02-20T04:32:52Z
 url: first-simple-program-in-julia-a-greedy-knapsack
-title: 
+title: first simple program in julia- a greedy knapsack
 tags: ["julia"," programming"," optimization"," graduate school"," academia"," geography"," operations research"," college"," julialang", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/5ce4365476d1ec01436f7aef07446414/tumblr_n1afusw5EX1ts05oao1_500.png> </figure>

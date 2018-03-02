@@ -2,7 +2,7 @@
 id: 170285809114
 date: 2018-01-29T20:05:03Z
 url: its-neat-that-this-new-algorithm-is-working
-title: 
+title: price clusters in airbnbs in brooklyn
 tags: ["ml"," stats"," clustering"," brooklyn"," neighbourhoods"," neighborhoods"," airbnb"," price"," economics"," geography"," gis", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/aa3b86b3c69f83bd705c246a087fb3bc/tumblr_p3cgcf3xNS1ts05oao4_1280.png> </figure>

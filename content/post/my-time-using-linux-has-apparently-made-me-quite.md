@@ -2,7 +2,7 @@
 id: 89112989819
 date: 2014-06-17T21:26:16Z
 url: my-time-using-linux-has-apparently-made-me-quite
-title: 
+title: whyyyyy do we not use package managers everywhere?
 tags: ["programming"," python"," package management"," software griping", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/c5f980fa7b12bd84886971568c1004c0/tumblr_n7cbzsYyi41ts05oao1_1280.png> </figure>

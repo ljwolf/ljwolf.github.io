@@ -2,7 +2,7 @@
 id: 145342859409
 date: 2016-06-03T01:40:17Z
 url: visual-display-of-complex-data-can-be-pretty
-title: 
+title: sampling distributions at each grid site
 tags: ["geography"," statistics"," grad school"," python"," gis", "imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/cf10dc435036ea04c78a86e736fd750e/tumblr_o86l35Jg0B1ts05oao1_1280.png> </figure>

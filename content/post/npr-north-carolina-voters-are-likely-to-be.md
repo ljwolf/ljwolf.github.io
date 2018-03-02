@@ -2,7 +2,7 @@
 id: 140876677624
 date: 2016-03-11T17:35:10Z
 url: npr-north-carolina-voters-are-likely-to-be
-title: 
+title: reblogging from NPR
 tags: ["imported", "image"]
 ---
 <figure> <img src=//78.media.tumblr.com/01d3de9fc20e1e88abd4491cd380b6a8/tumblr_o3tzf43d111qdkv8qo1_1280.gif> </figure>
