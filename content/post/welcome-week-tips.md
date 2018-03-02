@@ -3,6 +3,7 @@ id: 78417153835
 date: 2014-03-03T01:34:50Z
 url: welcome-week-tips
 title: Welcome Week Tips
+tags: ["academia"," graduate school"," ph.d."," college", "imported"]
 ---
 <p>So, having just completed our welcome weekend for prospective Ph.D. students, I think I might have suggestions for anyone going to one in the future.</p>
 <p>1. Try to have fun. It can be a wild, stressful, busy few days. But, above all, you should be trying to figure how much you like the people you&rsquo;re with.</p>
@@ -11,4 +12,7 @@ title: Welcome Week Tips
 <p>4. Academics aren’t salespeople, nor is the entire weekend only a sales pitch. Feel free to ask honest questions about the potential drawbacks or problems.</p>
 <p>5. If you’ve made up your mind, don’t be coy. It’s alright to come out and say “ah, this isn’t what I was expecting” and know that. However, keep an open mind and a willingness to make friends, even if you don’t want to end up where you are touring.</p>
 <p>I hope that someone out there finds this useful, cause I sure could&rsquo;ve chilled out for my weekends.</p>
-Tags: academia, graduate school, ph.d., college
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/78417153835/welcome-week-tips'<tt>yetanothergeographer</tt></a></small>

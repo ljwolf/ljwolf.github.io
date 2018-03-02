@@ -3,6 +3,7 @@ id: 144578503954
 date: 2016-05-18T20:48:03Z
 url: puzzles-about-misreplication
 title: Puzzles about (mis)Replication
+tags: ["science"," replicability"," geography"," statistics"," python"," programming", "imported"]
 ---
 <p>So, a while back, I was using a <a href="http://www.tandfonline.com/doi/abs/10.1080/00045608.2014.941732" target="_blank">new compactness metric</a> to <a href="http://www.tandfonline.com/doi/abs/10.1080/00045608.2015.1039109" target="_blank">extend some gerrymandering studies</a>. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.</p>
 
@@ -29,4 +30,7 @@ title: Puzzles about (mis)Replication
 <p>This leads me to wonder really, what is replicability in social science? What does replicability look like when papers fail to compile? I strongly doubt that a focus on &ldquo;science in a box&rdquo; will solve this, even though it&rsquo;s quite important to make sure that what you implement to do your science is, at least, repeatable.</p>
 
 <p>Maybe in response to these experiences, I think the real crux of replicability is actually <em>validity</em>: if you do something that&rsquo;s broadly in line with the theoretical, empirical, and statistical thesis of the paper, you should get similar results.</p>
-Tags: science, replicability, geography, statistics, python, programming
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/144578503954/puzzles-about-misreplication'<tt>yetanothergeographer</tt></a></small>

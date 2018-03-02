@@ -3,6 +3,7 @@ id: 139457868619
 date: 2016-02-16T21:18:10Z
 url: trivial-python-multiprocessing
 title: Trivial Python Multiprocessing
+tags: ["python"," multiprocessing"," gis"," geoprocessing"," geography"," tumblr markdown doesn't support codeblocks with returns?", "imported"]
 ---
 <p>I just wrote up a notebook for a fellow PhD student on how I use python&rsquo;s builtin <code>multiprocessing</code> library to do embarassingly parallel computations much faster. Every time I think about it, I&rsquo;m floored at how simple using the builtin <code>multiprocessing</code> library is for certain operations.</p>
 
@@ -35,4 +36,7 @@ So, if you can define your function to take one set of parameters and compute on
 
 <p>And then results contains the IPQ for each polygon.
 This is super simple, and can save tons of time when you can&rsquo;t figure out how to vectorize a particular operation, or just plain need to do a ton of processing.</p>
-Tags: python, multiprocessing, GIS, geoprocessing, geography, tumblr markdown doesn't support codeblocks with returns?
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/139457868619/trivial-python-multiprocessing'<tt>yetanothergeographer</tt></a></small>

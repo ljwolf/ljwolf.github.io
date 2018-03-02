@@ -3,6 +3,7 @@ id: 144898901434
 date: 2016-05-25T04:23:38Z
 url: call-notes-about-my-request-for-comment
 title: Call notes about my Request for Comment
+tags: ["gsoc"," gis"," python", "imported"]
 ---
 <p>The followng were comments I recieved on my <a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Request for Comment</a> submitted a bit ago.</p>
 
@@ -50,4 +51,7 @@ pdio.read_files</li>
 <li>Investigate possibility of serializing with Libfeather (remote, if time
 remaining)</li>
 </ul>
-Tags: gsoc, gis, python
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/144898901434/call-notes-about-my-request-for-comment'<tt>yetanothergeographer</tt></a></small>

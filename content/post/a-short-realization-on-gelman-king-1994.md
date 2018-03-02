@@ -3,6 +3,7 @@ id: 97287883904
 date: 2014-09-12T04:01:00Z
 url: a-short-realization-on-gelman-king-1994
 title: A Short Realization on Gelman-King (1994)
+tags: ["politics"," bayesian statistics"," bayes"," elections"," electoral analysis"," statistics", "imported"]
 ---
 <h1>Elections, Bayes, and one realization about the Gelman-King Model</h1>
 <p>People make a lot of hay out of the rise of <a href="http://www.forbes.com/sites/singularity/2012/11/07/nate-silver-and-the-rise-of-political-data-science/" target="_blank">Nate Silver</a> and <a href="http://www.stat.columbia.edu/~gelman/research/published/election15Feb.pdf" target="_blank">Bayesian poll averaging</a> when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. </p>
@@ -37,4 +38,7 @@ title: A Short Realization on Gelman-King (1994)
 <p>If you&rsquo;re studying a phenomena in social science with a long literature, you might want to check out Bayesian methods in your field or subdomain. </p>
 <p>[^1]: as an aside, I think these articles (and conflicts over frequentist v. subjectivist statistical interpretations) is of the most edited &amp; flamed topics on wikipedia. </p>
 <p>[2^]: <span>Usually (and I mean almost always), Bayesians use Maximum Likelihood estimators, but the choice of estimator is not critically important here.</span></p>
-Tags: politics, bayesian statistics, bayes, elections, electoral analysis, statistics
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/97287883904/a-short-realization-on-gelman-king-1994'<tt>yetanothergeographer</tt></a></small>

@@ -3,6 +3,7 @@ id: 120805077929
 date: 2015-06-05T18:01:54Z
 url: cenpy-an-exploratory-interface-to-the-census
 title: Untitled
+tags: ["python"," census"," us census bureau"," civic hacking"," api"," geography", "imported"]
 ---
 <h1>CenPy - An exploratory interface to the Census API</h1>
 
@@ -28,4 +29,7 @@ pythonpath should work just fine. Alternatively, check out the
 <a href="https://github.com/ljwolf/cenpy/blob/master/demo.ipynb" target="_blank">demo</a> and see its
 functionality. Honestly, I&rsquo;m super excited about the number of datasources that
 this makes easily accessible!</p>
-Tags: python, census, US Census Bureau, civic hacking, API, geography
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/120805077929/cenpy-an-exploratory-interface-to-the-census'<tt>yetanothergeographer</tt></a></small>

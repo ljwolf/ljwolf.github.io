@@ -3,6 +3,7 @@ id: 134890851709
 date: 2015-12-09T20:45:53Z
 url: the-competence-ceiling
 title: The competence ceiling
+tags: ["programming"," python"," gis"," geography", "imported"]
 ---
 <p>After programming Haskell, R, or Python for about 6 years now, I feel like I’m sufficiently skilled with Python to make anything that I want to do in python immediate.</p>
 
@@ -23,4 +24,7 @@ title: The competence ceiling
 <p>I don’t feel that I know everything about python, but I do feel that I know as much as I need to know to do most of what I need to do. That is, every time I start up vim and bang out a set of imports, I feel confident in my abilities to do what I need to do.</p>
 
 <p>So, how do you break out of this plateau of “competent enough?” I’m not sure yet&hellip;</p>
-Tags: programming, python, GIS, geography
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/134890851709/the-competence-ceiling'<tt>yetanothergeographer</tt></a></small>

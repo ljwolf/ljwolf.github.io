@@ -3,6 +3,7 @@ id: 121293267709
 date: 2015-06-11T15:58:41Z
 url: cenpy-is-now-pip-installable
 title: Cenpy is now pip installable!
+tags: ["census"," data"," data hacking"," python"," geography"," gis"," api", "imported"]
 ---
 <p><code>pip install cenpy</code></p>
 
@@ -36,4 +37,7 @@ pythonpath should work just fine. Alternatively, check out the
 functionality. Honestly, I’m super excited about the number of datasources that
 this makes easily accessible!</p>
 </blockquote>
-Tags: census, data, data hacking, python, geography, GIS, API
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/121293267709/cenpy-is-now-pip-installable'<tt>yetanothergeographer</tt></a></small>

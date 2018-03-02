@@ -3,6 +3,7 @@ id: 141637449594
 date: 2016-03-24T22:32:23Z
 url: bringing-classifiers-alive-in-pysal
 title: Bringing Classifiers Alive in PySAL
+tags: ["python"," gis"," programming"," geography", "imported"]
 ---
 <div tabindex="-1" id="notebook" class="border-box-sizing">
 <div class="container" id="notebook-container">
@@ -690,4 +691,7 @@ In spatial regression, I think <code>__call__</code> would be better suited to <
 
 </div>
 </div>
-Tags: python, gis, programming, geography
+
+
+
+<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/141637449594/bringing-classifiers-alive-in-pysal'<tt>yetanothergeographer</tt></a></small>
