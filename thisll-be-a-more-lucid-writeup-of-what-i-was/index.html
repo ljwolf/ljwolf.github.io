@@ -11,9 +11,8 @@
 
 <link rel="canonical" href="/thisll-be-a-more-lucid-writeup-of-what-i-was/">
 <base href="/" />
-<meta property="og:title" content="Untitled" />
-<meta property="og:description" content="Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+<meta property="og:title" content="" />
+<meta property="og:description" content="Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/thisll-be-a-more-lucid-writeup-of-what-i-was/" />
@@ -35,22 +34,20 @@ You see, some spatial econometric models require that the log determinant of a v
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Untitled"/>
-<meta name="twitter:description" content="Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix."/>
 
 
 
-<meta itemprop="name" content="Untitled">
-<meta itemprop="description" content="Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.">
 
 
 <meta itemprop="datePublished" content="2016-06-17T18:27:53&#43;00:00" />
 <meta itemprop="dateModified" content="2016-06-17T18:27:53&#43;00:00" />
-<meta itemprop="wordCount" content="1000">
+<meta itemprop="wordCount" content="984">
 
 
 
@@ -129,7 +126,7 @@ th {
 <title>
 
 
-     Untitled 
+      
 
 </title>
 
@@ -177,8 +174,8 @@ th {
 
 
 <article class="post">
-    <h1 class="title"> Untitled </h1>
-    <div class="content"> <figure> <img src=//78.media.tumblr.com/98dc66ae957766a0eff84e65c5324df1/tumblr_o8xt2hUN5T1ts05oao1_1280.png> <figcaption>Photo Caption: <p>This’ll be a more lucid writeup of what I was talking about last night.</p>
+    <h1 class="title">  </h1>
+    <div class="content"> <figure> <img src=//78.media.tumblr.com/98dc66ae957766a0eff84e65c5324df1/tumblr_o8xt2hUN5T1ts05oao1_1280.png> </figure>
 
 <p>Recently, I’ve been working on getting spatial econometric models implemented using <a href="https://github.com/pymc-devs/pymc3" target="_blank">PyMC3</a>. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.</p>
 
@@ -197,7 +194,6 @@ th {
 <p>But, I’m having an issue using the <code>Op</code> in a PyMC3 model when the gradient is sparse. I’m unsure if the error is in my implementation, if it’s something with PyMC3, or if it’s related to <a href="https://github.com/Theano/Theano/issues/2782" target="_blank">this bug</a>. I believe it’s the latter, since NUTS is invariably combining the gradient of my LogDet op with other gradients in the model, but I haven’t figured it out yet.</p>
 
 <p>Regardless, the implementations of the <code>Op</code>s, focusing on the <code>perform</code> methods,</p>
-
 
 <pre><code>
 
@@ -264,14 +260,12 @@ return [ts.csc_from_dense(dout)]
 
 <p>This is a bummer, since, as I show above, the log determinant runs quite quickly. So, I’m stuck trying to figure out whether this is:</p>
 
-<ol><li>An error in how I’m doing the gradient of the sparse log determinant</li>
+<p><ol><li>An error in how I’m doing the gradient of the sparse log determinant</li>
 <li>An error in how PyMC3 compares gradients of heterogeneous collections</li>
 <li>An error in how Theano computes the gradient of a compound heterogeneous collection</li>
-</ol><p>But, the main point is that the <code>Op</code>, as far as I can tell, has a working <code>perform</code> and <code>grad</code>, and I’m pretty close to having this available to do efficient sparse log determinants while using PyMC3 on spatial econometric models.</p>
+</ol><p>But, the main point is that the <code>Op</code>, as far as I can tell, has a working <code>perform</code> and <code>grad</code>, and I’m pretty close to having this available to do efficient sparse log determinants while using PyMC3 on spatial econometric models.</p></p>
 
-
-
-<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/146080088369/thisll-be-a-more-lucid-writeup-of-what-i-was'<tt>yetanothergeographer</tt></a></small></figcaption></figure>
+<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/146080088369/thisll-be-a-more-lucid-writeup-of-what-i-was'<tt>yetanothergeographer</tt></a></small></p>
  </div>
     <footer class="post-footer">
 

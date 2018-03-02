@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -33,22 +32,21 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/working-on-a-paper-about-models-that-can-have-very/</link>
       <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
-      <description>Photo Caption: Working on a paper about models that can have very weakly-identified priors, and I see that this trace outcome pops up. This is a Spatially-Varying Coefficient Process model from Gelfand, and serves as a Bayesian equivalent to GWR. Surprisingly (to me) is that the covariance matrix between the hierarchical effects is not at all affected by the spatial range parameter, Phi. The reason why this surprises me is that in other HLM contexts, like variance components models with spatial effects, the spatial and aspatial components of the covariance matrix are inversely related, and it’s really easy to derive that.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
     </item>
     

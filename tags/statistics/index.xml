@@ -12,23 +12,22 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title>Reverse-PCA for making sense of the typical structure in multivariate models</title>
       <link>/this-is-an-interesting-little-exploration-i-did/</link>
       <pubDate>Wed, 28 Feb 2018 15:46:40 +0000</pubDate>
       
       <guid>/this-is-an-interesting-little-exploration-i-did/</guid>
-      <description>Photo Caption: This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&amp;rsquo;s not going into my analysis, but I like the concept, so I&amp;rsquo;ll post it here (cause that&amp;rsquo;s the entire point of this blog!)
-I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure.</description>
+      <description>I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&amp;rsquo;m a bit limited because I don&amp;rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
+In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;rsquo;s telling me from the conditional estimates because I don&amp;rsquo;t really have a sense of the joint picture: I don&amp;rsquo;t really intuit how they covary across places, like I might in US counties or states.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/all-those-p-values-will-be-lost-in-time-like/</link>
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description> Photo Caption: All those p-values will be lost in time, like fixed effects in shrinkage estimators.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -43,12 +42,12 @@ gist here. 
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/at-top-a-metropolis-within-gibbs-sampled-sar/</link>
       <pubDate>Sun, 09 Oct 2016 18:53:35 +0000</pubDate>
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
-      <description>Photo Caption: At top, a Metropolis-within-Gibbs-sampled SAR model. At bottom, a NUTS-sampled SAR model. Both took the same time to sample, but the Gibbs drew 20X more samples. But, look at the difference in serial autocorrelation! It’s easy to see the Gibbs sampler, while hovering around the same value, is clearly less efficient in sampling the value. I’ll have to see if slice-within-Gibbs fares any better while determining if the 20X more samples actually contain more information than the NUTS-drawn samples.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -62,13 +61,12 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -83,12 +81,12 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>Photo Caption: As I’m having to wind down on summer of code work and ramp up on dissertation &amp;amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -102,23 +100,22 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/man-im-so-close-to-a-pretty-massive-speedup-of/</link>
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
       <guid>/man-im-so-close-to-a-pretty-massive-speedup-of/</guid>
-      <description>Photo Caption: Man&amp;hellip; I’m so close to a pretty massive speedup of something I’m working on&amp;hellip; something that’d make a very nice deliverable. But, I can’t figure out how to correctly compute gradients in theano. I mean, I know what the gradient is, and I’ve written it correctly, but I can’t figure out whether it’s theano or pymc3 is throwing the errors In fact, I can get a gradient in Theano just fine.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -134,13 +131,13 @@ Testing &amp;amp; Merging of project code Since many of the improvements I&amp;r
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>Photo Caption: Visual display of complex data can be pretty tricky&amp;hellip;
-This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.</description>
+      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
+The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
     </item>
     
     <item>
@@ -154,12 +151,12 @@ After trying multiple times to verify whether it was my code or if the published
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/kinda-nice-when-the-model-youre-working-with/</link>
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description> Photo Caption: Kinda nice when the model you’re working with clearly is trying to work.  imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -221,12 +218,12 @@ Flashbacks to my decision to study political science and not Industrial Engineer
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/i-guess-this-is-how-productivity-works-terminal/</link>
       <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
       
       <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
-      <description>Photo Caption: I guess this is how productivity works? Terminal sessions and web browsers. Seems like nothing else is needed nowadays. Though, I guess the guys over at LightTable would beg to disagree. I tried LightTable today for some LaTeX stuff. Seems like a brilliant tool there, if things like LyX or TexStudio didn&amp;rsquo;t exist. TexStudio in particular, my choice of LaTeX editor, does a wonderful job showing the structure of the workspace in one cohesive, intuitive way.</description>
+      <description>That aside, I&amp;rsquo;ve forked the Shapefile.jl repo and put in some goals to further Julia&amp;rsquo;s spatial analysis capabilities. I don&amp;rsquo;t know what the community ethics/practices are for Julia, but I&amp;rsquo;m always slightly nervous about being the first fork on a repo that hasn&amp;rsquo;t been touched in a few months. I can&amp;rsquo;t really explain why. Maybe it&amp;rsquo;s just a concern that my preference for private repos and anonymous contribution makes my github page look sparse.</description>
     </item>
     
     <item>

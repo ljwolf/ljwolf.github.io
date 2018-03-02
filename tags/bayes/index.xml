@@ -12,50 +12,48 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/all-those-p-values-will-be-lost-in-time-like/</link>
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description> Photo Caption: All those p-values will be lost in time, like fixed effects in shrinkage estimators.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/at-top-a-metropolis-within-gibbs-sampled-sar/</link>
       <pubDate>Sun, 09 Oct 2016 18:53:35 +0000</pubDate>
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
-      <description>Photo Caption: At top, a Metropolis-within-Gibbs-sampled SAR model. At bottom, a NUTS-sampled SAR model. Both took the same time to sample, but the Gibbs drew 20X more samples. But, look at the difference in serial autocorrelation! It’s easy to see the Gibbs sampler, while hovering around the same value, is clearly less efficient in sampling the value. I’ll have to see if slice-within-Gibbs fares any better while determining if the 20X more samples actually contain more information than the NUTS-drawn samples.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/working-on-a-paper-about-models-that-can-have-very/</link>
       <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
-      <description>Photo Caption: Working on a paper about models that can have very weakly-identified priors, and I see that this trace outcome pops up. This is a Spatially-Varying Coefficient Process model from Gelfand, and serves as a Bayesian equivalent to GWR. Surprisingly (to me) is that the covariance matrix between the hierarchical effects is not at all affected by the spatial range parameter, Phi. The reason why this surprises me is that in other HLM contexts, like variance components models with spatial effects, the spatial and aspatial components of the covariance matrix are inversely related, and it’s really easy to derive that.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>Photo Caption: As I’m having to wind down on summer of code work and ramp up on dissertation &amp;amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>

@@ -31,13 +31,12 @@ I’ve put together a notebook where I go through and explore some modeling of t
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
     </item>
     
@@ -64,14 +63,12 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description> Photo Caption: Yep, that’s image view from within a terminal using libsixel
-This is something I’ve always wanted, a way to just quickly dump scientific visualizations to a viewer within a CLI application. It looks like this does exactly that. 
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -86,15 +83,12 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</link>
       <pubDate>Fri, 16 Oct 2015 20:02:11 +0000</pubDate>
       
       <guid>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</guid>
-      <description> Photo Caption: Fits nicely with one of my favorite quotes:
-“As a human being, one has been endowed with just enough intelligence to be able to see clearly how utterly inadequate that intelligence is when confronted with what exists.”
-from dr. dobbs
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -108,37 +102,35 @@ from dr. dobbs
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/my-time-using-linux-has-apparently-made-me-quite/</link>
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       
       <guid>/my-time-using-linux-has-apparently-made-me-quite/</guid>
-      <description>Photo Caption: My time using linux has apparently made me quite lazy in OSX.
-I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
-Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists.</description>
+      <description>I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
+Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists. Even Microsoft has its standardized .</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/ok-so-i-think-my-days-of-using-texstudio-are/</link>
       <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
       
       <guid>/ok-so-i-think-my-days-of-using-texstudio-are/</guid>
-      <description> Photo Caption: OK&amp;hellip; so I think my days of using texstudio are over. Vim-latex&amp;rsquo;s reference manager is leaps and bounds easier to use than texsudio.
-Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
+      <description>Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
 I guess color scheme fights are about as lame as you can get. Except maybe fights over brace or comment styles&amp;hellip;
- imported from: yetanothergeographer </description>
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp;amp; Zhang&amp;rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
-A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.</description>
+      <description>A couple realizations:
+1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
+2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
     </item>
     
   </channel>

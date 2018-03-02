@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/every-time-i-use-a-sixel-based-library-it-just/</link>
       <pubDate>Mon, 10 Oct 2016 19:25:04 +0000</pubDate>
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
-      <description>Photo Caption: every time I use a sixel-based library, it just feels super neat. Sixel is a terminal image format that you can use to show images straight in a command line. Since it’s actually just an image encoded in a terminal escape sequence, there’s no futzing with X11 window forwarding. 
-While the format is occasionally buggy when displaying complex images, the ability to quickly work with models and display full images directly inline with the ipython qtconsole is just amazing.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
   </channel>

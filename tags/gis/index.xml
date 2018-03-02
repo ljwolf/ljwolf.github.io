@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/its-neat-that-this-new-algorithm-is-working/</link>
       <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
       
       <guid>/its-neat-that-this-new-algorithm-is-working/</guid>
-      <description>Photo Caption: It&amp;rsquo;s neat that this new algorithm is working correctly. Here, a few cluster solutions for spatially-contiguous clustering are shown in Brooklyn using some price data for some Airbnbs. I&amp;rsquo;m pretty excited about this new technique, so hopefully I&amp;rsquo;ll get it all prepped soon.
-I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.</description>
+      <description>I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.
+I guess that&amp;rsquo;s probably pretty common among researchers, but the thrill of wrestling with a genuinely new problem is interesting, enjoyable, and difficult. Sometimes, it feels like documenting that wrestling is a bit tedious.</description>
     </item>
     
     <item>
@@ -32,13 +32,12 @@ I’ve put together a notebook where I go through and explore some modeling of t
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -72,13 +71,13 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>Photo Caption: Visual display of complex data can be pretty tricky&amp;hellip;
-This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.</description>
+      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
+The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
     </item>
     
     <item>
@@ -125,14 +124,12 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description> Photo Caption: Yep, that’s image view from within a terminal using libsixel
-This is something I’ve always wanted, a way to just quickly dump scientific visualizations to a viewer within a CLI application. It looks like this does exactly that. 
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -247,13 +244,12 @@ You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s fro
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/getting-excited-about-some-cool-new-exploration/</link>
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
       <guid>/getting-excited-about-some-cool-new-exploration/</guid>
-      <description> Photo Caption: getting excited about some cool new exploration while getting to know seaborn.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -268,14 +264,13 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/that-compression-is-bewilderingly-good-the-full/</link>
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
-      <description> Photo Caption: That compression is bewilderingly good. The full census short form at block level (generated using a static file reader soon-to-be in cenpy) can be compressed from nearly 60 GB down to 3.1 GB.
-Simply amazing.
- imported from: yetanothergeographer </description>
+      <description>Simply amazing.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -299,13 +294,12 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/mulitprocessing-business-in-the-front-parallel/</link>
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
       <guid>/mulitprocessing-business-in-the-front-parallel/</guid>
-      <description> Photo Caption: mulitprocessing: business in the front, parallel in the back.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -363,14 +357,14 @@ Adapting this, I should be good. Though, I&amp;rsquo;ll have to ask why it was d
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       
       <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
-      <description>Photo Caption: A fun little bug in my apparently outdated QGIS (version 2.2).
-I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
-At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</description>
+      <description>I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
+At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.
+But, if you know things about voronoi polygons, you know that they</description>
     </item>
     
   </channel>

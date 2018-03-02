@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/man-im-so-close-to-a-pretty-massive-speedup-of/</link>
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
       <guid>/man-im-so-close-to-a-pretty-massive-speedup-of/</guid>
-      <description>Photo Caption: Man&amp;hellip; I’m so close to a pretty massive speedup of something I’m working on&amp;hellip; something that’d make a very nice deliverable. But, I can’t figure out how to correctly compute gradients in theano. I mean, I know what the gradient is, and I’ve written it correctly, but I can’t figure out whether it’s theano or pymc3 is throwing the errors In fact, I can get a gradient in Theano just fine.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
   </channel>

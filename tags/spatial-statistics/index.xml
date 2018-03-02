@@ -23,12 +23,12 @@ gist here. 
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>Photo Caption: As I’m having to wind down on summer of code work and ramp up on dissertation &amp;amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
   </channel>

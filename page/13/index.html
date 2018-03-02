@@ -167,7 +167,7 @@ th {
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/more-on-the-log-determinant-stuff-i-think-ive/'> Untitled</a> </h2>
+    <h2 class="title"> <a href='/more-on-the-log-determinant-stuff-i-think-ive/'> </a> </h2>
     <div class="meta">
       Jun 19, 2016 - 1 minutes
     </div>
@@ -187,7 +187,7 @@ th {
   </header>
 
   <div class="summary">
-    Photo Caption: More on the log determinant stuff, I think I’ve figured it out. You see, the full likelihood of the model I&rsquo;m working with is something like:
+    You see, the full likelihood of the model I&rsquo;m working with is something like:
 $$|I - \rho W| \times \mathcal{N}(X\beta + \rho W y, \sigma^2) $$
 And, since (W) and (I) are constants, I actually need the gradient of the log determinant with respect to ( \rho ), not (A). Since the derivative of the log determinant with respect to (A), the full laplacian matrix, is an (N \times N) matrix, I was getting a conformality error in PyMC3, which wanted the derivative with respect to $\rho$ and was expecting a scalar.
     <a href='/more-on-the-log-determinant-stuff-i-think-ive/' class="rmore">Read more ...</a>
@@ -202,7 +202,7 @@ And, since (W) and (I) are constants, I actually need the gradient of the log de
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/thisll-be-a-more-lucid-writeup-of-what-i-was/'> Untitled</a> </h2>
+    <h2 class="title"> <a href='/thisll-be-a-more-lucid-writeup-of-what-i-was/'> </a> </h2>
     <div class="meta">
       Jun 17, 2016 - 5 minutes
     </div>
@@ -242,8 +242,7 @@ And, since (W) and (I) are constants, I actually need the gradient of the log de
   </header>
 
   <div class="summary">
-    Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+    Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.
     <a href='/thisll-be-a-more-lucid-writeup-of-what-i-was/' class="rmore">Read more ...</a>
   </div>
@@ -257,7 +256,7 @@ You see, some spatial econometric models require that the log determinant of a v
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/man-im-so-close-to-a-pretty-massive-speedup-of/'> Untitled</a> </h2>
+    <h2 class="title"> <a href='/man-im-so-close-to-a-pretty-massive-speedup-of/'> </a> </h2>
     <div class="meta">
       Jun 17, 2016 - 1 minutes
     </div>
@@ -289,7 +288,7 @@ You see, some spatial econometric models require that the log determinant of a v
   </header>
 
   <div class="summary">
-    Photo Caption: Man&hellip; I’m so close to a pretty massive speedup of something I’m working on&hellip; something that’d make a very nice deliverable. But, I can’t figure out how to correctly compute gradients in theano. I mean, I know what the gradient is, and I’ve written it correctly, but I can’t figure out whether it’s theano or pymc3 is throwing the errors In fact, I can get a gradient in Theano just fine.
+    imported from: yetanothergeographer
     <a href='/man-im-so-close-to-a-pretty-massive-speedup-of/' class="rmore">Read more ...</a>
   </div>
 

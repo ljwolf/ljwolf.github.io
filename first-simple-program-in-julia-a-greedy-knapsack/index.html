@@ -11,10 +11,10 @@
 
 <link rel="canonical" href="/first-simple-program-in-julia-a-greedy-knapsack/">
 <base href="/" />
-<meta property="og:title" content="Untitled" />
-<meta property="og:description" content="Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp; Zhang&rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
-A couple realizations:
-1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well." />
+<meta property="og:title" content="" />
+<meta property="og:description" content="A couple realizations:
+1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well.
+2.) I wanted to implement this using a queue, but apparently those aren&rsquo;t standard elements in Julia&rsquo;s base. And, for some reason, Julia&rsquo;s package/module interface wasn&rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/first-simple-program-in-julia-a-greedy-knapsack/" />
 
@@ -35,22 +35,22 @@ A couple realizations:
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Untitled"/>
-<meta name="twitter:description" content="Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp; Zhang&rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
-A couple realizations:
-1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well."/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="A couple realizations:
+1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well.
+2.) I wanted to implement this using a queue, but apparently those aren&rsquo;t standard elements in Julia&rsquo;s base. And, for some reason, Julia&rsquo;s package/module interface wasn&rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages."/>
 
 
 
-<meta itemprop="name" content="Untitled">
-<meta itemprop="description" content="Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp; Zhang&rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
-A couple realizations:
-1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well.">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="A couple realizations:
+1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well.
+2.) I wanted to implement this using a queue, but apparently those aren&rsquo;t standard elements in Julia&rsquo;s base. And, for some reason, Julia&rsquo;s package/module interface wasn&rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.">
 
 
 <meta itemprop="datePublished" content="2014-02-20T04:32:52&#43;00:00" />
 <meta itemprop="dateModified" content="2014-02-20T04:32:52&#43;00:00" />
-<meta itemprop="wordCount" content="425">
+<meta itemprop="wordCount" content="366">
 
 
 
@@ -129,7 +129,7 @@ th {
 <title>
 
 
-     Untitled 
+      
 
 </title>
 
@@ -177,8 +177,8 @@ th {
 
 
 <article class="post">
-    <h1 class="title"> Untitled </h1>
-    <div class="content"> <figure> <img src=//78.media.tumblr.com/5ce4365476d1ec01436f7aef07446414/tumblr_n1afusw5EX1ts05oao1_500.png> <figcaption>Photo Caption: <p>First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CCQQFjAA&amp;url=http%3A%2F%2Fns1.sliponline.org%2FPublications%2FJournals%2Fj16.pdf&amp;ei=WsoFU6mRBYLwyQHGvoCwBw&amp;usg=AFQjCNFXdaaiPuWMYENMcjHuxFxH52C9EA&amp;sig2=P8lWvRdRPbyBLC9VNMi2TQ&amp;bvm=bv.61725948,d.aWc" target="_blank">OBA</a> or <a href="https://www.math.lsu.edu/~hozhang/papers/cg_descent.pdf" target="_blank">Hagar &amp; Zhang&rsquo;s Conjugate Gradient Descent </a>algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!</p>
+    <h1 class="title">  </h1>
+    <div class="content"> <p><figure> <img src=//78.media.tumblr.com/5ce4365476d1ec01436f7aef07446414/tumblr_n1afusw5EX1ts05oao1_500.png> </figure>
 <p>A couple realizations:</p>
 <p>1.) Having learned R first, I&rsquo;m continually disappointed when standard arrays don&rsquo;t implement sorting well.</p>
 <p>2.) I wanted to implement this using a queue, but apparently those aren&rsquo;t standard elements in Julia&rsquo;s base. And, for some reason, Julia&rsquo;s package/module interface wasn&rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages. Maybe that&rsquo;s because it&rsquo;s at 2am, but I never had a problem understanding python import, Haskell&rsquo;s Cabal, or R taskview/package structure at any time of night.</p>
@@ -187,11 +187,9 @@ th {
 <p>5.) There is already a shapefile library, a k-nearest library, and some other geography-related stuff. Add in a baked-in connection to NLOpt, Gurobi, Cplex, and BLAS and it looks like this environment was custom-made for spatial optimization. It&rsquo;s nice to see equal focus on optimization and statistics, where R&rsquo;s optimization libraries are anemic at best and slower than enumeration at worst :)</p>
 <p>6.) The community is small, and I see a gap where I can contribute some serious tools. One might be building an interface between it and PySAL. Of course, if Julia&rsquo;s the faster language, it might be smarter to go the other way around, doing analysis in Julia and piping it back into PySAL. Who knows. With IJulia, it might be better to do it that way. I&rsquo;ll think on it.</p>
 <p>7.) I&rsquo;m getting better at programming. This took me much less time than the last few times I implemented similar (or more simple algorithms). Maybe I should move to out of kilter implementation as my first-case work&hellip;</p>
-<p>8.) I might just have become a Julian!</p>
+<p>8.) I might just have become a Julian!</p></p>
 
-
-
-<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/77264557503/first-simple-program-in-julia-a-greedy-knapsack'<tt>yetanothergeographer</tt></a></small></figcaption></figure>
+<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/77264557503/first-simple-program-in-julia-a-greedy-knapsack'<tt>yetanothergeographer</tt></a></small></p>
  </div>
     <footer class="post-footer">
 

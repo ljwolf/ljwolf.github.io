@@ -42,12 +42,12 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/i-guess-this-is-how-productivity-works-terminal/</link>
       <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
       
       <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
-      <description>Photo Caption: I guess this is how productivity works? Terminal sessions and web browsers. Seems like nothing else is needed nowadays. Though, I guess the guys over at LightTable would beg to disagree. I tried LightTable today for some LaTeX stuff. Seems like a brilliant tool there, if things like LyX or TexStudio didn&amp;rsquo;t exist. TexStudio in particular, my choice of LaTeX editor, does a wonderful job showing the structure of the workspace in one cohesive, intuitive way.</description>
+      <description>That aside, I&amp;rsquo;ve forked the Shapefile.jl repo and put in some goals to further Julia&amp;rsquo;s spatial analysis capabilities. I don&amp;rsquo;t know what the community ethics/practices are for Julia, but I&amp;rsquo;m always slightly nervous about being the first fork on a repo that hasn&amp;rsquo;t been touched in a few months. I can&amp;rsquo;t really explain why. Maybe it&amp;rsquo;s just a concern that my preference for private repos and anonymous contribution makes my github page look sparse.</description>
     </item>
     
   </channel>

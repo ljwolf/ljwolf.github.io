@@ -12,22 +12,23 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/so-say-youre-working-with-two-states/</link>
       <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
       
       <guid>/so-say-youre-working-with-two-states/</guid>
-      <description>Photo Caption: So, say you&amp;rsquo;re working with two state&amp;rsquo;s congressional data. All of it&amp;rsquo;s been cleaned and made through a list comprehension and write statement in python using pandas. Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail.</description>
+      <description>Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
+ ERROR: Some $VOTE values not in [0,1] interval.
+ So, I did what the reasonable person who is used to using float() would do and just as.</description>
     </item>
     
   </channel>

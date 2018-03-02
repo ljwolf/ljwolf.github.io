@@ -12,14 +12,12 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description> Photo Caption: Yep, that’s image view from within a terminal using libsixel
-This is something I’ve always wanted, a way to just quickly dump scientific visualizations to a viewer within a CLI application. It looks like this does exactly that. 
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
   </channel>

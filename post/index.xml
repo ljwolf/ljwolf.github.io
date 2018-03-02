@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title>Reverse-PCA for making sense of the typical structure in multivariate models</title>
       <link>/this-is-an-interesting-little-exploration-i-did/</link>
       <pubDate>Wed, 28 Feb 2018 15:46:40 +0000</pubDate>
       
       <guid>/this-is-an-interesting-little-exploration-i-did/</guid>
-      <description>Photo Caption: This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&amp;rsquo;s not going into my analysis, but I like the concept, so I&amp;rsquo;ll post it here (cause that&amp;rsquo;s the entire point of this blog!)
-I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure.</description>
+      <description>I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&amp;rsquo;m a bit limited because I don&amp;rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
+In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;rsquo;s telling me from the conditional estimates because I don&amp;rsquo;t really have a sense of the joint picture: I don&amp;rsquo;t really intuit how they covary across places, like I might in US counties or states.</description>
     </item>
     
     <item>
@@ -34,14 +34,13 @@ Regardless, I&amp;rsquo;m still seeking that best pub that does good coffee and 
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/this-brexit-analysis-for-the-gisruk-competitions/</link>
       <pubDate>Thu, 15 Feb 2018 20:09:35 +0000</pubDate>
       
       <guid>/this-brexit-analysis-for-the-gisruk-competitions/</guid>
-      <description> Photo Caption: This brexit analysis for the GISRUK competition&amp;rsquo;s making some headway!
-That is after, of course, I just decided to focus on other data than data in the competition.
- imported from: yetanothergeographer </description>
+      <description>That is after, of course, I just decided to focus on other data than data in the competition.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -55,35 +54,33 @@ talking fast with a dense amount of facile textual references really makes peopl
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/never-thought-id-be-complaining-about-only-having/</link>
       <pubDate>Wed, 31 Jan 2018 07:07:03 +0000</pubDate>
       
       <guid>/never-thought-id-be-complaining-about-only-having/</guid>
-      <description> Photo Caption: Never thought I&amp;rsquo;d be complaining about only having 128 GB of memory (half swap).
-Not sure where this happens, since I&amp;rsquo;m just using sparse matrices here. I guess they might get densified somewhere below me &amp;amp; then that overhead allocation doesn&amp;rsquo;t get returned to other processes, it&amp;rsquo;s just claimed by the jupyter kernel.
+      <description>Not sure where this happens, since I&amp;rsquo;m just using sparse matrices here. I guess they might get densified somewhere below me &amp;amp; then that overhead allocation doesn&amp;rsquo;t get returned to other processes, it&amp;rsquo;s just claimed by the jupyter kernel.
 Which&amp;hellip;. means that my two kernels compete for space.
- imported from: yetanothergeographer </description>
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/its-neat-that-this-new-algorithm-is-working/</link>
       <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
       
       <guid>/its-neat-that-this-new-algorithm-is-working/</guid>
-      <description>Photo Caption: It&amp;rsquo;s neat that this new algorithm is working correctly. Here, a few cluster solutions for spatially-contiguous clustering are shown in Brooklyn using some price data for some Airbnbs. I&amp;rsquo;m pretty excited about this new technique, so hopefully I&amp;rsquo;ll get it all prepped soon.
-I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.</description>
+      <description>I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.
+I guess that&amp;rsquo;s probably pretty common among researchers, but the thrill of wrestling with a genuinely new problem is interesting, enjoyable, and difficult. Sometimes, it feels like documenting that wrestling is a bit tedious.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/i-forgot-how-killer-the-builtin-matplotlib/</link>
       <pubDate>Thu, 17 Aug 2017 23:38:37 +0000</pubDate>
       
       <guid>/i-forgot-how-killer-the-builtin-matplotlib/</guid>
-      <description>Photo Caption: I forgot how killer the builtin matplotlib backends are. I&amp;rsquo;ve been (foolishly) writing each image to file and viewing using a cli viewer.
-Instead, why not just use their frontends and plt.ion()? Unix + tiling WM is truly a system-wide IDE, but I never learned the &amp;ldquo;old&amp;rdquo; tooling for working with matplotlib at the cli.
+      <description>Instead, why not just use their frontends and plt.ion()? Unix + tiling WM is truly a system-wide IDE, but I never learned the &amp;ldquo;old&amp;rdquo; tooling for working with matplotlib at the cli.
 The first time I learned matplotlib I learned it in a notebook. Now that I&amp;rsquo;m wedded to tiling &amp;amp; strongly prefer the terminal ipython to the notebook, I&amp;rsquo;ve gotta learn all the older tooling for matplotlib.</description>
     </item>
     
@@ -97,14 +94,14 @@ The first time I learned matplotlib I learned it in a notebook. Now that I&amp;r
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/i-think-thisll-end-up-being-the-big-story-from-my/</link>
       <pubDate>Wed, 05 Jul 2017 18:56:45 +0000</pubDate>
       
       <guid>/i-think-thisll-end-up-being-the-big-story-from-my/</guid>
-      <description>Photo Caption: I think this’ll end up being the big story from my dissertation:
-District shape isn’t at all related to political impact (in aggregate) when it comes to redistricting.
-While some weird districts may exist and those may be gerrymandered, the relationship is not statistically sound in aggregate: weird districts might be completely benign, in terms of the partisan advantage measures I’m considereding my dissertation &amp;amp; other classical measures of model influence.</description>
+      <description>District shape isn’t at all related to political impact (in aggregate) when it comes to redistricting.
+While some weird districts may exist and those may be gerrymandered, the relationship is not statistically sound in aggregate: weird districts might be completely benign, in terms of the partisan advantage measures I’m considereding my dissertation &amp;amp; other classical measures of model influence.
+Totally discounting the “expressive harms” arguments in this sphere, though.</description>
     </item>
     
     <item>
@@ -153,23 +150,21 @@ So now I can delete that folder where I started to move my blog to pelican. don�
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/is-my-uptime-excited-or-scared-you-decide/</link>
       <pubDate>Thu, 16 Mar 2017 01:12:41 +0000</pubDate>
       
       <guid>/is-my-uptime-excited-or-scared-you-decide/</guid>
-      <description> Photo Caption: Is my uptime excited or scared? you decide.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/all-those-p-values-will-be-lost-in-time-like/</link>
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description> Photo Caption: All those p-values will be lost in time, like fixed effects in shrinkage estimators.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -223,31 +218,30 @@ Once the sampling finished, I looked at the acceptance rate and, sure enough, th
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/finally-got-this-elections-simulator-working-the/</link>
       <pubDate>Tue, 18 Oct 2016 14:00:17 +0000</pubDate>
       
       <guid>/finally-got-this-elections-simulator-working-the/</guid>
-      <description>Photo Caption: Finally got this elections simulator working. The concept, a neat paper by Drew Linzer, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the why of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/every-time-i-use-a-sixel-based-library-it-just/</link>
       <pubDate>Mon, 10 Oct 2016 19:25:04 +0000</pubDate>
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
-      <description>Photo Caption: every time I use a sixel-based library, it just feels super neat. Sixel is a terminal image format that you can use to show images straight in a command line. Since it’s actually just an image encoded in a terminal escape sequence, there’s no futzing with X11 window forwarding. 
-While the format is occasionally buggy when displaying complex images, the ability to quickly work with models and display full images directly inline with the ipython qtconsole is just amazing.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/at-top-a-metropolis-within-gibbs-sampled-sar/</link>
       <pubDate>Sun, 09 Oct 2016 18:53:35 +0000</pubDate>
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
-      <description>Photo Caption: At top, a Metropolis-within-Gibbs-sampled SAR model. At bottom, a NUTS-sampled SAR model. Both took the same time to sample, but the Gibbs drew 20X more samples. But, look at the difference in serial autocorrelation! It’s easy to see the Gibbs sampler, while hovering around the same value, is clearly less efficient in sampling the value. I’ll have to see if slice-within-Gibbs fares any better while determining if the 20X more samples actually contain more information than the NUTS-drawn samples.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -261,13 +255,12 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -282,13 +275,12 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/found-another-error-in-the-clea-as-i-am-building/</link>
       <pubDate>Mon, 12 Sep 2016 02:28:19 +0000</pubDate>
       
       <guid>/found-another-error-in-the-clea-as-i-am-building/</guid>
-      <description>Photo Caption: Found another error in the CLEA as I am building case studies for my dissertation.
-The smallest little errors give you some pretty weird results when you&amp;rsquo;re looking deeply into the data. In this case, Doug Bosco only ran against David Redick. Creighton and Binderup were oppononents of another Democrat that year, the then-congresswoman now-senator Barbara Boxer.
+      <description>The smallest little errors give you some pretty weird results when you&amp;rsquo;re looking deeply into the data. In this case, Doug Bosco only ran against David Redick. Creighton and Binderup were oppononents of another Democrat that year, the then-congresswoman now-senator Barbara Boxer.
 But, the incorrect story in the data is kind of interesting to consider&amp;hellip; two Republicans ran in CA-CD01 in 1984, and won a combined total of &amp;gt;50% of the vote.</description>
     </item>
     
@@ -303,12 +295,12 @@ This poses a few challenges. First, CLEA records are one big, flat table of cand
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/working-on-a-paper-about-models-that-can-have-very/</link>
       <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
-      <description>Photo Caption: Working on a paper about models that can have very weakly-identified priors, and I see that this trace outcome pops up. This is a Spatially-Varying Coefficient Process model from Gelfand, and serves as a Bayesian equivalent to GWR. Surprisingly (to me) is that the covariance matrix between the hierarchical effects is not at all affected by the spatial range parameter, Phi. The reason why this surprises me is that in other HLM contexts, like variance components models with spatial effects, the spatial and aspatial components of the covariance matrix are inversely related, and it’s really easy to derive that.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -331,12 +323,12 @@ I am spending a lot of my graduate school experience being told those edges shou
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>Photo Caption: As I’m having to wind down on summer of code work and ramp up on dissertation &amp;amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -378,34 +370,33 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/more-on-the-log-determinant-stuff-i-think-ive/</link>
       <pubDate>Sun, 19 Jun 2016 20:37:12 +0000</pubDate>
       
       <guid>/more-on-the-log-determinant-stuff-i-think-ive/</guid>
-      <description>Photo Caption: More on the log determinant stuff, I think I’ve figured it out. You see, the full likelihood of the model I&amp;rsquo;m working with is something like:
+      <description>You see, the full likelihood of the model I&amp;rsquo;m working with is something like:
 $$|I - \rho W| \times \mathcal{N}(X\beta + \rho W y, \sigma^2) $$
 And, since (W) and (I) are constants, I actually need the gradient of the log determinant with respect to ( \rho ), not (A). Since the derivative of the log determinant with respect to (A), the full laplacian matrix, is an (N \times N) matrix, I was getting a conformality error in PyMC3, which wanted the derivative with respect to $\rho$ and was expecting a scalar.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/man-im-so-close-to-a-pretty-massive-speedup-of/</link>
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
       <guid>/man-im-so-close-to-a-pretty-massive-speedup-of/</guid>
-      <description>Photo Caption: Man&amp;hellip; I’m so close to a pretty massive speedup of something I’m working on&amp;hellip; something that’d make a very nice deliverable. But, I can’t figure out how to correctly compute gradients in theano. I mean, I know what the gradient is, and I’ve written it correctly, but I can’t figure out whether it’s theano or pymc3 is throwing the errors In fact, I can get a gradient in Theano just fine.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -431,13 +422,13 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>Photo Caption: Visual display of complex data can be pretty tricky&amp;hellip;
-This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.</description>
+      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
+The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
     </item>
     
     <item>
@@ -482,12 +473,12 @@ After trying multiple times to verify whether it was my code or if the published
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/kinda-nice-when-the-model-youre-working-with/</link>
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description> Photo Caption: Kinda nice when the model you’re working with clearly is trying to work.  imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -514,24 +505,21 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description> Photo Caption: Yep, that’s image view from within a terminal using libsixel
-This is something I’ve always wanted, a way to just quickly dump scientific visualizations to a viewer within a CLI application. It looks like this does exactly that. 
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/npr-north-carolina-voters-are-likely-to-be/</link>
       <pubDate>Fri, 11 Mar 2016 17:35:10 +0000</pubDate>
       
       <guid>/npr-north-carolina-voters-are-likely-to-be/</guid>
-      <description>Photo Caption: npr:
- North Carolina voters are likely to be confused when they arrive at the polling place on March 15th. In addition to presidential candidates, voters will see congressional primary candidates on the ballot.
+      <description>North Carolina voters are likely to be confused when they arrive at the polling place on March 15th. In addition to presidential candidates, voters will see congressional primary candidates on the ballot.
 But thanks to a federal court decision, the districts those candidates represent no longer exist and any voters in those races won’t count.
 Thanks to three judges, two animal shapes and one hastily redrawn map of U.</description>
     </item>
@@ -568,14 +556,12 @@ But, in doing two small tests/stabs at refactoring for speed &amp;amp; memory us
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/one-of-my-favorite-diagrams-from-micah-altmans/</link>
       <pubDate>Tue, 09 Feb 2016 14:40:39 +0000</pubDate>
       
       <guid>/one-of-my-favorite-diagrams-from-micah-altmans/</guid>
-      <description> Photo Caption: One of my favorite diagrams from Micah Altman’s fantastic PhD thesis on gerrymandering. 
-Pretty sure that’s a manually-scribbled line&amp;hellip; making computer graphics is definitely easier nowadays, but sometimes it’s still easiest to draw your stuff by hand. 
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -598,25 +584,24 @@ One of the oldest and most well-used is the Reock measure, first developed in 19
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/thelandofmaps-us-congressional-districts/</link>
       <pubDate>Wed, 13 Jan 2016 23:10:08 +0000</pubDate>
       
       <guid>/thelandofmaps-us-congressional-districts/</guid>
-      <description>Photo Caption: thelandofmaps:
- U.S. Congressional districts redrawn by a computer to eliminate gerrymandering [1603x2170][OC]CLICK HERE FOR MORE MAPS!thelandofmaps.tumblr.com
- “”“Eliminate Gerrymandering”““
+      <description>U.S. Congressional districts redrawn by a computer to eliminate gerrymandering [1603x2170][OC]CLICK HERE FOR MORE MAPS!thelandofmaps.tumblr.com
+
+“”“Eliminate Gerrymandering”““
 These kinds of maps are interesting visualizations, but I guarantee you that these maps would exhibit such strong partisan &amp;amp; racial bias. Thus, it burns me up to read that people think this is what Larry Lessig (or Barack Obama in the SOTU) mean when they talk about reducing/eliminating gerrymandering.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/welp-that-was-fun-headed-back-to-phx/</link>
       <pubDate>Thu, 17 Dec 2015 19:18:26 +0000</pubDate>
       
       <guid>/welp-that-was-fun-headed-back-to-phx/</guid>
-      <description> Photo Caption: Welp, that was fun. Headed back to PHX.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -651,25 +636,21 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</link>
       <pubDate>Fri, 16 Oct 2015 20:02:11 +0000</pubDate>
       
       <guid>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</guid>
-      <description> Photo Caption: Fits nicely with one of my favorite quotes:
-“As a human being, one has been endowed with just enough intelligence to be able to see clearly how utterly inadequate that intelligence is when confronted with what exists.”
-from dr. dobbs
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/having-a-last-name-of-wolf-has-never-been-an/</link>
       <pubDate>Fri, 09 Oct 2015 01:21:32 +0000</pubDate>
       
       <guid>/having-a-last-name-of-wolf-has-never-been-an/</guid>
-      <description> Photo Caption: Having a last name of “Wolf” has never been an issue, but it feels silly throwing all these animal names around.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -693,13 +674,12 @@ But, for me, as someone who has been involved in a few Free/Open source communit
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/ah-yes-i-am-in-fact-skilled-in-spatial/</link>
       <pubDate>Thu, 01 Oct 2015 16:56:40 +0000</pubDate>
       
       <guid>/ah-yes-i-am-in-fact-skilled-in-spatial/</guid>
-      <description> Photo Caption: Ah yes, I am, in fact, skilled in Spatial Autocorrelation. 
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -733,13 +713,12 @@ You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s fro
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/getting-excited-about-some-cool-new-exploration/</link>
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
       <guid>/getting-excited-about-some-cool-new-exploration/</guid>
-      <description> Photo Caption: getting excited about some cool new exploration while getting to know seaborn.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -754,14 +733,13 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/that-compression-is-bewilderingly-good-the-full/</link>
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
-      <description> Photo Caption: That compression is bewilderingly good. The full census short form at block level (generated using a static file reader soon-to-be in cenpy) can be compressed from nearly 60 GB down to 3.1 GB.
-Simply amazing.
- imported from: yetanothergeographer </description>
+      <description>Simply amazing.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -805,13 +783,12 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/mulitprocessing-business-in-the-front-parallel/</link>
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
       <guid>/mulitprocessing-business-in-the-front-parallel/</guid>
-      <description> Photo Caption: mulitprocessing: business in the front, parallel in the back.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -876,12 +853,12 @@ This wasn&amp;rsquo;t a constraint I wanted. But, just getting pure pip-installa
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/this-is-insane-the-speed-differences-between/</link>
       <pubDate>Tue, 27 Jan 2015 22:01:33 +0000</pubDate>
       
       <guid>/this-is-insane-the-speed-differences-between/</guid>
-      <description> Photo Caption: This is insane. The speed differences between Scipy and Numpy&amp;rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&amp;rsquo;s hundreds of times faster. I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually need to finish will be ridiculous. Thanks, scipy.  imported from: yetanothergeographer </description>
+      <description>The speed differences between Scipy and Numpy&amp;rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&amp;rsquo;s hundreds of times faster. I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually need to finish will be ridiculous. Thanks, scipy.  imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -949,14 +926,14 @@ Adapting this, I should be good. Though, I&amp;rsquo;ll have to ask why it was d
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       
       <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
-      <description>Photo Caption: A fun little bug in my apparently outdated QGIS (version 2.2).
-I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
-At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</description>
+      <description>I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
+At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.
+But, if you know things about voronoi polygons, you know that they</description>
     </item>
     
     <item>
@@ -978,32 +955,24 @@ At the top, the voronoi polygons for the North Carolina CD centroids are calcula
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/so-say-youre-working-with-two-states/</link>
       <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
       
       <guid>/so-say-youre-working-with-two-states/</guid>
-      <description>Photo Caption: So, say you&amp;rsquo;re working with two state&amp;rsquo;s congressional data. All of it&amp;rsquo;s been cleaned and made through a list comprehension and write statement in python using pandas. Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail.</description>
+      <description>Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
+ ERROR: Some $VOTE values not in [0,1] interval.
+ So, I did what the reasonable person who is used to using float() would do and just as.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
-      <link>/post/url-with-slug/</link>
-      <pubDate>Mon, 07 Jul 2014 07:49:29 +0000</pubDate>
-      
-      <guid>/post/url-with-slug/</guid>
-      <description> Photo Caption:  imported from: yetanothergeographer </description>
-    </item>
-    
-    <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/my-time-using-linux-has-apparently-made-me-quite/</link>
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       
       <guid>/my-time-using-linux-has-apparently-made-me-quite/</guid>
-      <description>Photo Caption: My time using linux has apparently made me quite lazy in OSX.
-I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
-Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists.</description>
+      <description>I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
+Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists. Even Microsoft has its standardized .</description>
     </item>
     
     <item>
@@ -1017,44 +986,41 @@ Having one program that updates all your software is so desirable at this poin
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/ok-so-i-think-my-days-of-using-texstudio-are/</link>
       <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
       
       <guid>/ok-so-i-think-my-days-of-using-texstudio-are/</guid>
-      <description> Photo Caption: OK&amp;hellip; so I think my days of using texstudio are over. Vim-latex&amp;rsquo;s reference manager is leaps and bounds easier to use than texsudio.
-Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
+      <description>Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
 I guess color scheme fights are about as lame as you can get. Except maybe fights over brace or comment styles&amp;hellip;
- imported from: yetanothergeographer </description>
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/track-changes-may-in-fact-be-the-worst/</link>
       <pubDate>Thu, 01 May 2014 03:59:44 +0000</pubDate>
       
       <guid>/track-changes-may-in-fact-be-the-worst/</guid>
-      <description> Photo Caption: Track Changes may, in fact, be the worst
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/something-about-custom-blue-gamuts-makes-for-a/</link>
       <pubDate>Tue, 29 Apr 2014 23:44:51 +0000</pubDate>
       
       <guid>/something-about-custom-blue-gamuts-makes-for-a/</guid>
-      <description> Photo Caption: Something about custom blue gamuts makes for a nice-looking flow diagram, even when you&amp;rsquo;ve got close to regular channels.  imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/gotta-wonder-if-her-parents-were-just-having-a/</link>
       <pubDate>Wed, 23 Apr 2014 13:46:43 +0000</pubDate>
       
       <guid>/gotta-wonder-if-her-parents-were-just-having-a/</guid>
-      <description> Photo Caption: Gotta wonder if her parents were just having a laugh.
-At the same time, I&amp;rsquo;ll never forget their name.  imported from: yetanothergeographer </description>
+      <description>At the same time, I&amp;rsquo;ll never forget their name.  imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -1067,24 +1033,23 @@ At the same time, I&amp;rsquo;ll never forget their name.  imported from: yetan
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/its-so-frustrating-to-see-a-cool-idea-fall-by-the/</link>
       <pubDate>Wed, 09 Apr 2014 01:51:21 +0000</pubDate>
       
       <guid>/its-so-frustrating-to-see-a-cool-idea-fall-by-the/</guid>
-      <description> Photo Caption: It&amp;rsquo;s so frustrating to see a cool idea fall by the wayside. GeoDa center sandbox? Super cool. And yet, it&amp;rsquo;s been long defunct. I guess that&amp;rsquo;s what happens sometimes when things don&amp;rsquo;t hit critical mass.
+      <description>GeoDa center sandbox? Super cool. And yet, it&amp;rsquo;s been long defunct. I guess that&amp;rsquo;s what happens sometimes when things don&amp;rsquo;t hit critical mass.
 Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarly by the wayside.
- imported from: yetanothergeographer </description>
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/the-face-of-needing-a-spring-break/</link>
       <pubDate>Fri, 07 Mar 2014 18:05:57 +0000</pubDate>
       
       <guid>/the-face-of-needing-a-spring-break/</guid>
-      <description> Photo Caption: The face of needing a spring break.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -1109,12 +1074,12 @@ Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarl
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/i-guess-this-is-how-productivity-works-terminal/</link>
       <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
       
       <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
-      <description>Photo Caption: I guess this is how productivity works? Terminal sessions and web browsers. Seems like nothing else is needed nowadays. Though, I guess the guys over at LightTable would beg to disagree. I tried LightTable today for some LaTeX stuff. Seems like a brilliant tool there, if things like LyX or TexStudio didn&amp;rsquo;t exist. TexStudio in particular, my choice of LaTeX editor, does a wonderful job showing the structure of the workspace in one cohesive, intuitive way.</description>
+      <description>That aside, I&amp;rsquo;ve forked the Shapefile.jl repo and put in some goals to further Julia&amp;rsquo;s spatial analysis capabilities. I don&amp;rsquo;t know what the community ethics/practices are for Julia, but I&amp;rsquo;m always slightly nervous about being the first fork on a repo that hasn&amp;rsquo;t been touched in a few months. I can&amp;rsquo;t really explain why. Maybe it&amp;rsquo;s just a concern that my preference for private repos and anonymous contribution makes my github page look sparse.</description>
     </item>
     
     <item>
@@ -1129,35 +1094,35 @@ I&amp;rsquo;m hopeful for this literature review Wednesday, but I make no promis
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp;amp; Zhang&amp;rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
-A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.</description>
+      <description>A couple realizations:
+1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
+2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/went-crawling-back-into-workflowys-arms-today/</link>
       <pubDate>Thu, 13 Feb 2014 15:35:53 +0000</pubDate>
       
       <guid>/went-crawling-back-into-workflowys-arms-today/</guid>
-      <description>Photo Caption: Went crawling back into workflowy&amp;rsquo;s arms today after a vailiant year-long experiment in other organizing systems.
-I simply wasn&amp;rsquo;t as efficient with others as I was with workflowy. The ease of use, the speed, the interface&amp;hellip; all superior for just a simple outlining tool.
+      <description>I simply wasn&amp;rsquo;t as efficient with others as I was with workflowy. The ease of use, the speed, the interface&amp;hellip; all superior for just a simple outlining tool.
 It&amp;rsquo;s not open source, but it&amp;rsquo;s so well designed. This kills me.
-If I could get HackFlowy working with tags and external port forwarding, I would leave.</description>
+If I could get HackFlowy working with tags and external port forwarding, I would leave. But, for now, I&amp;rsquo;l consign myself to the proprietary beast.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/this-is-a-brighter-moment-of-graduate-school/</link>
       <pubDate>Sat, 08 Feb 2014 14:31:39 +0000</pubDate>
       
       <guid>/this-is-a-brighter-moment-of-graduate-school/</guid>
-      <description> Photo Caption: This is a brighter moment of graduate school.  imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -1171,13 +1136,12 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/just-shipped-my-first-draft-off-deadlined-march/</link>
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>Photo Caption: Just shipped my first draft off. Deadlined March 31, I&amp;rsquo;m kind of nervous for a couple of reasons:
-High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr.</description>
+      <description>High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</description>
     </item>
     
     <item>

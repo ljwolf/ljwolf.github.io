@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/this-is-insane-the-speed-differences-between/</link>
       <pubDate>Tue, 27 Jan 2015 22:01:33 +0000</pubDate>
       
       <guid>/this-is-insane-the-speed-differences-between/</guid>
-      <description> Photo Caption: This is insane. The speed differences between Scipy and Numpy&amp;rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&amp;rsquo;s hundreds of times faster. I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually need to finish will be ridiculous. Thanks, scipy.  imported from: yetanothergeographer </description>
+      <description>The speed differences between Scipy and Numpy&amp;rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&amp;rsquo;s hundreds of times faster. I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually need to finish will be ridiculous. Thanks, scipy.  imported from: yetanothergeographer</description>
     </item>
     
   </channel>

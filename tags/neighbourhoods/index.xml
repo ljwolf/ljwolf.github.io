@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/its-neat-that-this-new-algorithm-is-working/</link>
       <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
       
       <guid>/its-neat-that-this-new-algorithm-is-working/</guid>
-      <description>Photo Caption: It&amp;rsquo;s neat that this new algorithm is working correctly. Here, a few cluster solutions for spatially-contiguous clustering are shown in Brooklyn using some price data for some Airbnbs. I&amp;rsquo;m pretty excited about this new technique, so hopefully I&amp;rsquo;ll get it all prepped soon.
-I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.</description>
+      <description>I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.
+I guess that&amp;rsquo;s probably pretty common among researchers, but the thrill of wrestling with a genuinely new problem is interesting, enjoyable, and difficult. Sometimes, it feels like documenting that wrestling is a bit tedious.</description>
     </item>
     
   </channel>

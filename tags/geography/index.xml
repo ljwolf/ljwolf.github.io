@@ -12,23 +12,23 @@
     
     
     <item>
-      <title>Untitled</title>
+      <title>Reverse-PCA for making sense of the typical structure in multivariate models</title>
       <link>/this-is-an-interesting-little-exploration-i-did/</link>
       <pubDate>Wed, 28 Feb 2018 15:46:40 +0000</pubDate>
       
       <guid>/this-is-an-interesting-little-exploration-i-did/</guid>
-      <description>Photo Caption: This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&amp;rsquo;s not going into my analysis, but I like the concept, so I&amp;rsquo;ll post it here (cause that&amp;rsquo;s the entire point of this blog!)
-I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure.</description>
+      <description>I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&amp;rsquo;m a bit limited because I don&amp;rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
+In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;rsquo;s telling me from the conditional estimates because I don&amp;rsquo;t really have a sense of the joint picture: I don&amp;rsquo;t really intuit how they covary across places, like I might in US counties or states.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/its-neat-that-this-new-algorithm-is-working/</link>
       <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
       
       <guid>/its-neat-that-this-new-algorithm-is-working/</guid>
-      <description>Photo Caption: It&amp;rsquo;s neat that this new algorithm is working correctly. Here, a few cluster solutions for spatially-contiguous clustering are shown in Brooklyn using some price data for some Airbnbs. I&amp;rsquo;m pretty excited about this new technique, so hopefully I&amp;rsquo;ll get it all prepped soon.
-I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.</description>
+      <description>I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.
+I guess that&amp;rsquo;s probably pretty common among researchers, but the thrill of wrestling with a genuinely new problem is interesting, enjoyable, and difficult. Sometimes, it feels like documenting that wrestling is a bit tedious.</description>
     </item>
     
     <item>
@@ -41,13 +41,12 @@ I find that the hardest part for me to be motivated about is the stage right aft
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/all-those-p-values-will-be-lost-in-time-like/</link>
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description> Photo Caption: All those p-values will be lost in time, like fixed effects in shrinkage estimators.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -72,13 +71,12 @@ gist here. 
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -93,21 +91,21 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/working-on-a-paper-about-models-that-can-have-very/</link>
       <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
-      <description>Photo Caption: Working on a paper about models that can have very weakly-identified priors, and I see that this trace outcome pops up. This is a Spatially-Varying Coefficient Process model from Gelfand, and serves as a Bayesian equivalent to GWR. Surprisingly (to me) is that the covariance matrix between the hierarchical effects is not at all affected by the spatial range parameter, Phi. The reason why this surprises me is that in other HLM contexts, like variance components models with spatial effects, the spatial and aspatial components of the covariance matrix are inversely related, and it’s really easy to derive that.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>Photo Caption: As I’m having to wind down on summer of code work and ramp up on dissertation &amp;amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -121,13 +119,12 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
     </item>
     
@@ -154,13 +151,13 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>Photo Caption: Visual display of complex data can be pretty tricky&amp;hellip;
-This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.</description>
+      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
+The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
     </item>
     
     <item>
@@ -195,12 +192,12 @@ After trying multiple times to verify whether it was my code or if the published
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/kinda-nice-when-the-model-youre-working-with/</link>
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description> Photo Caption: Kinda nice when the model you’re working with clearly is trying to work.  imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -306,13 +303,12 @@ You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s fro
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/getting-excited-about-some-cool-new-exploration/</link>
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
       <guid>/getting-excited-about-some-cool-new-exploration/</guid>
-      <description> Photo Caption: getting excited about some cool new exploration while getting to know seaborn.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -327,14 +323,13 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/that-compression-is-bewilderingly-good-the-full/</link>
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
-      <description> Photo Caption: That compression is bewilderingly good. The full census short form at block level (generated using a static file reader soon-to-be in cenpy) can be compressed from nearly 60 GB down to 3.1 GB.
-Simply amazing.
- imported from: yetanothergeographer </description>
+      <description>Simply amazing.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -358,13 +353,12 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/mulitprocessing-business-in-the-front-parallel/</link>
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
       <guid>/mulitprocessing-business-in-the-front-parallel/</guid>
-      <description> Photo Caption: mulitprocessing: business in the front, parallel in the back.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -419,14 +413,14 @@ where $I$ represents the area-standardized mass moment of inertia. The $O$ subsc
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       
       <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
-      <description>Photo Caption: A fun little bug in my apparently outdated QGIS (version 2.2).
-I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
-At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</description>
+      <description>I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
+At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.
+But, if you know things about voronoi polygons, you know that they</description>
     </item>
     
     <item>
@@ -439,24 +433,23 @@ At the top, the voronoi polygons for the North Carolina CD centroids are calcula
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp;amp; Zhang&amp;rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
-A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.</description>
+      <description>A couple realizations:
+1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
+2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/just-shipped-my-first-draft-off-deadlined-march/</link>
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>Photo Caption: Just shipped my first draft off. Deadlined March 31, I&amp;rsquo;m kind of nervous for a couple of reasons:
-High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr.</description>
+      <description>High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</description>
     </item>
     
     <item>

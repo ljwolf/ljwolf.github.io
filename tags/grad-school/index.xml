@@ -42,22 +42,22 @@ Testing &amp;amp; Merging of project code Since many of the improvements I&amp;r
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>Photo Caption: Visual display of complex data can be pretty tricky&amp;hellip;
-This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.</description>
+      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
+The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/kinda-nice-when-the-model-youre-working-with/</link>
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description> Photo Caption: Kinda nice when the model you’re working with clearly is trying to work.  imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -91,14 +91,14 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       
       <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
-      <description>Photo Caption: A fun little bug in my apparently outdated QGIS (version 2.2).
-I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
-At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.</description>
+      <description>I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
+At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.
+But, if you know things about voronoi polygons, you know that they</description>
     </item>
     
     <item>
@@ -121,13 +121,12 @@ At the top, the voronoi polygons for the North Carolina CD centroids are calcula
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/just-shipped-my-first-draft-off-deadlined-march/</link>
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>Photo Caption: Just shipped my first draft off. Deadlined March 31, I&amp;rsquo;m kind of nervous for a couple of reasons:
-High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr.</description>
+      <description>High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</description>
     </item>
     
     <item>

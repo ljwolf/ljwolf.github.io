@@ -11,9 +11,9 @@
 
 <link rel="canonical" href="/this-is-an-interesting-little-exploration-i-did/">
 <base href="/" />
-<meta property="og:title" content="Untitled" />
-<meta property="og:description" content="Photo Caption: This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&rsquo;s not going into my analysis, but I like the concept, so I&rsquo;ll post it here (cause that&rsquo;s the entire point of this blog!)
-I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure." />
+<meta property="og:title" content="Reverse-PCA for making sense of the typical structure in multivariate models" />
+<meta property="og:description" content="I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&rsquo;m a bit limited because I don&rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
+In general, it&rsquo;s more difficult to get a sense of what the model&rsquo;s telling me from the conditional estimates because I don&rsquo;t really have a sense of the joint picture: I don&rsquo;t really intuit how they covary across places, like I might in US counties or states." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/this-is-an-interesting-little-exploration-i-did/" />
 
@@ -34,20 +34,20 @@ I don&rsquo;t really have a good idea for what many places in the UK are like, n
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Untitled"/>
-<meta name="twitter:description" content="Photo Caption: This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&rsquo;s not going into my analysis, but I like the concept, so I&rsquo;ll post it here (cause that&rsquo;s the entire point of this blog!)
-I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure."/>
+<meta name="twitter:title" content="Reverse-PCA for making sense of the typical structure in multivariate models"/>
+<meta name="twitter:description" content="I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&rsquo;m a bit limited because I don&rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
+In general, it&rsquo;s more difficult to get a sense of what the model&rsquo;s telling me from the conditional estimates because I don&rsquo;t really have a sense of the joint picture: I don&rsquo;t really intuit how they covary across places, like I might in US counties or states."/>
 
 
 
-<meta itemprop="name" content="Untitled">
-<meta itemprop="description" content="Photo Caption: This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&rsquo;s not going into my analysis, but I like the concept, so I&rsquo;ll post it here (cause that&rsquo;s the entire point of this blog!)
-I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure.">
+<meta itemprop="name" content="Reverse-PCA for making sense of the typical structure in multivariate models">
+<meta itemprop="description" content="I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&rsquo;m a bit limited because I don&rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
+In general, it&rsquo;s more difficult to get a sense of what the model&rsquo;s telling me from the conditional estimates because I don&rsquo;t really have a sense of the joint picture: I don&rsquo;t really intuit how they covary across places, like I might in US counties or states.">
 
 
 <meta itemprop="datePublished" content="2018-02-28T15:46:40&#43;00:00" />
 <meta itemprop="dateModified" content="2018-02-28T15:46:40&#43;00:00" />
-<meta itemprop="wordCount" content="473">
+<meta itemprop="wordCount" content="431">
 
 
 
@@ -126,7 +126,7 @@ th {
 <title>
 
 
-     Untitled 
+     Reverse-PCA for making sense of the typical structure in multivariate models 
 
 </title>
 
@@ -174,8 +174,8 @@ th {
 
 
 <article class="post">
-    <h1 class="title"> Untitled </h1>
-    <div class="content"> <figure> <img src=//78.media.tumblr.com/190a56be50695e248630bc895ca7f3e5/tumblr_p4vodsgP6L1ts05oao1_r2_1280.png> <figcaption>Photo Caption: <p>This is an interesting little exploration I did while finishing up my GISRUK data challenge analysis. It&rsquo;s not going into my analysis, but I like the concept, so I&rsquo;ll post it here (cause that&rsquo;s the entire point of this blog!)</p>
+    <h1 class="title"> Reverse-PCA for making sense of the typical structure in multivariate models </h1>
+    <div class="content"> <figure> <img src=//78.media.tumblr.com/190a56be50695e248630bc895ca7f3e5/tumblr_p4vodsgP6L1ts05oao1_r2_1280.png> </figure>
 
 <p>I don&rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&rsquo;m a bit limited because I don&rsquo;t really know what a place like <code>Barrow-in-Furness</code> is like, without looking into it.</p>
 
@@ -187,11 +187,11 @@ th {
 
 <p>So, eigenspaces. I strung some code together to:</p>
 
-<ol><li>Grab the <code>sklearn.decomposition.PCA</code> of my model design matrix.</li>
+<p><ol><li>Grab the <code>sklearn.decomposition.PCA</code> of my model design matrix.</li>
 <li>Extract the most relevant dimension.</li>
 <li>Sort my data by this dimension and grab the names of observations.</li>
 <li>Plot the predicted Brexit % against these names.</li>
-</ol><p>Above is the plot of my data&rsquo;s main dimension, the one that explains the most variance in my design matrix. The lines are the predicted % Brexit, observed % Brexit, and &ldquo;breakeven point,&rdquo; along with the names of places sorted by this dimension on the vertical axis.</p>
+</ol><p>Above is the plot of my data&rsquo;s main dimension, the one that explains the most variance in my design matrix. The lines are the predicted % Brexit, observed % Brexit, and &ldquo;breakeven point,&rdquo; along with the names of places sorted by this dimension on the vertical axis.</p></p>
 
 <p>Now, I can get a sense of how these types of places (sort of like area profiles) relate to one another in my data. This gives me an idea of what happens when I change from &ldquo;places like Kensington and Chelsea&rdquo; to &ldquo;places like Cornwall,&rdquo; without having to specify the precise covariance structure of my attribute data.</p>
 
@@ -199,9 +199,7 @@ th {
 
 <p>In a way, gives me the &ldquo;joint&rdquo; marginal effect I want: what happens when you move your mean response along many different features, but in a way that reflects how these features covary in your source data.</p>
 
-
-
-<small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/171389427489/this-is-an-interesting-little-exploration-i-did'<tt>yetanothergeographer</tt></a></small></figcaption></figure>
+<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/171389427489/this-is-an-interesting-little-exploration-i-did'<tt>yetanothergeographer</tt></a></small></p>
  </div>
     <footer class="post-footer">
 

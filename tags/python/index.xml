@@ -21,13 +21,12 @@
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/all-those-p-values-will-be-lost-in-time-like/</link>
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description> Photo Caption: All those p-values will be lost in time, like fixed effects in shrinkage estimators.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -61,31 +60,30 @@ Once the sampling finished, I looked at the acceptance rate and, sure enough, th
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/finally-got-this-elections-simulator-working-the/</link>
       <pubDate>Tue, 18 Oct 2016 14:00:17 +0000</pubDate>
       
       <guid>/finally-got-this-elections-simulator-working-the/</guid>
-      <description>Photo Caption: Finally got this elections simulator working. The concept, a neat paper by Drew Linzer, suggests modeling multiparty electoral competition by focusing on “patterns” of contestation, modeling each pattern using a Gaussian Mixture model. Even though it’s not very substantively interesting, since you can’t put precise interpretations on the outputs of the mixture model fitting, it’s useful for conducting things where modeling the why of voting is less important than averaging other derivative statistics, like swing ratios, partisan bias, or responsiveness, over many plausible potential voting outcomes.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/every-time-i-use-a-sixel-based-library-it-just/</link>
       <pubDate>Mon, 10 Oct 2016 19:25:04 +0000</pubDate>
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
-      <description>Photo Caption: every time I use a sixel-based library, it just feels super neat. Sixel is a terminal image format that you can use to show images straight in a command line. Since it’s actually just an image encoded in a terminal escape sequence, there’s no futzing with X11 window forwarding. 
-While the format is occasionally buggy when displaying complex images, the ability to quickly work with models and display full images directly inline with the ipython qtconsole is just amazing.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/at-top-a-metropolis-within-gibbs-sampled-sar/</link>
       <pubDate>Sun, 09 Oct 2016 18:53:35 +0000</pubDate>
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
-      <description>Photo Caption: At top, a Metropolis-within-Gibbs-sampled SAR model. At bottom, a NUTS-sampled SAR model. Both took the same time to sample, but the Gibbs drew 20X more samples. But, look at the difference in serial autocorrelation! It’s easy to see the Gibbs sampler, while hovering around the same value, is clearly less efficient in sampling the value. I’ll have to see if slice-within-Gibbs fares any better while determining if the 20X more samples actually contain more information than the NUTS-drawn samples.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -99,13 +97,12 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
       <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
       
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
-      <description> Photo Caption: Because I actually post all of my stuff to gists anyway, go check out this gist where I break down the Geweke statistic implementations in PyMC3 and CODA, and find some weird behavior!
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -118,12 +115,12 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>Photo Caption: As I’m having to wind down on summer of code work and ramp up on dissertation &amp;amp; grant work, I’m really digging this strategy for traceplot visualization. The only thing I’d like a little more is a plot of a smoothed moving average in the trace. By default the PyMC3 traceplot kde plots are horizontal, not vertical. But, if you align the traceplot axis to a vertical kde plot, it’s like the trace “fills into” the cup formed by the kde curve.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -156,23 +153,22 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/thisll-be-a-more-lucid-writeup-of-what-i-was/</link>
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Photo Caption: This’ll be a more lucid writeup of what I was talking about last night.
-Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
+      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
 You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/man-im-so-close-to-a-pretty-massive-speedup-of/</link>
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
       <guid>/man-im-so-close-to-a-pretty-massive-speedup-of/</guid>
-      <description>Photo Caption: Man&amp;hellip; I’m so close to a pretty massive speedup of something I’m working on&amp;hellip; something that’d make a very nice deliverable. But, I can’t figure out how to correctly compute gradients in theano. I mean, I know what the gradient is, and I’ve written it correctly, but I can’t figure out whether it’s theano or pymc3 is throwing the errors In fact, I can get a gradient in Theano just fine.</description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -198,13 +194,13 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/visual-display-of-complex-data-can-be-pretty/</link>
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>Photo Caption: Visual display of complex data can be pretty tricky&amp;hellip;
-This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.</description>
+      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
+The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
     </item>
     
     <item>
@@ -261,14 +257,12 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/yep-thats-image-view-from-within-a-terminal/</link>
       <pubDate>Wed, 23 Mar 2016 03:41:38 +0000</pubDate>
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
-      <description> Photo Caption: Yep, that’s image view from within a terminal using libsixel
-This is something I’ve always wanted, a way to just quickly dump scientific visualizations to a viewer within a CLI application. It looks like this does exactly that. 
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -314,13 +308,12 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/having-a-last-name-of-wolf-has-never-been-an/</link>
       <pubDate>Fri, 09 Oct 2015 01:21:32 +0000</pubDate>
       
       <guid>/having-a-last-name-of-wolf-has-never-been-an/</guid>
-      <description> Photo Caption: Having a last name of “Wolf” has never been an issue, but it feels silly throwing all these animal names around.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -355,13 +348,12 @@ You can&amp;rsquo;t just fix a few style nets and remove a few L&amp;rsquo;s fro
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/getting-excited-about-some-cool-new-exploration/</link>
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
       <guid>/getting-excited-about-some-cool-new-exploration/</guid>
-      <description> Photo Caption: getting excited about some cool new exploration while getting to know seaborn.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -376,14 +368,13 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/that-compression-is-bewilderingly-good-the-full/</link>
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
-      <description> Photo Caption: That compression is bewilderingly good. The full census short form at block level (generated using a static file reader soon-to-be in cenpy) can be compressed from nearly 60 GB down to 3.1 GB.
-Simply amazing.
- imported from: yetanothergeographer </description>
+      <description>Simply amazing.
+ imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -417,13 +408,12 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/mulitprocessing-business-in-the-front-parallel/</link>
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
       <guid>/mulitprocessing-business-in-the-front-parallel/</guid>
-      <description> Photo Caption: mulitprocessing: business in the front, parallel in the back.
- imported from: yetanothergeographer </description>
+      <description>imported from: yetanothergeographer</description>
     </item>
     
     <item>
@@ -478,23 +468,22 @@ This wasn&amp;rsquo;t a constraint I wanted. But, just getting pure pip-installa
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/this-is-insane-the-speed-differences-between/</link>
       <pubDate>Tue, 27 Jan 2015 22:01:33 +0000</pubDate>
       
       <guid>/this-is-insane-the-speed-differences-between/</guid>
-      <description> Photo Caption: This is insane. The speed differences between Scipy and Numpy&amp;rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&amp;rsquo;s hundreds of times faster. I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually need to finish will be ridiculous. Thanks, scipy.  imported from: yetanothergeographer </description>
+      <description>The speed differences between Scipy and Numpy&amp;rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&amp;rsquo;s hundreds of times faster. I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually need to finish will be ridiculous. Thanks, scipy.  imported from: yetanothergeographer</description>
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/my-time-using-linux-has-apparently-made-me-quite/</link>
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       
       <guid>/my-time-using-linux-has-apparently-made-me-quite/</guid>
-      <description>Photo Caption: My time using linux has apparently made me quite lazy in OSX.
-I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
-Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists.</description>
+      <description>I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
+Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists. Even Microsoft has its standardized .</description>
     </item>
     
     <item>

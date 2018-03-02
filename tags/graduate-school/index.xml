@@ -32,14 +32,14 @@
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>Photo Caption: First simple program in Julia: a greedy knapsack optimizer. Useless, but extensible. I plan on making a general greedy interface here and plugging in whatever parameters to get greedy over. Or I might move to implementing an OBA or Hagar &amp;amp; Zhang&amp;rsquo;s Conjugate Gradient Descent algorithms. I think neither is in NLOpt. Nor in Julia opt libraries!
-A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.</description>
+      <description>A couple realizations:
+1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
+2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
     </item>
     
     <item>
@@ -53,13 +53,12 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
     </item>
     
     <item>
-      <title>Untitled</title>
+      <title></title>
       <link>/just-shipped-my-first-draft-off-deadlined-march/</link>
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>Photo Caption: Just shipped my first draft off. Deadlined March 31, I&amp;rsquo;m kind of nervous for a couple of reasons:
-High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr.</description>
+      <description>High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</description>
     </item>
     
     <item>
