@@ -1,0 +1,168 @@
+
+<h1 id="the-question">The Question</h1>
+<p>The GIS Research UK Conference Data Challenge asked: <em>was Brexit primarily driven by the rate of change in migration, rather than the total headcount?</em> To interrogate this, I used local regression methods, hierarchical models, and novel compositional analysis techniques to examine relevant measures of rates of change and population volatility in the five years leading up to Brexit. Depending on the <em>implicit</em> hypothesis used to operationalize the contest question, I find Brexit voting at local authority level was driven in part by the interplay of where Britons are moving and what those places look like; change matters, but in different ways.</p>
+<h1 id="an-answer">An Answer</h1>
+<p>For this analysis, I examine Brexit results at the local authority level. I do this because the subset of ward-level data available for analysis is highly demographically conspicuous, whereas local authorities have all relevant data. Analyzing a demographically unrepresentative subset of wards would mislead rather than inform.</p>
+<p>Therefore, official Brexit referendum results at local authority level collated by the UK Electoral commission are used. Then, demographic data from the Annual Population Survey (APS) is combined with data from the Local Area Migration Indicators (LAMI) data put together by the Office of National Statistics (ONS). The relevant APS data involved covariates on education, employment, age, and national origin, described in Appendix <a href="#app:controls" data-reference-type="ref" data-reference="app:controls">6</a>. To examine the question, net flows were computed from the LAMI following the method in Appendix <a href="#app:netflow" data-reference-type="ref" data-reference="app:netflow">4</a>. The net flow measures new migrants as a fraction of the population in that local authority. Its rate-of-change would provide the acceleration (or deceleration) in the change. Thus, using the net directly provides an indication of change, since it provides a measure of <em>new people</em> arriving or leaving each local authority. Finally, a novel method outlined in Appendix <a href="#app:divergences" data-reference-type="ref" data-reference="app:divergences">5</a> to incorporate the CDRC’s Local Super Output Area data into the local authority-level analysis is applied. Flatly, the volatility measure characterizes how different each subsequent year’s ethnic distribution is from the previous year. Computed at LSOA, it is then summarized at local authority.</p>
+<p>A region-varying-intercepts specification of this model was fit using <code>Stan</code>, a Bayesian modeling framework. This means that each region has a unique baseline level of propensity to vote Leave, as shown in the right side of Figure <a href="#fig:wassmap" data-reference-type="ref" data-reference="fig:wassmap">[fig:wassmap]</a> in Appendix <a href="#app:divergences" data-reference-type="ref" data-reference="app:divergences">5</a>. This amounts to allowing for a model somewhere between a regional fixed effect model, where each region has its own baseline that provides no information about other areas, and a global intercept model. This flexibly accounts for any baseline heterogeneity in leave support over regions.</p>
+<p>The substantive effect estimates for this model are shown in Table <a href="#tab:marginals" data-reference-type="ref" data-reference="tab:marginals">[tab:marginals]</a>. Notably, two out of three of the migration/change effects are associated with <em>reduced Leave sentiment</em>. This suggests local authorities with more citizens from outside the UK (regardless of race) <em>as well as</em> the local authorities that received more Britons than they lost were more likely to vote for Brexit than the areas being left by UK residents or areas with low non-British populations. This reinforces a “tension point” interpretation: the popular relocation destinations among Brits that also have many non-British residents are places that voted Leave. However, places with large net external migration flows, as well as places with larger volatility in their ethnic distributions, are actually more likely to vote Remain, after controlling for regional factors and other confounders.</p>
+
+
+<table>
+<caption>Substantive effect estimates for the varying-intercept model. To give a sense of the relative importance of these various factors on the propensity to vote for Brexit, the last column shows the change in predicted Leave % when moving from the 25th percentile to the 75th percentile of the data on that attribute alone, holding the remainder at their means. When a row is lined in grey, its 95% HPDI overlaps with zero.<span label="tab:marginals"></span></caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">2.5%</th>
+<th style="text-align: right;">97.5%</th>
+<th style="text-align: right;"><span class="math inline"><em>Δ</em></span> IQR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><p>% No Qualifications</p></td>
+<td style="text-align: right;">-0.0451</td>
+<td style="text-align: right;">-0.2449</td>
+<td style="text-align: right;">0.1601</td>
+<td style="text-align: right;">-0.1802</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">% University Degree</td>
+<td style="text-align: right;">-0.7830</td>
+<td style="text-align: right;">-0.8575</td>
+<td style="text-align: right;">-0.7069</td>
+<td style="text-align: right;">-11.0009</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><p>Change % Manufacture</p></td>
+<td style="text-align: right;">-0.0749</td>
+<td style="text-align: right;">-0.2200</td>
+<td style="text-align: right;">0.0715</td>
+<td style="text-align: right;">-0.2621</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p>White Unemployment %</p></td>
+<td style="text-align: right;">0.1734</td>
+<td style="text-align: right;">-0.0915</td>
+<td style="text-align: right;">0.4204</td>
+<td style="text-align: right;">0.5030</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">% Aged 16-20</td>
+<td style="text-align: right;">-0.4187</td>
+<td style="text-align: right;">-0.7674</td>
+<td style="text-align: right;">-0.0694</td>
+<td style="text-align: right;">-0.7639</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">% Aged 20-24</td>
+<td style="text-align: right;">-0.3762</td>
+<td style="text-align: right;">-0.6111</td>
+<td style="text-align: right;">-0.1211</td>
+<td style="text-align: right;">-1.1081</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><p>% Aged 50 and Up</p></td>
+<td style="text-align: right;">0.0074</td>
+<td style="text-align: right;">-0.0990</td>
+<td style="text-align: right;">0.1061</td>
+<td style="text-align: right;">0.0804</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Votes Cast</td>
+<td style="text-align: right;">-0.0162</td>
+<td style="text-align: right;">-0.0269</td>
+<td style="text-align: right;">-0.0053</td>
+<td style="text-align: right;">-0.7894</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">% Ethnic non-UK Born</td>
+<td style="text-align: right;">0.1443</td>
+<td style="text-align: right;">0.0113</td>
+<td style="text-align: right;">0.2732</td>
+<td style="text-align: right;">0.8223</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">% White non-UK Born</td>
+<td style="text-align: right;">0.1666</td>
+<td style="text-align: right;">0.0196</td>
+<td style="text-align: right;">0.3144</td>
+<td style="text-align: right;">0.8247</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mean Population Volatility ( <span class="math inline">$\overline{d_w}$</span> )</td>
+<td style="text-align: right;">-0.9391</td>
+<td style="text-align: right;">-1.7660</td>
+<td style="text-align: right;">-0.0877</td>
+<td style="text-align: right;">-0.8995</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mean Net External Migration</td>
+<td style="text-align: right;">-1.7658</td>
+<td style="text-align: right;">-3.2541</td>
+<td style="text-align: right;">-0.2560</td>
+<td style="text-align: right;">-0.5335</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mean Net Internal Migration</td>
+<td style="text-align: right;">2.0045</td>
+<td style="text-align: right;">0.4037</td>
+<td style="text-align: right;">3.5937</td>
+<td style="text-align: right;">1.2078</td>
+</tr>
+</tbody>
+</table>
+<h1 id="why-not-other-answers">Why not other answers?</h1>
+<p>Many other plausible models were fit. One clearly relevant model also considers the change in flows from year-to-year. However, these predictors were either not significant (in the case of the net internal migration rate-of-change) or had no distinct substantive impact. Mean change, as a direct second-order measure, works too well to capture this effect for these to be distinct. Thus, these derived second-order migration effects are dominated by their first-order behavior and a better direct second-order measure.</p>
+<p>Another model that deserves discussion is the new multiple-bandwidth GWR model (MGWR) <span class="citation" data-cites="Fotheringham2017Multiscale"></span>. An analogue to the model in Table <a href="#tab:marginals" data-reference-type="ref" data-reference="tab:marginals">[tab:marginals]</a> was fit using this approach, allowing the migration-relevant parameters to be locally-varying. There is little evidence that the patterns of the net migration vary significantly, although each covariate has a distinct spatial scale and pattern. Three surfaces for these local effects (and the local baseline Brexit sentiment) are reported in Appendix <a href="#app:mgwr" data-reference-type="ref" data-reference="app:mgwr">7</a> for illustration.</p>
+<p>Other models, such as region-varying slope models and spatially-lagged <span class="math inline"><em>X</em></span> models, were fit. Varying slope models muddied identification of which effects mattered where: letting all migration-relevant effects vary over regions, there were no nonzero migration effects outside London. Since this region-scale heterogeneity is strongly at odds with the structure of heterogeneity demonstrated in the GWR approaches, it seems likely that assuming slopes vary by region simply does not match the underlying spatial structure of nonstationarity, if any. The lagged-<span class="math inline"><em>X</em></span> models provide no substantively-different effects when filtering by statistical significance as long as the mean change term is retained.</p>
+<p>In conclusion, migration, population volatility, and voting Leave have geographies that are not simply quantified by regional distinctions. Net migration flows <em>do</em> drive Leave sentiment in local authorities, although whether the migrants are coming from within (vs. outside) the UK matters. Ethnic volatility measures accurately characterize rapid change over the entire ethnic distribution; volatility also consistently drives Remain voting. In total, this supports the idea that Brexit-aligned areas are “tension points:” places (possibly with many non-UK born residents) to which Britons are moving. It’s not the size of change, it’s the type of change.</p>
+
+
+
+<h1 id="app:netflow">Appendix: Net Flows from LAMI</h1>
+<p>The LAMI provides a set of inflows and outflows at each local authority, broken down by whether the flows are coming/going from within the UK or outside the UK. With this, it is simple to define a net flow as a percentage of population: <br /><span class="math display">$$net = \frac{inflow - outflow}{total\ population} * 100$$</span><br /> Thus, <span class="math inline"><em>n</em><em>e</em><em>t</em></span> is the difference in migrants as a percent of the population in a local authority; if everyone up-and-left, it would be <span class="math inline"> − 100</span>, and if the population doubled due to migration, it would be <span class="math inline">100</span>. In practice, the average <span class="math inline"><em>n</em><em>e</em><em>t</em><sub><em>i</em><em>n</em><em>t</em><em>e</em><em>r</em><em>n</em><em>a</em><em>l</em></sub></span> from 2011 to 2016 is between <span class="math inline"> − 2</span> and <span class="math inline">2</span>, meaning that some places in the UK (e.g. Newham in London) saw around 2% of their population emigrate to other areas of the UK and others (e.g. East Devon in the Southwest) see an additional 2% on top of their population being added from other places in the UK. The five-year average <span class="math inline"><em>n</em><em>e</em><em>t</em><sub><em>e</em><em>x</em><em>t</em><em>e</em><em>r</em><em>n</em><em>a</em><em>l</em></sub></span> is much higher &amp; usually nonnegative, since many places do not send more people abroad than come to them from abroad.</p>
+<p>Using this net flow for both internal and external migration, we can define the rate-of-change in flow by taking the average difference of the year-on-year net percent flow. This average difference (and the direct net percent flow) are used to assess the competition question. Further, the average gradient of this 5-year time series of net migration flows can also be used to identify an alternative to the distribution volatility measures presented in Appendix <a href="#app:divergences" data-reference-type="ref" data-reference="app:divergences">5</a>. This gradient is a measure of “rate of change in migration flow,” in contrast to the more general distributional volatility presented there.</p>
+<h1 id="app:divergences">Appendix: Magnitude of Population Mix Change</h1>
+<p>To incorporate the CDRC dataset on ethnic mix, I used novel distribution dynamics methods <span class="citation" data-cites="Chodrow2017Structure"></span>. The competition dataset contains a distribution vector <span class="math inline"><em>q</em><sub><em>i</em></sub><sup><em>t</em></sup> = [<em>p</em><sub>1</sub>, <em>p</em><sub>2</sub>, …, <em>p</em><sub><em>K</em></sub>]</span> for area <span class="math inline"><em>i</em></span>, measuring the fraction of population in <span class="math inline"><em>K</em></span> ethnic categories in year <span class="math inline"><em>t</em></span>.</p>
+<p>Using measures of distributional difference, such as the <em>Wasserstein distance</em> <span class="citation" data-cites="Olkin1982Distance"></span>, <em>energy distance</em> <span class="citation" data-cites="Rizzo2016Energy"></span>, or <em>Kullback-Leibler divergence</em> <span class="citation" data-cites="Kullback1951Information"></span>, the total change in a distribution vector between years can be computed. Here, the Wasserstein distance (<span class="math inline"><em>d</em><sub><em>w</em></sub>(.)</span>) between population fraction vector in year <span class="math inline"><em>t</em></span>, <span class="math inline"><em>q</em><sub><em>t</em></sub></span>, and next year, <span class="math inline"><em>q</em><sub><em>t</em> + 1</sub></span>, is: <br /><span class="math display">$$d_w(q_i^t, q_i^{t+1}) = \sum_j^K \lvert q_{ij}^t - q_{ij}^{t+1} \rvert$$</span><br /> Thus, the Wasserstein distance is the absolute difference in ethnic composition vectors, summed. Like many measures of distance, these tend to experience a power-law decay. A map of the average distance between subsequent years’ population distributions in each LSOA is shown on the left of Figure <a href="#fig:wassmap" data-reference-type="ref" data-reference="fig:wassmap">[fig:wassmap]</a></p>
+
+<p><img src="../figures/logmean_wasserstein_biglabel.png" alt="image" /> <img src="../figures/region_intercepts_t.png" alt="image" /> <span id="fig:wassmap" label="fig:wassmap">[fig:wassmap]</span></p>
+<p>This reduces the <span class="math inline"><em>N</em> × <em>K</em> × <em>T</em></span> information about population composition in each LSOA over time to a single <span class="math inline"><em>N</em> × 1</span> statistic expressing the typical change in population composition from year to year. Large values indicate the distribution has changed radically, and small values indicate the distributions have not changed significantly. To use these directly in an analysis at the local authority level, the mean of distances within each local authority divided by their standard deviation is used.</p>
+<h1 id="app:controls">Appendix: Control Variates</h1>
+<h4 id="of-working-age-population-wap-with-no-higher-education-of-wap-who-have-completed-university">% of working-age population (WAP) with no higher education<br />
+% of WAP who have completed university<br />
+</h4>
+<p>Education often factors into political leanings. Here, I anticipated local authorities with more educated populations to be more likely to vote Remain.</p>
+<h4 id="change-in-manufacturing-employment-2011-to-2016-unemployment-rate-among-wap-whites">Change in % manufacturing employment, 2011 to 2016<br />
+Unemployment rate among WAP whites<br />
+</h4>
+<p>We anticipated that deindustrialization and unemployment may play a role in whether a place voted Leave. Considering the issues raised in the Brexit campaign about employment, regulation, and <em>what</em> Britain does at work, I anticipated places with high unemployment or places where manufacturing has left in the last 5 years to vote Leave.</p>
+<h4 id="percent-of-wap-who-are-white-and-not-born-in-the-uk-percent-of-wap-who-are-ethnic-and-not-born-in-the-uk">Percent of WAP who are white and not born in the UK<br />
+Percent of WAP who are ethnic and not born in the UK<br />
+</h4>
+<p>For these raw population origination components, I did not anticipate them being relevant if the hypothesis of rate-of-change in migration (over state-of-being) were correct.</p>
+<h4 id="working-age-population-age-structure">Working Age Population Age Structure<br />
+</h4>
+<p>We expected places where the elderly live to be more likely to support Brexit, since they may be more emotionally connected to a period in time where life outside of the EU is now recalled on favorably. These covariates included the percentage of working-age population between 16-20, 20-24, &amp; those 50+.</p>
+<h4 id="votes-cast">Votes Cast<br />
+</h4>
+<p>Acknowledging <span class="citation" data-cites="Harris2016Voting"></span>, the analysis of vote shares directly does not acknowledge the possibility that differently-sized constituencies may have different properties. This argument also has precedent in the analysis of heteroskedasticity and omitted-variate bias between vote shares depending on the structure of election size <span class="citation" data-cites="Linzer2012Relationship"></span>. Therefore, to attempt to control for <em>only</em> the ommission of a constituency-size effect, I include the raw number of votes cast in a constituency (in thousands) as a predictor.</p>
+<h1 id="app:mgwr">Appendix: Multiple-Bandwidth GWR results</h1>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><figure>
+<img src="../figures/mgwr_Baseline_.png" alt="Coefficient surfaces for the multiple-bandwidth GWR models are shown above. In these models, each coefficient process is allowed to have its own spatial scale. Thus, each of these processes ostensibly operates at a different scale. Above, they are ordered from “most local” to “least local,” starting in the top left. An adaptive nearest-neighbor bandwidth is used, this means that both the increased density of elements in London and the Liverpool-Manchester conurbation can be accounted for without oversmoothing. With this, we see that internal/external migration has an (essentially-global) gradient although each has a slightly different tilt. Population volatility and the local intercept have distinct spatial patterns." /><figcaption>Coefficient surfaces for the multiple-bandwidth GWR models are shown above. In these models, each coefficient process is allowed to have its own spatial scale. Thus, each of these processes ostensibly operates at a different scale. Above, they are ordered from “most local” to “least local,” starting in the top left. An adaptive nearest-neighbor bandwidth is used, this means that both the increased density of elements in London and the Liverpool-Manchester conurbation can be accounted for without oversmoothing. With this, we see that internal/external migration has an (essentially-global) gradient although each has a slightly different tilt. Population volatility and the local intercept have distinct spatial patterns.</figcaption>
+</figure></td>
+<td style="text-align: right;"><img src="../figures/mgwr_PopulationVolatility_.png" title="fig:" alt="Coefficient surfaces for the multiple-bandwidth GWR models are shown above. In these models, each coefficient process is allowed to have its own spatial scale. Thus, each of these processes ostensibly operates at a different scale. Above, they are ordered from “most local” to “least local,” starting in the top left. An adaptive nearest-neighbor bandwidth is used, this means that both the increased density of elements in London and the Liverpool-Manchester conurbation can be accounted for without oversmoothing. With this, we see that internal/external migration has an (essentially-global) gradient although each has a slightly different tilt. Population volatility and the local intercept have distinct spatial patterns." /></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><img src="../figures/mgwr_ExternalMigration_.png" title="fig:" alt="Coefficient surfaces for the multiple-bandwidth GWR models are shown above. In these models, each coefficient process is allowed to have its own spatial scale. Thus, each of these processes ostensibly operates at a different scale. Above, they are ordered from “most local” to “least local,” starting in the top left. An adaptive nearest-neighbor bandwidth is used, this means that both the increased density of elements in London and the Liverpool-Manchester conurbation can be accounted for without oversmoothing. With this, we see that internal/external migration has an (essentially-global) gradient although each has a slightly different tilt. Population volatility and the local intercept have distinct spatial patterns." /></td>
+<td style="text-align: right;"><img src="../figures/mgwr_InternalMigration_.png" title="fig:" alt="Coefficient surfaces for the multiple-bandwidth GWR models are shown above. In these models, each coefficient process is allowed to have its own spatial scale. Thus, each of these processes ostensibly operates at a different scale. Above, they are ordered from “most local” to “least local,” starting in the top left. An adaptive nearest-neighbor bandwidth is used, this means that both the increased density of elements in London and the Liverpool-Manchester conurbation can be accounted for without oversmoothing. With this, we see that internal/external migration has an (essentially-global) gradient although each has a slightly different tilt. Population volatility and the local intercept have distinct spatial patterns." /></td>
+</tr>
+</tbody>
+</table>
+
+
