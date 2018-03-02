@@ -1,0 +1,12 @@
+---
+Post ID: 158786021349
+Date: Fri, 24 Mar 2017 15:52:55
+Url with slug: spatial-econometric-hmc-in-python
+Reblog key: oSmk2peR
+Reblog Url:
+Reblog Name:
+Title: Spatial Econometric HMC in Python
+---<p>I almost forgot to mention this here: </p><p>I’ve <a href="https://github.com/ljwolf/bayespatial" target="_blank">put up code</a> on how to use some common spatial econometric models in Stan and PyMC3. For PyMC3, the implementations provide two methods that make the evaluation of the<a href="https://github.com/ljwolf/bayespatial/blob/master/looking_at_ops.ipynb" target="_blank"> likelihood <i>very</i> fast when compared to PyMC3′s native logdet function. </a>These two methods are implemented as custom theano ops that are cache some information to improve the speed of the gradient evaluation. One uses sparse LU factorization to provides the log determinant very quickly without precomputation. The other method uses the Ord eigenvalue approach, where the determinant of (I - rho W) is computed as the product of (1 - rho lambda_i), where lambda_i are the eigenvalues of W. The logps in Stan implement only the Ord Eigenvalue computation.  </p><p>While this is nice and means that non-gradient sampling of models with these distributions is <i>very </i>fast, gradient methods are still slow. The gradient of these components require the trace of (I - rho W)^{1} W, which is a difficult matrix to obtain. I’m not sure yet if a similar property relates the trace of (I - rho W) to the eigenvalues of W, and how to leverage that when postmultiplied by W. </p><p>Regardless, the code is up there. Fork &amp; have fun. I’ll keep exploring efficient methods to get Hamiltonian Monte Carlo working on spatial models. </p>
+Tags: python, spatial econometrics, econometrics, bayesian, hmc
+
+Post ID: 155457780239, Date: Thu, 05 Jan 2017 19:27:59
