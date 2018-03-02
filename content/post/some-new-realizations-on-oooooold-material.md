@@ -1,12 +1,10 @@
 ---
-Post ID: 98496154574
-Date: Fri, 26 Sep 2014 17:40:00
-Url with slug: some-new-realizations-on-oooooold-material
-Reblog key: tWtrpCYs
-Reblog Url:
-Reblog Name:
-Title: Some New Realizations on Oooooold Material
----<p>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum,  I wrote about two weeks of lectures and assignments on spatial statistics,  pushing from a start point of the <strong>Kolmogorov Axioms</strong>, <a href="https://en.wikipedia.org/wiki/Probability_axioms" target="_blank">fundamental results in elementary probability theory</a> all the way up through spatial regression.</p>
+id: 98496154574
+date: 2014-09-26T17:40:00Z
+url: some-new-realizations-on-oooooold-material
+title: Some New Realizations on Oooooold Material
+---
+<p>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum,  I wrote about two weeks of lectures and assignments on spatial statistics,  pushing from a start point of the <strong>Kolmogorov Axioms</strong>, <a href="https://en.wikipedia.org/wiki/Probability_axioms" target="_blank">fundamental results in elementary probability theory</a> all the way up through spatial regression.</p>
 
 <p>I thought about providing a start from a subjectivist standpoint, considering my later statistical writing starts getting into ideas about prior beliefs and plausibility,  but I think Kolmogorov works pretty much anywhere and for anyone, until you start really getting a solid understanding of where the Bayesians part ways from Bayes’s theorem.
 And, considering Bayes&rsquo;s theorem recieved a two-sentence explanation in the first lecture of the course, it&rsquo;s unlikely that people will really hang onto a thirst for the more interesting aspects of Bayesian theory as it pertains to spatial statistics.</p>
@@ -108,5 +106,3 @@ sensitive to local autocorrelation than is desirable for a local measure? That i
 
 <p>I really wish I had the opportunity to take a high-level PhD-level course on this stuff.  But, with figuring out what applications to do as my advisor splits from ASU and  this TA-ship sucking up all of my oxygen (and doing so even before the point where  I kinda started functioning as a full statistics instructor) I can&rsquo;t even say that I&rsquo;d have the time to chase up these leads until I get a little bit less off of my plate.</p>
 Tags: spatial autocorrelation, geography, mathematics, statistics, spatial analysis, grad school, academia
-
-Post ID: 97287883904, Date: Fri, 12 Sep 2014 04:01:00

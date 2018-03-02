@@ -1,12 +1,10 @@
 ---
-Post ID: 158788630024
-Date: Fri, 24 Mar 2017 17:18:18
-Url with slug: i-guess-i-have-code-and-math-working-now
-Reblog key: EKRABgKE
-Reblog Url:
-Reblog Name:
-Title: I guess I have code and math working now
----<p>See, block-syntax-highlighted code on the website version:</p>
+id: 158788630024
+date: 2017-03-24T17:18:18Z
+url: i-guess-i-have-code-and-math-working-now
+title: I guess I have code and math working now
+---
+<p>See, block-syntax-highlighted code on the website version:</p>
 
 <pre class="prettyprint">
 def async W(pgconnection):
@@ -25,5 +23,3 @@ def async W(pgconnection):
 
 <p>So now I can delete that folder where I started to move my blog to pelican. <font color="grey"> don’t tell staff please </font></p>
 Tags: mathjax, prettify.js
-
-Post ID: 158786021349, Date: Fri, 24 Mar 2017 15:52:55

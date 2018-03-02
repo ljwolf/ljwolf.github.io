@@ -1,12 +1,10 @@
 ---
-Post ID: 139808556364
-Date: Mon, 22 Feb 2016 16:23:53
-Url with slug: a-quick-note-on-hierarchical-linear-models
-Reblog key: HiTMVIgb
-Reblog Url:
-Reblog Name:
-Title: A quick note on Hierarchical Linear Models
----<p>Owen, Harris, &amp; Jones have a pretty cool <a href="http://phg.sagepub.com/content/early/2015/04/21/0309132515580814" target="_blank">new paper</a> out discussing strengths &amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&rsquo;t <em>directly</em> answer the classic question at the heart of tons of geographic research:</p>
+id: 139808556364
+date: 2016-02-22T16:23:53Z
+url: a-quick-note-on-hierarchical-linear-models
+title: A quick note on Hierarchical Linear Models
+---
+<p>Owen, Harris, &amp; Jones have a pretty cool <a href="http://phg.sagepub.com/content/early/2015/04/21/0309132515580814" target="_blank">new paper</a> out discussing strengths &amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&rsquo;t <em>directly</em> answer the classic question at the heart of tons of geographic research:</p>
 
 <blockquote>
 <p>Given that you live where you do, talk to who you do, and interact with the social milleau that you do, how is your behavior different?</p>
@@ -34,5 +32,3 @@ Title: A quick note on Hierarchical Linear Models
 
 <p>this involves both soundness and application. Owens presents discussion wholly about the latter.</p>
 Tags: statistics, modelling, grad school
-
-Post ID: 139457868619, Date: Tue, 16 Feb 2016 21:18:10

@@ -1,12 +1,10 @@
 ---
-Post ID: 125470664109
-Date: Thu, 30 Jul 2015 20:17:38
-Url with slug: on-the-subject-of-porting
-Reblog key: 24DmxoKL
-Reblog Url:
-Reblog Name:
-Title: On the subject of porting,
----<p>On this, the first few minutes of Guido&rsquo;s <a href="https://www.youtube.com/watch?v=G-uKNd5TSBw" target="_blank">PyCon Keynote </a>really hit home.</p>
+id: 125470664109
+date: 2015-07-30T20:17:38Z
+url: on-the-subject-of-porting
+title: On the subject of porting,
+---
+<p>On this, the first few minutes of Guido&rsquo;s <a href="https://www.youtube.com/watch?v=G-uKNd5TSBw" target="_blank">PyCon Keynote </a>really hit home.</p>
 
 <blockquote>
 <p>Yes you should all be using Python 3, and I know that you all want to, but I know it&rsquo;s difficult. You all have large amounts of Python 2 code in production that you&rsquo;ve ported to Python 2.7.9 &hellip; but the step to Python 3 from there is still phenomenal.</p>
@@ -18,5 +16,3 @@ Title: On the subject of porting,
 
 <p>If you&rsquo;re out there porting some code, I hope you listen to the first half of Guido&rsquo;s talk.</p>
 Tags: python, python 3, GIS, geography, porting, python 2 to 3, 2 to 3
-
-Post ID: 125215868119, Date: Mon, 27 Jul 2015 21:10:56

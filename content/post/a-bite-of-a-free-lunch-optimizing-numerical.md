@@ -1,12 +1,10 @@
 ---
-Post ID: 139404598754
-Date: Tue, 16 Feb 2016 00:09:02
-Url with slug: a-bite-of-a-free-lunch-optimizing-numerical
-Reblog key: PXo32fTU
-Reblog Url:
-Reblog Name:
-Title: A bite of a “free lunch” optimizing numerical routines in Python
----<p><em>tl;dr: ask yourself <a href="#tldr" target="_blank">these</a> before you deadlift optimize code</em></p>
+id: 139404598754
+date: 2016-02-16T00:09:02Z
+url: a-bite-of-a-free-lunch-optimizing-numerical
+title: A bite of a “free lunch” optimizing numerical routines in Python
+---
+<p><em>tl;dr: ask yourself <a href="#tldr" target="_blank">these</a> before you deadlift optimize code</em></p>
 
 <p>I use Python pretty much daily, but I’m definitely not a Python wizard. Now that I’m done with  converting the Python Spatial Analytics Library to use Python 3 compatible idioms, I took a break from refactoring more generally.</p>
 
@@ -55,5 +53,3 @@ Since I’d talked to a few other grad students recently about how to write fast
 <li><strong><em>Is the optimization potentially fast enough to warrant reimplementation?</em></strong> This is possibly the least important, and with stuff like <a href="https://github.com/joealcorn/laboratory" target="_blank">laboratory</a>, I’m hoping it continues to recede. But, again, you don’t want to spend more time than I did to realize a speedup smaller than 1.13X like I found.</li>
 </ol>
 Tags: tanstaafl, optimization, python, GIS, FOSS, learning, studyblr
-
-Post ID: 139145628434, Date: Thu, 11 Feb 2016 21:13:08

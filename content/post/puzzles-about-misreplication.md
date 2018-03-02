@@ -1,12 +1,10 @@
 ---
-Post ID: 144578503954
-Date: Wed, 18 May 2016 20:48:03
-Url with slug: puzzles-about-misreplication
-Reblog key: iCoveCGj
-Reblog Url:
-Reblog Name:
-Title: Puzzles about (mis)Replication
----<p>So, a while back, I was using a <a href="http://www.tandfonline.com/doi/abs/10.1080/00045608.2014.941732" target="_blank">new compactness metric</a> to <a href="http://www.tandfonline.com/doi/abs/10.1080/00045608.2015.1039109" target="_blank">extend some gerrymandering studies</a>. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.</p>
+id: 144578503954
+date: 2016-05-18T20:48:03Z
+url: puzzles-about-misreplication
+title: Puzzles about (mis)Replication
+---
+<p>So, a while back, I was using a <a href="http://www.tandfonline.com/doi/abs/10.1080/00045608.2014.941732" target="_blank">new compactness metric</a> to <a href="http://www.tandfonline.com/doi/abs/10.1080/00045608.2015.1039109" target="_blank">extend some gerrymandering studies</a>. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.</p>
 
 <p>After trying multiple times to verify whether it was my code or if the published statistic had some typographical error, I went to the original author, shared my concerns, and found that it did. Armed with the original code, the replication was easy.</p>
 
@@ -32,5 +30,3 @@ Title: Puzzles about (mis)Replication
 
 <p>Maybe in response to these experiences, I think the real crux of replicability is actually <em>validity</em>: if you do something that&rsquo;s broadly in line with the theoretical, empirical, and statistical thesis of the paper, you should get similar results.</p>
 Tags: science, replicability, geography, statistics, python, programming
-
-Post ID: 143457868834, Date: Tue, 26 Apr 2016 21:36:13

@@ -1,12 +1,10 @@
 ---
-Post ID: 119345228474
-Date: Tue, 19 May 2015 03:06:16
-Url with slug: happy-geohacking
-Reblog key: DbNB77NH
-Reblog Url:
-Reblog Name:
-Title: Happy GeoHacking
----<p>I just got done teaching a short <a href="https://github.com/ljwolf/tutorials/tree/master/pygis" target="_blank">workshop on GIS in Python</a>. Something may be odd to those of you who use FOSS packages to do GIS: I didn&rsquo;t use any <a href="https://github.com/geopandas/geopandas" target="_blank"><code>GeoPandas</code></a>.</p>
+id: 119345228474
+date: 2015-05-19T03:06:16Z
+url: happy-geohacking
+title: Happy GeoHacking
+---
+<p>I just got done teaching a short <a href="https://github.com/ljwolf/tutorials/tree/master/pygis" target="_blank">workshop on GIS in Python</a>. Something may be odd to those of you who use FOSS packages to do GIS: I didn&rsquo;t use any <a href="https://github.com/geopandas/geopandas" target="_blank"><code>GeoPandas</code></a>.</p>
 
 <p>This wasn&rsquo;t a constraint I wanted. But, just getting pure <code>pip</code>-installable packages like <a href="https://github.com/toblerity/shapely" target="_blank"><code>Shapely</code></a> and <a href="https://github.com/pysal/pysal" target="_blank"><code>PySAL</code></a> was difficult enough. The admins didn&rsquo;t want to install one of the big <a href="https://www.enthought.com/products/canopy/" target="_blank">scientific</a> <a href="http://continuum.io/downloads" target="_blank">Python</a> distributions and would only let something with minimal impact get used.</p>
 
@@ -26,5 +24,3 @@ Title: Happy GeoHacking
 
 <p>In full, swapping <code>PySAL.core.IOHandlers</code> in as the main engine driving <code>IO</code> has convinced me that an internal GeoJSON representation fully abstracted from whether the underlying data is geojson, shapefile, coverage, PostGIS, or whatever, as is provided by <code>Fiona</code>, is still probably the right way to do geospatial <code>FileIO</code>.</p>
 Tags: geospatial, gis, python
-
-Post ID: 103236294459, Date: Fri, 21 Nov 2014 18:34:58

@@ -1,12 +1,10 @@
 ---
-Post ID: 162370153119
-Date: Wed, 28 Jun 2017 17:18:34
-Url with slug: some-thoughts-on-rise-of-the-thought-leader
-Reblog key: KaIiBXMt
-Reblog Url:
-Reblog Name:
-Title: Some thoughts on “Rise of the Thought Leader”
----<p><a href="https://newrepublic.com/article/143004/rise-thought-leader-how-superrich-funded-new-class-intellectual" target="_blank">This is a great article</a> on the corporatization of the intellectual, or really the origin of the &ldquo;thought leader&rdquo; by David Sessions. An illumination of Dan Drezner&rsquo;s new book, <a href="https://global.oup.com/academic/product/the-ideas-industry-9780190264604" target="_blank">the Ideas Industry</a>, reviewer David Sessions outlines Drezner&rsquo;s main arguments and connects them back to a Gramscian perspective on the social responsibility of the intellectual.</p>
+id: 162370153119
+date: 2017-06-28T17:18:34Z
+url: some-thoughts-on-rise-of-the-thought-leader
+title: Some thoughts on “Rise of the Thought Leader”
+---
+<p><a href="https://newrepublic.com/article/143004/rise-thought-leader-how-superrich-funded-new-class-intellectual" target="_blank">This is a great article</a> on the corporatization of the intellectual, or really the origin of the &ldquo;thought leader&rdquo; by David Sessions. An illumination of Dan Drezner&rsquo;s new book, <a href="https://global.oup.com/academic/product/the-ideas-industry-9780190264604" target="_blank">the Ideas Industry</a>, reviewer David Sessions outlines Drezner&rsquo;s main arguments and connects them back to a Gramscian perspective on the social responsibility of the intellectual.</p>
 
 <p>In doing so, Sessions sees Drezner extending and furthering Jacoby&rsquo;s concerns about the lunchpail academic &amp; professionalization of academic work into the construction of an entirely new &ldquo;private&rdquo; intellectual. This &ldquo;thought leader&rdquo; is imbued with the evangelist&rsquo;s zeal, so to speak, setting forth ideologies from special perspectives that support or extend capital&rsquo;s hegemonic influence.</p>
 
@@ -24,5 +22,3 @@ Title: Some thoughts on “Rise of the Thought Leader”
 
 <p>That said, I&rsquo;ve been wondering recently myself; as someone who&rsquo;ll be finishing up and joining faculty in the coming months, what does it mean to be a successful <em>intellectual</em> academic when Uncle TED drives impact measures? I have no clue. But, I do know I anticipate it will be real tough to sell the species of self-doubt and criticism &amp; think is needed here.</p>
 Tags: long form, thought leader, intellectual, academic
-
-Post ID: 159237146849, Date: Wed, 05 Apr 2017 15:45:53

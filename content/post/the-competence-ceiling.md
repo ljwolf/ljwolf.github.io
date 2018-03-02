@@ -1,12 +1,10 @@
 ---
-Post ID: 134890851709
-Date: Wed, 09 Dec 2015 20:45:53
-Url with slug: the-competence-ceiling
-Reblog key: WjMJP257
-Reblog Url:
-Reblog Name:
-Title: The competence ceiling
----<p>After programming Haskell, R, or Python for about 6 years now, I feel like I’m sufficiently skilled with Python to make anything that I want to do in python immediate.</p>
+id: 134890851709
+date: 2015-12-09T20:45:53Z
+url: the-competence-ceiling
+title: The competence ceiling
+---
+<p>After programming Haskell, R, or Python for about 6 years now, I feel like I’m sufficiently skilled with Python to make anything that I want to do in python immediate.</p>
 
 <p>I understand its execution model. I feel very confident in my understandings of how python objects work. The fastest/lightest way to get what I want seems like it’s relatively easy to achieve.</p>
 
@@ -26,5 +24,3 @@ Title: The competence ceiling
 
 <p>So, how do you break out of this plateau of “competent enough?” I’m not sure yet&hellip;</p>
 Tags: programming, python, GIS, geography
-
-Post ID: 134436524204, Date: Wed, 02 Dec 2015 21:42:39

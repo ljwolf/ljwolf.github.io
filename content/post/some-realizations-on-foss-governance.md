@@ -1,12 +1,10 @@
 ---
-Post ID: 130708836859
-Date: Wed, 07 Oct 2015 18:10:06
-Url with slug: some-realizations-on-foss-governance
-Reblog key: YEZ8usxY
-Reblog Url:
-Reblog Name:
-Title: Some realizations on FOSS-Governance
----<p>If you haven’t read/paid attention to the <a href="https://mail.scipy.org/pipermail/numpy-discussion/2015-September/073599.html" target="_blank">Numpy Governance Discussions</a> goingon in the numpy discussion mailing list, I wouldn’t blame you. They’re probably dry and boring.</p>
+id: 130708836859
+date: 2015-10-07T18:10:06Z
+url: some-realizations-on-foss-governance
+title: Some realizations on FOSS-Governance
+---
+<p>If you haven’t read/paid attention to the <a href="https://mail.scipy.org/pipermail/numpy-discussion/2015-September/073599.html" target="_blank">Numpy Governance Discussions</a> goingon in the numpy discussion mailing list, I wouldn’t blame you. They’re probably dry and boring.</p>
 
 <p>But, for me, as someone who has been involved in a few Free/Open source communities over the past 8 years, I’m sensing a very interesting divide in the Numpy discussion (and FOSS Python more broadly) that I think is presented more strongly there than I’ve seen it elsewhere. I’ll try to make my understanding of this divide clear.</p>
 
@@ -62,5 +60,3 @@ Title: Some realizations on FOSS-Governance
 
 <p>And, I hope projects like Numpy find ways to involve their tall trees that don&rsquo;t blot out the sun for saplings like me.</p>
 Tags: numpy, python, scientific python, gis, geography
-
-Post ID: 130600717284, Date: Tue, 06 Oct 2015 01:17:56

@@ -1,12 +1,10 @@
 ---
-Post ID: 101245858269
-Date: Wed, 29 Oct 2014 05:36:00
-Url with slug: making-sense-of-nmmi
-Reblog key: cr336KVZ
-Reblog Url:
-Reblog Name:
-Title: Making Sense of NMMI
----<p>The Normalized Mass Moment of Inertia proposed by Li et al (2013) is
+id: 101245858269
+date: 2014-10-29T05:36:00Z
+url: making-sense-of-nmmi
+title: Making Sense of NMMI
+---
+<p>The Normalized Mass Moment of Inertia proposed by Li et al (2013) is
 deceptively hard to express. Given some shape and a distribution of
 attributes around the shape, they state the NMMI ratio in Fan et al
 (forthcoming) as:</p>
@@ -196,5 +194,3 @@ related, but are not necessarily <em>strictly</em> so.</p>
 <p>When expressed this way, the purpose and the logic of the statistic
 becomes more clear.</p>
 Tags: math, geography, politics, political science, gerrymandering, compacness
-
-Post ID: 100771770239, Date: Thu, 23 Oct 2014 16:25:45

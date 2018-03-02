@@ -1,12 +1,10 @@
 ---
-Post ID: 144624526699
-Date: Thu, 19 May 2016 19:12:11
-Url with slug: rfc-for-gsoc-feedback
-Reblog key: DHSffavC
-Reblog Url:
-Reblog Name:
-Title: RFC for GSOC Feedback
----<div tabindex="-1" id="notebook" class="border-box-sizing">
+id: 144624526699
+date: 2016-05-19T19:12:11Z
+url: rfc-for-gsoc-feedback
+title: RFC for GSOC Feedback
+---
+<div tabindex="-1" id="notebook" class="border-box-sizing">
 <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered">
@@ -946,5 +944,3 @@ Name: geometry, dtype: object</pre>
 </div>
 </div>
 Tags: GIS, python, spatial analysis, geography
-
-Post ID: 144578503954, Date: Wed, 18 May 2016 20:48:03

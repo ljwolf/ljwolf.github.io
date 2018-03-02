@@ -1,12 +1,10 @@
 ---
-Post ID: 120805077929
-Date: Fri, 05 Jun 2015 18:01:54
-Url with slug: cenpy-an-exploratory-interface-to-the-census
-Reblog key: W8HdX8mX
-Reblog Url:
-Reblog Name:
-Title:
----<h1>CenPy - An exploratory interface to the Census API</h1>
+id: 120805077929
+date: 2015-06-05T18:01:54Z
+url: cenpy-an-exploratory-interface-to-the-census
+title: Untitled
+---
+<h1>CenPy - An exploratory interface to the Census API</h1>
 
 <p>So, I was looking to do some programmatic access to US Census Bureau data and
 was finding myself a little frustrated with how limited current tools in Python
@@ -31,5 +29,3 @@ pythonpath should work just fine. Alternatively, check out the
 functionality. Honestly, I&rsquo;m super excited about the number of datasources that
 this makes easily accessible!</p>
 Tags: python, census, US Census Bureau, civic hacking, API, geography
-
-Post ID: 119810491299, Date: Sun, 24 May 2015 21:27:34

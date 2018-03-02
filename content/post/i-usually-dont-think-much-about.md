@@ -1,12 +1,10 @@
 ---
-Post ID: 121892041274
-Date: Thu, 18 Jun 2015 23:49:13
-Url with slug: i-usually-dont-think-much-about
-Reblog key: LJErY4Wq
-Reblog Url:
-Reblog Name:
-Title:
----<p>I usually don’t think much about
+id: 121892041274
+date: 2015-06-18T23:49:13Z
+url: i-usually-dont-think-much-about
+title: Untitled
+---
+<p>I usually don’t think much about
 credentialization online. I have a few internet aliases (like
 yetanothergeographer) that I consider almost totally synonymous with my
 real name and persona. And even other personas on tumblr or other social
@@ -58,5 +56,3 @@ depersonalized/deidentified space on the internet.</p>
 
 <p>Digital unnamed space is rapidly disappearing one ssh key at a time.  </p>
 Tags: and this is about as, human geography, as I get these days, geography, gis, python, github, ssh, publicity, anonymity, pseudonymity, feminist software foundation, tox, identity
-
-Post ID: 121692978004, Date: Tue, 16 Jun 2015 15:27:27

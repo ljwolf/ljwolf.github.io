@@ -1,12 +1,10 @@
 ---
-Post ID: 127619060729
-Date: Wed, 26 Aug 2015 02:26:08
-Url with slug: first-cartodb-map
-Reblog key: kglQsmax
-Reblog Url:
-Reblog Name:
-Title: First CartoDB map
----<p><iframe width="100%" height="520" frameborder="0" src="https://ljw.cartodb.com/viz/7300afac-4ba3-11e5-ae01-0e4fddd5de28/embed_map"></iframe>
+id: 127619060729
+date: 2015-08-26T02:26:08Z
+url: first-cartodb-map
+title: First CartoDB map
+---
+<p><iframe width="100%" height="520" frameborder="0" src="https://ljw.cartodb.com/viz/7300afac-4ba3-11e5-ae01-0e4fddd5de28/embed_map"></iframe>
 <br/>
 First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.
 <br/>
@@ -14,5 +12,3 @@ This is a map of the Polsby-Popper metric for US Congressional districts. In ess
 <br/>
 But, with this down, I don&rsquo;t know why I would use this over folium, since I know how to make the maps myself&hellip;</p>
 Tags: geography, GIS, cartodb, folium, mapping, cartography, politics
-
-Post ID: 125470664109, Date: Thu, 30 Jul 2015 20:17:38

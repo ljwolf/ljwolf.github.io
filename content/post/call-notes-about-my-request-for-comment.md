@@ -1,12 +1,10 @@
 ---
-Post ID: 144898901434
-Date: Wed, 25 May 2016 04:23:38
-Url with slug: call-notes-about-my-request-for-comment
-Reblog key: dn44DEWe
-Reblog Url:
-Reblog Name:
-Title: Call notes about my Request for Comment
----<p>The followng were comments I recieved on my <a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Request for Comment</a> submitted a bit ago.</p>
+id: 144898901434
+date: 2016-05-25T04:23:38Z
+url: call-notes-about-my-request-for-comment
+title: Call notes about my Request for Comment
+---
+<p>The followng were comments I recieved on my <a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Request for Comment</a> submitted a bit ago.</p>
 
 <ul><li>Questions about <a href="https://gist.github.com/ljwolf/9730be2bfa14327a262d21e78d55d5f5#file-a-model-proposal-ipynb" target="_blank">Request for
 Comment</a>:
@@ -53,5 +51,3 @@ pdio.read_files</li>
 remaining)</li>
 </ul>
 Tags: gsoc, gis, python
-
-Post ID: 144823917304, Date: Mon, 23 May 2016 17:20:58

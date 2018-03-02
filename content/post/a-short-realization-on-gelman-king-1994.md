@@ -1,12 +1,10 @@
 ---
-Post ID: 97287883904
-Date: Fri, 12 Sep 2014 04:01:00
-Url with slug: a-short-realization-on-gelman-king-1994
-Reblog key: pZhqXPB6
-Reblog Url:
-Reblog Name:
-Title: A Short Realization on Gelman-King (1994)
----<h1>Elections, Bayes, and one realization about the Gelman-King Model</h1>
+id: 97287883904
+date: 2014-09-12T04:01:00Z
+url: a-short-realization-on-gelman-king-1994
+title: A Short Realization on Gelman-King (1994)
+---
+<h1>Elections, Bayes, and one realization about the Gelman-King Model</h1>
 <p>People make a lot of hay out of the rise of <a href="http://www.forbes.com/sites/singularity/2012/11/07/nate-silver-and-the-rise-of-political-data-science/" target="_blank">Nate Silver</a> and <a href="http://www.stat.columbia.edu/~gelman/research/published/election15Feb.pdf" target="_blank">Bayesian poll averaging</a> when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. </p>
 <h2>Gelman-King (1994)&rsquo;s model</h2>
 <p>Say, for instance, we&rsquo;re examining some vector of electoral outcomes, \(y\) given some predictor matrix \(\mathbf{X}\). Depending on the strength and significance of the predictors recorded in <span>\(\mathbf{X}\), we may have strongly-related and weakly-related factors. Let&rsquo;s call a vector of these strengths \(\beta\). </span>Because we&rsquo;re charitable, we allow our prediction to be a little bit wrong, so we include some unknown (or stochastic) error term \(\epsilon\).</p>
@@ -40,5 +38,3 @@ Title: A Short Realization on Gelman-King (1994)
 <p>[^1]: as an aside, I think these articles (and conflicts over frequentist v. subjectivist statistical interpretations) is of the most edited &amp; flamed topics on wikipedia. </p>
 <p>[2^]: <span>Usually (and I mean almost always), Bayesians use Maximum Likelihood estimators, but the choice of estimator is not critically important here.</span></p>
 Tags: politics, bayesian statistics, bayes, elections, electoral analysis, statistics
-
-Post ID: 87201175900, Date: Thu, 29 May 2014 10:02:09

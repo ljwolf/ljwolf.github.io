@@ -1,12 +1,10 @@
 ---
-Post ID: 141637449594
-Date: Thu, 24 Mar 2016 22:32:23
-Url with slug: bringing-classifiers-alive-in-pysal
-Reblog key: ycFHf5vl
-Reblog Url:
-Reblog Name:
-Title: Bringing Classifiers Alive in PySAL
----<div tabindex="-1" id="notebook" class="border-box-sizing">
+id: 141637449594
+date: 2016-03-24T22:32:23Z
+url: bringing-classifiers-alive-in-pysal
+title: Bringing Classifiers Alive in PySAL
+---
+<div tabindex="-1" id="notebook" class="border-box-sizing">
 <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered">
@@ -693,5 +691,3 @@ In spatial regression, I think <code>__call__</code> would be better suited to <
 </div>
 </div>
 Tags: python, gis, programming, geography
-
-Post ID: 139808556364, Date: Mon, 22 Feb 2016 16:23:53

@@ -1,12 +1,10 @@
 ---
-Post ID: 147934748469
-Date: Mon, 25 Jul 2016 02:52:31
-Url with slug: a-post-scipy-chicago-update
-Reblog key: JyLEfXlX
-Reblog Url:
-Reblog Name:
-Title: A Post-SciPy Chicago Update
----<p>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&rsquo;ve had in the library recently.</p>
+id: 147934748469
+date: 2016-07-25T02:52:31Z
+url: a-post-scipy-chicago-update
+title: A Post-SciPy Chicago Update
+---
+<p>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&rsquo;ve had in the library recently.</p>
 
 <p>I&rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on <a href="http://ljwolf.org/post/147564537909/im-trying-to-recover-from-a-bit-of-burnout-this" target="_blank">handling burnout as a graduate student</a>. But, I&rsquo;ve been forgetting to tag posts so that they&rsquo;d show up in the GSOC aggregator! Bummer!</p>
 
@@ -40,5 +38,3 @@ Title: A Post-SciPy Chicago Update
 
 <p>And, there&rsquo;s some freaking cool stuff going on involving PySAL. Namely, the thing that&rsquo;s been animating me is its use in <a href="https://carto.com" target="_blank">Carto&rsquo;s</a> <a href="https://github.com/cartodb/crankshaft" target="_blank">Crankshaft</a>, which integrates some PySAL tooling into a PL/Python plugin for Postgres. They&rsquo;ll be exposing <em>our</em> API (or a subset of it) to users through this wrapper, and that feels super cool! So, we&rsquo;ve got good things going for our library. But, I think that continued progress needs to address these primarily <em>social</em> concerns, because the code, technologically, I think is more sound than one could expect from full-time academic authors.</p>
 Tags: gsoc, see I won't forget to tag it this time, python, GIS, development, software, geography, statistics
-
-Post ID: 147564537909, Date: Sun, 17 Jul 2016 19:27:14

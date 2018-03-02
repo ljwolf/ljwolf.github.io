@@ -1,12 +1,10 @@
 ---
-Post ID: 121293267709
-Date: Thu, 11 Jun 2015 15:58:41
-Url with slug: cenpy-is-now-pip-installable
-Reblog key: W8HdX8mX
-Reblog Url: http://ljwolf.org/post/120805077929/cenpy-an-exploratory-interface-to-the-census
-Reblog Name: yetanothergeographer
-Title: Cenpy is now pip installable!
----<p><code>pip install cenpy</code></p>
+id: 121293267709
+date: 2015-06-11T15:58:41Z
+url: cenpy-is-now-pip-installable
+title: Cenpy is now pip installable!
+---
+<p><code>pip install cenpy</code></p>
 
 <p>Check it out on <a href="https://github.com/ljwolf/cenpy" target="_blank">github</a> or its demo notebook on <a href="http://nbviewer.ipython.org/github/ljwolf/cenpy/blob/master/demo.ipynb" target="_blank">nbviewer</a>.</p>
 
@@ -39,5 +37,3 @@ functionality. Honestly, I’m super excited about the number of datasources tha
 this makes easily accessible!</p>
 </blockquote>
 Tags: census, data, data hacking, python, geography, GIS, API
-
-Post ID: 120881995674, Date: Sat, 06 Jun 2015 17:26:38

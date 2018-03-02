@@ -1,12 +1,10 @@
 ---
-Post ID: 145529412394
-Date: Mon, 06 Jun 2016 19:11:28
-Url with slug: gsoc-call-notes-june-6-2016
-Reblog key: uHQU56V8
-Reblog Url:
-Reblog Name:
-Title: GSOC Call Notes, June 6 2016
----<p>I&rsquo;ve had to take a break from the <a href="https://twitter.com/levijohnwolf/status/738600024431427584" target="_blank">spatial hierarchical linear modeling</a> <a href="http://ljwolf.org/post/145342859409/visual-display-of-complex-data-can-be-pretty" target="_blank">kick I&rsquo;ve been on recently</a> to get back to some GSOC work.</p>
+id: 145529412394
+date: 2016-06-06T19:11:28Z
+url: gsoc-call-notes-june-6-2016
+title: GSOC Call Notes, June 6 2016
+---
+<p>I&rsquo;ve had to take a break from the <a href="https://twitter.com/levijohnwolf/status/738600024431427584" target="_blank">spatial hierarchical linear modeling</a> <a href="http://ljwolf.org/post/145342859409/visual-display-of-complex-data-can-be-pretty" target="_blank">kick I&rsquo;ve been on recently</a> to get back to some GSOC work.</p>
 
 <p>Today, I had my weekly call with my mentors.</p>
 
@@ -134,5 +132,3 @@ the same iteration order as weightsl <code>from_shapefile(filepath,
 idVariable='POLYGON_ID')</code>, but the dataframe call will set the <code>id_order_set</code>
 flag, while the shapefile classmethod does not.</p>
 Tags: gsoc, python, geography, pysal, statistics, grad school
-
-Post ID: 145377908429, Date: Fri, 03 Jun 2016 20:07:42
