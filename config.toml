@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "/posts/"
 title = "Yet Another Geographer"
 copyright = ""
 languageCode = "en-US"
@@ -20,7 +20,7 @@ pygmentsCodeFences = true
   name = "Posts"
   weight = -120
   identifier = "post"
-  url = "/"
+  url = "/post/"
 
 [[menu.main]]
   name = "Tags"
