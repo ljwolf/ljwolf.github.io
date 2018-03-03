@@ -34,6 +34,17 @@ Regardless, I&amp;rsquo;m still seeking that best pub that does good coffee and 
     </item>
     
     <item>
+      <title>Does projection matter for compactness indices?</title>
+      <link>/post/does-projection-matter/</link>
+      <pubDate>Sun, 18 Feb 2018 12:40:00 +0000</pubDate>
+      
+      <guid>/post/does-projection-matter/</guid>
+      <description>This is a quick and dirty exploration of the compactness impacts of changing the projection of data on compactness measures.
+import geopandas as gpd import numpy as np import matplotlib.pyplot as plt from compact import reock as _reock import pysal as ps import seaborn as sns %matplotlib inline The data I&amp;rsquo;m using is the 113th districts from my Scientific Data publication, sourced originally from Jeff Lewis.
+df = gpd.read_file(&amp;#39;./districts113.shp&amp;#39;).query(&amp;#39;STATENAME not in (&amp;#34;Alaska&amp;#34;,&amp;#34;Hawaii&amp;#34;)&amp;#39;)df.</description>
+    </item>
+    
+    <item>
       <title>Finally making headway on Brexit Data</title>
       <link>/this-brexit-analysis-for-the-gisruk-competitions/</link>
       <pubDate>Thu, 15 Feb 2018 20:09:35 +0000</pubDate>
