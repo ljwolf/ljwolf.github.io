@@ -1206,5 +1206,15 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
       <description>Loading... </description>
     </item>
     
+    <item>
+      <title>throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models</title>
+      <link>/post/hodges-reich-sar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hodges-reich-sar/</guid>
+      <description>import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp;amp; Reich (2010)&amp;rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Levi John Wolf" />
+<meta name="description" content="just a geograblog" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="canonical" href="/post/hodges-reich-sar/">
+<base href="/" />
+<meta property="og:title" content="throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models" />
+<meta property="og:description" content="import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/hodges-reich-sar/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models"/>
+<meta name="twitter:description" content="import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$"/>
+
+
+
+<meta itemprop="name" content="throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models">
+<meta itemprop="description" content="import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$">
+
+
+
+<meta itemprop="wordCount" content="1544">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About | </div></a>
+    
+    <a class="nav-item" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"><div class="nav-item-title"> CV |  </div></a>
+    
+    <a class="nav-item" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"><div class="nav-item-title"> Bristol |  </div></a>
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title"> Chicago |  </div></a>
+    
+    <a class="nav-item" href="https://spatial.ucr.edu"><div class="nav-item-title"> UCR |  </div></a>
+    
+    <a class="nav-item" href="/talks/"><div class="nav-item-title"> Talks | </div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models </h1>
+    <div class="content"> 
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pysal <span style="color:#f92672">as</span> ps
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> geopandas <span style="color:#f92672">as</span> gpd
+<span style="color:#f92672">%</span>matplotlib inline</code></pre></div>
+<p>This is just a quick demonstration of what I understand from <a href="https://www4.stat.ncsu.edu/~bjreich/papers/FixedEffectsYouLove.pdf">Hodges &amp; Reich (2010)</a>&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:</p>
+
+<p>$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$</p>
+
+<p>might not be equal to the estimates from a specific type of spatial autoregressive error model, such as the SAR error model:</p>
+
+<p>$$ Y \sim\mathcal{N}\left(X\hat{\beta}, \left[(I - \lambda \mathbf{W})&lsquo;(I - \lambda \mathbf{W})\right]^{-1}\sigma^2\right) $$</p>
+
+<p>when (and only when) the filtered error term $(I - \lambda \mathbf{W})^{-1}\epsilon$ (for gaussian $\epsilon$ with dispersion $\sigma$) is correlated with at least one $X_j$, $j = 1, 2, \dots, P$.</p>
+
+<p>Hodges &amp; Reich (2010) consider a CAR model, but they argue (and I agree): the logic of the issue applies generally.
+The idea also touches on <a href="http://www.tandfonline.com/doi/abs/10.1080/17421770802353758">LeSage &amp; Fischer (2008)</a>&rsquo;s argument motivating a spatial Durbin regression as &ldquo;accounting for spatially-patterned ommitted covariates,&rdquo; (Section 2.1, effective around page 280).</p>
+
+<p>It&rsquo;s pretty simple to show how it might affect regression below, so I&rsquo;ve cooked up a short example using the Baltimore data. I think it&rsquo;s important to understand this (just like apparent variance inflation in simulation designs due to $tr(\left[I - \lambda \mathbf{W}\right]^{-1}) \geq N$).</p>
+
+<p>This is just one of those areas where, in theory, a &ldquo;well-behaved&rdquo; statement leads to results we&rsquo;d want (identical estimates of $\beta$ between OLS and spatial error models), but when we use these models in reality, we must accept that empirical conditions will degrade these expectations.</p>
+
+<p>So I&rsquo;ll illustrate it on a standard PySAL dataset below, trying to show it as simply as possible.</p>
+
+<h3 id="spatial-confounding-in-spatial-error-models">Spatial Confounding in Spatial Error Models</h3>
+
+<p>Let&rsquo;s consider the Baltimore house price dataset:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> gpd<span style="color:#f92672">.</span>read_file(ps<span style="color:#f92672">.</span>examples<span style="color:#f92672">.</span>get_path(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;baltim.shp&#39;</span>))</code></pre></div>
+<p>Grab a symmetric spatial kernel weight, using a triangular kernel (but you can change it to be whatever you&rsquo;d like), and ensure that the diagonal is zero, since that&rsquo;s necessary for the spatial weights used in the spatial regressions in PySAL.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">weights <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>weights<span style="color:#f92672">.</span>Kernel<span style="color:#f92672">.</span>from_dataframe(data, k<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, fixed<span style="color:#f92672">=</span>True, function<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;triangular&#39;</span>)
+weights <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>weights<span style="color:#f92672">.</span>util<span style="color:#f92672">.</span>fill_diagonal(weights, <span style="color:#ae81ff">0</span>)</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#f92672">.</span>head()</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATION</th>
+      <th>PRICE</th>
+      <th>NROOM</th>
+      <th>DWELL</th>
+      <th>NBATH</th>
+      <th>PATIO</th>
+      <th>FIREPL</th>
+      <th>AC</th>
+      <th>BMENT</th>
+      <th>NSTOR</th>
+      <th>GAR</th>
+      <th>AGE</th>
+      <th>CITCOU</th>
+      <th>LOTSZ</th>
+      <th>SQFT</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>47.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>148.0</td>
+      <td>0.0</td>
+      <td>5.70</td>
+      <td>11.25</td>
+      <td>907.0</td>
+      <td>534.0</td>
+      <td>POINT (907 534)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>113.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>9.0</td>
+      <td>1.0</td>
+      <td>279.51</td>
+      <td>28.92</td>
+      <td>922.0</td>
+      <td>574.0</td>
+      <td>POINT (922 574)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>165.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>23.0</td>
+      <td>1.0</td>
+      <td>70.64</td>
+      <td>30.62</td>
+      <td>920.0</td>
+      <td>581.0</td>
+      <td>POINT (920 581)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>104.3</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>174.63</td>
+      <td>26.12</td>
+      <td>923.0</td>
+      <td>578.0</td>
+      <td>POINT (923 578)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>62.5</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>19.0</td>
+      <td>1.0</td>
+      <td>107.80</td>
+      <td>22.04</td>
+      <td>918.0</td>
+      <td>574.0</td>
+      <td>POINT (918 574)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>I&rsquo;ll pick a subset of covariates that tries to avoid clumping/restriction of values, but give a decent enough model fit.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">covariates <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;NROOM&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;AGE&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;LOTSZ&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SQFT&#39;</span>]</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">X <span style="color:#f92672">=</span> data[covariates]<span style="color:#f92672">.</span>values
+Y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(data[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;PRICE&#39;</span>]]<span style="color:#f92672">.</span>values)
+N,P <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>shape</code></pre></div>
+<p>Now, I&rsquo;m going to fit the ML Error model and the OLS on the same data.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mlerr <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>ML_Error(Y,X, w<span style="color:#f92672">=</span>weights)
+ols <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>OLS(Y,X)</code></pre></div>
+<pre><code>/home/ljw/anaconda3/envs/ana/lib/python3.6/site-packages/scipy/optimize/_minimize.py:643: RuntimeWarning: Method 'bounded' does not support relative tolerance in x; defaulting to absolute tolerance.
+  &quot;defaulting to absolute tolerance.&quot;, RuntimeWarning)
+/home/ljw/anaconda3/envs/ana/lib/python3.6/site-packages/pysal/spreg/ml_error.py:483: RuntimeWarning: invalid value encountered in log
+  jacob = np.log(np.linalg.det(a))
+</code></pre>
+
+<p>And, I&rsquo;ll take a look at the two sets of estimates between the two, as well as computing the difference.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">diff <span style="color:#f92672">=</span> (ols<span style="color:#f92672">.</span>betas <span style="color:#f92672">-</span> mlerr<span style="color:#f92672">.</span>betas[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) 
+distinct <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>abs(diff<span style="color:#f92672">.</span>flatten()) <span style="color:#f92672">&gt;</span> (<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>ols<span style="color:#f92672">.</span>std_err)
+compare <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame<span style="color:#f92672">.</span>from_dict({<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;OLS&#34;</span> : ols<span style="color:#f92672">.</span>betas<span style="color:#f92672">.</span>flatten(), 
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;ML Error&#34;</span> :   mlerr<span style="color:#f92672">.</span>betas[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>flatten(),
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Difference&#34;</span> :   diff<span style="color:#f92672">.</span>flatten(),
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;SE OLS&#34;</span>: ols<span style="color:#f92672">.</span>std_err,
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;SE ML Error&#34;</span>: mlerr<span style="color:#f92672">.</span>std_err[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],        
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Is Point-Distinct?&#34;</span> : distinct<span style="color:#f92672">.</span>astype(bool)<span style="color:#f92672">.</span>flatten()})
+compare<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> ([<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Intercept&#39;</span>] <span style="color:#f92672">+</span> covariates)
+compare[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;OLS&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;ML Error&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Difference&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SE OLS&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SE ML Error&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Is Point-Distinct?&#39;</span>]]</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>OLS</th>
+      <th>ML Error</th>
+      <th>Difference</th>
+      <th>SE OLS</th>
+      <th>SE ML Error</th>
+      <th>Is Point-Distinct?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Intercept</th>
+      <td>3.113796</td>
+      <td>3.276859</td>
+      <td>-0.163063</td>
+      <td>0.139737</td>
+      <td>0.150330</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>NROOM</th>
+      <td>0.105112</td>
+      <td>0.103770</td>
+      <td>0.001343</td>
+      <td>0.033099</td>
+      <td>0.030928</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>AGE</th>
+      <td>-0.010444</td>
+      <td>-0.005991</td>
+      <td>-0.004454</td>
+      <td>0.001462</td>
+      <td>0.001604</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>LOTSZ</th>
+      <td>0.003132</td>
+      <td>0.002241</td>
+      <td>0.000891</td>
+      <td>0.000425</td>
+      <td>0.000432</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>SQFT</th>
+      <td>0.004853</td>
+      <td>0.004183</td>
+      <td>0.000670</td>
+      <td>0.004970</td>
+      <td>0.004643</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>While the estimates are not interval-distinct (in that all interval estimates overlap), the point estimate from the ML Error regression for the lot size &amp; age covariates <em>do indeed</em> fall outside of the interval estimate of the OLS.</p>
+
+<p>Regardless, the $\beta$ are definitely &ldquo;changed,&rdquo; since their differences are well above the order of numerical precision. While this data is too noisy to show a <em>really</em> dramatic difference, it&rsquo;s dramatic enough for two point estimates to fall outside the 95% confidence interval of another.</p>
+
+<h2 id="what-s-collinearity-got-to-do-with-it">What&rsquo;s Collinearity got to do with it?</h2>
+
+<p>OK, so I can show that they&rsquo;re probably changed. And, if Hodges &amp; Reich (2010) are right about this being a collinearity problem, I can show <em>how</em> changed they are by trying to orthogonalize my regressors.</p>
+
+<ol>
+<li>So, I&rsquo;m going to draw an $N \times N$ random matrix whose vectors are orthogonal.</li>
+<li>Then, I&rsquo;m going to construct a fake Y given the same $\beta$ from the OLS above.</li>
+<li>If it&rsquo;s true that the ML Error and OLS return <em>the exact same</em> betas when the error term is not collinear with the covariates, then in this construction, the OLS on the synthetic orthogonal data should recover the same betas as the OLS on the real data. Further, the OLS on the synthetic orthogonal data should <em>also</em> recover the same betas as the ML Error on the synthetic orthogonal data.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> scipy.stats <span style="color:#f92672">as</span> st</code></pre></div>
+<p>We can use <code>scipy.stats.ortho_group</code> to draw $N \times N$ matrices of orthogonal vectors. Taking the first $P$ of these will result in a synthetic $X$ matrix with orthogonal covariates. I&rsquo;ll also add some uniform noise between -1,1.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Xortho <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>ortho_group<span style="color:#f92672">.</span>rvs(weights<span style="color:#f92672">.</span>n)[:,<span style="color:#ae81ff">1</span>:P<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,size<span style="color:#f92672">=</span>(N,P))</code></pre></div>
+<p>Then, I&rsquo;ll use the same betas from the previous &ldquo;real&rdquo; problem to construct a $Y$:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">inherited_betas <span style="color:#f92672">=</span> ols<span style="color:#f92672">.</span>betas</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Yortho <span style="color:#f92672">=</span> Xortho<span style="color:#f92672">.</span>dot(inherited_betas[<span style="color:#ae81ff">1</span>:]) <span style="color:#f92672">+</span> inherited_betas[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">0</span>,ols<span style="color:#f92672">.</span>sig2<span style="color:#f92672">**.</span><span style="color:#ae81ff">5</span>)</code></pre></div>
+<p>Now, we run the regression and get the $\hat{\beta}$ coefficients:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ols_ortho <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>OLS(Yortho, Xortho)
+betas_from_ols_orthogonal_data <span style="color:#f92672">=</span> ols_ortho<span style="color:#f92672">.</span>betas</code></pre></div>
+<p>And we run the error model, too:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mlortho <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>ML_Error(Yortho, Xortho, w<span style="color:#f92672">=</span>weights, method<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;ord&#39;</span>)
+betas_from_error_orthogonal_data <span style="color:#f92672">=</span> mlortho<span style="color:#f92672">.</span>betas</code></pre></div>
+<p>Now, are they all equal to within machine precision?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>column_stack((betas_from_ols_orthogonal_data,
+                 betas_from_error_orthogonal_data[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                 inherited_betas)), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Orthogonal OLS&#39;</span>, 
+                                             <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Orthogonal ML Err&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Observed OLS&#39;</span>])</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Orthogonal OLS</th>
+      <th>Orthogonal ML Err</th>
+      <th>Observed OLS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.618008</td>
+      <td>2.618008</td>
+      <td>3.113796</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.105112</td>
+      <td>0.105112</td>
+      <td>0.105112</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.010444</td>
+      <td>-0.010444</td>
+      <td>-0.010444</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.003132</td>
+      <td>0.003132</td>
+      <td>0.003132</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.004853</td>
+      <td>0.004853</td>
+      <td>0.004853</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>column_stack((betas_from_ols_orthogonal_data,
+                 betas_from_error_orthogonal_data[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], 
+                 inherited_betas)), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;NA&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Ortho. OLS minus Ortho. ML Error&#39;</span>, 
+                                             <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Ortho. ML Error minus Observed OLS&#39;</span>])<span style="color:#f92672">.</span>diff(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>dropna(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ortho. OLS minus Ortho. ML Error</th>
+      <th>Ortho. ML Error minus Observed OLS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-4.440892e-16</td>
+      <td>4.957883e-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.293410e-14</td>
+      <td>-1.287859e-14</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-1.943931e-14</td>
+      <td>1.949829e-14</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-2.143251e-15</td>
+      <td>2.359224e-15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-3.011480e-15</td>
+      <td>2.886580e-15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Yep, those errors for the substantive effects are down in the $10^{-13}$ range, meaning the estimates are effectively within machine error in Python. The intercept between the orthogonal estimates and the non-orthogonal one looks slightly different, but this might be due to numerical issues in the estimation routines, since we&rsquo;re using perfectly orthogonal covariates.</p>
+
+<p>At the end of the day, what&rsquo;s collinearity got to do with it? Below, I&rsquo;ll plot the regressors in $X$ against the error term in the spatial error model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> seaborn.apionly <span style="color:#f92672">as</span> sns
+sns<span style="color:#f92672">.</span>pairplot(x_vars<span style="color:#f92672">=</span>covariates, y_vars<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;error_model_residual&#39;</span>, 
+             data<span style="color:#f92672">=</span>data[covariates]<span style="color:#f92672">.</span>assign(error_model_residual <span style="color:#f92672">=</span> mlerr<span style="color:#f92672">.</span>u),
+             kind<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;reg&#39;</span>, plot_kws<span style="color:#f92672">=</span>dict(color<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;k&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;.&#39;</span>, line_kws<span style="color:#f92672">=</span>dict(color<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;orangered&#39;</span>, zorder<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)))</code></pre></div>
+<p><img src="/images/hodges-reich-sar-plot.png" alt="png" /></p>
+
+<p>If you recall, the two covariates that had the largest shift from the OLS model to the ML Error model in the empirical dataset were the ones for house age and lot size. These are also marginally correlated with the residual from spatial error model.</p>
+
+<p>However, in the case of the forced-to-be-orthogonal variates, they&rsquo;re forced to be uncorrelated with the residuals.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Hodges &amp; Reich (2010) demonstrate that, as this collinearity gets worse between elements of $X$ and the residual term in a spatial error model, the beta effects will change more and more dramatically.</p>
+
+<p>Further, as I hope this shows, Hodges &amp; Reich (2010), Section 2.5, is true for SAR models. There, they argue that</p>
+
+<blockquote>
+<p>&hellip; spatial confounding is not an artifact of the ICAR model, but arises from other, perhaps all, specifications of the intution that measures taken at locations near to each other are more similar than measures taken at distant locations. (p. 330).</p>
+</blockquote>
+
+<p>The crux of the issue is the collinearity between the correlated error and the $X$ matrix. If $X$ is collinear with the anticipated structure of $(I - \lambda W)^{-1}$, then $\hat{\beta}$ must change.</p>
+
+<p>This is demonstrably true in the SAR Error example above. When using &ldquo;raw&rdquo; data with spatial multicollinearity, the use of an Error model changes the $\beta$ effects. While it doesn&rsquo;t change them dramatically enough to overcome the standard errors, point estimates are disjoint. When using orthogonal covariates, the estimated effects are exactly the same (within machine precision) between OLS and SAR-Error models.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Jan 1, 0001 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:levi.john.wolf@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/ljwolf" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/levijohnwolf" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+      thanks, <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+
