@@ -33,7 +33,7 @@ plt.show()
 ```
 
 
-![png](/static/images/output_4_0.png)
+![png](/images/output_4_0.png)
 
 
 I'll just check three measures, a pure area one (the convex hull areal ratio), a mixed perimeter-area one (the isoperimetric quotient), and an area-dependent one that is sensitive to the angles inherited from its planar projection (the Reock measure). The last one is notable, since its value is both dependent on the size of its minimum bounding circle, which depends on the angle preserving properties of the projection, and the accuracy of the areas of those shapes, which is not conserved by conformal projections. 
@@ -85,7 +85,7 @@ plt.show()
 ```
 
 
-![png](/static/images/output_11_0.png)
+![png](/images/output_11_0.png)
 
 
 Now, we can compute the three measures for each of the three projections:
@@ -190,7 +190,7 @@ plt.show()
 ```
 
 
-![png](/static/images/output_21_0.png)
+![png](/images/output_21_0.png)
 
 
 Critically, the projected versions themselves agree much more strongly on the reock measure than they do with the unprojected measure, with their rank and linear correlations maintaining a healthy association:
@@ -209,7 +209,7 @@ plt.show()
 ```
 
 
-![png](/static/images/output_23_0.png)
+![png](/images/output_23_0.png)
 
 
 
@@ -226,7 +226,7 @@ plt.show()
 ```
 
 
-![png](/static/images/output_24_0.png)
+![png](/images/output_24_0.png)
 
 
 ### So, does it matter?
