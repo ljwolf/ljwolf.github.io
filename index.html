@@ -253,9 +253,9 @@ Regardless, I&rsquo;m still seeking that best pub that does good coffee and serv
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/post/does-projection-matter/'> Does projection matter for compactness indices?</a> </h2>
+    <h2 class="title"> <a href='/post/hodges-reich-sar/'> throwing in a spatially-correlated random effect may mess up the fixed effect you love - revisiting Hodges and Reich (2010) for SAR models</a> </h2>
     <div class="meta">
-      Feb 18, 2018 - 4 minutes
+      Feb 24, 2018 - 8 minutes
     </div>
     
 <div class="tags">
@@ -265,10 +265,9 @@ Regardless, I&rsquo;m still seeking that best pub that does good coffee and serv
   </header>
 
   <div class="summary">
-    This is a quick and dirty exploration of the compactness impacts of changing the projection of data on compactness measures.
-import geopandas as gpd import numpy as np import matplotlib.pyplot as plt from compact import reock as _reock import pysal as ps import seaborn as sns %matplotlib inline The data I&rsquo;m using is the 113th districts from my Scientific Data publication, sourced originally from Jeff Lewis.
-df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#34;Alaska&#34;,&#34;Hawaii&#34;)&#39;)df.
-    <a href='/post/does-projection-matter/' class="rmore">Read more ...</a>
+    import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$
+    <a href='/post/hodges-reich-sar/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">

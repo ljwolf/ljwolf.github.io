@@ -34,6 +34,16 @@ Regardless, I&amp;rsquo;m still seeking that best pub that does good coffee and 
     </item>
     
     <item>
+      <title>throwing in a spatially-correlated random effect may mess up the fixed effect you love - revisiting Hodges and Reich (2010) for SAR models</title>
+      <link>/post/hodges-reich-sar/</link>
+      <pubDate>Sat, 24 Feb 2018 15:32:22 +0000</pubDate>
+      
+      <guid>/post/hodges-reich-sar/</guid>
+      <description>import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp;amp; Reich (2010)&amp;rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$</description>
+    </item>
+    
+    <item>
       <title>Does projection matter for compactness indices?</title>
       <link>/post/does-projection-matter/</link>
       <pubDate>Sun, 18 Feb 2018 12:40:00 +0000</pubDate>
@@ -1185,16 +1195,6 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
       <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
 1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
 2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
-    </item>
-    
-    <item>
-      <title>throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models</title>
-      <link>/post/hodges-reich-sar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hodges-reich-sar/</guid>
-      <description>import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp;amp; Reich (2010)&amp;rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
-$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$</description>
     </item>
     
   </channel>
