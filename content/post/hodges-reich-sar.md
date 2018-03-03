@@ -1,5 +1,5 @@
 ---
-title: throwing in a spatially-correlated random effect may mess up the fixed effect you love -- revisiting Hodges and Reich (2010) for SAR models
+title: throwing in a spatially-correlated random effect may mess up the fixed effect you love - revisiting Hodges and Reich (2010) for SAR models
 author: Levi John Wolf
 date: 2018-02-24T15:32:22Z
 ---
