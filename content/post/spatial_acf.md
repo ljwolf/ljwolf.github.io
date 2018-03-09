@@ -5,7 +5,7 @@ tags: ["spatial autocorrelation", "esda", "dissertation", "swing", "elections"]
 ---
 I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale'' at which processes operate electorally. 
 I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. 
-The typical diameter at which the so-called ``spatial autocorrelation function'' goes to zero denotes how wide a typical spatial cluster might be,
+The typical diameter at which the so-called "spatial autocorrelation function" goes to zero denotes how wide a typical spatial cluster might be,
 and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold. 
 
 This will be published along with my dissertation when it becomes unembargoed. I also gave a talk on this in the [2017 AAG](https://docs.google.com/presentation/d/1JHbZ1gQTgQ-v9x09udPhfxDGfxNyWo39qRYCogGchHU/edit?usp=sharing). So, below is the initial exploration of what a spatial autocorrelation/partial autocorrelation function might look like. 
