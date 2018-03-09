@@ -572,7 +572,7 @@
     <item>
       <title>Dissertation</title>
       <link>/tags/dissertation/</link>
-      <pubDate>Wed, 05 Jul 2017 18:56:45 +0000</pubDate>
+      <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
       
       <guid>/tags/dissertation/</guid>
       <description></description>
@@ -608,7 +608,7 @@
     <item>
       <title>Elections</title>
       <link>/tags/elections/</link>
-      <pubDate>Tue, 29 Nov 2016 00:07:16 +0000</pubDate>
+      <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
       
       <guid>/tags/elections/</guid>
       <description></description>
@@ -629,6 +629,15 @@
       <pubDate>Thu, 23 Oct 2014 16:25:45 +0000</pubDate>
       
       <guid>/tags/engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Esda</title>
+      <link>/tags/esda/</link>
+      <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
+      
+      <guid>/tags/esda/</guid>
       <description></description>
     </item>
     
@@ -1769,7 +1778,7 @@
     <item>
       <title>Spatial Autocorrelation</title>
       <link>/tags/spatial-autocorrelation/</link>
-      <pubDate>Fri, 26 Sep 2014 17:40:00 +0000</pubDate>
+      <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
       
       <guid>/tags/spatial-autocorrelation/</guid>
       <description></description>
@@ -1835,6 +1844,15 @@
       <pubDate>Tue, 16 Feb 2016 00:09:02 +0000</pubDate>
       
       <guid>/tags/studyblr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swing</title>
+      <link>/tags/swing/</link>
+      <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
+      
+      <guid>/tags/swing/</guid>
       <description></description>
     </item>
     
