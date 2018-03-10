@@ -175,9 +175,9 @@ votes = gpd.GeoDataFrame(votes)
 
 Finally, since I'm mostly interested in two-party vote shares, rather than raw votes, I'll construct the two party vote share in each year as:
 
-$$ tpv_{it} = \frac{d_{it}}{d_{it} + r_{it}} $$
+\\[ tpv\_{it} = \frac{d\_{it}}{d\_{it} + r\_{it}} \\]
 
-where $d_{it}$ is raw vote cast in county $i$ for the Democrat candidate in time $t$, and $r_{it}$ is the comparable raw vote cast for the Republican candidate. We can just do simple series operations to get this done:
+where \(d\_{it}\) is raw vote cast in county \(i\) for the Democrat candidate in time \(t\), and \(r\_{it}\) is the comparable raw vote cast for the Republican candidate. We can just do simple series operations to get this done:
 
 
 ```python
@@ -245,7 +245,7 @@ plt.show()
 ![png](images/spacf_output_16_1.png)
 
 
-One thing that's super clear when you do these maps of two-party vote is that more counties tend to vote Republican than Democrat. In the KDE plots, you see this as the mode of the vote share distribution is well below $.5$, even in 2012, when President Obama won reelection handily. While the best analysis might be to drill all the way down to the voter tabulation district level, that data *attached* to its geographies is pretty hard to find, and often to large for most to work with on a national scale. I've been working on putting it together in an sqlite dump, but that takes time :)
+One thing that's super clear when you do these maps of two-party vote is that more counties tend to vote Republican than Democrat. In the KDE plots, you see this as the mode of the vote share distribution is well below .5, even in 2012, when President Obama won reelection handily. While the best analysis might be to drill all the way down to the voter tabulation district level, that data *attached* to its geographies is pretty hard to find, and often to large for most to work with on a national scale. I've been working on putting it together in an sqlite dump, but that takes time :)
 
 The second thing that's clear is that the collapse of the "blue wall," Minnesota, Wisconsin, Michigan, looks like it was actually a gradual process at the county level. Lots of marginally-blue counties flipped, resulting in a statewide flip. As a geographer, another thing that's interesting about the electoral mosaic is almost how indistinguishably rural Illinois is from its surrounding areas in MO and KY. I think (if I were to finish my PhD and move into some electoral modeling), I would **seriously** look into markov random field models (say a hierarchical SAR/CAR model) of this process, since the state-based hierarchical models like will miss this type of proximity-based correlation entirely.
 
@@ -295,7 +295,7 @@ Of course, an interesting question also might be to look for clusters in vote. W
 
 However, what's the *order* of this process? That is, how far away are counties related to one another?
 
-This has a pretty clear analogue in time-series autocorrelation analysis. The autocorrelation function for a serially-correlated signal computes the correlation between the signal at time $t$ and the signal at time $t-k$, where $k$ is some arbitrary lag. A related concept, the *variogram* in spatial statistics, computes the variance of the difference between locations as they get further and further apart. The partial autocorrelation function (which relates the signal at $t$ and $t-k$ when accounting for all lags between), is also available in a geostatistical context by conditioning the variogram on adjacent pairs below the range. But, this is incredibly computationally intensive (and the variogram is sufficient for all kinds of geostatistical models), so the partial variant is much less well used. 
+This has a pretty clear analogue in time-series autocorrelation analysis. The autocorrelation function for a serially-correlated signal computes the correlation between the signal at time \(t\) and the signal at time \(t-k\), where \(k\) is some arbitrary lag. A related concept, the *variogram* in spatial statistics, computes the variance of the difference between locations as they get further and further apart. The partial autocorrelation function (which relates the signal at \(t\) and \(t-k\) when accounting for all lags between), is also available in a geostatistical context by conditioning the variogram on adjacent pairs below the range. But, this is incredibly computationally intensive (and the variogram is sufficient for all kinds of geostatistical models), so the partial variant is much less well used. 
 
 Unfortunately, the *scale* of the US county system in terms of the distances between places gets much larger as we get west than when we are in the east. One way this is handled in spatial econometrics is to use the adjacency matrix to define neighborhoods. In this case, adjacent counties are considered neighbors, regardless of the actual distance between counties. This allows the connectivity graph relating observations to have a similar density when the polygons being related dilate but keep the same topology. I'll plot this graph over the counties below. Here, I use rook contiguity, which means two counties are adjacent if they share a boundary. 
 
@@ -323,12 +323,12 @@ plt.show()
 
 With this adjacency matrix, we can compute a few interesting spatial statistics. The first, the Bivariate Moran statistic (from [Wartenburg (1985)](dx.doi.org/10.1111/j.1538-4632.1985.tb00849.x), a kind of [Mantel statistic](https://en.wikipedia.org/wiki/Mantel_test)), relates a set of observations to the *spatial lag* of another set of observations. 
 
-To be clear, the spatial lag is analogous to the temporal lag of a variate. In this case, the *spatial lag* refers to the average of the neighboring values around each observation. Using a row-standardized adjacency matrix $\mathbf{W}$, the lag of $Y$ is expressed simply as $\mathbf{W}Y$. 
+To be clear, the spatial lag is analogous to the temporal lag of a variate. In this case, the *spatial lag* refers to the average of the neighboring values around each observation. Using a row-standardized adjacency matrix \(\mathbf{W}\), the lag of \(Y\) is expressed simply as \(\mathbf{W}Y\). 
 
-This means that the bivariate Moran's I statistic is stated for attribute vectors $y$ and $x$:
-$$ \frac{x'\mathbf{W}y}{x'x}$$
+This means that the bivariate Moran's I statistic is stated for centered attribute vectors \(y\) and \(x\):
+\\[ \frac{x'\mathbf{W}y}{x'x}\\]
 
-This results in a single statistic (and accompanying $p$-values computed using permutation methods) that relates the values of attribute $x$ to the *lag* of $y$. We can use this statistic to relate votes between two times. In the following, we see that county vote in the previous year is a good predictor of the vote in the next year:
+This results in a single statistic (and accompanying \(p\)-values computed using permutation methods) that relates the values of attribute \(x\) to the *lag* of \(y\). We can use this statistic to relate votes between two times. In the following, we see that county vote in the previous year is a good predictor of the vote in the next year:
 
 
 ```python
@@ -356,9 +356,9 @@ bvi.I, bvi.p_sim
 
 
 
-Another way to look into this might be to look for clusters of volatility in how the vote changes betwen year to year. To do this, we'll be using the quadrants of the [Moran Scatterplot](https://docs.google.com/presentation/d/1ePyu_eDvTUOp7jZc8XnTXbGEYexCGzd1mzpQ7gqksu8/edit#slide=id.g84b4ad007_0_113) to interpret local indicators that show whether some counties are swinging together with their neighbors, or if some counties are swinging in opposition to their neighbors. Moran statistics, computable in PySAL, allow us to determine both the relative direction (in terms of more or less Republican) and the neighborhood dynamics (in terms of how the nearby counties move). The local moran statistic for a vector of centered observations $z$ is computed:
+Another way to look into this might be to look for clusters of volatility in how the vote changes betwen year to year. To do this, we'll be using the quadrants of the [Moran Scatterplot](https://docs.google.com/presentation/d/1ePyu_eDvTUOp7jZc8XnTXbGEYexCGzd1mzpQ7gqksu8/edit#slide=id.g84b4ad007_0_113) to interpret local indicators that show whether some counties are swinging together with their neighbors, or if some counties are swinging in opposition to their neighbors. Moran statistics, computable in PySAL, allow us to determine both the relative direction (in terms of more or less Republican) and the neighborhood dynamics (in terms of how the nearby counties move). The local moran statistic for a vector of centered observations \(z\) is computed:
 
-$$ I_i = \frac{z_i W_z z}{z'z} $$
+\\[ I\_i = \frac{z\_i W\_z z}{z'z} \\]
 
 
 ```python
@@ -1273,17 +1273,17 @@ More specifically for these labels:
 
 With this, we can try to identify the "range" at which counties are related to one another. If we can identify this, we might be able to tell the graph distance at which counties tend to be come uncorrelated with one another. 
 
-To compute this, we can use the (partial) spatial autocorrelation functions to identify this. In a similar manner to the (partial) temporal autocorrelation function, the (partial) spatial autocorrelation function relates each observation to its $k$th order neighbors. In the spatial context, the $k$th order neighbors of observation $y_i$ is the set of observations $y_j$ that are *first* reached in $k$ steps. This means that the graph distance between observation $y_j$ and $y_i$ is exactly $k$:
-$$ \{y_{ik}  : min(||y_j - y_i||) = k ~ ~ ~ ~ ~ ~ \forall j= 1, 2, \dots, n\}$$
-Thus, the $k$th order spatial autocorrelation function is:
+To compute this, we can use the (partial) spatial autocorrelation functions to identify this. In a similar manner to the (partial) temporal autocorrelation function, the (partial) spatial autocorrelation function relates each observation to its \(k\)th order neighbors. In the spatial context, the \(k\)th order neighbors of observation \(y\_i\) is the set of observations \(y\_j\) that are *first* reached in \(k\) steps. This means that the graph distance between observation \(y\_j\) and \(y\_i\) is exactly \(k\):
+\\[ \{y\_{ik}  : min(||y\_j - y\_i||) = k ~ ~ ~ ~ ~ ~ \forall j= 1, 2, \dots, n\}\\]
+Thus, the \(k\)th order spatial autocorrelation function is:
 
-$$\rho_k = cor(y, \mathbf{W}^ky)$$
+\\[\rho\_k = cor(y, \mathbf{W}^ky)\\]
 
-where $\mathbf{W}^k$ is the adjacency matrix for $k$-minimal neighbors. The $k$th-order *partial* spatial autocorrelation function is:
+where \(\mathbf{W}^k\) is the adjacency matrix for \(k\)-minimal neighbors. The \(k\)th-order *partial* spatial autocorrelation function is:
 
-$$ \dot{\rho}_k = cor(y, \mathbf{W}^ky ~|~ \mathbf{W}^{k-1}y, \mathbf{W}^{k-2}y, \dots, \mathbf{W}^{1}y )$$
+\\[ \dot{\rho}\_k = cor(y, \mathbf{W}^ky ~|~ \mathbf{W}^{k-1}y, \mathbf{W}^{k-2}y, \dots, \mathbf{W}^{1}y )\\]
 
-I plot these for the vote shares in 2016 below, and provide the code used to generate them in this gist. If you put it in the same directory as this notebook, you can just import the code:
+I plot these for the vote shares in 2016 below, 
 
 
 ```python
@@ -1307,15 +1307,15 @@ plt.show()
 ![png](images/spacf_output_58_0.png)
 
 
-Interpreting this, we have to move around 16 counties out before the autocorrelation between counties becomes negative. Remember, this statistic considers only $k$-minimal neighbors, not all observations below $k$th order neighbors. If you don't consider $k$-minimal neighbors (rather than $k$th order), then sets of higher-order neighbors will contain the set of lower-order neighbors. 
+Interpreting this, we have to move around 16 counties out before the autocorrelation between counties becomes negative. Remember, this statistic considers only \(k\)-minimal neighbors, not all observations below \(k\)th order neighbors. If you don't consider \(k\)-minimal neighbors (rather than \(k\)th order), then sets of higher-order neighbors will contain the set of lower-order neighbors. 
 
-In a time series context, this would be akin to considering both the observation from $2$ periods ago *and* the previous observation in the set of $2$nd order neighbors. In contrast, this graph shows the correlation as the set of "considered" counties radiates uniformly outwards from each focal county. 
+In a time series context, this would be akin to considering both the observation from 2 periods ago *and* the previous observation in the set of 2nd order neighbors. In contrast, this graph shows the correlation as the set of "considered" counties radiates uniformly outwards from each focal county. 
 
-Thus, a typical ``cluster'' in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you're right. We need to account for the *whole* neighborhood contained with the $k$-radius cluster:
+Thus, a typical ``cluster'' in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you're right. We need to account for the *whole* neighborhood contained with the \(k\)-radius cluster:
 
 ### Conditional width of cluster size
 
-The partial correlation plot *does* condition on the neighbors below $k$-th order. So, the correlation between the $k$-minimal neighbors and the source observations is conditional on $1$st through $k-1$-minimal neighbors. We can use this plot to adequately identify the ``order'' of the spatial process, if we treat it as a spatial markov random field.
+The partial correlation plot *does* condition on the neighbors below \(k\)-th order. So, the correlation between the \(k\)-minimal neighbors and the source observations is conditional on 1st through \(k-1\)-minimal neighbors. We can use this plot to adequately identify the ``order'' of the spatial process, if we treat it as a spatial markov random field.
 
 
 ```python
