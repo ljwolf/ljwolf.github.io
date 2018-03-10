@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
 <head>
 <meta charset="utf-8" />
 <meta name="author" content="Levi John Wolf" />
@@ -44,7 +48,7 @@
 
 <meta itemprop="datePublished" content="2018-03-09T17:34:20&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-09T17:34:20&#43;00:00" />
-<meta itemprop="wordCount" content="4061">
+<meta itemprop="wordCount" content="4034">
 
 
 
@@ -309,9 +313,9 @@ sns<span style="color:#f92672">.</span>set_style(<span style="color:#e6db74"></s
 votes <span style="color:#f92672">=</span> gpd<span style="color:#f92672">.</span>GeoDataFrame(votes)</code></pre></div>
 <p>Finally, since I&rsquo;m mostly interested in two-party vote shares, rather than raw votes, I&rsquo;ll construct the two party vote share in each year as:</p>
 
-<p>$$ tpv<em>{it} = \frac{d</em>{it}}{d<em>{it} + r</em>{it}} $$</p>
+<p>\[ tpv_{it} = \frac{d_{it}}{d_{it} + r_{it}} \]</p>
 
-<p>where $d<em>{it}$ is raw vote cast in county $i$ for the Democrat candidate in time $t$, and $r</em>{it}$ is the comparable raw vote cast for the Republican candidate. We can just do simple series operations to get this done:</p>
+<p>where (d_{it}) is raw vote cast in county (i) for the Democrat candidate in time (t), and (r_{it}) is the comparable raw vote cast for the Republican candidate. We can just do simple series operations to get this done:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">votes[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2008&#39;</span>] <span style="color:#f92672">=</span> votes<span style="color:#f92672">.</span>dem_2008 <span style="color:#f92672">/</span> (votes<span style="color:#f92672">.</span>dem_2008 <span style="color:#f92672">+</span> votes<span style="color:#f92672">.</span>gop_2008)
 votes[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2012&#39;</span>] <span style="color:#f92672">=</span> votes<span style="color:#f92672">.</span>dem_2012 <span style="color:#f92672">/</span> (votes<span style="color:#f92672">.</span>dem_2012 <span style="color:#f92672">+</span> votes<span style="color:#f92672">.</span>gop_2012)
 votes[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2016&#39;</span>] <span style="color:#f92672">=</span> votes<span style="color:#f92672">.</span>dem_2016 <span style="color:#f92672">/</span> (votes<span style="color:#f92672">.</span>dem_2016 <span style="color:#f92672">+</span> votes<span style="color:#f92672">.</span>gop_2016)</code></pre></div>
@@ -355,7 +359,7 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 
 <p><img src="images/spacf_output_16_1.png" alt="png" /></p>
 
-<p>One thing that&rsquo;s super clear when you do these maps of two-party vote is that more counties tend to vote Republican than Democrat. In the KDE plots, you see this as the mode of the vote share distribution is well below $.5$, even in 2012, when President Obama won reelection handily. While the best analysis might be to drill all the way down to the voter tabulation district level, that data <em>attached</em> to its geographies is pretty hard to find, and often to large for most to work with on a national scale. I&rsquo;ve been working on putting it together in an sqlite dump, but that takes time :)</p>
+<p>One thing that&rsquo;s super clear when you do these maps of two-party vote is that more counties tend to vote Republican than Democrat. In the KDE plots, you see this as the mode of the vote share distribution is well below .5, even in 2012, when President Obama won reelection handily. While the best analysis might be to drill all the way down to the voter tabulation district level, that data <em>attached</em> to its geographies is pretty hard to find, and often to large for most to work with on a national scale. I&rsquo;ve been working on putting it together in an sqlite dump, but that takes time :)</p>
 
 <p>The second thing that&rsquo;s clear is that the collapse of the &ldquo;blue wall,&rdquo; Minnesota, Wisconsin, Michigan, looks like it was actually a gradual process at the county level. Lots of marginally-blue counties flipped, resulting in a statewide flip. As a geographer, another thing that&rsquo;s interesting about the electoral mosaic is almost how indistinguishably rural Illinois is from its surrounding areas in MO and KY. I think (if I were to finish my PhD and move into some electoral modeling), I would <strong>seriously</strong> look into markov random field models (say a hierarchical SAR/CAR model) of this process, since the state-based hierarchical models like will miss this type of proximity-based correlation entirely.</p>
 
@@ -393,7 +397,7 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 
 <p>However, what&rsquo;s the <em>order</em> of this process? That is, how far away are counties related to one another?</p>
 
-<p>This has a pretty clear analogue in time-series autocorrelation analysis. The autocorrelation function for a serially-correlated signal computes the correlation between the signal at time $t$ and the signal at time $t-k$, where $k$ is some arbitrary lag. A related concept, the <em>variogram</em> in spatial statistics, computes the variance of the difference between locations as they get further and further apart. The partial autocorrelation function (which relates the signal at $t$ and $t-k$ when accounting for all lags between), is also available in a geostatistical context by conditioning the variogram on adjacent pairs below the range. But, this is incredibly computationally intensive (and the variogram is sufficient for all kinds of geostatistical models), so the partial variant is much less well used.</p>
+<p>This has a pretty clear analogue in time-series autocorrelation analysis. The autocorrelation function for a serially-correlated signal computes the correlation between the signal at time (t) and the signal at time (t-k), where (k) is some arbitrary lag. A related concept, the <em>variogram</em> in spatial statistics, computes the variance of the difference between locations as they get further and further apart. The partial autocorrelation function (which relates the signal at (t) and (t-k) when accounting for all lags between), is also available in a geostatistical context by conditioning the variogram on adjacent pairs below the range. But, this is incredibly computationally intensive (and the variogram is sufficient for all kinds of geostatistical models), so the partial variant is much less well used.</p>
 
 <p>Unfortunately, the <em>scale</em> of the US county system in terms of the distances between places gets much larger as we get west than when we are in the east. One way this is handled in spatial econometrics is to use the adjacency matrix to define neighborhoods. In this case, adjacent counties are considered neighbors, regardless of the actual distance between counties. This allows the connectivity graph relating observations to have a similar density when the polygons being related dilate but keep the same topology. I&rsquo;ll plot this graph over the counties below. Here, I use rook contiguity, which means two counties are adjacent if they share a boundary.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">W <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>weights<span style="color:#f92672">.</span>Rook<span style="color:#f92672">.</span>from_dataframe(votes)
@@ -414,12 +418,12 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 
 <p>With this adjacency matrix, we can compute a few interesting spatial statistics. The first, the Bivariate Moran statistic (from <a href="dx.doi.org/10.1111/j.1538-4632.1985.tb00849.x">Wartenburg (1985)</a>, a kind of <a href="https://en.wikipedia.org/wiki/Mantel_test">Mantel statistic</a>), relates a set of observations to the <em>spatial lag</em> of another set of observations.</p>
 
-<p>To be clear, the spatial lag is analogous to the temporal lag of a variate. In this case, the <em>spatial lag</em> refers to the average of the neighboring values around each observation. Using a row-standardized adjacency matrix $\mathbf{W}$, the lag of $Y$ is expressed simply as $\mathbf{W}Y$.</p>
+<p>To be clear, the spatial lag is analogous to the temporal lag of a variate. In this case, the <em>spatial lag</em> refers to the average of the neighboring values around each observation. Using a row-standardized adjacency matrix (\mathbf{W}), the lag of (Y) is expressed simply as (\mathbf{W}Y).</p>
 
-<p>This means that the bivariate Moran&rsquo;s I statistic is stated for attribute vectors $y$ and $x$:
-$$ \frac{x&rsquo;\mathbf{W}y}{x&rsquo;x}$$</p>
+<p>This means that the bivariate Moran&rsquo;s I statistic is stated for centered attribute vectors (y) and (x):
+\[ \frac{x&rsquo;\mathbf{W}y}{x&rsquo;x}\]</p>
 
-<p>This results in a single statistic (and accompanying $p$-values computed using permutation methods) that relates the values of attribute $x$ to the <em>lag</em> of $y$. We can use this statistic to relate votes between two times. In the following, we see that county vote in the previous year is a good predictor of the vote in the next year:</p>
+<p>This results in a single statistic (and accompanying (p)-values computed using permutation methods) that relates the values of attribute (x) to the <em>lag</em> of (y). We can use this statistic to relate votes between two times. In the following, we see that county vote in the previous year is a good predictor of the vote in the next year:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">bvi <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>Moran_BV(votes[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2008&#39;</span>], votes[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2012&#39;</span>], w<span style="color:#f92672">=</span>W)
 bvi<span style="color:#f92672">.</span>I, bvi<span style="color:#f92672">.</span>p_sim</code></pre></div>
 <pre><code>(0.59905458256875777, 0.001)
@@ -429,9 +433,9 @@ bvi<span style="color:#f92672">.</span>I, bvi<span style="color:#f92672">.</span
 <pre><code>(0.57711482669716285, 0.001)
 </code></pre>
 
-<p>Another way to look into this might be to look for clusters of volatility in how the vote changes betwen year to year. To do this, we&rsquo;ll be using the quadrants of the <a href="https://docs.google.com/presentation/d/1ePyu_eDvTUOp7jZc8XnTXbGEYexCGzd1mzpQ7gqksu8/edit#slide=id.g84b4ad007_0_113">Moran Scatterplot</a> to interpret local indicators that show whether some counties are swinging together with their neighbors, or if some counties are swinging in opposition to their neighbors. Moran statistics, computable in PySAL, allow us to determine both the relative direction (in terms of more or less Republican) and the neighborhood dynamics (in terms of how the nearby counties move). The local moran statistic for a vector of centered observations $z$ is computed:</p>
+<p>Another way to look into this might be to look for clusters of volatility in how the vote changes betwen year to year. To do this, we&rsquo;ll be using the quadrants of the <a href="https://docs.google.com/presentation/d/1ePyu_eDvTUOp7jZc8XnTXbGEYexCGzd1mzpQ7gqksu8/edit#slide=id.g84b4ad007_0_113">Moran Scatterplot</a> to interpret local indicators that show whether some counties are swinging together with their neighbors, or if some counties are swinging in opposition to their neighbors. Moran statistics, computable in PySAL, allow us to determine both the relative direction (in terms of more or less Republican) and the neighborhood dynamics (in terms of how the nearby counties move). The local moran statistic for a vector of centered observations (z) is computed:</p>
 
-<p>$$ I_i = \frac{z_i W_z z}{z&rsquo;z} $$</p>
+<p>\[ I_i = \frac{z_i W_z z}{z&rsquo;z} \]</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mli <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>Moran_Local(votes<span style="color:#f92672">.</span>tpv_2016 <span style="color:#f92672">-</span> votes<span style="color:#f92672">.</span>tpv_2012, w<span style="color:#f92672">=</span>W)
 votes[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;mlocal_1216&#39;</span>] <span style="color:#f92672">=</span> mli<span style="color:#f92672">.</span>Is
 votes[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;mlocal_p_1216&#39;</span>] <span style="color:#f92672">=</span> mli<span style="color:#f92672">.</span>p_sim
@@ -1264,17 +1268,17 @@ plt<span style="color:#f92672">.</span>show()
 
 <p>With this, we can try to identify the &ldquo;range&rdquo; at which counties are related to one another. If we can identify this, we might be able to tell the graph distance at which counties tend to be come uncorrelated with one another.</p>
 
-<p>To compute this, we can use the (partial) spatial autocorrelation functions to identify this. In a similar manner to the (partial) temporal autocorrelation function, the (partial) spatial autocorrelation function relates each observation to its $k$th order neighbors. In the spatial context, the $k$th order neighbors of observation $y_i$ is the set of observations $y_j$ that are <em>first</em> reached in $k$ steps. This means that the graph distance between observation $y_j$ and $y<em>i$ is exactly $k$:
-$$ {y</em>{ik}  : min(||y_j - y_i||) = k ~ ~ ~ ~ ~ ~ \forall j= 1, 2, \dots, n}$$
-Thus, the $k$th order spatial autocorrelation function is:</p>
+<p>To compute this, we can use the (partial) spatial autocorrelation functions to identify this. In a similar manner to the (partial) temporal autocorrelation function, the (partial) spatial autocorrelation function relates each observation to its (k)th order neighbors. In the spatial context, the (k)th order neighbors of observation (y_i) is the set of observations (y_j) that are <em>first</em> reached in (k) steps. This means that the graph distance between observation (y_j) and (y_i) is exactly (k):
+\[ {y_{ik}  : min(||y_j - y_i||) = k ~ ~ ~ ~ ~ ~ \forall j= 1, 2, \dots, n}\]
+Thus, the (k)th order spatial autocorrelation function is:</p>
 
-<p>$$\rho_k = cor(y, \mathbf{W}^ky)$$</p>
+<p>\[\rho_k = cor(y, \mathbf{W}^ky)\]</p>
 
-<p>where $\mathbf{W}^k$ is the adjacency matrix for $k$-minimal neighbors. The $k$th-order <em>partial</em> spatial autocorrelation function is:</p>
+<p>where (\mathbf{W}^k) is the adjacency matrix for (k)-minimal neighbors. The (k)th-order <em>partial</em> spatial autocorrelation function is:</p>
 
-<p>$$ \dot{\rho}_k = cor(y, \mathbf{W}^ky ~|~ \mathbf{W}^{k-1}y, \mathbf{W}^{k-2}y, \dots, \mathbf{W}^{1}y )$$</p>
+<p>\[ \dot{\rho}_k = cor(y, \mathbf{W}^ky ~|~ \mathbf{W}^{k-1}y, \mathbf{W}^{k-2}y, \dots, \mathbf{W}^{1}y )\]</p>
 
-<p>I plot these for the vote shares in 2016 below, and provide the code used to generate them in this gist. If you put it in the same directory as this notebook, you can just import the code:</p>
+<p>I plot these for the vote shares in 2016 below,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> spacf</code></pre></div>
 <p>First, the full spatial autocorrelation plot:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">lags <span style="color:#f92672">=</span> spacf<span style="color:#f92672">.</span>spacf(votes[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2016&#39;</span>]]<span style="color:#f92672">.</span>values <span style="color:#f92672">-</span> votes[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2012&#39;</span>]]<span style="color:#f92672">.</span>values,W, order<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
@@ -1286,15 +1290,15 @@ plt<span style="color:#f92672">.</span>axis([<span style="color:#ae81ff">0</span
 plt<span style="color:#f92672">.</span>show()</code></pre></div>
 <p><img src="images/spacf_output_58_0.png" alt="png" /></p>
 
-<p>Interpreting this, we have to move around 16 counties out before the autocorrelation between counties becomes negative. Remember, this statistic considers only $k$-minimal neighbors, not all observations below $k$th order neighbors. If you don&rsquo;t consider $k$-minimal neighbors (rather than $k$th order), then sets of higher-order neighbors will contain the set of lower-order neighbors.</p>
+<p>Interpreting this, we have to move around 16 counties out before the autocorrelation between counties becomes negative. Remember, this statistic considers only (k)-minimal neighbors, not all observations below (k)th order neighbors. If you don&rsquo;t consider (k)-minimal neighbors (rather than (k)th order), then sets of higher-order neighbors will contain the set of lower-order neighbors.</p>
 
-<p>In a time series context, this would be akin to considering both the observation from $2$ periods ago <em>and</em> the previous observation in the set of $2$nd order neighbors. In contrast, this graph shows the correlation as the set of &ldquo;considered&rdquo; counties radiates uniformly outwards from each focal county.</p>
+<p>In a time series context, this would be akin to considering both the observation from 2 periods ago <em>and</em> the previous observation in the set of 2nd order neighbors. In contrast, this graph shows the correlation as the set of &ldquo;considered&rdquo; counties radiates uniformly outwards from each focal county.</p>
 
-<p>Thus, a typical ``cluster&rdquo; in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you&rsquo;re right. We need to account for the <em>whole</em> neighborhood contained with the $k$-radius cluster:</p>
+<p>Thus, a typical ``cluster&rdquo; in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you&rsquo;re right. We need to account for the <em>whole</em> neighborhood contained with the (k)-radius cluster:</p>
 
 <h3 id="conditional-width-of-cluster-size">Conditional width of cluster size</h3>
 
-<p>The partial correlation plot <em>does</em> condition on the neighbors below $k$-th order. So, the correlation between the $k$-minimal neighbors and the source observations is conditional on $1$st through $k-1$-minimal neighbors. We can use this plot to adequately identify the ``order&rdquo; of the spatial process, if we treat it as a spatial markov random field.</p>
+<p>The partial correlation plot <em>does</em> condition on the neighbors below (k)-th order. So, the correlation between the (k)-minimal neighbors and the source observations is conditional on 1st through (k-1)-minimal neighbors. We can use this plot to adequately identify the ``order&rdquo; of the spatial process, if we treat it as a spatial markov random field.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plags <span style="color:#f92672">=</span> spacf<span style="color:#f92672">.</span>sppacf(votes[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2016&#39;</span>]]<span style="color:#f92672">.</span>values <span style="color:#f92672">-</span>votes[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;tpv_2012&#39;</span>]]<span style="color:#f92672">.</span>values , W, order<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
 plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1.6</span><span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>))
 plt<span style="color:#f92672">.</span>plot(plags, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;slategrey&#39;</span>)
