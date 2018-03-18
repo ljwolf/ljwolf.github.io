@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 15 Mar 2018 16:53:05 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Mar 2018 22:02:05 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mpl Is Just Fine</title>
+      <link>/post/mpl-is-just-fine/</link>
+      <pubDate>Sun, 18 Mar 2018 22:02:05 +0000</pubDate>
+      
+      <guid>/post/mpl-is-just-fine/</guid>
+      <description>I&amp;rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&amp;rsquo;m still learning things that exist within the pylab interface&amp;hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&amp;rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&amp;rsquo;s easier.</description>
+    </item>
     
     <item>
       <title>on jbp</title>

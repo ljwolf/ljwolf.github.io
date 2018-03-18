@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/content/post/mpl-is-just-fine/</loc>
+    <loc>/post/mpl-is-just-fine/</loc>
     <lastmod>2018-03-18T22:02:05+00:00</lastmod>
   </url>
   
@@ -940,12 +940,6 @@
   </url>
   
   <url>
-    <loc>/content/</loc>
-    <lastmod>2018-03-18T22:02:05+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/current-events/</loc>
     <lastmod>2018-03-15T16:53:05+00:00</lastmod>
     <priority>0</priority>
@@ -1613,7 +1607,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-03-15T16:53:05+00:00</lastmod>
+    <lastmod>2018-03-18T22:02:05+00:00</lastmod>
     <priority>0</priority>
   </url>
   
