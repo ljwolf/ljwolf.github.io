@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/content/post/mpl-is-just-fine/</loc>
+    <lastmod>2018-03-18T22:02:05+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/jbp/</loc>
     <lastmod>2018-03-15T16:53:05+00:00</lastmod>
   </url>
@@ -931,6 +936,12 @@
   <url>
     <loc>/tags/consulting/</loc>
     <lastmod>2015-12-02T21:42:39+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/content/</loc>
+    <lastmod>2018-03-18T22:02:05+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2022,7 +2033,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-03-15T16:53:05+00:00</lastmod>
+    <lastmod>2018-03-18T22:02:05+00:00</lastmod>
     <priority>0</priority>
   </url>
   
