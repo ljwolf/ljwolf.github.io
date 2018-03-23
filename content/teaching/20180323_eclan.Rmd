@@ -1,0 +1,400 @@
+---
+title: "Autoregressive Stochastic Processes"
+output: html_notebook
+---
+
+*Autoregressive processes* are systems where the outcome of interest is a function of other outcomes.
+Often, autoregressive models are used in modeling spatial data or time series data. Often, building in
+this type of dependence involves a `*recursive* structure. For example, in a time-autoregressive process
+with many outcomes $Y$ over time periods $t$, $Y_t$ is a function of $Y_{t-1}$, which itself is a function
+of $Y_{t-2}$, which itself is a function of $Y_{t-3}$, and on and on and on.
+
+For starters, however, let's use $y_t$ to mean the observed value for the random variable $Y$ in time $t$, so that when we spell this mathematical sentence:
+
+$$P(Y_t = y_t)$$
+
+It's read:
+
+> the probability that $Y$ equals $y$ at time $t$
+
+Then, in the following discussion, we'll be talking about the structure of the *stochastic process* governing
+the values $Y$ ends up taking. This may be different from how you're used to approaching thinking about/learning processes. But, I'm suggesting that we start by thinking about how our processes is generated, since the mechanics of *estimating* these processes requires that you understand this. 
+
+# Markov Processes
+
+Assuming that a process follows a **Markov** structure (i.e. is "**Markovian**") is to assume that this
+recursion stops somewhere. So, let's stipulate that, at some point in the past, say $k$ periods ago,
+the probability of observing a specific outcome for $Y_{t-k}$ is the last one that might affect $Y_t$; knowing $Y_{t-k-1}$ gives you no additional information about $Y_t$. Specifically, for the Markov property Formally, this property is known as the *Markov property*.
+
+**Markov Property:** *For a process with outcome $Y$ observed over $t$ peroids in time, a* **Markov process** *of order $p$ is one where the outcome at time $t$ depends only on periods $p$ in the past, and no further:* 
+$$P(Y_t = y_t | Y_{t-1} = y_{t-1}, Y_{t-2} = y_{t-2}, \dots, Y_0 = y_0) = P(Y_t = y_t | Y_{t-1} = y_{t-1}, Y_{t-2} = y_{t-2}, \dots, Y_{t-p} = y_{t-p})$$
+Thus, the probability of observing a specific value of $Y_t$ only depends on $p$ periods in the past, even though you may actually know more than $p$ periods into the past. Often, in practical situations, $p=1$, but it may not necesssarily be so.[^0]
+
+These kinds of processes are quite useful in some ways. 
+
+## Exercise 1: 
+
+A committee of researchers is examining the ranking of a set of postgraduate dissertations submitted to a dissertation writing competition. The committee is concerned that Randolph, one of the committee members, tends to be strongly biased in favor of comparative grading. In short, they're concerned that the grade that Randolph assigns to the current paper is pretty strongly dependent on the grade he assigned to the last paper. Below is the sequence of scores that Randolph has assigned to the dissertations in the prize competition. You'll be responsible for determining whether the concerns about Randolph are founded. 
+
+```{r}
+scores = c(16, 14, 19, 17, 15, 20, 16, 14, 17, 
+           15, 20, 17, 18, 19, 15, 17, 16, 18, 
+           15, 17, 18, 14, 16, 15, 17, 14, 20)
+```
+1. Create a plot of `scores`. Describe how the score of the papers changes as Randolph grades.[^1]
+2. Draw a set of random scores with close to the same average score. Do these exhibit a similar structure? [^2]
+
+Below, we can identify the number of times Randolph scores a dissertation above the average and then, in the next score, gives it below the average. 
+
+```{r}
+low.to.hi = ((scores[1:26] < mean(scores)) * (scores[2:27] > mean(scores)))
+hi.to.low = ((scores[1:26] > mean(scores)) * (socres[2:27] < mean(scores)))
+crosses.mean = low.to.hi + hi.to.low
+total.crossings = sum(crosses.mean)
+```
+
+Thus, Randolph's series crosses the mean score 17 times in 26 chances to do so. 
+
+3. In the same way you made the mock dataset in step 2, generate 1000 mock datasets. 
+   Make a histogram/kernel density plot of these crossings. How many times does a random
+   sequence of scores cross the mean *more than* Randolph's sequence of scores? [^3]
+4. Given your simulations, do you think there is any evidence that Randolph is an unfair grader?
+
+*(For more, see [Sargent & Stachurski](https://lectures.quantecon.org/py/finite_markov.html) on the basics of Markov chains.)*
+
+# Autoregressive Processes
+
+So, we've seen how this **Markov Property** can help us assess sequences of discrete random variables. More generally, this idea of a Markov random process can be used to describe continuous phenomena, too. In fact, we can use these concepts to talk about the most common type of *autoregressive* process, one in **time**; in these models, the present is a function of the recent past.
+
+For instance, let's say we're interested in modelling $Y_t$. And, let's say we have some typical linear model:
+
+$$ Y_t = \sum_{i=1}^{t} \phi_i Y_{t-i} + \epsilon_t $$
+where $\phi_i$ is the ``weight'' assigned to observation $Y_i$ in predicting $Y_t$ and $\epsilon$ is a typical normal error term with deviance $\sigma$. Just like in a typical linear model, we can move from the equation expression to a distributional statement about $Y_t$:
+$$ P(Y_t | Y_{t-1}, Y_{t-2}, \dots, Y_0) = \mathcal{N}\left(\sum_{i=1}^{t} \phi_i Y_{t-i}, \sigma^2\right)$$
+Now, if the process is of order $p$, then we know that $\phi_i$ for $i > p$ should be zero. This means we can truncate this expression to only require the $p$ most-recent time periods:
+$$ P(Y_t | Y_{t-1}, Y_{t-2}, \dots, Y_0) = P(Y_t | Y_{t-1}, Y_{t-2}, \dots, Y_{t-p}) = \mathcal{N}\left(\sum_{i=1}^{p} \phi_i Y_{t-i}, \sigma^2\right)$$
+We call this type of model an *autoregressive model of order $p$*, or an $AR(p)$ model for short. 
+To generate an autoregressive stochastic process of order $p$, and given that we'd have to have $p$ period already, we can generate AR(p) processes by:
+1. Adding a $\mathcal{N}(0,\sigma^2)$ random effect to $\sum_i^p \phi_i Y_{t-i}$ to get $y_t$, the realization of $Y_t$. 
+2. Using the new $y_t$ and the other $p-1$ most recent periods, generate a new value.
+
+So, the simplest code we might use for an AR(1) where $\phi_1 = .25$ and $\sigma = 1$ can be written as:
+
+```{r}
+outcome = c(0) # this is the starting value
+phi = c(.25)
+sigma = 1 # deviation of the process
+t = 1000 # number of time periods
+p = 1 # order
+
+for(i in p:(t+p)){
+    outcome = c(outcome, sum(outcome[(i-p+1):i] * phi) + rnorm(1,0,sigma**2))
+}
+```
+So, we should have generated an AR(1) where the "decay" parameter, $\phi$, is .25. We've consructed 1000 time periods of this process, starting at zero. The process (as it evolves over time) looks like this:
+
+```{r}
+plot(outcome, type='l')
+```
+And, at the end of the simulation, the distribution of values looks like this:
+```{r}
+hist(outcome)
+```
+There are a variety of conditions relating to the "stability" of a chain. By "stability," we mean that any subset of the sequence looks like it could be distributed according to the histogram above. If the process has "converged" to this distribution, then continuing to simulate values will result in draws approximately from this distribution. 
+
+This property, that a stable Markovian process converges to a unique *limiting distribution* is a powerful property. In general, it's what powers *Markov chain Monte Carlo* methods, those used inside of software you've probably used before to fit any kind of model in a Bayesian framework. If you're interested, [I have a demonstration of this for the simplest linear regression](http://ljwolf.org/teaching/gibbs/). 
+
+# Exercise 2.1
+
+1. Modify my code above to generate a few different stochastic processes and plot them. Also, keep the different relizations for the next part of the question.
+    - AR(2) with $\phi = [.25,-.25]$ and $\sigma = 1$, with starting values $(0,1)$
+    - AR(1) with $\phi = .95$ and $\sigma = .001$
+    - AR(1) with $\phi = 1$ and $\sigma = 1$ (run a few of these)
+    - AR(5) with $\phi = [-.5,.25,-.125,.0625,-.03125]$ and $\sigma = 1$ 
+    - AR(5) with $\phi = [-.5,.4,-.3,.2,-.1]$ and $\sigma = 1$ 
+2. Two of these would be known as "divergent" or "explosive" processes. This means that, in the limit, their variance is infinite, and they do not converge to a time-invariant limiting distribution. For the distributions you made in part 1:
+    - Just from having looked at their graphs, which one of the previous sections' sequences do you think would be divergent?
+    - Now, plot each sequences' "cumulative mean," which is the mean of all observations seen up until that iteration. Then, plot their cumulative standard deviations.[^4]
+    - Which sequences have a variance that appear to converge to a finite number? Do any converge exactly to $\sigma$?
+    - Do you notice anything unique about the sequences that are explosive and those that are not? [^5]
+
+## Recursion & Temporal Autoregressive models
+
+So, let's say you have this model of an autoregressive process at order $p$. If we were to express the dependence over time as a graph, we'd be able to do so as follows:
+$$Y_t \leftarrow Y_{t-1} \leftarrow Y_{t-2} \leftarrow \dots \leftarrow Y_{t-p}$$
+Thus, when it comes to our model statement, let's introduce an additional term, $c$ which models the drift of the series in mean as the time develops. This yields:
+$$ Y_t =\phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \dots + \phi_p Y_{t-p} + c + \epsilon_t$$
+But, by our own assumptions, this model applies further back in time, too:
+
+\begin{align} Y_{t-1} &= \phi_1 Y_{t-2} + \phi_2 Y_{t-3} + \dots + \phi_p Y_{t-1-p} + c+ \epsilon_{t-1} \\ 
+                 Y_{t-2} &= \phi_1 Y_{t-3} + \phi_2 Y_{t-4} + \dots + \phi_p Y_{t-2-p} + c+ \epsilon_{t-2} \\
+                 \vdots & \ \ \ \ \ \ \ \ \ \ \ \vdots \\
+                 Y_{p} &= \phi_1 Y_{p-1} + \phi_2 Y_{p-2} + \dots + \phi_p Y_{0} + c+ \epsilon_{p} \\
+                 
+\end{align}
+
+To make the algebra easier, let's just assume $p=1$. Then, a full AR(1) system is:
+
+
+\begin{align} Y_{t} &= \phi Y_{t-1} + \epsilon_{t} \\ 
+                 Y_{t-1} &= \phi Y_{t-2} + c + \epsilon_{t-1} \\ 
+                 Y_{t-2} &= \phi Y_{t-3} + c + \epsilon_{t-2} \\
+                 \vdots & \ \ \ \ \ \ \ \ \ \ \ \vdots \\
+                 Y_2 &= \phi Y_{1} + c + \epsilon_2 \\
+                 Y_{1} &= \phi Y_{0} + c + \epsilon_{1} \\
+                 
+\end{align}
+
+Then, let's substitute forward. For the first substitution, replacing $Y_1$ with the equation generating $Y_1$:
+$$ Y_2 = \phi \left(\phi Y_{0} + c + \epsilon_1\right) + c + \epsilon_2 = \phi^2 Y_0 + \phi \epsilon_1 + \phi c + c + \epsilon_2 $$
+which then gets inserted into the equation predicting $Y_3$:
+$$ Y_3 = \phi \left( \phi \left(\phi Y_{0} + c + \epsilon_1\right) + c + \epsilon_2 \right) + c + \epsilon_3 = \phi^3Y_0 + \phi^2 c + \phi^2 \epsilon_1 + \phi c + \phi \epsilon_2  + c + \epsilon_3 $$
+And up on the chain until we reach the current time period:
+$$ Y_t = \phi \left( \phi \left( \dots \left( \phi \left( \phi Y_{0} + \epsilon_1\right) + \epsilon_2 \right) \dots \right) + \epsilon_t\right) = \phi^t Y_0 + \phi^{t-1}\epsilon_1 + \phi^{t-2} \epsilon_2 + \dots + \epsilon_t = \phi^{t}Y_0 + \sum_{i=0}^{t} \phi^{i}(c + \epsilon_{t-i})$$
+In the limit, if the signal is infinite, though, we obtain the following representation:
+$$ Y_t = \frac{c}{1 - \phi} + \sum_{i=0}^{\infty} \phi^{i}\epsilon_{t-i}$$
+As you can see, this representation involves the infinite sum of errors (sometimes called *innovations* in time series literature) that accumulate over time, attenuated by $\phi$ each time period. This makes a few properties clear.[^6]
+
+## Exercise 2.2
+Return to the specifications we worked with in the previous section. Looking only at the ones that were AR(1):
+
+  - What happens to the sum of the last term if $\phi$ is very small/close to zero?
+  - What happens to the sum of the last term if $\phi$ is larger than one? what about when $\phi$ is more negative than -1?
+  
+In case the results in Exercise 2.2 are in any doubt, when $\phi$ is larger than 1 (or smaller than $-1$) in an AR(1) model, the error term becomes cumulative. Thinking intuitively, this means that the "total" error in the process (the sum of all "epsilon" terms) becomes larger and larger as time goes on. If $|\phi| < 1$, the errors after a certain point in the past go to zero.[^7]
+
+## Estimating AR models & Autocorrelation/covariance
+
+While some elegant theoretical results are available in terms of the *Yule Walker equations* describing the autocovariance of the process (a good discussion is [here](http://www-stat.wharton.upenn.edu/~steele/Courses/956/ResourceDetails/YWSourceFiles/YW-Eshel.pdf)) this method has largely been superseded with the estimation through maximum likelihood and [information criteria](https://www.otexts.org/fpp/8/6). Essentially, these criteria balance the verbosity of the chosen model (in terms of the number of periods in the past to use for $p$) and the fit of the model. Once the order is identified, estimation *via* maximum likelihood is straightforward. 
+
+First, note that the model for all of $Y_t, Y_{t-1},\dots,Y_{0}$ can be decomposed using the markov property. For an AR(1), this looks like:
+$$ f(Y_t, Y_{t-1},\dots,Y_{0}) = f(Y_0) * f(Y_1|Y_0) * f(Y_2 | Y_1) * \dots *f(Y_t | Y_{t-1})$$
+Since there is a "root" of this dependence chain at $Y_0$, estimation can simply proceed through the sum like before. Assuming that innovations are normally-distributed with a time-constant variance, we can obtain the following likelihood:
+
+\begin{align}
+\mathcal{L}(\phi, \sigma^2) &= \log \left\{ \mathcal{N}(0, \frac{\sigma^2}{1 - \phi^2}) * f(Y_1|Y_0) * \dots \right\} \\
+&= -\frac{t}{2} \log(2\pi \sigma^2) + \frac{1}{2}\log(1 - \phi^2) - \frac{1}{2\sigma^2}\left(Y_0^2(1 - \phi^2) + \sum_{i=1}^t(Y_t - \phi Y_{t-1})^2\right)
+\end{align}
+
+This likelihood can be maximized using the conventional approaches. 
+
+Thinking about the autocovariance functions, there are two relevant ideas that are also important to understand. Thinking about the *autocovariance function* (usually denoted $\gamma(k)$) is the covariance between $Y_t$ and $Y_{t-k}$ for some arbitrary value, $k$. The *autocovariance function* standardizes this by the inherent variance of $Y_0$, as is typical for correlation measures, to bring the domain between $(-1,1)$. Further, a *partial autocovariance/autocorrelation* provides the covariance between $Y$ and $Y_{t-k}$ for an arbitrary lag $k$ *while* removing the contribution of all lags. Thus, if an autoregressive process is of order $p$, its partial autocorrelation at lag $p$ should be approximately zero, and this should be the first lag at which this becomes zero. 
+
+## Exercise 2.3: fitting an AR
+
+Some basic time-series functionality is built directly into `R`'s default `stats` module. For one of the series you simulated above, estimate an AR(p) model using the `ar` function in R:
+```{R}
+model = ar(outcome)
+```
+Note that, by default, this will fit an autoregressive process where $p$ is estimated using the *Akaike information criterion*.  Since you know the "right" order of each of the outcomes we worked with in the previous qustions, fit an AR to them and see if the parameters are close to correct given their standard errors and point estimates. [^8]
+
+Further, since you do know the "right" order, force the `ar` function to fit an autoregressive model at the "wrong order." For instance, if I wanted to force the AR function to fit a model with order `k`, I'd have to specify that I do not want to fit using AIC maximization for the order and specify that order `k` should be fit:
+```{R}
+model.bad.specification = ar(outcome, aic=FALSE, order.max=k)
+```
+
+- Fit an AR on the AR(5) where you force the model estimated to be an AR(20). Then, read about what the model's `$aic` attribute means in the docstring of the `ar` function by running `?ar`. Plot this attribute. Do you see a tradeoff between model fit and model complexity?
+
+- There is an extensive set of tools for examining the autoregressive structure of these kinds of sequences. Try plotting the first 20 periods of the autocorrelation function and partial autocorrelation function for the stable AR(5) series discussed before using the `acf` and `pacf` functions in R. 
+    - Does the partial autocorrelation function go to zero at the 5th lag? 
+    - Do the signs of the autocorrelation function match the signs of the terms in $\phi$?
+
+*(There are many more models in this family. If you're very interested in these kinds of econometric autoregressive models, a strong overview of the concepts + applications in R is provided by the author of the `forecast` package in R, Robert Hyndman, [for free](https://www.otexts.org/fpp/8). This would be an excellent resource to learn to fit these models directly in R. Also, see Sargent & Stachurski on univariate and multivariate [linear state space models](https://lectures.quantecon.org/py/linear_models.html#univariate-autoregressive-processes), a generalization of these processes)*
+
+# Spatial Autoregression
+
+Spatial processes are more complex, but are often conceptualized in this same vein. In spatial autoregressive models, the outcomes are dependent horizontally over space, rather than backwards over time. This means that, in any single cross-section, $y_i$ is a function of a set of other $y_j$. Thus, we can state a spatial autoregressive model in a single cross-section with $N$ observations as:
+
+$$ y_i = \sum_j^N \phi_{ij} y_j + \epsilon_i$$
+where $w_{ij}$ describes the strength of association between $y_i$ and $y_j$. Note that this formulation is *exceptionally* more complex than that assumed in the temporal autoregressive model, since every single pair of observations $i,j$ may have a distinct $\phi$. Further, since $y_i$ are a function of other $y_j$ *which are themselves functions of $y_i$*, we cannot use this model without a few further restrictions. 
+
+First and most ubiquitous is the assumption that $\phi_{ij}$ is composed of two parts. One part is a spatial component that models the connections between $i$ and $j$ over space and the other is a "global" parameter that governs the strength of association between observations (generically) that are linked over space. So, we usually embed connections between observations in some kind of spatial weights matrix, $W$, and then estimate some autoregressive parameter $\rho$ that attenuates these linkages. 
+
+However, this does not solve all of our problems. Restating a spatial autoregressive model in a single cross section in this way, we still get:
+$$ y_i = \sum_j^N \phi w_{ij} y_j + \epsilon_i$$
+But, unlike the time-series case where there exists some $Y_0$ that depends on nothing before it, a spatial autoregressive model has no "root" observation which contains no other dependencies. Thus, we often say that spatial autoregressive processes are *omni-directional dependence" which contrasts with time-series's recursive but uni-directional dependence.
+
+Thus, we usually restate these kinds of models in a vector specification. So, let a $N$-vector of responses $Y$ exist and a matrix $W$ containing the elements $w_{ij}$. Together we use these to state a common autoregressive model, the simultaneous autoregressive lag model:
+$$ Y = \rho \mathbf{W} Y + \epsilon$$
+This is a direct analogue of the AR(p) process. But, note that we now *dont* specify an "order" parameter for this process, the determination of $\mathbf{W}$ is considered "fixed." It is uncommon to introduce a specific parameter to $\mathbf{W}$ that governs its order.
+
+## The spatial lag polynomial
+
+Indeed, this is common because the "final" structure of the spatial autoregressive lag model contains higher-order contributions regardless of the structure of $\mathbf{W}$. First, though, we must reduce this model. Recall how we changed the AR(p) statement from being about $Y_{t-k}$ to being a potentially-inifinite accumulation of errors. 
+
+A similar structure can be recognized in these models, and must be done in order to estimate these models using maximum likelihood. Here, since $Y$ is a term on both sides of the equation, we must attempt to factor it into one side alone in order to express the rest as a "generating function" for $Y$. So, a simple application of matrix algebra yields a similar style of "accumulation of errors" form:
+
+\begin{align}
+Y &= \rho \mathbf{W} Y + \epsilon \\
+Y - \rho \mathbf{W} Y  &= \epsilon \\
+(I - \rho \mathbf{W})Y &= \epsilon \\
+Y &= (I - \rho \mathbf{W})^{-1} \epsilon
+\end{align}
+
+Practically speaking, this can be understood by recognizing that the inverted matrix component $(I - \rho \mathbf{W})^{-1}$, sometimes called a "spatial filter matrix," is actually a ["Leontief inverse"](https://math.stackexchange.com/questions/139801/understanding-the-leontief-inverse) that arises from a similarly-structured model of the recursive, mutually-implicative dynamics governing how goods and services are produced in an economy. For our purposes, this means we can restate our expression arrived at above into the sum of an infinite series of accumulating errors, just like in the time series case:
+
+$$ Y = (I - \rho \mathbf{W})^{-1} \epsilon = (I + \rho \mathbf{W} + \rho^2 W^2 + \dots)\epsilon = \sum_{i=0}^\infty\rho^i\mathbf{W}^i\epsilon$$
+Thus, again, there is an equivalence between the accumulating errors and autoregressive statments. Both are equivalent. Further, we might think that $\rho$ again should again be bound between $-1$ and $1$ in order the sum to vanish as $i$ increases. However, since $\rho$ is mediated by $W^i$, it is necessary both that $W$ and $\rho$ exhibit special properties in order for this to be stable.
+
+This model is usually fit using maximum likelihood methods, but can also be fit using Bayesian methods, or multi-stage least squares algorithms, depending on the assumed variance structure of $\nu$.
+
+## Autoregressive error specifications
+Many other specifications focus on specifying an autoregressive process for $\epsilon$, the error term, rather than for the $Y$ term directly. Broadly speaking, these *spatial error models* come in an incredibly variety and many exhibit distinct properties. I'll run through a few of them below. 
+
+### The simultaneous autoregressive error model
+
+This structure is the most clearly related to the simultaneous autoregressive model. In these specifications, we apply the same kind of recursive spatial relationship to the *error term* of the model, instead of applying it to $Y$. Thus, assuming we have some data & substantive effects contained in a typical design $X$ and marginal effects $\beta$, we can state a model as:
+$$ Y = X\beta + \epsilon$$
+and then assign a *second* model for $\epsilon$ that is itself simultaneous autoregressive:
+$$ \epsilon = \lambda \mathbf{W} \epsilon + \nu$$
+Here, we let $\nu$ conceptualize a usual normally-distributed error term with finite variance. 
+
+Conducting the same concentration into the infinite sum, this results in an error model:
+$$ \epsilon = \nu + \sum_i^{\infty} \lambda^i\mathbf{W}^i\nu$$
+which then returns back into our original model:
+$$ Y = X\beta + \nu + \sum_i^\infty \lambda^i \mathbf{W}^i\nu$$
+Again, by the Leontief inverse statement, this is equivalent to the version stated in matrix-inverse form common elsewhere:
+$$ Y = X\beta + (I - \lambda \mathbf{W})^{-1}\nu$$
+
+Estimating this model can be done using maximum likelihood methods, Bayesian methods, or iterative least squares procedures.
+
+### The conditional autoregressive model 
+
+Conditional autoregressive error models tend to work slightly differently than simultaneous autoregressive models. Following some [landmark work by Julian Besag](https://www.jstor.org/stable/2984812?seq=1#page_scan_tab_contents) (with [introduction by RL Smith](https://link.springer.com/chapter/10.1007/978-1-4612-0667-5_13)), we can reduce the simultaneity of a spatial autoregressive process by assuming that a type of *spatial Markov property* holds. Specifically, these models consider *two* error terms, a typical normally-distributed one and one which has spatial autoregressive structure:
+$$ Y = X\beta + \zeta + \epsilon$$
+where for the purposes of our discussion, $\zeta$ is correlated and $\epsilon$ is not. Normally, identifying these two error terms separately is too difficult without assuming some additional structure on $\zeta$ and $\epsilon$, such as a multilevel structure. 
+
+The conditional autoregressive model suggests that the distribution of $\zeta_i$ can be known analytically by conditioning on all of its neighbors:
+$$ \zeta_i | \zeta_{j \neq i} = \sum_{j\neq i}^N \theta w_{ij} \zeta_j$$
+This statement is quite similar to that shown above, but now we have assumed conditionally that we can know the rest of the observations $j \neq i$, instead of suggesting that they are all simultaneously determinted. 
+
+It turns out that, through some manipulation, this allows us to state a full distribution of *all of the* $\phi$ effects without conditioning:[^9]
+
+$$ \phi \sim \mathcal{N}(0, (I - \theta W)^{-1} D) $$
+
+which induces $Y$ to take this spatial correlation structure as well. 
+
+## Exercise 3.1
+
+### What is not autoregressive?
+
+In general, there are many spatial [mixed-effect](https://books.google.co.uk/books?hl=en&lr=&id=WVHRBQAAQBAJ&oi=fnd&pg=PP1&dq=hierarchical+models+banerjee+carlin+gelfand&ots=AouZxmQNr6&sig=O8Dc0SFK31ZYaSLLg97bZ1CvQt0) [structures](https://www.jstor.org/stable/30045248), and many spatially-varying slopes models in multilevel settings (even if they're not continuously-varying) can be thought of as having spatial correlation i ntheir errors or effects. So, consider a typical varying-slope multilevel model. Why is that not autoregressive by itself? What makes a stochastic process autoregressive?[^10]
+
+*(Specifying and estimating CAR models is a robust and at times contetious literature, somewhat unlike the simultaneous literature where the model and specification is relatively well-behaved and well-defined. For a good recent discussion of fitting a conditional autoregressive model in this style, I suggest consulting [Spatial models in Stan](http://mc-stan.org/users/documentation/case-studies/icar_stan.html))*
+
+### Example spatial models
+
+First, we'll fit some spatially-autoregressive models. We'll need to synthesize a few ideas to do this. If you haven't done this before or don't recall some of this, consult Rich Harris's ["Introduction to Mapping and Spatial Modelling in R"](https://www.researchgate.net/publication/258151270_An_Introduction_to_Mapping_and_Spatial_Modelling_in_R), as well as Roger Bivand's viginettes on creating [spatial weights.](https://cran.r-project.org/web/packages/spdep/vignettes/nb.pdf) For this, we'll use some data I have on airbnb pricing in Brooklyn, NY. 
+
+```{r}
+library(spdep)
+library(sp)
+library(ggmap)
+library(readr)
+bklyn = ggmap::get_map(location='Brooklyn, NY', zoom=12)
+airbnb = read_csv('http://ljwolf.org/teaching/listings.csv')
+```
+
+Since the data is quite large (and this is a cleaned extract), let's only work with a small random subsample of it.
+```{r}
+airbnb = sample(airbnb, 1500)
+head(airbnb, 10)
+```
+The data is quite wide, containing large string columns containing nearly all the information about the listing. In addition, each listing has a long list of amenities that the Airbnb has. We'll focus on a few conventional price-relevant factors in our modeling. 
+
+To see a map of prices, we can use `ggmap`:
+```{r}
+ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=airbnb$price), data=airbnb)
+```
+Note that the listings are not evenly distributed over the space. Airbnbs are much more common in central and north Brooklyn than they are in south Brooklyn. So, we need to use some method to accout for this. 
+
+Fortunately, many of the methods we consider can incorporate this structure well, such as using K-nearest neighbour weights. To construct these from our data:
+
+```{r}
+coords = sp::coordinates(airbnb[c('X','Y')])
+k200 = nb2listw(knn2nb(knearneigh(coords, k=200)))
+```
+
+- First, fit a model using:
+    log(price) ~ accommodates + bathrooms + bedrooms + days_since_last_review + host_is_superhost + instant_bookable + review_scores_rating + has_pool + has_wifi + has_beach + is_private + has_pets
+  and identify whether an autoregressive model may even be appropriate.[^11]
+- Fit a spatial error model and a spatial lag model. Which has better fit, in terms of penalized complexity? 
+- Using the same strategy as when we made a map of the prices initially, make maps of the residuals for all of the models.
+- Examine the changes to the $\beta$ estimates between the linear model and the spatial lag model. 
+- In the standard linear model, we call $\beta$ a "marginal effect" because it reflects a "marginal change" in $Y$ when you change $X$. In theory, this works because the *derivative* of $\hat{Y}$ with respect to $X$ in a typical linear model is:
+\begin{align} 
+\hat{Y} &= X\hat{\beta} \\
+\frac{\delta \hat{Y}}{\delta X} &= \hat{\beta} 
+\end{align}
+Note that this implies that a change to *a single site*, $X_i$, causes changes in *only that $\hat{Y}_i$. Do you think this is the case for simultaneous spatial lag model?[^12] To be clear, refer to the model discussed above with the form:
+$$ Y = (I - \rho \mathbf{W})^{-1}X\beta + \epsilon$$
+with the predicted response, $\hat{Y}$:
+$$ \hat{Y} = (I - \hat{\rho} \mathbf{W})^{-1}X\hat{\beta} $$
+- [[BONUS]] Try to fit a the same model in [CARBayes](https://cran.r-project.org/web/packages/CARBayes/index.html) using an `S.CARbym` or `S.CARdissimilarity` structure.[^13] How are its marginal effects affected by the spatial component of that model relative to the standard linear model? 
+
+---
+#```{r}
+#firstmodel = lm("log(price) ~ accommodates + bathrooms + bedrooms + days_since_last_review + host_is_superhost + instant_bookable + review_scores_rating + has_pool + has_wifi + has_beach + is_private + has_pets", data=airbnb)
+#ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=price), data=airbnb)
+#lagmodel = spdep::lagsarlm(formula(firstmodel), nb2listw(k200), data=airbnb)
+
+#ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=firstmodel$residuals), data=airbnb)
+#ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=lagmodel$residuals), data=airbnb)
+```
+---
+
+## The STAR model
+
+These kinds of spatial- and temporal-autoregressive models can be combined. In these space-time autoregressive models, the direct autoregressive and temporal autoregressive models are combined.
+These were suggested first by Cliff & Ord in early work, extended by Pfeifer & Deutsch (1980), see a very rigorous treatment in [RJ Bennett's book](https://trove.nla.gov.au/work/8749133?q&versionId=10120920) and are also discussed in [Cressie & Wikle (2013)](https://books.google.co.uk/books?id=4L_dCgAAQBAJ&pg=PA344&lpg=PA344&dq=Cressie+STARMA+model&source=bl&ots=icUU1HFk_Z&sig=85FSpQprdyyP00LpYITPd-YMB-o&hl=en&sa=X&ved=0ahUKEwjax8fsi4HaAhVRJVAKHQX1BuAQ6AEINjAB#v=onepage&q=Cressie%20STARMA%20model&f=false).  While theoretically useful, they're not often used in practice for a few reasons. 
+
+First, just from a practical perspective, it's usually the case that *either* space *or* time is a significant factor, but usually their joint autoregressive effects are unnecessary. 
+
+Second, there are significant stability issues, since space and time reverberate. To notice this, consider a STAR(1,1), which is a typical spatial lag model with a single term from the past also being relevant:
+$$Y_t = \rho \mathbf{W} Y_t + \phi Y_{t-1} + \epsilon_t$$
+We do the same factor-and-reduce strategy here focusing on $Y_t$:
+$$Y_t = (I - \rho \mathbf{W})^{-1}(\phi Y_{t-1} + \epsilon_t)$$
+but, the same equation applies in the previous period:
+$$ Y_{t-1} = (I - \rho \mathbf{W})^{-1}(\phi Y_{t-2} + \epsilon_{t-1})$$
+And the same recursive substitution strategy makes clear that this becomes a rapidly-increasing tower of spatial filter applications. Letting $\mathbf{F} = (I - \rho \mathbf{W})^{-1}$, this can be stated more concisely as:
+$$ Y_{t} = \mathbf{F}\left[\phi\left(\mathbf{F}\left[\phi \left(\mathbf{F}\left[\phi \dots + \epsilon_{t-2}\right]\right) + \epsilon_{t-1}\right]\right) + \epsilon_t \right] = \sum_{j=0}^p(I - \rho \mathbf{W})^{-(j+1)}\phi^j\epsilon_{t-j}$$
+where a negative matrix power indicates the matrix power of the inverse of that matrix. The stability of this statement now depends both on $\rho$ and on $\phi$, so stability conditions must be assessed by considering the whole lag polynomial including $\phi$ and $\mathbf{F}$. The Leontief-expanded version also still applies, which allows the solutions for any single spatial filter term to be expanded using the infinite series representation, raised to the appropriate power:
+$$ Y_{t} = \sum_{j=0}^p(I - \rho \mathbf{W})^{-(j+1)}\phi^j\epsilon_{t-j} = \sum_{j=0}^p\left(I +  \sum_k^\infty\rho^k\mathbf{W}^k\right)^{j+1}\phi^j\epsilon_{t-j}$$
+
+
+Further, let's focus in on a single observation $y_{it}$:
+$$ y_{it} = \rho \sum_{j \in \eta(i)} w_{ij}y_{j,t} + \phi y_{i,t-1} + \epsilon_{i,t}$$
+where now the summation involves all $j$ observations in the neighborhood of site $i$ (denoted by $\eta(i)$). 
+
+Let's pick a specific one of these $y_{j,t}$ who is in the neighbourhood of $i$ and call it $y_{k,t}$. Now, consider *its* generating equation:
+$$ y_{kt} = \rho \sum_{\ell \in \eta(k), \ell \neq i} w_{k\ell}y_{\ell,t} + \rho w_{ik} y_{it} + \phi y_{k,t-1} + \epsilon_{k,t}$$
+substitute:
+$$ y_{kt} = \rho \sum_{\ell \in \eta(k), \ell \neq i} w_{k\ell}y_{\ell,t} + \rho^2 w_{ik}\sum_{j \in \eta(i)} w_{ij}y_{j,t} + \rho\phi w_{ik} y_{i,t-1} +  \phi y_{k,t-1} + \rho w_{ik} \epsilon_{i,t} + \epsilon_{k,t}$$
+Looking closely, you'll note that *two* $t-1$ terms are now present; $\rho \phi w_{ik} y_{i,t-1}$ and $\phi y_{k,t-1}$. This means that despite the fact that $y_{kt}$ only includes direct autoregressive structures for of its *current neighbor's values* and *its own past value*, these combine to make its *neighbours past values* relevant as well. Thus, there is "bleed" between the spatial and temporal autoregressive structures, and stability is harder (though not impossible) to verify for these models. 
+
+# Conclusion
+
+Autoregression is quite common when thinking about how processes might behave.
+But introducing autoregressive structure can induce some pretty complicated structures into models. 
+Autoregression embeds a kind of "mutual implication" into your process, suggesting that the outcome at some specific time (or some specific location) cannot be known in full without considering the outcomes in the past (or in the immediate proximity.)
+These models are well understood and easy to fit, but they can be surprising to those not used to thinking in this way. 
+So, it's often best to be sure that autoregression is both theoretically justified and empirically useful before using an autoregressive model. 
+
+That said, autoregressive behavior is very expressive, and embeds a large variety of conceptual structures within it. In adition, as models become more complex, we see that thinking about them as stochastic processes, probabilistic models of *the dynamics* of a human, physical, or social systems, makes sense. Temporal stochastic processes are often much simpler than spatial stochastic processes, since things evolve over time in one direction: forward into the present. However, spatial stochastic processes are not this way; they entail a significant amount of recursion and are omni-directional. There's no "start" to a spatial dependence graph. 
+
+Conceptually, the two structures are fundamentally related. The autocovariance function and autocorrelation functions have forms in both the spatial and temporal forms, though we only had time to discuss them in the temporal setup. Further, their inclusion together in models is possible, but can make it difficult to identify which factors are more relevant: the instantaneous simultaneous relationship between a place and its surroundings or the dependence of that place on itself in the past. It's often quite difficult to tell with any certainty what is *most* appropriate from a set of plausible alternatives. So, developing a strong theoretical understanding of what the process is you're trying to model *and* how that might surface in your stochastic process is critical when fitting autoregressive models. 
+
+[^0]:  Note that the Markov property is not a statement about the *expected value* of $Y_t$ given past realizations, $\mathbb{E}[Y_t | Y_{t-1}=y_{t-1},\dots] = Y_{t-1}$. This is an entirely different property, called the **Martingale Property**, which has an entirely different behavior.
+[^1]: *hint for 1.1: a line plot of the data centered on zero may be more helpful than just what `plot(scores)` would provide.*
+[^2]: *hint for 1.2: since we're only dealing with approximates, round(runif(...)) can get you close*
+[^3]: *hint for 1.3: Write a function to do each step: first, a function to make a sequence of random scores; then, a function to get the number of mean-crossings in this sequence. Finally, write a loop to do this 1000 times.*
+[^4]: *hint for Exercise 2.1 part 2: you could do the standard deviation with a result vector `sdeviations` using the following loop: `for(i in 10:length(outcome)){sdeviations = c(sdeviations, sd(outcome[1:i]))}`*
+[^5]: *hint for Exercise 2.1 part 2: specifically, focus on the properties of $\phi$ as a whole... what's different about the $\phi$ vectors for those last two AR(5) processes? Can you adjust the stable one to become unstable by changing just one $\phi_i$?*
+[^6]: Further, this actually is a distinct representation of a stochastic process in time. These kinds of processes are called "moving average" processes, when the sum of a sequence of innovations is used to model the current outcome. Often, these are paired together, with one AR component and one MA (moving average) component, called an ARMA model. 
+[^7]: But, if you recall from Exercise 2.1, in an AR(p), with $p > 1$, it's not sufficient to say that every $\phi_j$, $j = 1 \dots p$ means that a process is stable. The full stability criterion has to do with the location of the roots of the *lag polynomial*. For more, see Sargent & Stachurski on [stability/ergodicity](https://lectures.quantecon.org/py/linear_models.html#visualizing-stability) conditions for these kinds of processes (or a generalization thereof).
+[^8]: *hint for 2.3 part 1: note that you can grab a few attributes of the fitted AR object, such as `asy.se.coef` and `aic` using the typical `model$asy.se.coef` pattern. Also, you can access help on the object or its output by running `?ar`.*
+[^9]: The proof for this is rather confusing, so I suggest you consult the introduction by [RL Smith](https://link.springer.com/chapter/10.1007/978-1-4612-0667-5_13) linked above before attempting to understand the original Besag 1974 paper. Further, if that doesn't make sense, the discussion of the structure in Bannerjee, Carlin, & Gelfand's book, *Hierarchical modeling and analysis for spatial data* is helpful, but again somewhat compressed. For that, seek out the discussion at the end of Chapter 3, specifically sections 3.2 and 3.3.1 for the simplest case.
+[^10]: *hint for Exercise 3.1 part 1: A good answer to this will talk about the main, core idea discussed in the **Autoregressive Processes** Section.  Note that the Markov property is not necessary to have an autoregressive process (e.g. the distinction between SAR and CAR structures in spatial models), but it is helpful in reducing its complexity. Multilevel models with autoregressive structures are [possible](https://www.researchgate.net/profile/Angelos_Mimis/publication/303519923_HSAR_An_R_Package_for_Integrated_Spatial_Econometric_and_Multilevel_Modelling/links/57460d1408aea45ee8561331.pdf).* 
+[^11]: *hint for Exercise 3.1 part 2: One reasonable way to do this uses `spdep::lm.morantest`. Again, consult your SM2 documents if you do not recall how to do this.*
+[^12]: This is kind of like how $\beta$ changes interpretation in many GLM specifications. If you're interested, a brief intro to this problem in the spatial lag model is discussed by [Golgher & Voss (2015)](https://link.springer.com/article/10.1007%2Fs40980-015-0016-y).
+[^13]: *hint for Exercise 3.1 last part: One nice thing that makes repeatedly fitting long models in R is the `formula` command. Using this, you can call `formula(model.i.fit.already)` and get the formula string from that previous model.*
