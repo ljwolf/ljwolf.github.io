@@ -51,8 +51,8 @@ for(i in p:(t+p)){
     - AR(2) with $\phi = [.25,-.25]$ and $\sigma = 1$, with starting values $(0,1)$
     - AR(1) with $\phi = .95$ and $\sigma = .001$
     - AR(1) with $\phi = 1$ and $\sigma = 1$ (run a few of these)
-    - AR(5) with $\phi = [-.5,.25,-.125,.0625,-.03125]$ and $\sigma = 1$ 
-    - AR(5) with $\phi = [-.5,.4,-.3,.2,-.1]$ and $\sigma = 1$ 
+    - AR(5) with $\phi = [-.5,.25,-.125,.0625,-.03125]$ and $\sigma = 1$, with starting values $(0,0,0,0,0)$.
+    - AR(5) with $\phi = [-.5,.4,-.3,.2,-.1]$ and $\sigma = 1$, with stating values $(0,0,0,0,0)$.
 2. Two of these would be known as "divergent" or "explosive" processes. This means that, in the limit, their variance is infinite, and they do not converge to a time-invariant limiting distribution. For the distributions you made in part 1:
     - Just from having looked at their graphs, which one of the previous sections' sequences do you think would be divergent?
     - Now, plot each sequence's "cumulative mean," which is the mean of all observations seen up until that iteration. Then, plot their cumulative standard deviations, variances, or iqrs (whatever measure of dispersion you like).[^4]
@@ -101,6 +101,8 @@ In general, there are many spatially-correlated  [mixed-effect](https://books.go
 - and how might this be different than outcomes being correlated?[^10]
 
 ### Example spatial models
+
+**<font color='red'>NOTE: This is an example exercise; it is not required to complete, but it provides a working knowledge of the models discussed in the Spatial Autoregression section above.  .</font>**
 
 First, we'll fit some spatially-autoregressive models. We'll need to synthesize a few ideas to do this. If you haven't done this before or don't recall some of this, consult Rich Harris's ["Introduction to Mapping and Spatial Modelling in R"](https://www.researchgate.net/publication/258151270_An_Introduction_to_Mapping_and_Spatial_Modelling_in_R), as well as Roger Bivand's viginettes on creating [spatial weights.](https://cran.r-project.org/web/packages/spdep/vignettes/nb.pdf) For this, we'll use some data I have on airbnb pricing in Brooklyn, NY. 
 
@@ -153,3 +155,24 @@ $$ Y = (I - \rho \mathbf{W})^{-1}X\beta + \epsilon$$
 with the predicted response, $\hat{Y}$:
 $$ \hat{Y} = (I - \hat{\rho} \mathbf{W})^{-1}X\hat{\beta} $$
 - [[BONUS]] Try to fit a the same model in [CARBayes](https://cran.r-project.org/web/packages/CARBayes/index.html) using an `S.CARbym` or `S.CARdissimilarity` structure.[^13] How are its marginal effects affected by the spatial component of that model relative to the standard linear model? 
+
+# Notes
+
+[^0]:  Note that the Markov property is not a statement about the *expected value* of $Y_t$ given past realizations, $\mathbb{E}[Y_t | Y_{t-1}=y_{t-1},\dots] = Y_{t-1}$. This is an entirely different property, called the **Martingale Property**, which has an entirely different behavior.
+[^1]: *hint for 1.1: a line plot of the data centered on zero may be more helpful than just what `plot(scores)` would provide.*
+[^2]: *hint for 1.2: since we're only dealing with approximates, round(runif(...)) can get you close*
+[^3]: *hint for 1.3: Write a function to do each step: first, a function to make a sequence of random scores; then, a function to get the number of mean-crossings in this sequence. Finally, write a loop to do this 1000 times.*
+[^4]: *hint for Exercise 2.1 part 2: you could do the standard deviation with a result vector `sdeviations` using the following loop that computes the running standard deviation of the outcome starting at iteration 10: `for(i in 10:length(outcome)){sdeviations = c(sdeviations, sd(outcome[1:i]))}`*
+[^5]: *hint for Exercise 2.1 part 2: specifically, focus on the properties of $\phi$ as a whole... what's different about the $\phi$ vectors for those last two AR(5) processes? Can you adjust the stable one to become unstable by changing just one $\phi_i$?*
+[^6]: Further, this actually is a distinct representation of a stochastic process in time. These kinds of processes are called "moving average" processes, when the sum of a sequence of innovations is used to model the current outcome. Often, these are paired together, with one AR component and one MA (moving average) component, called an ARMA model. 
+[^7]: But, if you recall from Exercise 2.1, in an AR(p), with $p > 1$, it's not sufficient to say that every $\phi_j$, $j = 1 \dots p$ means that a process is stable. The full stability criterion has to do with the location of the roots of the *lag polynomial*. For more, see Sargent & Stachurski on [stability/ergodicity](https://lectures.quantecon.org/py/linear_models.html#visualizing-stability) conditions for these kinds of processes (or a generalization thereof).
+[^8]: *hint for 2.3 part 1: note that you can grab a few attributes of the fitted AR object, such as `asy.se.coef` and `aic` using the typical `model$asy.se.coef` pattern. Also, you can access help on the object or its output by running `?ar`.*
+[^9]: The proof for this is rather confusing, so I suggest you consult the introduction by [RL Smith](https://link.springer.com/chapter/10.1007/978-1-4612-0667-5_13) linked above before attempting to understand the original Besag 1974 paper. Further, if that doesn't make sense, the discussion of the structure in Bannerjee, Carlin, & Gelfand's book, *Hierarchical modeling and analysis for spatial data* is helpful, but again somewhat compressed. For that, seek out the discussion at the end of Chapter 3, specifically sections 3.2 and 3.3.1 for the simplest case.
+[^10]: *hint for Exercise 3.1 part 1: A good answer to this will talk about the main, core idea discussed in the **Autoregressive Processes** Section.  Note that the Markov property is not necessary to have an autoregressive process (e.g. the distinction between SAR and CAR structures in spatial models), but it is helpful in reducing its complexity. Multilevel models with autoregressive structures are [possible](https://www.researchgate.net/profile/Angelos_Mimis/publication/303519923_HSAR_An_R_Package_for_Integrated_Spatial_Econometric_and_Multilevel_Modelling/links/57460d1408aea45ee8561331.pdf).* 
+[^11]: *hint for Exercise 3.1 part 2: One reasonable way to do this uses `spdep::lm.morantest`. Again, consult your SM2 documents if you do not recall how to do this.*
+[^12]: This is kind of like how $\beta$ changes interpretation in many GLM specifications. If you're interested, a brief intro to this problem in the spatial lag model is discussed by [Golgher & Voss (2015)](https://link.springer.com/article/10.1007%2Fs40980-015-0016-y).
+[^13]: *hint for Exercise 3.1 last part: One nice thing that makes repeatedly fitting long models in R is the `formula` command. Using this, you can call `formula(model.i.fit.already)` and get the formula string from that previous model.*
+[^14]: One can also specify CAR autoregressive models directly on $Y$ analogous to that for a simultaneous specification, but this is again rarely done due to the fact that CARs are often deployed in GLM data to model correlation in spatial counts. Direct modeling of correlation in $Y$ does not work well with the link function in those cases, so these kinds of autoregressive-error models (Such as the Besag-York-Mollie model) are used instead.)
+[^15]: Specifying and estimating CAR models is a robust and at times contetious literature. This is unlike the simultaneous literature where the model and specification is relatively well-defined, although sometimes just as ill-behaved. For a good recent discussion of fitting a conditional autoregressive model in this style, I suggest consulting [Spatial models in Stan](http://mc-stan.org/users/documentation/case-studies/icar_stan.html))
+[^16]: Thus, we are all atomized & alienated from both our current states and our predicted futures. If this were a different course, here would be a great place to begin an assault on the fundamentally neoliberal assumptions of statistical orthodoxy, but I'll stick to the math here...
+[^18]: This has been considerably generalized by Cressie & Wikle into a general [space-time-dynamical Kalman Filter](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118445112.stat07813); it's pretty cool to get into how this works, but we don't have time here.
