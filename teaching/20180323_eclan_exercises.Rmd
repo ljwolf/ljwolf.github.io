@@ -102,7 +102,7 @@ In general, there are many spatially-correlated  [mixed-effect](https://books.go
 
 ### Example spatial models
 
-**<font color='red'>NOTE: This is an example exercise; it is not required to complete, but it provides a working knowledge of the models discussed in the Spatial Autoregression section above.  .</font>**
+**<font color='red'>NOTE: This is an example exercise; it is not required to complete, but it provides a working knowledge of the models discussed in the Spatial Autoregression section above.</font>**
 
 First, we'll fit some spatially-autoregressive models. We'll need to synthesize a few ideas to do this. If you haven't done this before or don't recall some of this, consult Rich Harris's ["Introduction to Mapping and Spatial Modelling in R"](https://www.researchgate.net/publication/258151270_An_Introduction_to_Mapping_and_Spatial_Modelling_in_R), as well as Roger Bivand's viginettes on creating [spatial weights.](https://cran.r-project.org/web/packages/spdep/vignettes/nb.pdf) For this, we'll use some data I have on airbnb pricing in Brooklyn, NY. 
 
