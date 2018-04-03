@@ -115,8 +115,8 @@ This property, that a stable Markovian process converges to a unique *limiting d
     - AR(2) with $\phi = [.25,-.25]$ and $\sigma = 1$, with starting values $(0,1)$
     - AR(1) with $\phi = .95$ and $\sigma = .001$
     - AR(1) with $\phi = 1$ and $\sigma = 1$ (run a few of these)
-    - AR(5) with $\phi = [-.5,.25,-.125,.0625,-.03125]$ and $\sigma = 1$ 
-    - AR(5) with $\phi = [-.5,.4,-.3,.2,-.1]$ and $\sigma = 1$ 
+    - AR(5) with $\phi = [-.5,.25,-.125,.0625,-.03125]$ and $\sigma = 1$, with starting values $(0,0,0,0,0)$.
+    - AR(5) with $\phi = [-.5,.4,-.3,.2,-.1]$ and $\sigma = 1$, with stating values $(0,0,0,0,0)$.
 2. Two of these would be known as "divergent" or "explosive" processes. This means that, in the limit, their variance is infinite, and they do not converge to a time-invariant limiting distribution. For the distributions you made in part 1:
     - Just from having looked at their graphs, which one of the previous sections' sequences do you think would be divergent?
     - Now, plot each sequence's "cumulative mean," which is the mean of all observations seen up until that iteration. Then, plot their cumulative standard deviations, variances, or iqrs (whatever measure of dispersion you like).[^4]
@@ -284,17 +284,19 @@ which induces $Y$ to take this spatial correlation structure as well.[^14] While
 
 ### What is not autoregressive?
 
-In general, there are many spatially-correlated  [mixed-effect](https://books.google.co.uk/books?hl=en&lr=&id=WVHRBQAAQBAJ&oi=fnd&pg=PP1&dq=hierarchical+models+banerjee+carlin+gelfand&ots=AouZxmQNr6&sig=O8Dc0SFK31ZYaSLLg97bZ1CvQt0) [structures](https://www.jstor.org/stable/30045248); further, many spatially-varying slopes models in multilevel settings (even if they're not continuously-varying) can be thought of as having spatial correlation in their errors or effects. So, consider a typical varying-slope multilevel model.
+In general, there are many spatially-correlated  [mixed-effect](https://books.google.co.uk/books?hl=en&lr=&id=WVHRBQAAQBAJ&oi=fnd&pg=PP1&dq=hierarchical+models+banerjee+carlin+gelfand&ots=AouZxmQNr6&sig=O8Dc0SFK31ZYaSLLg97bZ1CvQt0) [structures](https://www.jstor.org/stable/30045248); further, many spatially-varying slopes models in multilevel settings (even if they're not continuously-varying) can be thought of as having spatial correlation in their errors or effects. 
 
-- Why is that not autoregressive by itself? 
-- What makes a stochastic process autoregressive? 
-- and how might this be different than outcomes being correlated?[^10]
+So, given what we've covered about spatial and temporal autoregressive models,
 
+- What does it mean for a process to be autoregressive? 
+- How are autoregressive models different from other panel models, like time fixed-effects models or multilevel panel models?
+
+<!---
 ### Example spatial models
 
 First, we'll fit some spatially-autoregressive models. We'll need to synthesize a few ideas to do this. If you haven't done this before or don't recall some of this, consult Rich Harris's ["Introduction to Mapping and Spatial Modelling in R"](https://www.researchgate.net/publication/258151270_An_Introduction_to_Mapping_and_Spatial_Modelling_in_R), as well as Roger Bivand's viginettes on creating [spatial weights.](https://cran.r-project.org/web/packages/spdep/vignettes/nb.pdf) For this, we'll use some data I have on airbnb pricing in Brooklyn, NY. 
 
-```{r}
+```r
 library(spdep)
 library(sp)
 library(ggmap)
@@ -305,14 +307,14 @@ airbnb = read_csv('http://ljwolf.org/teaching/listings.csv')
 ```
 
 Since the data is quite large (and this is a cleaned extract), let's only work with a small random subsample of it.
-```{r}
+```r
 airbnb = sample_n(airbnb, 1500)
 head(airbnb, 10)
 ```
 The data is quite wide, containing large string columns containing nearly all the information about the listing. In addition, each listing has a long list of amenities that the Airbnb has. We'll focus on a few conventional price-relevant factors in our modeling. 
 
 To see a map of prices, we can use `ggmap`:
-```{r}
+```r
 ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=airbnb$price), data=airbnb)
 ```
 
@@ -320,11 +322,10 @@ Note that the listings are not evenly distributed over the space. Airbnbs are mu
 
 Fortunately, many of the methods we consider can incorporate this structure well, such as using K-nearest neighbour weights. To construct these from our data:
 
-```{r}
+```r
 coords = sp::coordinates(airbnb[c('X','Y')])
 k200 = nb2listw(knn2nb(knearneigh(coords, k=200)))
 ```
-
 - First, fit a model using:
     `log(price) ~ accommodates + bathrooms + bedrooms + days_since_last_review + host_is_superhost`
     `+ instant_bookable + review_scores_rating`
@@ -344,8 +345,7 @@ with the predicted response, $\hat{Y}$:
 $$ \hat{Y} = (I - \hat{\rho} \mathbf{W})^{-1}X\hat{\beta} $$
 - [[BONUS]] Try to fit a the same model in [CARBayes](https://cran.r-project.org/web/packages/CARBayes/index.html) using an `S.CARbym` or `S.CARdissimilarity` structure.[^13] How are its marginal effects affected by the spatial component of that model relative to the standard linear model? 
 
----
-#```{r}
+#```r
 #firstmodel = lm("log(price) ~ accommodates + bathrooms + bedrooms + days_since_last_review + host_is_superhost + instant_bookable + review_scores_rating + has_pool + has_wifi + has_beach + is_private + has_pets", data=airbnb)
 #ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=price), data=airbnb)
 #lagmodel = spdep::lagsarlm(formula(firstmodel), nb2listw(k200), data=airbnb)
@@ -353,7 +353,7 @@ $$ \hat{Y} = (I - \hat{\rho} \mathbf{W})^{-1}X\hat{\beta} $$
 #ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=firstmodel$residuals), data=airbnb)
 #ggmap(bklyn) + geom_point(aes(x=X, y=Y, col=lagmodel$residuals), data=airbnb)
 ```
----
+--->
 
 ## The STAR model
 
@@ -398,7 +398,8 @@ That said, autoregressive behavior is very expressive, and embeds a large variet
 
 Conceptually, the two structures are fundamentally related. The autocovariance function and autocorrelation functions have forms in both the spatial and temporal forms, though we only had time to discuss them in the temporal setup. Further, their inclusion together in models is possible, but can make it difficult to identify which factors are more relevant: the instantaneous simultaneous relationship between a place and its surroundings or the dependence of that place on itself in the past. It's often quite difficult to tell with any certainty what is *most* appropriate from a set of plausible alternatives. So, developing a strong theoretical understanding of what the process is you're trying to model *and* how that might surface in your stochastic process is critical when fitting autoregressive models. 
 
-#Notes
+# Notes
+
 [^0]:  Note that the Markov property is not a statement about the *expected value* of $Y_t$ given past realizations, $\mathbb{E}[Y_t | Y_{t-1}=y_{t-1},\dots] = Y_{t-1}$. This is an entirely different property, called the **Martingale Property**, which has an entirely different behavior.
 [^1]: *hint for 1.1: a line plot of the data centered on zero may be more helpful than just what `plot(scores)` would provide.*
 [^2]: *hint for 1.2: since we're only dealing with approximates, round(runif(...)) can get you close*
