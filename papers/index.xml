@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Papers on Yet Another Geographer</title>
+    <link>/papers/</link>
+    <description>Recent content in Papers on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 04 Apr 2018 02:20:45 +0100</lastBuildDate>
+    
+	<atom:link href="/papers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GIS Research UK Conference, 2018: Spatially-Encouraged Spectral Clustering</title>
+      <link>/papers/2018_gisruk/</link>
+      <pubDate>Wed, 04 Apr 2018 02:20:45 +0100</pubDate>
+      
+      <guid>/papers/2018_gisruk/</guid>
+      <description>This paper culminates a bit of work I&amp;rsquo;ve started on since seeing a talk by Phil Chodrow on a paper that eventually became his quite interesting NAS paper paper on segregation and entropy surfaces.
+I was intrigued by the prospect of using spectral clustering for constrained clustering problems. Specifically, I&amp;rsquo;d known that affinity matrix clustering could be adapted to constrained contexts ever since reading about hierarchical ward clustering, but I hadn&amp;rsquo;t seen a really convincing method that showed me how I could work this out for a general affinity-matrix clustering method.</description>
+    </item>
+    
+  </channel>
+</rss>

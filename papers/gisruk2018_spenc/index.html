@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Levi John Wolf" />
+<meta name="description" content="just a geograblog" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.37.1" />
+
+<link rel="canonical" href="/papers/gisruk2018_spenc/">
+<base href="/" />
+<meta property="og:title" content="Spatially-Encouraged Spectral Clustering: A Critical Revision of
+Spatially-Constrained Spectral Clustering
+" />
+<meta property="og:description" content="Introduction Fundamentals of Spectral Clustering  The model of constraint  Interrogating $\delta$  The Two Kernels The underlying model of clustering  Generalizing the problem  Understanding the Parameter Tradeoffs Induced geographic regularity for clustering on non-lattice data  Discussion &amp; Conclusion  \rowcolors{2}{gray!25}{white} \maketitle \doublespacing
+Introduction {#s:intro} Spectral clustering is a thoroughly-used technique in machine learning to analyze the latent spatial structure in data [@Ng2002Spectral; @vonLuxberg2007Tutorial]. As a clustering technique, it has often been applied to graph-embedded data [@White2005Spectral], and recently been applied to questions of geodemographic analysis of segregation and sorting [@Chodrow2017Structure]." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/papers/gisruk2018_spenc/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spatially-Encouraged Spectral Clustering: A Critical Revision of
+Spatially-Constrained Spectral Clustering
+"/>
+<meta name="twitter:description" content="Introduction Fundamentals of Spectral Clustering  The model of constraint  Interrogating $\delta$  The Two Kernels The underlying model of clustering  Generalizing the problem  Understanding the Parameter Tradeoffs Induced geographic regularity for clustering on non-lattice data  Discussion &amp; Conclusion  \rowcolors{2}{gray!25}{white} \maketitle \doublespacing
+Introduction {#s:intro} Spectral clustering is a thoroughly-used technique in machine learning to analyze the latent spatial structure in data [@Ng2002Spectral; @vonLuxberg2007Tutorial]. As a clustering technique, it has often been applied to graph-embedded data [@White2005Spectral], and recently been applied to questions of geodemographic analysis of segregation and sorting [@Chodrow2017Structure]."/>
+
+
+
+<meta itemprop="name" content="Spatially-Encouraged Spectral Clustering: A Critical Revision of
+Spatially-Constrained Spectral Clustering
+">
+<meta itemprop="description" content="Introduction Fundamentals of Spectral Clustering  The model of constraint  Interrogating $\delta$  The Two Kernels The underlying model of clustering  Generalizing the problem  Understanding the Parameter Tradeoffs Induced geographic regularity for clustering on non-lattice data  Discussion &amp; Conclusion  \rowcolors{2}{gray!25}{white} \maketitle \doublespacing
+Introduction {#s:intro} Spectral clustering is a thoroughly-used technique in machine learning to analyze the latent spatial structure in data [@Ng2002Spectral; @vonLuxberg2007Tutorial]. As a clustering technique, it has often been applied to graph-embedded data [@White2005Spectral], and recently been applied to questions of geodemographic analysis of segregation and sorting [@Chodrow2017Structure].">
+
+
+
+<meta itemprop="wordCount" content="6062">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Spatially-Encouraged Spectral Clustering: A Critical Revision of
+Spatially-Constrained Spectral Clustering
+ 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About | </div></a>
+    
+    <a class="nav-item" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"><div class="nav-item-title"> CV |  </div></a>
+    
+    <a class="nav-item" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"><div class="nav-item-title"> Bristol |  </div></a>
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title"> Chicago |  </div></a>
+    
+    <a class="nav-item" href="https://spatial.ucr.edu"><div class="nav-item-title"> UCR |  </div></a>
+    
+    <a class="nav-item" href="/talks/"><div class="nav-item-title"> Talks | </div></a>
+    
+    <a class="nav-item active" href="/papers/"><div class="nav-item-title">Papers</div></a>
+    
+    <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
+
+  </nav>
+</div>
+
+<link rel="shortcut icon" type="image/jpg" href="/favicon.ico">
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Spatially-Encouraged Spectral Clustering: A Critical Revision of
+Spatially-Constrained Spectral Clustering
+ </h1>
+    <div class="content"> 
+
+<ul>
+<li><a href="#s:intro">Introduction</a></li>
+<li><a href="#ss:fundamentals">Fundamentals of Spectral Clustering</a>
+
+<ul>
+<li><a href="#the-model-of-constraint">The model of constraint</a></li>
+</ul></li>
+<li><a href="#interrogating-delta">Interrogating $\delta$</a>
+
+<ul>
+<li><a href="#ss:omission">The Two Kernels</a></li>
+<li><a href="#the-underlying-model-of-clustering">The underlying model of
+clustering</a></li>
+</ul></li>
+<li><a href="#generalizing-the-problem">Generalizing the problem</a>
+
+<ul>
+<li><a href="#understanding-the-parameter-tradeoffs">Understanding the Parameter
+Tradeoffs</a></li>
+<li><a href="#induced-geographic-regularity-for-clustering-on-non-lattice-data">Induced geographic regularity for clustering on non-lattice
+data</a></li>
+</ul></li>
+<li><a href="#discussion-conclusion">Discussion &amp; Conclusion</a></li>
+</ul>
+
+<p>\rowcolors{2}{gray!25}{white}
+\maketitle
+\doublespacing</p>
+
+<h1 id="introduction-s-intro">Introduction {#s:intro}</h1>
+
+<p>Spectral clustering is a thoroughly-used technique in machine learning
+to analyze the latent spatial structure in data
+[@Ng2002Spectral; @vonLuxberg2007Tutorial]. As a clustering technique,
+it has often been applied to graph-embedded data [@White2005Spectral],
+and recently been applied to questions of geodemographic analysis of
+segregation and sorting [@Chodrow2017Structure]. The spectral analysis
+of geographic data is not a new concept in quantitative spatial science
+[@Tobler1966Spectral]. Indeed, the properties of the spectra of models
+and methods in spatial econometrics and statistics are well known
+[@Griffith2000Eigenfunction; @Griffith2013Spatial]. While spectral
+methods often find their way into supervised learning of geographic
+processes, the application of spectral analysis to unsupervised learning
+in geography is less common.</p>
+
+<p>This is because spectral clustering methods have not deeply integrated
+geographic information into clusterings, like those required for
+spatially-constrained clustering [@Duque2007Supervised]. The problem of
+identifying geographically-meaningful clusters is ubiquitous in the
+field, and has significant common applications in epidemiology
+[@Turnbull1990Monitoring; @Besag1991dection; @Kulldorff1995Spatial; @Neill2005Detecting; @Rogerson2009Statistical]
+and econometrics
+[@Czamanski1979Indentification; @Rey2000Identifying; @Arbia2008class].
+Further, the exploratory analysis of spatial outliers and &ldquo;hotspots&rdquo; is
+a common technique in exploratory spatial data analysis
+[@Anselin1995Local; @Getis1996Local], and is a common mode of analysis
+for initial geographic interrogation. The determination of spatially
+meaningful communities also plays a large role in spatial sociology
+[@Galster2001nature; @Drukker2003Childrens; @Spielman2013Using], and the
+visualization of the spatiality inherent in demographic data is a robust
+subfield of geography, known as geodemographics
+[@Harris2005Geodemographics; @Harris2007Neighborhoods; @Singleton2009Creating; @Singleton2014Past].</p>
+
+<p>While each of these domains focuses on slightly different methods of
+identifying geographic areas with consistent semantic meaning (or
+visualizing the spatiality of semantically-meaningful areas in data),
+measures of how &ldquo;well-separated&rdquo; clusters are from one another are
+common in the literature. Recent methods, such as local information
+scoring [@Chodrow2017Structure] follow in a long line of post-hoc
+measures of attribute separation between identified clusters
+[@Rousseeuw1987Silhouettes]. In this way, most measures of attribute
+similarity or spatial contiguity are either the byproduct of cluster
+fitting or are computed about solutions after their fit. But, by
+themselves, these scores provide no method to balance spatial separation
+and attribute homogeneity before the solution is generated. In contrast,
+the <em>spatially-constrained spectral clustering</em> method of
+@Yuan2015Constrained parameterizes the balance between contiguity and
+cluster cohesion before computing clusters. Critically, the balance
+parameter can be varied to generate different solutions with differing
+trade-offs between spatial separation and attribute homogeneity. This
+means that, instead of simply characterizing the spatial and social
+separation in a clustering solution after the fact, it can be controlled
+from the outset.</p>
+
+<p>@Yuan2015Constrained provide their method in the context of land use
+classification over remotely sensed polygons. To provide an extension of
+this method for generalized spatial social science, I will review the
+basic theory of spectral clustering, discuss @Yuan2015Constrained&rsquo;s core
+improvement, and then discuss two related representational choices that
+are required to generalize the method. First, I discuss the impact of an
+omitted free parameter: the attribute kernel bandwidth, $\tau^2$.
+Whereas @Yuan2015Constrained only consider a spatial discrete bandwidth
+parameter, $\delta$, both $\delta$ and the omitted $\tau^2$ balance to
+control the solution&rsquo;s characteristics. This runs counter to the
+suggested interpretation obtained from the analogy offered to aspatial
+constrained spectral clustering.</p>
+
+<p>The examination of the free parameter and re-interpretation of $\delta$
+do not invalidate @Yuan2015Constrained&rsquo;s conclusions, nor the novelty of
+their method. Rather, these realizations are required to generalize the
+method, improving the method&rsquo;s flexibility for a given data and
+adaptability for various types of data. I call this generalization
+<em>spatially-encouraged spectral clustering</em>. I close by demonstrating
+this generalization for two datasets with different spatial support and
+thus different conceptually-appropriate spatial representations.</p>
+
+<h1 id="fundamentals-of-spectral-clustering-ss-fundamentals">Fundamentals of Spectral Clustering {#ss:fundamentals}</h1>
+
+<p>Spectral clustering works by finding clusters in a lower-dimensional
+embedding of high-dimensional attribute data [@Ng2002Spectral]. Thus, at
+a high level, spectral clustering has a dimension reduction step where
+relevant eigenvectors are extracted from a summary matrix of the data,
+and then a cluster discovery step, where clusters are detected from
+within the lower-dimensional embedding. The data summary matrix, called
+the <em>affinity matrix</em>, encodes the pairwise similarities between $N$
+observations over $P$ covariates contained in the source data matrix
+$\mathbf{X}$. The pairwise affinity scores are a distance metric
+(usually standardized between $[0,1]$) that relates how similar
+observation $i$ is to observation $j$; these are collected into
+$\mathbf{A}$, the $N \times N$ affinity matrix. Typically, attribute
+similarity is a kernel function, such as a negative exponential kernel,
+such that the resulting affinity matrix is positive semidefinite and
+symmetric. With an affinity matrix, spectral clustering operates on the
+implied <em>Laplacian</em> matrix of this data, which is defined as:
+$$\mathbf{L} = \mathbf{D} - \mathbf{A}$$ where $\mathbf{D}$ is a
+diagonal matrix (the <em>degree</em>) matrix, such that
+$\mathbf{D}_{ii} = \sum<em>j^N \mathbf{A}</em>{ij}$. Then, the set of $K$
+eigenvectors corresponding to the largest $K$ eigenvalues extracted from
+$\mathbf{L}$ provide a lower-dimensional embedding over which a simpler
+method, such as $K$-means, can be used to cluster more efficiently in
+lower dimension [@vonLuxberg2007Tutorial].</p>
+
+<p>What @Yuan2015Constrained note is that, given the structure of the
+implied Laplacian $\mathbf{L}$, the structure of $\mathbf{A}$ can be
+adjusted to provide a mixture of a contiguity constraint and attribute
+affinity. Indeed, as long as $\mathbf{A}$ remains positive semidefinite
+and symmetric (and the corresponding $\mathbf{D}$ adapts to its
+structure), $\mathbf{A}$ may be arbitrarily adjusted. They focus on the
+common concern of determining contiguous clusters, with various
+algorithms designed explicitly for this purpose [@Duque2007Supervised].
+To develop a spatially-constrained spectral clustering algorithm,
+@Yuan2015Constrained adapts constrained spectral clustering
+[@Wang2010Flexible]. The affinity matrix $\mathbf{A}$ is partitioned
+into two component matrices, $\mathbf{A}_f$, the attribute affinity
+matrix and $\mathbf{A}_s$, a spatial affinity matrix. For their problem,
+@Yuan2015Constrained parameterize the spatial affinity matrix using,
+$\delta$, which they suggest reflects the extent to which spatial
+constraints are enforced. Thus, the form for $\mathbf{L}_s$, the
+spatially-informed Laplacian used for clustering, is similar to the
+standard aspatial spectral clustering Laplacian:
+$$\mathbf{L}_s = \mathbf{D}_s - \mathbf{A}_f \circ \mathbf{A}_s(\delta)$$
+where $\mathbf{D}_s$ is again constrained to be equivalent to the
+diagonalized row sums of $\mathbf{A}_f \circ \mathbf{A}_s$, and $\circ$
+denotes the Hadamard (elementwise) product of the two $N \times N$
+affinities. Again, by examining the top $K$ eigenvectors of
+$\mathbf{L}_s$ with $K$-means clustering, a hybrid spatial-attribute
+regionalization can be constructed with the balance between spatial
+contiguity and attribute fit governed by $\delta$.</p>
+
+<h2 id="the-model-of-constraint">The model of constraint</h2>
+
+<p>While the approach in @Yuan2015Constrained is novel, there are a few
+remaining questions about $\delta$. Explicitly, due to the spatial
+nature of the problem, $\delta$ changes subtly in meaning from the
+typical constrained spectral clustering interpretation. In typical
+constrained spectral clustering, $\delta$ is a convex combination weight
+used to merge the affinity matrix $\mathbf{A}$ and constraint matrix
+$\mathbf{C}$ together: $$\label{eq:convcomb}
+(1 - \delta)\mathbf{A} + \delta \mathbf{C}$$ where $\delta$ is
+constrained between $0$ and $1$. Thus, when $\delta$ approaches one,
+$\mathbf{C}$ becomes the sole considered factor, and when $\delta$
+approaches zero, $\mathbf{A}$ becomes dominant.</p>
+
+<p>In contrast, @Yuan2015Constrained&rsquo;s more complex specification provides
+a $\delta$ with different behavior. In fact, their $\delta$ is a
+discrete bandwidth parameter, not a combination weight. They suggest a
+conventional geographic interpretation of contiguity as neighbors along
+a first-order adjacency graph representation. They call this a <em>linear
+spatial kernel</em>. Going further, they then state a generalization of this
+kernel that they call the <em>exponential spatial kernel</em>. At a given
+finite order of contiguity, $\eta$, the authors provide the exponential
+kernel as: $$\label{eq:expo_kernel}
+\mathbf{A}_s(\eta) = \sum_k^\eta \frac{\mathbf{A_0}^k}{k!}$$ where
+$\mathbf{A}_0$ is the first-order contiguity adjacency matrix. In fact,
+they note that this is a &ldquo;truncated exponential kernel,&rdquo; since the
+series stops at $\eta$.<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">1</a></sup> This implies $\eta$ in this problem is an
+integer-valued parameter denoting a specific order of contiguity at
+which observations are considered neighbors. To mimic the $[0,1]$
+support from standard constrained spectral clustering, they let
+$\delta = \eta / \max{\eta}$, where $\max{\eta}$ is the diameter of
+the graph, and thus the order of the longest attainable path. Further,
+@Yuan2015Constrained consider a <em>binarized truncated exponential
+kernel</em>, effectively a $k$-th order neighborhood, where all nonzero
+elements of $\mathbf{A}_s(\eta)$ are set to $1$, and is zero elsewhere.</p>
+
+<h1 id="interrogating-delta">Interrogating $\delta$</h1>
+
+<p>This redefined $\delta$ parameter is different from the aspatial
+$\delta$ parameter. A superficial reason indicating their difference is
+immediately apparent: $\delta$ is integral like $\eta$ (albeit
+rescaled), and so is not continuous like a standard convex combination
+weight from Expression
+<a href="#eq:convcomb">[eq:convcomb]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;eq:convcomb&rdquo;}. More critically, $\delta$ is not the sole
+governing factor controlling the mixture of attribute affinity and
+spatial constraint as it would be in typical constrained spectral
+clustering. Changes in the attribute kernel, $\mathbf{A}_f$, may result
+in dramatically different levels of contiguity in obtained solutions.
+Sensitivity to attribute bandwidth is a known concern in spectral
+clustering [@vonLuxberg2007Tutorial], and the introduction of a second
+spatial bandwidth potentially makes their interaction even more
+volatile.</p>
+
+<p>To resolve this, it may make more sense to understand $\delta$ only as a
+spatial bandwidth and not a combination weight. Further, this puts it on
+par as an equal to the attribute kernel bandwidth, $\tau^2$. In this
+understanding, many more spatial kernels are available, whose functional
+form or bandwidths may differ. This attribute-spatial affinity
+partitioning can also be used more generally for more generic spatial
+data supports. In this general form, the spatial bandwidth parameter
+should not be understood as a contiguity relaxation parameter; this
+property is specific to @Yuan2015Constrained&rsquo;s kernel and the specific
+experimental design. In general, $\delta$ does solely control
+contiguity. Recognizing the full generality of $\delta$ in the spatial
+kernel and its relationship to the attribute kernel provides a novel
+clustering method in its own right, adaptable for various types of
+clustering problems where <em>both</em> the strength of spatial cohesion (only
+sometimes viewed as contiguity) and attribute cohesion may be
+parameterized.</p>
+
+<h2 id="the-two-kernels-ss-omission">The Two Kernels {#ss:omission}</h2>
+
+<p>@Yuan2015Constrained suggest that $\delta$, their spatial kernel
+parameter, behaves similarly to the constraint mixture parameter in
+standard constrained spectral clustering. If this were the case,
+$\delta$ would be the sole parameter governing the strength with which
+the contiguity constraint holds, as in Expression
+<a href="#eq:convcomb">[eq:convcomb]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;eq:convcomb&rdquo;}. Under examination, though, the affinity kernel
+bandwidth also affects solution contiguity.</p>
+
+<p>\centering
+<img src="../figures/basic_spectral_clusters_texas.png" alt="Clusters in the graph spectrum of rook contiguity in Texan
+counties.[]{label=&quot;fig:clusters&quot;}" />{width=&rdquo;\textwidth&rdquo;}</p>
+
+<p>To identify the free parameter, let us first consider the linear
+contiguity kernel suggested by @Yuan2015Constrained, the first-order
+adjacency matrix $\mathbf{A}_0$. Without any attribute data, we could
+obtain the latent spatial clusters from the eigenspace of the
+connectivity graph for various $K$, as is shown for Texas counties in
+Figure <a href="#fig:clusters">[fig:clusters]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:clusters&rdquo;}. We see that, by Rook contiguity, the
+discovered clusters are indeed contiguous. Further, we observe that this
+contiguity kernel is also what occurs when $\eta = 0$ in the truncated
+exponential kernel shown in Equation
+<a href="#eq:expo_kernel">[eq:expo_kernel]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;eq:expo_kernel&rdquo;}.</p>
+
+<p>The attribute affinity matrix $\mathbf{A}_f$ is also specified using a
+kernel. @Yuan2015Constrained follow a conventional choice in both
+spatial analysis and machine learning with a Gaussian kernel. This
+models the affinity between two observations,
+$\rho(\mathbf{X}_i,\mathbf{X}_j)$, as: $$\label{eq:rbf_kernel}
+    \rho(\mathbf{X}_i,\mathbf{X}_j) = \exp\left{ -\tau^2 ||\mathbf{X}_i - \mathbf{X}_j||^2 \right}$$
+where $||.||$ denotes the euclidean distance between the observations&rsquo;
+$P$-length covariate vectors.</p>
+
+<p>While their simulation design focuses on the behavior of $\delta$,
+@Yuan2015Constrained do not report the value of $\tau^2$ used in the
+analysis. This is important, since $\tau^2$ is a free parameter, and can
+be adjusted to provide different affinity structures, depending on the
+data, just like the spatial parameter. Their input data is the principal
+components derived from many mean-centered and unit-deviation
+standardized covariates. These principal components themselves may not
+necessarily have unit variances, so it should not necessarily be the
+case that $\tau = 1$ is an clear empirical choice. Indeed, $\tau$ is not
+intended to stand in as the empirical variance of $\mathbf{X}$
+generally, as $\mathbf{X}$ may be $N \times P$ with different variances
+for each covariate, but $\tau^2$ is scalar and used for all $P$. Despite
+the fact that @Yuan2015Constrained do not discuss the calibration of
+this free parameter, I will show that its calibration may significantly
+affect the spatial structure of obtained solutions, even when $\delta$
+is fixed. Further, depending on the nature of the attribute affinity
+kernel, $\delta$ can have a dramatically different impact on contiguity.</p>
+
+<p>\centering
+<img src="../figures/swing_map_texas" alt="Change in two-party vote share in Texas, 2012 to 2016. On left is the
+raw distribution in a histogram, on right is the corresponding spatial
+distribution over
+counties.[]{label=&quot;fig:swing&quot;}" />{width=&rdquo;\textwidth&rdquo;}</p>
+
+<p>For this, we need to introduce data. Let us consider a single covariate:
+change in the two-party vote for president from 2012 to 2016 in Texan
+counties. This is mapped in Figure
+<a href="#fig:swing">[fig:swing]</a>{reference-type=&ldquo;ref&rdquo; reference=&ldquo;fig:swing&rdquo;}.
+In this case, there are a few areas where groups of counties tended to
+swing together in the same direction. This means their vote share
+<em>intensified</em> together towards one party, even if that party did not win
+the county. What is clear from the map of swing in Texas counties is
+that urban areas tended to swing Democrat, meaning the Democrats
+increased their vote share in urban counties (even if they didn&rsquo;t
+constitute a majority there), whereas Republicans tended to consolidate
+support in the more rural counties in western and southern Texas which,
+in fact, they tended to win. This minor instantiation of partisan
+polarization in the electorate is well-studied in political science and
+electoral geography, and does not come without controversy itself.</p>
+
+<p>\centering
+<img src="../figures/clusters_texas_over_varying_tau_with_histo.png" alt="Spectral clusters and affinities for the presidential swing in Texas
+counties. Moving right, $\tau^2$ increases. In all cases, the &quot;linear
+spatial kernel,&quot; is used, so $\delta = 0$ always. The top row reflects
+the ultimate solution to the clustering problem for $K=9$ clusters, and
+the bottom row reflects the cumulative distribution of attribute
+affinities contained in $\mathbf{A}_f$ for the specified
+$\tau^2$.[]{label=&quot;fig:affinities&quot;}" />{width=&rdquo;\textwidth&rdquo;}</p>
+
+<p>We can visualize this for the real data on partisan swing. The
+distribution of affinities for the Gaussian kernel at a given $\tau^2$
+value is shown in Figure
+<a href="#fig:affinities">[fig:affinities]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:affinities&rdquo;}. The maps in that figure are produced for
+$K=9$, but $K$ is illustrative here, and is independent of the
+affinities shown below each map; any $K$ could be chosen for a given
+$\tau^2$ value and a similar result visualized. Further, we should
+reinforce that no adjustment to the spatial kernel has been made: in
+@Yuan2015Constrained&rsquo;s terms, the linear spatial kernel (i.e. standard
+adjacency matrix, $\mathbf{A}_0$) is used throughout.</p>
+
+<p>The graphic starts with a value of $\tau^2$ that results in nearly all
+affinities tightly clustered around $1$, and then proceeds to values of
+$\tau^2$ that evenly distribute affinities along $(0,1)$ to a final
+value of $\tau^2$ where a plurality of observations have zero attribute
+affinity. Considering that $\delta$ is fixed, change in the underlying
+affinity distribution does change the identified clusters. Further, this
+change is larger for some clusters than others. Since $\delta$ is fixed,
+this reflects the increasing use of attribute information. When
+$\tau^2 = 1$, affinity scores are essentially all $1$, and the cluster
+solution effectively ignores attribute information and recovers the
+$K=9$ solution from Figure
+<a href="#fig:clusters">[fig:clusters]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:clusters&rdquo;} But, increasing $\tau^2$ while $\delta = 0$
+does not break contiguity: all identified clusters are internally
+connected.</p>
+
+<h2 id="the-underlying-model-of-clustering">The underlying model of clustering</h2>
+
+<p>\centering
+<img src="../figures/maps_over_tau_and_eta_no_annotation.png" alt="Clusters of counties identified in the presidential swing data,
+varying $\delta$ and
+$\tau^2$." />{width=&ldquo;.75\textwidth&rdquo;}</p>
+
+<p>[[fig:tau_and_delta]]{#fig:tau_and_delta label=&ldquo;fig:tau_and_delta&rdquo;}</p>
+
+<p>Given that the clustering solution is often sensitive to $\tau^2$, two
+things seem reasonable. First, it is plausible that some solutions at a
+fixed $\delta$ could be more relaxed than others by changing $\tau^2$
+alone. Second, it is plausible that, for two different $\tau^2$ values
+($\tau^2_a,\tau^2_b$), marginal changes in $\delta$ when
+$\tau^2=\tau^2_a$ may be more impactful than when $\tau^2=\tau^2_b$. To
+investigate this, a solution grid is shown in Figure
+<a href="#fig:tau_and_delta">[fig:tau_and_delta]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:tau_and<em>delta&rdquo;} over values of $\tau^2$ and $\delta$. I
+focus on the binarized contiguity kernel here; each row uses the
+$\mathbf{A}</em>\eta$ connectivity matrix, connecting observations with
+maximum path order $\eta$, since the exponential kernel behaves
+substantively similarly in this case.</p>
+
+<p>Both reasonable implications occur in this example. For some levels of
+$\eta &gt; 0$, clusters become spatially disconnected as $\tau^2$ increases
+but $\eta$ is fixed. Reading across the rows, increases in $\tau^2$ for
+fixed $\eta$ tends to result in decreased contiguity at any order of
+$\eta \geq 1$. But, declining contiguity is more pronounced when $\eta$
+is large than when it is small. Reading down the columns, increases in
+$\eta$ for a fixed $\tau^2$ have nearly no impact on solution contiguity
+when $\tau^2=1$ and all attribute affinities are nearly $1$. Thus,
+neither $\tau^2$ nor $\eta$ (alternatively, $\delta$) is exclusively in
+control of the balance between contiguity and attribute cohesion: they
+must be balanced against one another depending on the data itself.</p>
+
+<p>So, why do @Yuan2015Constrained observe that, as $\delta$ increases,
+contiguity constraints become less important in the problem? To build
+intuition, note that spectral clustering solutions are an approximate
+solution to population-balanced minimum cut problems
+[@vonLuxberg2007Tutorial]. Thus, the use of flatter affinity
+distributions (larger $\tau^2$) means that the cost of a constraint
+being violated is more heterogeneous, and depends more strongly on
+attribute affinity. In contrast, when attribute affinity scores are
+nearly the same, the cost of violating the spatial constraints is nearly
+constant and independent of attribute information.</p>
+
+<p>For example, assume that the analyst sets $\tau^2 = 1$, the default in
+some popular data science computational software packages, such as
+<code>scikit-learn</code> [@Pedregosa2011sklearn]. For the data considered here,
+this results in an affinity matrix which is primarily dense, and mostly
+values near $1$. The product of the nearly-uniformly $1$ matrix and the
+sparse first-order spatial contiguity matrix essentially recovers the
+contiguity matrix itself:
+$$\lim_{\mathbf{A}_f \rightarrow \mathbf{1}} \mathbf{A}_0 \circ \mathbf{A}_f = \mathbf{A}_0$$
+Thus, if the affinity kernel is too narrow, the spectral clustering
+solution will essentially ignore attribute data as seen above. As we
+increase the spatial bandwidth, $\eta$, $\mathbf{A}_s$ becomes
+significantly more dense. This means more and more of the attribute
+affinity matrix, $\mathbf{A}_f$, is recovered. When $\delta$ goes to one
+(or $\eta$ goes to the graph diameter), contiguity constraints are
+&ldquo;relaxed,&rdquo; but this relaxation may not be relevant to the actual
+obtained solutions if the attribute kernel does not enforce meaningful
+differences in observation affinity. Only when $\tau^2$ begins to embody
+meaningfully-distinct variation over the attributes does the change in
+$\delta$ become relevant for the contiguity of clusters. Thus, both the
+form and the width of attribute and spatial kernels are necessary to
+fully-specify a spatially-constrained spectral clustering. Since both
+are relevant, both bandwidth parameters must be considered.</p>
+
+<h1 id="generalizing-the-problem">Generalizing the problem</h1>
+
+<p>Considering both kernels together, @Yuan2015Constrained&rsquo;s work can be
+extended to much more general spatial clustering problems over
+multivariate spatial data. Indeed, for a given spatial structure matrix
+$\mathbf{A}_s$, the degree to which space influences the eventual
+clustering is governed by the distribution of values within the
+resulting matrix product, $\mathbf{A}_f \circ \mathbf{A}_s$. Therefore,
+let $\mathbf{A}_s$ now reflect <em>any</em> symmetric spatial structure matrix
+with nonnegative eigenvalues. Let the free parameters used in defining
+the spatial affinity matrix be $\eta$. Further, let the attribute kernel
+function, $\rho(\mathbf{X}_i,\mathbf{X}_j)$, take an arbitrary vector of
+free parameters, $\theta$. Together, the same structure can be used to
+enable <em>spatially-encouraged spectral clustering</em>:
+$$\label{eq:encouraged_clustering}
+   \mathbf{L} = \mathbf{D} - \mathbf{A}_f(\theta) \circ \mathbf{A}_s(\eta)$$
+where $\mathbf{D}$ is again defined as the appropriate degree matrix.
+Computing a lower-dimensional clustering (like $K$-means) on the top-$K$
+eigenvectors of $\mathbf{L}$ provides an analogous solution to that in
+@Yuan2015Constrained. Further, the relative importance of attributes
+versus contiguity is governed directly by the normal parameterization of
+$\mathbf{A}_f(\theta)$ in the attribute affinity matrix and
+$\mathbf{A}_s(\eta)$ in the spatial affinity matrix. With this, it
+becomes clear that @Yuan2015Constrained&rsquo;s discrete contiguity kernel is
+one possible specification of $\mathbf{A}_s(\eta)$ applicable for
+clustering on spatial lattice data.</p>
+
+<p>In this generalization, $\theta$ and $\eta$ are stated explicitly to
+show that they both matter for the eventual clustering solution. As in
+the previous demonstration, if
+$\rho(\mathbf{X}_i,\mathbf{X}_j) \approx c \ \ \forall \ \  i,j$ for a
+constant $c$, geography dominates, and the obtained solutions are no
+different from those obtained when no data is used at all.<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">2</a></sup> As
+$\mathbf{A}_f(\theta)$ widens in distribution, the clustering solutions
+become more distinct from the spatial-only clustering. If $\eta$ changes
+(or the functional form of $\mathbf{A}_s(\eta)$ changes), then the
+spatiality of the problem will change as well.</p>
+
+<h2 id="understanding-the-parameter-tradeoffs">Understanding the Parameter Tradeoffs</h2>
+
+<p>The practical concern for choosing $\theta$ and $\eta$, then, is the
+structure of the affinity distribution; if the gap between the minimum
+affinity and zero is large, contiguity will hold more strongly than if
+the gap is small, as seen in Figure
+<a href="#fig:affinities">[fig:affinities]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:affinities&rdquo;}. Both free parameters are required, however,
+and both simultaneously determine the resulting structure of the
+solution. An example of this optimization space is shown in Figure
+<a href="#fig:objective_space">[fig:objective_space]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:objective_space&rdquo;} for the Texas counties example. There,
+four maps at varying $\tau^2$ values are shown. Underneath, three scores
+are shown. First, the variance ratio (Calinski-Harabasz pseudo-$F$
+[@Calinski1974Dendrite]) score is shown, which relates the
+within-cluster sums of squares to the between cluster sums of squares.
+Second, the silhouette score is shown [@Rousseeuw1987Silhouettes], which
+relates the distances between observations, their source clusters, and
+their next-best fit clusters. In both cases, larger values are
+interpreted as showing clusters are more distinct or coherent,
+indicating that the variability within clusters is smaller than the
+variability between clusters. Third, the fraction of observations that
+are on the boundary of a cluster, the ones that touch an observation
+with a different label than their own, are plotted. This indicates the
+extent to which the map is spatially fragmented. Finally, the median
+attribtue affinity score is plotted on bottom.</p>
+
+<p>As $\tau^2$ increases from zero (where all observations have an
+attribute-affinity of 1) to being large relative to the distance metric
+used in the kernel (here, around $1000$), clusters occasionally become
+more spatially fragmented according to their boundary fractions, but
+have larger variance ratio scores on average. In general, the change in
+the boundary fraction is not uniform over $\tau^2$, however. Further,
+most statistics appear to be largely driven by step changes; at a
+critical $\tau^2$ value, the clustering solution changes radically. The
+silhouette and boundary fractions, on the other hand, do not change
+monotonically. In fact, they are unstable over some ranges of $\tau^2$,
+rapidly changing between two similar values.</p>
+
+<p>In addition, the relationship between attribute coherence and spatial
+fragmentation is not linear. For some of the increasingly-coherent
+clustering solutions, the boundary fraction is smaller, such as around
+the step change near $\tau^2=1300$. Thus, small changes in $\tau^2$ may
+result in significant changes in solution, and the tradeoff between
+attribute homogeneity and spatial regularity is neither linear nor even
+zero-sum: the step near $\tau^2 = 1500$ results in less spatial
+fragmentation and more attribute coherence, but the step change around
+$\tau^2=800$ has has effectively no impact on spatial regularity while
+improving the variance fraction.</p>
+
+<p>\centering
+<img src="../figures/maps_over_tau.png" alt="Clusters in electoral swing in Texas Counties as a function of
+$\tau^2$, the Gaussian kernel
+parameter." title="fig:" />{width=&rdquo;\textwidth&rdquo;}
+<img src="../figures/grid_metrics_over_tau_points.png" alt="Clusters in electoral swing in Texas Counties as a function of
+$\tau^2$, the Gaussian kernel
+parameter." title="fig:" />{width=&ldquo;.85\textwidth&rdquo;}</p>
+
+<p>[[fig:objective_space]]{#fig:objective_space
+label=&ldquo;fig:objective_space&rdquo;}</p>
+
+<p>If one were to use this strategy in a formal optimization routine for a
+combined spatial-attribute objective, solving the clustering optimally
+would be difficult due to the volatility in any chosen cluster scoring
+function. Thus, any use of this heuristic should explore $\tau^2$ values
+in the neighborhood of the solution to determine the stability of the
+resulting solution. Since the value of $\tau^2$ is data-dependent, it
+appears sufficient to start a search with $\tau^2$ that place mass over
+the whole $[0,1]$ range. Thus, a computationally-cheap exploratory
+method to examine the balance between contiguity and attribute affinity
+is to pick $\tau^2$ that provides a reasonably low median affinity,
+after filtering by $\mathbf{A}_s$. Determining this initial tuning
+requires no evaluations of the actual eigenvectors of the affinity
+matrix since no clustering is computed to initialize. In fact, it can be
+simplified to only compute $\mathbf{A}_f$ for neighbors in a sparse
+$\mathbf{A}_s(\eta)$.</p>
+
+<h2 id="induced-geographic-regularity-for-clustering-on-non-lattice-data">Induced geographic regularity for clustering on non-lattice data</h2>
+
+<p>Provided with this generalization over arbitrary attribute and spatial
+kernels, any spatial kernel function can be used. A more arbitrary form
+for the spatial kernel provides an arbitrary method to mix spatial
+proximity and attribute affinity together in a single clustering
+problem. Thus, I move to find price clusters in the prices of Airbnb
+listings in Brooklyn. These are point-referenced data, so the contiguity
+forms considered by @Yuan2015Constrained cannot be used. Airbnb, a
+popular on-demand accommodation service, offers an alternative to
+typical hotel accommodation. Notably, its spatial market penetration is
+much more widespread in Brooklyn than the equivalent presence of hostels
+and hotels. Thus, given enough listings, clusters in those listings&rsquo;
+prices may identify spatially-meaningful communities where prices are
+similar. This is in contrast to other types of density-interpolating
+cluster searches useful for spatial data (like HDBScan
+[@McInnes2017HDBScan]) which simply identify clusters of spatial
+colocation and other more traditional attribute clustering methods that
+do not consider space.</p>
+
+<p>Airbnb listings often contain a wealth of information about the
+potential accommodation, including various amenities made available to
+the renter and how often the property attracts reviews. Rental data
+exists as point-referenced data, with each listing having one (and only
+one) spatial coordinate. Here, only the price information for Airbnbs in
+Brooklyn scraped on October 21st, 2017 will be used. Some listings
+overlap, since rentals can cover single rooms or apartments within the
+same building. No listings are duplicated, meaning that previous price
+information of the same listing is excluded from the analysis. Thus,
+this constitutes a single, cross-sectional analysis of recent Airbnb
+pricing structures in the fall of 2017 in Brooklyn, NY. An example of
+the spatial pattern of the listings, reflecting their relative density,
+position, and price, is shown in Figure
+<a href="#fig:brooklyn_airbnbs">[fig:brooklyn_airbnbs]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:brooklyn_airbnbs&rdquo;}.</p>
+
+<p>\centering
+<img src="../figures/pointcloud.png" alt="Prices of Airbnb rentals in Brooklyn, NY. Presence/absence is shown on
+the left, and their prices are shown on the
+right" />{width=&ldquo;.8\textwidth&rdquo;}</p>
+
+<p>[[fig:brooklyn_airbnbs]]{#fig:brooklyn_airbnbs
+label=&ldquo;fig:brooklyn_airbnbs&rdquo;}</p>
+
+<p>Identifying price clusters require that we balance price homogeneity and
+spatial coherence, since price clusters should ostensibly present a
+contiguous &ldquo;conceptual area&rdquo; where listers price their properties to
+compete with one another. By examining the spatial clumping of price
+information, we aim to identify competition communities, where
+individuals tend to price their Airbnbs to compete with other,
+spatially-proximate Airbnbs. Practically speaking, this means we must
+balance spatial coherence and attribute homogeneity, so spatial-spectral
+clustering is required. However, the contiguity kernel is not applicable
+here, since contiguity is not defined for point-referenced data.</p>
+
+<p>Instead, I suggest using an adaptive Gaussian weighting for this:
+$$A_s(\delta<em>i)</em>{i,j} = \exp\left{-\delta_i^2 ||s_i - s_j|| \right}$$
+where $s_i$ is the spatial position of site $i$, and $||s_i - s_j||$ is
+the spatial distance between two sites. As shown in Figure
+<a href="#fig:brooklyn_airbnbs">[fig:brooklyn_airbnbs]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:brooklyn_airbnbs&rdquo;}, the spatial density of Airbnb
+listings decreases dramatically as one leaves the north-central Brooklyn
+core. Thus, using a fixed bandwidth over the entire map would not
+properly represent areas where listings are more spatially diffuse. An
+adaptive Gaussian kernel accounts for this, letting the bandwidth for
+each site $i$ be determined as a function of the distance from that
+point and its furthest neighbor, for the $p$-nearest points to $i$.
+Thus, in the analysis below, I&rsquo;ll examine the clustering solutions as a
+function of the size of this nearest neighbor set.</p>
+
+<p>Because the adaptive kernel weight is not symmetric, it cannot be used
+alone to generate the combined spatial-attribute affinity matrix. To
+enforce symmetry, the average of the adaptive kernel and its transpose
+can be used: $$A_s = \frac{A_s(\delta_i) + A_s(\delta_i)^T}{2}$$ This
+means that the weight assigned for any dyad of points is an average of
+their directed weights. This still adapts the bandwidth for sparser
+areas, but ensures symmetry in the kernel required for spectral
+analysis. Further, this admits a similar type of binarized analogue: the
+symmetrized K-nearest neighbor weights calibrated with $\delta$
+neighbors. In this case, observations are connected when at most one is
+a member of the other&rsquo;s $\delta$-nearest neighbor clique. Practically
+speaking, I use $\delta$ such that the resulting spatial graph is
+connected in either adaptive Gaussian or binary KNN graphs to prevent
+clusters that are only due to spatial sparsity from resulting in the
+clustering analysis.</p>
+
+<p>Cluster solutions varying the attribute kernel parameter and number of
+nearest neighbors used to construct the spatial kernel are shown in
+Figure
+<a href="#fig:brooklyn_airbnb_priceclusters_knn">[fig:brooklyn_airbnb_priceclusters_knn]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:brooklyn_airbnb_priceclusters_knn&rdquo;} for the binary
+symmetric KNN kernel, and in Figure
+<a href="#fig:brooklyn_airbnb_priceclusters_kernel">[fig:brooklyn_airbnb_priceclusters_kernel]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:brooklyn_airbnb_priceclusters_kernel&rdquo;} for the adaptive
+Gaussian kernel. The nearest neighbors used to construct the spatial
+kernel changes over columns, and the attribute bandwidth changes over
+rows. Moving down within a column, the attribute kernel becomes sparser,
+meaning affinities shift from being clustered tightly around 1 to being
+spread over $[0,1]$. Moving right over rows, the spatial bandwidth
+increases, meaning more distant observations are considered connected.
+In this case, increasing $\delta$ actually is associated with <em>more
+regular</em> spatial clusters, for either spatial kernel type. This is the
+reverse of the contiguity kernel case, where increasing the width of the
+spatial kernel causes nonlocal clustering solutions to be selected.
+Increasing the sparsity of the attribute kernel while holding the
+spatial kernel constant results in the identification of smaller
+clusters (when the spatial kernel is very small), and significantly
+affects the cluster assignments when the spatial kernel is large.
+Further, incredibly wide attribute kernels (when used alongside
+incredibly narrow spatial kernels) result in extreme imbalances in
+cluster size, so that some clusters when $\tau^2 = 10$ and $\eta = 6$
+are effectively composed of a listings within a single building. While
+the separating lines are not necessarily convex (nor, indeed, even
+straight boundaries at a reasonable resolution), the boundaries between
+clusters are, to a large degree, abrupt. No boundaries are detected
+where stippling of different label assignment occurs, so these clusters
+constitute intelligible price clusters in their own right.</p>
+
+<p>\centering
+<img src="../figures/brooklyn_airbnb_priceclusters_knn_hulls.png" alt="image" />{width=&ldquo;.7\textwidth&rdquo;}</p>
+
+<p>[[fig:brooklyn_airbnb_priceclusters_knn]]{#fig:brooklyn_airbnb_priceclusters_knn
+label=&ldquo;fig:brooklyn_airbnb_priceclusters_knn&rdquo;}</p>
+
+<p>\centering
+<img src="../figures/brooklyn_airbnb_priceclusters_kernel_hulls.png" alt="image" />{width=&ldquo;.7\textwidth&rdquo;}</p>
+
+<p>[[fig:brooklyn_airbnb_priceclusters_kernel]]{#fig:brooklyn_airbnb_priceclusters_kernel
+label=&ldquo;fig:brooklyn_airbnb_priceclusters_kernel&rdquo;}</p>
+
+<p>We can also see the impact of this varying of the spatial and attribute
+tuning parameters in this problem. By examining the surface of cluster
+quality scores, we can see how the change in spatial and attribute
+parameters trades off in solution quality. I show the surfaces of two
+common statistics, the map average silhouette score
+[@Rousseeuw1987Silhouettes] and a variance ratio &ldquo;pseudo-$F$&rdquo; statistic
+from [@Calinski1974Dendrite]. The silhouette provides a measure of the
+average separation between clusters in terms of the distance to the
+centers of other clusters. It varies between $-1$ and $1$, with zero
+indicating that observations are about as far apart from their own
+observations as they are from their next best fit cluster on average.
+The pseudo-$F$ relates the variability between clusters to the
+variability within clusters, with larger values indicating that
+variability in cluster means is larger than variability within clusters
+alone. Thus, in both cases, larger values indicate greater cluster
+separation.</p>
+
+<p>In Figure
+<a href="#fig:surface_silhouette">[fig:surface_silhouette]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:surface_silhouette&rdquo;}, the relationship between the
+silhouette score, spatial, and attribute kernel width are plotted. On
+left is the kernel surface, on the right is the KNN surface, and in the
+middle is the difference, kernel minus the KNN surface. The attribute
+kernel parameter, $\tau^2$, is measured at $20$ control points
+distributed logarithmically between $0$ and $10$.<sup class="footnote-ref" id="fnref:4"><a href="#fn:4">3</a></sup> The spatial
+parameter, in this case the $\delta$-neighbors chosen to construct the
+adaptive kernel (or binary adaptive kernel) are shown on another axis,
+and have been distributed linearly over $[6,500]$, where $6$ is the
+smallest required number of neighbors to keep the graph connected. What
+is apparent in this comparison is that the map average solution surface
+for this objective is relatively insensitive to the attribute kernel,
+but cluster homogeneity tends to improve as the spatial bandwidth
+increases. When the two surfaces are viewed end-on-end (collapsing the
+$K$ and $\tau^2$ dimensions), the two surfaces are not exactly coplanar,
+but are quite close. In general, the Gaussian adaptive kernel has
+slightly map average silhouette scores, indicating it provides clusters
+with slightly better separation. Regardless, since the attribute kernel
+behaves differently here from the previous section, this strongly
+reinforces the fact that the sensitivity of this spatial-sectral
+clustering to the attribute kernel parameterization may vary from
+dataset to dataset, and from spatial support to spatial support.</p>
+
+<p>\centering
+<img src="../figures/kernel_silhouette_objective_surface.png" alt="The surfaces of the map average silhouette score, varying the spatial
+and attribute kernel width. On left is the results from the adaptive
+Gaussian kernel $\mathbf{A}_s$. On right, the results when using
+symmetric KNN for $\mathbf{A}_s$. In the middle is the difference
+between the two curves, Gaussian kernel surface minus the KNN
+surface." title="fig:" />{width=&ldquo;.32\textwidth&rdquo;}
+<img src="../figures/diff_silhouette_objective_surface.png" alt="The surfaces of the map average silhouette score, varying the spatial
+and attribute kernel width. On left is the results from the adaptive
+Gaussian kernel $\mathbf{A}_s$. On right, the results when using
+symmetric KNN for $\mathbf{A}_s$. In the middle is the difference
+between the two curves, Gaussian kernel surface minus the KNN
+surface." title="fig:" />{width=&ldquo;.32\textwidth&rdquo;}
+<img src="../figures/knn_silhouette_objective_surface" alt="The surfaces of the map average silhouette score, varying the spatial
+and attribute kernel width. On left is the results from the adaptive
+Gaussian kernel $\mathbf{A}_s$. On right, the results when using
+symmetric KNN for $\mathbf{A}_s$. In the middle is the difference
+between the two curves, Gaussian kernel surface minus the KNN
+surface." title="fig:" />{width=&ldquo;.32\textwidth&rdquo;}</p>
+
+<p>[[fig:surface_silhouette]]{#fig:surface_silhouette
+label=&ldquo;fig:surface_silhouette&rdquo;}</p>
+
+<p>Further, the relationship between spatial and attribute kernels may also
+vary from objective to objective. Figure
+<a href="#fig:surface_ch">[fig:surface_ch]</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:surface_ch&rdquo;} is a plot of the surfaces for the pseudo-$F$
+statistic over varying spatial and attribute kernel widths. Here again,
+the left plot shows the surface of the pseudo-$F$ with the Gaussian
+kernel, varying the spatial and attribute kernel widths, and the right
+plot shows the KNN binary kernel. However, here, the difference term has
+been flipped for orientation visibility, with the $F_K$ standing for the
+$F$ statistic for the KNN binary kernel and $F_L$ for the Gaussian
+kernel. In this case, the plot demonstrates that, when the attribute
+kernel is narrow, widening the spatial kernel by increasing the number
+of neighbors tends to increase cluster homogeneity much more rapidly
+than when the attribute kernel is wide. Further, the KNN model in this
+case tends to have uniformly better variance ratios, and the difference
+between the two surfaces is much less noisy than that in the silhouette
+curve. Regardless, as shown by these two surfaces, the impact of
+changing the spatial kernel width on a given score is not consistent
+between scores, nor is it consistent for different attribute kernel
+widths. So, attention must be paid to both; one cannot ignore the
+specification of one kernel while changing the other.</p>
+
+<p>\centering
+<img src="../figures/kernel_ch_objective_surface.png" alt="The surfaces of the Calinski-Harabasz pseudo-$F$, varying the spatial
+and attribute kernel width. On left is the results from the adaptive
+Gaussian kernel $\mathbf{A}_s$. On right, the results when using
+symmetric KNN for $\mathbf{A}_s$. In the middle is the difference
+between the two curves, KNN surface minus the Gaussian kernel surface.
+This is the reverse difference from Figure
+[\[fig:surface\_silhouette\]](#fig:surface_silhouette){reference-type=&quot;ref&quot;
+reference=&quot;fig:surface_silhouette&quot;} for legibility
+reasons." title="fig:" />{width=&ldquo;.32\textwidth&rdquo;}
+<img src="../figures/diff_ch_objective_surface.png" alt="The surfaces of the Calinski-Harabasz pseudo-$F$, varying the spatial
+and attribute kernel width. On left is the results from the adaptive
+Gaussian kernel $\mathbf{A}_s$. On right, the results when using
+symmetric KNN for $\mathbf{A}_s$. In the middle is the difference
+between the two curves, KNN surface minus the Gaussian kernel surface.
+This is the reverse difference from Figure
+[\[fig:surface\_silhouette\]](#fig:surface_silhouette){reference-type=&quot;ref&quot;
+reference=&quot;fig:surface_silhouette&quot;} for legibility
+reasons." title="fig:" />{width=&ldquo;.32\textwidth&rdquo;}
+<img src="../figures/knn_ch_objective_surface" alt="The surfaces of the Calinski-Harabasz pseudo-$F$, varying the spatial
+and attribute kernel width. On left is the results from the adaptive
+Gaussian kernel $\mathbf{A}_s$. On right, the results when using
+symmetric KNN for $\mathbf{A}_s$. In the middle is the difference
+between the two curves, KNN surface minus the Gaussian kernel surface.
+This is the reverse difference from Figure
+[\[fig:surface\_silhouette\]](#fig:surface_silhouette){reference-type=&quot;ref&quot;
+reference=&quot;fig:surface_silhouette&quot;} for legibility
+reasons." title="fig:" />{width=&ldquo;.32\textwidth&rdquo;}</p>
+
+<p>[[fig:surface_ch]]{#fig:surface_ch label=&ldquo;fig:surface_ch&rdquo;}</p>
+
+<h1 id="discussion-conclusion">Discussion &amp; Conclusion</h1>
+
+<p>In total, spectral clustering methods hold significant promise for
+spatially-constrained regionalization and exploratory spatial cluster
+analysis. Already recognized as a computationally hard problem
+[@Duque2007Supervised], spectral methods reduce the implementation
+difficulty in discovering approximately (or exactly) contiguous
+clusters. However, these methods are not cost-free, since the
+determination of eigenvectors for large sparse matrices is
+compute-intensive and sometimes inaccurate. Thus, efficient and accurate
+eigenvector computation methods constrain the broader applicability of
+this technique. But, this method can exploit the same computational
+improvements made generally for machine learning implementations of
+spectral methods, as this technique reduces fundamentally to
+spectralbibtex clustering on well-designed spatial representations of
+the data.</p>
+
+<p>This method can be used for exploratory data regionalization, as well as
+data-dependent regionalization. The choice of the functional form for
+$\mathbf{A}_s$ and $\mathbf{A}_f$ is arbitrary, as is the choice of
+values for their relevant free parameters. Ideally, these should be
+data-appropriate and theory-driven, reflecting the unique structure of
+data and the desired outcomes of analysis [e.g. @Chodrow2017Structure].
+An optimal fit routine could be used, where $\theta$ is chosen to
+maximize a convex combination of generalized contiguity [@Wu2008New] and
+within-class homogeneity. If this were done, the resulting convex
+combination parameter <em>would</em> serve as a direct analogue to $\delta$ in
+traditional constrained spectral clustering. However, the volatility in
+three types of clustering score functions considered suggest that this
+objective may be exceptionally-poorly behaved. Alternatively, kernels
+may be set to search for solutions within a parameter grid in an
+exploratory analysis, allowing clusters to become more or less diffuse
+over space or homogeneous in attributes. This method was demonstrated
+and its impact on common cluster scoring metrics shown to be non-linear
+for some scores and some combinations of spatial kernels and attribute
+kernel widths.</p>
+
+<p>The definition of spatial kernels in spatially-encouraged spectral
+clustering can be adapted to model the spatial relationships of any type
+of data support, and attribute kernels should reflect the attribute
+distances relevant for the data at hand. The spatial affinity structure
+might be highly local first-order contiguity, it may reflect
+neighborliness within a given distance cutoff, or it might itself be a
+continuous Matérn covariance function or spatial kernel. The attribute
+affinity structure may be a straightforward attribute kernel (e.g.
+Gaussian, bisquare, or triangular kernels) or may reflect various
+compositional affinities using more complicated divergence measures
+[@Chodrow2017Structure]. Regardless, when combined, typical spectral
+clustering methods can be applied to and clusters of varying spatial
+cohesion may be obtained.</p>
+
+<p>This paper identifies an opportunity to extend and expand
+[@Yuan2015Constrained] and takes it. By examining an omitted parameter
+in their discussion, I suggest a technique for <em>spatially-encouraged
+spectral clustering</em> that is significantly more general. Further, this
+more general method offers the end user more control over the structure
+of the solution, since both spatial and attribute kernels are able to be
+tuned. While the surfacing of more tuning parameters introduces
+significantly more complexity into the analysis, it also ensures that
+the resulting solutions can be fine-tuned and made precisely applicable
+for the data at hand. Further, ignoring free parameters may result in
+unexpected behavior, such as changes in the structure of a spatial
+kernel having different impacts depending on the structure of the
+attribute kernel. Thus, the technique developed here makes it explicit
+that both spatial and attribute kernel parameterizations are important,
+and being aware of their impact can help to tune cluster solution. In
+sum, this paper&rsquo;s refinement of @Yuan2015Constrained provides a novel,
+more generally-applicable technique for cluster analysis in geographic
+data science that can be used to model how space and attribute compete
+for relevance in the determination of spatial clusters.</p>
+
+<p>\clearpage
+\printbibliography</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:2"><p>This may be familiar to those who work with simultaneous
+autoregressive spatial econometric models, as it is the decay of the
+matrix-exponential spatial autoregressive specification of
+[@LeSage2007Matrix] where the decay parameter is fixed to $1$.</p>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+
+<li id="fn:3"><p>If $\mathbf{A}_s$ encodes nonlocal geographic relationships, the
+resulting spectral clusters will be defined with respect to that
+notion of geographic structure.</p>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+
+<li id="fn:4"><p>Plotting $\tau^2$ on a log-scale would then result in these
+surface plots having a regular grid. They remain plotted on the
+linear scale for $\tau^2$ to keep the intuition in terms of raw
+parameter values.</p>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+</ol>
+</div>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Jan 1, 0001 </div>
+  </div>
+
+</footer>
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:levi.john.wolf@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/ljwolf" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/levijohnwolf" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+      thanks, <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+
