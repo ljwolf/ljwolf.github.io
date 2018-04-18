@@ -2,7 +2,7 @@
 title: "GISRUK I: CDRC Brexit Analysis Competition"
 date: 2018-04-18T01:46:46+01:00
 ---
-My entry in the [Consumer Data Research Center's Brexit Data Competition](http://leicester.gisruk.org/cdrc-gisruk-data-challenge/) is called ["Tension Points: A Theory & Evidence"](https://docs.google.com/presentation/d/1Umyoq7FnylmWPPZh9sJsQvI5oWUShf-8zbzOmV3rcqs/edit?usp=sharing), which I talked about at the [2018 GISRUK conference](http://leicester.gisruk.org/)
+My entry in the [Consumer Data Research Center's Brexit Data Competition](http://leicester.gisruk.org/cdrc-gisruk-data-challenge/) is called ["Tension Points: A Theory & Evidence"](https://docs.google.com/presentation/d/1Umyoq7FnylmWPPZh9sJsQvI5oWUShf-8zbzOmV3rcqs/edit?usp=sharing) ([static](talks/wolf_gisruk2018_brexit.pdf)), which I talked about at the [2018 GISRUK conference](http://leicester.gisruk.org/)
 
 There is [an abstract](papers/2018_cdrcdc.pdf) describing some of the work that I submitted to get to the final round, but if you're computationally inclined, you'll find everything sufficient to replicate my modelling & analysis in this [Jupyter Notebook](notebooks/2018_gisruk-clean_bregmans.html) ([raw](notebooks/2018_gisruk-clean_bregmans.ipynb)). You'll need `scikit-learn`, `pystan`, `statsmodels`, and `geopandas` at minimum to run. Also, the data is in a `sqlite` data store, but it's too large for me to host on GitHub, so I have it available in [my Dropbox](https://www.dropbox.com/s/wyqyujht5a19wow/brexit_and_migrants.sql?dl=0). 
 
