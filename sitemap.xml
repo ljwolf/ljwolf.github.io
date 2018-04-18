@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/papers/2018_gisruk/</loc>
+    <loc>/cdrc-brexit/</loc>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/cdrc-brexit/</loc>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018-gisruk/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
   </url>
   
@@ -644,6 +654,12 @@
   </url>
   
   <url>
+    <loc>/tags/2018/</loc>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/acadeimca/</loc>
     <lastmod>2017-07-05T18:56:45+00:00</lastmod>
     <priority>0</priority>
@@ -807,7 +823,7 @@
   
   <url>
     <loc>/tags/brexit/</loc>
-    <lastmod>2018-02-28T15:46:40+00:00</lastmod>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -951,6 +967,12 @@
   <url>
     <loc>/tags/computing/</loc>
     <lastmod>2014-09-30T18:57:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/conference/</loc>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1161,6 +1183,12 @@
   <url>
     <loc>/tags/gis/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gisruk/</loc>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1573,8 +1601,8 @@
   </url>
   
   <url>
-    <loc>/papers/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    <loc>/tags/paper/</loc>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1640,7 +1668,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-03-18T22:02:05+00:00</lastmod>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2071,7 +2099,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   

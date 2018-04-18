@@ -23,7 +23,7 @@
 
 
 
-<meta property="og:updated_time" content="2016-11-18T01:52:16&#43;00:00"/>
+<meta property="og:updated_time" content="2016-11-29T00:07:16&#43;00:00"/>
 
 
 
@@ -147,13 +147,9 @@ th {
     
     <a class="nav-item" href="https://spatial.ucr.edu"><div class="nav-item-title"> UCR |  </div></a>
     
-    <a class="nav-item" href="/talks/"><div class="nav-item-title"> Talks | </div></a>
-    
-    <a class="nav-item" href="/papers/"><div class="nav-item-title">Papers</div></a>
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title"> Teaching |  </div></a>
     
     <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
-    
-    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
     
 
   </nav>
@@ -169,6 +165,103 @@ th {
 
 
   
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='/a-short-exploration-of-the-2016-electoral-swing/'> A short exploration of the 2016 electoral swing</a> </h2>
+    <div class="meta">
+      Nov 29, 2016 - 1 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/elections">#elections</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/politics"># politics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/programming"># programming</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/python"># python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/gis"># gis</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/geography"># geography</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    I’m pretty skeptical of the generalized uniform partisan swing assumption in gerrymandering models. Part of this is due to some skepticism about how swing actually occurs in elections generally. If we don’t have an explicit “shock” model for our counterfactuals, they’re probably not going to replicate true experienced electoral swings well. 
+I’ve put together a notebook where I go through and explore some modeling of the 2012-2016 electoral swing at the county level.
+    <a href='/a-short-exploration-of-the-2016-electoral-swing/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='/want-to-draw-spatially-correlated-values-wihtout/'> Want to draw spatially-correlated values wihtout all the fuss?</a> </h2>
+    <div class="meta">
+      Nov 22, 2016 - 1 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/statistics">#statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/geography"># geography</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/spatial-statistics"># spatial statistics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    I think I’ve figured out a simple way to sample from a spatially-correlated normal distribution without needing to invert the large precision matrix directly. 
+gist here. 
+ imported from: yetanothergeographer
+    <a href='/want-to-draw-spatially-correlated-values-wihtout/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
     <article class="post-preview">
 
   <header>
@@ -196,93 +289,6 @@ th {
 This is the convergence in a spatial parameter in a spatial model I’m working with. This is a very long run that took a few hours to complete. Tests of this on my (python 3) compute server went fine, tuned correctly, but didn’t have this dramatic convergence.
 Once the sampling finished, I looked at the acceptance rate and, sure enough, the AR on the metropolis step of this Gibbs sampler was like&hellip; .
     <a href='/working-between-python-2-and-python-3/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/yet-another-elections-simulator/'> Yet another elections simulator</a> </h2>
-    <div class="meta">
-      Oct 25, 2016 - 1 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/python">#python</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/foss"># foss</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/academia"># academia</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/programming"># programming</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/imported">#imported</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    After reading Wasserman’s 2012 blog post about mixture models, I’m glad that I’ve finally figured out &amp; implemented the Gelman-King 1994 electoral model as well. Based on pretty straghtforward regression modeling, the setup trades the representational simplicity of the Linzer GMM model for a much more complex modeling structure, but that I guess provides better guarantees about its own properties. Regardless, it’s a bummer that these guys stuff, theLinzer 2012 paper on simulating seats/votes curves using gaussian mixtures &amp; the JudgeIt stuff for the GK1994 paper was never merged into the political science computational library.
-    <a href='/yet-another-elections-simulator/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/finally-got-this-elections-simulator-working-the/'> elections simulators</a> </h2>
-    <div class="meta">
-      Oct 18, 2016 - 1 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/dissertation">#dissertation</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/python"># python</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/imported">#imported</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/image">#image</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    finally got this elections simulator working, based on Linzer&rsquo;s 2012 paper on gaussian mixture modelling for elections data.
- imported from: yetanothergeographer
-    <a href='/finally-got-this-elections-simulator-working-the/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">
