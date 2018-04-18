@@ -59,10 +59,10 @@ pygmentsCodeFences = true
     url = "https://spatial.ucr.edu"
 
 [[menu.main]]
-    name = " Talks | "
+    name = " Teaching |  "
     weight = -150
-    identifier = "talks"
-    url = "/talks/"
+    identifier = "teaching"
+    url = "/teaching/"
 
 [author]
   name = "Levi John Wolf"
