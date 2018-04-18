@@ -12,4 +12,4 @@ In this paper, I present one, what I call "Spatially-Encouraged Spectral Cluster
 
 Thus, I recognize this technique is really a generalization/extension of another paper on constrained spectral clustering that I feel doesn't pay significant attention to the fact that both kernels matter. This makes it a "critical revision" of Yuan et al's work. 
 
-The paper is hosted [here](papers/2018_gisruk.pdf), as well as [code to conduct similar analyses and an example](papers/2018_gisruk.zip).
+The paper is hosted [here](papers/2018_gisruk.pdf), as well as [code to conduct similar analyses and an example](papers/2018_gisruk.zip) or a [github repository](https://github.com/ljwolf/spenc) with installation directions & an issue tracker.
