@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/challenge/</loc>
+    <lastmod>2018-04-20T16:54:18+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/cdrc-brexit/</loc>
     <lastmod>2018-04-18T01:46:46+01:00</lastmod>
   </url>
@@ -1657,7 +1662,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
+    <lastmod>2018-04-20T16:54:18+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2088,7 +2093,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
+    <lastmod>2018-04-20T16:54:18+01:00</lastmod>
     <priority>0</priority>
   </url>
   

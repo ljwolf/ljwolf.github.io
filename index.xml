@@ -6,10 +6,20 @@
     <description>Recent content on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 18 Apr 2018 01:46:46 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 20 Apr 2018 16:54:18 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Challenge in Science</title>
+      <link>/post/challenge/</link>
+      <pubDate>Fri, 20 Apr 2018 16:54:18 +0100</pubDate>
+      
+      <guid>/post/challenge/</guid>
+      <description>I just finished attending the 2018 GIS Research UK conference at Leicester University.
+I presented twice; once on some new methods in spatial clustering and once for the CDRC brexit data analysis competition. I had a really good time participating in the data analysis competition, and it struck a chord with me reflecting on quite a few conversations I&amp;rsquo;ve had with my friend &amp;amp; colleague Taylor Oshan and something Morton O&amp;rsquo;Kelly said at this year&amp;rsquo;s annual American Association of Geographers meeting.</description>
+    </item>
     
     <item>
       <title>GISRUK I: CDRC Brexit Analysis Competition</title>
