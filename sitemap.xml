@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/teaching/ephemera/</loc>
+    <lastmod>2018-04-24T14:13:20+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/challenge/</loc>
     <lastmod>2018-04-20T16:54:18+01:00</lastmod>
   </url>
@@ -1956,6 +1961,7 @@
   
   <url>
     <loc>/teaching/</loc>
+    <lastmod>2018-04-24T14:13:20+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2093,7 +2099,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-04-20T16:54:18+01:00</lastmod>
+    <lastmod>2018-04-24T14:13:20+01:00</lastmod>
     <priority>0</priority>
   </url>
   
