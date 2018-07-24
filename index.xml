@@ -6,10 +6,20 @@
     <description>Recent content on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 24 Jul 2018 11:30:20 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jul 2018 13:52:51 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using lookahead testing</title>
+      <link>/post/testingmatrix/</link>
+      <pubDate>Tue, 24 Jul 2018 13:52:51 -0700</pubDate>
+      
+      <guid>/post/testingmatrix/</guid>
+      <description>To help subpackages that depend on libpysal, the API will change shortly to be in line with our desired migrating.pysal.org API.
+If you test your package against the pypi version of libpysal (which you get using pip install libpysal), you already know that your changes don&amp;rsquo;t break with respect to what exists. However, if you&amp;rsquo;d like to give yourself some lead time to detect if there are breaking changes in the development version of libpysal on github, feel free to follow these directions on how to set up optional tests on travis.</description>
+    </item>
     
     <item>
       <title>Perftesting</title>
