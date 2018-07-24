@@ -75,6 +75,7 @@ The second conditional checks if `$PYSAL_PLUS` is set to `true`. If it is, we al
 ### why do this at all?
 
 For a few reasons, but mainly as a hedge against change: 
+
 1. Keep your submodule up-to-date with possible breaking changes in your dependencies, especially those dependencies you use frequently.
 2. Ensure your library wont break if another maintainer releases a new version that behaves slightly differently from what you expect or what you recall. 
 3. Check if your fixes to an unpublished but under-development API change in a dependency work. 
