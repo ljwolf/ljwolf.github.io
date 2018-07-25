@@ -9,6 +9,8 @@ If you test your package against the pypi version of libpysal (which you get usi
 However, if you'd like to give yourself some lead time to detect if there are breaking changes in the development version of `libpysal` on github, feel free to follow these directions on how to set up *optional* tests on travis. These tests are run alongside the rest of your tests, but they're allowed to fail without marking your build as *failing* in total.
 I call these tests *lookahead* tests, since they're "peeking" at the next release of the dependency.  
 
+The clearest example of these is in [spreg](https://github.com/ljwolf/spreg/blob/master/.travis.yml)
+
 ### the `env` environment
 In your `.travis.yml` file, which governs the tests that are run on travis-ci.org, the [`env`](https://docs.travis-ci.com/user/environment-variables/#Defining-public-variables-in-.travis.yml) section is used to define *enironment variables*, which you can think of like options that describe how travis-ci has configured your build. In the case of [libpysal](https://github.com/pysal/libpysal/blob/master/.travis.yml#L11), we have traditionally defined two sets of tests: one against our bare-bones dependencies (only scipy,numpy, and now pandas), and one against our "plus" environment, which includes geopandas, shapely, numba, matplotlib, and a few others. We do this to make sure our plus-enabled code (such as the numba map classifiers in `mapclassify`) always have a usable fallback if the user does not have the required optional dependency.
 
