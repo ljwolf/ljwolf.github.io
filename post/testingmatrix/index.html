@@ -51,7 +51,7 @@ If you test your package against the pypi version of libpysal (which you get usi
 
 <meta itemprop="datePublished" content="2018-07-24T13:52:51-07:00" />
 <meta itemprop="dateModified" content="2018-07-24T13:52:51-07:00" />
-<meta itemprop="wordCount" content="1229">
+<meta itemprop="wordCount" content="1237">
 
 
 
@@ -183,6 +183,8 @@ th {
 <p>If you test your package against the pypi version of libpysal (which you get using <code>pip install libpysal</code>), you already know that your changes don&rsquo;t break with respect to what exists.
 However, if you&rsquo;d like to give yourself some lead time to detect if there are breaking changes in the development version of <code>libpysal</code> on github, feel free to follow these directions on how to set up <em>optional</em> tests on travis. These tests are run alongside the rest of your tests, but they&rsquo;re allowed to fail without marking your build as <em>failing</em> in total.
 I call these tests <em>lookahead</em> tests, since they&rsquo;re &ldquo;peeking&rdquo; at the next release of the dependency.</p>
+
+<p>The clearest example of these is in <a href="https://github.com/ljwolf/spreg/blob/master/.travis.yml">spreg</a></p>
 
 <h3 id="the-env-environment">the <code>env</code> environment</h3>
 
