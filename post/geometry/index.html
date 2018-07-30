@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Levi John Wolf" />
+<meta name="description" content="just a geograblog" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.42.2" />
+
+<link rel="canonical" href="/post/geometry/">
+<base href="/" />
+<meta property="og:title" content="The Geometer&#39;s Angle" />
+<meta property="og:description" content="The Geometer&rsquo;s Angle What John O&rsquo;Loughlin talks about in his recent presidential address in Political Geography strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I got from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [1,2,3] he suggested that electoral analysis needed to go beyond this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/geometry/" />
+
+
+
+<meta property="article:published_time" content="2018-07-30T09:48:17-07:00"/>
+
+<meta property="article:modified_time" content="2018-07-30T09:48:17-07:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Geometer&#39;s Angle"/>
+<meta name="twitter:description" content="The Geometer&rsquo;s Angle What John O&rsquo;Loughlin talks about in his recent presidential address in Political Geography strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I got from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [1,2,3] he suggested that electoral analysis needed to go beyond this."/>
+
+
+
+<meta itemprop="name" content="The Geometer&#39;s Angle">
+<meta itemprop="description" content="The Geometer&rsquo;s Angle What John O&rsquo;Loughlin talks about in his recent presidential address in Political Geography strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I got from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [1,2,3] he suggested that electoral analysis needed to go beyond this.">
+
+
+<meta itemprop="datePublished" content="2018-07-30T09:48:17-07:00" />
+<meta itemprop="dateModified" content="2018-07-30T09:48:17-07:00" />
+<meta itemprop="wordCount" content="1722">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+}
+
+a { color: #444444; }
+
+pre {
+  background: ;
+  border: 1px solid #444444;
+  border-radius: 5px;
+}
+
+code {
+  background: ;
+}
+
+blockquote {
+  background: ;
+  border-left: 3px solid #444444;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444444;
+}
+
+th {
+  background: #444444;
+  color: #f5f5f5;
+}
+
+.siteTitle a { color: #e84848; }
+
+.post .content h1{ color: #e84848; }
+.post .content h2{ color: #e84848; }
+.post .content h3{ color: #e84848; }
+.post .content h4{ color: #e84848; }
+.post .content h5{ color: #e84848; }
+.post .content h6{ color: #e84848; }
+.post .content a:hover { color: #e84848; }
+.social-link:hover { color: #e84848; }
+.nav-item-title:hover { color: #e84848; }
+.tag a:hover { color: #e84848; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #e84848; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #e84848;
+}
+.post-list .title { color: #e84848; }
+.rmore { color: #e84848; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #e84848;
+}
+
+</style>
+
+
+
+<title>
+
+
+     The Geometer&#39;s Angle 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Yet Another Geographer</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About | </div></a>
+    
+    <a class="nav-item" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"><div class="nav-item-title"> CV |  </div></a>
+    
+    <a class="nav-item" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"><div class="nav-item-title"> Bristol |  </div></a>
+    
+    <a class="nav-item" href="https://spatial.uchicago.edu"><div class="nav-item-title"> Chicago |  </div></a>
+    
+    <a class="nav-item" href="https://spatial.ucr.edu"><div class="nav-item-title"> UCR |  </div></a>
+    
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title"> Teaching |  </div></a>
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+
+  </nav>
+</div>
+
+<link rel="shortcut icon" type="image/jpg" href="/favicon.ico">
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> The Geometer&#39;s Angle </h1>
+    <div class="content"> 
+
+<h1 id="the-geometer-s-angle">The Geometer&rsquo;s Angle</h1>
+
+<p>What John O&rsquo;Loughlin talks about in his recent presidential address in <a href="http://rt2-t.notifications.elsevier.com/r/?id=h750cbdb,5c0f911,5c0f922&amp;p1=www.sciencedirect.com/science?_ob=GatewayURL&amp;_method=citationSearch&amp;_version=1&amp;_piikey=S0962629818301884&amp;_origin=RV_SD_TOC_EMAIL&amp;dgcid=raven_sd_via_email">Political Geography</a> strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I <em>got</em> from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [<a href="http://www.stat.columbia.edu/~gelman/research/published/rb_qjps.pdf">1</a>,<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-5907.2007.00272.x">2</a>,<a href="http://cdmaps.polisci.ucla.edu/">3</a>] he suggested that electoral analysis needed to go beyond this.</p>
+
+<p>Maybe sure, yes, this is true. But, <em>right then</em> (as is the case for <em>right now</em>) aggregate election data is cleaner, more useful, more spatial, and more interesting than it <strong>ever</strong> was before. The &ldquo;analytical cartography&rdquo; of previous geographical studies was actively being replaced with statistical analysis of high-quality, high-detail data with national coverage, and linked directly to individual or nearly-individual behavioral data. If there&rsquo;s somewhere else where empirical electoral geography <em>should</em> be going, I was not quite sure how this was not it. Nor am I still sure there is a <em>there</em> there in alternative explorations of space &amp; context in electoral geography:</p>
+
+<p>The point of context <strong>is</strong> the person-in-space, how the systematic factors a person experiences in their surroundings affect the individuals political statements, beliefs, preferences, or attitudes.</p>
+
+<h4 id="and-with-this-data-we-need-to-resolve-ourselves-to-find-the-truth-not-the-expedient">And, with this data, we need to resolve ourselves to find the truth, not the expedient.</h4>
+
+<p>So, if there was some unobservable gestalt, some &ldquo;thick&rdquo; region which affected individual behavior, I wanted <a href="https://www.tandfonline.com/doi/10.1080/00045605309352114">evidence, not exceptionalism.</a> And, my colleagues &amp; committee at Arizona State showed me is exactly how this type of evidence is constructed. If at the end of the day, your model <em>has no room for space</em>, what power does unmeasured or unmeasurable context have? The work I like to do, read, and that I find useful for others is work with <em>didactic relevance</em> (<a href="https://www.jstor.org/stable/pdf/622019.pdf">Ron&rsquo;s term</a>), or transferable insight. While it may not be directly replicable in a computational sense, it <em>is</em> designed to be replicable in a loose sense. Do what I did and the same systems should be apparent in your data.</p>
+
+<p>I do not doubt that you can come up with some very convincing explanations of your quirky model, but at the end of the day, if you&rsquo;ve missed a critical aspects of the process specification, what you&rsquo;re interpreting is less than meaningful. It&rsquo;s neither wrong nor right &mdash; it&rsquo;s misspecified, and the truth can be anything depending on the structure of that misspecification. <em>Spatial underspecification</em>, intentionally leaving a model vague so that spatial effects can pick up the rest, is misspecification, too. And, it&rsquo;s kind of ethically dishonest as a scholar, since finding that &ldquo;regions matter,&rdquo; but that there&rsquo;s no clear explanation as to &ldquo;why&rdquo; they matter, &ldquo;how&rdquo; they matter, or how to move one from mattering to not mattering&hellip; that&rsquo;s not really a transferable insight.</p>
+
+<p><img src="images/isard_rsai.png" alt="Isard in his 1956 work on the fundamentals of the &quot;region&quot;" /></p>
+
+<p><em>Isard, in his 1956 address on the question of whether regions really are things-in-themselves to be found by geographers</em></p>
+
+<h4 id="having-your-cake-and-the-other-table-s-too">Having your cake and the other table&rsquo;s, too</h4>
+
+<p>Thus, again, we are sucked back into the cognitive trauma of the Agnew-King exchange from 1996. O&rsquo;Loughlin returns to this, pointing out places where this supposedly-weak view of <strong>contextual</strong> effects coming from political scientists contrasts with Agnew&rsquo;s perspective of strong context within a nearly-numinous historical-geographical approach. There, he reiterates Agnew&rsquo;s argument that &ldquo;places and the meaning of regions drives our discipline.&rdquo; Indeed, this would suggest (as <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1435-5597.1956.tb01542.x">Isard (1956)</a> also does, but with whom O&rsquo;Loughlin or Agnew would likely disagree on many other facets) that there is some &ldquo;true&rdquo; but unobservable region that impacts human behavior, bounds social systems, and <em>is</em> a <em>context as a thing in itself</em>. Is there truly a &ldquo;region?&rdquo; Or, is this just &ldquo;regional,&rdquo; i.e. underspecified, but leaning on surrounding areas to relieve this underspecification?</p>
+
+<p>Dodging this question of whether or not there are (or are not) &ldquo;true&rdquo; regions, O&rsquo;Loughlin goes immediately to the work by some of my colleagues at Bristol nearly a decade ago on drawing useful socioeconomic contexts; they find that much of the impact of one type of region in one electoral problem is mainly a statistical artifact of <em>aggregation</em>! While there are interesting context-based parts of the work there (the output being the local contextual regions), the point was that <em>one</em> set of regions long thought to be useful in modeling spatial heterogeneity in vote structure in the UK tend to arise <em>not</em> from the fact that these regions are meaningful in and of themselves. Given another <em>better-specified regionalization</em> based firmly in social processes, this alternative regionaliation was not useful.</p>
+
+<p>This irony is not even hinted at by O&rsquo;Loughlin in the address. Is it not important that they find that the &ldquo;meaning of regions [that drive] our discipline&rdquo; is that, well, they might not?</p>
+
+<h4 id="whose-geography-is-geometry">Whose geography is geometry?</h4>
+
+<p>This brings me to the most confusing and frustrating aspect of this address; having read O&rsquo;Loughlin&rsquo;s previous discussion about divisions between political scientists and political geographers, it&rsquo;s baffling that he highlights this work, but then uses outdated or confusing divisions of &ldquo;weak&rdquo; contextual explanations offered by political scientists that amount to &ldquo;political geometry.&rdquo; How is this any weaker than that offered by exploratory regionalization or naive distance-varying coefficient work?</p>
+
+<p>How are multilevel methods or theories of distance decay, which have been used in some form in spatial social science for nearly forty years at this point, any &ldquo;stronger&rdquo; than the work cited by Gimpel, Tam Cho, etc, who  <em>actually theorize how the region works</em>? <em>that</em> a region has a different effect in a multilevel model isn&rsquo;t sufficient; Gelman&rsquo;s work on &ldquo;Red State, Blue State&rdquo; (effectively ignored by many of the old-guard political geographers) does this, but then <em>also provides a reason why multilevel is not the whole story!</em></p>
+
+<p>If you do actually believe that context is best captured by some numinous function of distance to event or group (and find evidence of this under-specified geography), that&rsquo;s fine. But, what is that distance or that group membership actually capturing? Is your model <em>underspecified</em>?</p>
+
+<p>Surely, individuals are not themselves breaking out their rulers to measure the distances to all other relevant sites; the right construct may be measures of <em>social</em> distance, news diet, experiential familiarity with areas that suffer from violence, travel history, etc. As <em>quantitative geographers</em> Linke &amp; O&rsquo;Louglin (2015) understand that it&rsquo;s often sufficient to <em>instrument</em> this using an explicitly geometric variable.</p>
+
+<p>But, as a political geographer, O&rsquo;Loughlin is somehow now are in the position to claim that stronger theories rooted in social science about what makes place are too weak to publish? When political scientists (i.e. <em>non-geographers</em>) attempt to define a precise mechanism by which proximity may affect change (e.g. interpersonal interactions, friend group dynamics, social interaction in public transit), this is a &ldquo;weak&rdquo; geography?</p>
+
+<p>This leaves me to wonder, is it a &ldquo;weak&rdquo; geography because it&rsquo;s not treated as a thing-in-itself, left underspecified, and then simply attributed agency in a weak model? Or is it a weak geography because they&rsquo;re not participating in the nearly 30-year-old canonical texts of political geography? The Agnew readers and the Taylor &amp; Gudgin book, the Pred &amp; the continual trauma of Berry&rsquo;s &ldquo;moribund backwater&rdquo; remark?</p>
+
+<h4 id="and-who-wields-the-protractor">&hellip; and, who wields the protractor?</h4>
+
+<p>Sometimes, the better angle is orthogonal to your own.</p>
+
+<p>The thing I always heard in grad school is that sometimes, in some cases, a spatial model isn&rsquo;t going to be useful. Sometimes, some mechanisms are so strong or so useful in prediction that it <em>doesn&rsquo;t really matter</em> that the process has a spatial embedding; compared with the specific, testable, repeatable mechanisms that we can demonstrate have an effect, a numinous conception of the &ldquo;region&rdquo; or &ldquo;contextual&rdquo; effect has no space in which to operate. There is no large unstructured unknown that we can instrument using geography. But, since this &ldquo;weaker&rdquo; work, where geography is given agency through a specific social or behavioral process, is done by a non-geographer, it&rsquo;s somehow weaker than work that <em>does the same thing</em> through imposing a theory of context-as-nearness or context-as-socioeconomic surroundings. Context as social environment is no weaker than distance decay, although it&rsquo;s more specific and clearly articulated.</p>
+
+<p>Why does this more-clear articulation, with a specific process and mechanism of action, constitute a &ldquo;weaker&rdquo; conception of space? Is it because it&rsquo;s not the numinous region that does the lifting? To me, this really doesn&rsquo;t look good&hellip; over time, it might appear that geographers are using the pseudo-scientific concept of the &ldquo;region&rdquo; to ostracize external work as insufficiently thick/reductive (&ldquo;the region is more than a social network or measurable social context&rdquo;) but then publishing their own work which is even <em>more reductive</em> in hopes of chasing an underspecification (&ldquo;the region is a distance neighborhood/egohood around survey sites&rdquo;).</p>
+
+<h3 id="the-shape-of-the-discipline">The shape of the discipline</h3>
+
+<p>So, who gets to say this work on the social dimensions of microgegoraphies is &ldquo;weak&rdquo; political geometry? The same author suggesting a &ldquo;weak&rdquo; model using distance decay and multilevel modeling (entirely geometric concepts) is somehow a more noteworthy investigation than these alternative <em>richly-parameterized</em> conceptions of place as a social-spatial ensemble. It&rsquo;s useful to know the properties of these contexts, assigned specific actionable processes by which they impact their members.</p>
+
+<p>I&rsquo;ll be honest; it&rsquo;s not quite as useful to know that a $k$-nearest neighbor model heuristic improves accuracy, or simply <em>that</em> variable weights shift as $k$ shifts. If you don&rsquo;t have a clear, supported mechanism for <em>why</em> that occurs, then how is that finding not geometry itself? I&rsquo;m not buying this distinction between Geographers and Geometers that O&rsquo;Loughlin admits to using in order to gatekeep <em>Political Geography</em>. Why stop these other &ldquo;political geometers&rdquo; but publish your own geometries elsewhere?</p>
+
+<p>This is a bummer, since he&rsquo;s (at multiple times in many different publications) lamented the lack of &ldquo;good&rdquo; political science work published in PG. And, I agree, there has been. But, that&rsquo;s not because it&rsquo;s &ldquo;weak work,&rdquo; it&rsquo;s because there&rsquo;s clearly turf here being used to reject &ldquo;weak&rdquo; work by the wrong people, who then must expected to consume <em>our &ldquo;weak&rdquo; work.</em> At the end of the day (and the data), this is what these &ldquo;weak&rdquo; perspectives of regional agency provide. They provide repeatable analyses with specific claims and distinct measures of uncertainty, focused on specific mechanisms, without reference to a &ldquo;numinous&rdquo; underspecified regional geography.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Jul 30, 2018 </div>
+  </div>
+
+</footer>
+
+
+  
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:levi.john.wolf@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/ljwolf" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/levijohnwolf" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+      thanks, <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</html>
+

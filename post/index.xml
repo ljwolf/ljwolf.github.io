@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 24 Jul 2018 13:52:51 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jul 2018 09:48:17 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Geometer&#39;s Angle</title>
+      <link>/post/geometry/</link>
+      <pubDate>Mon, 30 Jul 2018 09:48:17 -0700</pubDate>
+      
+      <guid>/post/geometry/</guid>
+      <description>The Geometer&amp;rsquo;s Angle What John O&amp;rsquo;Loughlin talks about in his recent presidential address in Political Geography strikes me as substantially similar to many of the things I&amp;rsquo;ve read from him on the field. Indeed, it reminds me of the same track I got from him as a PhD applicant seeking to work in quantitative political geography. I&amp;rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [1,2,3] he suggested that electoral analysis needed to go beyond this.</description>
+    </item>
     
     <item>
       <title>Using lookahead testing</title>
