@@ -6,10 +6,21 @@
     <description>Recent content on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 30 Jul 2018 09:48:17 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 13 Sep 2018 15:25:50 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Who&#39;s Fixed?</title>
+      <link>/post/whose_fixed/</link>
+      <pubDate>Thu, 13 Sep 2018 15:25:50 +0100</pubDate>
+      
+      <guid>/post/whose_fixed/</guid>
+      <description>When comparing a multilevel model to a fixed-level model, it&amp;rsquo;s important to consider how things are parameterized. For instance, let&amp;rsquo;s say you&amp;rsquo;re conducting comparisons between a no-pooling model and a partial pooling variance components model. In this case, we have:
+$$ y= \Delta u + \epsilon$$
+as the specification, where $\Delta$ is the dummy variable matrix, $y$ is the outcome of interest, and $\epsilon$ is the usual homoeskedastic error term for the responses.</description>
+    </item>
     
     <item>
       <title>The Geometer&#39;s Angle</title>

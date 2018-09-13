@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/whose_fixed/</loc>
+    <lastmod>2018-09-13T15:25:50+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/geometry/</loc>
     <lastmod>2018-07-30T09:48:17-07:00</lastmod>
   </url>
@@ -1659,7 +1664,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-30T09:48:17-07:00</lastmod>
+    <lastmod>2018-09-13T15:25:50+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2091,7 +2096,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-07-30T09:48:17-07:00</lastmod>
+    <lastmod>2018-09-13T15:25:50+01:00</lastmod>
     <priority>0</priority>
   </url>
   
