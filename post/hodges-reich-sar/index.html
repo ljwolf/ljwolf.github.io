@@ -11,7 +11,7 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.37.1" />
 
 <link rel="canonical" href="/post/hodges-reich-sar/">
 <base href="/" />
@@ -206,9 +206,9 @@ The idea also touches on <a href="http://www.tandfonline.com/doi/abs/10.1080/174
 <h3 id="spatial-confounding-in-spatial-error-models">Spatial Confounding in Spatial Error Models</h3>
 
 <p>Let&rsquo;s consider the Baltimore house price dataset:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> gpd<span style="color:#f92672">.</span>read_file(ps<span style="color:#f92672">.</span>examples<span style="color:#f92672">.</span>get_path(<span style="color:#e6db74">&#39;baltim.shp&#39;</span>))</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> gpd<span style="color:#f92672">.</span>read_file(ps<span style="color:#f92672">.</span>examples<span style="color:#f92672">.</span>get_path(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;baltim.shp&#39;</span>))</code></pre></div>
 <p>Grab a symmetric spatial kernel weight, using a triangular kernel (but you can change it to be whatever you&rsquo;d like), and ensure that the diagonal is zero, since that&rsquo;s necessary for the spatial weights used in the spatial regressions in PySAL.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">weights <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>weights<span style="color:#f92672">.</span>Kernel<span style="color:#f92672">.</span>from_dataframe(data, k<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, fixed<span style="color:#f92672">=</span>True, function<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;triangular&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">weights <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>weights<span style="color:#f92672">.</span>Kernel<span style="color:#f92672">.</span>from_dataframe(data, k<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, fixed<span style="color:#f92672">=</span>True, function<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;triangular&#39;</span>)
 weights <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>weights<span style="color:#f92672">.</span>util<span style="color:#f92672">.</span>fill_diagonal(weights, <span style="color:#ae81ff">0</span>)</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#f92672">.</span>head()</code></pre></div>
 <div>
 <style scoped>
@@ -359,8 +359,8 @@ weights <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</sp
 </div>
 
 <p>I&rsquo;ll pick a subset of covariates that tries to avoid clumping/restriction of values, but give a decent enough model fit.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">covariates <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;NROOM&#39;</span>, <span style="color:#e6db74">&#39;AGE&#39;</span>, <span style="color:#e6db74">&#39;LOTSZ&#39;</span>, <span style="color:#e6db74">&#39;SQFT&#39;</span>]</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">X <span style="color:#f92672">=</span> data[covariates]<span style="color:#f92672">.</span>values
-Y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(data[[<span style="color:#e6db74">&#39;PRICE&#39;</span>]]<span style="color:#f92672">.</span>values)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">covariates <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;NROOM&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;AGE&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;LOTSZ&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SQFT&#39;</span>]</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">X <span style="color:#f92672">=</span> data[covariates]<span style="color:#f92672">.</span>values
+Y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(data[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;PRICE&#39;</span>]]<span style="color:#f92672">.</span>values)
 N,P <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>shape</code></pre></div>
 <p>Now, I&rsquo;m going to fit the ML Error model and the OLS on the same data.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mlerr <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>ML_Error(Y,X, w<span style="color:#f92672">=</span>weights)
@@ -374,14 +374,14 @@ ols <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>s
 <p>And, I&rsquo;ll take a look at the two sets of estimates between the two, as well as computing the difference.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">diff <span style="color:#f92672">=</span> (ols<span style="color:#f92672">.</span>betas <span style="color:#f92672">-</span> mlerr<span style="color:#f92672">.</span>betas[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) 
 distinct <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>abs(diff<span style="color:#f92672">.</span>flatten()) <span style="color:#f92672">&gt;</span> (<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>ols<span style="color:#f92672">.</span>std_err)
-compare <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame<span style="color:#f92672">.</span>from_dict({<span style="color:#e6db74">&#34;OLS&#34;</span> : ols<span style="color:#f92672">.</span>betas<span style="color:#f92672">.</span>flatten(), 
-                        <span style="color:#e6db74">&#34;ML Error&#34;</span> :   mlerr<span style="color:#f92672">.</span>betas[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>flatten(),
-                        <span style="color:#e6db74">&#34;Difference&#34;</span> :   diff<span style="color:#f92672">.</span>flatten(),
-                        <span style="color:#e6db74">&#34;SE OLS&#34;</span>: ols<span style="color:#f92672">.</span>std_err,
-                        <span style="color:#e6db74">&#34;SE ML Error&#34;</span>: mlerr<span style="color:#f92672">.</span>std_err[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],        
-                        <span style="color:#e6db74">&#34;Is Point-Distinct?&#34;</span> : distinct<span style="color:#f92672">.</span>astype(bool)<span style="color:#f92672">.</span>flatten()})
-compare<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> ([<span style="color:#e6db74">&#39;Intercept&#39;</span>] <span style="color:#f92672">+</span> covariates)
-compare[[<span style="color:#e6db74">&#39;OLS&#39;</span>, <span style="color:#e6db74">&#39;ML Error&#39;</span>, <span style="color:#e6db74">&#39;Difference&#39;</span>, <span style="color:#e6db74">&#39;SE OLS&#39;</span>, <span style="color:#e6db74">&#39;SE ML Error&#39;</span>, <span style="color:#e6db74">&#39;Is Point-Distinct?&#39;</span>]]</code></pre></div>
+compare <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame<span style="color:#f92672">.</span>from_dict({<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;OLS&#34;</span> : ols<span style="color:#f92672">.</span>betas<span style="color:#f92672">.</span>flatten(), 
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;ML Error&#34;</span> :   mlerr<span style="color:#f92672">.</span>betas[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>flatten(),
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Difference&#34;</span> :   diff<span style="color:#f92672">.</span>flatten(),
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;SE OLS&#34;</span>: ols<span style="color:#f92672">.</span>std_err,
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;SE ML Error&#34;</span>: mlerr<span style="color:#f92672">.</span>std_err[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],        
+                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Is Point-Distinct?&#34;</span> : distinct<span style="color:#f92672">.</span>astype(bool)<span style="color:#f92672">.</span>flatten()})
+compare<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> ([<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Intercept&#39;</span>] <span style="color:#f92672">+</span> covariates)
+compare[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;OLS&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;ML Error&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Difference&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SE OLS&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SE ML Error&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Is Point-Distinct?&#39;</span>]]</code></pre></div>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -480,13 +480,13 @@ compare[[<span style="color:#e6db74">&#39;OLS&#39;</span>, <span style="color:#e
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ols_ortho <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>OLS(Yortho, Xortho)
 betas_from_ols_orthogonal_data <span style="color:#f92672">=</span> ols_ortho<span style="color:#f92672">.</span>betas</code></pre></div>
 <p>And we run the error model, too:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mlortho <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>ML_Error(Yortho, Xortho, w<span style="color:#f92672">=</span>weights, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ord&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mlortho <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span>spreg<span style="color:#f92672">.</span>ML_Error(Yortho, Xortho, w<span style="color:#f92672">=</span>weights, method<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;ord&#39;</span>)
 betas_from_error_orthogonal_data <span style="color:#f92672">=</span> mlortho<span style="color:#f92672">.</span>betas</code></pre></div>
 <p>Now, are they all equal to within machine precision?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>column_stack((betas_from_ols_orthogonal_data,
                  betas_from_error_orthogonal_data[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
-                 inherited_betas)), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Orthogonal OLS&#39;</span>, 
-                                             <span style="color:#e6db74">&#39;Orthogonal ML Err&#39;</span>, <span style="color:#e6db74">&#39;Observed OLS&#39;</span>])</code></pre></div>
+                 inherited_betas)), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Orthogonal OLS&#39;</span>, 
+                                             <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Orthogonal ML Err&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Observed OLS&#39;</span>])</code></pre></div>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -546,8 +546,8 @@ betas_from_error_orthogonal_data <span style="color:#f92672">=</span> mlortho<sp
 </div>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>column_stack((betas_from_ols_orthogonal_data,
                  betas_from_error_orthogonal_data[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], 
-                 inherited_betas)), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;NA&#39;</span>, <span style="color:#e6db74">&#39;Ortho. OLS minus Ortho. ML Error&#39;</span>, 
-                                             <span style="color:#e6db74">&#39;Ortho. ML Error minus Observed OLS&#39;</span>])<span style="color:#f92672">.</span>diff(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>dropna(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)</code></pre></div>
+                 inherited_betas)), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;NA&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Ortho. OLS minus Ortho. ML Error&#39;</span>, 
+                                             <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;Ortho. ML Error minus Observed OLS&#39;</span>])<span style="color:#f92672">.</span>diff(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>dropna(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)</code></pre></div>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -604,9 +604,9 @@ betas_from_error_orthogonal_data <span style="color:#f92672">=</span> mlortho<sp
 
 <p>At the end of the day, what&rsquo;s collinearity got to do with it? Below, I&rsquo;ll plot the regressors in $X$ against the error term in the spatial error model:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> seaborn.apionly <span style="color:#f92672">as</span> sns
-sns<span style="color:#f92672">.</span>pairplot(x_vars<span style="color:#f92672">=</span>covariates, y_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;error_model_residual&#39;</span>, 
+sns<span style="color:#f92672">.</span>pairplot(x_vars<span style="color:#f92672">=</span>covariates, y_vars<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;error_model_residual&#39;</span>, 
              data<span style="color:#f92672">=</span>data[covariates]<span style="color:#f92672">.</span>assign(error_model_residual <span style="color:#f92672">=</span> mlerr<span style="color:#f92672">.</span>u),
-             kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;reg&#39;</span>, plot_kws<span style="color:#f92672">=</span>dict(color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;k&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>, line_kws<span style="color:#f92672">=</span>dict(color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;orangered&#39;</span>, zorder<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)))</code></pre></div>
+             kind<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;reg&#39;</span>, plot_kws<span style="color:#f92672">=</span>dict(color<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;k&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;.&#39;</span>, line_kws<span style="color:#f92672">=</span>dict(color<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;orangered&#39;</span>, zorder<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)))</code></pre></div>
 <p><img src="/images/hodges-reich-sar-plot.png" alt="png" /></p>
 
 <p>If you recall, the two covariates that had the largest shift from the OLS model to the ML Error model in the empirical dataset were the ones for house age and lot size. These are also marginally correlated with the residual from spatial error model.</p>
