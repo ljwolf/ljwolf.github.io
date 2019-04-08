@@ -12,7 +12,7 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.37.1" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 <link rel="canonical" href="/">
 <base href="/" />
@@ -23,7 +23,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-02-15T20:09:35&#43;00:00"/>
+<meta property="og:updated_time" content="2018-02-18T12:40:00&#43;00:00"/>
 
 
 
@@ -168,6 +168,33 @@ th {
     <article class="post-preview">
 
   <header>
+    <h2 class="title"> <a href='/post/does-projection-matter/'> Does projection matter for compactness indices?</a> </h2>
+    <div class="meta">
+      Feb 18, 2018 - 4 minutes
+    </div>
+    
+<div class="tags">
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    This is a quick and dirty exploration of the compactness impacts of changing the projection of data on compactness measures.
+import geopandas as gpd import numpy as np import matplotlib.pyplot as plt from compact import reock as _reock import pysal as ps import seaborn as sns %matplotlib inline The data I&rsquo;m using is the 113th districts from my Scientific Data publication, sourced originally from Jeff Lewis.
+df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#34;Alaska&#34;,&#34;Hawaii&#34;)&#39;)df.
+    <a href='/post/does-projection-matter/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
     <h2 class="title"> <a href='/this-brexit-analysis-for-the-gisruk-competitions/'> Finally making headway on Brexit Data</a> </h2>
     <div class="meta">
       Feb 15, 2018 - 1 minutes
@@ -221,41 +248,6 @@ th {
     Modern &ldquo;nerd&rdquo; media (rick &amp; morty, bojack, &ldquo;deep&rdquo; analyses of pop media like the insufferable &ldquo;man drones over film clip&rdquo; channels on youtube or &ldquo;Scar No One Else Can See&rdquo; by &ldquo;Fairy Lives Matter&rdquo; movie writer Max Landis) &amp; the politically-opposed alt-right adjacent podcast sphere (J. Peterson, Sam Harris, etc) have really demonstrated that the first stanza of Hot Fries is way too real:
 talking fast with a dense amount of facile textual references really makes people think you&rsquo;re deep.
     <a href='/this-should-probably-be-a-tweet/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/never-thought-id-be-complaining-about-only-having/'> running on all cores</a> </h2>
-    <div class="meta">
-      Jan 31, 2018 - 1 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/imported">#imported</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/image">#image</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    Not sure where this happens, since I&rsquo;m just using sparse matrices here. I guess they might get densified somewhere below me &amp; then that overhead allocation doesn&rsquo;t get returned to other processes, it&rsquo;s just claimed by the jupyter kernel.
-Which&hellip;. means that my two kernels compete for space.
- imported from: yetanothergeographer
-    <a href='/never-thought-id-be-complaining-about-only-having/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">

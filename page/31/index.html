@@ -12,7 +12,7 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.37.1" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 <link rel="canonical" href="/">
 <base href="/" />
@@ -23,7 +23,7 @@
 
 
 
-<meta property="og:updated_time" content="2015-06-12T17:30:00&#43;00:00"/>
+<meta property="og:updated_time" content="2015-06-16T15:27:27&#43;00:00"/>
 
 
 
@@ -168,6 +168,72 @@ th {
     <article class="post-preview">
 
   <header>
+    <h2 class="title"> <a href='/cenpy-big-query/'> Cenpy Big Query</a> </h2>
+    <div class="meta">
+      Jun 16, 2015 - 1 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/gis"># gis</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/census"># census</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/uscb"># uscb</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/geography"># geography</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/demographics"># demographics</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/social-science"># social science</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/grad-school"># grad school</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/acs.r"># acs.r</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    If you’ve been using my tools for census data exploration, as intensely as I&rsquo;d hope you have, you might’ve noticed that the Census limits queries to 50 columns per query.
+I’ve got your back, though. The newest release, cenpy 0.7, now supports n-column queries by chunking through 50-coulumns at a time. Be careful, though, as I&rsquo;m sure if you pull down the entire Census 2010 short form in one go, you will probably get rate limited.
+    <a href='/cenpy-big-query/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
     <h2 class="title"> <a href='/mulitprocessing-business-in-the-front-parallel/'> business in the front, party distributed across 32 backs</a> </h2>
     <div class="meta">
       Jun 12, 2015 - 1 minutes
@@ -278,67 +344,6 @@ Check it out on github or its demo notebook on nbviewer.
 yetanothergeographer:
  CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.
     <a href='/cenpy-is-now-pip-installable/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/maybe-the-shapefile-was-right-after-all-is-right/'> “Maybe the Shapefile was right after all” is right after all</a> </h2>
-    <div class="meta">
-      Jun 6, 2015 - 1 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/geometry">#geometry</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/geography"># geography</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/gis"># gis</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/python"># python</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/wkt"># wkt</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/simplefeatures"># simplefeatures</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/geojson"># geojson</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/ogc"># ogc</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/imported">#imported</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    The more that I work with broad datasets, collected from many different means and used in many different contexts, the more I think that you really only need the &ldquo;multi&rdquo; instantiation of polygons, lines, and points. Usually, due to database typecasting, you want to coerce any heterogeneous datatypes into the same datatype. Since it&rsquo;s much simpler to cast Polygons upwards into MultiPolygons, I&rsquo;m rarely seeing any Polygons or Lines, even in datasets where the majority of features are single-component.
-    <a href='/maybe-the-shapefile-was-right-after-all-is-right/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">
