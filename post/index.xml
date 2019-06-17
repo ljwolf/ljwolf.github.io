@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 08 Apr 2019 12:44:33 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jun 2019 14:13:14 +0100</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Email Charter</title>
+      <link>/post/email-charter/</link>
+      <pubDate>Mon, 17 Jun 2019 14:13:14 +0100</pubDate>
+      
+      <guid>/post/email-charter/</guid>
+      <description>The University of Bristol Email Charter I really like the University of Bristol&amp;rsquo;s new email charter. But, I think it could be made a little more clear and actionable, especially since it can build off of previous work and thought about making emails clearer, shorter, and fewer in number. Below, I&amp;rsquo;ll go through the points listed in the original charter and try to make them clearer. I&amp;rsquo;ll also try to add some actions that add some teeth to the points.</description>
+    </item>
     
     <item>
       <title>Cenpy 1.0.0</title>
