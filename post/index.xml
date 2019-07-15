@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 17 Jun 2019 14:13:14 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2019 01:46:40 +0100</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Open Code is Not Enough</title>
+      <link>/post/opencode/</link>
+      <pubDate>Mon, 15 Jul 2019 01:46:40 +0100</pubDate>
+      
+      <guid>/post/opencode/</guid>
+      <description>Towards a replicable future for geographic data science Levi John Wolf, Sergio J. Rey, &amp;amp; Taylor M. Oshan Over the next few days, I&amp;rsquo;ll be attending the Conceptualizing a Geospatial Software Institute Workshop at SESNYC. The original submission is here. In it, I detail how important it is to ensure that open source community is built along side open source software. Given the role open source plays in Open Science and the Open government initiative at the NSF, my collaborators and I felt it was critical to represent this perspective at the workshop.</description>
+    </item>
     
     <item>
       <title>Email Charter</title>
