@@ -72,7 +72,7 @@ ability to transport ideas or conclusions from study to study; the
 relevance. This requires open science to be much more than push-button
 repeatability or open source; we must also *actively *ensure that
 software freedoms are accessable to other scientists. Thus, **it is not
-enough to create open scientific software**,** we must also strengthen
+enough to create open scientific software**, **we must also strengthen
 the open science community**.
 
 As a new Co-Maintainer of the Python Spatial Analysis Library, my
