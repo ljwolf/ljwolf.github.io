@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 15 Jul 2019 01:46:40 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 13:19:16 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep work and the challenges of latency</title>
+      <link>/post/deepwork/</link>
+      <pubDate>Wed, 24 Jul 2019 13:19:16 -0700</pubDate>
+      
+      <guid>/post/deepwork/</guid>
+      <description>Work Mindfulness &amp;amp; the Reverse Todo List I recently finished reading Cal Newport’s Deep Work: rules for focused success in a distracted world. While it’s pretty reasonable advice (like the nugget “When you work, work hard. When you’re done, be done.” p. 154), there are a few really powerful parts that I found very affecting and reasonable. Since I bet most folks take one message from Newport’s very well-publicized media appearances, and that’s his digital minimalism message.</description>
+    </item>
     
     <item>
       <title>Open Code is Not Enough</title>
