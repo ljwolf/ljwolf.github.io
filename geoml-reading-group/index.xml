@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geoml-reading-groups on Yet Another Geographer</title>
+    <link>/geoml-reading-group/</link>
+    <description>Recent content in Geoml-reading-groups on Yet Another Geographer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 08 Aug 2019 13:04:29 +0100</lastBuildDate>
+    
+	<atom:link href="/geoml-reading-group/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019 08 28</title>
+      <link>/geoml-reading-group/2019-08-28/</link>
+      <pubDate>Thu, 08 Aug 2019 13:04:29 +0100</pubDate>
+      
+      <guid>/geoml-reading-group/2019-08-28/</guid>
+      <description> Hastie, Tibshirani, &amp;amp; Friedman, Elements of Statistical Learning, Chapter 11 Sabbatta &amp;amp; Liu, &amp;ldquo;Deep learning geodemographics.&amp;rdquo;  </description>
+    </item>
+    
+  </channel>
+</rss>
