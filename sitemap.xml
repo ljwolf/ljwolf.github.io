@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/qestival/</loc>
+    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/geoml-reading-group/2019-08-28/</loc>
     <lastmod>2019-08-08T13:04:29+01:00</lastmod>
   </url>
@@ -1700,7 +1705,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-07-24T13:19:16-07:00</lastmod>
+    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2132,7 +2137,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-08-08T13:04:29+01:00</lastmod>
+    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
     <priority>0</priority>
   </url>
   
