@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/qestival/</loc>
-    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
+    <loc>/post/disabling/</loc>
+    <lastmod>2019-09-19T09:48:35+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/geoml-reading-group/2019-08-28/</loc>
-    <lastmod>2019-08-08T13:04:29+01:00</lastmod>
+    <loc>/post/qestival/</loc>
+    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
   </url>
   
   <url>
@@ -1206,12 +1206,6 @@
   </url>
   
   <url>
-    <loc>/geoml-reading-group/</loc>
-    <lastmod>2019-08-08T13:04:29+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/geoprocessing/</loc>
     <lastmod>2016-02-16T21:18:10+00:00</lastmod>
     <priority>0</priority>
@@ -1705,7 +1699,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
+    <lastmod>2019-09-19T09:48:35+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2137,7 +2131,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
+    <lastmod>2019-09-19T09:48:35+01:00</lastmod>
     <priority>0</priority>
   </url>
   

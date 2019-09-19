@@ -6,10 +6,21 @@
     <description>Recent content on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 10 Sep 2019 15:51:29 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2019 09:48:35 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Disabling Technologies</title>
+      <link>/post/disabling/</link>
+      <pubDate>Thu, 19 Sep 2019 09:48:35 +0100</pubDate>
+      
+      <guid>/post/disabling/</guid>
+      <description>On “Routine” Computing at Scale as a Disabling Technology
+Ever since I read Mark Gahegan&amp;rsquo;s discussion and definition of Geocomputation in preparation to run the AAG 2019 Urban Data Science Panel, something he wrote about has really stuck in my mind. Namely, his discussion of disabling technologies is both very cogent and intellectually flexible:
+Disabling Technology (Gahegan, 1999)  The late 1970&amp;rsquo;s and early 1980&amp;rsquo;s saw the rise of databases; large monolithic systems that standardised on interfaces, file structures and query languages.</description>
+    </item>
     
     <item>
       <title>Q-Step Festival &amp; Geosilhouettes</title>
@@ -19,15 +30,6 @@
       <guid>/post/qestival/</guid>
       <description>On the 11th, I&amp;rsquo;ll be speaking at the Q-estival at the University of Exeter&amp;rsquo;s Q-Step Centre. The Q-Step program is a program to promote a &amp;ldquo;step change&amp;rdquo; in quantitative social science skills in the UK. I&amp;rsquo;m the Bristol Geography lead for the program. I&amp;rsquo;m real excited to take my first trip out to Exeter, see the place, and talk about some interesting computational social science!
 In my talk, I&amp;rsquo;ll present some work I&amp;rsquo;ve done with Eli Knaap &amp;amp; Serge Rey on urban social boundaries.</description>
-    </item>
-    
-    <item>
-      <title>2019 08 28</title>
-      <link>/geoml-reading-group/2019-08-28/</link>
-      <pubDate>Thu, 08 Aug 2019 13:04:29 +0100</pubDate>
-      
-      <guid>/geoml-reading-group/2019-08-28/</guid>
-      <description> Hastie, Tibshirani, &amp;amp; Friedman, Elements of Statistical Learning, Chapter 11 Sabbatta &amp;amp; Liu, &amp;ldquo;Deep learning geodemographics.&amp;rdquo;  </description>
     </item>
     
     <item>
