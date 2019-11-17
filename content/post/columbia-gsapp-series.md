@@ -10,3 +10,5 @@ Tuesday, I present on some of my research at the Lectures in Planning Series for
 I'm real excited to be back in NYC, but I'm also real excited for the opportunity to give a talk that's not in my usual audience; I really enjoy stretching myself to try to present results outside of my field in an intelligible and useful manner. 
 
 Hopefully I succeed on that count :)
+
+For those interested, a static verison of my slides can be found [here.](presentations/2019-columbia.pdf). 
