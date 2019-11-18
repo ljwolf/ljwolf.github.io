@@ -11,4 +11,4 @@ I'm real excited to be back in NYC, but I'm also real excited for the opportunit
 
 Hopefully I succeed on that count :)
 
-For those interested, a static verison of my slides can be found [here.](presentations/2019-columbia.pdf). 
+For those interested, a static verison of my slides can be found [here.](talks/columbia_gsapp_2019.pdf)
