@@ -23,7 +23,7 @@
 
 
 
-<meta property="og:updated_time" content="2016-06-17T18:27:53&#43;00:00"/>
+<meta property="og:updated_time" content="2016-06-19T20:37:12&#43;00:00"/>
 
 
 
@@ -168,6 +168,41 @@ th {
     <article class="post-preview">
 
   <header>
+    <h2 class="title"> <a href='/more-on-the-log-determinant-stuff-i-think-ive/'> more on log determinants</a> </h2>
+    <div class="meta">
+      Jun 19, 2016 - 1 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/imported">#imported</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/image">#image</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    You see, the full likelihood of the model I&rsquo;m working with is something like:
+$$|I - \rho W| \times \mathcal{N}(X\beta + \rho W y, \sigma^2) $$
+And, since (W) and (I) are constants, I actually need the gradient of the log determinant with respect to ( \rho ), not (A). Since the derivative of the log determinant with respect to (A), the full laplacian matrix, is an (N \times N) matrix, I was getting a conformality error in PyMC3, which wanted the derivative with respect to $\rho$ and was expecting a scalar.
+    <a href='/more-on-the-log-determinant-stuff-i-think-ive/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
     <h2 class="title"> <a href='/thisll-be-a-more-lucid-writeup-of-what-i-was/'> log deterimnants</a> </h2>
     <div class="meta">
       Jun 17, 2016 - 5 minutes
@@ -264,62 +299,6 @@ You see, some spatial econometric models require that the log determinant of a v
 </article>
 
 
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/gsoc-call-notes-june-6-2016/'> GSOC Call Notes, June 6 2016</a> </h2>
-    <div class="meta">
-      Jun 6, 2016 - 5 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/gsoc">#gsoc</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/python"># python</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/geography"># geography</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/pysal"># pysal</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/statistics"># statistics</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/grad-school"># grad school</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/imported">#imported</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    I&rsquo;ve had to take a break from the spatial hierarchical linear modeling kick I&rsquo;ve been on recently to get back to some GSOC work.
-Today, I had my weekly call with my mentors.
-On today&rsquo;s call, my mentors and I discussed a few things.
-Testing &amp; Merging of project code Since many of the improvements I&rsquo;m making to the library are module-by-module, I was advised to submit PRs when a logical unit of contribution is ready to ship.
-    <a href='/gsoc-call-notes-june-6-2016/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
 
 
 <div class="page-nav">
@@ -330,7 +309,7 @@ Testing &amp; Merging of project code Since many of the improvements I&rsquo;m m
   </div> 
 
   <div class="page-num">
-    20/45
+    20/46
   </div> 
 
   <div class="page-next">

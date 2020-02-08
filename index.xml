@@ -6,10 +6,19 @@
     <description>Recent content on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 17 Nov 2019 15:29:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 10:07:48 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CUSP London, Exeter, and ASU</title>
+      <link>/post/20200208-jan-feb-talks/</link>
+      <pubDate>Sat, 08 Feb 2020 10:07:48 +0000</pubDate>
+      
+      <guid>/post/20200208-jan-feb-talks/</guid>
+      <description>Man, it&amp;rsquo;s been a busy start to 2020. I&amp;rsquo;ve had such a great time talking to folks about new ideas on cities, spatial statistics, and machine learning. Back in late January, I gave a talk on our now-published paper on social boundaries in cities at CUSP London (slides), invited by my gracious and wonderful host, Jon Reades. Then, I went off to western Ireland for some short R&amp;amp;R, catching gale force winds at the Cliffs of Moher &amp;amp; some nice evenings in Dingle, Co.</description>
+    </item>
     
     <item>
       <title>Columbia GSAPP Lecture Series</title>
