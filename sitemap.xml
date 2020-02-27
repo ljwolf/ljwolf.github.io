@@ -68,11 +68,6 @@
   </url>
   
   <url>
-    <loc>/teaching/ephemera/</loc>
-    <lastmod>2018-04-24T14:13:20+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/challenge/</loc>
     <lastmod>2018-04-20T16:54:18+01:00</lastmod>
   </url>
@@ -694,22 +689,6 @@
   
   <url>
     <loc>/diss-survey/</loc>
-  </url>
-  
-  <url>
-    <loc>/teaching/20180323_eclan/</loc>
-  </url>
-  
-  <url>
-    <loc>/teaching/20180323_eclan_exercises/</loc>
-  </url>
-  
-  <url>
-    <loc>/teaching/gibbs/</loc>
-  </url>
-  
-  <url>
-    <loc>/teaching/mvregression/</loc>
   </url>
   
   <url>
@@ -1998,12 +1977,6 @@
   <url>
     <loc>/tags/tar/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/teaching/</loc>
-    <lastmod>2018-04-24T14:13:20+01:00</lastmod>
     <priority>0</priority>
   </url>
   
