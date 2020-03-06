@@ -3,7 +3,7 @@ title: "About"
 date: 2018-03-02T19:33:34Z
 ---
 
-My name is Levi John Wolf. I am a Senior Lecturer/Assistant Professor in Quantitative Human Geography at the University of Bristol's Quantitative Spatial Science Lab and Fellow at the Alan Turing Institute. I work in spatial data science, building new methods and software to learn new things about social and natural processes.
+My name is Levi John Wolf. I am a Senior Lecturer/Assistant Professor in Quantitative Human Geography at the University of Bristol's Quantitative Spatial Science Lab, Fellow at the University of Chicago Center for Spatial Data Science, an Affiliate Faculty at the University of California, Riverside's Center for Geospatial Sciences, and Fellow at the Alan Turing Institute. I work in spatial data science, building new methods and software to learn new things about social and natural processes.
 
 In the past, I've worked on [detecting gerrymandering](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657689&HistoricalAwards=false#_=_), [neighborhood dynamics](https://journals.sagepub.com/doi/10.1177/2399808319875752), [local models](https://onlinelibrary.wiley.com/doi/full/10.1111/gean.12147), [bayesian computation](https://doi.org/10.1111/gean.12135)... a whole gamut of spatial data science topics. In future, I'm broadly interested in figuring out ways to integrate spatial reasoning into data science techniques. This either looks like traditional spatial data science techniques that use augmented spatial information, or involves the development of entirely new spatial statistical models \& data science methods.  
 
