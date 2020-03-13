@@ -18,7 +18,7 @@
       
       <guid>/post/2020-sm2-lectures/</guid>
       <description>For an intro &amp;amp; discussion of some of hte fundamental ideas in spatial statistics, we&amp;rsquo;ll cover a few main topics.
-Plotting &amp;amp; spatial relationships in R (notebook]
+Plotting &amp;amp; spatial relationships in R (notebook)
 This practical/component will cover some of the fundamental concepts in quantitative geography, such as: - theoretical and empirical properties of relationships between geographic objects - how to compute &amp;amp; use these relationships in R - what kernel functions/distance decay is - how to make focused maps &amp;amp; use spatial relationships to make better maps in R</description>
     </item>
     
