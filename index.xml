@@ -17,8 +17,9 @@
       <pubDate>Mon, 09 Mar 2020 12:02:47 +0000</pubDate>
       
       <guid>/post/2020-sm2-lectures/</guid>
-      <description>For an intro &amp;amp; discussion of some of hte fundamental ideas in spatial statistics, we&amp;rsquo;ll cover a few main topics.
-Plotting &amp;amp; spatial relationships in R (notebook)
+      <description>For an intro &amp;amp; discussion of some of the fundamental ideas in spatial statistics, we&amp;rsquo;ll cover a few main topics.
+Logistics Courses start at 11AM on the date listed. The Join Remotely links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).
+Plotting &amp;amp; spatial relationships in R (Notebook)
 This practical/component will cover some of the fundamental concepts in quantitative geography, such as: - theoretical and empirical properties of relationships between geographic objects - how to compute &amp;amp; use these relationships in R - what kernel functions/distance decay is - how to make focused maps &amp;amp; use spatial relationships to make better maps in R</description>
     </item>
     
