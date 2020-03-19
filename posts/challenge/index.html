@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Challenge in Science  - Yet Another Geographer</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/favicon.png">
+
+<link rel="stylesheet" href="/css/style.css?rnd=1584633829" />
+
+<meta property="og:title" content="Challenge in Science" />
+<meta property="og:description" content="I just finished attending the 2018 GIS Research UK conference at Leicester University.
+I presented twice; once on some new methods in spatial clustering and once for the CDRC brexit data analysis competition. I had a really good time participating in the data analysis competition, and it struck a chord with me reflecting on quite a few conversations I&rsquo;ve had with my friend &amp; colleague Taylor Oshan and something Morton O&rsquo;Kelly said at this year&rsquo;s annual American Association of Geographers meeting." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/challenge/" />
+<meta property="article:published_time" content="2018-04-20T16:54:18+01:00" />
+<meta property="article:modified_time" content="2018-04-20T16:54:18+01:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Challenge in Science"/>
+<meta name="twitter:description" content="I just finished attending the 2018 GIS Research UK conference at Leicester University.
+I presented twice; once on some new methods in spatial clustering and once for the CDRC brexit data analysis competition. I had a really good time participating in the data analysis competition, and it struck a chord with me reflecting on quite a few conversations I&rsquo;ve had with my friend &amp; colleague Taylor Oshan and something Morton O&rsquo;Kelly said at this year&rsquo;s annual American Association of Geographers meeting."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Yet Another Geographer</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">About</a>
+    
+    <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">Vitae</a>
+    
+    <a class="" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html" title="">Bristol</a>
+    
+    <a class="" href="https://spatial.uchicago.edu" title="">Chicago</a>
+    
+    <a class="" href="https://spatial.ucr.edu" title="">UCR</a>
+    
+    <a class=" active" href="/posts/" title="Posts">Posts</a>
+    
+</nav>
+
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header>
+            <h1>Challenge in Science</h1>
+        </header>
+        <div class="content">
+            <p>I just finished attending the <a href="https://leicester.gisruk.org">2018 GIS Research UK conference</a> at Leicester University.</p>
+<p>I presented twice; once on some new methods in <a href="https://ljwolf.org/post/2018-gisruk">spatial clustering</a> and once for the <a href="http://ljwolf.org/post/cdrc-brexit/">CDRC brexit data analysis competition</a>. I had a really good time participating in the data analysis competition, and it struck a chord with me reflecting on quite a few conversations I&rsquo;ve had with my friend &amp; colleague <a href="https://twitter.com/tayloroshan">Taylor Oshan</a> and something <a href="https://geography.osu.edu/people/okelly.1">Morton O&rsquo;Kelly</a> said at this year&rsquo;s annual American Association of Geographers meeting.</p>
+<p>As graduate students, Taylor and I often talked about the debates in Geography during the 1980s &amp; early 90&rsquo;s over spatial structure in <a href="https://www.researchgate.net/profile/Daniel_Griffith3/publication/23536862_Explorations_into_the_Relationship_Between_Spatial_Structure_and_Spatial_Interaction/links/568562e708ae051f9af1deec/Explorations-into-the-Relationship-Between-Spatial-Structure-and-Spatial-Interaction.pdf">spatial interaction models</a>, the impact of <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/0004-5608.00211">geography on ecological inference methods</a>, or the debate about <a href="https://www.researchgate.net/publication/4791617_The_Relevance_of_Hendry's_Econometric_Methodology_Experimental_Simulation_Results_for_Linear_Spatial_Models">general-to-specific model specifications</a> in econometrics in the early 2000s.
+These were quite robust exchanges in the literature; they engaged with specific questions about what methods meant, how they were used, and whether they <em>actually</em> solved the problems they intended to or did what they purported to do.
+Indeed, well-heeled geographers still revere &amp; replicate the Hartshorne/Schaffer debate, even though that wasn&rsquo;t really a debate, and more of a single epistle exchange.</p>
+<p>I fully admit maybe both Taylor and I are exaggerating the interest and importance of the past&rsquo;s (apparently more) rigorous debate over core constructs in geography.</p>
+<h2 id="but-i-dont-think-we-are-exaggerating">But, I don&rsquo;t think we are exaggerating.</h2>
+<p>Take, for instance, the recent (nearly 20-year) scholarly debate about potential problems with multicollinearity in Geographically-Weighted techniques. After initial <a href="https://link.springer.com/content/pdf/10.1007/s10109-005-0155-6.pdf">results</a> spawn a plethora of <a href="https://link.springer.com/article/10.1007/s10109-016-0239-5">debunkings</a>, and just as many re-bunkings, I recently felt compelled to try to <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/gean.12147">add a new dimension to this debate</a>; focus more on what we can empirically expect from formal differences in estimators, and stop chasing the sometimes-realized-but-not-always-generalizable results from simulation experiments.</p>
+<p>I felt compelled to do this precisely because the debate is active, dynamic, interesting, and engaging; we&rsquo;re all talking about the same things, with the same theoretical underpinnings, but focused on different aspects of how those theoretical underpinnings either mesh or fail to.
+There is a large set of papers disagreeing with one another, providing scrutiny of methods, replications of quantitative geographic research, and sharing code/methods/data to ensure that <a href="https://docs.google.com/presentation/d/1yeRuh80ouxB8qr73M5zg2vBmviQij9YVWEccYOIsM1k/edit?usp=sharing">their horse is the fastest horse in the race.</a></p>
+<p>This is <em>more than</em> reproducible science; this is <strong>Contestible</strong> science.
+It means that:</p>
+<ol>
+<li>someone can understand what you did and what you&rsquo;re arguing. (Cogent science)</li>
+<li>they care enough to check whether what you&rsquo;re arguing is empirically true or false outside of your laptop. (Replicable science)</li>
+<li>they find that, for whatever reason, things that convinced you have not convinced them. (Controversial science)</li>
+<li>they challenge your conclusions or your results on these grounds (Contestible science)</li>
+</ol>
+<h2 id="replication-means-contestibility-means-critique-and-critique-hurts">Replication means contestibility means critique, and critique hurts.</h2>
+<p>This brings the brilliant question <a href="https://geography.osu.edu/people/okelly.1">Morton O&rsquo;Kelley</a> posed into view.
+In this vein, he asked (paraphrasing):</p>
+<blockquote>
+<p>Maybe the fact that we don&rsquo;t have many retractions/post-submission revisions in <a href="https://onlinelibrary.wiley.com/journal/15384632">Geographical Analysis</a> means no one is paying attention? What would it look like if people were contesting these results? How much of what we do is useful enough to even contest if it were replicable?</p>
+</blockquote>
+<p>Personally, I don&rsquo;t know.
+But, I do know that the few times I&rsquo;ve tried to replicate the frontier of quantitative geographic research, it&rsquo;s exceptionally difficult.
+In fact, I&rsquo;ve been cautioned by others in the field before to just avoid replication altogether, since that&rsquo;ll take so much more time and effort than publishing novel results.
+Thus, I believe we end up publishing past each other; having parallel conversations on nearly identical topics.
+Distinct conceptual and statistical challenges like those faced in the local models literature are often not as clearly defined or facilitated in other domains.
+This is partially because we are unable or unwilling to fully challenge each other&rsquo;s results, but also because doing so then singles out our own work for critique.
+It&rsquo;s so hard to replicate, we can&rsquo;t even get to pose meaningful challenges.</p>
+<p>Quantitative geographic research is difficult to replicate because there&rsquo;s no immediate benefit in replicating it &mdash; bummer for us, though: there are clear direct costs in replicating or challenging it, even if the science has clear grounds to pose controversy.
+If you find a bug in someone&rsquo;s code, it&rsquo;s embarrassing.
+If someone finds a bug in your code, it can make you feel panicky and insecure: <em>What else is wrong? are my results stable?</em></p>
+<p>Again, the higher profile <a href="https://www.newyorker.com/news/john-cassidy/thereinhart-and-rogoff-controversy-a-summing-up">Reinhart-Rogoff replication &amp; contestation</a> or the <a href="https://en.wikipedia.org/wiki/When_contact_changes_minds">Lacour fakery</a> are great examples.
+For much of the less publicly political research, there is no direct incentive to challenge in this manner, so Morton&rsquo;s probably right: we don&rsquo;t retract because, by &amp; large, we don&rsquo;t challenge.
+Stakes are low, political incentives lax, personal inertia great, and reputational risk high.
+Thus, the oft-suggested model of effective science, that renown and resource follows those who overturn bad/old knowledge, meets a morass of weak incentives and the inherently (small-c) conservative character of academic practice.</p>
+<p>Other than assignations of intrinsic moral good, it&rsquo;s not really clear why <em>science ought be replicable</em> when thinking locally, since that means subjecting yourself &amp; someone else (who you might know or like) to potential grievous critique.
+I see this in my students in the UK more than I ever expected: trepidation about challenging things for fear of blowing your own spot.<br>
+<a href="https://en.wikipedia.org/wiki/Asch_conformity_experiments">I guess those lines really are the same length.</a>
+Despite the fact that public replicable research has overwhelming benefits, this incentive structure is the one visible when thinking about your next deadline (or the one you&rsquo;ve just missed).
+Our culture needs to change and, if there&rsquo;s one thing the replicability crisis in some corners of science demonstrates, it&rsquo;s that challenge brings clarity, sharpens our ineffective or inefficient interpretations of results, and forces us to think in the somewhat unnatural and cumbersome patterns of more rigorous reasoning.</p>
+<h2 id="reproducibility-as-praxis-competition-as-the-engine-of-science">Reproducibility as praxis; competition as the engine of science.</h2>
+<p>This is where I see more competition-driven models of science as super beneficial for our field.
+Like <a href="https://en.wikipedia.org/wiki/Hilbert%27s_program">Hilbert&rsquo;s Program</a> or the <a href="http://www.claymath.org/millennium-problems">Millenium problems</a>, focusing attention onto specific, identifiable common problems in a field and incentivizing their solution through reputation or modest financial gains is a great way to help tie together academic conversations.
+The benefits of these kinds of competitions/challenge programs is that they <em>force</em> us to consider similar/identical problems, speak on common datasets, and actually <strong>engage with each others&rsquo; research!</strong>
+While it&rsquo;s sometimes difficult to frame these questions in sufficiently precise statements as to make them answerable, this is the point of setting collective research agendas.
+The broader quant geographic community may benefit from these kinds of exercises.
+Personally, it was so stimulating to attend the GISRUK CDRC data challenge and see three other groups of people use totally different methods to solve a similar problem on the same data as what I did; their perspectives both helped me deepen my own understanding of <em>why I did what I did</em>, and helped me understand how I might do something differently in the future.</p>
+<h2 id="existing-pseudocompetitive-modes-are-not-enough">Existing pseudocompetitive modes are not enough.</h2>
+<h4 id="peer-review">Peer Review</h4>
+<p>Ideally, this style of replication &amp; challenge might be done in peer review.
+Indeed, theoretically, we blind reviewers so that they feel safe enough to challenge.
+Unfortunately, we also currently tie their hands.
+While peer review is not replication (nor should it be), how is peer review effective when one can only engage with the work in a very limited way?
+Reviewers are often not able to directly access the data or code; without this the mechanisms by which work can really be challenged are curtailed.</p>
+<p>Thus, reviewers often must resort to superficial challenges (&ldquo;That&rsquo;s not how I would&rsquo;ve done it.&quot;) contextual challenges (&ldquo;This is useful, but somehow inapt in this specific case.&quot;), or conceptual challenges (&ldquo;The premise of the analysis is fundamentally flawed.&quot;).
+Unless the reviewer also happens to have access to (and knowledge of how to use) shared scientific libraries code (or is in possession of their own secret stash), practical challenge (&ldquo;This conclusion is empirically flawed.&quot;) is impossible.
+This is not robust.</p>
+<p>In contrast to peer review, data competitions &amp; challenge-lead research levels the playing field and clarifies the objectives for review and engagement.
+Instead of the onus being on the author to provide data to source the claims, the facilitator of the competition provides the data.
+This makes the practical challenge possible, providing specific, useful critiques about data analysis, interpretation, or presentation.
+In competitions &amp; challenges, the person who provides the data or the agenda (ideally) has no specific interest in ensuring a given entrant will be successful.
+While the three types of challenge from peer review are still available, the possibility of practical challenge means contextual or conceptual challenges are emboldened: the reviewer has empirical proof of their claims of inapplicability or conceptual error.
+The current way, where data is provided by the author being reviewed, there is incentive for deception, delay, stalling, stonewalling&hellip; essentially anything you might read about in the fallout from the <a href="https://www.theguardian.com/science/head-quarters/2017/mar/02/fresh-concerns-raised-over-academic-conduct-of-major-us-nutrition-and-behaviour-lab">Cornell food lab</a>.</p>
+<h4 id="the-special-issuefestscrift">The Special Issue/Festscrift</h4>
+<p>It&rsquo;s also plausible to think this can be handled in special issues or festschrifts.
+However, there again peer review is unable to provide adequate checks on the research.
+And, further, the increasing rapidity and volume of academic publishing means that somewhere, your special issue is happening.</p>
+<p>Routine special issues are not special issues at all; instead they reflect a strategy common among popular periodicals.
+There, themed issues contain many entries tied together through a common topical focus.
+There may be no overarching theoretical or conceptual unity beyond the topic of the special issue or the festschrift, and there is often no coherence on the datasets analyzed or methods used.
+Indeed, work that was <em>too</em> similar probably would not garner enough readers.</p>
+<p>Special issues and festschrifts get us closer to what competition &amp; challenge-driven programs provide, but they are not enough by themselves.
+They should aim to be stronger on the vision &amp; agenda; doing so may reduce the breadth of contribution or participation initially, but will also heighten attention to precisely-posed common problems in the short run.
+If <em>these</em> are fundamental, they will continue to attract attention, and the search for solutions or mitigations takes the characteristics of challenge-driven research.
+Thus, these share the agenda-setting aspect, but leave the competitiveness latent.</p>
+<h2 id="competition-its-not-about-the-win-its-about-the-game">Competition: it&rsquo;s not about the win, it&rsquo;s about the game.</h2>
+<p>One thing that&rsquo;s reaching common consideration in <a href="https://blog.oup.com/2014/09/pro-con-research-preregistration/">Political Science is the concept of preregistration.</a>
+While I don&rsquo;t know if preregistration is sufficient (nor applicable) to tie together our too-diffuse conversation in quantitative geography, I think that these kinds of challenges focus attention and energy in a way similar to preregistration for special issues.
+The point of holding data competition or posing research program questions is to unify, clarify, and motivate research along specific, common paths.
+It&rsquo;s a form of academic agenda-setting; leadership, if you will.</p>
+<p>Announcing intent to do an analysis, having that intent be selected by your peers to pursue, then conducting the analysis and delivering the exact results you promised to allows the facilitators of the competitions to act as mediators for the conversation.
+Data challenges &amp; challenge-driven research draw the discipline together a bit more tightly than special issues &amp; broad symposia, since they directly incentivize us to focus: we ask common questions, conduct similar analyses on centrally-provided datasets in pursuit of common answers.
+Efficiency, comparability, and knowledge production is clear and easy to integrate into the disciplinary discussion more broadly.
+Plus, as those past literature debates show, some amount of friction is necessary to hone your points.
+While I&rsquo;ve often heard working with academics as described as herding cats, they <a href="https://www.youtube.com/watch?v=9EYZnSXEla0">all tend to come running when the treats come out</a>.</p>
+<p>So, I&rsquo;ll be pulling where I can, however I can to arrange, develop, or participate in these kinds of announced challenges, competitions, or collaborative challenge-driven research events.</p>
+
+        </div>
+        <div class="article-info">
+    
+        <div class="article-date">2018-04-20</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>© 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

@@ -3,12 +3,12 @@
   <channel>
     <title> api on Yet Another Geographer</title>
     <link>/tags/api/</link>
-    <description>Recent content in  api on Yet Another Geographer</description>
+    <description>Yet Another Geographer ( api)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 11 Jun 2015 15:58:41 +0000</lastBuildDate>
     
-	<atom:link href="/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,15 @@
       <pubDate>Thu, 11 Jun 2015 15:58:41 +0000</pubDate>
       
       <guid>/cenpy-is-now-pip-installable/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/121293267709/cenpy-is-now-pip-installable&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -26,7 +34,12 @@
       <pubDate>Fri, 05 Jun 2015 18:01:54 +0000</pubDate>
       
       <guid>/cenpy-an-exploratory-interface-to-the-census/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/120805077929/cenpy-an-exploratory-interface-to-the-census&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

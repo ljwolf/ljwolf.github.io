@@ -3,12 +3,12 @@
   <channel>
     <title> computation on Yet Another Geographer</title>
     <link>/tags/computation/</link>
-    <description>Recent content in  computation on Yet Another Geographer</description>
+    <description>Yet Another Geographer ( computation)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 07 Oct 2016 20:09:36 +0000</lastBuildDate>
     
-	<atom:link href="/tags/computation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/computation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,9 @@
       <pubDate>Fri, 07 Oct 2016 20:09:36 +0000</pubDate>
       
       <guid>/how-one-weird-trick-helps-you-evaluate-correlated/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/151491815214/how-one-weird-trick-helps-you-evaluate-correlated&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -26,7 +28,9 @@
       <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
       
       <guid>/initialization/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/75352899950/initialization&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

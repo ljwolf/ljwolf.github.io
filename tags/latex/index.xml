@@ -3,12 +3,12 @@
   <channel>
     <title>latex on Yet Another Geographer</title>
     <link>/tags/latex/</link>
-    <description>Recent content in latex on Yet Another Geographer</description>
+    <description>Yet Another Geographer (latex)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 05 Mar 2014 04:14:20 +0000</lastBuildDate>
     
-	<atom:link href="/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,10 @@
       <pubDate>Wed, 05 Mar 2014 04:14:20 +0000</pubDate>
       
       <guid>/modified-an-existing-asu-beamer-template/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/78635674299/modified-an-existing-asu-beamer-template&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

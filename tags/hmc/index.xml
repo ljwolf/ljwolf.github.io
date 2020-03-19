@@ -3,12 +3,12 @@
   <channel>
     <title> hmc on Yet Another Geographer</title>
     <link>/tags/hmc/</link>
-    <description>Recent content in  hmc on Yet Another Geographer</description>
+    <description>Yet Another Geographer ( hmc)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 24 Mar 2017 15:52:55 +0000</lastBuildDate>
     
-	<atom:link href="/tags/hmc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/hmc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,9 @@
       <pubDate>Fri, 24 Mar 2017 15:52:55 +0000</pubDate>
       
       <guid>/spatial-econometric-hmc-in-python/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/158786021349/spatial-econometric-hmc-in-python&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -3,12 +3,12 @@
   <channel>
     <title> cli on Yet Another Geographer</title>
     <link>/tags/cli/</link>
-    <description>Recent content in  cli on Yet Another Geographer</description>
+    <description>Yet Another Geographer ( cli)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 10 Oct 2016 19:25:04 +0000</lastBuildDate>
     
-	<atom:link href="/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,11 @@
       <pubDate>Mon, 10 Oct 2016 19:25:04 +0000</pubDate>
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
-      <description>images directly in the terminal! no fuss! although you have to use a special terminal emulator&amp;hellip;
-imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;images directly in the terminal! no fuss! although you have to use a special terminal emulator&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/151632705649/every-time-i-use-a-sixel-based-library-it-just&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

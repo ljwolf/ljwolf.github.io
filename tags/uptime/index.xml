@@ -3,12 +3,12 @@
   <channel>
     <title>uptime on Yet Another Geographer</title>
     <link>/tags/uptime/</link>
-    <description>Recent content in uptime on Yet Another Geographer</description>
+    <description>Yet Another Geographer (uptime)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 16 Mar 2017 01:12:41 +0000</lastBuildDate>
     
-	<atom:link href="/tags/uptime/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/uptime/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,10 @@
       <pubDate>Thu, 16 Mar 2017 01:12:41 +0000</pubDate>
       
       <guid>/is-my-uptime-excited-or-scared-you-decide/</guid>
-      <description>you decide.
-imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;you decide.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/158464131179/is-my-uptime-excited-or-scared-you-decide&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

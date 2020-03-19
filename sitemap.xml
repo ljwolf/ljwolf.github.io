@@ -3,97 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/</loc>
+    <loc>/posts/</loc>
     <lastmod>2020-03-09T12:02:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2020-sm2-lectures/</loc>
+    <loc>/posts/2020-sm2-lectures/</loc>
     <lastmod>2020-03-09T12:02:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/20200208-jan-feb-talks/</loc>
+    <loc>/posts/20200208-jan-feb-talks/</loc>
     <lastmod>2020-02-08T10:07:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/columbia-gsapp-series/</loc>
+    <loc>/posts/columbia-gsapp-series/</loc>
     <lastmod>2019-11-17T15:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/disabling/</loc>
+    <loc>/posts/disabling/</loc>
     <lastmod>2019-09-19T09:48:35+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/qestival/</loc>
+    <loc>/posts/qestival/</loc>
     <lastmod>2019-09-10T15:51:29+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/deepwork/</loc>
+    <loc>/posts/deepwork/</loc>
     <lastmod>2019-07-24T13:19:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/opencode/</loc>
+    <loc>/posts/opencode/</loc>
     <lastmod>2019-07-15T01:46:40+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/email-charter/</loc>
+    <loc>/posts/email-charter/</loc>
     <lastmod>2019-06-17T14:13:14+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/cenpy-1-0/</loc>
+    <loc>/posts/cenpy-1-0/</loc>
     <lastmod>2019-04-08T12:44:33+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/crunchtober/</loc>
+    <loc>/posts/crunchtober/</loc>
     <lastmod>2018-10-24T23:25:12+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/whose_fixed/</loc>
+    <loc>/posts/whose_fixed/</loc>
     <lastmod>2018-09-13T15:25:50+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/geometry/</loc>
+    <loc>/posts/geometry/</loc>
     <lastmod>2018-07-30T09:48:17-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/testingmatrix/</loc>
+    <loc>/posts/testingmatrix/</loc>
     <lastmod>2018-07-24T13:52:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/perftesting/</loc>
+    <loc>/posts/perftesting/</loc>
     <lastmod>2018-07-24T11:30:20-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/teaching/ephemera/</loc>
-    <lastmod>2018-04-24T14:13:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/teaching/</loc>
-    <lastmod>2018-04-24T14:13:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/challenge/</loc>
+    <loc>/posts/challenge/</loc>
     <lastmod>2018-04-20T16:54:18+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/cdrc-brexit/</loc>
+    <loc>/posts/cdrc-brexit/</loc>
     <lastmod>2018-04-18T01:46:46+01:00</lastmod>
   </url>
   
@@ -123,7 +113,7 @@
   </url>
   
   <url>
-    <loc>/post/2018-gisruk/</loc>
+    <loc>/posts/2018-gisruk/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
   </url>
   
@@ -143,7 +133,7 @@
   </url>
   
   <url>
-    <loc>/post/mpl-is-just-fine/</loc>
+    <loc>/posts/mpl-is-just-fine/</loc>
     <lastmod>2018-03-18T22:02:05+00:00</lastmod>
   </url>
   
@@ -153,7 +143,7 @@
   </url>
   
   <url>
-    <loc>/post/annoscatter/</loc>
+    <loc>/posts/annoscatter/</loc>
     <lastmod>2018-03-12T23:52:32+00:00</lastmod>
   </url>
   
@@ -178,7 +168,7 @@
   </url>
   
   <url>
-    <loc>/post/spatial_acf/</loc>
+    <loc>/posts/spatial_acf/</loc>
     <lastmod>2018-03-09T17:34:20+00:00</lastmod>
   </url>
   
@@ -253,12 +243,12 @@
   </url>
   
   <url>
-    <loc>/post/hodges-reich-sar/</loc>
+    <loc>/posts/hodges-reich-sar/</loc>
     <lastmod>2018-02-24T15:32:22+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/does-projection-matter/</loc>
+    <loc>/posts/does-projection-matter/</loc>
     <lastmod>2018-02-18T12:40:00+00:00</lastmod>
   </url>
   

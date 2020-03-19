@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling  - Yet Another Geographer</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/favicon.png">
+
+<link rel="stylesheet" href="/css/style.css?rnd=1584633829" />
+
+<meta property="og:title" content="Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling" />
+<meta property="og:description" content="For an intro &amp; discussion of some of hte fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
+Logistics Courses start at 11AM on the date listed. The &ldquo;Join Remotely&rdquo; links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).
+Plotting &amp; spatial relationships in R (notebook)
+This practical/component will cover some of the fundamental concepts in quantitative geography, such as:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/2020-sm2-lectures/" />
+<meta property="article:published_time" content="2020-03-09T12:02:47+00:00" />
+<meta property="article:modified_time" content="2020-03-09T12:02:47+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling"/>
+<meta name="twitter:description" content="For an intro &amp; discussion of some of hte fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
+Logistics Courses start at 11AM on the date listed. The &ldquo;Join Remotely&rdquo; links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).
+Plotting &amp; spatial relationships in R (notebook)
+This practical/component will cover some of the fundamental concepts in quantitative geography, such as:"/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Yet Another Geographer</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">About</a>
+    
+    <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">Vitae</a>
+    
+    <a class="" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html" title="">Bristol</a>
+    
+    <a class="" href="https://spatial.uchicago.edu" title="">Chicago</a>
+    
+    <a class="" href="https://spatial.ucr.edu" title="">UCR</a>
+    
+    <a class=" active" href="/posts/" title="Posts">Posts</a>
+    
+</nav>
+
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header>
+            <h1>Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling</h1>
+        </header>
+        <div class="content">
+            <p>For an intro &amp; discussion of some of hte fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.</p>
+<h2 id="logistics">Logistics</h2>
+<p>Courses start at 11AM on the date listed. The &ldquo;Join Remotely&rdquo; links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).</p>
+<h2 id="plotting--spatial-relationships-in-r">Plotting &amp; spatial relationships in R</h2>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-00.html">notebook</a>)</p>
+<p>This practical/component will cover some of the fundamental concepts in quantitative geography, such as:</p>
+<ul>
+<li>theoretical and empirical properties of relationships between geographic objects</li>
+<li>how to compute &amp; use these relationships in R</li>
+<li>what kernel functions/distance decay is</li>
+<li>how to make focused maps &amp; use spatial relationships to make better maps in R</li>
+</ul>
+<h2 id="testing-toblers-law">Testing Tobler&rsquo;s Law</h2>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-01.html">notebook</a>, <a href="https://eu.bbcollab.com/guest/7b2caddfd9f64dd09986e5272d83bdbf">join remotely</a>)</p>
+<blockquote>
+<p>Everything is related to everything else, but near things are more related than distant things.</p>
+</blockquote>
+<p>In this practical, we’ll be using the previous practical’s information about spatial relationships, functions, and modelling to understand the spatial structure of deprivation in Bristol. We’ll only be doing exploratory spatial data analysis this time, with an eye to doing some more advanced modelling in the weeks ahead.</p>
+<p>Our main interest for this practical will be to examine a few questions</p>
+<ol>
+<li>Is deprivation clustered in Bristol?</li>
+<li>Where are the clusters of deprivation in Bristol?</li>
+<li>At what scale does deprivation cluster in Bristol (very local, ward-level, or regionally?)</li>
+</ol>
+<h3 id="extra-local-statistics-finding-the-uniqueness-in-all-of-us">Extra: Local Statistics: finding the uniqueness in all of us</h3>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-02.html">notebook</a>)</p>
+<p>Today, we’re going to look at local spatial autocorrelation. Like a kind of outlier diagnostic, local spatial autocorrelation measures how the local structure of a spatial relationship around each site either conforms to what we expect or is different from what we expect. Together, local spatial statistics are a general branch of statistics tha aim to characterize the relationship between a single observation and the sites surrounding it.</p>
+<p>Often, local spatial autocorrelation is contrasted with global spatial autocorrelation, which is the structural relationship between sites (in abstract) and their surroundings (again, in abstract), and this may have strongly different structure for many of the ways we think about the &ldquo;surroundings&rdquo; of each observation. Thus, local statistics are an attempt at measuring the geographical beahvior of a given social, physical, or behaviorial process around each observation.</p>
+<h2 id="spatial-thinking-in-models">Spatial thinking in models</h2>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-03.html">notebook</a>, <a href="https://eu.bbcollab.com/guest/a28e74b3950e4118a496a5509e005cbe">join remotely</a>)</p>
+<p>To this point in Spatial Modelling (I or II), we’ve really primarily dealt with regression models about spatial data. We have not really examined or understood how spatial structures or relationships themselves must be modeled. In the Regression module, we did talk a little bit about spatial fixed effects, which allow for there to be different mean/baselines in each area. In this component, we&rsquo;ll talk a little bit about spatial models, how they work, and why they are used.</p>
+
+        </div>
+        <div class="article-info">
+    
+        <div class="article-date">2020-03-09</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>© 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

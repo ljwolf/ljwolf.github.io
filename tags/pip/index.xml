@@ -3,12 +3,12 @@
   <channel>
     <title>pip on Yet Another Geographer</title>
     <link>/tags/pip/</link>
-    <description>Recent content in pip on Yet Another Geographer</description>
+    <description>Yet Another Geographer (pip)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 23 May 2015 14:33:14 +0000</lastBuildDate>
     
-	<atom:link href="/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/pip/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,10 @@
       <pubDate>Sat, 23 May 2015 14:33:14 +0000</pubDate>
       
       <guid>/heads-up-pip-bug/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/119697266474/heads-up-pip-bug&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

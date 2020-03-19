@@ -3,22 +3,26 @@
   <channel>
     <title>2018 on Yet Another Geographer</title>
     <link>/tags/2018/</link>
-    <description>Recent content in 2018 on Yet Another Geographer</description>
+    <description>Yet Another Geographer (2018)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 04 Apr 2018 02:20:45 +0100</lastBuildDate>
     
-	<atom:link href="/tags/2018/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/2018/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GISRUK II: Spatially-Encouraged Spectral Clustering</title>
-      <link>/post/2018-gisruk/</link>
+      <link>/posts/2018-gisruk/</link>
       <pubDate>Wed, 04 Apr 2018 02:20:45 +0100</pubDate>
       
-      <guid>/post/2018-gisruk/</guid>
-      <description>This paper culminates a bit of work I&amp;rsquo;ve started on since seeing a talk by Phil Chodrow on a paper that eventually became his quite interesting NAS paper paper on segregation and entropy surfaces.
-I was intrigued by the prospect of using spectral clustering for constrained clustering problems. Specifically, I&amp;rsquo;d known that affinity matrix clustering could be adapted to constrained contexts ever since reading about hierarchical ward clustering, but I hadn&amp;rsquo;t seen a really convincing method that showed me how I could work this out for a general affinity-matrix clustering method.</description>
+      <guid>/posts/2018-gisruk/</guid>
+      <description>&lt;p&gt;This paper culminates a bit of work I&amp;rsquo;ve started on since seeing a talk by &lt;a href=&#34;https://philchodrow.github.io/&#34;&gt;Phil Chodrow&lt;/a&gt; on a paper that eventually became his quite interesting &lt;a href=&#34;https://philchodrow.github.io/publication/structure-segregation-pub/&#34;&gt;NAS paper&lt;/a&gt; paper on segregation and entropy surfaces.&lt;/p&gt;
+&lt;p&gt;I was intrigued by the prospect of using spectral clustering for constrained clustering problems. Specifically, I&amp;rsquo;d known that affinity matrix clustering could be adapted to constrained contexts ever since reading about hierarchical ward clustering, but I hadn&amp;rsquo;t seen a really convincing method that showed me how I could work this out for a general affinity-matrix clustering method.&lt;/p&gt;
+&lt;p&gt;In this paper, I present one, what I call &amp;ldquo;Spatially-Encouraged Spectral Clustering.&amp;rdquo; It&amp;rsquo;s a clustering method that allows you to mix the relevance of spatial and attribute information. However, unlike some of the other methods that do this combination, my method recognizes that clusterings on the combination of these two kernels (spatial and attribute) will be sensitive to the structure of the two kernels themselves. The kernels can be regularized, but it still does not imply that the resulting combination will be well-behaved as a function of either kernel bandwidth parameters. I show that in this paper.&lt;/p&gt;
+&lt;p&gt;Thus, I recognize this technique is really a generalization/extension of another paper on constrained spectral clustering that I feel doesn&amp;rsquo;t pay significant attention to the fact that both kernels matter. This makes it a &amp;ldquo;critical revision&amp;rdquo; of Yuan et al&amp;rsquo;s work.&lt;/p&gt;
+&lt;p&gt;The paper is hosted &lt;a href=&#34;https://osf.io/yzt2p/&#34;&gt;here&lt;/a&gt;, as well as &lt;a href=&#34;papers/2018_gisruk.zip&#34;&gt;code to conduct similar analyses and an example&lt;/a&gt; or a &lt;a href=&#34;https://github.com/ljwolf/spenc&#34;&gt;github repository&lt;/a&gt; with installation directions &amp;amp; an issue tracker. The presentation I&amp;rsquo;m giving is &lt;a href=&#34;https://docs.google.com/presentation/d/1ckON-x9zyi6XYDr0R-lnEDONdPwv4A4lgQCfrqDUh-I/edit?usp=sharing&#34;&gt;here on google slides&lt;/a&gt; (&lt;a href=&#34;wolf_gisruk2018_spenc.pdf&#34;&gt;static&lt;/a&gt;), commenting is encouraged!&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Mpl Is Just Fine  - Yet Another Geographer</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/favicon.png">
+
+<link rel="stylesheet" href="/css/style.css?rnd=1584633829" />
+
+<meta property="og:title" content="Mpl Is Just Fine" />
+<meta property="og:description" content="I&rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&rsquo;m still learning things that exist within the pylab interface&hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/mpl-is-just-fine/" />
+<meta property="article:published_time" content="2018-03-18T22:02:05+00:00" />
+<meta property="article:modified_time" content="2018-03-18T22:02:05+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mpl Is Just Fine"/>
+<meta name="twitter:description" content="I&rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&rsquo;m still learning things that exist within the pylab interface&hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Yet Another Geographer</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">About</a>
+    
+    <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">Vitae</a>
+    
+    <a class="" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html" title="">Bristol</a>
+    
+    <a class="" href="https://spatial.uchicago.edu" title="">Chicago</a>
+    
+    <a class="" href="https://spatial.ucr.edu" title="">UCR</a>
+    
+    <a class=" active" href="/posts/" title="Posts">Posts</a>
+    
+</nav>
+
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header>
+            <h1>Mpl Is Just Fine</h1>
+        </header>
+        <div class="content">
+            <p>I&rsquo;ve been using matplotlib for nearly 5 years at least once a week.
+I&rsquo;m still learning things that exist within the <code>pylab</code> interface&hellip; not the most ideal UX.
+For instance, I just learned about <code>plt.axvline</code>, which I could use
+to draw vertical lines in my code instead of what I usually use, <code>plt.vlines(coordinate_list, *plt.gca().get_ylim())</code>,
+but it&rsquo;s not as general as <code>plt.vlines</code> since it actually plots a rectangle.
+Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier.</p>
+<p>The fact that there&rsquo;s also no <code>abline</code> still gets to me, too, when I step back from it.</p>
+<p>I wonder if you could make it &ldquo;better&rdquo; by making a better API that focuses on the UX,
+adding a bit more semanic structure/nesting to the <code>pyplot</code> api that users could understand.</p>
+<p>CLI UX is really hard, especially for cases where you can&rsquo;t pipe, but you can nest.</p>
+
+        </div>
+        <div class="article-info">
+    
+        <div class="article-date">2018-03-18</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>© 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

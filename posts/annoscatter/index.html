@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Annoscatter  - Yet Another Geographer</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/favicon.png">
+
+<link rel="stylesheet" href="/css/style.css?rnd=1584633829" />
+
+<meta property="og:title" content="Annoscatter" />
+<meta property="og:description" content="I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like annoscatter(df." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/annoscatter/" />
+<meta property="article:published_time" content="2018-03-12T23:52:32+00:00" />
+<meta property="article:modified_time" content="2018-03-12T23:52:32+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Annoscatter"/>
+<meta name="twitter:description" content="I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like annoscatter(df."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Yet Another Geographer</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">About</a>
+    
+    <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">Vitae</a>
+    
+    <a class="" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html" title="">Bristol</a>
+    
+    <a class="" href="https://spatial.uchicago.edu" title="">Chicago</a>
+    
+    <a class="" href="https://spatial.ucr.edu" title="">UCR</a>
+    
+    <a class=" active" href="/posts/" title="Posts">Posts</a>
+    
+</nav>
+
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header>
+            <h1>Annoscatter</h1>
+        </header>
+        <div class="content">
+            <p>I found this function super useful in my dissertation and more generally in my work. What it does is take <code>x</code>,<code>y</code> coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like <code>annoscatter(df.year, df.leverage, df.district_id)</code>.</p>
+<p><img src="images/annoscatter.png" alt="annoscatter"></p>
+<p>Not sure if there&rsquo;s a more elegant solution to this using matplotlib, but I really like how it looks, especially since there&rsquo;s also passthrough keyword dictionaries implemented like seaborn. Not sure if <a href="https://github.com/mwaskom">@mwaskom</a> would take a PR for something as simple as this, though.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">annoscatter</span>(x,y, text, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>, markersize<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, 
+                ax <span style="color:#f92672">=</span> None, fig <span style="color:#f92672">=</span> None, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;k&#39;</span>,
+                fig_kw <span style="color:#f92672">=</span> dict(), 
+                scatter_kw <span style="color:#f92672">=</span> dict(), ann_kw<span style="color:#f92672">=</span>dict()):
+    <span style="color:#66d9ef">if</span> ax <span style="color:#f92672">is</span> None:
+        <span style="color:#66d9ef">if</span> fig <span style="color:#f92672">is</span> None:
+            fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(<span style="color:#f92672">**</span>fig_kw)
+        ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>gca()
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (marker <span style="color:#f92672">is</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">or</span> markersize <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
+        scatter_kw[<span style="color:#e6db74">&#39;marker&#39;</span>] <span style="color:#f92672">=</span> marker
+        scatter_kw[<span style="color:#e6db74">&#39;s&#39;</span>] <span style="color:#f92672">=</span> markersize
+        ax<span style="color:#f92672">.</span>scatter(x,y, <span style="color:#f92672">**</span>scatter_kw)
+    <span style="color:#66d9ef">else</span>:
+        scatter_kw[<span style="color:#e6db74">&#39;alpha&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        ax<span style="color:#f92672">.</span>scatter(x,y,<span style="color:#f92672">**</span>scatter_kw)
+    <span style="color:#66d9ef">if</span> isinstance(color, str):
+        colors <span style="color:#f92672">=</span> [color]<span style="color:#f92672">*</span>len(x)
+    <span style="color:#66d9ef">else</span>:
+        colors <span style="color:#f92672">=</span> list(color)
+    <span style="color:#66d9ef">for</span> xi,yi,string,c <span style="color:#f92672">in</span> zip(x,y,text,colors):
+        ax<span style="color:#f92672">.</span>annotate(s<span style="color:#f92672">=</span>string, xy<span style="color:#f92672">=</span>(xi,yi), color<span style="color:#f92672">=</span>c, <span style="color:#f92672">**</span>ann_kw)
+    <span style="color:#66d9ef">return</span> ax
+</code></pre></div>
+        </div>
+        <div class="article-info">
+    
+        <div class="article-date">2018-03-12</div>
+    
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="/tags/python">#python</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>© 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

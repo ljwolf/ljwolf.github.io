@@ -3,11 +3,11 @@
   <channel>
     <title>Categories on Yet Another Geographer</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Yet Another Geographer</description>
+    <description>Yet Another Geographer (Categories)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

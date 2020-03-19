@@ -3,12 +3,12 @@
   <channel>
     <title> nerves on Yet Another Geographer</title>
     <link>/tags/nerves/</link>
-    <description>Recent content in  nerves on Yet Another Geographer</description>
+    <description>Yet Another Geographer ( nerves)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 04 Feb 2014 02:31:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/nerves/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/nerves/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,9 @@
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/75570984570/just-shipped-my-first-draft-off-deadlined-march&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
