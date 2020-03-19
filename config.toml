@@ -3,8 +3,8 @@ title = "Yet Another Geographer"
 copyright = ""
 languageCode = "en-US"
 canonifyurls = true
-paginate = 3
-theme = "dusk"
+paginate = 10
+theme = "anubis"
 
 googleAnalytics = ""
 disqusShortname = ""
@@ -29,37 +29,37 @@ pygmentsCodeFences = true
 #  url = "/tags/"
 
 [[menu.main]]
-    name = "About | "
-    weight = -200
+    name = "About"
+    weight = 1
     identifier = "about"
     url = "/about/"
 
 [[menu.main]]
-    name = " CV |  "
-    weight = -190
+    name = "Vitae"
+    weight = 2
     identifier = "cv"
     url = "https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"
 
 [[menu.main]]
-    name = " Bristol |  "
-    weight = -180
+    name = "Bristol"
+    weight = 3
     identifier = "brizzle"
     url = "http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"
 
 [[menu.main]]
-    name = " Chicago |  "
-    weight = -170
+    name = "Chicago"
+    weight = 4
     identifier = "uchicago"
     url = "https://spatial.uchicago.edu"
 
 [[menu.main]]
-    name = " UCR |  "
-    weight = -160
+    name = "UCR"
+    weight = 5
     identifier = "ucr"
     url = "https://spatial.ucr.edu"
 
 #[[menu.main]]
-#    name = " Teaching |  "
+#    name = "Teaching"
 #    weight = -150
 #    identifier = "teaching"
 #    url = "/teaching/"
@@ -73,9 +73,9 @@ pygmentsCodeFences = true
 
 [params]
   email = "levi.john.wolf@gmail.com"
-  github = "ljwolf"
+  github = "https://github.com/ljwolf"
   #gitlab = "gitlab id"
-  twitter = "levijohnwolf"
+  twitter = "https://twitter.com/levijohnwolf"
   job = "https://bristol.ac.uk/geography/"
   #linkedin = "linkedin id"
 
