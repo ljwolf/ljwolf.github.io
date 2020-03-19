@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Uscb on Yet Another Geographer</title>
+    <title> uscb on Yet Another Geographer</title>
     <link>/tags/uscb/</link>
-    <description>Recent content in Uscb on Yet Another Geographer</description>
+    <description>Recent content in  uscb on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 27 Jul 2015 18:54:01 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
-      <description>Simply amazing.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Tue, 16 Jun 2015 15:27:27 +0000</pubDate>
       
       <guid>/cenpy-big-query/</guid>
-      <description>If you’ve been using my tools for census data exploration, as intensely as I&amp;rsquo;d hope you have, you might’ve noticed that the Census limits queries to 50 columns per query.
-I’ve got your back, though. The newest release, cenpy 0.7, now supports n-column queries by chunking through 50-coulumns at a time. Be careful, though, as I&amp;rsquo;m sure if you pull down the entire Census 2010 short form in one go, you will probably get rate limited.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

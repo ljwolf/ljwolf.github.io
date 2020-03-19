@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Wrangling on Yet Another Geographer</title>
+    <title> data wrangling on Yet Another Geographer</title>
     <link>/tags/data-wrangling/</link>
-    <description>Recent content in Data Wrangling on Yet Another Geographer</description>
+    <description>Recent content in  data wrangling on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 22 Aug 2014 19:55:00 +0000</lastBuildDate>
@@ -17,9 +17,7 @@
       <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
       
       <guid>/so-say-youre-working-with-two-states/</guid>
-      <description>Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
- ERROR: Some $VOTE values not in [0,1] interval.
- So, I did what the reasonable person who is used to using float() would do and just as.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

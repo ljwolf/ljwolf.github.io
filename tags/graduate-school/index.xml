@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Graduate School on Yet Another Geographer</title>
+    <title> graduate school on Yet Another Geographer</title>
     <link>/tags/graduate-school/</link>
-    <description>Recent content in Graduate School on Yet Another Geographer</description>
+    <description>Recent content in  graduate school on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 05 Jan 2017 19:27:59 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 05 Jan 2017 19:27:59 +0000</pubDate>
       
       <guid>/an-update-on-phd-burnout/</guid>
-      <description>After writing briefly about burnout in July, when I had done a Google Summer of Code while working as a Research Assistant on a grant about spatial multilevel modeling, I was super burnt out. Now, I’d like to safely say, while I’m still stressed and spread too thin over too many projects, I don’t feel burnt out any longer. The main thing I realized is the importance of switching into “write-only” mode.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -26,9 +26,7 @@
       <pubDate>Mon, 03 Mar 2014 01:34:50 +0000</pubDate>
       
       <guid>/welcome-week-tips/</guid>
-      <description>So, having just completed our welcome weekend for prospective Ph.D. students, I think I might have suggestions for anyone going to one in the future.
-1. Try to have fun. It can be a wild, stressful, busy few days. But, above all, you should be trying to figure how much you like the people you&amp;rsquo;re with.
-2. Balance breadth and depth. Yes, you may want to work with only a few people, but departments are communities.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -37,9 +35,7 @@
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
-2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -48,8 +44,7 @@
       <pubDate>Thu, 06 Feb 2014 02:48:16 +0000</pubDate>
       
       <guid>/time-management-or-fortitude/</guid>
-      <description>Sometimes, graduate school seems like it&amp;rsquo;s less about time management than it is about fortitude.
-The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;rsquo;ve been so busy, though, had I decided not to go to a concert I really had wanted to go to. So, I stuck out an amazing show, turned around after PBR and punk rock, and banged out 1000 words, a presentation, a proposal draft, took three classes, gave two presentations, and spent 5 hours formalizing an algorithm for a draft due Friday.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -58,7 +53,7 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -67,7 +62,7 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
       <pubDate>Mon, 03 Feb 2014 14:00:00 +0000</pubDate>
       
       <guid>/on-perpsective/</guid>
-      <description>Trying to express an area of specialization is surprisingly difficult. But, these exercises in perspective-stretching are important to realize the limits to both your knowledge and the knowledge at the frontier of research. When intently focused on the smallest of details about the implementation of an out-of-kilter algorithm, it&amp;rsquo;s easy to forget that, while it&amp;rsquo;s hard to figure out how to implement a stochastic constraint solver in Haskell, there are broader problems.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -76,9 +71,7 @@ The past 24 hours were a rather busy period. It probably wouldn&amp;rsquo;t&amp;
       <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
       
       <guid>/initialization/</guid>
-      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
-1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
-2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

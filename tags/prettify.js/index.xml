@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Prettify.js on Yet Another Geographer</title>
+    <title> prettify.js on Yet Another Geographer</title>
     <link>/tags/prettify.js/</link>
-    <description>Recent content in Prettify.js on Yet Another Geographer</description>
+    <description>Recent content in  prettify.js on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 24 Mar 2017 17:18:18 +0000</lastBuildDate>
@@ -17,14 +17,7 @@
       <pubDate>Fri, 24 Mar 2017 17:18:18 +0000</pubDate>
       
       <guid>/i-guess-i-have-code-and-math-working-now/</guid>
-      <description>See, block-syntax-highlighted code on the website version:
-def async W(pgconnection): ...  and inline mathjax:
-$$prod_i^n\prod_j w_{ij}\phi_i\phi_j $$
-$\mathbf{W}$ next to text
-I just needed two scripts in my theme source:
-&amp;lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&#34;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
-So now I can delete that folder where I started to move my blog to pelican. don’t tell staff please 
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

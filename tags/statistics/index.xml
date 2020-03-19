@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Statistics on Yet Another Geographer</title>
+    <title> statistics on Yet Another Geographer</title>
     <link>/tags/statistics/</link>
-    <description>Recent content in Statistics on Yet Another Geographer</description>
+    <description>Recent content in  statistics on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 28 Feb 2018 15:46:40 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 28 Feb 2018 15:46:40 +0000</pubDate>
       
       <guid>/this-is-an-interesting-little-exploration-i-did/</guid>
-      <description>I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&amp;rsquo;m a bit limited because I don&amp;rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
-In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;rsquo;s telling me from the conditional estimates because I don&amp;rsquo;t really have a sense of the joint picture: I don&amp;rsquo;t really intuit how they covary across places, like I might in US counties or states.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@ In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;r
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description>like tears in rain.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -37,9 +35,7 @@ In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;r
       <pubDate>Tue, 22 Nov 2016 15:57:26 +0000</pubDate>
       
       <guid>/want-to-draw-spatially-correlated-values-wihtout/</guid>
-      <description>I think I’ve figured out a simple way to sample from a spatially-correlated normal distribution without needing to invert the large precision matrix directly. 
-gist here. 
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -49,7 +45,7 @@ gist here. 
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
       <description>my spatially-correlated variance components model is finally coming together :)
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -58,8 +54,7 @@ gist here. 
       <pubDate>Fri, 07 Oct 2016 20:09:36 +0000</pubDate>
       
       <guid>/how-one-weird-trick-helps-you-evaluate-correlated/</guid>
-      <description>Sorry, couldn’t resist the opportunity to buzzfeed this research blog :)
-I’ve been trying to get really efficient at writing samplers for various Bayesian spatial models. And, typically, this involves clever numerical tricks, trying to avoid computing either log determinants or matrix inverses by keeping around matrix factorizations or finding derived products that you can persist between iterations. Some of this has come to fruition in my sparse log determinant work, but I’m always looking for computation speed gains, especially as some of the targets I&amp;rsquo;ve optimized are drying up.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -70,7 +65,7 @@ I’ve been trying to get really efficient at writing samplers for various Bayes
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
       <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
 Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -79,9 +74,7 @@ Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
       <pubDate>Mon, 26 Sep 2016 01:32:56 +0000</pubDate>
       
       <guid>/the-importance-of-centering-variables/</guid>
-      <description>So, maybe this is part of the learning experience of developing applied intuition, but I never really appreciated how important it is to center your variables, especially when dealing with finicky models like simultaneous autoregressive models common in spatial econometrics.
-The following are three traces from a spatial econometric model, the spatial lag model, on some example data. 
-The first one hasn’t centered its variables. The lag coefficient is trying very hard to escape the (-1,1) bounding on stable autoregressive coefficients.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -90,8 +83,7 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>now that the google summer of code has winded down.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -100,8 +92,7 @@ The first one hasn’t centered its variables. The lag coefficient is trying ver
       <pubDate>Mon, 25 Jul 2016 02:52:31 +0000</pubDate>
       
       <guid>/a-post-scipy-chicago-update/</guid>
-      <description>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&amp;rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&amp;rsquo;ve had in the library recently.
-I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on handling burnout as a graduate student. But, I&amp;rsquo;ve been forgetting to tag posts so that they&amp;rsquo;d show up in the GSOC aggregator!</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -110,8 +101,7 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
-You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -120,7 +110,7 @@ You see, some spatial econometric models require that the log determinant of a v
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
       <guid>/man-im-so-close-to-a-pretty-massive-speedup-of/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -129,10 +119,7 @@ You see, some spatial econometric models require that the log determinant of a v
       <pubDate>Mon, 06 Jun 2016 19:11:28 +0000</pubDate>
       
       <guid>/gsoc-call-notes-june-6-2016/</guid>
-      <description>I&amp;rsquo;ve had to take a break from the spatial hierarchical linear modeling kick I&amp;rsquo;ve been on recently to get back to some GSOC work.
-Today, I had my weekly call with my mentors.
-On today&amp;rsquo;s call, my mentors and I discussed a few things.
-Testing &amp;amp; Merging of project code Since many of the improvements I&amp;rsquo;m making to the library are module-by-module, I was advised to submit PRs when a logical unit of contribution is ready to ship.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -141,8 +128,7 @@ Testing &amp;amp; Merging of project code Since many of the improvements I&amp;r
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
-The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -151,8 +137,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       <pubDate>Wed, 18 May 2016 20:48:03 +0000</pubDate>
       
       <guid>/puzzles-about-misreplication/</guid>
-      <description>So, a while back, I was using a new compactness metric to extend some gerrymandering studies. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.
-After trying multiple times to verify whether it was my code or if the published statistic had some typographical error, I went to the original author, shared my concerns, and found that it did.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -161,7 +146,7 @@ After trying multiple times to verify whether it was my code or if the published
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -170,8 +155,7 @@ After trying multiple times to verify whether it was my code or if the published
       <pubDate>Mon, 22 Feb 2016 16:23:53 +0000</pubDate>
       
       <guid>/a-quick-note-on-hierarchical-linear-models/</guid>
-      <description>Owen, Harris, &amp;amp; Jones have a pretty cool new paper out discussing strengths &amp;amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&amp;rsquo;t directly answer the classic question at the heart of tons of geographic research:
- Given that you live where you do, talk to who you do, and interact with the social milleau that you do, how is your behavior different?</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -180,9 +164,7 @@ After trying multiple times to verify whether it was my code or if the published
       <pubDate>Mon, 27 Jul 2015 21:10:56 +0000</pubDate>
       
       <guid>/reflections-on-a-hard-won-win-for-pysal/</guid>
-      <description>As a way to learn Python (and I mean really come to know it), I took on the project of converting PySAL to be compatible with Python 3.
-I started work on this two years ago. A tentative candidate for release is available in my fork
-Now, I’m glad I did this. I still worry about the day when Apple decides to ship the next OSX (Half Moon Bay? Big Sur?</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -191,8 +173,7 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
       <pubDate>Thu, 23 Oct 2014 16:25:45 +0000</pubDate>
       
       <guid>/you-know-i-like-all-this-math-and-engineering/</guid>
-      <description>You know, I like all this math and engineering material I&amp;rsquo;m enrolled in, and I&amp;rsquo;m not too bad at it. But it&amp;rsquo;s fairly frustrating listening to engineers talk about systems where this material gets applied as if they&amp;rsquo;re fully generic.I&amp;rsquo;m starting to hit that point where the divisions between physical and natural systems are creeping in.
-Flashbacks to my decision to study political science and not Industrial Engineering are becoming more and more common.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -201,7 +182,7 @@ Flashbacks to my decision to study political science and not Industrial Engineer
       <pubDate>Fri, 26 Sep 2014 17:40:00 +0000</pubDate>
       
       <guid>/some-new-realizations-on-oooooold-material/</guid>
-      <description>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -210,7 +191,7 @@ Flashbacks to my decision to study political science and not Industrial Engineer
       <pubDate>Fri, 12 Sep 2014 04:01:00 +0000</pubDate>
       
       <guid>/a-short-realization-on-gelman-king-1994/</guid>
-      <description>Elections, Bayes, and one realization about the Gelman-King Model People make a lot of hay out of the rise of Nate Silver and Bayesian poll averaging when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&amp;rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. Gelman-King (1994)&amp;rsquo;s model Say, for instance, we&amp;rsquo;re examining some vector of electoral outcomes, (y) given some predictor matrix (\mathbf{X}).</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -219,7 +200,7 @@ Flashbacks to my decision to study political science and not Industrial Engineer
       <pubDate>Wed, 16 Apr 2014 03:12:11 +0000</pubDate>
       
       <guid>/answer-keys-that-simply-tell-you/</guid>
-      <description>This is a difficult problem. and give you the answer with no work may as well be simple sources of guided intuition. It&amp;rsquo;s also probably the number one reason behind the rise of the math stackexchange.  imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -228,7 +209,7 @@ Flashbacks to my decision to study political science and not Industrial Engineer
       <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
       
       <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
-      <description>That aside, I&amp;rsquo;ve forked the Shapefile.jl repo and put in some goals to further Julia&amp;rsquo;s spatial analysis capabilities. I don&amp;rsquo;t know what the community ethics/practices are for Julia, but I&amp;rsquo;m always slightly nervous about being the first fork on a repo that hasn&amp;rsquo;t been touched in a few months. I can&amp;rsquo;t really explain why. Maybe it&amp;rsquo;s just a concern that my preference for private repos and anonymous contribution makes my github page look sparse.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -237,9 +218,7 @@ Flashbacks to my decision to study political science and not Industrial Engineer
       <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
       
       <guid>/initialization/</guid>
-      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
-1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
-2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

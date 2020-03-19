@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Numpy on Yet Another Geographer</title>
+    <title>numpy on Yet Another Geographer</title>
     <link>/tags/numpy/</link>
-    <description>Recent content in Numpy on Yet Another Geographer</description>
+    <description>Recent content in numpy on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 07 Oct 2015 18:10:06 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 07 Oct 2015 18:10:06 +0000</pubDate>
       
       <guid>/some-realizations-on-foss-governance/</guid>
-      <description>If you haven’t read/paid attention to the Numpy Governance Discussions goingon in the numpy discussion mailing list, I wouldn’t blame you. They’re probably dry and boring.
-But, for me, as someone who has been involved in a few Free/Open source communities over the past 8 years, I’m sensing a very interesting divide in the Numpy discussion (and FOSS Python more broadly) that I think is presented more strongly there than I’ve seen it elsewhere.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Studyblr on Yet Another Geographer</title>
+    <title> studyblr on Yet Another Geographer</title>
     <link>/tags/studyblr/</link>
-    <description>Recent content in Studyblr on Yet Another Geographer</description>
+    <description>Recent content in  studyblr on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 16 Feb 2016 00:09:02 +0000</lastBuildDate>
@@ -17,9 +17,7 @@
       <pubDate>Tue, 16 Feb 2016 00:09:02 +0000</pubDate>
       
       <guid>/a-bite-of-a-free-lunch-optimizing-numerical/</guid>
-      <description>tl;dr: ask yourself these before you deadlift optimize code
-I use Python pretty much daily, but I’m definitely not a Python wizard. Now that I’m done with converting the Python Spatial Analytics Library to use Python 3 compatible idioms, I took a break from refactoring more generally.
-But, in doing two small tests/stabs at refactoring for speed &amp;amp; memory usage, I’m reminded why optimizing numerical code is so hard. I’ve heard &amp;ldquo;there ain’t no such thing as a free lunch,” so I’m usually wary about getting into performance optimization stuff, but these two recent instances really drive this point home for me again.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -29,7 +27,7 @@ But, in doing two small tests/stabs at refactoring for speed &amp;amp; memory us
       
       <guid>/one-of-my-favorite-diagrams-from-micah-altmans/</guid>
       <description>from micah altman&amp;rsquo;s fantastic dissertation.
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

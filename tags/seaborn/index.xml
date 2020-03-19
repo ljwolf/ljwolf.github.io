@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Seaborn on Yet Another Geographer</title>
+    <title>seaborn on Yet Another Geographer</title>
     <link>/tags/seaborn/</link>
-    <description>Recent content in Seaborn on Yet Another Geographer</description>
+    <description>Recent content in seaborn on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 29 Jul 2015 02:49:09 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
       <guid>/getting-excited-about-some-cool-new-exploration/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

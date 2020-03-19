@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Debian on Yet Another Geographer</title>
+    <title> debian on Yet Another Geographer</title>
     <link>/tags/debian/</link>
-    <description>Recent content in Debian on Yet Another Geographer</description>
+    <description>Recent content in  debian on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 23 May 2015 14:33:14 +0000</lastBuildDate>
@@ -17,9 +17,7 @@
       <pubDate>Sat, 23 May 2015 14:33:14 +0000</pubDate>
       
       <guid>/heads-up-pip-bug/</guid>
-      <description>Anyone running Debian testing/unstable, heads up on a breakage in pip that bit me this morning. Now I’m stuck with versions of ipython that dont work, as the apt package is broken and pip is broken.
-Since I&amp;rsquo;m loath to install it manually, rather than through a package manager, I&amp;rsquo;m out of luck at the moment until the maintainer fixes the package. :(
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

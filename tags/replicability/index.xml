@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Replicability on Yet Another Geographer</title>
+    <title> replicability on Yet Another Geographer</title>
     <link>/tags/replicability/</link>
-    <description>Recent content in Replicability on Yet Another Geographer</description>
+    <description>Recent content in  replicability on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 18 May 2016 20:48:03 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 18 May 2016 20:48:03 +0000</pubDate>
       
       <guid>/puzzles-about-misreplication/</guid>
-      <description>So, a while back, I was using a new compactness metric to extend some gerrymandering studies. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.
-After trying multiple times to verify whether it was my code or if the published statistic had some typographical error, I went to the original author, shared my concerns, and found that it did.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

@@ -11,7 +11,7 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/post/annoscatter/">
 <base href="/" />
@@ -19,33 +19,16 @@
 <meta property="og:description" content="I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like annoscatter(df." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/annoscatter/" />
-
-
-
-<meta property="article:published_time" content="2018-03-12T23:52:32&#43;00:00"/>
-
-<meta property="article:modified_time" content="2018-03-12T23:52:32&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-03-12T23:52:32+00:00" />
+<meta property="article:modified_time" content="2018-03-12T23:52:32+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Annoscatter"/>
 <meta name="twitter:description" content="I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like annoscatter(df."/>
 
 
-
 <meta itemprop="name" content="Annoscatter">
 <meta itemprop="description" content="I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like annoscatter(df.">
-
-
 <meta itemprop="datePublished" content="2018-03-12T23:52:32&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-12T23:52:32&#43;00:00" />
 <meta itemprop="wordCount" content="201">
@@ -53,7 +36,6 @@
 
 
 <meta itemprop="keywords" content="python," />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -159,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -172,9 +156,7 @@ th {
 <article class="post">
     <h1 class="title"> Annoscatter </h1>
     <div class="content"> <p>I found this function super useful in my dissertation and more generally in my work. What it does is take <code>x</code>,<code>y</code> coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like <code>annoscatter(df.year, df.leverage, df.district_id)</code>.</p>
-
-<p><img src="images/annoscatter.png" alt="annoscatter" /></p>
-
+<p><img src="images/annoscatter.png" alt="annoscatter"></p>
 <p>Not sure if there&rsquo;s a more elegant solution to this using matplotlib, but I really like how it looks, especially since there&rsquo;s also passthrough keyword dictionaries implemented like seaborn. Not sure if <a href="https://github.com/mwaskom">@mwaskom</a> would take a PR for something as simple as this, though.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">annoscatter</span>(x,y, text, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>, markersize<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, 
@@ -198,7 +180,8 @@ th {
         colors <span style="color:#f92672">=</span> list(color)
     <span style="color:#66d9ef">for</span> xi,yi,string,c <span style="color:#f92672">in</span> zip(x,y,text,colors):
         ax<span style="color:#f92672">.</span>annotate(s<span style="color:#f92672">=</span>string, xy<span style="color:#f92672">=</span>(xi,yi), color<span style="color:#f92672">=</span>c, <span style="color:#f92672">**</span>ann_kw)
-    <span style="color:#66d9ef">return</span> ax</code></pre></div> </div>
+    <span style="color:#66d9ef">return</span> ax
+</code></pre></div> </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">

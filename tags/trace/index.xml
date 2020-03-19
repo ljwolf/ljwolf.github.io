@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trace on Yet Another Geographer</title>
+    <title> trace on Yet Another Geographer</title>
     <link>/tags/trace/</link>
-    <description>Recent content in Trace on Yet Another Geographer</description>
+    <description>Recent content in  trace on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 06 Aug 2016 00:09:56 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>now that the google summer of code has winded down.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

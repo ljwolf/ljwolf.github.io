@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science on Yet Another Geographer</title>
+    <title> data science on Yet Another Geographer</title>
     <link>/tags/data-science/</link>
-    <description>Recent content in Data Science on Yet Another Geographer</description>
+    <description>Recent content in  data science on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 22 Feb 2017 22:09:11 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description>like tears in rain.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

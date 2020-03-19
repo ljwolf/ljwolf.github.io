@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spatial Analysis on Yet Another Geographer</title>
+    <title> spatial analysis on Yet Another Geographer</title>
     <link>/tags/spatial-analysis/</link>
-    <description>Recent content in Spatial Analysis on Yet Another Geographer</description>
+    <description>Recent content in  spatial analysis on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 19 May 2016 19:12:11 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Thu, 19 May 2016 19:12:11 +0000</pubDate>
       
       <guid>/rfc-for-gsoc-feedback/</guid>
-      <description>Clarifying a Core Data Model for PySAL  Gist here From my perspective, I see my proposal for GSOC as containing two oblique foci. My hope in drafting this notebook for my fellow authors is to make this clear.
-I think at this point, many people who use &amp;amp; develop PySAL would like to see better tooling for Pandas$\leftrightarrow$PySAL interaction. This was started by Luc, Dani, &amp;amp; myself in the pysal.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,9 +26,7 @@ I think at this point, many people who use &amp;amp; develop PySAL would like to
       <pubDate>Mon, 27 Jul 2015 21:10:56 +0000</pubDate>
       
       <guid>/reflections-on-a-hard-won-win-for-pysal/</guid>
-      <description>As a way to learn Python (and I mean really come to know it), I took on the project of converting PySAL to be compatible with Python 3.
-I started work on this two years ago. A tentative candidate for release is available in my fork
-Now, I’m glad I did this. I still worry about the day when Apple decides to ship the next OSX (Half Moon Bay? Big Sur?</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -38,7 +35,7 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
       <pubDate>Fri, 26 Sep 2014 17:40:00 +0000</pubDate>
       
       <guid>/some-new-realizations-on-oooooold-material/</guid>
-      <description>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -47,7 +44,7 @@ Now, I’m glad I did this. I still worry about the day when Apple decides to sh
       <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
       
       <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
-      <description>That aside, I&amp;rsquo;ve forked the Shapefile.jl repo and put in some goals to further Julia&amp;rsquo;s spatial analysis capabilities. I don&amp;rsquo;t know what the community ethics/practices are for Julia, but I&amp;rsquo;m always slightly nervous about being the first fork on a repo that hasn&amp;rsquo;t been touched in a few months. I can&amp;rsquo;t really explain why. Maybe it&amp;rsquo;s just a concern that my preference for private repos and anonymous contribution makes my github page look sparse.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

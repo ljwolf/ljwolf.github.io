@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Census on Yet Another Geographer</title>
+    <title> census on Yet Another Geographer</title>
     <link>/tags/census/</link>
-    <description>Recent content in Census on Yet Another Geographer</description>
+    <description>Recent content in  census on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 27 Jul 2015 18:54:01 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
-      <description>Simply amazing.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Tue, 16 Jun 2015 15:27:27 +0000</pubDate>
       
       <guid>/cenpy-big-query/</guid>
-      <description>If you’ve been using my tools for census data exploration, as intensely as I&amp;rsquo;d hope you have, you might’ve noticed that the Census limits queries to 50 columns per query.
-I’ve got your back, though. The newest release, cenpy 0.7, now supports n-column queries by chunking through 50-coulumns at a time. Be careful, though, as I&amp;rsquo;m sure if you pull down the entire Census 2010 short form in one go, you will probably get rate limited.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -37,10 +35,7 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
       <pubDate>Thu, 11 Jun 2015 15:58:41 +0000</pubDate>
       
       <guid>/cenpy-is-now-pip-installable/</guid>
-      <description>pip install cenpy
-Check it out on github or its demo notebook on nbviewer.
-yetanothergeographer:
- CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -49,7 +44,7 @@ yetanothergeographer:
       <pubDate>Fri, 05 Jun 2015 18:01:54 +0000</pubDate>
       
       <guid>/cenpy-an-exploratory-interface-to-the-census/</guid>
-      <description>CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

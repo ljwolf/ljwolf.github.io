@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tex on Yet Another Geographer</title>
+    <title> tex on Yet Another Geographer</title>
     <link>/tags/tex/</link>
-    <description>Recent content in Tex on Yet Another Geographer</description>
+    <description>Recent content in  tex on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 05 Mar 2014 04:14:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 May 2014 10:02:09 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tex/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,8 +17,7 @@
       <pubDate>Wed, 05 Mar 2014 04:14:20 +0000</pubDate>
       
       <guid>/modified-an-existing-asu-beamer-template/</guid>
-      <description>For SGSUP use. It’s silly the feelings of accomplishment that simple things like that provides.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

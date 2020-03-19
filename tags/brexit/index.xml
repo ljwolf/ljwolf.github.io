@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Brexit on Yet Another Geographer</title>
+    <title> brexit on Yet Another Geographer</title>
     <link>/tags/brexit/</link>
-    <description>Recent content in Brexit on Yet Another Geographer</description>
+    <description>Recent content in  brexit on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 28 Feb 2018 15:46:40 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 28 Feb 2018 15:46:40 +0000</pubDate>
       
       <guid>/this-is-an-interesting-little-exploration-i-did/</guid>
-      <description>I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&amp;rsquo;m a bit limited because I don&amp;rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
-In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;rsquo;s telling me from the conditional estimates because I don&amp;rsquo;t really have a sense of the joint picture: I don&amp;rsquo;t really intuit how they covary across places, like I might in US counties or states.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

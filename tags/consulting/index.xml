@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Consulting on Yet Another Geographer</title>
+    <title> consulting on Yet Another Geographer</title>
     <link>/tags/consulting/</link>
-    <description>Recent content in Consulting on Yet Another Geographer</description>
+    <description>Recent content in  consulting on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 02 Dec 2015 21:42:39 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 02 Dec 2015 21:42:39 +0000</pubDate>
       
       <guid>/new-york-is-very-nice/</guid>
-      <description>And working on getting spatial statistics in the hands of average users with CartoDB is much nicer. 
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

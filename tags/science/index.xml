@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Science on Yet Another Geographer</title>
+    <title>science! on Yet Another Geographer</title>
     <link>/tags/science/</link>
-    <description>Recent content in Science on Yet Another Geographer</description>
+    <description>Recent content in science! on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 18 May 2016 20:48:03 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 18 May 2016 20:48:03 +0000</pubDate>
       
       <guid>/puzzles-about-misreplication/</guid>
-      <description>So, a while back, I was using a new compactness metric to extend some gerrymandering studies. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.
-After trying multiple times to verify whether it was my code or if the published statistic had some typographical error, I went to the original author, shared my concerns, and found that it did.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,7 +26,7 @@ After trying multiple times to verify whether it was my code or if the published
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -36,7 +35,7 @@ After trying multiple times to verify whether it was my code or if the published
       <pubDate>Thu, 14 Jan 2016 18:41:26 +0000</pubDate>
       
       <guid>/trajectories-transitions/</guid>
-      <description>I started my PhD running away from Political Science/Political Geography as fast as I could, into Industrial Engineering and Computer Science-y topics. I’m still what many would call a “methodologist,” am wholly entertained by computational geometry &amp;amp; statistics, and enjoy math and programming a little too much to be fully motivated by applied work. But, gradually, I’ve started filtering back, situated with some top-flight quantitative geographers at the GeoDa Center for Spatial Analysis and Geocomputation, into work by Micah Altman, Andrew Gelman, Gary King, Jowei Chen, and Jonathan Rodden&amp;hellip; tons of political scientists.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

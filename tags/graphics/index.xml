@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Graphics on Yet Another Geographer</title>
+    <title> graphics on Yet Another Geographer</title>
     <link>/tags/graphics/</link>
-    <description>Recent content in Graphics on Yet Another Geographer</description>
+    <description>Recent content in  graphics on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 10 Oct 2016 19:25:04 +0000</lastBuildDate>
@@ -18,7 +18,7 @@
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
       <description>images directly in the terminal! no fuss! although you have to use a special terminal emulator&amp;hellip;
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Computers on Yet Another Geographer</title>
+    <title>computers on Yet Another Geographer</title>
     <link>/tags/computers/</link>
-    <description>Recent content in Computers on Yet Another Geographer</description>
+    <description>Recent content in computers on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 08 May 2014 18:59:51 +0000</lastBuildDate>
@@ -17,9 +17,7 @@
       <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
       
       <guid>/ok-so-i-think-my-days-of-using-texstudio-are/</guid>
-      <description>Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
-I guess color scheme fights are about as lame as you can get. Except maybe fights over brace or comment styles&amp;hellip;
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Metaprogramming on Yet Another Geographer</title>
+    <title> metaprogramming on Yet Another Geographer</title>
     <link>/tags/metaprogramming/</link>
-    <description>Recent content in Metaprogramming on Yet Another Geographer</description>
+    <description>Recent content in  metaprogramming on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 21 Jan 2016 02:07:35 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Thu, 21 Jan 2016 02:07:35 +0000</pubDate>
       
       <guid>/a-tricky-bit-implementing-skyums-algorithm/</guid>
-      <description>My dissertation is on gerrymandering. While I’m very sure it’s not the best way to do it, many people use geometric measures of district shapes as a way to detect gerrymandering. 
-One of the oldest and most well-used is the Reock measure, first developed in 1960. It’s a bit tougher than other kinds of gerrymandering measures to construct. For instance, the most popular measure is the Polsby-Popper measure, as used in this Washinton Post piece, is actually identical to a shape measure calle the Isoperimetric Quotient.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@ One of the oldest and most well-used is the Reock measure, first developed in 19
       <pubDate>Tue, 06 Oct 2015 01:17:56 +0000</pubDate>
       
       <guid>/two-points-in-learning-to-program/</guid>
-      <description>I feel like there are two big, “pivotal” realizations in my story so far of learning to program. While I’m sure not everyone moves from Haskell to Shen to R to Python before really feeling competent in a language, I have seen many peers grapple with them. 
-1. Separate your code and data. I think this would be more aptly stated as Think Abstractly, but that belies the immediacy that the first statement provides.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

@@ -11,52 +11,31 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/a-tricky-bit-implementing-skyums-algorithm/">
 <base href="/" />
 <meta property="og:title" content="A Tricky Bit Implementing Skyum’s Algorithm" />
-<meta property="og:description" content="My dissertation is on gerrymandering. While I’m very sure it’s not the best way to do it, many people use geometric measures of district shapes as a way to detect gerrymandering. 
-One of the oldest and most well-used is the Reock measure, first developed in 1960. It’s a bit tougher than other kinds of gerrymandering measures to construct. For instance, the most popular measure is the Polsby-Popper measure, as used in this Washinton Post piece, is actually identical to a shape measure calle the Isoperimetric Quotient." />
+<meta property="og:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/a-tricky-bit-implementing-skyums-algorithm/" />
-
-
-
-<meta property="article:published_time" content="2016-01-21T02:07:35&#43;00:00"/>
-
-<meta property="article:modified_time" content="2016-01-21T02:07:35&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2016-01-21T02:07:35+00:00" />
+<meta property="article:modified_time" content="2016-01-21T02:07:35+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A Tricky Bit Implementing Skyum’s Algorithm"/>
-<meta name="twitter:description" content="My dissertation is on gerrymandering. While I’m very sure it’s not the best way to do it, many people use geometric measures of district shapes as a way to detect gerrymandering. 
-One of the oldest and most well-used is the Reock measure, first developed in 1960. It’s a bit tougher than other kinds of gerrymandering measures to construct. For instance, the most popular measure is the Polsby-Popper measure, as used in this Washinton Post piece, is actually identical to a shape measure calle the Isoperimetric Quotient."/>
-
+<meta name="twitter:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer."/>
 
 
 <meta itemprop="name" content="A Tricky Bit Implementing Skyum’s Algorithm">
-<meta itemprop="description" content="My dissertation is on gerrymandering. While I’m very sure it’s not the best way to do it, many people use geometric measures of district shapes as a way to detect gerrymandering. 
-One of the oldest and most well-used is the Reock measure, first developed in 1960. It’s a bit tougher than other kinds of gerrymandering measures to construct. For instance, the most popular measure is the Polsby-Popper measure, as used in this Washinton Post piece, is actually identical to a shape measure calle the Isoperimetric Quotient.">
-
-
+<meta itemprop="description" content="imported from:&lt;a href=&#39;https://yetanothergeographer.">
 <meta itemprop="datePublished" content="2016-01-21T02:07:35&#43;00:00" />
 <meta itemprop="dateModified" content="2016-01-21T02:07:35&#43;00:00" />
-<meta itemprop="wordCount" content="794">
+<meta itemprop="wordCount" content="3">
 
 
 
 <meta itemprop="keywords" content="python, gis, computational geometry, metaprogramming, geometry, geography,imported," />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -162,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -174,13 +155,8 @@ th {
 
 <article class="post">
     <h1 class="title"> A Tricky Bit Implementing Skyum’s Algorithm </h1>
-    <div class="content"> <p>My dissertation is on gerrymandering. While I’m very sure it’s not the best way to do it, many people use geometric measures of district shapes as a way to detect gerrymandering. <br/></p><p>One of the oldest and most well-used is the Reock measure, first developed in 1960. It’s a bit tougher than other kinds of gerrymandering measures to construct. For instance, the most popular measure is the Polsby-Popper measure, as used in <a href="https://www.washingtonpost.com/news/wonk/wp/2014/05/15/americas-most-gerrymandered-congressional-districts/" target="_blank">this Washinton Post piece</a>, is actually identical to a shape measure calle the <a href="http://mathworld.wolfram.com/IsoperimetricQuotient.html" target="_blank">Isoperimetric Quotient</a>. The IPQ/Polsby-Popper measure relates the area of a target shape to the area of the circle enclosed by the target shape’s perimeter. It’s understandable (and indeed, simple to show empirically and theoretically) that the IPQ measures how efficiently a shape “encloses” space, in terms of area enclosed per perimeter. <br/></p><p>However, the Reock measure is both more difficult to construct and more difficult to understand. Reock is the ratio of the area of a <a href="https://en.wikipedia.org/wiki/Smallest-circle_problem" target="_blank">Minimum Enclosing Circle</a> to the area of the target shape. Now, for arbitrary points in 2 dimensions, this problem is solved with a two relatively good algorithms. A randomized approach of Welzl is O(N), which means the time it takes to compute the MBC is proportional to the number of points in the polygon being enclosed. Another algorithm due to Skyum (1990) is O(n log(n)), but is typically much faster because the factor that makes Welzl’s algorithm proportional to N is rather large, and is occasionally larger than log(n). <br/></p><p>So, to do this in Python using <a href="http://pysal.github.io/" target="_blank">PySAL</a>, I implemented <a href="https://github.com/ljwolf/pysal/blob/compactness/pysal/contrib/compact/mbc.py#L10" target="_blank">Skyum’s algorithm</a>. After puzzling over it for a few days, I’m confident in my implementation. <br/></p><p><b>But</b>, it’s not perfect, and currently gives slightly incorrect results in some cases. <br/></p><p>For instance, take the <a href="https://github.com/ljwolf/pysal/tree/compactness/pysal/examples/columbus" target="_blank">Columbus, OH dataset</a> used by many of my colleagues who work on PySAL. I can construct the MBC for most of the shapes quickly, but some shapes are only <i>approximately</i> contained by their MBC. That is, my implementation, in a very small number of cases, returns only approximately the MBC.<br/></p><p> First, though, the algorithm. Skyum’s algorithm proceeds by picking neighboring triples points on the boundary of the convex hull of a shape that sweep out the largest angle.  If multiple triples form the same angle, sort by the radius length of those three points’ <a href="https://en.wikipedia.org/wiki/Circumscribed_circle" target="_blank">circumcircle</a>. In math jargon, this means the set of tuples (radius, angle) are <a href="https://en.wikipedia.org/wiki/Lexicographical_order" target="_blank"><i>lexicographically</i></a> ordered. If the largest angle in this ordering is ever at or below 90 degrees, the algorithm has found the MBC. Otherwise, remove the center of the neighbor triple with the largest angle and construct new angles &amp; circumcircles.<br/></p><p>To illustrate my implementation’s mixed success, consider the third and fourth shapes in the list. (python is zero index, so the image will have them labelled as shapes 2 and 3, respectively). The shape outline is in black.
-The constructed candidate for the MBC in each iteration is cyan. The
-candidate convex hull is in dashed magenta. Points that have been
-considered are red and get more transparent as they age. The most recent
-point considered and rejected is magenta.</p><p> First, let’s look at shape four, where the algorithm correctly identifies the MBC:<br/></p><figure class="tmblr-full" data-orig-height="1000" data-orig-width="1000"><img data-orig-height="1000" data-orig-width="1000" alt="image" src="http://78.media.tumblr.com/0ef61d6b6718bdfaf2d8f11ee7b247e7/tumblr_inline_o1ajau0p9h1qeher0_540.gif"/></figure><p>You see, as the circle continues to get constructed, the points in the candidate set always decrease. The circle is not <i>always </i>containing the polygon, but this doesn’t matter, because the algorithm is using a somewhat counterintuitive objective ro preserve optimality over each iteration. Regardless, at the end, it’s pretty apparent the minimum bounding circle has been found, and nothing looks like it’s outside of the cyan circle. <br/></p><p>Now for the third shape:</p><figure class="tmblr-full" data-orig-height="1000" data-orig-width="1000"><img data-orig-height="1000" data-orig-width="1000" alt="image" src="http://78.media.tumblr.com/a9ca9acd3a2757cd0d26b252ae7af26c/tumblr_inline_o1ajfspart1qeher0_540.gif"/></figure><p>If you look closely, you’ll see that, in the last iteration, a point on the bottom right of the shape is left outside of the circle. It’s <i>barely</i> outside, but it is, in fact, outside when you examine the image closer (and when you check mathematically whether it falls within the circle). <br/></p><p>This is important, since the size of the candidate MBC (cyan) does not have consistent, guaranteed behavior from iteration to iteration. The objective maximizes the<i> </i>angle of triples first, and <i>then</i> organizes by a measure proportional to area. Thus, it is occasionally the case that the candidate MBC changes size drastically and (most importantly) in a non-monotonic way between iterations. Thus, it’s probably possible to construct a pathological example where the true MBC is very different from the one my implementation finds. <br/></p><p>When I verify the implementation, though, each step proceeds as according to the rules laid out in Skyum (1990). This means I’ve got some arcane implementation error somewhere in the code, and <i>that’s </i>no fun to find. <br/></p><p>But, importantly, this MBC solver works pretty quickly, has relatively decent accuracy, and was fun to implement.<br/></p>
-
-<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/137737097374/a-tricky-bit-implementing-skyums-algorithm'<tt>yetanothergeographer</tt></a></small></p>
+    <div class="content"> <!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> imported from:<!-- raw HTML omitted --> &lt;a href='https://yetanothergeographer.tumblr.com/137737097374/a-tricky-bit-implementing-skyums-algorithm'<!-- raw HTML omitted -->yetanothergeographer<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
  </div>
     <footer class="post-footer">
 

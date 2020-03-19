@@ -11,55 +11,31 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/making-sense-of-nmmi/">
 <base href="/" />
 <meta property="og:title" content="Making Sense of NMMI" />
-<meta property="og:description" content="The Normalized Mass Moment of Inertia proposed by Li et al (2013) is deceptively hard to express. Given some shape and a distribution of attributes around the shape, they state the NMMI ratio in Fan et al (forthcoming) as:
-$$NMMI = \frac{I_O^&rsquo;} {I^{G_i}_{i_mass}}$$
-where $I$ represents the area-standardized mass moment of inertia. The $O$ subscript denotes that the numerator is the mass moment of inertia of some null reference shape. I will discuss the denominator later." />
+<meta property="og:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/making-sense-of-nmmi/" />
-
-
-
-<meta property="article:published_time" content="2014-10-29T05:36:00&#43;00:00"/>
-
-<meta property="article:modified_time" content="2014-10-29T05:36:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2014-10-29T05:36:00+00:00" />
+<meta property="article:modified_time" content="2014-10-29T05:36:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Making Sense of NMMI"/>
-<meta name="twitter:description" content="The Normalized Mass Moment of Inertia proposed by Li et al (2013) is deceptively hard to express. Given some shape and a distribution of attributes around the shape, they state the NMMI ratio in Fan et al (forthcoming) as:
-$$NMMI = \frac{I_O^&rsquo;} {I^{G_i}_{i_mass}}$$
-where $I$ represents the area-standardized mass moment of inertia. The $O$ subscript denotes that the numerator is the mass moment of inertia of some null reference shape. I will discuss the denominator later."/>
-
+<meta name="twitter:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer."/>
 
 
 <meta itemprop="name" content="Making Sense of NMMI">
-<meta itemprop="description" content="The Normalized Mass Moment of Inertia proposed by Li et al (2013) is deceptively hard to express. Given some shape and a distribution of attributes around the shape, they state the NMMI ratio in Fan et al (forthcoming) as:
-$$NMMI = \frac{I_O^&rsquo;} {I^{G_i}_{i_mass}}$$
-where $I$ represents the area-standardized mass moment of inertia. The $O$ subscript denotes that the numerator is the mass moment of inertia of some null reference shape. I will discuss the denominator later.">
-
-
+<meta itemprop="description" content="imported from:&lt;a href=&#39;https://yetanothergeographer.">
 <meta itemprop="datePublished" content="2014-10-29T05:36:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-10-29T05:36:00&#43;00:00" />
-<meta itemprop="wordCount" content="1364">
+<meta itemprop="wordCount" content="3">
 
 
 
 <meta itemprop="keywords" content="math, geography, politics, political science, gerrymandering, compacness,imported," />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -165,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -177,197 +155,50 @@ th {
 
 <article class="post">
     <h1 class="title"> Making Sense of NMMI </h1>
-    <div class="content"> <p>The Normalized Mass Moment of Inertia proposed by Li et al (2013) is
-deceptively hard to express. Given some shape and a distribution of
-attributes around the shape, they state the NMMI ratio in Fan et al
-(forthcoming) as:</p>
-
-<p>$$NMMI = \frac{I_O^&rsquo;} {I^{G_i}_{i_mass}}$$</p>
-
-<p>where $I$ represents the area-standardized mass moment of inertia. The
-$O$ subscript denotes that the numerator is the mass moment of inertia
-of some null reference shape. I will discuss the denominator later.
-Here, that reference shape is defined as an “equiperimeter” circle. And,
-I say “area standardized” because it is important to note that their
-explanation of what the mass moment of inertia for a circle may be
-slightly different from what is expected. For a disk of uniform mass
-distribution, the typical equation expressing the moment of inertia
-around the shape centroid is:</p>
-
-<p>$$I_O = \frac{1}{2} Mr^2$$</p>
-
-<p>where $M$ is the total mass of the circle and $r$ is its radius. But,
-the mass moment of inertia expressed in this literature on the subject
-expresses it in terms of circle area, $A$:</p>
-
-<p>$$I_O^&rsquo; = \frac{MA_c}{2\pi} = \frac{M(\pi r^2}{2\pi} = \frac{1}{2}Mr^2$$</p>
-
-<p>Not a mathematically significant difference, but an atypical expression
-of the concept nonetheless. Then, given this quantity, they also define
-the mass moment of inertia of some arbitrary region $r$ with respect to
-its mass distribution as:</p>
-
-<p>$$I^{Gi}<em>{r} = \frac{A_r \int</em>{da}d^2 \rho^m_i{da_i} da} {\int_{da} \rho^m_i(da_i) da_i}$$</p>
-
-<p>This is also phrased in terms of shape area, with $\rho^m_i(da_i)$ being
-the function for the density of mass type $m$ over the infinitesimal
-shape area $da_i$. The $d^2$ term is constructed using the distance from
-the infinitesimal shape area and the center of mass of the region with
-respect to the mass being studied, here denoted $Gi$.</p>
-
-<p>Again, this is consistent with stating these functions with respect to
-shape areas rather than how the formulation is sometimes given, which is
-in terms of the squared torque on the center of mass, weighted by the
-density as a function of radii. Both are correct and equivalent, as will
-be shown.</p>
-
-<p>However, I am interested in discrete applications of the moment of
-inertia. In fact, most of the times this NMMI measure has been applied
-have been in discrete-space cases. This is unsurprising, as geographers
-are <em>very</em> concerned with the compactness and mass distribution of
-things over <em>lattices</em>, or collections of polygons (states,
-congressional districts, census tracts), as that gives some indicator
-for how a shape “contains” its contents. That is, large moments of
-inertia would indicate that there is a large squared distance from that
-shapes’ component elements and the shape’s center. In the case of a
-mass-moment of inertia measure, this shows how the centrality of the
-shape relates to the distribution of the mass in question (raw
-population, racial population, votes) is distributed.</p>
-
-<p>To re-express the continuous form expression of $I^{Gi}_{i}$ as a
-discrete-space expression, we must realize that $\int_da &hellip; $ is simply
-the sum of arguments *over* the discrete spaces being studied.
-Therefore, replacing the integral formulation with a sum over all of the
-polygons in the lattice (or sublattice) in question is sufficient to
-solve convert the integral into a discrete-space summation.</p>
-
-<p>But, what does $\rho_i^{m}(da_i)$ become? It becomes the mass of the
-shape being studied! As the density of mass type $m$ over shape $i$,
-$\rho_i^m$ times the area of the shape ($da_i$, in continuous terms) is
-equal to the mass of that shape. In the continuous formulation, this
-area is infinitely small. However, in the discrete formulation, we
-enumerate this, and the density function $\rho^m_i$ for shape $a_i$
-becomes exactly $\frac{m_i}{a_i}$. So, replacing the density function
-times the differential area, or $\rho_i^m(da_i)da_i$ for each shape $i$
-becomes its mass!</p>
-
-<p>Thus, we can restate the continuous expression of some region $r$’s
-moment of inertia as:</p>
-
-<p>$$I^{Gi}_{r} = \frac{A_r \sum_i m_i d^2} {\sum m}$$</p>
-
-<p>for all $i$ in the region $r$. Given this, the discrete-form expression
-of the NMMI can be stated:</p>
-
-<p>$$NMMI_r = \frac{I_O^&rsquo;} {I^{Gi}_r} = \frac {\frac{\sum_i m_i A_c} {2\pi}  }
-{\frac{A_r \sum_i(m_i * d^2)} {\sum_i m_i} }$$</p>
-
-<p>Just to be clear, the $d$ term is calculated from the difference between
-the center of mass of subarea $i$ and the region center of mass $Gi$ for
-some mass type $m$. This could be denoted $d^{2_m}_{i,r}$, but that
-would be quite silly. Thus, just remember that the $d$ term is with
-respect to each sub-area $i$ in shape $r$ for some mass type $m$.</p>
-
-<p>But, for the sake of simplicity, let us manipulate this expression a
-bit. First, consider rearranging the function in terms of the things
-that it relates. Namely, I plan on isolating the normalizing constant
-$k$, which is likely some power of $2\pi$, some purely-geometric
-indicator derived from the region information ($G(r}$) relating the
-geometric properties of the shapes in question, and some mass-based
-indicator, relating the masses in question and their distribution around
-the shape ($f(m_i, d)$). So, following this logic:</p>
-
-<p>$$\begin{align*}</p>
-
-<p>NMMI_r =&amp;~ \frac{I_O^&rsquo;} {I^{Gi}_r} = \frac {\frac{\sum_i m_i A_c} {2\pi}  }
-{\frac{A_r \sum_i(m_i * d^2)} {\sum_i m_i} }</p>
-
-<p>\</p>
-
-<p>=&amp;~ \frac{\sum_i(m_i)A_c}{2\pi} \cdot \frac{\frac{1}{A_r \cdot
-\sum_i(m_id_^2}}{\sum_i m_i}</p>
-
-<p>\</p>
-
-<p>=&amp;~ \frac{\sum_i(m_i)A_c}{2\pi} \cdot \frac{\sum_m_i}{A_r\sum_i{m_i d^2}}\end{aligned}$$</p>
-
-<p>Then, we can let the sum of all masses $\sum_i m_i$ be denoted $M$
-again. Continuing:</p>
-
-<p>$$\begin{align*}</p>
-
-<p>=&amp;~ \frac{1}{2\pi} \cdot \frac{A_c}{A_r} \cdot \frac{M^2}{\sum_i (m_id^2)}\end{aligned}$$</p>
-
-<p>is our first real restatement with a cogent representation in the three
-components mentioned above. Taking the equation from the right end
-first, we can see that the right-most term is the ratio of total mass to
-the total mass, weighted by the squared distance of that mass from the
-center. This term fully captures the effects of the distribution of the
-masses around the region, and it will not change in subsequent symbolic
-adjustments. The middle term is the ratio between the equiperimeter
-circle to the region being studied. Intuitively, this relates the area
-of a shape to its own perimeter, long a classic measure used in the pure
-analysis of compactness. The first term is simply a geometric scaling
-constant.</p>
-
-<p>Further symbolic adjustment can refine the center area ratio to be an
-explicit function of the region being studied, rather than some
-relationship between the region and a hypothetical circle. First,
-though, it is important to realize that the equiperimeter circle’s
-radius can be expressed as $\frac{p}{2\pi}$, where $p$ is the perimeter
-of the region under study. This is simple algebraic adjustment of the
-equation relating the two quantities:</p>
-
-<p>$$P_r = 2 \pi r$$</p>
-
-<p>Therefore, given this property, we can substitute this in for the circle
-area term $A_c$ in the equation above. Keep in mind that $r$ will be
-used as the <em>index of the region under study</em>, not as an index over
-radii.</p>
-
-<p>$$\begin{align*}</p>
-
-<p>=&amp;~ \frac{1}{2\pi} \cdot \frac{\pi\left(\frac{P_r}{2\pi}\right)^2 }{A_r} \cdot \frac{M^2}{\sum_i (m_id^2)}</p>
-
-<p>\</p>
-
-<p>=&amp;~ \frac{1}{2\pi} \cdot \frac{\frac{P_r^2}{4\pi}}{A_r} \cdot \frac{M^2}{\sum_i
-(m_id^2)</p>
-
-<p>\</p>
-
-<p>=&amp;~ = \frac{1}{2\pi \cdot 4\pi} \cdot \frac{P_r^2}{A_r} \cdot \frac{M^2}{\sum_i
-(m_id^2)}\end{align*}$$</p>
-
-<p>And, after this manipulation, we finish with:</p>
-
-<p>$$\begin{align<em>}
-=&amp;~ \frac{1}{8\pi^2} \cdot \frac{P_r^2}{A_r} \cdot \frac{M^2}{\sum_i (m_i d^2}\end{align</em>}$$</p>
-
-<p>Thus, the $NMMI$ can be restated as only a function of properties
-<em>expressed</em> by the shape being studied itself, without reference to any
-constructed equiperimeteric circle. In addition, the fact that these
-formulations are expressed as areas can be modified if the area of the
-shape is known and is related to its dimensions, but is irreducible if
-the areas are not closed-form functions.</p>
-
-<p>But, put simply, this formulation follows the desire to use only
-functions of the data and separation of the index into shape and mass
-compactness components, scaled by some factor. In addition, this
-expression is more efficient for database construction, as only the
-masses and information directly contained within the geometries of the
-shapes needs to be queried. Lastly, recall that this formulation exactly
-divides the NMMI into the three components mentioned above, but these
-components are not <em>statistically</em> independent! For instance, area is
-<em>usually</em> proportional to the distance from a region’s centroid and its
-constituent subareas. Thus, the terms of the denominators are not
-independent. In addition, the area and perimeter are usually considered
-related, but are not necessarily <em>strictly</em> so.</p>
-
-<p>When expressed this way, the purpose and the logic of the statistic
-becomes more clear.</p>
-
-<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/101245858269/making-sense-of-nmmi'<tt>yetanothergeographer</tt></a></small></p>
+    <div class="content"> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> imported from:<!-- raw HTML omitted --> &lt;a href='https://yetanothergeographer.tumblr.com/101245858269/making-sense-of-nmmi'<!-- raw HTML omitted -->yetanothergeographer<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
  </div>
     <footer class="post-footer">
 

@@ -11,58 +11,31 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/cenpy-is-now-pip-installable/">
 <base href="/" />
 <meta property="og:title" content="Cenpy is now pip installable!" />
-<meta property="og:description" content="pip install cenpy
-Check it out on github or its demo notebook on nbviewer.
-yetanothergeographer:
- CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API." />
+<meta property="og:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/cenpy-is-now-pip-installable/" />
-
-
-
-<meta property="article:published_time" content="2015-06-11T15:58:41&#43;00:00"/>
-
-<meta property="article:modified_time" content="2015-06-11T15:58:41&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2015-06-11T15:58:41+00:00" />
+<meta property="article:modified_time" content="2015-06-11T15:58:41+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cenpy is now pip installable!"/>
-<meta name="twitter:description" content="pip install cenpy
-Check it out on github or its demo notebook on nbviewer.
-yetanothergeographer:
- CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API."/>
-
+<meta name="twitter:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer."/>
 
 
 <meta itemprop="name" content="Cenpy is now pip installable!">
-<meta itemprop="description" content="pip install cenpy
-Check it out on github or its demo notebook on nbviewer.
-yetanothergeographer:
- CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.">
-
-
+<meta itemprop="description" content="imported from:&lt;a href=&#39;https://yetanothergeographer.">
 <meta itemprop="datePublished" content="2015-06-11T15:58:41&#43;00:00" />
 <meta itemprop="dateModified" content="2015-06-11T15:58:41&#43;00:00" />
-<meta itemprop="wordCount" content="246">
+<meta itemprop="wordCount" content="3">
 
 
 
 <meta itemprop="keywords" content="census, data, data hacking, python, geography, gis, api,imported," />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -168,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -180,40 +155,14 @@ th {
 
 <article class="post">
     <h1 class="title"> Cenpy is now pip installable! </h1>
-    <div class="content"> <p><code>pip install cenpy</code></p>
-
-<p>Check it out on <a href="https://github.com/ljwolf/cenpy" target="_blank">github</a> or its demo notebook on <a href="http://nbviewer.ipython.org/github/ljwolf/cenpy/blob/master/demo.ipynb" target="_blank">nbviewer</a>.</p>
-
-<p><a href="http://levijohnwolf.com/post/120805077929/cenpy-an-exploratory-interface-to-the-census" target="_blank">yetanothergeographer</a>:</p>
-
-<blockquote>
-<h2>CenPy - An exploratory interface to the Census API</h2>
-
-<p>So, I was looking to do some programmatic access to US Census Bureau data and
-was finding myself a little frustrated with how limited current tools in Python
-were to work with the connections. Mainly, most supported only a few protocols,
-provided no documentation or exploration functionality, and left it primarily
-up to exeternal documentation to provide information on how to query the
-API. Now, I know the day of National Civic Hacking is <a href="http://links.govdelivery.com/track?type=click&amp;enid=ZWFzPTEmbWFpbGluZ2lkPTIwMTUwNTI3LjQ1MzI3MjYxJm1lc3NhZ2VpZD1NREItUFJELUJVTC0yMDE1MDUyNy40NTMyNzI2MSZkYXRhYmFzZWlkPTEwMDEmc2VyaWFsPTE3MDA5OTYwJmVtYWlsaWQ9ZGZvbGNoQGZzdS5lZHUmdXNlcmlkPWRmb2xjaEBmc3UuZWR1JmZsPSZleHRyYT1NdWx0aXZhcmlhdGVJZD0mJiY=&amp;&amp;&amp;109&amp;&amp;&amp;http://hackforchange.org/?eml=gd&amp;utm_medium=email&amp;utm_source=govdelivery" target="_blank">tomorrow</a>, but I figured I’d get a jumpstart…</p>
-
-<p>So, I designed a small package to interface with <em>any</em> Census API that
-follows the same <code>get</code>, <code>for</code>, <code>in</code> key specifications. The tool,
-<a href="https://github.com/ljwolf/cenpy.git" target="_blank">cenpy</a> provides a <code>Connection</code> object,
-which pulls down the metadata needed to explore the dataset. Connection objects
-have a <code>query</code> method that is easily to use and outputs directly to a pandas
-dataframe. The connection object transparently records what queries are executed
-and is easy to extend. Plus, if new connections are announced that follow the
-specifications provided by the census currently, the package will discover and
-provide those connections too!</p>
-
-<p>Right now, I haven’t packged it up for pip yet. But, adding it to your
-pythonpath should work just fine. Alternatively, check out the
-<a href="https://github.com/ljwolf/cenpy/blob/master/demo.ipynb" target="_blank">demo</a> and see its
-functionality. Honestly, I’m super excited about the number of datasources that
-this makes easily accessible!</p>
-</blockquote>
-
-<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/121293267709/cenpy-is-now-pip-installable'<tt>yetanothergeographer</tt></a></small></p>
+    <div class="content"> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> imported from:<!-- raw HTML omitted --> &lt;a href='https://yetanothergeographer.tumblr.com/121293267709/cenpy-is-now-pip-installable'<!-- raw HTML omitted -->yetanothergeographer<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
  </div>
     <footer class="post-footer">
 

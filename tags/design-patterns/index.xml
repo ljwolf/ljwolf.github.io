@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Design Patterns on Yet Another Geographer</title>
+    <title> design patterns on Yet Another Geographer</title>
     <link>/tags/design-patterns/</link>
-    <description>Recent content in Design Patterns on Yet Another Geographer</description>
+    <description>Recent content in  design patterns on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 16 Oct 2015 20:02:11 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 16 Oct 2015 20:02:11 +0000</pubDate>
       
       <guid>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

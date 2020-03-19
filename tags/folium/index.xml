@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Folium on Yet Another Geographer</title>
+    <title> folium on Yet Another Geographer</title>
     <link>/tags/folium/</link>
-    <description>Recent content in Folium on Yet Another Geographer</description>
+    <description>Recent content in  folium on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 26 Aug 2015 02:26:08 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 26 Aug 2015 02:26:08 +0000</pubDate>
       
       <guid>/first-cartodb-map/</guid>
-      <description>First time using CartoDB. Pretty cool that you can just embed the map anywhere and it renders in an iframe.  This is a map of the Polsby-Popper metric for US Congressional districts. In essence, people use it to identify how &amp;ldquo;normal&amp;rdquo; a political district&amp;rsquo;s shape is, with larger values being more &amp;ldquo;regular.&amp;rdquo; It&amp;rsquo;s the same as used in a washington post piece. My methodology differs a bit from their published map, and I&amp;rsquo;d love to figure out how to get the neat little hover info on the WaPo map.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

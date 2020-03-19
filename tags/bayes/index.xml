@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bayes on Yet Another Geographer</title>
+    <title> bayes on Yet Another Geographer</title>
     <link>/tags/bayes/</link>
-    <description>Recent content in Bayes on Yet Another Geographer</description>
+    <description>Recent content in  bayes on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 22 Feb 2017 22:09:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Mar 2017 15:52:55 +0000</lastBuildDate>
     
 	<atom:link href="/tags/bayes/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,8 +17,7 @@
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description>like tears in rain.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -28,7 +27,7 @@
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
       <description>my spatially-correlated variance components model is finally coming together :)
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -39,7 +38,7 @@
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
       <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
 Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -48,8 +47,7 @@ Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
       <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
-      <description>have really bad traces sometimes&amp;hellip;. not sure what causes them to do this excursion out into the weird space, but it makes their eventual traces have real severe autocorrelation.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -58,8 +56,7 @@ Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>now that the google summer of code has winded down.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -68,7 +65,7 @@ Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
       <pubDate>Fri, 12 Sep 2014 04:01:00 +0000</pubDate>
       
       <guid>/a-short-realization-on-gelman-king-1994/</guid>
-      <description>Elections, Bayes, and one realization about the Gelman-King Model People make a lot of hay out of the rise of Nate Silver and Bayesian poll averaging when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&amp;rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. Gelman-King (1994)&amp;rsquo;s model Say, for instance, we&amp;rsquo;re examining some vector of electoral outcomes, (y) given some predictor matrix (\mathbf{X}).</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

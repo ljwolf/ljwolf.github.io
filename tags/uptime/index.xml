@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Uptime on Yet Another Geographer</title>
+    <title>uptime on Yet Another Geographer</title>
     <link>/tags/uptime/</link>
-    <description>Recent content in Uptime on Yet Another Geographer</description>
+    <description>Recent content in uptime on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 16 Mar 2017 01:12:41 +0000</lastBuildDate>
@@ -18,7 +18,7 @@
       
       <guid>/is-my-uptime-excited-or-scared-you-decide/</guid>
       <description>you decide.
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

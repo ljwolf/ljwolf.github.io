@@ -11,7 +11,7 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/post/whose_fixed/">
 <base href="/" />
@@ -21,22 +21,8 @@ $$ y= \Delta u &#43; \epsilon$$
 as the specification, where $\Delta$ is the dummy variable matrix, $y$ is the outcome of interest, and $\epsilon$ is the usual homoeskedastic error term for the responses." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/whose_fixed/" />
-
-
-
-<meta property="article:published_time" content="2018-09-13T15:25:50&#43;01:00"/>
-
-<meta property="article:modified_time" content="2018-09-13T15:25:50&#43;01:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-09-13T15:25:50+01:00" />
+<meta property="article:modified_time" content="2018-09-13T15:25:50+01:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Who&#39;s Fixed?"/>
@@ -45,13 +31,10 @@ $$ y= \Delta u &#43; \epsilon$$
 as the specification, where $\Delta$ is the dummy variable matrix, $y$ is the outcome of interest, and $\epsilon$ is the usual homoeskedastic error term for the responses."/>
 
 
-
 <meta itemprop="name" content="Who&#39;s Fixed?">
 <meta itemprop="description" content="When comparing a multilevel model to a fixed-level model, it&rsquo;s important to consider how things are parameterized. For instance, let&rsquo;s say you&rsquo;re conducting comparisons between a no-pooling model and a partial pooling variance components model. In this case, we have:
 $$ y= \Delta u &#43; \epsilon$$
 as the specification, where $\Delta$ is the dummy variable matrix, $y$ is the outcome of interest, and $\epsilon$ is the usual homoeskedastic error term for the responses.">
-
-
 <meta itemprop="datePublished" content="2018-09-13T15:25:50&#43;01:00" />
 <meta itemprop="dateModified" content="2018-09-13T15:25:50&#43;01:00" />
 <meta itemprop="wordCount" content="533">
@@ -59,7 +42,6 @@ as the specification, where $\Delta$ is the dummy variable matrix, $y$ is the ou
 
 
 <meta itemprop="keywords" content="" />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -165,6 +147,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -178,30 +162,19 @@ th {
 <article class="post">
     <h1 class="title"> Who&#39;s Fixed? </h1>
     <div class="content"> <p>When comparing a multilevel model to a fixed-level model, it&rsquo;s important to consider how things are parameterized. For instance, let&rsquo;s say you&rsquo;re conducting comparisons between a no-pooling model and a partial pooling variance components model. In this case, we have:</p>
-
 <p>$$ y= \Delta u + \epsilon$$</p>
-
 <p>as the specification, where $\Delta$ is the dummy variable matrix, <code>$y$</code> is the outcome of interest, and <code>$\epsilon$</code> is the usual homoeskedastic error term for the responses. Note that the no pooling model contains no intercept and instead contains <code>$J$</code> means, one for each of the $j$ groups.</p>
-
 <p>But, let&rsquo;s consider what happens when we look at the multilevel estimate for an analogous model:</p>
-
 <p>$$ y = \Delta \theta + \epsilon$$</p>
-
 <p>$$\theta = \mu + \zeta$$</p>
-
 <p>where <em>now</em>, $\zeta$ is a zero-mean error term for our <em>region-level model</em> of <code>$\theta$</code>. Our $\theta$ term expresses the unique effects of each observation with respect to a <em>higher-level mean</em>, <code>$\mu$</code>, with its own estimating uncertainty.</p>
-
 <p>So, what is the correct comparison between terms in these models?  Well Gelman has his whole pooled/not pooled dichotomy, and I think that makes sense. Most of the multilevel literature compares <code>$\zeta$</code> to <code>$u$</code>, since <code>$\zeta$</code> reflects the fact that we have &ldquo;separated&rdquo; the uncertainty in estimating the global mean out, placed it in <code>$\mu$</code> and now are only concerned with estimating the noise in the distinct contribution added by <em>being in a group</em>. Thus, again, for centered <code>$y$</code>, <code>$u$</code> sould look like <code>$\zeta$</code>, but with slightly wider intervals and slightly more extreme point estimates, and <code>$\mu$</code> should be around zero. This argument is quite persuasive, and grounds the interpretation of these models in the literature.</p>
-
 <p>But, the &ldquo;direct&rdquo; comparison involves comparing $\theta$ to <code>$\gamma$</code>, which both serve the same direct function in the mean predictor of the model. Practically speaking, if we think this is the correct apples-to-apples comparison, then <em>both</em> the uncertainty in <code>$\alpha_0$</code> and <code>$\zeta$</code> are included in comparisons to the fixed effect model&rsquo;s unique region estimate. An example of how this might be done is:</p>
-
 <ol>
 <li>run a sampler for the parameters</li>
 <li>at convergence, resampling <code>$\mu$</code> and <code>$\zeta$</code> from their posteriors and obtain one draw of $\theta$.</li>
 </ol>
-
 <p>I showed this in <a href="https://docs.google.com/presentation/d/1fSsFpfmgePGTISXydI5pvLx3x4FlHLe8DoYmeyskbGY/edit#slide=id.p">my recent presentation at the Royal Statistical Society conference</a>. The uncertainty in estimating the state-specific effect $\zeta$ <a href="https://docs.google.com/presentation/d/1fSsFpfmgePGTISXydI5pvLx3x4FlHLe8DoYmeyskbGY/edit#slide=id.g4005b47210_0_23">obeys the usual behavior</a>. But, if we actually simulate samples of $\theta$ from the posterior, we get <a href="https://docs.google.com/presentation/d/1fSsFpfmgePGTISXydI5pvLx3x4FlHLe8DoYmeyskbGY/edit#slide=id.g40c00010b8_0_96">estimate bands that look much more similar to the original bands</a>.</p>
-
 <p>I&rsquo;m sympathetic to the arguments that you shouldn&rsquo;t lump the uncertainty in $\mu$ into the uncertainty around <code>$\zeta$</code>, but I also think that, from the fixed-effects user perspective, the &ldquo;right&rdquo; intuitive comparison is between <code>$\theta$</code> and <code>$u$</code>.  Not sure what this means for applied work; personally, I nearly always want to make the Gelman-style comparison, but I&rsquo;m wondering if there are cases where it&rsquo;s more useful to think critically about what uncertainty around <code>$\mu$</code> means in the multilevel specificaation. For my spatial statistical context, end of the day, our predictions for any specific data point <em>will</em> involve both the uncertainty in <code>$\mu$</code> and <code>$\zeta$</code> for any observation, so while we can separate them out in the regression model, we cannot really in the discussion of prediction.</p>
  </div>
     <footer class="post-footer">

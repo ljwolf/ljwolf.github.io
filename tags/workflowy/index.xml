@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Workflowy on Yet Another Geographer</title>
+    <title> workflowy on Yet Another Geographer</title>
     <link>/tags/workflowy/</link>
-    <description>Recent content in Workflowy on Yet Another Geographer</description>
+    <description>Recent content in  workflowy on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 13 Feb 2014 15:35:53 +0000</lastBuildDate>
@@ -17,10 +17,7 @@
       <pubDate>Thu, 13 Feb 2014 15:35:53 +0000</pubDate>
       
       <guid>/went-crawling-back-into-workflowys-arms-today/</guid>
-      <description>I simply wasn&amp;rsquo;t as efficient with others as I was with workflowy. The ease of use, the speed, the interface&amp;hellip; all superior for just a simple outlining tool.
-It&amp;rsquo;s not open source, but it&amp;rsquo;s so well designed. This kills me.
-If I could get HackFlowy working with tags and external port forwarding, I would leave. But, for now, I&amp;rsquo;l consign myself to the proprietary beast.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

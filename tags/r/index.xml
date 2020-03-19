@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Yet Another Geographer</title>
+    <title> r on Yet Another Geographer</title>
     <link>/tags/r/</link>
-    <description>Recent content in R on Yet Another Geographer</description>
+    <description>Recent content in  r on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 29 Sep 2016 00:13:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Jul 2017 19:45:46 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,7 +19,7 @@
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
       <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
 Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -28,9 +28,7 @@ Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
       <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
       
       <guid>/so-say-youre-working-with-two-states/</guid>
-      <description>Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
- ERROR: Some $VOTE values not in [0,1] interval.
- So, I did what the reasonable person who is used to using float() would do and just as.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

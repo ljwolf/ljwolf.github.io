@@ -11,55 +11,31 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/so-say-youre-working-with-two-states/">
 <base href="/" />
 <meta property="og:title" content="I got worse at R" />
-<meta property="og:description" content="Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
- ERROR: Some $VOTE values not in [0,1] interval.
- So, I did what the reasonable person who is used to using float() would do and just as." />
+<meta property="og:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/so-say-youre-working-with-two-states/" />
-
-
-
-<meta property="article:published_time" content="2014-08-22T19:55:00&#43;00:00"/>
-
-<meta property="article:modified_time" content="2014-08-22T19:55:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2014-08-22T19:55:00+00:00" />
+<meta property="article:modified_time" content="2014-08-22T19:55:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="I got worse at R"/>
-<meta name="twitter:description" content="Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
- ERROR: Some $VOTE values not in [0,1] interval.
- So, I did what the reasonable person who is used to using float() would do and just as."/>
-
+<meta name="twitter:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer."/>
 
 
 <meta itemprop="name" content="I got worse at R">
-<meta itemprop="description" content="Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
- ERROR: Some $VOTE values not in [0,1] interval.
- So, I did what the reasonable person who is used to using float() would do and just as.">
-
-
+<meta itemprop="description" content="imported from:&lt;a href=&#39;https://yetanothergeographer.">
 <meta itemprop="datePublished" content="2014-08-22T19:55:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-08-22T19:55:00&#43;00:00" />
-<meta itemprop="wordCount" content="268">
+<meta itemprop="wordCount" content="3">
 
 
 
 <meta itemprop="keywords" content="r, scientific computing, data, data wrangling, factor issues, computing,imported,image," />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -165,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -177,24 +155,8 @@ th {
 
 <article class="post">
     <h1 class="title"> I got worse at R </h1>
-    <div class="content"> <p><figure> <img src=//78.media.tumblr.com/4123ea708055228e108f16ee0b811d67/tumblr_naqfs9Q1p51ts05oao1_1280.png> </figure>
-<p>Then, you have to read it into R because JudgeIt is only an R package so far. </p>
-<p>All the dataframes were made in <em>the same way</em>, yet R decided that indicators of California&rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. </p>
-<p>these errors read something like:a</p>
-<blockquote>
-<p><code>ERROR: Some $VOTE values not in [0,1] interval.</code></p>
-</blockquote>
-<p>So, I did what the reasonable person who is used to using <code>float()</code> would do and just <code>as.numeric()</code> over the offending columns.</p>
-<p>And got garbage. </p>
-<p>Now, I worked in R to do my undergraduate honors thesis, about two years ago. I don&rsquo;t remember this being an issue, but I really should go back and revisit my code. But, apparently,<code>as.numeric()</code> translates factors into some &ldquo;internal R&rdquo; representation rather than what the typical individual (I&rsquo;d assume) <em>would </em>want from a function that converts something to numeric type. instead, to convert factors to numbers, you have to </p>
-<blockquote>
-<p><code>as.numeric(as.character($1))</code></p>
-</blockquote>
-<p>or, convert the factor into its character-based representation, and then convert those characters into numbers. To me, that&rsquo;d be like converting from some object to numbers by using <code>float(str($1))</code>. Not impossible, but definitely unintuitive. </p>
-<p>More annoying than this double-conversion, though, is the fact that <em>only one</em> of my data frames, generated from the same base document, parsed in the <em>same <code>for</code> loop</em><em> in the same way</em>, was designated a factor. And, all that work to move the code into a standard dataframe type into some unique, non-standard object for the analysis package I&rsquo;m using. </p>
-<p>Just silly. Data-wrangling in R is easy, but unintuitive, coming from someone whose first language was R 2.8.</p></p>
-
-<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/95500223474/so-say-youre-working-with-two-states'<tt>yetanothergeographer</tt></a></small></p>
+    <div class="content"> <!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> imported from:<!-- raw HTML omitted --> &lt;a href='https://yetanothergeographer.tumblr.com/95500223474/so-say-youre-working-with-two-states'<!-- raw HTML omitted -->yetanothergeographer<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
  </div>
     <footer class="post-footer">
 

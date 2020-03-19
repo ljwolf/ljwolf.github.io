@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Electoral Analysis on Yet Another Geographer</title>
+    <title> electoral analysis on Yet Another Geographer</title>
     <link>/tags/electoral-analysis/</link>
-    <description>Recent content in Electoral Analysis on Yet Another Geographer</description>
+    <description>Recent content in  electoral analysis on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 12 Sep 2014 04:01:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 12 Sep 2014 04:01:00 +0000</pubDate>
       
       <guid>/a-short-realization-on-gelman-king-1994/</guid>
-      <description>Elections, Bayes, and one realization about the Gelman-King Model People make a lot of hay out of the rise of Nate Silver and Bayesian poll averaging when it comes to the rise of data-driven electoral prediction and analysis. When it comes to data-driven politics, these methods are pretty neat. But, they&amp;rsquo;re based on very old understandings of statistics which, in the right light, seem quite intuitive. Gelman-King (1994)&amp;rsquo;s model Say, for instance, we&amp;rsquo;re examining some vector of electoral outcomes, (y) given some predictor matrix (\mathbf{X}).</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Yet Another Geographer</title>
+    <title> programming on Yet Another Geographer</title>
     <link>/tags/programming/</link>
-    <description>Recent content in Programming on Yet Another Geographer</description>
+    <description>Recent content in  programming on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 29 Nov 2016 00:07:16 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Tue, 29 Nov 2016 00:07:16 +0000</pubDate>
       
       <guid>/a-short-exploration-of-the-2016-electoral-swing/</guid>
-      <description>I’m pretty skeptical of the generalized uniform partisan swing assumption in gerrymandering models. Part of this is due to some skepticism about how swing actually occurs in elections generally. If we don’t have an explicit “shock” model for our counterfactuals, they’re probably not going to replicate true experienced electoral swings well. 
-I’ve put together a notebook where I go through and explore some modeling of the 2012-2016 electoral swing at the county level.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,7 +26,7 @@ I’ve put together a notebook where I go through and explore some modeling of t
       <pubDate>Tue, 25 Oct 2016 19:53:11 +0000</pubDate>
       
       <guid>/yet-another-elections-simulator/</guid>
-      <description>After reading Wasserman’s 2012 blog post about mixture models, I’m glad that I’ve finally figured out &amp;amp; implemented the Gelman-King 1994 electoral model as well. Based on pretty straghtforward regression modeling, the setup trades the representational simplicity of the Linzer GMM model for a much more complex modeling structure, but that I guess provides better guarantees about its own properties. Regardless, it’s a bummer that these guys stuff, theLinzer 2012 paper on simulating seats/votes curves using gaussian mixtures &amp;amp; the JudgeIt stuff for the GK1994 paper was never merged into the political science computational library.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -36,8 +35,7 @@ I’ve put together a notebook where I go through and explore some modeling of t
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
-You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -46,8 +44,7 @@ You see, some spatial econometric models require that the log determinant of a v
       <pubDate>Wed, 18 May 2016 20:48:03 +0000</pubDate>
       
       <guid>/puzzles-about-misreplication/</guid>
-      <description>So, a while back, I was using a new compactness metric to extend some gerrymandering studies. In attempting the replication, I found some minor math errors in the original paper that made it diffcult to get valid values for the statistic.
-After trying multiple times to verify whether it was my code or if the published statistic had some typographical error, I went to the original author, shared my concerns, and found that it did.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -56,10 +53,7 @@ After trying multiple times to verify whether it was my code or if the published
       <pubDate>Thu, 24 Mar 2016 22:32:23 +0000</pubDate>
       
       <guid>/bringing-classifiers-alive-in-pysal/</guid>
-      <description>I&amp;rsquo;ve talked a lot to fellow developers about making PySAL objects more than containers for the results of a statistical procedure.
-One way I think we can do this is to focus on methods like predict, find, update, or reclassify.
-So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to update map classifiers by defining their __call__ method.
-   In [2]: import pysal as ps</description>
+      <description>Lower Upper Count x[i] &amp;lt;= 2.497 283 2.497 &amp;lt; x[i] &amp;lt;= 5.104 282 5.104 &amp;lt; x[i] &amp;lt;= 7.621 282 7.621 &amp;lt; x[i] &amp;lt;= 10.981 282 10.981 &amp;lt; x[i] &amp;lt;= 92.937 283Lower Upper Count x[i] &amp;lt;= 4.265 471 4.265 &amp;lt; x[i] &amp;lt;= 8.679 470 8.679 &amp;lt; x[i] &amp;lt;= 92.937 471Lower Upper Count x[i] &amp;lt;= 0.000 180 0.000 &amp;lt; x[i] &amp;lt;= 2.836 134 2.836 &amp;lt; x[i] &amp;lt;= 4.265 157 4.265 &amp;lt; x[i] &amp;lt;= 5.</description>
     </item>
     
     <item>
@@ -69,7 +63,7 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
       <description>thanks, libsixel
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -78,9 +72,7 @@ So, here, I&amp;rsquo;ll show the way I&amp;rsquo;ve implemented a simple API to
       <pubDate>Wed, 09 Dec 2015 20:45:53 +0000</pubDate>
       
       <guid>/the-competence-ceiling/</guid>
-      <description>After programming Haskell, R, or Python for about 6 years now, I feel like I’m sufficiently skilled with Python to make anything that I want to do in python immediate.
-I understand its execution model. I feel very confident in my understandings of how python objects work. The fastest/lightest way to get what I want seems like it’s relatively easy to achieve.
-In a sense, I feel competent. And that makes me feel a little complacent, and a little stagnant.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -89,7 +81,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
       <pubDate>Fri, 16 Oct 2015 20:02:11 +0000</pubDate>
       
       <guid>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -98,8 +90,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
       <pubDate>Tue, 06 Oct 2015 01:17:56 +0000</pubDate>
       
       <guid>/two-points-in-learning-to-program/</guid>
-      <description>I feel like there are two big, “pivotal” realizations in my story so far of learning to program. While I’m sure not everyone moves from Haskell to Shen to R to Python before really feeling competent in a language, I have seen many peers grapple with them. 
-1. Separate your code and data. I think this would be more aptly stated as Think Abstractly, but that belies the immediacy that the first statement provides.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -108,8 +99,7 @@ In a sense, I feel competent. And that makes me feel a little complacent, and a 
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       
       <guid>/my-time-using-linux-has-apparently-made-me-quite/</guid>
-      <description>I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
-Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists. Even Microsoft has its standardized .</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -118,9 +108,7 @@ Having one program that updates all your software is so desirable at this poin
       <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
       
       <guid>/ok-so-i-think-my-days-of-using-texstudio-are/</guid>
-      <description>Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
-I guess color scheme fights are about as lame as you can get. Except maybe fights over brace or comment styles&amp;hellip;
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -129,9 +117,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
-2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

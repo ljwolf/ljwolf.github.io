@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kind Of on Yet Another Geographer</title>
+    <title> kind of on Yet Another Geographer</title>
     <link>/tags/kind-of/</link>
-    <description>Recent content in Kind Of on Yet Another Geographer</description>
+    <description>Recent content in  kind of on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 23 Jun 2016 20:59:03 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 23 Jun 2016 20:59:03 +0000</pubDate>
       
       <guid>/partially-applied-classes-with-new/</guid>
-      <description>Python’s got some pretty cool ways to enable unorthodox behavior. For my project, I’ve found myself writing a lot of closures around our existing class init functions, and have decided it might be easier &amp;amp; more consistent to express this as what it really is: partial application. Partial application is pretty simple to enable for python class constructors, since the separate new method allows you to construct closures around initialization routines.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

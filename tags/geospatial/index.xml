@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Geospatial on Yet Another Geographer</title>
+    <title>geospatial on Yet Another Geographer</title>
     <link>/tags/geospatial/</link>
-    <description>Recent content in Geospatial on Yet Another Geographer</description>
+    <description>Recent content in geospatial on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 19 May 2015 03:06:16 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Tue, 19 May 2015 03:06:16 +0000</pubDate>
       
       <guid>/happy-geohacking/</guid>
-      <description>I just got done teaching a short workshop on GIS in Python. Something may be odd to those of you who use FOSS packages to do GIS: I didn&amp;rsquo;t use any GeoPandas.
-This wasn&amp;rsquo;t a constraint I wanted. But, just getting pure pip-installable packages like Shapely and PySAL was difficult enough. The admins didn&amp;rsquo;t want to install one of the big scientific Python distributions and would only let something with minimal impact get used.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

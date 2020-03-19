@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Grad School on Yet Another Geographer</title>
+    <title> grad school on Yet Another Geographer</title>
     <link>/tags/grad-school/</link>
-    <description>Recent content in Grad School on Yet Another Geographer</description>
+    <description>Recent content in  grad school on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 05 Jan 2017 19:27:59 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 05 Jan 2017 19:27:59 +0000</pubDate>
       
       <guid>/an-update-on-phd-burnout/</guid>
-      <description>After writing briefly about burnout in July, when I had done a Google Summer of Code while working as a Research Assistant on a grant about spatial multilevel modeling, I was super burnt out. Now, I’d like to safely say, while I’m still stressed and spread too thin over too many projects, I don’t feel burnt out any longer. The main thing I realized is the importance of switching into “write-only” mode.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Sun, 17 Jul 2016 19:27:14 +0000</pubDate>
       
       <guid>/im-trying-to-recover-from-a-bit-of-burnout-this/</guid>
-      <description>I’m trying to recover from a bit of burnout. This summer, I’m ostensibly double-booked, working on a Google Summer of Code project in addition to a project with the new Center for Spatial Data Science at the University of Chicago, and I&amp;rsquo;m still keeping up with my Dissertation &amp;amp; my involvement in the Python Spatial Analysis Library outside of my GSOC project. I just finished my comprehensives back in May, so I’m also trying to maintain momentum on my dissertation work.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -35,10 +35,7 @@
       <pubDate>Mon, 06 Jun 2016 19:11:28 +0000</pubDate>
       
       <guid>/gsoc-call-notes-june-6-2016/</guid>
-      <description>I&amp;rsquo;ve had to take a break from the spatial hierarchical linear modeling kick I&amp;rsquo;ve been on recently to get back to some GSOC work.
-Today, I had my weekly call with my mentors.
-On today&amp;rsquo;s call, my mentors and I discussed a few things.
-Testing &amp;amp; Merging of project code Since many of the improvements I&amp;rsquo;m making to the library are module-by-module, I was advised to submit PRs when a logical unit of contribution is ready to ship.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -47,8 +44,7 @@ Testing &amp;amp; Merging of project code Since many of the improvements I&amp;r
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
-The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -57,7 +53,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -66,8 +62,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       <pubDate>Mon, 22 Feb 2016 16:23:53 +0000</pubDate>
       
       <guid>/a-quick-note-on-hierarchical-linear-models/</guid>
-      <description>Owen, Harris, &amp;amp; Jones have a pretty cool new paper out discussing strengths &amp;amp; weaknesses of hierarchical/multilevel linear modelling. In a wonderfully readable review paper, they pretty simply state in the review that hierarchical models don&amp;rsquo;t directly answer the classic question at the heart of tons of geographic research:
- Given that you live where you do, talk to who you do, and interact with the social milleau that you do, how is your behavior different?</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -76,8 +71,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       <pubDate>Sat, 24 Oct 2015 15:20:46 +0000</pubDate>
       
       <guid>/the-compilation-errorreading-technical-articles/</guid>
-      <description>This article by Terrence Tao is incredibly enlightening, especially for those in technical fields.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -86,8 +80,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       <pubDate>Tue, 16 Jun 2015 15:27:27 +0000</pubDate>
       
       <guid>/cenpy-big-query/</guid>
-      <description>If you’ve been using my tools for census data exploration, as intensely as I&amp;rsquo;d hope you have, you might’ve noticed that the Census limits queries to 50 columns per query.
-I’ve got your back, though. The newest release, cenpy 0.7, now supports n-column queries by chunking through 50-coulumns at a time. Be careful, though, as I&amp;rsquo;m sure if you pull down the entire Census 2010 short form in one go, you will probably get rate limited.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -96,9 +89,7 @@ I’ve got your back, though. The newest release, cenpy 0.7, now supports n-colu
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       
       <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
-      <description>I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
-At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.
-But, if you know things about voronoi polygons, you know that they</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -107,7 +98,7 @@ But, if you know things about voronoi polygons, you know that they</description>
       <pubDate>Fri, 26 Sep 2014 17:40:00 +0000</pubDate>
       
       <guid>/some-new-realizations-on-oooooold-material/</guid>
-      <description>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -116,8 +107,7 @@ But, if you know things about voronoi polygons, you know that they</description>
       <pubDate>Wed, 05 Mar 2014 04:14:20 +0000</pubDate>
       
       <guid>/modified-an-existing-asu-beamer-template/</guid>
-      <description>For SGSUP use. It’s silly the feelings of accomplishment that simple things like that provides.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -126,7 +116,7 @@ But, if you know things about voronoi polygons, you know that they</description>
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -135,7 +125,7 @@ But, if you know things about voronoi polygons, you know that they</description>
       <pubDate>Mon, 03 Feb 2014 14:00:00 +0000</pubDate>
       
       <guid>/on-perpsective/</guid>
-      <description>Trying to express an area of specialization is surprisingly difficult. But, these exercises in perspective-stretching are important to realize the limits to both your knowledge and the knowledge at the frontier of research. When intently focused on the smallest of details about the implementation of an out-of-kilter algorithm, it&amp;rsquo;s easy to forget that, while it&amp;rsquo;s hard to figure out how to implement a stochastic constraint solver in Haskell, there are broader problems.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -144,9 +134,7 @@ But, if you know things about voronoi polygons, you know that they</description>
       <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
       
       <guid>/initialization/</guid>
-      <description>Hey all! I&amp;rsquo;m Levi Wolf, a first-year, 22-year-old Ph. D. student at Arizona State University. I am starting this blog to help me accomplish 2 things:
-1.) Begin tracking, however informally, a record of effort in many problem areas. In a very real sense, I anticipate this becoming a journal for stray thoughts, recommendations, and discoveries about the minutiae of daily life.
-2.) Encounter new or alternative sources of inspiration and perspective on problems and questions.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

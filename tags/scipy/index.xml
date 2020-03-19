@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Scipy on Yet Another Geographer</title>
+    <title> scipy on Yet Another Geographer</title>
     <link>/tags/scipy/</link>
-    <description>Recent content in Scipy on Yet Another Geographer</description>
+    <description>Recent content in  scipy on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 12 Jul 2015 00:22:13 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2015 21:36:32 +0000</lastBuildDate>
     
 	<atom:link href="/tags/scipy/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,8 +17,7 @@
       <pubDate>Sun, 12 Jul 2015 00:22:13 +0000</pubDate>
       
       <guid>/gearing-up-for-the-last-day-of-scipy-2015/</guid>
-      <description>It&amp;rsquo;ll be a good one
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Thu, 29 May 2014 10:02:09 +0000</pubDate>
       
       <guid>/going-to-scipy-2014/</guid>
-      <description>anyone in Austin in July?
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

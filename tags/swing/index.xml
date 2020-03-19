@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Swing on Yet Another Geographer</title>
+    <title>swing on Yet Another Geographer</title>
     <link>/tags/swing/</link>
-    <description>Recent content in Swing on Yet Another Geographer</description>
+    <description>Recent content in swing on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 09 Mar 2018 17:34:20 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
       
       <guid>/post/spatial_acf/</guid>
-      <description>I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&amp;rdquo; at which processes operate electorally. I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. The typical diameter at which the so-called &amp;ldquo;spatial autocorrelation function&amp;rdquo; goes to zero denotes how wide a typical spatial cluster might be, and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold.</description>
+      <description>I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&amp;rsquo;&amp;rsquo; at which processes operate electorally. I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. The typical diameter at which the so-called &amp;ldquo;spatial autocorrelation function&amp;rdquo; goes to zero denotes how wide a typical spatial cluster might be, and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold.</description>
     </item>
     
   </channel>

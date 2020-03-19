@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mathematics on Yet Another Geographer</title>
+    <title> mathematics on Yet Another Geographer</title>
     <link>/tags/mathematics/</link>
-    <description>Recent content in Mathematics on Yet Another Geographer</description>
+    <description>Recent content in  mathematics on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 26 Sep 2014 17:40:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 26 Sep 2014 17:40:00 +0000</pubDate>
       
       <guid>/some-new-realizations-on-oooooold-material/</guid>
-      <description>For my TA appointment for the Masters in Applied Sciences program, I am having to generate some lectures on statistical theory. Because of some interest across the program in improving the statistics portion of the curriculum, I wrote about two weeks of lectures and assignments on spatial statistics, pushing from a start point of the Kolmogorov Axioms, fundamental results in elementary probability theory all the way up through spatial regression.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

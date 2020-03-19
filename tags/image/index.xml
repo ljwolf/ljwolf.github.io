@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Image on Yet Another Geographer</title>
+    <title>image on Yet Another Geographer</title>
     <link>/tags/image/</link>
-    <description>Recent content in Image on Yet Another Geographer</description>
+    <description>Recent content in image on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 28 Feb 2018 15:46:40 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 28 Feb 2018 15:46:40 +0000</pubDate>
       
       <guid>/this-is-an-interesting-little-exploration-i-did/</guid>
-      <description>I don&amp;rsquo;t really have a good idea for what many places in the UK are like, nor for what the structure of some of this data is when considering its joint structure. So, while my model fits quite well and yields some interesting results, I&amp;rsquo;m a bit limited because I don&amp;rsquo;t really know what a place like Barrow-in-Furness is like, without looking into it.
-In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;rsquo;s telling me from the conditional estimates because I don&amp;rsquo;t really have a sense of the joint picture: I don&amp;rsquo;t really intuit how they covary across places, like I might in US counties or states.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@ In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;r
       <pubDate>Thu, 15 Feb 2018 20:09:35 +0000</pubDate>
       
       <guid>/this-brexit-analysis-for-the-gisruk-competitions/</guid>
-      <description>That is after, of course, I just decided to focus on other data than data in the competition.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -37,9 +35,7 @@ In general, it&amp;rsquo;s more difficult to get a sense of what the model&amp;r
       <pubDate>Wed, 31 Jan 2018 07:07:03 +0000</pubDate>
       
       <guid>/never-thought-id-be-complaining-about-only-having/</guid>
-      <description>Not sure where this happens, since I&amp;rsquo;m just using sparse matrices here. I guess they might get densified somewhere below me &amp;amp; then that overhead allocation doesn&amp;rsquo;t get returned to other processes, it&amp;rsquo;s just claimed by the jupyter kernel.
-Which&amp;hellip;. means that my two kernels compete for space.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -48,8 +44,7 @@ Which&amp;hellip;. means that my two kernels compete for space.
       <pubDate>Mon, 29 Jan 2018 20:05:03 +0000</pubDate>
       
       <guid>/its-neat-that-this-new-algorithm-is-working/</guid>
-      <description>I find that the hardest part for me to be motivated about is the stage right after I finish the proof of concept. It&amp;rsquo;s like&amp;hellip; once the new stuff is done, I get much less interested than when I&amp;rsquo;m still trying to figure it out.
-I guess that&amp;rsquo;s probably pretty common among researchers, but the thrill of wrestling with a genuinely new problem is interesting, enjoyable, and difficult. Sometimes, it feels like documenting that wrestling is a bit tedious.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -58,8 +53,7 @@ I guess that&amp;rsquo;s probably pretty common among researchers, but the thril
       <pubDate>Thu, 17 Aug 2017 23:38:37 +0000</pubDate>
       
       <guid>/i-forgot-how-killer-the-builtin-matplotlib/</guid>
-      <description>Instead, why not just use their frontends and plt.ion()? Unix + tiling WM is truly a system-wide IDE, but I never learned the &amp;ldquo;old&amp;rdquo; tooling for working with matplotlib at the cli.
-The first time I learned matplotlib I learned it in a notebook. Now that I&amp;rsquo;m wedded to tiling &amp;amp; strongly prefer the terminal ipython to the notebook, I&amp;rsquo;ve gotta learn all the older tooling for matplotlib.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -68,9 +62,7 @@ The first time I learned matplotlib I learned it in a notebook. Now that I&amp;r
       <pubDate>Wed, 05 Jul 2017 18:56:45 +0000</pubDate>
       
       <guid>/i-think-thisll-end-up-being-the-big-story-from-my/</guid>
-      <description>District shape isn’t at all related to political impact (in aggregate) when it comes to redistricting.
-While some weird districts may exist and those may be gerrymandered, the relationship is not statistically sound in aggregate: weird districts might be completely benign, in terms of the partisan advantage measures I’m considereding my dissertation &amp;amp; other classical measures of model influence.
-Totally discounting the “expressive harms” arguments in this sphere, though.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -80,7 +72,7 @@ Totally discounting the “expressive harms” arguments in this sphere, though.
       
       <guid>/is-my-uptime-excited-or-scared-you-decide/</guid>
       <description>you decide.
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -89,8 +81,7 @@ Totally discounting the “expressive harms” arguments in this sphere, though.
       <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
       
       <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
-      <description>like tears in rain.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -100,7 +91,7 @@ Totally discounting the “expressive harms” arguments in this sphere, though.
       
       <guid>/finally-got-this-elections-simulator-working-the/</guid>
       <description>finally got this elections simulator working, based on Linzer&amp;rsquo;s 2012 paper on gaussian mixture modelling for elections data.
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -110,7 +101,7 @@ Totally discounting the “expressive harms” arguments in this sphere, though.
       
       <guid>/every-time-i-use-a-sixel-based-library-it-just/</guid>
       <description>images directly in the terminal! no fuss! although you have to use a special terminal emulator&amp;hellip;
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -120,7 +111,7 @@ Totally discounting the “expressive harms” arguments in this sphere, though.
       
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
       <description>my spatially-correlated variance components model is finally coming together :)
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -131,7 +122,7 @@ Totally discounting the “expressive harms” arguments in this sphere, though.
       <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
       <description>above is their geweke statistic versus my version &amp;amp; that found in CODA.
 Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -140,8 +131,7 @@ Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;
       <pubDate>Mon, 12 Sep 2016 02:28:19 +0000</pubDate>
       
       <guid>/found-another-error-in-the-clea-as-i-am-building/</guid>
-      <description>The smallest little errors give you some pretty weird results when you&amp;rsquo;re looking deeply into the data. In this case, Doug Bosco only ran against David Redick. Creighton and Binderup were oppononents of another Democrat that year, the then-congresswoman now-senator Barbara Boxer.
-But, the incorrect story in the data is kind of interesting to consider&amp;hellip; two Republicans ran in CA-CD01 in 1984, and won a combined total of &amp;gt;50% of the vote.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -150,8 +140,7 @@ But, the incorrect story in the data is kind of interesting to consider&amp;hell
       <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
-      <description>have really bad traces sometimes&amp;hellip;. not sure what causes them to do this excursion out into the weird space, but it makes their eventual traces have real severe autocorrelation.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -160,8 +149,7 @@ But, the incorrect story in the data is kind of interesting to consider&amp;hell
       <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
-      <description>now that the google summer of code has winded down.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -170,9 +158,7 @@ But, the incorrect story in the data is kind of interesting to consider&amp;hell
       <pubDate>Sun, 19 Jun 2016 20:37:12 +0000</pubDate>
       
       <guid>/more-on-the-log-determinant-stuff-i-think-ive/</guid>
-      <description>You see, the full likelihood of the model I&amp;rsquo;m working with is something like:
-$$|I - \rho W| \times \mathcal{N}(X\beta + \rho W y, \sigma^2) $$
-And, since (W) and (I) are constants, I actually need the gradient of the log determinant with respect to ( \rho ), not (A). Since the derivative of the log determinant with respect to (A), the full laplacian matrix, is an (N \times N) matrix, I was getting a conformality error in PyMC3, which wanted the derivative with respect to $\rho$ and was expecting a scalar.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -181,8 +167,7 @@ And, since (W) and (I) are constants, I actually need the gradient of the log de
       <pubDate>Fri, 17 Jun 2016 18:27:53 +0000</pubDate>
       
       <guid>/thisll-be-a-more-lucid-writeup-of-what-i-was/</guid>
-      <description>Recently, I’ve been working on getting spatial econometric models implemented using PyMC3. I’ll put pu an example later, but right now I’m primarily concerned with making the example more efficient for slightly larger datasets.
-You see, some spatial econometric models require that the log determinant of a very large matrix be computed. Since most of these models are estimated using Maximum Likelihood, this is somewhat painful, but can be minimized by exploiting sparsity in the large matrix.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -191,7 +176,7 @@ You see, some spatial econometric models require that the log determinant of a v
       <pubDate>Fri, 17 Jun 2016 05:02:53 +0000</pubDate>
       
       <guid>/man-im-so-close-to-a-pretty-massive-speedup-of/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -200,8 +185,7 @@ You see, some spatial econometric models require that the log determinant of a v
       <pubDate>Fri, 03 Jun 2016 01:40:17 +0000</pubDate>
       
       <guid>/visual-display-of-complex-data-can-be-pretty/</guid>
-      <description>This is a visualization of one hierarchical parameter from a a spatially-varying coefficient process model, estimated on a simple 10x10 grid. The model itself is a pretty neat way to specify a spatially-varying process with an efficient formal structure. I won&amp;rsquo;t go into the specification here, but my growing interest in MLM/HLM means I&amp;rsquo;ll probably be posting about SVCP-style models more frequently.
-The point of this, though, is that characterizing both the spatial distribution of hierarchical parameter means and the distributions of those parameters for each individual unit is hard.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -210,7 +194,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       <pubDate>Tue, 17 May 2016 04:10:13 +0000</pubDate>
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -220,7 +204,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
       <description>thanks, libsixel
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -229,9 +213,7 @@ The point of this, though, is that characterizing both the spatial distribution 
       <pubDate>Fri, 11 Mar 2016 17:35:10 +0000</pubDate>
       
       <guid>/npr-north-carolina-voters-are-likely-to-be/</guid>
-      <description>North Carolina voters are likely to be confused when they arrive at the polling place on March 15th. In addition to presidential candidates, voters will see congressional primary candidates on the ballot.
-But thanks to a federal court decision, the districts those candidates represent no longer exist and any voters in those races won’t count.
-Thanks to three judges, two animal shapes and one hastily redrawn map of U.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -241,7 +223,7 @@ Thanks to three judges, two animal shapes and one hastily redrawn map of U.</des
       
       <guid>/one-of-my-favorite-diagrams-from-micah-altmans/</guid>
       <description>from micah altman&amp;rsquo;s fantastic dissertation.
- imported from: yetanothergeographer</description>
+imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -250,10 +232,7 @@ Thanks to three judges, two animal shapes and one hastily redrawn map of U.</des
       <pubDate>Wed, 13 Jan 2016 23:10:08 +0000</pubDate>
       
       <guid>/thelandofmaps-us-congressional-districts/</guid>
-      <description>U.S. Congressional districts redrawn by a computer to eliminate gerrymandering [1603x2170][OC]CLICK HERE FOR MORE MAPS!thelandofmaps.tumblr.com
-
-“”“Eliminate Gerrymandering”““
-These kinds of maps are interesting visualizations, but I guarantee you that these maps would exhibit such strong partisan &amp;amp; racial bias. Thus, it burns me up to read that people think this is what Larry Lessig (or Barack Obama in the SOTU) mean when they talk about reducing/eliminating gerrymandering.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -262,7 +241,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Thu, 17 Dec 2015 19:18:26 +0000</pubDate>
       
       <guid>/welp-that-was-fun-headed-back-to-phx/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -271,7 +250,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Fri, 16 Oct 2015 20:02:11 +0000</pubDate>
       
       <guid>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -280,7 +259,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Fri, 09 Oct 2015 01:21:32 +0000</pubDate>
       
       <guid>/having-a-last-name-of-wolf-has-never-been-an/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -289,8 +268,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Thu, 01 Oct 2015 16:56:40 +0000</pubDate>
       
       <guid>/ah-yes-i-am-in-fact-skilled-in-spatial/</guid>
-      <description>how did you know? I am very capable to make things more similar to themselves over geography.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -299,7 +277,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Wed, 29 Jul 2015 02:49:09 +0000</pubDate>
       
       <guid>/getting-excited-about-some-cool-new-exploration/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -308,8 +286,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Mon, 27 Jul 2015 18:54:01 +0000</pubDate>
       
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
-      <description>Simply amazing.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -318,7 +295,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Fri, 12 Jun 2015 17:30:00 +0000</pubDate>
       
       <guid>/mulitprocessing-business-in-the-front-parallel/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -327,7 +304,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Tue, 27 Jan 2015 22:01:33 +0000</pubDate>
       
       <guid>/this-is-insane-the-speed-differences-between/</guid>
-      <description>The speed differences between Scipy and Numpy&amp;rsquo;s probability distributions is immense. Across the board, we see that numpy is almost twice as fast, in all cases. In the worst case, it&amp;rsquo;s hundreds of times faster. I wish scipy would put a warning or something on usage, cause waiting for some of these simulations I actually need to finish will be ridiculous. Thanks, scipy.  imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -336,9 +313,7 @@ These kinds of maps are interesting visualizations, but I guarantee you that the
       <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
       
       <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
-      <description>I am in the process of matching North Carolina congressional districts (CD) to their corresponding voronoi polygons drawn from the CD centroids.
-At the top, the voronoi polygons for the North Carolina CD centroids are calculated at an 80% buffer distance. This means that the algorithm is trying to extend the voronoi polygons out to 80% of the minimum bounding rectangle.
-But, if you know things about voronoi polygons, you know that they</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -347,9 +322,7 @@ But, if you know things about voronoi polygons, you know that they</description>
       <pubDate>Fri, 22 Aug 2014 19:55:00 +0000</pubDate>
       
       <guid>/so-say-youre-working-with-two-states/</guid>
-      <description>Then, you have to read it into R because JudgeIt is only an R package so far. All the dataframes were made in the same way, yet R decided that indicators of California&amp;rsquo;s 112th districts were factors, not numbers, causing JudgeIt sanity checks to fail. these errors read something like:a
- ERROR: Some $VOTE values not in [0,1] interval.
- So, I did what the reasonable person who is used to using float() would do and just as.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -358,8 +331,7 @@ But, if you know things about voronoi polygons, you know that they</description>
       <pubDate>Tue, 17 Jun 2014 21:26:16 +0000</pubDate>
       
       <guid>/my-time-using-linux-has-apparently-made-me-quite/</guid>
-      <description>I was doing some work in pandas and the append() function wouldn&amp;rsquo;t work as documented. Essentially, everything was conformable, but append() wouldn&amp;rsquo;t merge. Turns out I&amp;rsquo;m at least four versions behind on pandas, not to mention 3 versions of numpy and matplotlib.
-Having one program that updates all your software is so desirable at this point that I can&amp;rsquo;t understand why the independent application install model still exists. Even Microsoft has its standardized .</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -368,9 +340,7 @@ Having one program that updates all your software is so desirable at this poin
       <pubDate>Thu, 08 May 2014 18:59:51 +0000</pubDate>
       
       <guid>/ok-so-i-think-my-days-of-using-texstudio-are/</guid>
-      <description>Also, I was informed that monokai soda, my terminal color scheme, is &amp;ldquo;ugly&amp;rdquo; by someone who uses solarized light.
-I guess color scheme fights are about as lame as you can get. Except maybe fights over brace or comment styles&amp;hellip;
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -379,7 +349,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
       <pubDate>Thu, 01 May 2014 03:59:44 +0000</pubDate>
       
       <guid>/track-changes-may-in-fact-be-the-worst/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -388,7 +358,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
       <pubDate>Tue, 29 Apr 2014 23:44:51 +0000</pubDate>
       
       <guid>/something-about-custom-blue-gamuts-makes-for-a/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -397,7 +367,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
       <pubDate>Wed, 23 Apr 2014 13:46:43 +0000</pubDate>
       
       <guid>/gotta-wonder-if-her-parents-were-just-having-a/</guid>
-      <description>At the same time, I&amp;rsquo;ll never forget their name.  imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -406,9 +376,7 @@ I guess color scheme fights are about as lame as you can get. Except maybe fight
       <pubDate>Wed, 09 Apr 2014 01:51:21 +0000</pubDate>
       
       <guid>/its-so-frustrating-to-see-a-cool-idea-fall-by-the/</guid>
-      <description>GeoDa center sandbox? Super cool. And yet, it&amp;rsquo;s been long defunct. I guess that&amp;rsquo;s what happens sometimes when things don&amp;rsquo;t hit critical mass.
-Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarly by the wayside.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -417,7 +385,7 @@ Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarl
       <pubDate>Fri, 07 Mar 2014 18:05:57 +0000</pubDate>
       
       <guid>/the-face-of-needing-a-spring-break/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -426,7 +394,7 @@ Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarl
       <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
       
       <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
-      <description>That aside, I&amp;rsquo;ve forked the Shapefile.jl repo and put in some goals to further Julia&amp;rsquo;s spatial analysis capabilities. I don&amp;rsquo;t know what the community ethics/practices are for Julia, but I&amp;rsquo;m always slightly nervous about being the first fork on a repo that hasn&amp;rsquo;t been touched in a few months. I can&amp;rsquo;t really explain why. Maybe it&amp;rsquo;s just a concern that my preference for private repos and anonymous contribution makes my github page look sparse.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -435,9 +403,7 @@ Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarl
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
-2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -446,10 +412,7 @@ Hopefully the things I&amp;rsquo;m contributing to won&amp;rsquo;t fall similarl
       <pubDate>Thu, 13 Feb 2014 15:35:53 +0000</pubDate>
       
       <guid>/went-crawling-back-into-workflowys-arms-today/</guid>
-      <description>I simply wasn&amp;rsquo;t as efficient with others as I was with workflowy. The ease of use, the speed, the interface&amp;hellip; all superior for just a simple outlining tool.
-It&amp;rsquo;s not open source, but it&amp;rsquo;s so well designed. This kills me.
-If I could get HackFlowy working with tags and external port forwarding, I would leave. But, for now, I&amp;rsquo;l consign myself to the proprietary beast.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -458,7 +421,7 @@ If I could get HackFlowy working with tags and external port forwarding, I would
       <pubDate>Sat, 08 Feb 2014 14:31:39 +0000</pubDate>
       
       <guid>/this-is-a-brighter-moment-of-graduate-school/</guid>
-      <description>imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -467,7 +430,7 @@ If I could get HackFlowy working with tags and external port forwarding, I would
       <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>High expectations (by myself and those around me) increase stakes. I have an idea of where the line is between &amp;ldquo;ready to ship&amp;rdquo; and &amp;ldquo;needs more edits&amp;rdquo; without needing hard deadlines, but need more worldly experience. Writing this article is quite different than the work I did as a research assistant at the Office of the President, with Dr. Clay or Dr. Bruhn, or for the various campaigns and social movements I worked with.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

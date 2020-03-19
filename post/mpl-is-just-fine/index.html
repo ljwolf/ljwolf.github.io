@@ -11,7 +11,7 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/post/mpl-is-just-fine/">
 <base href="/" />
@@ -19,33 +19,16 @@
 <meta property="og:description" content="I&rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&rsquo;m still learning things that exist within the pylab interface&hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/mpl-is-just-fine/" />
-
-
-
-<meta property="article:published_time" content="2018-03-18T22:02:05&#43;00:00"/>
-
-<meta property="article:modified_time" content="2018-03-18T22:02:05&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-03-18T22:02:05+00:00" />
+<meta property="article:modified_time" content="2018-03-18T22:02:05+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mpl Is Just Fine"/>
 <meta name="twitter:description" content="I&rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&rsquo;m still learning things that exist within the pylab interface&hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier."/>
 
 
-
 <meta itemprop="name" content="Mpl Is Just Fine">
 <meta itemprop="description" content="I&rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&rsquo;m still learning things that exist within the pylab interface&hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier.">
-
-
 <meta itemprop="datePublished" content="2018-03-18T22:02:05&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-18T22:02:05&#43;00:00" />
 <meta itemprop="wordCount" content="157">
@@ -53,7 +36,6 @@
 
 
 <meta itemprop="keywords" content="" />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -159,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -177,12 +161,9 @@ For instance, I just learned about <code>plt.axvline</code>, which I could use
 to draw vertical lines in my code instead of what I usually use, <code>plt.vlines(coordinate_list, *plt.gca().get_ylim())</code>,
 but it&rsquo;s not as general as <code>plt.vlines</code> since it actually plots a rectangle.
 Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier.</p>
-
 <p>The fact that there&rsquo;s also no <code>abline</code> still gets to me, too, when I step back from it.</p>
-
 <p>I wonder if you could make it &ldquo;better&rdquo; by making a better API that focuses on the UX,
 adding a bit more semanic structure/nesting to the <code>pyplot</code> api that users could understand.</p>
-
 <p>CLI UX is really hard, especially for cases where you can&rsquo;t pipe, but you can nest.</p>
  </div>
     <footer class="post-footer">

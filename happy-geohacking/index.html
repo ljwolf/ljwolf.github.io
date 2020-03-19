@@ -11,52 +11,31 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/happy-geohacking/">
 <base href="/" />
 <meta property="og:title" content="Happy GeoHacking" />
-<meta property="og:description" content="I just got done teaching a short workshop on GIS in Python. Something may be odd to those of you who use FOSS packages to do GIS: I didn&rsquo;t use any GeoPandas.
-This wasn&rsquo;t a constraint I wanted. But, just getting pure pip-installable packages like Shapely and PySAL was difficult enough. The admins didn&rsquo;t want to install one of the big scientific Python distributions and would only let something with minimal impact get used." />
+<meta property="og:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/happy-geohacking/" />
-
-
-
-<meta property="article:published_time" content="2015-05-19T03:06:16&#43;00:00"/>
-
-<meta property="article:modified_time" content="2015-05-19T03:06:16&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2015-05-19T03:06:16+00:00" />
+<meta property="article:modified_time" content="2015-05-19T03:06:16+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Happy GeoHacking"/>
-<meta name="twitter:description" content="I just got done teaching a short workshop on GIS in Python. Something may be odd to those of you who use FOSS packages to do GIS: I didn&rsquo;t use any GeoPandas.
-This wasn&rsquo;t a constraint I wanted. But, just getting pure pip-installable packages like Shapely and PySAL was difficult enough. The admins didn&rsquo;t want to install one of the big scientific Python distributions and would only let something with minimal impact get used."/>
-
+<meta name="twitter:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer."/>
 
 
 <meta itemprop="name" content="Happy GeoHacking">
-<meta itemprop="description" content="I just got done teaching a short workshop on GIS in Python. Something may be odd to those of you who use FOSS packages to do GIS: I didn&rsquo;t use any GeoPandas.
-This wasn&rsquo;t a constraint I wanted. But, just getting pure pip-installable packages like Shapely and PySAL was difficult enough. The admins didn&rsquo;t want to install one of the big scientific Python distributions and would only let something with minimal impact get used.">
-
-
+<meta itemprop="description" content="imported from:&lt;a href=&#39;https://yetanothergeographer.">
 <meta itemprop="datePublished" content="2015-05-19T03:06:16&#43;00:00" />
 <meta itemprop="dateModified" content="2015-05-19T03:06:16&#43;00:00" />
-<meta itemprop="wordCount" content="590">
+<meta itemprop="wordCount" content="3">
 
 
 
 <meta itemprop="keywords" content="geospatial, gis, python,imported," />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -162,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -174,27 +155,17 @@ th {
 
 <article class="post">
     <h1 class="title"> Happy GeoHacking </h1>
-    <div class="content"> <p>I just got done teaching a short <a href="https://github.com/ljwolf/tutorials/tree/master/pygis" target="_blank">workshop on GIS in Python</a>. Something may be odd to those of you who use FOSS packages to do GIS: I didn&rsquo;t use any <a href="https://github.com/geopandas/geopandas" target="_blank"><code>GeoPandas</code></a>.</p>
-
-<p>This wasn&rsquo;t a constraint I wanted. But, just getting pure <code>pip</code>-installable packages like <a href="https://github.com/toblerity/shapely" target="_blank"><code>Shapely</code></a> and <a href="https://github.com/pysal/pysal" target="_blank"><code>PySAL</code></a> was difficult enough. The admins didn&rsquo;t want to install one of the big <a href="https://www.enthought.com/products/canopy/" target="_blank">scientific</a> <a href="http://continuum.io/downloads" target="_blank">Python</a> distributions and would only let something with minimal impact get used.</p>
-
-<p>So, in composing the workshop, I focused on <code>Pandas</code>, <code>PySAL</code>, and <code>Shapely</code>. In it, I had the students build an analogue to the <code>GeoPandas</code> dataframe by constructing dataframes with series containing a <code>Shapely</code> object. This was remarkably easy, but helped the attendees understand how to do spatial operations on <code>Shapely</code> objects.</p>
-
-<p>Overall, though, I was struck with how easy it was to replicate the core class features of <code>GeoPandas</code>, notably without the use of a heavy IO library like <code>Fiona</code>. Every few months, the <code>PySAL</code> team tends to discuss whether or not to migrate to using <code>Fiona</code> on the backend, instead of our currently existing, pure Python solutions. I&rsquo;ve been working on fixing up these solutions to get ready for a release of <code>PySAL</code> in Python 3, so moving to something like <code>Fiona</code> looked like it&rsquo;d save a ton of work. But, the costs in speed and install difficulty for adding a dependency on <code>OGR</code> has never been a popular option.</p>
-
-<p>So, just now, I pushed up a <em>pseudo-fork</em> of <a href="https://github.com/ljwolf/pysal/tree/geodf/pysal/contrib/geodf" target="_blank"><code>GeoPandas</code></a> that incorporates the main functionalities of <code>GeoPandas</code> while trying to strip any reference or call to <code>Fiona</code> or <code>OGR</code>. The idea here would be that this fits in any space <code>PySAL</code> fits in, and works as an alternative frontend to <code>PySAL</code>&rsquo;s current heavy leverage of raw <code>numpy</code> matrices and vectors.</p>
-
-<p>But, having just recently re-read the ESR column <a href="http://www.catb.org/esr/faqs/hacker-howto.html" target="_blank">How to be a Hacker</a>, I wondered how productive this conversion/strip job would actually make people. In the essay, Eric Raymond recommends that <a href="http://www.catb.org/esr/faqs/hacker-howto.html#believe2" target="_blank">no problem should be solved twice</a>.</p>
-
-<p>And, in this case, I think I&rsquo;ve certainly re-solved the problem of reading in spatial data into a GeoDataframe. But, notably, I&rsquo;ve done it using a backend with <em>much less generality</em> than the other solutions!</p>
-
-<p>So, why did I decide to do this? I can certainly handle an <code>OGR</code> install. Anyone who wants to use <code>PySAL</code> on a <code>GeoPandas</code>-like dataframe should themselves be able to string together simple calls to <code>numpy.array</code> to cast their dataframes down to vectors that <code>PySAL</code> can use. In fact, I&rsquo;m still working on solving a core issue of <code>GeoPandas</code>/<code>PySAL</code> interoperability: construction of a spatial weights object inline with the GeoDataframe.</p>
-
-<p>I guess I&rsquo;m happy with the fact that this was bourne out of a realization had during that workshop. And, this was a great exercise in (yet more) <code>io</code> hacking with <code>PySAL</code>. Where some might not be able to handle an <code>OGR</code> install and thus not be able to grab <code>Fiona</code> or <code>GeoPandas</code>, this <code>geodf</code> contrib module could work. But, I think, in the future, I&rsquo;ll be focused more on linking GeoDataframe instances to <code>PySAL</code> analytics methods (using <code>Patsy</code> &amp; a fast <code>shapely-&gt;PySAL</code> weights constructor) rather than simply replicating an <code>io</code> framework that <code>Fiona</code> makes more general and more easy to use.</p>
-
-<p>In full, swapping <code>PySAL.core.IOHandlers</code> in as the main engine driving <code>IO</code> has convinced me that an internal GeoJSON representation fully abstracted from whether the underlying data is geojson, shapefile, coverage, PostGIS, or whatever, as is provided by <code>Fiona</code>, is still probably the right way to do geospatial <code>FileIO</code>.</p>
-
-<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/119345228474/happy-geohacking'<tt>yetanothergeographer</tt></a></small></p>
+    <div class="content"> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> imported from:<!-- raw HTML omitted --> &lt;a href='https://yetanothergeographer.tumblr.com/119345228474/happy-geohacking'<!-- raw HTML omitted -->yetanothergeographer<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
  </div>
     <footer class="post-footer">
 

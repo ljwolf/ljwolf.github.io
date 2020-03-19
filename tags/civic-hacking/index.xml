@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Civic Hacking on Yet Another Geographer</title>
+    <title> civic hacking on Yet Another Geographer</title>
     <link>/tags/civic-hacking/</link>
-    <description>Recent content in Civic Hacking on Yet Another Geographer</description>
+    <description>Recent content in  civic hacking on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 05 Jun 2015 18:01:54 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 05 Jun 2015 18:01:54 +0000</pubDate>
       
       <guid>/cenpy-an-exploratory-interface-to-the-census/</guid>
-      <description>CenPy - An exploratory interface to the Census API So, I was looking to do some programmatic access to US Census Bureau data and was finding myself a little frustrated with how limited current tools in Python were to work with the connections. Mainly, most supported only a few protocols, provided no documentation or exploration functionality, and left it primarily up to exeternal documentation to provide information on how to query the API.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

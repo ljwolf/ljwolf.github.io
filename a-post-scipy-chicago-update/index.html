@@ -11,52 +11,31 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/a-post-scipy-chicago-update/">
 <base href="/" />
 <meta property="og:title" content="A Post-SciPy Chicago Update" />
-<meta property="og:description" content="After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&rsquo;ve had in the library recently.
-I&rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on handling burnout as a graduate student. But, I&rsquo;ve been forgetting to tag posts so that they&rsquo;d show up in the GSOC aggregator!" />
+<meta property="og:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/a-post-scipy-chicago-update/" />
-
-
-
-<meta property="article:published_time" content="2016-07-25T02:52:31&#43;00:00"/>
-
-<meta property="article:modified_time" content="2016-07-25T02:52:31&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2016-07-25T02:52:31+00:00" />
+<meta property="article:modified_time" content="2016-07-25T02:52:31+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A Post-SciPy Chicago Update"/>
-<meta name="twitter:description" content="After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&rsquo;ve had in the library recently.
-I&rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on handling burnout as a graduate student. But, I&rsquo;ve been forgetting to tag posts so that they&rsquo;d show up in the GSOC aggregator!"/>
-
+<meta name="twitter:description" content="imported from:&lt;a href=&#39;https://yetanothergeographer."/>
 
 
 <meta itemprop="name" content="A Post-SciPy Chicago Update">
-<meta itemprop="description" content="After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&rsquo;ve had in the library recently.
-I&rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on handling burnout as a graduate student. But, I&rsquo;ve been forgetting to tag posts so that they&rsquo;d show up in the GSOC aggregator!">
-
-
+<meta itemprop="description" content="imported from:&lt;a href=&#39;https://yetanothergeographer.">
 <meta itemprop="datePublished" content="2016-07-25T02:52:31&#43;00:00" />
 <meta itemprop="dateModified" content="2016-07-25T02:52:31&#43;00:00" />
-<meta itemprop="wordCount" content="1187">
+<meta itemprop="wordCount" content="3">
 
 
 
 <meta itemprop="keywords" content="gsoc, see i won&#39;t forget to tag it this time, python, gis, development, software, geography, statistics,imported," />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -162,6 +141,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -174,41 +155,24 @@ th {
 
 <article class="post">
     <h1 class="title"> A Post-SciPy Chicago Update </h1>
-    <div class="content"> <p>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&rsquo;ve had in the library recently.</p>
-
-<p>I&rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on <a href="http://ljwolf.org/post/147564537909/im-trying-to-recover-from-a-bit-of-burnout-this" target="_blank">handling burnout as a graduate student</a>. But, I&rsquo;ve been forgetting to tag posts so that they&rsquo;d show up in the GSOC aggregator! Bummer!</p>
-
-<h1>The Great Divide</h1>
-
-<p>Right before SciPy, a contributor suggested that it might be a reasonable idea to split the library up into independent packages. Ostensibly motivated by <a href="https://twitter.com/daniel_akuna/status/750442115742785536" target="_blank">this conversation</a> on twitter, the suggestion highlighted a few issues (I think) with how PySAL operates, both on a normative level, on a proecedural level, and in our code. This is an interesting suggestion, and  I think it has a few very strong benefits.</p>
-
-<h3>Lower Maintainence Surface</h3>
-
-<p>Chief among the benefits is that minimizing the maintainence burden makes <em>academic</em> developers much more productive. This is something I&rsquo;m actually <strong>baffled</strong> by in our current library. I understand that technical debt is hard to overcome and that some parts of the library may not exist had we started <em>now</em> rather than five years ago. But, it&rsquo;s <em>so much easier</em> to swap in ecosystem-standard packages than it is to <em>continue maintaining code that few people understand.</em> This is also much more true when you recognize that our library does, in many places, exhibit effective use of duck typing. The barrier to us using something like pygeoif or shapely as a computational geometry core is primarily mental, and conversion of the library to drop/wrap unnecessary code in <code>cg</code>, <code>weights</code>, and <code>core</code> would take less than a week of full-time work. And, it&rsquo;d strongly lower the maintenance footprint of the library, which I think is a central benefit of the split package suggestion.</p>
-
-<h3>Clearer Academic Crediting</h3>
-
-<p>Plus, the idea that splitting up the library into many, more loosely-coupled packages seems like a stroke towards the <code>R</code>-style ecosystem, which is exactly what the linked twitter thread suggests. But, I think that <code>R</code> actually has some comfy <em>structural incentives</em> for the drivers of its ecosystem to do what they do. Since an academic can make a barely-maintained package that does some unique statistical operation and get a <em>Journal of Statistical Software</em> article out of it, the academic-heavy ecosystem in R is angled towards this kind of development. And, indeed, with a very small maintainence surface, these tiny packages get shipped, placed on a CV, and occasionally updated. Thus, the social incentives align to generate a particular technical structure, something I think Hadly overstates in that brief conversation as a product of object oriented programming. While OO isn&rsquo;t a perfect abstraction, I&rsquo;m kind of done with <em>blaming</em> OO for everything I don&rsquo;t like, and I think that the claim that OO encourages monolithic packages is, on its face, not a <em>necessary</em> conclusion. It comes down to defining efficient interfaces between classes and exposing a consistent, formal API. I don&rsquo;t really think it matters whether that API is populated or driven using functions &amp; immutable data or objects &amp; bound methods. Closures &amp; Objects are two sides of the same coin, really. Mostly, though, thinking that the social &amp; technical differences in R and Python package development can be explained through quick recourse to OO vs. FP (when I bet the majority of academic package developers don&rsquo;t even deeply understand OO or FP) is flippant at best. I really think more of it is the structure of academic rewards, and the predominance of academics in the R ecosystem.</p>
-
-<p>But that&rsquo;s an aside. More generally, fragmenting the library would make it easier for new contributors to derive academic credit from their contributions.</p>
-
-<h3>Cleaner Dependency Logic</h3>
-
-<p>I think many of the library developers also feel limited by the strict adherence to a minimal set of dependencies, namely <code>scipy</code> and <code>numpy</code>. By splitting the package up into separate modules with potentially different dependency requirements, we legitimate contributors who want to provide new stuff with flashy new packages.</p>
-
-<p>To be clear, I think the way we do this right now is somewhat frustrating. If a contribution is done using only SciPy &amp; Numpy and is sufficiently integrated into the rest of the library, it gets merged into &ldquo;core&rdquo; pysal. If it uses &ldquo;extra&rdquo; libraries but is still relevant to the project, we merge it into a module, <code>contrib</code>. This catch-all module contains some totally complete code from younger contributors, like the <code>spint</code> module for spatial interaction models or my <code>handler</code> module for formula-based spatial regression interfaces, as well as code from long-standing contributors, like the <code>viz</code> module. But, it also contains incomplete remnants of prior projects, put in contrib to make sure they weren&rsquo;t forgotten. And, to make matters worse, none of the stuff in contrib is used in our continuous integration framework. So, even if an author <em>writes</em> test suites, they&rsquo;re not <em>run</em> routinely, meaning that the compatibility clock is ticking every time code is committed to the module. Since it&rsquo;s not unittested and documentation &amp; quality standards aren&rsquo;t the same as the code in <code>core</code>, it&rsquo;s often easier to write from scratch when something breaks. Thus, fragmenting the package would &ldquo;liberate&rdquo; packages in <code>contrib</code> that meet standards of quality for introduction to <code>core</code> but have extra dependencies.</p>
-
-<h3>But why is this necessary?</h3>
-
-<p>Of course, we can do much of what fragmentation provides <em>technologically</em> using <a href="https://github.com/pysal/pysal/wiki/Using-soft-dependencies" target="_blank">soft dependencies</a>. At the module level, it&rsquo;s actually incredibly easy. But, I have also built tooling to do this at the class/function level, and it works great. So, this particular idea about having multiple <em>packages</em> doesn&rsquo;t solve what I think is fundamentally a social/human problem.</p>
-
-<p>The rules we&rsquo;ve built around contribution do not actively support using the best tools for the job. Indeed, the social structure of two-tiered contribution, where the second tier has incredibly heterogeneous quality, intent, and no support for coverage/continuous integration testing, inhibits code reuse and magnifies <a href="http://c2.com/cgi/wiki?NotInventedHere" target="_blank">not-invented-here syndrome</a> intensely. We can&rsquo;t exploit great packages like <a href="https://github.com/pytoolz/cytoolz" target="_blank">cytools</a>, have largely avoided merging code that leverages improved computational runtimes (using <code>numba</code> &amp; <code>cython</code>), and haven&rsquo;t really (until my GSOC) programmed around <code>pandas</code> as a valid interaction method to the library.</p>
-
-<p>Most of the barriers to this are, as a mentioned above, mental and social, not technical. Our code can be well-architected, even though we&rsquo;ve implemented special structures to do things that are more commonly (sometimes more efficiently) solved in other packages or using other techniques.</p>
-
-<p>And, there&rsquo;s some freaking cool stuff going on involving PySAL. Namely, the thing that&rsquo;s been animating me is its use in <a href="https://carto.com" target="_blank">Carto&rsquo;s</a> <a href="https://github.com/cartodb/crankshaft" target="_blank">Crankshaft</a>, which integrates some PySAL tooling into a PL/Python plugin for Postgres. They&rsquo;ll be exposing <em>our</em> API (or a subset of it) to users through this wrapper, and that feels super cool! So, we&rsquo;ve got good things going for our library. But, I think that continued progress needs to address these primarily <em>social</em> concerns, because the code, technologically, I think is more sound than one could expect from full-time academic authors.</p>
-
-<p><small><i> imported from:</i> <a href='https://yetanothergeographer.tumblr.com/147934748469/a-post-scipy-chicago-update'<tt>yetanothergeographer</tt></a></small></p>
+    <div class="content"> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> imported from:<!-- raw HTML omitted --> &lt;a href='https://yetanothergeographer.tumblr.com/147934748469/a-post-scipy-chicago-update'<!-- raw HTML omitted -->yetanothergeographer<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
  </div>
     <footer class="post-footer">
 

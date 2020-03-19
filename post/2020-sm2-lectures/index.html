@@ -11,58 +11,40 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/post/2020-sm2-lectures/">
 <base href="/" />
 <meta property="og:title" content="Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling" />
-<meta property="og:description" content="For an intro &amp; discussion of some of the fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
-Logistics Courses start at 11AM on the date listed. The Join Remotely links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).
-Plotting &amp; spatial relationships in R (Notebook)
-This practical/component will cover some of the fundamental concepts in quantitative geography, such as: - theoretical and empirical properties of relationships between geographic objects - how to compute &amp; use these relationships in R - what kernel functions/distance decay is - how to make focused maps &amp; use spatial relationships to make better maps in R" />
+<meta property="og:description" content="For an intro &amp; discussion of some of hte fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
+Plotting &amp; spatial relationships in R (notebook]
+This practical/component will cover some of the fundamental concepts in quantitative geography, such as:
+ theoretical and empirical properties of relationships between geographic objects how to compute &amp; use these relationships in R what kernel functions/distance decay is how to make focused maps &amp; use spatial relationships to make better maps in R  Testing Tobler&rsquo;s Law (notebook]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/2020-sm2-lectures/" />
-
-
-
-<meta property="article:published_time" content="2020-03-09T12:02:47&#43;00:00"/>
-
-<meta property="article:modified_time" content="2020-03-09T12:02:47&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-03-09T12:02:47+00:00" />
+<meta property="article:modified_time" content="2020-03-09T12:02:47+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling"/>
-<meta name="twitter:description" content="For an intro &amp; discussion of some of the fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
-Logistics Courses start at 11AM on the date listed. The Join Remotely links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).
-Plotting &amp; spatial relationships in R (Notebook)
-This practical/component will cover some of the fundamental concepts in quantitative geography, such as: - theoretical and empirical properties of relationships between geographic objects - how to compute &amp; use these relationships in R - what kernel functions/distance decay is - how to make focused maps &amp; use spatial relationships to make better maps in R"/>
-
+<meta name="twitter:description" content="For an intro &amp; discussion of some of hte fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
+Plotting &amp; spatial relationships in R (notebook]
+This practical/component will cover some of the fundamental concepts in quantitative geography, such as:
+ theoretical and empirical properties of relationships between geographic objects how to compute &amp; use these relationships in R what kernel functions/distance decay is how to make focused maps &amp; use spatial relationships to make better maps in R  Testing Tobler&rsquo;s Law (notebook]"/>
 
 
 <meta itemprop="name" content="Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling">
-<meta itemprop="description" content="For an intro &amp; discussion of some of the fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
-Logistics Courses start at 11AM on the date listed. The Join Remotely links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).
-Plotting &amp; spatial relationships in R (Notebook)
-This practical/component will cover some of the fundamental concepts in quantitative geography, such as: - theoretical and empirical properties of relationships between geographic objects - how to compute &amp; use these relationships in R - what kernel functions/distance decay is - how to make focused maps &amp; use spatial relationships to make better maps in R">
-
-
+<meta itemprop="description" content="For an intro &amp; discussion of some of hte fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.
+Plotting &amp; spatial relationships in R (notebook]
+This practical/component will cover some of the fundamental concepts in quantitative geography, such as:
+ theoretical and empirical properties of relationships between geographic objects how to compute &amp; use these relationships in R what kernel functions/distance decay is how to make focused maps &amp; use spatial relationships to make better maps in R  Testing Tobler&rsquo;s Law (notebook]">
 <meta itemprop="datePublished" content="2020-03-09T12:02:47&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-09T12:02:47&#43;00:00" />
-<meta itemprop="wordCount" content="486">
+<meta itemprop="wordCount" content="414">
 
 
 
 <meta itemprop="keywords" content="" />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -168,6 +150,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -180,51 +164,34 @@ th {
 
 <article class="post">
     <h1 class="title"> Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling </h1>
-    <div class="content"> 
-
-<p>For an intro &amp; discussion of some of the fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.</p>
-
-<h2 id="logistics">Logistics</h2>
-
-<p>Courses start at 11AM on the date listed. The Join Remotely links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).</p>
-
-<h2 id="plotting-spatial-relationships-in-r">Plotting &amp; spatial relationships in R</h2>
-
-<p>(<a href="https://ljwolf.org/teaching/2020-sm2-00.html">Notebook</a>)</p>
-
-<p>This practical/component will cover some of the fundamental concepts in quantitative geography, such as:
-- theoretical and empirical properties of relationships between geographic objects
-- how to compute &amp; use these relationships in R
-- what kernel functions/distance decay is
-- how to make focused maps &amp; use spatial relationships to make better maps in R</p>
-
-<h2 id="testing-tobler-s-law-20-march-2020">Testing Tobler&rsquo;s Law (20 March 2020)</h2>
-
-<p>(<a href="https://ljwolf.org/teaching/2020-sm2-01.html">Notebook</a>, <a href="https://eu.bbcollab.com/guest/7b2caddfd9f64dd09986e5272d83bdbf">Join Remotely</a>)</p>
-
+    <div class="content"> <p>For an intro &amp; discussion of some of hte fundamental ideas in spatial statistics, we&rsquo;ll cover a few main topics.</p>
+<h2 id="plotting--spatial-relationships-in-r">Plotting &amp; spatial relationships in R</h2>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-00.html">notebook</a>]</p>
+<p>This practical/component will cover some of the fundamental concepts in quantitative geography, such as:</p>
+<ul>
+<li>theoretical and empirical properties of relationships between geographic objects</li>
+<li>how to compute &amp; use these relationships in R</li>
+<li>what kernel functions/distance decay is</li>
+<li>how to make focused maps &amp; use spatial relationships to make better maps in R</li>
+</ul>
+<h2 id="testing-toblers-law">Testing Tobler&rsquo;s Law</h2>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-01.html">notebook</a>]</p>
 <blockquote>
 <p>Everything is related to everything else, but near things are more related than distant things.</p>
 </blockquote>
-
 <p>In this practical, we’ll be using the previous practical’s information about spatial relationships, functions, and modelling to understand the spatial structure of deprivation in Bristol. We’ll only be doing exploratory spatial data analysis this time, with an eye to doing some more advanced modelling in the weeks ahead.</p>
-
-<p>Our main interest for this practical will be to examine a few questions
-1. Is deprivation clustered in Bristol?
-2. Where are the clusters of deprivation in Bristol?
-3. At what scale does deprivation cluster in Bristol (very local, ward-level, or regionally?)</p>
-
-<h3 id="extra-local-statistics-finding-the-uniqueness-in-all-of-us">Extra: Local Statistics - finding the uniqueness in all of us</h3>
-
-<p>(<a href="https://ljwolf.org/teaching/2020-sm2-02.html">Notebook</a>)</p>
-
-<p>This extends on the previous notebook where we examine so-called ``global&rdquo; spatial dependence. In this notebook, we’re going to look at local spatial autocorrelation. Like a kind of outlier diagnostic, local spatial autocorrelation measures how the local structure of a spatial relationship around each site either conforms to what we expect or is different from what we expect. Together, local spatial statistics are a general branch of statistics tha aim to characterize the relationship between a single observation and the sites surrounding it.</p>
-
+<p>Our main interest for this practical will be to examine a few questions</p>
+<ol>
+<li>Is deprivation clustered in Bristol?</li>
+<li>Where are the clusters of deprivation in Bristol?</li>
+<li>At what scale does deprivation cluster in Bristol (very local, ward-level, or regionally?)</li>
+</ol>
+<h2 id="local-statistics-finding-the-uniqueness-in-all-of-us">Local Statistics: finding the uniqueness in all of us</h2>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-02.html">notebook</a>]</p>
+<p>Today, we’re going to look at local spatial autocorrelation. Like a kind of outlier diagnostic, local spatial autocorrelation measures how the local structure of a spatial relationship around each site either conforms to what we expect or is different from what we expect. Together, local spatial statistics are a general branch of statistics tha aim to characterize the relationship between a single observation and the sites surrounding it.</p>
 <p>Often, local spatial autocorrelation is contrasted with global spatial autocorrelation, which is the structural relationship between sites (in abstract) and their surroundings (again, in abstract), and this may have strongly different structure for many of the ways we think about the &ldquo;surroundings&rdquo; of each observation. Thus, local statistics are an attempt at measuring the geographical beahvior of a given social, physical, or behaviorial process around each observation.</p>
-
-<h2 id="spatial-thinking-in-models-27-march-2020">Spatial thinking in models (27 March 2020)</h2>
-
-<p>(<a href="https://ljwolf.org/teaching/2020-sm2-03.html">Notebook</a>, <a href="https://eu.bbcollab.com/guest/a28e74b3950e4118a496a5509e005cbe">Join Remotely</a>)</p>
-
+<h2 id="spatial-thinking-in-models">Spatial thinking in models</h2>
+<p>(<a href="https://ljwolf.org/teaching/2020-sm2-03.html">notebook</a>]</p>
 <p>To this point in Spatial Modelling (I or II), we’ve really primarily dealt with regression models about spatial data. We have not really examined or understood how spatial structures or relationships themselves must be modeled. In the Regression module, we did talk a little bit about spatial fixed effects, which allow for there to be different mean/baselines in each area. In this component, we&rsquo;ll talk a little bit about spatial models, how they work, and why they are used.</p>
  </div>
     <footer class="post-footer">

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Operations Research on Yet Another Geographer</title>
+    <title> operations research on Yet Another Geographer</title>
     <link>/tags/operations-research/</link>
-    <description>Recent content in Operations Research on Yet Another Geographer</description>
+    <description>Recent content in  operations research on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 20 Feb 2014 04:32:52 +0000</lastBuildDate>
@@ -17,9 +17,7 @@
       <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>A couple realizations:
-1.) Having learned R first, I&amp;rsquo;m continually disappointed when standard arrays don&amp;rsquo;t implement sorting well.
-2.) I wanted to implement this using a queue, but apparently those aren&amp;rsquo;t standard elements in Julia&amp;rsquo;s base. And, for some reason, Julia&amp;rsquo;s package/module interface wasn&amp;rsquo;t working. Their explanation is cryptic on how to import functions from modules made out of installed packages, and what the relationship is between modules and packages.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

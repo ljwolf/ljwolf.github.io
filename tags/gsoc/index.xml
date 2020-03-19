@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gsoc on Yet Another Geographer</title>
+    <title>gsoc on Yet Another Geographer</title>
     <link>/tags/gsoc/</link>
-    <description>Recent content in Gsoc on Yet Another Geographer</description>
+    <description>Recent content in gsoc on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 17 Aug 2016 14:15:52 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 17 Aug 2016 14:15:52 +0000</pubDate>
       
       <guid>/formally-winding-down-gsoc/</guid>
-      <description>This week, I’ve been really bringing the work on GSOC to a close. Thus, I’ve linked to a notebook where I walk through the various work I’ve done in the project. What a ride.  imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -26,8 +26,7 @@
       <pubDate>Mon, 25 Jul 2016 02:52:31 +0000</pubDate>
       
       <guid>/a-post-scipy-chicago-update/</guid>
-      <description>After a bit of a whirlwind, going to SciPy and then relocating to Chicago for a bit, I figure I&amp;rsquo;ve collected enough thoughts to update on my summer of code project, as well as some of the discussion we&amp;rsquo;ve had in the library recently.
-I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings since my post on handling burnout as a graduate student. But, I&amp;rsquo;ve been forgetting to tag posts so that they&amp;rsquo;d show up in the GSOC aggregator!</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -36,8 +35,7 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
       <pubDate>Tue, 12 Jul 2016 04:39:00 +0000</pubDate>
       
       <guid>/using-soft-dependencies-effectively/</guid>
-      <description>I wrote a little guide for my fellow library devs about how to use soft dependencies effectively. This moves in tandem with some work on enabling PySAL to have a consistent user experience while leveraging the newest &amp;amp; best libraries for scientific computation. Since most of the work I’ve been doing involves using soft dependencies with the library, it’s important to get this right. The gist is here.
- imported from: yetanothergeographer</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -46,7 +44,7 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
       <pubDate>Thu, 23 Jun 2016 20:59:03 +0000</pubDate>
       
       <guid>/partially-applied-classes-with-new/</guid>
-      <description>Python’s got some pretty cool ways to enable unorthodox behavior. For my project, I’ve found myself writing a lot of closures around our existing class init functions, and have decided it might be easier &amp;amp; more consistent to express this as what it really is: partial application. Partial application is pretty simple to enable for python class constructors, since the separate new method allows you to construct closures around initialization routines.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -55,10 +53,7 @@ I&amp;rsquo;ve actually seen a lot of feedback on quite a bit of my postings sin
       <pubDate>Mon, 06 Jun 2016 19:11:28 +0000</pubDate>
       
       <guid>/gsoc-call-notes-june-6-2016/</guid>
-      <description>I&amp;rsquo;ve had to take a break from the spatial hierarchical linear modeling kick I&amp;rsquo;ve been on recently to get back to some GSOC work.
-Today, I had my weekly call with my mentors.
-On today&amp;rsquo;s call, my mentors and I discussed a few things.
-Testing &amp;amp; Merging of project code Since many of the improvements I&amp;rsquo;m making to the library are module-by-module, I was advised to submit PRs when a logical unit of contribution is ready to ship.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -67,8 +62,7 @@ Testing &amp;amp; Merging of project code Since many of the improvements I&amp;r
       <pubDate>Fri, 03 Jun 2016 20:07:42 +0000</pubDate>
       
       <guid>/the-beginnings-of-a-new-api/</guid>
-      <description>NOTE: A demo of the relevant code I&amp;rsquo;m referring to for the new labelled array API in pysal.weights in this update is available in this notebook, and the actual code lives in a weights2 module in my gsoc feature branch.
-I&amp;rsquo;ve decided to target our weights module to prototype the labelled array interface. In general, we&amp;rsquo;ll need extensions built into at least our exploratory spatial data analysis module, esda, our spatial regression module, spreg, and our spatial dynamics module, spatial_dynamics.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -77,8 +71,7 @@ I&amp;rsquo;ve decided to target our weights module to prototype the labelled ar
       <pubDate>Wed, 25 May 2016 04:23:38 +0000</pubDate>
       
       <guid>/call-notes-about-my-request-for-comment/</guid>
-      <description>The followng were comments I recieved on my Request for Comment submitted a bit ago.
-Questions about Request for Comment: What should I prioritize? NOGR or Labeled Array Interface? Labeled Array. This is critical to get correct, and will make NOGR need and scope clearer. How deep into PySAL should the Labeled Array interface go? Design it like the library were getting built now. Do not fail on import. Instead, use soft dependencies/optional import patterns if necessary, write Python3-only components safely, so that new features can be leveraged.</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
     <item>
@@ -87,9 +80,7 @@ Questions about Request for Comment: What should I prioritize? NOGR or Labeled A
       <pubDate>Mon, 23 May 2016 17:20:58 +0000</pubDate>
       
       <guid>/gsoc-introduction/</guid>
-      <description>Hey all!
-While I may have put the cart before the horse in doing an RFC before an introduction, it’s never too late :)
-My name is Levi John Wolf. I am a PhD candidate at Arizona State University. I study spatial statistics, econometrics, &amp;amp; polimetrics, focusing on campaigns, elections, &amp;amp; inequality. I am a Google Summer of Code student for the Python Spatial Analysis Library (PySAL), under the Python Software Foundation (PSF).</description>
+      <description>imported from:&amp;lt;a href=&#39;https://yetanothergeographer.</description>
     </item>
     
   </channel>

@@ -11,7 +11,7 @@
 <meta name="description" content="just a geograblog" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.67.1" />
 
 <link rel="canonical" href="/post/cdrc-brexit/">
 <base href="/" />
@@ -20,22 +20,8 @@
 There is an abstract describing some of the work that I submitted to get to the final round, but if you&rsquo;re computationally inclined, you&rsquo;ll find everything sufficient to replicate my modelling &amp; analysis in this Jupyter Notebook (raw). You&rsquo;ll need scikit-learn, pystan, statsmodels, and geopandas at minimum to run." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/cdrc-brexit/" />
-
-
-
-<meta property="article:published_time" content="2018-04-18T01:46:46&#43;01:00"/>
-
-<meta property="article:modified_time" content="2018-04-18T01:46:46&#43;01:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-04-18T01:46:46+01:00" />
+<meta property="article:modified_time" content="2018-04-18T01:46:46+01:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GISRUK I: CDRC Brexit Analysis Competition"/>
@@ -43,20 +29,16 @@ There is an abstract describing some of the work that I submitted to get to the 
 There is an abstract describing some of the work that I submitted to get to the final round, but if you&rsquo;re computationally inclined, you&rsquo;ll find everything sufficient to replicate my modelling &amp; analysis in this Jupyter Notebook (raw). You&rsquo;ll need scikit-learn, pystan, statsmodels, and geopandas at minimum to run."/>
 
 
-
 <meta itemprop="name" content="GISRUK I: CDRC Brexit Analysis Competition">
 <meta itemprop="description" content="My entry in the Consumer Data Research Center&rsquo;s Brexit Data Competition is called &ldquo;Tension Points: A Theory &amp; Evidence&rdquo; (static), which I talked about at the 2018 GISRUK conference
 There is an abstract describing some of the work that I submitted to get to the final round, but if you&rsquo;re computationally inclined, you&rsquo;ll find everything sufficient to replicate my modelling &amp; analysis in this Jupyter Notebook (raw). You&rsquo;ll need scikit-learn, pystan, statsmodels, and geopandas at minimum to run.">
-
-
 <meta itemprop="datePublished" content="2018-04-18T01:46:46&#43;01:00" />
 <meta itemprop="dateModified" content="2018-04-18T01:46:46&#43;01:00" />
-<meta itemprop="wordCount" content="365">
+<meta itemprop="wordCount" content="316">
 
 
 
 <meta itemprop="keywords" content="" />
-
 
 <link rel="stylesheet" href="css/layout.css" />
 <style type="text/css">
@@ -162,6 +144,8 @@ th {
     
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
+    <a class="nav-item" href="/teaching/"><div class="nav-item-title">Teachings</div></a>
+    
 
   </nav>
 </div>
@@ -174,26 +158,13 @@ th {
 
 <article class="post">
     <h1 class="title"> GISRUK I: CDRC Brexit Analysis Competition </h1>
-    <div class="content"> 
-
-<p>My entry in the <a href="http://leicester.gisruk.org/cdrc-gisruk-data-challenge/">Consumer Data Research Center&rsquo;s Brexit Data Competition</a> is called <a href="https://docs.google.com/presentation/d/1Umyoq7FnylmWPPZh9sJsQvI5oWUShf-8zbzOmV3rcqs/edit?usp=sharing">&ldquo;Tension Points: A Theory &amp; Evidence&rdquo;</a> (<a href="talks/wolf_gisruk2018_brexit.pdf">static</a>), which I talked about at the <a href="http://leicester.gisruk.org/">2018 GISRUK conference</a></p>
-
+    <div class="content"> <p>My entry in the <a href="http://leicester.gisruk.org/cdrc-gisruk-data-challenge/">Consumer Data Research Center&rsquo;s Brexit Data Competition</a> is called <a href="https://docs.google.com/presentation/d/1Umyoq7FnylmWPPZh9sJsQvI5oWUShf-8zbzOmV3rcqs/edit?usp=sharing">&ldquo;Tension Points: A Theory &amp; Evidence&rdquo;</a> (<a href="talks/wolf_gisruk2018_brexit.pdf">static</a>), which I talked about at the <a href="http://leicester.gisruk.org/">2018 GISRUK conference</a></p>
 <p>There is <a href="papers/2018_cdrcdc.pdf">an abstract</a> describing some of the work that I submitted to get to the final round, but if you&rsquo;re computationally inclined, you&rsquo;ll find everything sufficient to replicate my modelling &amp; analysis in this <a href="notebooks/2018_gisruk-clean_bregmans.html">Jupyter Notebook</a> (<a href="notebooks/2018_gisruk-clean_bregmans.ipynb">raw</a>). You&rsquo;ll need <code>scikit-learn</code>, <code>pystan</code>, <code>statsmodels</code>, and <code>geopandas</code> at minimum to run. Also, the data is in a <code>sqlite</code> data store, but it&rsquo;s too large for me to host on GitHub and part of it is protected by the CDRC, so I cannot share it until these protections are lifted.</p>
-
-<h1 id="the-long-short-of-it">The long &amp; short of it:</h1>
-
+<h1 id="the-long--short-of-it">The long &amp; short of it:</h1>
 <p>I find that <a href="https://www.economist.com/news/britain/21702228-areas-lots-migrants-voted-mainly-remain-or-did-they-explaining-brexit-vote">the Economist&rsquo;s claim</a>, that &ldquo;high numbers of migrants don&rsquo;t bother Britons, high rates of change do,&rdquo; is only partially correct. It depends on the type of change.</p>
-
-<p>I split change into four types using a theory about how individuals may be changing/influenced in their vote choice by changes in their community:
-<ol>
-<li> Non-UK born population changes (&ldquo;people who aren&rsquo;t like me&rdquo;) </li>
-<li> Migrants from outside the UK (&ldquo;people changing the community who are new to Britain&rdquo;) </li>
-<li> Migrants from within the UK (&ldquo;people changing the community who are new to the community&rdquo;)</li>
-<li> Population structure volatility (&ldquo;ethnicity/character of the community changing regardless of origin&rdquo;)</li>
-</ol></p>
-
+<p>I split change into four types using a theory about how individuals may be changing/influenced in their vote choice by changes in their community:</p>
+<!-- raw HTML omitted -->
 <p>I find that raw non-UK population changes (factor 1) and Migrants <em>from within the UK</em> (factor 3) are the ones associated with a place voting Leave. Further, I find that the opposite occurs for factors (2,4), which are actually associated with Remain voting. This suggests that both population growth and internal migration within the UK matter to drive Brexit voting. It&rsquo;s not enough to just consider the raw foreign born population changes, since those provide an incomplete picture of how change in population structure affected Leave voting.</p>
-
 <p>I find this in a varying-slopes model, which allows for different regions of England &amp; Wales to have different levels of baseline Brexit support. Further, I also model the first-order effects of many of these changes using the non-UK born population (white &amp; ethnic), which provides the first-order effects for the various measures.</p>
  </div>
     <footer class="post-footer">
