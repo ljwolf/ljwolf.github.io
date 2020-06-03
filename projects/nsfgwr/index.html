@@ -68,7 +68,7 @@
             <h1 id="a-quick-further-note-on-gwrsvc--the-dgps">A quick further note on GWR/SVC &amp; the DGPs</h1>
 <p>Last meeting, I showed you this plot of the SVC bandwidth estimate versus the DGP process’s parameter.</p>
 
-<img src='http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-parameter-versus-moran.png'>
+<img src='http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-parameter-versus-estimates.png'>
 
 <h3 id="figure-1-svc-estimate-versus-process-parameter">Figure 1: SVC Estimate Versus Process Parameter</h3>
 <p>So, from <strong>Figure 1</strong>, we can see that</p>
@@ -84,7 +84,7 @@
 <h4 id="how-can-the-two-both-be-correct-though">How can the two both be correct, though?</h4>
 <p>I think this is pretty interesting! It implies that “roughness” is not related to autocorrelation in the surfaces.</p>
 <p>So, we can see this directly in the figure below. For the GRF and the SAR, we see that increases in their process parameter result in increases in the Moran’s <em>I</em> for a surface (nearly monotonically increasing!) But, for the fractal process, it <em>falls</em> from perfectly autocorrelated to something around .25: 
-<img src='http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-parameter-versus-estimate.png'>
+<img src='http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-parameter-versus-moran.png'>
 <h3 id="figure-3-morans-i-for-beta-versus-process-parameter">Figure 3: Moran’s <em>I</em> for β versus Process Parameter</h3>
 <p>So, the entire “right” side of the Fractal pane above is composed of surfaces with fractal values between 0 and .5. The “swell” of dots between 0 and .5 reflects <em>all</em> fractal parameter realizations from about 0.5 onwards. This is a function of the distinctive structure in these three surfaces. In the Fractal DGP one, you can see that <em>all</em> the high Moran’s <em>I</em> realizations occur with a small fractal roughness parameter, and these generally have large SVC bandwidth estimates. The plots are interactable, so please do roate/zoom to get a better look!</p>
 <iframe src="http://ljwolf.org/projects/nsfgwr/fractal.html" title='Fractal DGP 3d Scatterplot' width=800 height=800> </iframe>
