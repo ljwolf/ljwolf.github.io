@@ -3,7 +3,7 @@ title: "Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling"
 date: 2020-03-09T12:02:47Z
 ---
 
-For an intro & discussion of some of hte fundamental ideas in spatial statistics, we'll cover a few main topics. 
+For an intro & discussion of some of the fundamental ideas in spatial statistics, we'll cover a few main topics. 
 
 ## Logistics
 
