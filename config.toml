@@ -41,22 +41,10 @@ pygmentsCodeFences = true
     url = "https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"
 
 [[menu.main]]
-    name = "Bristol"
+    name = "Job"
     weight = 3
     identifier = "brizzle"
     url = "http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"
-
-[[menu.main]]
-    name = "Chicago"
-    weight = 4
-    identifier = "uchicago"
-    url = "https://spatial.uchicago.edu"
-
-[[menu.main]]
-    name = "UCR"
-    weight = 5
-    identifier = "ucr"
-    url = "https://spatial.ucr.edu"
 
 #[[menu.main]]
 #    name = "Teaching"
