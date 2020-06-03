@@ -1,6 +1,7 @@
 ---
 title: "Email Charter"
 date: 2019-06-17T14:13:14+01:00
+description: "Shorter, fewer, better."
 ---
 
 # The University of Bristol Email Charter

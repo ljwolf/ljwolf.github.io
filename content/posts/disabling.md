@@ -1,6 +1,7 @@
 ---
 title: "Disabling Technologies"
 date: 2019-09-19T09:48:35+01:00
+description: "Thinking about Gahegan's essay on Disabling Tech."
 ---
 
 On “Routine” Computing at Scale as a Disabling Technology

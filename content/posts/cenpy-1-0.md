@@ -1,6 +1,7 @@
 ---
 title: "Cenpy 1.0.0"
 date: 2019-04-08T12:44:33+01:00
+description: "The best darn US Census Bureau package in Python"
 ---
 
 I'm really excited to announce that my longstanding package to work the with US Census Bureau API, `cenpy`, has gotten some long-needed love and attention. The new method of working with the data is really slick (if I do say so myself). 

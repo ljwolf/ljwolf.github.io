@@ -1,6 +1,7 @@
 ---
 title: "Open Code is Not Enough"
 date: 2019-07-15T01:46:40+01:00
+description: "Towards a replicable future for geographic data science"
 ---
 
 ## Towards a replicable future for geographic data science

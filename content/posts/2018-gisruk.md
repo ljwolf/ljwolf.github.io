@@ -1,6 +1,7 @@
 ---
 title: "GISRUK II: Spatially-Encouraged Spectral Clustering"
 date: 2018-04-04T02:20:45+01:00
+description: "A paper I'm presenting at GISRUK-2018"
 tags: ['clustering','preprints','conference paper', 'paper','gisruk','2018']
 ---
 

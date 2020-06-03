@@ -1,6 +1,7 @@
 ---
 title: "Deep work and the reverse todo list"
 date: 2019-07-24T13:19:16-07:00
+description: "Take work seriously, but not too seriously."
 ---
 
 I recently finished reading Cal Newport’s [Deep Work: rules for focused success in a distracted world](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692). While it’s pretty reasonable advice (like the nugget *“When you work, work hard. When you’re done, be done.”* p. 154), there are a few really powerful parts that I found very affecting and reasonable. Since I bet most folks take one message from Newport’s very [well](https://www.nytimes.com/2019/01/25/opinion/sunday/steve-jobs-never-wanted-us-to-use-our-iphones-like-this.html)-[publicized](https://www.stitcher.com/podcast/vox/the-ezra-klein-show/e/cal-newport-on-doing-deep-work-and-escaping-social-media-49878016) [media](https://www.nytimes.com/2019/04/08/smarter-living/digital-addiction-getting-you-down-try-an-analog-cure.html) [appearances](https://www.newyorker.com/magazine/2019/04/29/what-it-takes-to-put-your-phone-away), and that’s his [digital minimalism](https://www.amazon.com/Digital-Minimalism-Choosing-Focused-Noisy/dp/0525536515) message. While that’s a pretty important concept, it actually isn’t the main message in *Deep Work*. Instead, what *does* appear prominently is the philosophy of *work mindfulness* or *intention*. Presaging recent discussions of [millennial burnout](https://www.stitcher.com/podcast/vox/the-ezra-klein-show/e/60197403), Newport recommends that people 

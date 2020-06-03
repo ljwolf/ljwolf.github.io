@@ -1,6 +1,7 @@
 ---
 title: "Crunchtober"
 date: 2018-10-24T23:25:12+01:00
+description: "When working hard is not enough."
 ---
 
 ### One thing I find so difficult to accept is *crunch time.*

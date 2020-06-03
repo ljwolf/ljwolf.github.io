@@ -1,6 +1,7 @@
 ---
 title: "Q-Step Festival & Geosilhouettes"
 date: 2019-09-10T15:51:29+01:00
+description: "Speaking about boundaries..."
 ---
 On the 11th, I'll be speaking at the [Q-estival at the University of Exeter](http://socialsciences.exeter.ac.uk/q-step/events/q-estival/)'s Q-Step Centre. The Q-Step program is a program to promote a "step change" in quantitative social science skills in the UK. I'm the Bristol Geography lead for the program. I'm real excited to take my first trip out to Exeter, see the place, and talk about some interesting computational social science!
 
