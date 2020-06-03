@@ -6,52 +6,10 @@
     <description>Yet Another Geographer (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 03 Jun 2020 17:59:32 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 12:02:47 +0000</lastBuildDate>
     
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>A Quick further note on GWR/SVC &amp; DGPs</title>
-      <link>/posts/20200601-notes/</link>
-      <pubDate>Wed, 03 Jun 2020 17:59:32 +0100</pubDate>
-      
-      <guid>/posts/20200601-notes/</guid>
-      <description>&lt;h1 id=&#34;a-quick-further-note-on-gwrsvc--the-dgps&#34;&gt;A quick further note on GWR/SVC &amp;amp; the DGPs&lt;/h1&gt;
-&lt;p&gt;Last meeting, I showed you this plot of the SVC bandwidth estimate versus the DGP process’s parameter.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-parameter-versus-estimates.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;figure-1-svc-estimate-versus-process-parameter&#34;&gt;Figure 1: SVC Estimate Versus Process Parameter&lt;/h3&gt;
-&lt;p&gt;So, from &lt;strong&gt;Figure 1&lt;/strong&gt;, we can see that&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;large process parameters&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; for the GRF and SAR yield small SVC estimates. So, they agree on what is “global” and what is “local”, since small SVC estimates mean “global” here.&lt;/li&gt;
-&lt;li&gt;the SVC seems insensitive to the Fractal DGP parameter. The “roughness” of a surface doesn’t really affect the bandwidth estimate from an SVC.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In light of these results, we also mentioned converting these into having Moran’s $I$ on the $X$ axis, to be more comparable to Hanchen’s current heatmaps.&lt;/p&gt;
-&lt;p&gt;Having done this, the plot now shows that the fractal surface comes in line with Hanchen’s results from GWR:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://ljwolf.org/projects/nsfgwr/GRFSARFractal-moran-versus-estimates.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;figure-2-svc-estimate-versus-morans-i-for-beta&#34;&gt;Figure 2: SVC Estimate versus Moran’s I for $\beta$&lt;/h3&gt;
-&lt;p&gt;So, on the $X$ axis, we have a surface’s Moran’s $I$ value (estimated from $\beta$) and on the $Y$ axis, we have the SVC bandwidth estimate, as before. This suggests that the SVC bandwidth estimate &lt;em&gt;does&lt;/em&gt; track with an estimate of spatial autocorrelation (Moran’s $I$) for all three DGPs. This matches the weak relationship in Hanchen’s results.&lt;/p&gt;
-&lt;h4 id=&#34;how-can-the-two-both-be-correct-though&#34;&gt;How can the two both be correct, though?&lt;/h4&gt;
-&lt;p&gt;I think this is pretty interesting! It implies that “roughness” is not related to autocorrelation in the surfaces.&lt;/p&gt;
-&lt;p&gt;So, we can see this directly in the figure below. For the GRF and the SAR, we see that increases in their process parameter result in increases in the Moran’s I for a surface (nearly monotonically increasing!) But, for the fractal process, it &lt;em&gt;falls&lt;/em&gt; from perfectly autocorrelated to something around .25:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://ljwolf.org/projects/nsfgwr/GRFSARFractal-parameter-versus-moran.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;figure-3-morans-i-for-beta-versus-process-parameter&#34;&gt;Figure 3: Moran’s I for $\beta$ versus Process Parameter&lt;/h3&gt;
-&lt;p&gt;So, the entire “right” side of the Fractal pane above is composed of surfaces with fractal values between 0 and .5. The “swell” of dots between $I \in [0, .25]$ reflects &lt;em&gt;all&lt;/em&gt; fractal parameter realizations from about $.5$ onwards. This is a function of the distinctive structure in these three surfaces. In the Fractal DGP one, you can see that &lt;em&gt;all&lt;/em&gt; the high Moran’s $I$ realizations occur with a small fractal roughness parameter, and these generally have large SVC bandwidth estimates.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;For comparison, here are the two others:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;hr&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;For specificity on the “process parameter” spellings, l spell the fractal “roughness” parameter $f$, the Gaussian random field parameter $\theta$, and the SAR autocorrelation parameter $\rho$. The estimated bandwidth from the SVC will be spelled $\hat{\phi}$, as in the Bayesian literature. If needed, I’ll refer to the GWR estimated bandwidth as $\hat{h}$. Throughout, Moran’s $I$ refers to the estimated Moran’s $I$ value for the $\beta$ arising from a given DGP. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
-</description>
-    </item>
     
     <item>
       <title>Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling</title>

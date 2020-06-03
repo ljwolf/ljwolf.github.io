@@ -19,9 +19,9 @@
 <link rel="stylesheet" href="/css/style.css?rnd=1591203345" />
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="A quick further note on GWR/SVC." />
+<meta property="og:description" content="A quick further note on GWR/SVC" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/projects/nsfgwr/" />
+<meta property="og:url" content="/projects/nsfgwr/20200601-notes/" />
 
 
 <meta name="twitter:card" content="summary"/>
@@ -76,17 +76,17 @@
 <li>large process parameters<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> for the GRF and SAR yield small SVC estimates. So, they agree on what is “global” and what is “local”, since small SVC estimates mean “global” here.</li>
 <li>the SVC seems insensitive to the Fractal DGP parameter. The “roughness” of a surface doesn’t really affect the bandwidth estimate from an SVC.</li>
 </ul>
-<p>In light of these results, we also mentioned converting these into having Moran’s $I$ on the horizontal axis, to be more comparable to Hanchen’s current heatmaps.</p>
+<p>In light of these results, we also mentioned converting these into having Moran’s <em>I</em> on the horizontal axis, to be more comparable to Hanchen’s current heatmaps.</p>
 <p>Having done this, the plot now shows that the fractal surface comes in line with Hanchen’s results from GWR:</p>
 <img src='http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-moran-versus-estimates.png'>
-<h3 id="figure-2-svc-estimate-versus-morans-i-for-beta">Figure 2: SVC Estimate versus Moran’s I for β</h3>
-<p>So, on the horizontal axis, we have a surface’s Moran’s $I$ value (estimated from $\beta$) and on the $Y$ axis, we have the SVC bandwidth estimate, as before. This suggests that the SVC bandwidth estimate <em>does</em> track with an estimate of spatial autocorrelation (Moran’s $I$) for all three DGPs. This matches the weak relationship in Hanchen’s results.</p>
+<h3 id="figure-2-svc-estimate-versus-morans-i-for-beta">Figure 2: SVC Estimate versus Moran’s <em>I</em> for β</h3>
+<p>So, on the horizontal axis, we have a surface’s Moran’s <em>I</em> value (estimated from ) and on the vertical axis, we have the SVC bandwidth estimate, as before. This suggests that the SVC bandwidth estimate <em>does</em> track with an estimate of spatial autocorrelation (Moran’s <em>I</em>) for all three DGPs. This matches the weak relationship in Hanchen’s results.</p>
 <h4 id="how-can-the-two-both-be-correct-though">How can the two both be correct, though?</h4>
 <p>I think this is pretty interesting! It implies that “roughness” is not related to autocorrelation in the surfaces.</p>
-<p>So, we can see this directly in the figure below. For the GRF and the SAR, we see that increases in their process parameter result in increases in the Moran’s I for a surface (nearly monotonically increasing!) But, for the fractal process, it <em>falls</em> from perfectly autocorrelated to something around .25: 
-<img src='http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-parameter-versus-moran.png'>
-<h3 id="figure-3-morans-i-for-beta-versus-process-parameter">Figure 3: Moran’s I for β versus Process Parameter</h3>
-<p>So, the entire “right” side of the Fractal pane above is composed of surfaces with fractal values between 0 and .5. The “swell” of dots between 0 and .5 reflects <em>all</em> fractal parameter realizations from about 0.5 onwards. This is a function of the distinctive structure in these three surfaces. In the Fractal DGP one, you can see that <em>all</em> the high Moran’s I realizations occur with a small fractal roughness parameter, and these generally have large SVC bandwidth estimates. The plots are interactable, so please do roate/zoom to get a better look!</p>
+<p>So, we can see this directly in the figure below. For the GRF and the SAR, we see that increases in their process parameter result in increases in the Moran’s <em>I</em> for a surface (nearly monotonically increasing!) But, for the fractal process, it <em>falls</em> from perfectly autocorrelated to something around .25: 
+<img src='http://ljwolf.org/projects/nsfgwr/GRFSARFractal-bayes-parameter-versus-estimate.png'>
+<h3 id="figure-3-morans-i-for-beta-versus-process-parameter">Figure 3: Moran’s <em>I</em> for β versus Process Parameter</h3>
+<p>So, the entire “right” side of the Fractal pane above is composed of surfaces with fractal values between 0 and .5. The “swell” of dots between 0 and .5 reflects <em>all</em> fractal parameter realizations from about 0.5 onwards. This is a function of the distinctive structure in these three surfaces. In the Fractal DGP one, you can see that <em>all</em> the high Moran’s <em>I</em> realizations occur with a small fractal roughness parameter, and these generally have large SVC bandwidth estimates. The plots are interactable, so please do roate/zoom to get a better look!</p>
 <iframe src="http://ljwolf.org/projects/nsfgwr/fractal.html" title='Fractal DGP 3d Scatterplot' width=800 height=800> </iframe>
 <p>For comparison, here are the two others:</p>
 <iframe src="http://ljwolf.org/projects/nsfgwr/sar.html" title='SAR DGP 3d Scatterplot' width=800 height=800> </iframe>
@@ -96,7 +96,7 @@
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-    <p>For specificity on the “process parameter” spellings, l spell the fractal “roughness” parameter <em>f</em>, the Gaussian random field parameter θ, and the SAR autocorrelation parameter ρ. The estimated bandwidth from the SVC will be spelled φ, as in the Bayesian literature. If needed, I’ll refer to the GWR estimated bandwidth as h. Throughout, Moran’s I refers to the estimated Moran’s I value for the β arising from a given DGP. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    <p>For specificity on the “process parameter” spellings, I spell the fractal “roughness” parameter <em>f</em>, the Gaussian random field parameter θ, and the SAR autocorrelation parameter ρ. The estimated bandwidth from the SVC will be spelled φ, as in the Bayesian literature. If needed, I’ll refer to the GWR estimated bandwidth as h. Throughout, Moran’s <em>I</em> refers to the estimated Moran’s <em>I</em> value for the β arising from a given DGP. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
