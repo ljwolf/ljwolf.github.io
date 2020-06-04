@@ -109,7 +109,7 @@
       <pubDate>Tue, 10 Sep 2019 15:51:29 +0100</pubDate>
       
       <guid>/posts/qestival/</guid>
-      <description>&lt;p&gt;On the 11th, I&amp;rsquo;ll be speaking at the &lt;a href=&#34;http://socialsciences.exeter.ac.uk/q-step/events/q-estival/&#34;&gt;Q-estival at the University of Exeter&lt;/a&gt;&amp;rsquo;s Q-Step Centre. The Q-Step program is a program to promote a &amp;ldquo;step change&amp;rdquo; in quantitative social science skills in the UK. I&amp;rsquo;m the Bristol Geography lead for the program. I&amp;rsquo;m real excited to take my first trip out to Exeter, see the place, and talk about some interesting computational social science!&lt;/p&gt;
+      <description>&lt;p&gt;On the 11th, I&amp;rsquo;ll be speaking at the &lt;a href=&#34;http://socialsciences.exeter.ac.uk/q-step/events/q-estival/&#34;&gt;Q-estival at the University of Exeter&lt;/a&gt;&amp;lsquo;s Q-Step Centre. The Q-Step program is a program to promote a &amp;ldquo;step change&amp;rdquo; in quantitative social science skills in the UK. I&amp;rsquo;m the Bristol Geography lead for the program. I&amp;rsquo;m real excited to take my first trip out to Exeter, see the place, and talk about some interesting computational social science!&lt;/p&gt;
 &lt;p&gt;In my talk, I&amp;rsquo;ll present some work I&amp;rsquo;ve done with Eli Knaap &amp;amp; Serge Rey on urban social boundaries. The preprint has been available on &lt;a href=&#34;https://osf.io/vd3uk&#34;&gt;SocARXIV&lt;/a&gt;for a while now, but now stands as an &lt;em&gt;accepted manuscript to Environment and Planning, B: Urban Analytics and City Science&lt;/em&gt;! Further, the algorithms I&amp;rsquo;ll be talking about today are already implemented in &lt;a href=&#34;https://github.com/pysal/esda&#34;&gt;pysal/esda&lt;/a&gt;, the python package for exploratory spatial statistics.&lt;/p&gt;
 &lt;p&gt;Check out the &lt;a href=&#34;https://www.dropbox.com/s/94zgcxxue27njew/2019-boundaries-qestival.pdf?dl=0&#34;&gt;slide deck here&lt;/a&gt;, and I hope to see you in Exeter!&lt;/p&gt;
 </description>
@@ -273,8 +273,8 @@ Spatial Analytical Methods,” &lt;em&gt;The Review of Regional Studies&lt;/em&g
 Science&lt;/em&gt; 52, no. 3 (2014): 825-837.&lt;/p&gt;
 &lt;p&gt;[5] Rey, Sergio J. “Show Me the Code: Spatial Analysis and Open
 Source,” &lt;em&gt;Journal of Geographical Systems&lt;/em&gt; 11, no. 2 (June 2009):
-191–207,&lt;a href=&#34;https://doi.org/10.1007/s10109-009-0086-8&#34;&gt;
-&lt;/a&gt;&lt;a href=&#34;https://doi.org/10.1007/s10109-009-0086-8&#34;&gt;&lt;em&gt;https://doi.org/10.1007/s10109-009-0086-8&lt;/em&gt;&lt;/a&gt;;&lt;/p&gt;
+191–207,[
+](&lt;a href=&#34;https://doi.org/10.1007/s10109-009-0086-8)%5B&#34;&gt;https://doi.org/10.1007/s10109-009-0086-8)[&lt;/a&gt;&lt;em&gt;&lt;a href=&#34;https://doi.org/10.1007/s10109-009-0086-8&#34;&gt;https://doi.org/10.1007/s10109-009-0086-8&lt;/a&gt;&lt;/em&gt;](&lt;a href=&#34;https://doi.org/10.1007/s10109-009-0086-8);&#34;&gt;https://doi.org/10.1007/s10109-009-0086-8);&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;[6] Rey, Sergio J. et al., “Open Geospatial Analytics with PySAL,”
 &lt;em&gt;International Journal of Geo-Information&lt;/em&gt; 4 (2015): 815–836.&lt;/p&gt;
 &lt;p&gt;[7] Johnston, Ron. “On the Nature of Explanation in Human Geography,”
@@ -1034,13 +1034,13 @@ plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; plt
 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; geopandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; gpd
 &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;matplotlib inline
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is just a quick demonstration of what I understand from &lt;a href=&#34;https://www4.stat.ncsu.edu/~bjreich/papers/FixedEffectsYouLove.pdf&#34;&gt;Hodges &amp;amp; Reich (2010)&lt;/a&gt;&amp;rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is just a quick demonstration of what I understand from &lt;a href=&#34;https://www4.stat.ncsu.edu/~bjreich/papers/FixedEffectsYouLove.pdf&#34;&gt;Hodges &amp;amp; Reich (2010)&lt;/a&gt;&amp;lsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:&lt;/p&gt;
 &lt;p&gt;$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$&lt;/p&gt;
 &lt;p&gt;might not be equal to the estimates from a specific type of spatial autoregressive error model, such as the SAR error model:&lt;/p&gt;
 &lt;p&gt;$$ Y \sim\mathcal{N}\left(X\hat{\beta}, \left[(I - \lambda \mathbf{W})&#39;(I - \lambda \mathbf{W})\right]^{-1}\sigma^2\right) $$&lt;/p&gt;
 &lt;p&gt;when (and only when) the filtered error term $(I - \lambda \mathbf{W})^{-1}\epsilon$ (for gaussian $\epsilon$ with dispersion $\sigma$) is correlated with at least one $X_j$, $j = 1, 2, \dots, P$.&lt;/p&gt;
 &lt;p&gt;Hodges &amp;amp; Reich (2010) consider a CAR model, but they argue (and I agree): the logic of the issue applies generally.
-The idea also touches on &lt;a href=&#34;http://www.tandfonline.com/doi/abs/10.1080/17421770802353758&#34;&gt;LeSage &amp;amp; Fischer (2008)&lt;/a&gt;&amp;rsquo;s argument motivating a spatial Durbin regression as &amp;ldquo;accounting for spatially-patterned ommitted covariates,&amp;rdquo; (Section 2.1, effective around page 280).&lt;/p&gt;
+The idea also touches on &lt;a href=&#34;http://www.tandfonline.com/doi/abs/10.1080/17421770802353758&#34;&gt;LeSage &amp;amp; Fischer (2008)&lt;/a&gt;&amp;lsquo;s argument motivating a spatial Durbin regression as &amp;ldquo;accounting for spatially-patterned ommitted covariates,&amp;rdquo; (Section 2.1, effective around page 280).&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s pretty simple to show how it might affect regression below, so I&amp;rsquo;ve cooked up a short example using the Baltimore data. I think it&amp;rsquo;s important to understand this (just like apparent variance inflation in simulation designs due to $tr(\left[I - \lambda \mathbf{W}\right]^{-1}) \geq N$).&lt;/p&gt;
 &lt;p&gt;This is just one of those areas where, in theory, a &amp;ldquo;well-behaved&amp;rdquo; statement leads to results we&amp;rsquo;d want (identical estimates of $\beta$ between OLS and spatial error models), but when we use these models in reality, we must accept that empirical conditions will degrade these expectations.&lt;/p&gt;
 &lt;p&gt;So I&amp;rsquo;ll illustrate it on a standard PySAL dataset below, trying to show it as simply as possible.&lt;/p&gt;
