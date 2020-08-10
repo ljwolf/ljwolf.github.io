@@ -12,6 +12,43 @@
     
     
     <item>
+      <title>Gunnar Olsson and the Counterfactual Imagination in Geography</title>
+      <link>/posts/olsson-counterfactuals/</link>
+      <pubDate>Mon, 10 Aug 2020 22:21:38 +0100</pubDate>
+      
+      <guid>/posts/olsson-counterfactuals/</guid>
+      <description>&lt;p&gt;I suppose I&amp;rsquo;m writing this as an act of defiance against the lethargy of the &lt;a href=&#34;https://www.independent.co.uk/life-style/health-and-families/coronavirus-lockdown-tired-sleepy-fatigue-daylight-routine-a9450196.html&#34;&gt;Great Stall&lt;/a&gt;, or maybe just a way to &lt;a href=&#34;https://journals.sagepub.com/doi/full/10.1177/2399808320943989&#34;&gt;process some feelings&lt;/a&gt;, but I&amp;rsquo;ve really tried to branch out across the full set of geography recently. I&amp;rsquo;ve been reading so much more than I used to, especially across the breadth of human geography. It&amp;rsquo;s been enlightening.&lt;/p&gt;
+&lt;p&gt;For instance, after finishing the &lt;em&gt;excellent&lt;/em&gt; piece on the discontinuing of the Univeristy of Michigan department of geography by &lt;a href=&#34;https://doi.org/10.1080/24694452.2020.1760780&#34;&gt;Huntley and Rosenblum&lt;/a&gt;, I found myself working back through some of Olsson&amp;rsquo;s work. Mentioned in the same breath as Tobler in &lt;em&gt;The Omega Affair&lt;/em&gt; piece by Huntley and Rosenblum, I was surprised: the Olsson I was familiar with published a few strikingly novel (but ultimately dead-ended) pieces of quantitative geography in the 1970s, focusing on the possibility of detecting regularities in distance decay functions and interaction models. Basically, the &lt;em&gt;du jour&lt;/em&gt; topic of regional science at the time, in the throes of the &lt;a href=&#34;https://search.proquest.com/openview/085238550a227ac07ed0e44dc0d1932e/1?pq-origsite=gscholar&amp;amp;cbl=18750&amp;amp;diss=y&#34;&gt;&lt;em&gt;Structure Debate&lt;/em&gt;&lt;/a&gt; my friend Taylor writes so eloquently about, Olsson just registered as a &amp;ldquo;big name&amp;rdquo; to me, in the realm of Berry &amp;amp; possibly even Wilson, but not someone as field-defining to me as Tobler, Gollegdge, or Johnston.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Pale_Fire&#34;&gt;It&amp;rsquo;s weird how your footnotes can seed an entire novel, though.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In that vein, I began reading what &lt;em&gt;The Omega Affair&lt;/em&gt; identifies as one of Olsson&amp;rsquo;s critical contributions: &lt;a href=&#34;https://deepblue.lib.umich.edu/bitstream/handle/2027.42/145217/anti1972411.pdf?sequence=1&#34;&gt;&lt;em&gt;Some Notes on Geography and Social Engineering&lt;/em&gt;&lt;/a&gt;. I was amazed to find passages like:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Models which yield high correlation but fluctuating regression coefficients are not sufficent for this task [of anchoring explanatory, not predictive, analyses]. Rather, we need detailed knowledge of law-like statements as specified in terms of non-erratic causal parameters.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Which seems to give a kind of &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1111/j.1467-9787.2012.00760.x&#34;&gt;Gibbons and Overman&lt;/a&gt; flair to the whole critical turn taken later by Olsson. The whole rest of the article is nearly wholly summarized by Judea Pearl&amp;rsquo;s work: that prediction is &lt;em&gt;not&lt;/em&gt; explanation, but rather that &lt;em&gt;counterfactuals&lt;/em&gt; are at the heart of explanation and understanding. In Olsson&amp;rsquo;s own way, he derives this as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the appeal of a particular theory depends not only on its current truth status, but also on our anticipations of the positive and negative effects that would be created if its preconditions actually were to be implemented.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As in Pearl, we need to think of the truth value of our theories in explicitly causal terms: if theory X were true, how would its adoption (or application) have changed the present &lt;em&gt;were it to have been adopted&lt;/em&gt;? Alternatively, if it &lt;em&gt;were not for theory X&lt;/em&gt;, how would the present be different?&lt;/p&gt;
+&lt;p&gt;This imaginative notion of science, wholly explained by Pearl, is so whole-heartedly endorsed in Olsson&amp;rsquo;s &lt;em&gt;Antipode&lt;/em&gt; piece, it&amp;rsquo;s frustrating to see such obvious mathematical/analytical errors. Take this passage from page 10:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It follows that detailed analysis of empirically-estimated causal parameters can indicate the explanatory power of the given model.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OK, I&amp;rsquo;m on board with that&amp;hellip; &lt;a href=&#34;https://www.cambridge.org/core/books/statistical-inference-as-severe-testing/D9DF409EF568090F3F60407FF2B973B2&#34;&gt;Dire tests&lt;/a&gt; are generally pretty fundamental to science that means anything to anyone! We need parameters that allow us to construct claims of &lt;a href=&#34;https://www.jstor.org/stable/622019&#34;&gt;&amp;ldquo;didactic relevance&amp;rdquo; as Ron put it&lt;/a&gt;. The point of all of this is to find out who&amp;rsquo;s wrong, even if it&amp;rsquo;s you.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In more operational terms, it is by carefully analyzing the behavior of its mathematical parameters that we conclude whether a causal model contains large specification errors. Thus, if the estimated parameters are found to vary erratically over time, space, and aggregation levels, then we should take this as an indication that the model has not properly been specified or calibrated.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;No way!&lt;/strong&gt; It&amp;rsquo;s a pretty fundamental point of geography that &lt;a href=&#34;https://doi.org/10.1177%2F0309132520924722&#34;&gt;aggregation is a theoretical act&lt;/a&gt;, and that changing aggregation levels actually changes the implicit notion of what &amp;ldquo;place&amp;rdquo; is acting in the process. Indeed, it&amp;rsquo;s also possible that things change over time; the importance of context is critical, and causality in human systems need not be time-stationary. Think of how significantly different societal mores and customs are now than a hundred or two hundred years before&amp;hellip; the same action or statement has entirely different meaning now, and can engender entirely different responses. How could a single causal impetus remain constant over that time? I just don&amp;rsquo;t buy it.&lt;/p&gt;
+&lt;p&gt;I guess this is a long way to say that one of my main interests in coming to Bristol was to expand as a geographer in the environment created by folks like Ron Johnston and Kelvyn Jones. Now that that is decidedly over (and, indeed, the future of what any &lt;a href=&#34;https://nymag.com/intelligencer/2020/05/the-coming-covid-19-higher-ed-disaster.html&#34;&gt;&amp;ldquo;higher education&amp;rdquo; looks like post-COVID&lt;/a&gt; beyond franchise deals with tech startups), I feel adrift.&lt;/p&gt;
+&lt;p&gt;If I learned one thing, though, it is that the future of my field will be won by people like those two: folks who advocate for what they believe in on all fronts and in any terms. Gentle but firm, focused and persistent.&lt;/p&gt;
+&lt;p&gt;I came to Bristol asking questions about what it meant to be a &amp;ldquo;total geographer,&amp;rdquo; and I recall my first disagreements with colleagues being about how we need to take our work seriously.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.paulgraham.com/top.html&#34;&gt;most people have one top idea in their mind at any given time. That&amp;rsquo;s the idea their thoughts will drift toward when they&amp;rsquo;re allowed to drift freely. And, this idea will thus tend to get all the benefit of that type of thinking, while the others are starved of it. Which means it&amp;rsquo;s a disaster to let the wrong idea become the top one in your mind.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or, indeed, a waste of good mental horsepower to let the useless ones take that top spot. While it&amp;rsquo;s hard to do that right now, it&amp;rsquo;s important nonetheless.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling</title>
       <link>/posts/2020-sm2-lectures/</link>
       <pubDate>Mon, 09 Mar 2020 12:02:47 +0000</pubDate>
