@@ -1,0 +1,275 @@
+---
+title: 'Multilevel Models'
+author: "Levi John Wolf"
+output:
+  tufte::tufte_html: default 
+---
+
+[Skip straight to the part where we fit the models if you have done the reading!](#code)
+
+# Concepts
+After having learned about [generalized linear models](01-workbook.html), a multilevel models should strike you as very similar. Where the "big" idea for a generalised linear model is that
+
+> You can use a "link function" to connect a nonlinear outcome to a linear model
+
+the "big" idea for multilevel models is
+
+> You can link your models together directly. 
+
+Multilevel models let you specify a *theory* for how your model parameters change. For example, remember our waiting times data that described the minutes you'd wait if you went to each pub?
+
+```{r, message=F, warning=F, fig.width=3, fig.height=2.5, fig.margin=T}
+library(tidyverse)
+library(dplyr)
+library(ggbeeswarm)
+times = read_csv('../data/waiting_times.csv')
+ggplot(times, aes(x=pub, y=waiting, color=pub)) +
+  geom_beeswarm() +
+  theme(legend.position ='none',
+        axis.title.x = element_blank(),
+        axis.text.x = element_text(angle=30, 
+                                   vjust=1, hjust=1))
+```
+
+We fit this model using a *varying intercept* model:
+$$y_i = \begin{cases} \text{if at berkeley:} & \alpha_b \\ \text{if at gallimaufry:} & \alpha_g \\ \text{if at milk thistle:} & \alpha_{m} \end{cases} + \text{wait time}*\beta + e_i$$
+Where each $\alpha$ effect represented the baseline in that pub. 
+
+But, when we fit our *logistic* model, we fit a *contrast* model:
+$$ logit(y_i) = \alpha_b + \text{at gallimaufry}*\delta_g + \text{at milk thistle} * \delta_m + \text{wait time}*\beta + e_i$$
+where $\alpha_b$ was our baseline for the Berkeley, but $\delta_g$ was the *change* moving from the Berkeley to the Gallimaufry. So, if an observation is *at* the Galli, its actual basline is $\alpha_b + \delta_g$. We fit the *contrast* model only for computational convenience: `glm` works pretty poorly without fitting the overall intercept. You can see all of this yourself: 
+```{r}
+group_intercept = lm(waiting ~ 0 + pub, data=times)
+knitr::kable(broom::tidy(group_intercept), caption='Group Intercept: `waiting ~ 0 + pub`')
+```
+```{r}
+berkeley_contrast = lm(waiting ~ 1 + pub, data=times)
+knitr::kable(broom::tidy(berkeley_contrast), caption='Contrast: `waiting ~ 1 + pub`')
+```
+The `(Intercept)` in the second model is the same as `pubThe Berkeley` in the first model. And, you can see for yourself,  $\alpha_b + \delta_g = \alpha_g$, since $4.7 - 3.3 = 1.4$.^[The non-exactness is just from numerical precision: the equality holds exactly.]
+
+You might ask: 
+> why can't we do both?
+
+And this is a very reasonable question. 
+
+## The challenges of linear regression
+
+In linear regression, there are a lot of pitfalls. One pitfall you may remember is that no variables can be *linear combinations* of another variable. For example, $X_1$ is a linear combination of $X_2$ and $X_3$ would mean that we can find some values for $a$ and $b$ so that:
+$$ X_1 = a * X_2 + b*X_3$$
+In terms of how the model is estimated, $waiting ~ 1 + pub$ is converted into a dataframe like this for estimation:
+```{r}
+times %>% mutate(intercept = 1, 
+                 is_berkeley = as.numeric(pub == "The Berkeley"),
+                 is_gallimaufry = as.numeric(pub == "The Gallimaufry"),
+                 is_milkthistle = as.numeric(pub == "The Milk Thistle")) %>%
+  select(-pub, -pub_number) %>% 
+  sample_n(6) %>% 
+  knitr::kable()
+```
+If we fit `0 + pub`, then we're using each of those `is_...` columns to fit the model. If we fit `1 + pub`, though, we can't use all of the `is_...` variables because `intercept = is_berkeley + is_gallimaufry + is_milkthistle`. That is, the intercept is is a linear combination of each of the groups. 
+This is important, because it means that *if we were to go to a new pub*, we have *no idea* about what its wait time would be. 
+
+In our `0 + pub` model, we couldn't give a good estimate of the waiting time: we only fit each of the pubs, separately. Alternatively, in our `1 + pub` model, our prediction for a new pub depends on *what* pub we set as the reference. By default, our model above would predict a new pub as if it were the Berkeley: since `is_gallimaufry` and `is_milkthistle` are zero, the prediction would default to $\alpha_b$.^[In truth, `R` will actually error on both predictions, since it implicitly records what levels are valid inputs to the model. This issue is conceptual, not computational.]
+
+## Multilevel models
+
+Ideally, though, we would fit a model where *both* the global intercept *and* the group intercept were modeled. This *is* possible using a multilevel model. [Consider the following](https://www.youtube.com/playlist?list=PL_qffRVV3oS0t4LdZjHgHOIav1kdiYVdv): 
+
+Say we want to fit a model predicting the expected wait time, given the pub you're in. That is, we want to predict $\mathbf{E}[\text{wait time} | \text{pub}]$. Thus, if we had a specific *intercept* for each pub, we might say something like:
+$$ y_i = \alpha_j + e_i $$
+Which translates to:
+
+> The wait time for order $i$ is a function of the baseline wait time in pub $j$ plus a random error for order $i$. 
+
+This is just a slightly more abstract spelling of our original "no pooling" model^[This is the term the ARM book uses for fitting using the separate group means. You should recognize this if you've done the reading!] from before:
+$$y_i = \begin{cases} \text{if at berkeley:} & \alpha_b \\ \text{if at gallimaufry:} & \alpha_g \\ \text{if at milk thistle:} & \alpha_{m} \end{cases} + e_i$$
+**Now**, we make the model *multilevel* by forcing a structure onto the pub means. Specifically, we state a *second level model* that describes the group intercept as a function of a *grand intercept*:
+$$ \alpha_j = a + u_j$$
+This translates to:
+
+> The baseline wait time for pub $j$ is a function of the grand baseline wait time $a$ plus a random error for pub $j$. 
+
+If you had *only* observed the pub-level average wait times, this model would make sense. But, what we're doing here is specifying *two* models: one for waits in a pub, and one for pubs overall. Put together, we have a *varying-intercept* model for wait times:
+$$\begin{align}y_i &= \alpha_j + e_i \\ \alpha_j &= a + u_j\end{align}$$
+The intercept, $\alpha_j$, is unique for each pub.^[You can see that because it has a $j$ subscript.] And, $a$ represents the overall mean wait time. So, the "group-level" model for $\alpha_j$ shows that the pub-level intercepts are *now* a function of some grand intercept, $a$, and a pub-level error term, $u_j$. And, the waiting time $y_i$ is a function of the grand baseline $a$, the pub-specific deviation $u_j$, and then some individual error term $e_i$. We can see this by substituting the second equation into the first where we see $\alpha_j$:
+$$ y_i = a + u_j + e_i$$
+Further, let's assume that $e_i$ and $u_j$ are *normally-distributed* error terms, so that we could fit each of the levels using standard regression models. Then, we can *also* state the model in a distributional way:
+$$\begin{align} y_i | \alpha_j &\sim \mathcal{N}(\alpha_j, \sigma^2) \\ \alpha_j &\sim \mathcal{N}(a, \tau^2)\end{align}$$
+Again, we see that this model includes *two* random distributions! Before, we suggested this was due to two *error terms*, $u_j$ and $e_i$. Another way of thinking about it is that the *group-level* heterogeneity needs to be **estimated**, rather than assumed.^[By this, I mean that $a$ and $\tau^2$ come from variability across groups, and $\sigma^2$ comes from the variability *within* groups. When we fit our earlier no-pooling model, the between-group variability is mixed into the within-group variability.]
+
+# Code
+To fit a model where every pub gets its own intercept **and** we fit a grand intercept, we will use the `lme4` package. This introduces a *new* construct into the R formula syntax: grouping. For our multilevel model above, the formula is:
+```
+waiting ~ 1 + (1 | pub)
+```
+The construct `(effect | group)` means:
+
+1. everything within the `()` pertains to a *multilevel* effect. 
+2. the "level" being specified is `group`
+3. all of the terms on the left of `|` will be varied by group.
+
+For this model, we only are varying an *intercept*, so we need to put a $1$ term in the brackets. And, since we *also* want to fit a "global" or "grand" intercept (the $a$ term) we need an intercept outside of the brackets as well. 
+
+
+Much like the `glm()` command added functionality on top of the regular `lm()` command, we can use the `lmer()` command.^[Generally pronounced like "ELL-mur"] to fit "linear mixed effect regressions"^[of which `lmer` is an acronym, and `glmer`, said like glimmer, is the analog to `glm`.] We can use `lmer` nearly in the same fashion as `lm`, so long as we provide some kind of multilevel effect:
+
+```{r, message=F}
+library(lme4)
+mixmod = lmer(waiting ~ 1 + (1 | pub), data=times)
+```
+There are more options, but we don't need to worry about those. 
+
+To work with a mixed model, you can use many of the same methods, but their behavior may change. For example, `plot(mixmod)` only gives you the residuals vs. fit plot (no influence or qq plot), and `summary(mixmod)` definitely looks different:
+```{r}
+summary(mixmod)
+```
+
+For starters, note a few things:
+1. The report is split into four parts. The `Random effects:` and `Fixed effects:` parts detail the estimated effects, and will generally be where we spend most of our time. 
+2. The `pub` variable shows up in the `Random effects:` section and provides only a variance, no coefficient! 
+
+To work with these parts of a `lmer`, we need to use other, slightly different functions. However, every part of our model from above can be found in the summary or thorugh one of the four functions below:
+
+## group-level intercept $\alpha_j$
+For starters, `coef()` gives you the coefficients from your multilevel model. When the term varies by group, you'll get a *list* with keys of the name of variables you've allowed to vary at that group. For example, if we extract `aj`:
+```{r}
+aj = coef(mixmod)
+```
+It will be a `list` with one key, `pub`:
+```{r}
+aj
+```
+You can see that this contains the intercepts for each pub.^[Since there is only one grouping, there is only one entry in the list. If we were to fit a model with *more* than one grouping factor, then we would get a list with multiple entries. For instance, `test_score ~ 1 + (1 | school) + (1 | test_subject)` would have a list with `$school` giving the intercepts for each school and `$test_subject` having the intercepts for each test subject.]
+
+From above, recall that $\alpha_j$ is split into two parts: $a$ and $u_j$. I call these the "grand intercept" and the "group error," but other authors, such as those that wrote the `lme4` package we're using, describe these as the "fixed" and "random" components of the group-level intercept^[Of note: the ARM reading explicitly recommends *against* this fixed/random terminology (p. 245) on the grounds it is confusing, nonspecific, and misleading. I don't mind if you use these terms, though I will try to be consistent in referring to group-level expectations and errors.]. 
+
+## the grand intercept, $a$
+The `fixef()` function recovers the "fixed effects," anything *outside of* the brackets in the formula above. 
+```{r}
+a = fixef(mixmod)
+a
+```
+Note that this is *different from* `mean(times$waiting)`!^[Check ARM s. 12.2 for the answer to *why* this is the case.]
+## group-level errors $u_j$
+By analogy, the `ranef()` function recovers the "random effects," the components inside of the brackets from the formula above: 
+
+
+## other parts
+Like `lm` and `glm`, we can also use `residuals()` to get our prediction errors ($e_i$):
+```{r}
+ei = residuals(mixmod)
+qplot(ei, xlab = 'Residuals')
+```
+And, we can use `predict()` to get our predicted values $\hat{y}$. For instance, the plot above shows our predicted values for each of the groups: 
+```{r}
+yhat = predict(mixmod)
+ggplot(times, aes(x=pub, y=waiting)) + 
+  geom_point() + 
+  geom_point(aes(y=yhat), color='red')
+```
+
+And predictions *out of sample* can be made using `predict()`, so long as we set an option to allow for new levels:
+```{r}
+new_pub = data.frame(waiting = rgamma(4, 10, 2), #just making up some data, ignore!
+                      pub = 'The White Harte')
+new_pub_predictions = predict(mixmod, newdata=new_pub, allow.new.levels=TRUE)
+```
+
+Note that these new predictions:
+```{r}
+new_pub_predictions
+```
+are just the same as the estimate for $a$ from our model:
+```{r}
+fixef(mixmod)
+```
+
+And the same plot with predictions for our additional pub: 
+```{r message=F}
+ggplot(rbind(times[c('pub','waiting')], new_pub), 
+       aes(x=pub, y=waiting)) + 
+  geom_point() + 
+  geom_point(aes(y=c(yhat, new_pub_predictions)), color='red')
+```
+
+Finally, a very useful plot is the `dotplot()` from the `lattice` package, which shows the estimates of $u_j$ along with their 95% confidence interval in something called a "caterpillar plot" 
+```{r}
+lattice::dotplot(ranef(mixmod))
+```
+which can also be made using the `sjPlot` package's `plot_model`: 
+```{r}
+sjPlot::plot_model(mixmod, type='re')
+```
+The fact that the intercepts all overlap suggest there is no *statistically significant* difference between the pubs and that there is no statistically significant difference between the pubs and the global average waiting time. But, we've got *very* few observations, so this is not quite the point in this example. 
+
+## more than intercepts
+In the last lab, we analyzed some data about waiting times and your friend's subjective feelings of whether a wait was too long. If you analyze the source of the R-Markdown file, you can see how this data was generated:
+
+```{r}
+set.seed(2478879)
+multiplier = ifelse(times$pub == "The Berkeley", 1,
+                    ifelse(times$pub == "The Milk Thistle", .8, 2))
+times['impatience'] = multiplier*times$waiting + multiplier*.5 + runif(nrow(times), 0 , 6)
+times['long_wait'] = times$impatience > 5
+ggplot(times, aes(x=waiting, y=impatience, color=pub)) +
+  geom_point() + 
+  geom_hline(yintercept=5, color='black') + 
+  geom_text(aes(x=7, y=5, label='Long Wait Threshold', vjust=-.8), color='black')
+```
+
+In this, let's think of `impatience` as a continunous variable measuring how impatient your friend is to get their drink during each order From this, we could also fit a model where your friend's impatience that allows for different rates-of-change for each pub. That is, we want to allow a minute spent waiting in the Berkeley to have a different impact than a minute spent waiting in the Milk Thistle. To do this *without* fitting a varying intercept, we have to specify that the grouping model is `(0 + waiting | pub)`, as you can see below:
+```{r}
+varying_slopes = lmer(impatience ~ 1 + waiting + (0 + waiting | pub), data=times)
+knitr::kable(coef(varying_slopes)$pub)
+```
+This model tells us that your friend's impatience grows faster in the Berkeley than in the Milk Thistle. Mathematically, this model is:
+
+$$\begin{align}y_i &= \alpha + x_i\beta_j + e_i \\ \beta_j &= b + u_j \end{align}$$
+And, again, the same functions can be used to extract the different parts. 
+
+Another useful thing: we can plot those regression lines directly using `geom_abline`:
+```{r}
+vs_lines = coef(varying_slopes)$pub
+vs_lines['pub'] = rownames(vs_lines)
+ggplot(times, aes(x=waiting, y=impatience, color=pub)) + 
+  geom_point() + 
+  geom_abline(data=vs_lines, 
+              mapping=aes(color=pub, 
+                          slope=waiting, 
+                          intercept=`(Intercept)`))
+```
+This model may be desirable if we think your friend has some "intrinsic" baseline impatience, but is more impatient in some situations than others. The effect plot is:
+```{r}
+sjPlot::plot_model(varying_slopes, type='re')
+```
+which gives us some weak evidence that your friend is unusually patient in the Milk Thistle.
+
+Alternatively, we could fit a model with both varying-intercepts and varying-slopes model, which has *three* equations:
+$$\begin{align}y_i &= \alpha_j + x_i\beta_j + e_i \\ \alpha_j &= a + u_j \\ \beta_j &= b + w_j\end{align}$$
+As we've written it above, this makes:
+1. $\alpha_j$ the pub-specific baseline impatience
+2. $\beta_j$ the pub-specific relationship between minutes waited and impatience
+3. The pub-level "errors" for the baseline is $u_j$ and for the slope is $w_j$
+4. The "overall" pub-level error is $u_j  + w_j$.
+Depending on whether we think $u_j$ is independent of $v_j$, we fit this model in different ways.^[Generally, assuming that two variables are *indepedent* results in models that are easier to estimate, but these models may overstate their certainty and under-state the variation in the data.] Let's proceed assuming $u$ and $w$ are independent, since `r nrow(times)` observations is not enough to fit a very complicated multilevel model.^[If we do fit a dependent model, then we need to add the following equation to the mix: $$\begin{bmatrix}u_j\\v_j\end{bmatrix} \sim \mathcal{N}\left(0, \begin{bmatrix}\sigma^2_u & \sigma_u\sigma_w \\ \sigma_u\sigma_w & \sigma^2_v\end{bmatrix}\right)$$ This uses $\sigma_u\sigma_w$ to model the covariance between $u$ and $v$; knowing this covariance is positive, for example, means that when $u_j$ is positive, $w_j$ also tends to be positive. This can be pretty hard to estimate when the number of groups is small, so we we just proceed like they're independent.]
+Since there isn't enough information in the data to model this correlation, we can ignore the correlation using the double-pipe, `||` :
+```{r}
+varying_both = lmer(impatience ~ 1 + waiting +
+                      (1 + waiting || pub), data=times)
+```
+This results in lines like:
+```{r}
+vb_lines = coef(varying_both)$pub
+vb_lines['pub'] = rownames(vb_lines)
+ggplot(times, aes(x=waiting, y=impatience, color=pub)) + 
+  geom_point() + 
+  geom_abline(data=vb_lines, 
+              mapping=aes(color=pub, 
+                          slope=waiting, 
+                          intercept=`(Intercept)`))
+```
+This might suggest that we have no statistically significant difference between each of the groups and the "pooled" model, but remeber: we have a very small amount of data! And, you can see that allowing both to vary, we see mainly differences in the intercept, not the slope, and again none are statistically significantly different from zero, suggesting that the global estimates for $a$ and $b$ suffice:
+```{r}
+lattice::dotplot(ranef(varying_both))
+```

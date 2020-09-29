@@ -1,0 +1,76 @@
+---
+title: "Sculpting Data for Fun and Profit"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+
+Rent & housing price is a fundamental part of the economics of society. It is a major driver of both urbanization, de-urbanization, and internal social shifts in habitation within cities. Further, the housing market, its structure, and its behavior is the [single most important driver of the business cycle](https://ideas.repec.org/p/nbr/nberwo/13428.html), meaning that, fundamentally, the negotiations between landlords & tenants, sellers & buyers drives both the speed, duration, and the depth of recession and serves as a clear and substantial driver of income inequality in cities. At this point, you've probably heard of ["gentrification"](https://www.bristolpost.co.uk/news/bristol-news/gentrification-bristol-what-it-happening-3030745), and that's driven by house prices, too. Related to this concept, one dataset we will use often in this course is the quarterly house prices since 1996 in the West of England Combined Authority. 
+
+And, we'll use the following three packages:
+
+```{r message=F}
+library(tidyverse) # for tidy tools and reshaping methods
+library(sf) # for working with spatial data
+library(ggplot2) # for plotting
+```
+
+## The data
+
+I provide the dataset, `weca.gpkg`, a ["geopackage"](https://www.geopackage.org/) containing the median home sale price in each LSOA in each quarter (i.e. every March, June, September, & December) starting in December of 1995 across the West of England Combined Authority. Just like most spatial data, you can read it using `sf::st_read`.[^paths]
+
+```{r echo=F, results=T, message=F, warning=F}
+weca = st_read('../data/weca.gpkg', quiet=T)
+knitr::kable(head(st_drop_geometry(weca))[,c(4,5,6,7)])
+```
+
+Viewing the columns of this dataframe yourself, you'll see that the identifiers for each lsoa are `lsoa_code` and `lsoa_name`. The local authority for those LSOAs are recorded in `la_code` and `la_name`. Then, all of the rest of the columns are in the form `price_<month>_<year>`, and records the median price (in £) of all houses sold in that LSOA in that time period.[^quarter-not-month] Above, I've shown a cleaned-up view using just the `lsoa_name` and a few price columns, to give you a sense of what the data looks like. 
+
+## 1. Taking a first look at the data
+
+According to Wickham (2014), there are five common problems with "messy" datasets that generally can be resolved by "tidying" the data.[^hint-tidytypes] 
+
+
+### 1.1 
+The following dataset of temperatures from the Filton weather station has a different tidiness problem. Which problem is it, and how can you tell?  
+
+```{r message=F, results=F}
+library(readr)
+temps = read_csv("../data/bristol_yearly_temps.csv")
+temps
+```
+```{r echo=F}
+knitr::kable(tail(temps, 9))
+```
+
+### 1.2 
+How would you tidy the `temps` data in order to easily compute the range of temperatures in each year?
+
+### 1.3 
+The `weca` data also has one of these Wickham (2014) issues. Which one does it have, and how can you tell? 
+
+
+## 2 Tidying Data
+It will be helpful to have tidy data for some analyses in the remainder of the exercise. This next section will involve doing this. 
+
+### 2.1 
+Use a pivot to transform the data to make each row measure the price of an LSOA in a specific month & year.[^pivot]
+
+### 2.2 
+Using your new tidy data, use `ggplot2` to make a boxplot where the horizontal axis is years, the vertical axis is price, and boxes are colored by local authority.[^hint-boxplot]
+
+### 2.3 
+Using tidy verbs such as `group_by`, `select`, `mutate`, and `merge`, can you:
+
+- compute the average price for each year?
+- compute the average price in each local authority each year?
+- compute the median price for each LSOA since 2008?
+- **Challenge: make a map of the *percentage change* in prices for each LSOA since 2008?**[^hint-lag]
+
+[^paths]: You may need to change this code in order for it to run successfully on your own computer. Notably, make sure you know where your data is, and where your code is running. Make sure to set your working directory, and put the data in a place where you can get to it from that working directory. 
+[^hint-tidytypes]: If you consult [Section 3 of the Wickham (2014) paper on tidy data](http://www.jstatsoft.org/v59/i10/paper), you'll find the common problems and discussion. These problems are: "column headers are values, not variable names" ; "multiple variables are stored in one column"; "variables stored in both rows and columns"; "multiple types are in one table"; "one type in multiple tables."
+[^quarter-not-month]: Strictly speaking, the `<month>` refers to a whole [*fiscal quarter*](https://investinganswers.com/dictionary/q/quarter-q1-q2-q3-q4#:~:text=A%20fiscal%20quarter%20is%20a,the%20payment%20of%20stock%20dividends.), and uses the month name because that is much more informative than simply the quarter number. 
+[^pivot]: Don't forget about the optional arguments, such as `names_to` and `names_sep`, which allow you to split column names that contain "extra" information. Alternatively, you can use `tidyr::separate` after the pivot.
+
+[^hint-lag]: The `first` and `last` functions get the values of the first group and the last group in a `group_by`. And, percent change in variable $x$ measured at time $t$ is computed by $\frac{x_{t+1} - x_t}{x_t}$.
+[^hint-boxplot]: The `ggplot2` library has some helpful guidance [online](https://ggplot2.tidyverse.org/reference/geom_boxplot.html). Pay critical attention to what the [options are](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization#change-box-plot-colors-by-groups), and what the question asks you to do. 

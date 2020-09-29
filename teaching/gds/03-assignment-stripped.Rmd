@@ -1,0 +1,86 @@
+---
+title: 'Assignment 4: Take Home Exam'
+author: "Levi John Wolf"
+date: 'DUE: 29 November 2019'
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Whose Brexit?
+
+Among others, an influential theory from [*The Economist*](https://www.economist.com/britain/2016/07/08/britains-immigration-paradox) suggests that high rates of change in immigration influenced places in the UK to vote for Brexit.
+
+In this practice exam, we will examine this claim using multilevel models. The data for this practice exam, `brexit.gpkg`, is a geopackage file containing (most) of the local authorities in England and Wales. The columns we will be focusing on are:
+
+- `pct_leave` - percentage (out of 100, not 1) that voted to leave in a given consitutency
+- `pct_degree` - percentage (out of 100, not 1) that have a college or university degree
+- `change_ethnic_nonuk` - rate of change in `pct_ethnic_nonuk` in the five years before brexit. Negative values mean that an area has non-white people born outside of the UK moving *out* of it, and positive values mean that an area has non-white people born outside of the UK moving *into* it. 
+- `region` - the region in which a local authority falls
+- `la_name` - the name of the local authority
+
+# Exploration
+Read in the data. Tell me a little about the data. 
+
+## 1
+
+Which region was the most strongly in favor of Brexit? Which was the most strongly opposed? Which region was the closest to being 50-50? 
+
+## 2
+
+What is the overall correlation between `pct_leave` and `pct_degree`? Show me a `ggplot` of these two things with a line of best fit.[^1]
+
+## 3
+
+What is the correlation between `pct_leave` and `pct_degree` in each region? Show me a `ggplot` of these two things with *each region*'s line of best fit. Do you think that the relationship between leave voting and education varies strongly over regions?
+
+## 4
+
+What is the overall correlation between `pct_leave` and `change_ethnic_nonuk`? Show me a `ggplot` of these two things with a line of best fit.
+
+## 5
+
+What is the correlation between `pct_leave` and `change_ethnic_nonuk` in each region? Show me a `ggplot` of these two things with *each region's* line of best fit. Do you think that the relationship between leave voting and local authority ethnic change varies strongly over regions?
+
+# Modelling
+
+## 6
+
+Fit a multilevel model with varying intercepts by region, but with a single `pct_degree` effect.[^2]
+
+- Mathematically, what terms vary? Which terms (if any) are fully pooled, not pooled, or are partially pooled?
+- Using the `coef()` function to extract the intercepts and coefficients by region, plot the multilevel varying intercept model lines, with points/lines colored by the region.
+- Interpret the results. What do the effects mean?
+- Given the scatterplot & lines, do you think it would be fruitful to explore a varying slope model for this data? why or why not
+    
+## 7
+
+Fit a multilevel model with varying slopes and intercepts predicting `pct_leave` from `change_ethnic_nonuk` over regions. Make sure to center `change_ethnic_nonuk` on its mean. [^3]
+
+- Mathematically, what terms vary? Which terms (if any) are fully pooled, not pooled, or are partially pooled?
+- Interpret the results from the coefficients for the model. What do the effects mean? 
+- Plot the lines resulting from this varying slope-varying intercept model, and use `geom_smooth` to provide regression lines for each separate group as well.
+- Which areas change the most *in terms of their intercept*? Which areas change the most *in terms of their slope*? Does there tend to be a relationship in how the slope and intercept change from the no pooling to the partial pooling/multilevel model? Looking at the mulitlevel model object from `brms` or `rstanarm`, can you find the correlation between the slopes & intercepts?
+    
+## 8
+
+Now, compare the multilevel varying slope, varying intercept model to the complete pooling model relating `change_ethnic_nonuk` and `pct_leave`. 
+
+- Interpret the results from the complete pooling model. What do the effects mean?
+- Now, make a plot of the varying slope-varying intercept model & the complete pooling model. Discuss how the slopes and intercepts change when going from the complete pooling model to the multilevel model.[^4]
+- Compare the bias of residuals in the multilevel model & the complete pooling model, perhaps using a boxplot or computing their mean. Explain the change in bias when moving from the complete pooling model to the multilevel model to the no pooling model.[^4]
+- Out of all the models you've fit, which model(s) agree(s) with the Economist's conclusions, that larger rates of change in immigration result in more Brexit voting? Which model would you prefer and why?
+
+---
+
+[^1]: We have used `geom_smooth(method=lm)` to plot lines of best fit before. Make sure that your data is *not grouped* or *colored* in order to plot the overall line of best fit. Sometimes, it might be easier to make a *separate* graph with the complete pooling/single line of best fit. 
+[^2]: In `lmer`, the formula is: `pct_leave ~ pct_degree + (1 | region)`.
+[^3]: You may need to use `brm` from the `brms` package or `stan_lmer` from the `rstanarm` package for this model if the fit is singular using `lmer`.
+[^4]: You might want to use something like `geom_smooth(aes(group=F))` to force a single regression line to be displayed for the complete pooling model. Describe the plot. Which areas change the most in terms of the complete pooling model and which areas change the least? It is important to note if one part of the model changes but not another, such as if one of the intercepts increases but that line's gradient remains the same. 
+[^5]: Remember that the *no pooling model* with region-specific slopes *and* intercepts is always unbiased for regions.

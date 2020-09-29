@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-08-10T22:21:38+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/2020-sm2-lectures/</loc>
     <lastmod>2020-03-09T12:02:47+00:00</lastmod>
   </url>
@@ -95,6 +90,11 @@
   <url>
     <loc>/posts/cdrc-brexit/</loc>
     <lastmod>2018-04-18T01:46:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/gis/</loc>
+    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
   </url>
   
   <url>
@@ -188,6 +188,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2018-03-02T19:33:34+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/analysis/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
   </url>
@@ -199,6 +204,11 @@
   
   <url>
     <loc>/tags/geography/</loc>
+    <lastmod>2018-02-28T15:46:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/mac/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
   </url>
   
@@ -278,11 +288,6 @@
   </url>
   
   <url>
-    <loc>/tags/gis/</loc>
-    <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/neighborhoods/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
   </url>
@@ -315,6 +320,11 @@
   <url>
     <loc>/i-forgot-how-killer-the-builtin-matplotlib/</loc>
     <lastmod>2017-08-17T23:38:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2017-07-18T19:45:46+00:00</lastmod>
   </url>
   
   <url>
@@ -383,8 +393,18 @@
   </url>
   
   <url>
+    <loc>/tags/math/</loc>
+    <lastmod>2017-03-24T17:18:18+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/mathjax/</loc>
     <lastmod>2017-03-24T17:18:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/bayes/</loc>
+    <lastmod>2017-03-24T15:52:55+00:00</lastmod>
   </url>
   
   <url>
@@ -423,7 +443,7 @@
   </url>
   
   <url>
-    <loc>/tags/bayes/</loc>
+    <loc>/tags/data/</loc>
     <lastmod>2017-02-22T22:09:11+00:00</lastmod>
   </url>
   
@@ -544,11 +564,6 @@
   
   <url>
     <loc>/tags/bayesian-statistics/</loc>
-    <lastmod>2016-09-29T00:13:20+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
     <lastmod>2016-09-29T00:13:20+00:00</lastmod>
   </url>
   
@@ -848,6 +863,11 @@
   </url>
   
   <url>
+    <loc>/tags/me/</loc>
+    <lastmod>2016-01-21T02:07:35+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/metaprogramming/</loc>
     <lastmod>2016-01-21T02:07:35+00:00</lastmod>
   </url>
@@ -905,11 +925,6 @@
   <url>
     <loc>/new-york-is-very-nice/</loc>
     <lastmod>2015-12-02T21:42:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/math/</loc>
-    <lastmod>2015-10-24T15:20:46+00:00</lastmod>
   </url>
   
   <url>
@@ -1113,6 +1128,11 @@
   </url>
   
   <url>
+    <loc>/tags/scipy/</loc>
+    <lastmod>2015-07-13T21:36:32+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/i-have-written-more-code-in-the-day-after-scipy/</loc>
     <lastmod>2015-07-13T21:36:32+00:00</lastmod>
   </url>
@@ -1120,11 +1140,6 @@
   <url>
     <loc>/tags/scipy2015/</loc>
     <lastmod>2015-07-13T21:36:32+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/scipy/</loc>
-    <lastmod>2015-07-12T00:22:13+00:00</lastmod>
   </url>
   
   <url>
@@ -1229,11 +1244,6 @@
   
   <url>
     <loc>/tags/api/</loc>
-    <lastmod>2015-06-11T15:58:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/data/</loc>
     <lastmod>2015-06-11T15:58:41+00:00</lastmod>
   </url>
   
@@ -1508,6 +1518,11 @@
   </url>
   
   <url>
+    <loc>/tags/tex/</loc>
+    <lastmod>2014-05-29T10:02:09+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/texas/</loc>
     <lastmod>2014-05-29T10:02:09+00:00</lastmod>
   </url>
@@ -1530,11 +1545,6 @@
   <url>
     <loc>/ok-so-i-think-my-days-of-using-texstudio-are/</loc>
     <lastmod>2014-05-08T18:59:51+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/mac/</loc>
-    <lastmod>2014-05-01T03:59:44+00:00</lastmod>
   </url>
   
   <url>
@@ -1653,11 +1663,6 @@
   </url>
   
   <url>
-    <loc>/tags/me/</loc>
-    <lastmod>2014-03-07T18:05:57+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/my-face/</loc>
     <lastmod>2014-03-07T18:05:57+00:00</lastmod>
   </url>
@@ -1683,11 +1688,6 @@
   </url>
   
   <url>
-    <loc>/tags/tex/</loc>
-    <lastmod>2014-03-05T04:14:20+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/latex/</loc>
     <lastmod>2014-03-05T04:14:20+00:00</lastmod>
   </url>
@@ -1699,6 +1699,11 @@
   
   <url>
     <loc>/tags/college/</loc>
+    <lastmod>2014-03-03T01:34:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ph.d./</loc>
     <lastmod>2014-03-03T01:34:50+00:00</lastmod>
   </url>
   
@@ -1768,6 +1773,11 @@
   </url>
   
   <url>
+    <loc>/tags/work/</loc>
+    <lastmod>2014-02-13T15:35:53+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/workflowy/</loc>
     <lastmod>2014-02-13T15:35:53+00:00</lastmod>
   </url>
@@ -1804,11 +1814,6 @@
   
   <url>
     <loc>/tags/university/</loc>
-    <lastmod>2014-02-06T02:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/work/</loc>
     <lastmod>2014-02-06T02:48:16+00:00</lastmod>
   </url>
   
@@ -1863,20 +1868,17 @@
   </url>
   
   <url>
+    <loc>/tags/ph.-d./</loc>
+    <lastmod>2014-02-02T05:07:45+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/initialization/</loc>
     <lastmod>2014-02-02T05:07:45+00:00</lastmod>
   </url>
   
   <url>
     <loc>/diss-survey/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/ph.-d./</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/ph.d./</loc>
   </url>
   
   <url>

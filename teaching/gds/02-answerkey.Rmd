@@ -1,0 +1,143 @@
+---
+title: "Getting on another level"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+
+Today, we'll use the `earnings` data on the relationship between race, height, sex, age, and earnings. The data is expressed as:
+1. `earnings`, the yearly earnings (in $1000) for workers in a study
+2. `height`, height in meters of the participant 
+3. `sex`, one of `male`,`female`
+4. `race`, racial category from the US Census, one of `white`, `black`, `asian`, `native`, `other`
+5. `education`, the highest level of education attempted, one of `none`, `primary`, `secondary`, `university`, `postgraduate`, `phd`
+6. `is_hispanic`, binary variable indicating whether the respondent identifies as a hispanic ethnicity
+7. `age`, the age of the respondent. Must be over 18 to have participated in the study. 
+8. `age_band`, a categorical variable indicating whether the respondent is 18 to 34, 35 to 50, or 50+. 
+9. `was_promoted`, a categorical variable indicating whether the respondent was promoted recently. 
+
+# 1. Doing Data Science Mentally
+
+Fit a regression predicting earnings by height for two sexes, as well as the overall effect of height on earnings.
+
+## 1.1 
+Does an extra meter of height have a statistically significant impact on earnings for men? How about for women? Are the impacts *significantly different* from one another?
+```{r, message=F, warning=F}
+library(tidyverse)
+library(broom)
+earnings = read_csv("../data/earnings.csv")
+
+earnings['height_centered'] = (earnings$height - mean(earnings$height, na.rm=T))
+earnings['sex'] = as.factor(earnings$sex)
+earnings['is_hispanic'] = as.factor(earnings$is_hispanic)
+earnings['race'] = as.factor(earnings$race)
+earnings['education'] = as.factor(earnings$education)
+earnings['age_band'] = as.factor(earnings$age_band)
+
+male_model = lm(earnings ~ height_centered, data=subset(earnings, sex=="male"))
+female_model = lm(earnings ~ height_centered, data=subset(earnings, sex=="female"))
+all_model = lm(earnings ~ height_centered, data=earnings)
+```
+```{r}
+knitr::kable(broom::tidy(male_model))
+```
+```{r}
+knitr::kable(broom::tidy(female_model))
+```
+```{r}
+knitr::kable(broom::tidy(all_model))
+```
+
+## 1.2
+
+Why would the impact of height on earnings be  *so much larger* for the data overall than for men or women as a subset?[^hint-scatter]
+
+```{r, warning=F, message=F}
+ggplot(earnings, aes(x=height, y=earnings, color=sex)) + 
+  geom_point() + geom_smooth(method=lm) + # do the male/female split
+  geom_smooth(aes(color='all'), method=lm) # re-write the aes to remove groups
+```
+
+## 1.3 
+Fit a fixed effect model so that men and women have different baseline earnings, but so that height has the same effect on men and women. Does this give you a more reasonable estimate of the effect of height on earnings? Also, according to your regression: what is the difference in earnings for a 1.75 meter man vs. a 1.75 meter woman? 
+```{r}
+femodel = lm(earnings ~ height + sex, data=earnings)
+knitr::kable(tidy(femodel))
+```
+```{r}
+example_scenario = data.frame(height = c(1.75, 1.75), sex=c('female', 'male'))
+example_scenario['height_centered'] = example_scenario$height - mean(earnings$height, na.rm=T)
+example_scenario['predicted_earnings'] = predict(femodel, example_scenario)
+knitr::kable(example_scenario)
+```
+
+Note that the difference is **exactly** the `sexmale` effect, since the slopes are the same for the two lines. 
+
+## 1.4
+Fit a multilevel model using `lmer` that allows both the baseline earnings and the impact of height on earnings to vary. 
+
+```{r message=F}
+library(lme4)
+library(broom.mixed)
+mermod = lmer(earnings ~ height_centered + (1 + height_centered || sex), data=earnings)
+```
+The fixed effects can be seen below:
+```{r}
+knitr::kable(tidy(mermod))
+```
+
+Note that the estimated standard deviation in the intercept is very large (meaning, lots of variation in the intercept values), but the standard deviation for the *slopes* is very smaller. As in our plots above, this suggests that the mixed model sees a big difference in the baseline pay between men and women, but sees a very small (if negligible) difference in the effect of height on earnings between men and women: the effect is pretty much the same. 
+```{r}
+knitr::kable(tidy(mermod, effects="ran_coefs"))
+```
+
+We can visualize this using the `ranef()` and `dotplot` as we did before in the workbook:
+```{r}
+lattice::dotplot(ranef(mermod))
+```
+
+# 2
+
+## 2.1
+Fit a *generalized* mixed-effect model that predicts whether a respondent has income[^hint-hasincome], depending on their sex. Allow both the intercept and the effect of sex to vary by education level. 
+```{r}
+earnings['has_income'] = earnings$earnings > 0
+earnings['has_income'] = replace_na(earnings$has_income, 0)
+missing_model = glmer(has_income ~ 1 + sex + (1 + sex | education), 
+                      data=earnings, family=binomial())
+```
+
+## 2.1
+What are the fixed and random component estimates for the model? 
+```{r}
+knitr::kable(tidy(missing_model))
+```
+
+```{r}
+knitr::kable(tidy(missing_model, effects='ran_coefs'))
+```
+
+## 2.3 
+What is the *predicted probability* a respondent in each group having their earnings recorded?[^hint-expandgrid] 
+```{r}
+scenarios = expand_grid(education = unique(earnings$education), sex = unique(earnings$sex))
+scenarios$education = factor(scenarios$education, levels=c("primary", "secondary", "university", "postgraduate", "phd"))
+
+scenarios['predicted_probability'] = predict(missing_model, 
+                                             scenarios, 
+                                             type='response') 
+knitr::kable(arrange(scenarios, education, sex))
+```
+4. Interpreting the table from the previous question, which levels of education have the largest difference between men and women in the probability an income is recorded, and which levels have the smallest? Why do you think this pattern occurs? 
+*Now, this is an interesting question... it results in a bit of a n-shaped curve, with the lowest probabilities for primary and phd-educated groups, and the highest in the middle:*
+```{r}
+scenarios %>% group_by(education) %>% 
+  summarize(diff = diff(predicted_probability))
+```
+*This is pretty interesting!*
+
+[^hint-scatter]: It also may help to build a scatterplot of the earnings vs. height with the regression lines you've just fit. Remember that you can use `geom_smooth(..., method=lm)` to plot the line of best fit. And, you can specify a new `aes()` for each `geom_` element in your `ggplot`. 
+[^hint-hasincome]: It will help to build a new column in your dataframe that is zero where income is zero or NA and is 1 elsewhere. You might want to do this first by finding where the income is larger than zero and *then* filling in missing values using `replace_na`. 
+[^hint-expandgrid]: Using `tidyr::expand_grid`, you can build a dataframe of all the combinations of two vectors quickly. For example, you could describe most rooms in the university with `tidyr::expand_grid(`
+`floor=c("carpet", "tile","linoleum"),`
+`walls=c("paint","wood paneling"))`
