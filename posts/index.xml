@@ -6,10 +6,40 @@
     <description>Yet Another Geographer (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 10 Aug 2020 22:21:38 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2020 10:59:57 +0100</lastBuildDate>
     
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>It&#39;s all coming back to you</title>
+      <link>/posts/boomerang/</link>
+      <pubDate>Wed, 30 Sep 2020 10:59:57 +0100</pubDate>
+      
+      <guid>/posts/boomerang/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been getting very interested in the concept of the &amp;ldquo;boomerang generation&amp;rdquo; and the tension that broader social trend has with ideas around &lt;a href=&#34;https://www.nytimes.com/2020/03/10/style/cottagecore.html&#34;&gt;Cottagecore&lt;/a&gt;. They&amp;rsquo;re two very strong forces acting on the middle class&amp;hellip; returning to intergenerational houses, folks can afford to live in the city. But, if the young increasingly &lt;em&gt;don&amp;rsquo;t&lt;/em&gt; want to live in cities due to changing tastes and preferences, then we get another wave of suburbanization. Given my own short stint &amp;ldquo;boomeranging&amp;rdquo; to the countryside during the COVID-19 lockdown,&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; I&amp;rsquo;ve been very intrigued by the intersection of the &amp;ldquo;return of the multi-generational&amp;rdquo; household and (possible) change in the tastes and preferences of young, house-buying people.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;As far as a determinant on social and economic mobility, it&amp;rsquo;s a big deal. Financially, it really helps, but practically, I think it might deprive young adults of opportunities and experiences that are otherwise critical to building soft skills and networks. I&amp;rsquo;m throwing myself into this socio-demographic literature to complement some other work I have going on , but it&amp;rsquo;s still fascinating nonetheless.&lt;/p&gt;
+&lt;p&gt;Since the ONS provides a &lt;a href=&#34;https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/datasets/youngadultslivingwiththeirparents&#34;&gt;solid dataset&lt;/a&gt;&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;, I decided to try my hand at a few simple visualizations. It&amp;rsquo;s &lt;a href=&#34;https://en.wikipedia.org/wiki/NEET&#34;&gt;neet&lt;/a&gt; stuff!&lt;/p&gt;
+&lt;p&gt;For the overall boomeranging of young adults, 15-34, we see a slight increase. Especially in the &amp;ldquo;second hump&amp;rdquo; centered around the early-to-mid twenties:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/boomerang.gif&#34; alt=&#34;overall boomeranging&#34;&gt;&lt;/p&gt;
+&lt;p&gt;That rise from approx. 35% to approx. 40% comes mainly from folks between 20 and 27 returning home. Focusing in, we can see a more pronounced shift in homeward bound populations of young people.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/postcollege-boomerang.gif&#34; alt=&#34;boomeranging of post-college young adults&#34;&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;I stayed with my partner&amp;rsquo;s family in Ireland, about an hour north of Dublin, and took some &lt;a href=&#34;https://www.instagram.com/p/B-jnZWoh7PT&#34;&gt;very&lt;/a&gt; &lt;a href=&#34;https://www.instagram.com/p/B_QZd_th3tV/&#34;&gt;nice&lt;/a&gt; &lt;a href=&#34;https://www.instagram.com/p/B_uiXLiB6hS/&#34;&gt;pictures&lt;/a&gt;. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;If, indeed, we ever are &lt;a href=&#34;https://www.theatlantic.com/technology/archive/2019/06/why-millennials-cant-afford-buy-house/591532/&#34;&gt;even able to buy a house&lt;/a&gt;! &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Although it was shockingly formatted&amp;hellip; machine readability improves human readability! &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
     
     <item>
       <title>Gunnar Olsson and the Counterfactual Imagination in Geography</title>
