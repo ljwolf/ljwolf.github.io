@@ -1,0 +1,213 @@
+---
+title: "What do you mean?"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+
+Today, we will use the *actual* sales prices of property listings in the WECA area The best answers will provide both useful visualizations and textual discussion of the correct answer. Code is also useful. In most cases, the answer can be provided in a line of code, a plot, and two or three sentences.  
+
+# 1. Doing Data Science Mentally
+
+```{r message=F, warnings=F}
+library(tidyverse)
+sales = read_csv("../data/sales.csv")
+```
+
+
+Let's get you thinking about conditional probabilities.[^hint-conditionals]. To do this, read in the `sales.csv` data. If listing is:
+
+## 1.1 
+in 1999, what's your best guess as to the price of that house? *My best guess is the mean price in this group:*
+```{r}
+sales %>% filter(year == 1999) %>% summarize(mean(price))
+```
+## 1.2 
+a *detached house* in 1999, what's your best guess as to the price of that house? *My best guess is the mean price in this group:*
+```{r}
+sales %>% filter(year == 1999 & property_type == "detached") %>%
+  summarize(mean(price))
+```
+## 1.3 
+a flat, is it likely to be sold as a freehold or leasehold? *A leasehold, since that is the most common type of flat.*
+```{r message=F, warning=F}
+sales %>% filter(property_type=="flat") %>% 
+  group_by(is_freehold) %>% summarize(n())
+```
+## 1.4 
+a detached house, is it likely to be sold as a freehold or leasehold? *A freehold, since that is the most common type of detached listing.*
+```{r message=F, warning=F}
+sales %>% filter(property_type=="detached") %>% 
+  group_by(is_freehold) %>% summarize(n())
+```
+## 1.5 
+for more than 500000,  is it likely to be sold as a freehold or leasehold? *A freehold, since that is the most common kind of expensive listing.*
+```{r message=F}
+sales %>% filter(price > 500000) %>% 
+  group_by(is_freehold) %>% summarize(n())
+```
+
+# 2. A Linear Model
+
+Fit a linear model that predicts listing price using a unique mean in each year.[^hint-factors] Interpreting this model:
+
+```{r}
+yearly_price_model = lm(price ~ as.factor(year), data=sales)
+broom::tidy(yearly_price_model)
+```
+
+
+## 2.1. 
+Which years are *not* "statistically significant?" Why might this be the case? *The early years are not statistically significant. This is because the __reference category__ is the first year in the dataset. So, if a "year" effect is not significant, it means that the year does not have a significantly different mean from the reference year, 1995.*
+
+## 2.2
+What's the model's prediction of listing price in 1999? How does this compare to your guess from 1.4? *The prediction is the same as the average I computed above. This is because the model is a __conditional model__, and predicts the price given the observations within that year. This is because factors are encoded as one-hot encoding, and only observations within the factor level are considered when estimating that effect.*
+```{r}
+predict(yearly_price_model, data.frame(year=c("1999")))
+```
+
+## 2.3
+Are there any issues you can detect with your model?[^hint-bias] *Yes, there are: the model is heteroskedastic, and has biased predictions for each local authority. Tackling the first problem first, we can see that the residuals increase as we go through time:* 
+```{r}
+sales %>% mutate(residual = residuals(yearly_price_model)) %>%
+  ggplot(aes(x=year, group=year, y=residual)) + geom_boxplot()
+```
+
+*The driving issue is that the actual variance of sales prices increases each year. We're only using the years to allow the mean to change each year, but the model still assumes that each years' variance is the same. This is means our model has __heteroskedastic errors__, and suggests that the confidence intervals for our estimates will be off.* 
+```{r}
+sales %>% group_by(year) %>% summarize(sd = sd(price)) %>% 
+     ggplot(aes(x=year, y=sd)) + geom_point()
+```
+
+*This is somewhat resolved if we consider a variance-stabilizing transformation of the data, such as the log transform:*
+```{r}
+sales %>% group_by(year) %>% summarize(sd_log = sd(log(price))) %>%
+      ggplot(aes(x=year, y=sd_log)) + geom_point()
+```
+
+*Moving to bias, the model has a "fixed effect" in each year, so it is unbiased when predicting the year's observations. Thus, on average, the errors cancel out within each year:*
+```{r}
+sales %>% mutate(residual = residuals(yearly_price_model)) %>% group_by(year) %>% summarize(mean(residual))
+```
+
+*However, this unbiasedness does not extend to other kinds of groupings. For example, our model severely under-predicts detached house prices, but substantially over-predicts flats and terraced house prices.*
+```{r}
+sales %>% mutate(residual = residuals(yearly_price_model)) %>% group_by(property_type) %>% summarize(mean(residual))
+```
+*Further, we can even use a t-test to express how "significant" this mis-prediction is, relative to an unbiased prediction which would have a mean of zero. `t_stat` values beyond 2 would indicate significant bias.*
+```{r}
+sales %>% mutate(residual = residuals(yearly_price_model)) %>% group_by(property_type) %>% summarize(mean = mean(residual), sd = sd(residual), count=n()) %>% mutate(t_stat = mean/(sd/sqrt(count)))
+```
+
+# 3. Getting Nonlinear
+
+## 3.1
+Fit a *generalized* linear model that predicts whether a listing is a freehold using the price of the listing. *Remember, this is linear in the log odds... or, explained: "linear" part of the model predicts a latent normal variable governing how "likely" the observation is a freehold. If we think of $y_i$ as indicating whether the observation is a freehold or not, then we might say that the probability $y_i$ is a freehold is some value $\pi_i$. When this probability is greater than some threshold $t$, then $y_i = 1$ (spelled in math as $y_i = 1 | \pi_i > t$). The logistic model focuses on modelling the log of the odds, spelled below*:
+$$ \log\left(\frac{\pi_i}{1 - \pi_i}\right) = \alpha + x_{i1}\beta_1 + x_{i2}\beta_2 + ... $$
+*That left hand side is the log odds of $i$ being freehold, and the right hand side is the "linear" part of the model. When the probability $\pi_i$ is big, the log odd are positive. When the probability is small, the log odds are negative. The log odds work well because they convert probabilities (which only exist as values between 0 and 1) into values that can exist across the whole number line. *
+```{r}
+freehold_model = glm(is_freehold ~ price, data=sales, 
+                     family=binomial())
+```
+
+## 3.2
+According to the model, do more expensive listings tend to be freehold properties? *Yes, the price is statistically significant predictor for whether something is a freehold listing.*
+```{r}
+broom::tidy(freehold_model)
+```
+*To imnprove upon this, use the `predict` function to get probabilities back for model observations. That is, moving from a price of £100k to a price of £200k, the probability of being a freehold listing goes from 71% to 74%.*
+```{r}
+predict(freehold_model, data.frame(price=c(100000,200000)), type='response')
+```
+
+## 3.3
+
+Make a histogram of the predicted probability that a listing is freehold. Describe this histogram.[^hint-logit] *Most observations have a probability above 70% of being a freehold. This is likely because `r mean(sales$is_freehold)`% of the listings, regardless of price, are freehold.*
+```{r}
+sales %>% mutate(predict_prob = predict(freehold_model, type='response')) %>%
+  ggplot(aes(x=predict_prob)) + geom_histogram(bins=100)
+```
+
+## 3.4
+Using `table(actual, predicted)`, build some [confusion matrices](https://en.wikipedia.org/wiki/Confusion_matrix#Table_of_confusion) that describes your prediction errors when you use three different cutoffs:
+- $\hat{p}>.5$ means a house is a freehold.
+*Doing this using `table`, while not a tidy tool, is much easier than the tidy version*[^tidy-xtabs]. *And, if you do not see a category, that is because it has been silently dropped. For example, we know now that there are no predicted probabilities lower than .7, so all properties will be predicted to be a freehold property if we set the threshold at .5:*
+```{r}
+with(sales %>% mutate(predict_prob = predict(freehold_model, type='response')), 
+     table(actual = is_freehold, predicted = predict_prob > .5))
+```
+- $\hat{p}>.75$ means a house is a freehold.
+```{r}
+with(sales %>% mutate(predict_prob = predict(freehold_model, type='response')), 
+     table(actual = is_freehold, predicted = predict_prob > .75))
+```
+- $\hat{p}>.99$ means a house is a freehold.
+```{r}
+with(sales %>% mutate(predict_prob = predict(freehold_model, type='response')), 
+     table(actual = is_freehold, predicted = predict_prob > .99))
+```
+## 3.5
+Of the contingency tables shown above, which gives the highest percentage of correctly-classified observations? 
+```{r echo=F}
+accuracy = function(threshold, percent=TRUE, data=sales, model=freehold_model){
+  xt = with(data %>% 
+              mutate(predict_prob = predict(model, type='response')), 
+            table(actual = is_freehold, predicted = predict_prob > threshold))
+  n_right = sum(diag(xt))
+  return(ifelse(percent, n_right/nrow(data), n_right))
+}
+```
+*The $\hat{p}>.75$ model, which correctly predicts * `r accuracy(.75)`*percent of the data, compared to *`r accuracy(.5)` *for the $.5$ model and* `r accuracy(.99)` *for the $.99$ model.*
+
+*You can see the whole accuracy curve, too, if you're interested in finding the absolute best value for the cutoff. Using a cutoff around .68, you can get some pretty good accuracy. To the left of that, you probably classify all observations as one class and, as the threshold goes to 1, you probably classify all the observations into the other class.*
+```{r}
+accuracy = function(threshold, percent=TRUE, 
+                          data=sales, 
+                          model=freehold_model){
+  xt = with(data %>% mutate(predict_prob = predict(model, type='response')), 
+                             table(actual = is_freehold, predicted = predict_prob > threshold))
+  n_right = sum(diag(xt))
+  return(ifelse(percent, n_right/nrow(data), n_right))
+}
+
+
+accuracies = c();
+for(t in seq(.5, 1, .01)){
+  accuracies <- c(accuracies, accuracy(t))
+}
+qplot(seq(.5, 1, .01), accuracies, geom='line')
+```
+
+
+    
+#  4. Thinking through what all this means
+
+## 4.1
+Go back to your analyses in part 1.4. What percentage of the other house types are freehold or leasehold? Is there an issue with confounding in your model from section 3? *YES, there is totally confounding of the model from section 3. You can see for yourself: whether or not a property is freehold basically boils down to whether a property is a flat:*
+
+```{r message=F, warning=F}
+sales %>% group_by(property_type) %>%
+  summarize(pct_freehold = mean(is_freehold))
+```
+
+*Basically no flats are freehold, so if the listing is a flat, you know it's not a freehold.*
+
+## 4.1
+Fit a new model predicting whether or not a listing is a freehold property using its price *and* its property type. Do your conclusions about the relationship between price and freehold status still hold? *Nope! As we saw in part 1, flats are much more likely to be leaseholds and detached houses are much more likely to be freeholds. And, detached houses are much more expensive than the average house. Therefore, the property type, not the price, might be driving the style of lease. I'll fit the model with no intercept, in order to be explicit about the group intercepts:*
+
+```{r}
+freehold_plus = glm(is_freehold ~ -1 + property_type + price, data=sales, family=binomial())
+broom::tidy(freehold_plus)
+```
+
+*This makes sense, when you think about the social economy of housing and tenancy. Flats, which are often one floor (if that) of a terraced house, are generally put up for sale by the building owner as a leased property. However, detached houses are large, independent structures. They're generally bought and sold as a whole, with full rights given to the buyer. So long as we control for the type of property, the price of a property generally won't have a significant effect on the tenancy type.*
+
+
+
+
+[^hint-conditionals]: These can all be done easily with `filter()` and `group_by`.
+[^hint-factors]: Be careful! In this model, are `years` numbers or categories? 
+[^hint-bias]: There are three things I would keep in mind here. First, recall that you can use the `residuals(model)` function to extract your model prediction errors and you can also get predictions using `predict(model)`. Second, you may find it useful to create columns containing model predictions or errors. Finally, remember the typical issues that models can have, such as heteroskedasticity or bias when predictions are grouped in a way the model ignores. 
+[^hint-logit]: Remember: the prediction for a logistic model is a *logit* value by default. Set the `type` option to `"response"` in the `predict` function to get predicted *probabilities*. 
+[^tidy-xtabs]: The tidy version is a bit of a monster, and issues with cross-tabs are a [common critique of the tidyverse](https://github.com/matloff/TidyverseSkeptic). This also uses a "retired" verb, `spread`, which is kind of like a simpler version of `pivot_wider`. Anyway, not recommended: `
+sales %>% mutate(pred_freehold = predict(freehold_model, type='response')>.5) %>%` ` group_by(is_freehold, pred_freehold) %>%` `summarize(n=n()) %>%` `spread(is_freehold, n)` `r emo::ji("vomit")`
