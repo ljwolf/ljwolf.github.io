@@ -35,22 +35,22 @@ pygmentsCodeFences = true
     url = "/about/"
 
 [[menu.main]]
-    name = "Vitae"
+    name = "CV"
     weight = 2
     identifier = "cv"
     url = "https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"
 
 [[menu.main]]
-    name = "Job"
+    name = "Affiliation"
     weight = 3
     identifier = "brizzle"
     url = "http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"
 
-#[[menu.main]]
-#    name = "Teaching"
-#    weight = -150
-#    identifier = "teaching"
-#    url = "/teaching/"
+[[menu.main]]
+    name = "Teaching"
+    weight = 4
+    identifier = "teaching"
+    url = "/teaching/"
 
 [author]
   name = "Levi John Wolf"
