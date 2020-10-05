@@ -18,6 +18,16 @@
   </url>
   
   <url>
+    <loc>/teaching/</loc>
+    <lastmod>2020-08-10T22:21:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-08-10T22:21:38+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/2020-sm2-lectures/</loc>
     <lastmod>2020-03-09T12:02:47+00:00</lastmod>
   </url>
@@ -189,11 +199,6 @@
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2018-03-02T19:33:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2018-03-02T19:33:34+00:00</lastmod>
   </url>
   

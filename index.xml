@@ -6,7 +6,7 @@
     <description>Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 02 Mar 2018 19:33:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 22:21:38 +0100</lastBuildDate>
     
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -75,6 +75,78 @@
 &lt;p&gt;&lt;a href=&#34;http://www.paulgraham.com/top.html&#34;&gt;most people have one top idea in their mind at any given time. That&amp;rsquo;s the idea their thoughts will drift toward when they&amp;rsquo;re allowed to drift freely. And, this idea will thus tend to get all the benefit of that type of thinking, while the others are starved of it. Which means it&amp;rsquo;s a disaster to let the wrong idea become the top one in your mind.&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Or, indeed, a waste of good mental horsepower to let the useless ones take that top spot. While it&amp;rsquo;s hard to do that right now, it&amp;rsquo;s important nonetheless.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Resources for teaching</title>
+      <link>/teaching/</link>
+      <pubDate>Mon, 10 Aug 2020 22:21:38 +0100</pubDate>
+      
+      <guid>/teaching/</guid>
+      <description>&lt;h1 id=&#34;courses-and-lectures&#34;&gt;Courses and Lectures&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Lecture Title&lt;/th&gt;
+&lt;th&gt;Course&lt;/th&gt;
+&lt;th&gt;Place&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Materials&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;All of them&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Geographic Data Science&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Bristol Uni&lt;/td&gt;
+&lt;td&gt;Fall 2020&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/teaching/gds/&#34;&gt;syllabus&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Counterfactual Thinking&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Geographic Thought &amp;amp; Practice&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Bristol Uni&lt;/td&gt;
+&lt;td&gt;Fall 2020&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/teaching/2020_bristol_cfact.pdf&#34;&gt;slides&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Topics in Advanced Spatial Modelling Series&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Spatial Modelling II&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Bristol Uni&lt;/td&gt;
+&lt;td&gt;Spring 2020&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/posts/2020-sm2-lectures/&#34;&gt;syllabus&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Intermediate Methods for Geographic Data Analysis&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Scientific Python Conference Tutorials&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;UT Austin&lt;/td&gt;
+&lt;td&gt;Summer 2019&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=fc1f4MNLzdQ&#34;&gt;video&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Autoregressive Stochastic Processes&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Explanation, Causation, and Longitudinal Analysis&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Bristol Uni&lt;/td&gt;
+&lt;td&gt;Spring 2019&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/teaching/20180323_eclan.html&#34;&gt;notes&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Intro to Geospatial Data Analysis with Python&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Scientific Python Conference Tutorials&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;UT Austin&lt;/td&gt;
+&lt;td&gt;Summer 2018&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=kJXUUO5M4ok&#34;&gt;video&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;ephemera&#34;&gt;Ephemera&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://seeing-theory.brown.edu&#34;&gt;Seeing Theory&lt;/a&gt;, a short visual intro to probability and statistics&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/teaching/mvregression.html&#34;&gt;3d visualization of a regression plane&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/teaching/gibbs.html&#34;&gt;Short note on Gibbs sampling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.umn.edu/~hodges/UseInsp/HandoutOnWriting.pdf&#34;&gt;Jim Hodges on being more direct in your technical writing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
