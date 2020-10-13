@@ -54,9 +54,13 @@ What is the *predicted probability* a respondent in each group having their earn
 
 Interpreting the table from the previous question, which levels of education have the largest difference between men and women in the probability an income is recorded, and which levels have the smallest? Why do you think this pattern occurs? 
 
+## 2.5 Challenge
+
+What is the best ``cutoff'' to accurately predict whether a respondent has income? Show me the confusion matrix for this cutoff. 
+
 [^hint-scatter]: It also may help to build a scatterplot of the earnings vs. height with the regression lines you've just fit. Remember that you can use `geom_smooth(..., method=lm)` to plot the line of best fit. And, you can specify a new `aes()` for each `geom_` element in your `ggplot`. 
 [^hint-hasincome]: It will help to build a new column in your dataframe that is zero where income is zero or NA and is 1 elsewhere. You might want to do this first by finding where the income is larger than zero and *then* filling in missing values using `replace_na`. 
 [^hint-expandgrid]: Using `tidyr::expand_grid`, you can build a dataframe of all the combinations of two vectors quickly. For example, you could describe most rooms in the university with `tidyr::expand_grid(`
 `floor=c("carpet", "tile","linoleum"),`
 `walls=c("paint","wood paneling"))`
-^[hint-broommixed]: Since these are mixed effect models, make sure you have the `broom.mixed` package installed!
+[^hint-broommixed]: Since these are mixed effect models, make sure you have the `broom.mixed` package installed!

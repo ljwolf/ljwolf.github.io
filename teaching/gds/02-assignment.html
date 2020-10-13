@@ -298,14 +298,14 @@ if (window.hljs) {
 </div>
 <div id="section-4" class="section level2">
 <h2>1.4</h2>
-<p>Fit a multilevel model using <code>lmer</code> that allows both the baseline earnings and the impact of height on earnings to vary. Show me the table of estimates using <code>tidy</code>.[^hint-broommixed]</p>
+<p>Fit a multilevel model using <code>lmer</code> that allows both the baseline earnings and the impact of height on earnings to vary. Show me the table of estimates using <code>tidy</code>.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> Since these are mixed effect models, make sure you have the <code>broom.mixed</code> package installed!</span></p>
 </div>
 </div>
 <div id="section-5" class="section level1">
 <h1>2</h1>
 <div id="section-6" class="section level2">
 <h2>2.1</h2>
-<p>Fit a <em>generalized</em> mixed-effect model that predicts whether a respondent has income<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> It will help to build a new column in your dataframe that is zero where income is zero or NA and is 1 elsewhere. You might want to do this first by finding where the income is larger than zero and <em>then</em> filling in missing values using <code>replace_na</code>.</span>, depending on their sex. Allow both the intercept and the effect of sex to vary by education level.</p>
+<p>Fit a <em>generalized</em> mixed-effect model that predicts whether a respondent has income<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> It will help to build a new column in your dataframe that is zero where income is zero or NA and is 1 elsewhere. You might want to do this first by finding where the income is larger than zero and <em>then</em> filling in missing values using <code>replace_na</code>.</span>, depending on their sex. Allow both the intercept and the effect of sex to vary by education level.</p>
 </div>
 <div id="section-7" class="section level2">
 <h2>2.2</h2>
@@ -313,11 +313,15 @@ if (window.hljs) {
 </div>
 <div id="section-8" class="section level2">
 <h2>2.3</h2>
-<p>What is the <em>predicted probability</em> a respondent in each group having their earnings recorded?<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> Using <code>tidyr::expand_grid</code>, you can build a dataframe of all the combinations of two vectors quickly. For example, you could describe most rooms in the university with <code>tidyr::expand_grid(</code> <code>floor=c(&quot;carpet&quot;, &quot;tile&quot;,&quot;linoleum&quot;),</code> <code>walls=c(&quot;paint&quot;,&quot;wood paneling&quot;))</code> <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>: Since these are mixed effect models, make sure you have the <code>broom.mixed</code> package installed!</span></p>
+<p>What is the <em>predicted probability</em> a respondent in each group having their earnings recorded?<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> Using <code>tidyr::expand_grid</code>, you can build a dataframe of all the combinations of two vectors quickly. For example, you could describe most rooms in the university with <code>tidyr::expand_grid(</code> <code>floor=c(&quot;carpet&quot;, &quot;tile&quot;,&quot;linoleum&quot;),</code> <code>walls=c(&quot;paint&quot;,&quot;wood paneling&quot;))</code></span></p>
 </div>
 <div id="section-9" class="section level2">
 <h2>2.4</h2>
 <p>Interpreting the table from the previous question, which levels of education have the largest difference between men and women in the probability an income is recorded, and which levels have the smallest? Why do you think this pattern occurs?</p>
+</div>
+<div id="challenge" class="section level2">
+<h2>2.5 Challenge</h2>
+<p>What is the best ``cutoff’’ to accurately predict whether a respondent has income? Show me the confusion matrix for this cutoff.</p>
 </div>
 </div>
 

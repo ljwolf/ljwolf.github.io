@@ -141,3 +141,5 @@ species_long %>%
   ggplot(aes(x=Genus, y=prevalence, color=Species)) + geom_boxplot() + 
   scale_y_continuous(trans='log10') + annotation_logticks(sides='l') + ylab("Prevalence (log10)")
 ```
+
+

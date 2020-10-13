@@ -56,6 +56,10 @@ Using `table(actual, predicted)`, build some [confusion matrices](https://en.wik
 
 ## 3.5
 Of the cutoffs above, which gives the lowest number of mis-classified observations? 
+
+## 3.6 Challenge
+
+For a few different thresholds, compute the true positive and false positive rate. This trade-off between false positives and true positives is the core concept behind the Receiver Operating Characteristic Curve (ROC Curve)^[Check ISL, p. 147 for a brief explanation.] Using the `plotROC` package, try making a ROC plot. 
     
 # 4. Thinking through what all this means
 
