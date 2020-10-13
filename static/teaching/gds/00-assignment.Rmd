@@ -44,7 +44,7 @@ knitr::kable(tail(temps, 9))
 ```
 
 ### 1.2 
-How would you tidy the `temps` data in order to easily compute the range of temperatures in each year?
+How would you tidy the `temps` data in order to easily compute the range of temperatures in each year? Show me the code, and briefly explain why the data is now tidy. 
 
 ### 1.3 
 The `weca` data also has one of these Wickham (2014) issues. Which one does it have, and how can you tell? 
