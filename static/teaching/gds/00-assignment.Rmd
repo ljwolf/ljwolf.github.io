@@ -54,7 +54,7 @@ The `weca` data also has one of these Wickham (2014) issues. Which one does it h
 It will be helpful to have tidy data for some analyses in the remainder of the exercise. This next section will involve doing this. 
 
 ### 2.1 
-Use a pivot to transform the data to make each row measure the price of an LSOA in a specific month & year.[^pivot]
+Use a pivot to transform the data to make each row measure the price of an LSOA in a specific month & year.[^pivot] Show me the code, and briefly explain why the data is now tidy. 
 
 ### 2.2 
 Using your new tidy data, use `ggplot2` to make a boxplot where the horizontal axis is years, the vertical axis is price, and boxes are colored by local authority.[^hint-boxplot]
