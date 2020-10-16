@@ -142,4 +142,75 @@ species_long %>%
   scale_y_continuous(trans='log10') + annotation_logticks(sides='l') + ylab("Prevalence (log10)")
 ```
 
+# Lecture Notes
+
+
+[Tidy Cheat Sheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+```{r}
+# read in data
+sites = read_csv('../data/species.csv')
+temps = read_csv('../data/bristol_temps.csv')
+# pivot longer
+
+long_temps = temps %>% pivot_longer(jan:dec, names_to='month', 
+                                    values_to='temperature')
+species = sites %>% pivot_longer(`A. robusta`:`S. florida`,
+                                  values_to='prevalence', 
+                                  names_to='species_name')
+
+# go back (broken)
+species %>% pivot_wider(names_from = 'species_name', values_from='prevalence')
+
+# go back (reducing duplicates)
+species %>% pivot_wider(names_from = 'species_name', values_from='prevalence', values_fn=mean)
+
+# show how separate/unite work
+species = species %>% separate(species_name, c('genus', 'species'), sep='. ')
+species %>% unite('organism', genus, species, sep='. ')
+
+# 
+species 
+
+# useful group_bys
+species %>% group_by(Date, genus) %>% 
+  summarize(prevalence = sum(prevalence), 
+            n_species_seen = sum(prevalence > 0), 
+            n_species = n())
+
+species %>% group_by(Date, genus) %>% 
+  summarize(prevalence = sum(prevalence), 
+            n_species_seen = sum(prevalence > 0), 
+            n_species = n()) %>%
+  summarize(prevalence = sum(prevalence))
+```
+
+
+# All the functions you may want:
+
+- `pivot_wider()`: take rows and convert them into columns
+- `pivot_longer()`: take columns and convert them into rows
+- `group_by(group_name) %>% summarize(group_summary = ..., group_summary2=...)`: split the dataframe into groups based on the unique values of `group_name` & summarize those groups using one (or more) functions
+  - `count()/n()`: count the number of observations in the group
+  - `first(variable)`: get the first value of `variable` in the group
+  - `last(variable)`: get the last value of `variable` in the group
+  - `n_distinct(variable)`: get the number of unique values of `variable` in the group. Gives the number of unqiue *rows* if `variable` is omitted. 
+- `filter()`: subset the data by rows according to some condition(s)
+  - `between(variable, lower, higher)`: is `TRUE` for rows where the value of `variable` is at least as large as `lower` and at most as large as `higher`. 
+  - `distinct(variable)`: is `TRUE` for rows when the value for that row not yet been seen (going from the first row to the last row)
+- `select()`: subset the data by columns according to some condition(s)
+  - `contains(variable,value)`: is `TRUE` for rows where `variable` is a string that contains `value`. See `??tidy_select` for more.
+- `mutate(new_variable = do_something(old_variable))`: add a `new_variable` to the data that is computed using an `old_variable` of the dataframe
+  - `transmute(new_variable = do_something(old_variable))`:  same as mutate, but only `new_variable` is returned
+  - `rename(new_name = old_name)`: rename the `old_name` column to be called `new_name` 
+- `separate(variable, sep="_")/unite(variable1, variable2, sep="_")`: split (or join) a column into new columns based on a separator, `sep`
+  - `separate_rows(variable, sep=':')`: split a column into *rows*, where each new row is a copy of the original, but now its value of `variable` has been split according to `sep`
+- `arrange(variable)`: sort the dataframe based on increasing values of `variable` (i.e. sort is ascending)
+  - `arrange(desc(variable))` sort the dataframe based on *decreasing* values of `variable`
+- joins: merge dataframes based on set theory
+  - `left/right/inner/full_join()` 
+  - `semi/anti_join`
+- `expand_grid(a, b, c)`: make a new dataframe out of all the combinations of values in `a`, `b`, and `c`
+  - `seq(start, stop, step)`: make a sequence from the `start` to the `stop` with a step size of `step`
+  - `rep(vector, number)`: repeat the `vector` 
 
