@@ -773,6 +773,7 @@ join %&gt;% mutate(range = maximum - minimum) # compute the range</code></pre>
 </ul>
 <pre class="r"><code>price_changes = wecatidy %&gt;% filter(year &gt;= 2008) %&gt;%
                              group_by(lsoa_code) %&gt;% 
+                             arrange(year) %&gt;%
                              summarize(pct_change = (last(price) - first(price))/first(price)*100)
 price_changes = merge(weca[c(&#39;lsoa_code&#39;, &#39;geom&#39;)], price_changes, by=&#39;lsoa_code&#39;)
 plot(price_changes[&#39;pct_change&#39;])</code></pre>

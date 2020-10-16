@@ -142,6 +142,7 @@ knitr::kable(head(wecatidy %>% filter(year >= 2008) %>%
 ```{r results=F, message=F}
 price_changes = wecatidy %>% filter(year >= 2008) %>%
                              group_by(lsoa_code) %>% 
+                             arrange(year) %>%
                              summarize(pct_change = (last(price) - first(price))/first(price)*100)
 price_changes = merge(weca[c('lsoa_code', 'geom')], price_changes, by='lsoa_code')
 plot(price_changes['pct_change'])
