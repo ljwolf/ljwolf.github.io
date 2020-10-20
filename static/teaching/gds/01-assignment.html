@@ -322,7 +322,7 @@ if (window.hljs) {
 </div>
 <div id="section-10" class="section level2">
 <h2>3.4</h2>
-<p>Using <code>table(actual, predicted)</code>, build some confusion matrices for three different cutoffs:</p>
+<p>Using <code>table(actual, predicted)</code>, build some <a href="https://en.wikipedia.org/wiki/Confusion_matrix#Table_of_confusion">confusion matrices</a> that describes your prediction errors when you use three different cutoffs:</p>
 <ul>
 <li><span class="math inline">\(\hat{p}&gt;.5\)</span> means a house is a freehold.</li>
 <li><span class="math inline">\(\hat{p}&gt;.75\)</span> means a house is a freehold.</li>
@@ -332,6 +332,10 @@ if (window.hljs) {
 <div id="section-11" class="section level2">
 <h2>3.5</h2>
 <p>Of the cutoffs above, which gives the lowest number of mis-classified observations?</p>
+</div>
+<div id="challenge" class="section level2">
+<h2>3.6 Challenge</h2>
+<p>For a few different thresholds, compute the true positive and false positive rate. This trade-off between false positives and true positives is the core concept behind the Receiver Operating Characteristic Curve (ROC Curve)<label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> Check ISL, p. 147 for a brief explanation.</span> Using the <code>plotROC</code> package, try making a ROC plot.</p>
 </div>
 </div>
 <div id="thinking-through-what-all-this-means" class="section level1">
