@@ -287,40 +287,44 @@ if (window.hljs) {
 </div>
 <div id="section-3" class="section level2">
 <h2>1.4</h2>
+<p>for a detached house, is it likely to be sold as a freehold or leasehold?</p>
+</div>
+<div id="section-4" class="section level2">
+<h2>1.5</h2>
 <p>pricier than 500000, is it likely to be sold as a freehold or leasehold?</p>
 </div>
 </div>
 <div id="a-linear-model" class="section level1">
 <h1>2. A Linear Model</h1>
 <p>Fit a linear model that predicts listing price using a unique mean in each year.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> Be careful! In this model, are <code>years</code> numbers or categories?</span> Interpreting this model:</p>
-<div id="section-4" class="section level2">
+<div id="section-5" class="section level2">
 <h2>2.1</h2>
 <p>Which years are <em>not</em> “statistically significant?” Why might this be the case?</p>
 </div>
-<div id="section-5" class="section level2">
-<h2>2.2</h2>
-<p>What’s the model’s prediction of listing price in 1999? How does this compare to your guess from 1.4?</p>
-</div>
 <div id="section-6" class="section level2">
+<h2>2.2</h2>
+<p>What’s the model’s prediction of listing price in 1999? How does this compare to your guess from section 1?</p>
+</div>
+<div id="section-7" class="section level2">
 <h2>2.3</h2>
 <p>Are there any issues with the model that you can identify? <label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> There are three things I would keep in mind here. First, recall that you can use the <code>residuals(model)</code> function to extract your model prediction errors and you can also get predictions using <code>predict(model)</code>. Second, you may find it useful to create columns containing model predictions or errors. Finally, remember the typical issues that models can have, such as heteroskedasticity or bias when predictions are grouped in a way the model ignores.</span></p>
 </div>
 </div>
 <div id="getting-nonlinear" class="section level1">
 <h1>3. Getting Nonlinear</h1>
-<div id="section-7" class="section level2">
+<div id="section-8" class="section level2">
 <h2>3.1</h2>
 <p>Fit a <em>generalized</em> linear model that predicts whether a listing is a freehold using the price of the listing.</p>
 </div>
-<div id="section-8" class="section level2">
+<div id="section-9" class="section level2">
 <h2>3.2</h2>
 <p>According to the model, do more expensive listings tend to be freehold properties?</p>
 </div>
-<div id="section-9" class="section level2">
+<div id="section-10" class="section level2">
 <h2>3.3</h2>
 <p>Make a histogram of the predicted probability that a listing is freehold.<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> Remember: the prediction for a logistic model is a <em>logit</em> value by default. Set the <code>type</code> option to <code>&quot;response&quot;</code> in the <code>predict</code> function to get predicted <em>probabilities</em>.</span> Describe this histogram.</p>
 </div>
-<div id="section-10" class="section level2">
+<div id="section-11" class="section level2">
 <h2>3.4</h2>
 <p>Using <code>table(actual, predicted)</code>, build some <a href="https://en.wikipedia.org/wiki/Confusion_matrix#Table_of_confusion">confusion matrices</a> that describes your prediction errors when you use three different cutoffs:</p>
 <ul>
@@ -329,7 +333,7 @@ if (window.hljs) {
 <li><span class="math inline">\(\hat{p}&gt;.99\)</span> means a house is a freehold.</li>
 </ul>
 </div>
-<div id="section-11" class="section level2">
+<div id="section-12" class="section level2">
 <h2>3.5</h2>
 <p>Of the cutoffs above, which gives the lowest number of mis-classified observations?</p>
 </div>
@@ -341,11 +345,11 @@ if (window.hljs) {
 <div id="thinking-through-what-all-this-means" class="section level1">
 <h1>4. Thinking through what all this means</h1>
 <p>Using your model from the previous question</p>
-<div id="section-12" class="section level2">
+<div id="section-13" class="section level2">
 <h2>4.1</h2>
 <p>Go back to your analyses in part 1.4. What percentage of the other house types are freehold or leasehold? Is there an issue with confounding in your model from section 3?</p>
 </div>
-<div id="section-13" class="section level2">
+<div id="section-14" class="section level2">
 <h2>4.2</h2>
 <p>Fit a new model predicting whether or not a listing is a freehold property using its price <em>and</em> its property type. Do your conclusions about price and freehold status still hold?</p>
 </div>
