@@ -61,7 +61,7 @@ broom::tidy(yearly_price_model)
 Which years are *not* "statistically significant?" Why might this be the case? *The early years are not statistically significant. This is because the __reference category__ is the first year in the dataset. So, if a "year" effect is not significant, it means that the year does not have a significantly different mean from the reference year, 1995.*
 
 ## 2.2
-What's the model's prediction of listing price in 1999? How does this compare to your guess from 1.4? *The prediction is the same as the average I computed above. This is because the model is a __conditional model__, and predicts the price given the observations within that year. This is because factors are encoded as one-hot encoding, and only observations within the factor level are considered when estimating that effect.*
+What's the model's prediction of listing price in 1999? How does this compare to your guess from section 1? *The prediction is the same as the average I computed above. This is because the model is a __conditional model__, and predicts the price given the observations within that year. This is because factors are encoded as one-hot encoding, and only observations within the factor level are considered when estimating that effect.*
 ```{r}
 predict(yearly_price_model, data.frame(year=c("1999")))
 ```

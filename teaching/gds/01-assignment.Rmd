@@ -20,7 +20,10 @@ about a *detached house* in 1999, what's your best guess as to the price of that
 ## 1.3
 for a flat, is it likely to be sold as a freehold or leasehold?
 
-## 1.4
+## 1.4 
+for a detached house, is it likely to be sold as a freehold or leasehold? 
+
+## 1.5
 pricier than 500000,  is it likely to be sold as a freehold or leasehold?
 
 # 2. A Linear Model
@@ -31,7 +34,7 @@ Fit a linear model that predicts listing price using a unique mean in each year.
 Which years are *not* "statistically significant?" Why might this be the case?
 
 ## 2.2
-What's the model's prediction of listing price in 1999? How does this compare to your guess from 1.4?
+What's the model's prediction of listing price in 1999? How does this compare to your guess from section 1?
 
 ## 2.3
 Are there any issues with the model that you can identify? [^hint-bias]
