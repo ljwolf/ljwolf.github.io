@@ -91,13 +91,13 @@ ggplot(times, aes(y=resid(wait_model2), x=long_wait)) + geom_point() + labs(x='p
 
 Looking at those lines, you know that the residuals are *never* going to be normal: $y$ can only be zero (if the wait is long) or one (if the wait is short). This means that the residual for some observation is always going to be $0-p_i$ or $1 - p_i$, depending on whether $y_i$ is zero or one. This is *not* what we want to see for linear regression, so we have to be *very* careful about interpreting this model. 
 
-You can see that the predictions can go a little bit funky... If your friend waits for one minute at the Milk Thistle, there is a *negative probability* that the wait will be too long:
+You can see that the predictions can go a little bit funky... If your friend waits for seven minutes at the Galli, there is a *probability greater than 1* that the wait will be too long:
 
 ```{r}
-scenario = data.frame(pub='The Milk Thistle', waiting=1)
+scenario = data.frame(pub='The Gallimaufry', waiting=7)
 predict(wait_model2, scenario)
 ```
-Having a negative percent chance of something happening is [against the law](https://en.wikipedia.org/wiki/Probability_axioms#First_axiom), and I don't want you to get busted for having contraband lying around, so let's try something a little better than this.
+Having a probability over 1 means that there's more than a 100 percent chance of something happening. That's [against the law](https://en.wikipedia.org/wiki/Probability_axioms#First_axiom), and I don't want you to get busted for having contraband probabilities lying around! So, let's try something a little better than this.
 
 # A generalized linear model
 

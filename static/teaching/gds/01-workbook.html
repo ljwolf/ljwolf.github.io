@@ -618,12 +618,12 @@ knitr::kable(broom::tidy(wait_model2))</code></pre>
 <p class="caption marginnote">--> <!--</p>--> <!--</div>--></span>
 </p>
 <p>Looking at those lines, you know that the residuals are <em>never</em> going to be normal: <span class="math inline">\(y\)</span> can only be zero (if the wait is long) or one (if the wait is short). This means that the residual for some observation is always going to be <span class="math inline">\(0-p_i\)</span> or <span class="math inline">\(1 - p_i\)</span>, depending on whether <span class="math inline">\(y_i\)</span> is zero or one. This is <em>not</em> what we want to see for linear regression, so we have to be <em>very</em> careful about interpreting this model.</p>
-<p>You can see that the predictions can go a little bit funky… If your friend waits for one minute at the Milk Thistle, there is a <em>negative probability</em> that the wait will be too long:</p>
-<pre class="r"><code>scenario = data.frame(pub=&#39;The Milk Thistle&#39;, waiting=1)
+<p>You can see that the predictions can go a little bit funky… If your friend waits for seven minutes at the Galli, there is a <em>probability greater than 1</em> that the wait will be too long:</p>
+<pre class="r"><code>scenario = data.frame(pub=&#39;The Gallimaufry&#39;, waiting=7)
 predict(wait_model2, scenario)</code></pre>
-<pre><code>##         1 
-## 0.1248411</code></pre>
-<p>Having a negative percent chance of something happening is <a href="https://en.wikipedia.org/wiki/Probability_axioms#First_axiom">against the law</a>, and I don’t want you to get busted for having contraband lying around, so let’s try something a little better than this.</p>
+<pre><code>##        1 
+## 1.113252</code></pre>
+<p>Having a probability over 1 means that there’s more than a 100 percent chance of something happening. That’s <a href="https://en.wikipedia.org/wiki/Probability_axioms#First_axiom">against the law</a>, and I don’t want you to get busted for having contraband probabilities lying around! So, let’s try something a little better than this.</p>
 </div>
 <div id="a-generalized-linear-model" class="section level1">
 <h1>A generalized linear model</h1>
