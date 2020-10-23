@@ -82,7 +82,7 @@ knitr::kable(tail(join %>% mutate(range = maximum - minimum)))
 
 The `weca` data has one of these issues. Which one does it have, and how can you tell? 
 
-*The* `weca` *data is too wide. It mixes information about the quarter/year in with the information about price. This means that the data has Wickham's first problem: column headers are values, not variable names. In theory, lsoa, la, price, quarter, and year are distinct variables that each encode a distinct bit of information about the observation. Further, this means that the "tidy" version of this data contains a single row for the price of a single LSOA in a single quarter in a single year. The data needs to be "melted" to become tidy, which will be completed in question 3. *
+*The* `weca` *data is too wide. It mixes information about the quarter/year in with the information about price. This means that the data has Wickham's first problem: column headers are values, not variable names. In theory, lsoa, la, price, quarter, and year are distinct variables that each encode a distinct bit of information about the observation. Further, this means that the "tidy" version of this data contains a single row for the price of a single LSOA in a single quarter in a single year. The data needs to be "melted" to become tidy, which will be completed in the next step. *
 
 ## 2. Tidying Data
 
@@ -141,7 +141,8 @@ knitr::kable(head(wecatidy %>% filter(year >= 2008) %>%
 *This requires the hint information, plus everything we've done before. *
 ```{r results=F, message=F}
 price_changes = wecatidy %>% filter(year >= 2008) %>%
-                             group_by(lsoa_code) %>% 
+                             group_by(lsoa_code, year) %>% 
+                             summarize(price = mean(price)) %>%
                              arrange(year) %>%
                              summarize(pct_change = (last(price) - first(price))/first(price)*100)
 price_changes = merge(weca[c('lsoa_code', 'geom')], price_changes, by='lsoa_code')
