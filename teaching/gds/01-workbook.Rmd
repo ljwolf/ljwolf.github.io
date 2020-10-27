@@ -85,11 +85,16 @@ ggplot(times, aes(x=waiting, y=as.numeric(long_wait), color=pub, group=pub)) +
   labs(x="Wait time (minutes)", y='Whether wait is "long"') + theme(legend.position='bottom')
 ```
 
+
 ```{r fig.margin=T, warning=F, message=F, fig.width=3, fig.height=2, echo=F}
-ggplot(times, aes(y=resid(wait_model2), x=long_wait)) + geom_point() + labs(x='prediction', y='residual')
+times %>% mutate(resid = resid(wait_model2)) %>% 
+  mutate(long_wait = resid > 0) %>%
+ggplot(aes(x=resid)) + geom_rug(aes(color=long_wait)) +
+  geom_density() + labs(x='residual') +
+  xlim(-1, 1) + theme(legend.position='bottom')
 ```
 
-Looking at those lines, you know that the residuals are *never* going to be normal: $y$ can only be zero (if the wait is long) or one (if the wait is short). This means that the residual for some observation is always going to be $0-p_i$ or $1 - p_i$, depending on whether $y_i$ is zero or one. This is *not* what we want to see for linear regression, so we have to be *very* careful about interpreting this model. 
+Looking at those lines, you know that the residuals are going to have some odd structure: $y$ can only be zero (if the wait is not too long) or one (if the wait is too long). This means that the residual, usually $y - \hat{y}$, will instead be $0-p_i$ or $1 - p_i$, since $\hat{y}$ in this model is a "predicted probability that $y_i$ is one" ($p_i$), and $y_i$ is only ever zero or one. While it's possible for these residuals to be distributed normally in abstract, it's unlikely in practice. This is *not* what we want to see for linear regression, so we have to be *very* careful about interpreting this model. 
 
 You can see that the predictions can go a little bit funky... If your friend waits for seven minutes at the Galli, there is a *probability greater than 1* that the wait will be too long:
 
