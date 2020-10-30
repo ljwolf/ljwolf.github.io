@@ -132,12 +132,29 @@ qplot(x=seq(0,1,.01), y=log(seq(.0,1,.01)/(1 - seq(0,1,.01))), geom='line', xlab
 Something very cool happens when we take the *logarithm* of an odds. When $p_i < .5$, the odds are between $0$ and $1$. When $p_i>.5$, the odds are between $1$ and infinity. The *logarithm* of the odds becomes *negative* when $p_i < .5$ and becomes *positive* when $p_i > .5$. This means that you get a kind of "S"-like curve that gets really steep when $p_i$ gets close to its boundary. This "stretches" the log odds space out as $p_i$ gets really small or really large; small changes in $p_i$ in this area create large changes in log odds. This is kind of intuitive: a change from a 100000:1 odds to 1000:1 odds still means the event is still extremely unlikely *and* the change the probability is not that large in absolute terms. But that's actually a *huge* change in terms of the log odds: they go from $\log(1/100001)=$`r alog` to $\log(1/1001)=$`r blog`... almost a halving of the log odds while the  *absolute change in probability* change is very small.^[ That's more than the change in log odds when moving from $p_i = .25$ to $p_i = .75$, which is about `r dlog - clog`!] In sum, this is a pretty good way to model how probabilities work: we want to magnify the changes that represent large *relative* changes, but we don't want to squash the relative changes that happen in the middle, for things that have around 1:1 odds. 
 
 If we do this, then our model can be stated *just like a linear model*:
-$$ logit(y_i) = \alpha + x_i\beta + e_i$$
-which is called the *logistic curve*, and has *this* funky shape,^[Just for an example, I've set $\alpha=0$ and $\beta=1$.] in terms of $x$ and $\pi_i$:
-```{r, echo=F}
+$$ logit(y_i) = \log\left(\frac{\pi_i}{1 - \pi_i}\right) = \alpha + x_i\beta + e_i$$
+This is basically three transformations: from binary to probability, from probability to odds, and then from odds to *log* odds. We run a standard linear regression on the *log odds scale*, and then transform it back to the *probability scale*. The transformation from log odds back to the probability scale is called the *logistic* function, hence why this approach is called *logistic regression*. You can see each step of this process below, moving from our linear model for outcomes on the *log odds* scale (left) to an exponential function in terms of the odds (middle), and then to a *logistic* function in terms of the probabilities (right): 
+
+```{r, echo=F, fig.fullwidth=T}
 x = seq(-6, 6, .1)
-y = exp(x) / (exp(x) + 1)
-qplot(x=x,y=y,geom='line', ylab = 'Probability of y = 1')
+log_odds = x
+log_odds_2 = 2*x
+y = exp(x) / (exp(1*x) + 1)
+y2 = exp(2*x)/ (exp(2*x) + 1)
+odds = y / (1 - y)
+odds_2 = y2 / (1 - y2)
+scenario = data.frame(x=x, y=y, y2=y2, odds=odds, odds_2=odds_2, log_odds=log_odds, log_odds_2=log_odds_2)
+scenario_long = pivot_longer(scenario, c(y, y2, odds, odds_2, log_odds, log_odds_2), names_to="outcome")
+scenario_long= scenario_long %>% mutate(scale = case_when(outcome %in% c("log_odds", "log_odds_2") ~ "Log odds that y=1", 
+                                                          outcome %in% c("odds", "odds_2") ~ "Odds that y=1",
+                                                          TRUE ~ "Probability that y=1"),
+                                        parameterization = case_when(endsWith(outcome, "2") ~ "beta = 2, alpha=0",
+                                                                     TRUE ~ "beta = 0, alpha=0"
+                                          
+                                        )
+)
+                                                     
+ggplot(scenario_long, aes(x=x, y=value, color=parameterization)) + geom_line() + facet_wrap(~scale, scales="free_y") + ylab('')
 ```
 This is nice! as your $\alpha + x_i\beta$ get really small, you get $\pi_i$ that stay around zero! As $\alpha + x_i\beta$ get large, you get probabilities that stay really close to 1! This means that we never get predicted probabilities larger than 1 or smaller than zero like we did with our earlier model. 
 
