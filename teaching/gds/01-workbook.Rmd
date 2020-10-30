@@ -135,7 +135,7 @@ If we do this, then our model can be stated *just like a linear model*:
 $$ logit(y_i) = \log\left(\frac{\pi_i}{1 - \pi_i}\right) = \alpha + x_i\beta + e_i$$
 This is basically three transformations: from binary to probability, from probability to odds, and then from odds to *log* odds. We run a standard linear regression on the *log odds scale*, and then transform it back to the *probability scale*. The transformation from log odds back to the probability scale is called the *logistic* function, hence why this approach is called *logistic regression*. You can see each step of this process below, moving from our linear model for outcomes on the *log odds* scale (left) to an exponential function in terms of the odds (middle), and then to a *logistic* function in terms of the probabilities (right): 
 
-```{r, echo=F, fig.fullwidth=T}
+```{r, echo=F, fig.fullwidth=T, fig.height=3, fig.width=8}
 x = seq(-6, 6, .1)
 log_odds = x
 log_odds_2 = 2*x
@@ -154,7 +154,7 @@ scenario_long= scenario_long %>% mutate(scale = case_when(outcome %in% c("log_od
                                         )
 )
                                                      
-ggplot(scenario_long, aes(x=x, y=value, color=parameterization)) + geom_line() + facet_wrap(~scale, scales="free_y") + ylab('')
+ggplot(scenario_long, aes(x=x, y=value, color=parameterization)) + geom_line() + facet_wrap(~scale, scales="free_y") + ylab('') + theme(legend.position = 'bottom')
 ```
 This is nice! as your $\alpha + x_i\beta$ get really small, you get $\pi_i$ that stay around zero! As $\alpha + x_i\beta$ get large, you get probabilities that stay really close to 1! This means that we never get predicted probabilities larger than 1 or smaller than zero like we did with our earlier model. 
 
