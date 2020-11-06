@@ -283,14 +283,14 @@ if (window.hljs) {
 </ol>
 <div id="section" class="section level1">
 <h1>1</h1>
-<p>Fit a regression predicting earnings by height for two sexes, as well as the overall effect of height on earnings.</p>
+<p>Fit three separate simple linear regressions, one predicting earnings by height for all the data, one that predicts earnings using height <em>only among men</em>, and another that predicts earnings using height <em>only among women</em>.</p>
 <div id="section-1" class="section level2">
 <h2>1.1</h2>
-<p>Does an extra meter of height have a statistically significant impact on earnings for men? How about for women? Are the impacts <em>significantly different</em> from one another?</p>
+<p>Does an extra meter of height have a statistically significant impact on earnings among men? How about among women? Are the impacts <em>significantly different</em> in the two models?<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> Remember that questions about statistical significance can be answered by <em>confidence intervals</em>, not just the <span class="math inline">\(p\)</span>-values.</span></p>
 </div>
 <div id="section-2" class="section level2">
 <h2>1.2</h2>
-<p>Why would the impact of height on earnings be <em>so much larger</em> for the data overall than for men or women as a subset?<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> It also may help to build a scatterplot of the earnings vs. height with the regression lines you’ve just fit. Remember that you can use <code>geom_smooth(..., method=lm)</code> to plot the line of best fit. And, you can specify a new <code>aes()</code> for each <code>geom_</code> element in your <code>ggplot</code>.</span></p>
+<p>Why would the impact of height on earnings be <em>so much larger</em> for the data overall than for men or women as a subset?<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> It also may help to build a scatterplot of the earnings vs. height with the regression lines you’ve just fit. Remember that you can use <code>geom_smooth(..., method=lm)</code> to plot the line of best fit. And, you can specify a new <code>aes()</code> for each <code>geom_</code> element in your <code>ggplot</code>.</span></p>
 </div>
 <div id="section-3" class="section level2">
 <h2>1.3</h2>
@@ -298,14 +298,14 @@ if (window.hljs) {
 </div>
 <div id="section-4" class="section level2">
 <h2>1.4</h2>
-<p>Fit a multilevel model using <code>lmer</code> that allows both the baseline earnings and the impact of height on earnings to vary. Show me the table of estimates using <code>tidy</code>.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> Since these are mixed effect models, make sure you have the <code>broom.mixed</code> package installed!</span></p>
+<p>Fit a multilevel model using <code>lmer</code> that allows both the baseline earnings and the impact of height on earnings to vary by sex. Show me the table of estimates using <code>tidy</code>.<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> Since these are mixed effect models, make sure you have the <code>broom.mixed</code> package installed!</span> How does this compare to your regressions from earlier in this section?</p>
 </div>
 </div>
 <div id="section-5" class="section level1">
 <h1>2</h1>
 <div id="section-6" class="section level2">
 <h2>2.1</h2>
-<p>Fit a <em>generalized</em> mixed-effect model that predicts whether a respondent has income<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> It will help to build a new column in your dataframe that is zero where income is zero or NA and is 1 elsewhere. You might want to do this first by finding where the income is larger than zero and <em>then</em> filling in missing values using <code>replace_na</code>.</span>, depending on their sex. Allow both the intercept and the effect of sex to vary by education level.</p>
+<p>Fit a <em>generalized</em> mixed-effect model that predicts whether a respondent has income<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> It will help to build a new column in your dataframe that is zero where income is zero or NA and is 1 elsewhere. You might want to do this first by finding where the income is larger than zero and <em>then</em> filling in missing values using <code>replace_na</code>.</span>, depending on their sex. Allow both the intercept and the effect of sex to vary by education level.</p>
 </div>
 <div id="section-7" class="section level2">
 <h2>2.2</h2>
@@ -313,7 +313,7 @@ if (window.hljs) {
 </div>
 <div id="section-8" class="section level2">
 <h2>2.3</h2>
-<p>What is the <em>predicted probability</em> a respondent in each group having their earnings recorded?<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> Using <code>tidyr::expand_grid</code>, you can build a dataframe of all the combinations of two vectors quickly. For example, you could describe most rooms in the university with <code>tidyr::expand_grid(</code> <code>floor=c(&quot;carpet&quot;, &quot;tile&quot;,&quot;linoleum&quot;),</code> <code>walls=c(&quot;paint&quot;,&quot;wood paneling&quot;))</code></span></p>
+<p>What is the <em>predicted probability</em> a respondent in each group having their earnings recorded?<label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> Using <code>tidyr::expand_grid</code>, you can build a dataframe of all the combinations of two vectors quickly. For example, you could describe most rooms in the university with <code>tidyr::expand_grid(</code> <code>floor=c(&quot;carpet&quot;, &quot;tile&quot;,&quot;linoleum&quot;),</code> <code>walls=c(&quot;paint&quot;,&quot;wood paneling&quot;))</code></span></p>
 </div>
 <div id="section-9" class="section level2">
 <h2>2.4</h2>
