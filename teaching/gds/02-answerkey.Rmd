@@ -171,14 +171,24 @@ scenarios %>% group_by(education) %>%
   summarize(diff = diff(predicted_probability)) %>%
   knitr::kable()
 ```
-For a very simple plot:
+For a plot of this, you could try a simple barplot:
 ```{r}
-library(ggalt) # dumbell plots!
 to_plot = scenarios %>% group_by(education) %>% 
           mutate(education = factor(education, 
                                     levels=c("primary", "secondary", 
                                              "university", "postgraduate", 
                                              "phd")))
+
+ggplot(to_plot %>% summarize(diff = diff(predicted_probability)), 
+       aes(x=education, y=diff)) + geom_bar(stat='identity') + 
+  labs(x='Education', y="'Extra' probability a man\nhas an income recorded")
+
+```
+
+*Or, something much more complicated, like a dumbbell plot, which requires data in both wide and long form simultaneously!*
+```{r, message=F}
+library(ggalt) # dumbell plots!
+
   ggplot(to_plot, aes(y=education)) + 
     geom_point(aes(x=predicted_probability, color=sex)) + 
     geom_dumbbell(data=to_plot %>% pivot_wider(names_from=sex, 
@@ -190,7 +200,7 @@ to_plot = scenarios %>% group_by(education) %>%
     scale_color_manual(name = "", values = c("red", "blue")) +
     labs(x="Predicted probability\nthat a person has income")
 ```
-*This is pretty interesting!*
+*This is pretty interesting! As education increases, you see an increasing probability your income is recorded. However, the gap widens, too, until you get to the PhD, where it narrows again.*
 
 [^hint-scatter]: It also may help to build a scatterplot of the earnings vs. height with the regression lines you've just fit. Remember that you can use `geom_smooth(..., method=lm)` to plot the line of best fit. And, you can specify a new `aes()` for each `geom_` element in your `ggplot`. 
 [^hint-hasincome]: It will help to build a new column in your dataframe that is zero where income is zero or NA and is 1 elsewhere. You might want to do this first by finding where the income is larger than zero and *then* filling in missing values using `replace_na`. 
