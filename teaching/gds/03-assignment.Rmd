@@ -1,7 +1,205 @@
 ---
-title: 'Not yet!'
-author: "You eager beaver,"
+title: "Visualization"
 output:
-  tufte::tufte_html: default 
+  html_document
 ---
-we'll get here soon! `r emo::ji('rocket')`
+
+We'll be using three datasets today for our analysis:
+
+```{r message=F, warning=F}
+library(sf)
+library(tidyverse)
+
+# remember to remove quiet=T if you have trouble!
+weca = st_read('../data/weca.gpkg', quiet=T)
+earnings = read_csv('../data/earnings.csv')
+temps = read_csv('../data/bristol_temps.csv') %>% 
+          pivot_longer(jan:dec, names_to='month', values_to='temperature') %>%
+          mutate(month = ordered(month, levels=c("jan", "feb", "mar", "apr", 
+                                                 "may", "jun", "jul", "aug", "sep",
+                                                 "oct", "nov", "dec")))
+```
+
+# 1 Visual Narratives
+For each pair of visualizations, tell me:
+
+1. **Which version emphasizes what information?** Questions that may help you scaffold this are:
+  - what visual variables (like color, shape) are varied in the plot? 
+  - what scales or transformations are applied in the plot? 
+  - what coordinate systems/facets are used, and how do these encourage comparisons?
+2. **Which plot is the most effective at presenting this information and why?** Questions that may help you scaffold this discussion are:
+  - what visual variables change most dramatically?
+  - if you were to explain what the plot is showing to a friend, what would you say and why? 
+  - which one do you find the most aesthetically pleasing? why? 
+
+## 1.1
+
+This plot shows the relationship between price and earnings among respondents to a social research survey. 
+
+```{r,  fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
+ggplot(earnings, aes(y=earnings, x=height, color=earnings)) + 
+  geom_point() + 
+  theme(text=element_text(size=20)) + 
+  labs(title='1.1a') + xlim(1.4, 2) + ylim(0, 210)
+  
+ggplot(earnings, aes(y=earnings, x=height)) + 
+  geom_hex(bins=22) + 
+  theme(text=element_text(size=20)) + 
+  labs(title='1.1b') + xlim(1.4, 2) + ylim(0, 210)
+```
+
+## 1.2
+
+This plot shows the relationship between price, earnings, and age among respondents to a social research survey. 
+
+```{r, fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
+ggplot(earnings, aes(y=earnings, x=height, color=age)) + 
+  geom_point(alpha=.5) + geom_smooth(ci=F) +
+  theme(text=element_text(size=20)) + 
+  labs(title='1.2a')
+  
+ggplot(earnings, aes(y=earnings, x=height, shape=age_band, color=age_band)) + 
+  geom_point(alpha=.5) + geom_smooth(ci=F) +
+  theme(text=element_text(size=20)) + 
+  labs(title='1.2b')
+```
+```{r, fig.width=9, fig.height=3, echo=F, warning=F, message=F}
+ggplot(earnings, aes(y=earnings, x=height, color=age_band)) + 
+  geom_point() + 
+  facet_grid(~age_band) + geom_smooth(aes(color=NA), ci=F) + 
+  labs(title='1.2c') + theme(text=element_text(size=16))
+```
+
+## 1.3
+
+The following plot shows the average temperature every month, for every year of temperatures measured in a Bristol weather station, as well as the average curve for all years. 
+
+```{r, fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
+ggplot(temps, aes(x=month, y=temperature, color=year, group=year)) + 
+  geom_line(color='black', alpha=.33) + 
+  coord_polar() + 
+  geom_smooth(aes(x=month, y=temperature, group=NA), color='orangered', se=F) + 
+  labs(title='1.3A') + theme(text=element_text(size=20))
+
+ggplot(temps, aes(x=month, y=temperature, color=year, group=year)) + 
+  geom_line(color='black', alpha=.33) + 
+  geom_smooth(aes(x=month, y=temperature, group=NA), color='orangered', se=F) + 
+  labs(title='1.3B') + theme(text=element_text(size=20))
+```
+
+## 1.4
+```{r, message=F, warning=F, echo=F}
+wecalong = weca %>% pivot_longer(price_dec_1995:price_dec_2018, 
+                                names_prefix='price_', names_sep='_', 
+                                names_to=c("quarter", "year"),
+                                values_to='price')
+# NOTE: you can break this big chunk up every time there is a pipe operation, %>%. 
+#       So, it may look intimidating, but it's just a series of steps I'm chaining
+#       together using %>%. Each "line" is a step. If you're curious, try breaking
+#       off each step & seeing what it looks like for yourself. 
+changes =  wecalong %>%
+            group_by(la_name, lsoa_code, year) %>% # separate the data into unique lsoa-years
+            summarize(price = median(price, na.rm=T)) %>% # compute the average for a year
+            ungroup() %>% # cancel grouping
+            filter(year %in% c(2006, 2018)) %>% # focus in on before & after the GFC
+            group_by(la_name, year) %>% # group again, but by LA-years
+            # What is the 75th percentile of house prices in each LA each year?
+            mutate(top_of_la = quantile(price, .75, na.rm=T)) %>%
+            # Which rows are above this top 75% percentile price?
+            mutate(top_quarter = price > top_of_la) %>%
+            # pivot this out to columns
+            pivot_wider(id_cols=c(la_name, lsoa_code), names_prefix='top_',
+                        values_from=top_quarter, names_from=year) %>%
+            # Classify the values of those two columns into their four combinations
+            mutate(class = case_when((!top_2006) & (!top_2018) ~ "stable at the bottom",
+                                       top_2006  & (!top_2018) ~ "falls down", 
+                                     (!top_2006) &   top_2018  ~ "rises up", 
+                                       top_2006  &   top_2018 ~ "stable at the top")) %>%
+            # force them into an "ordered" factor, so that we can plot easily
+            mutate(class = ordered(class, levels=c('stable at the bottom', 'falls down',
+                                                   'rises up', 'stable at the top'))) %>%
+            # add back in the geometries
+            right_join(weca %>% select(lsoa_code, geom), 
+                       by="lsoa_code") %>%
+            # cast it back to an sf object
+            st_as_sf()
+```
+The following maps show the change in house prices since the global financial crisis. Specifically, it shows whether an LSOA's house prices were among the top 25% most expensive in Bristol in 2006 (before) and 2018 (after) the crisis. If it was expensive both times, it is marked as a "stable at the top" area.
+If it was *not* in the top 25% most expensive areas both times, then it is marked as "stable at the bottom." If it fell from the top 25%, then it is marked as "falls down," and likewise for "rises up" being those areas that *entered* the top 25% most expensive areas after the crisis, but were not expensive before the crisis. 
+
+```{r, fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
+ggplot(changes %>% filter(la_name == "Bristol, City of")) + 
+  geom_sf(aes(fill=class), lwd=0, alpha=.75) + labs(title='1.4a') +
+  scale_fill_brewer(palette = 'Paired')+ 
+  theme(text=element_text(size=16))
+ggplot(changes %>% filter(la_name == "Bristol, City of")) + 
+  geom_sf(aes(fill=class), lwd=0, alpha=.75) + labs(title='1.4b') +
+  scale_fill_brewer(palette = 'Spectral')+ 
+  theme(text=element_text(size=16))
+
+```
+
+```{r, fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
+ggplot(changes %>% filter(la_name == "Bristol, City of")) + 
+  geom_sf(aes(fill=class), lwd=0, alpha=.75) + labs(title='1.4c') +
+  scale_fill_brewer(palette = 'YlGn') + 
+  theme(text=element_text(size=16))
+
+ggplot(changes %>% filter(la_name == "Bristol, City of")) + 
+  geom_sf(lwd=.1, fill='lightgrey') +
+  geom_sf(data=changes %>% filter(la_name=="Bristol, City of") 
+          %>% st_centroid(), mapping=aes(shape=class, color=class)) + 
+  labs(title='1.4d') +
+  scale_color_brewer(palette = 'Spectral') + 
+  theme(text=element_text(size=16)) 
+```
+
+## 1.5
+
+This shows the distribution of house prices in each year. 
+
+```{r, echo=F, message=F, } 
+wecasummary = wecalong %>% group_by(year) %>% 
+                summarize(p25 = quantile(price, .25, na.rm=T), 
+                          p50 = quantile(price, .5, na.rm=T), 
+                          p75 = quantile(price, .75, na.rm=T)) %>%
+                mutate(iqr = p75 - p25, year = as.numeric(year))
+```
+
+```{r, fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
+ggplot(wecasummary, aes(x=year, y=p50)) + 
+  geom_jitter(data=wecalong, 
+             mapping=aes(x=as.numeric(year), y=price), 
+             alpha=.01, color='black') + 
+  geom_ribbon(aes(ymin=p25, ymax=p75), 
+              color='grey', alpha=.4) + 
+  geom_line(color='orangered') +
+  labs(x='Year', y="Price", title='1.5a') + theme(text=element_text(size=20))
+
+ggplot(wecasummary, aes(x=year, y=p50)) + 
+  geom_hex(data=wecalong, 
+             mapping=aes(x=as.numeric(year), y=price),
+           bins=23) + labs(x='Year', y="Price") +
+  labs(x='Year', y="Price", title='1.5b') + theme(text=element_text(size=20))
+````
+
+```{r, fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
+ggplot(wecalong, aes(x=as.numeric(year), group=year, y=price)) + 
+  geom_boxplot(outlier.size = 0) +
+  labs(x='Year', y="Price", title='1.5c') + theme(text=element_text(size=20))
+
+ggplot(wecalong, aes(x=as.numeric(year), y=price)) + 
+  geom_smooth(ci=.99) + 
+  geom_point(size=0) +
+  labs(x='Year', y="Price", title='1.5d') + theme(text=element_text(size=20))
+```
+
+# 2 Making Plots
+
+For each question, make a plot that you think best illustrates the claim. Be mindful of showing only relevant detail, and of the message "at a glance" from the plot. 
+
+## 2.1 In the `temps` data, temperature has increased over time.
+## 2.2 In the `earnings` data, there are no clear differences in the distributions of height over  education levels. 
+## 2.3 In the `earnings` data, there is a strong relationship between height and earnings.
+## 2.4 In the `weca` data, the variability of prices has increased over time. 
+## 2.5 In the `weca` data, the geographical pattern of prices in Bristol is the same in 2016 as 2017. 
