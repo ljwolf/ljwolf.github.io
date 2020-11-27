@@ -117,3 +117,52 @@ ggplot(temps, aes(x=year, y=temperature)) +
 
 ggplot(temps, aes(x=year, y=temperature, group=year)) + 
   geom_boxplot()
+
+
+
+
+## Color
+ggplot(weca) + 
+  geom_sf(aes(fill=price_dec_2018), lwd=0)
+
+library(viridis)
+
+# continuous vs. discrete
+
+ggplot(weca) + 
+  geom_sf(aes(fill=price_dec_2018), lwd=0) + 
+  scale_fill_viridis_c()
+
+ggplot(weca) + 
+  geom_sf(aes(fill=price_dec_2018), lwd=0) + 
+  scale_fill_viridis_b()
+
+# neat colormaps
+
+ggplot(weca) + 
+  geom_sf(aes(fill=price_dec_2018), lwd=0)
+
+ggplot(weca) + 
+  geom_sf(aes(fill=price_dec_2018), lwd=0) + 
+  scale_fill_viridis_c(option='plasma')
+
+ggplot(weca) + 
+  geom_sf(aes(fill=price_dec_2018), lwd=0) + 
+  scale_fill_viridis_c(option='inferno')
+
+library(wesanderson)
+
+ggplot(weca) + 
+  geom_sf(aes(fill=price_dec_2018), lwd=0) + 
+  scale_fill_gradientn(colors = wes_palette('Zissou1',100,type='continuous'))
+
+ggplot(weca) + 
+  geom_sf(aes(fill=la_name), lwd=0) + 
+  scale_fill_manual(values = wes_palette('Darjeeling1'))
+
+ggplot(weca %>% mutate(la_name = ordered(la_name, levels=c("Bristol, City of",
+                                                           "Bath and North East Somerset",
+                                                           "South Gloucestershire"))))+ 
+  geom_boxplot(aes(y=price_dec_2018, 
+                   group=la_name, fill=la_name)) + 
+  scale_fill_manual(values = wes_palette('Darjeeling1'))
