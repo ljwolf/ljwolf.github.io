@@ -1,40 +1,30 @@
 ---
-title: "Take Home Exam"
-output:
-  html_document:
-    df_print: paged
-  pdf_document: default
-  word_document: default
+title: "04-final"
+output: html_document
 ---
 
-# Favoritism in marking/grading
+Your friend from school has just returned from their gap year as a [WWOOF-er](https://wwoof.org.uk/) in a small estate outside of Lyon. They claim that there's nothing quite like a French wine. They're better, more expensive, and you know it! 
 
-One reason for conducting anonymous marking in schools is because we need to be vigilant about *favoritism*, or different treatment in aggregate to different groups of students. Here, we'll examine favoritism in the data on test scores you've seen before in the course. 
+So, you, now a freshly minted data scientist, decide to moonlight as a data sommelier. You find a nice dataset of [all the wine ratings](https://www.kaggle.com/zynicide/wine-reviews) you can find, and get to work. 
 
-There is a significant amount of work on testing in schools. If *favoritism* is at play, one group of students may have a *higher baseline test score* than another group. However, if the two groups of students are *different in their skill as test takers*, then the association between academic skill and an exam average actually may be statistically different between two groups of students. 
+```{r}
+wines = read_csv('https://ljwolf.org/teaching/gds/wines.csv')
+```
 
-Here, we'll examine `score_exam` as the indicator of test score, and we'll use `score_taught` as the indicator of the academic skill. In each question, I outline a short way that you might tackle the given question. 
+#1 
 
-1. Don't forget to explain the equations of any model you fit.
-2. Explain what effects mean, don't simply tell me that the "Intercept is 38.1" or that the "$\beta$ is 9"
-3. Make sure that your document knits, and knit to either PDF or DOCX for submission. 
-4. **VERIFY THAT YOUR FORMATTING IS CORRECT IN YOUR FINAL SUBMISSION!**
+Using `group_by` and `summarize`, 
 
-## Are there differences in the correlation between taught & exam scores in men & women?
-<span style='color:white'>
-This could be done using correlations & group bys. You have done *exactly* this before (with different data) in Assignment 2.
-</span>
+## 1.1
 
-## Are there differences in the distribution of overall attainment between taught & exam scores in men & women?
-<span style='color:white'>
-This could be shown through a boxplot/violinplot that shows exam scores, colored by gender & split on the $x$ axis by exam type. You may need to *tidy* the data in some manner, first. 
-</span>
+What are the average price & rating for each country's wines?
 
-## Is there favoritism, after allowing men & women to have different test-taking skill?
-<span style='color:white'>
-This can be shown using a complete pooling & a varying-intercept, varying-slope multilevel model. Consider using brms and the coef function to obtain the parameter estimates & confidence intervals from the multilevel model.
-</span>
+## 1.2
 
-## Is there any gain in the precision of our estimate of test taking skill or baseline attainment using a multilevel model? How much bias does the multilevel model take on, relative to the no pooling estimate?
-<span style='color:white'>
-This can be shown by looking at the standard errors & estimates of the complete pooling, multilevel, and no pooling models. To fit a no pooling model with varying slopes & varying intercepts, split the data into two groups and fit separate complete pooling models on each new sub-dataset. It's usually best to think of the *percentage change*, not just the raw units. For that, use the multilevel estimate minus the no pooling estimate, divided by the absolute value of the no pooling estimate.</span>
+How many very expensive wines (those more than $500 per bottle) are sold by each country? 
+
+## 1.3
+
+What is the most common variety of wine in each country? 
+
+## 1.2

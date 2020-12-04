@@ -34,7 +34,7 @@ For each pair of visualizations, tell me:
 
 ## 1.1
 
-This plot shows the relationship between price and earnings among respondents to a social research survey. 
+This plot shows the relationship between height and earnings among respondents to a social research survey. 
 
 ```{r,  fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
 ggplot(earnings, aes(y=earnings, x=height, color=earnings)) + 
@@ -50,7 +50,7 @@ ggplot(earnings, aes(y=earnings, x=height)) +
 
 ## 1.2
 
-This plot shows the relationship between price, earnings, and age among respondents to a social research survey. 
+This plot shows the relationship between height, earnings, and age among respondents to a social research survey. 
 
 ```{r, fig.show="hold", out.width="50%", message=F, warning=F, echo=F}
 ggplot(earnings, aes(y=earnings, x=height, color=age)) + 
@@ -178,7 +178,7 @@ ggplot(wecasummary, aes(x=year, y=p50)) +
 
 ggplot(wecasummary, aes(x=year, y=p50)) + 
   geom_hex(data=wecalong, 
-             mapping=aes(x=as.numeric(year), y=price),
+           mapping=aes(x=as.numeric(year), y=price),
            bins=23) + labs(x='Year', y="Price") +
   labs(x='Year', y="Price", title='1.5b') + theme(text=element_text(size=20))
 ````
