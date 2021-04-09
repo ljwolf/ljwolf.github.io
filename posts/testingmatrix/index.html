@@ -16,7 +16,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1612305808" />
+<link rel="stylesheet" href="/css/style.css?rnd=1617965807" />
 
 <meta property="og:title" content="Using lookahead testing" />
 <meta property="og:description" content="To help subpackages that depend on libpysal, the API will change shortly to be in line with our desired migrating.pysal.org API.
@@ -103,7 +103,7 @@ I call these tests <em>lookahead</em> tests, since they&rsquo;re &ldquo;peeking&
 <li>make sure that your repeat <code>env</code> every time you have an entry in <code>allow_failures</code>, so travis can attempt to match your previously-defined setup patterns.</li>
 <li>don&rsquo;t forget to include the python versions you&rsquo;re testing in the first line of the <code>allow_failures</code> entries.</li>
 </ol>
-<p>Great; we&rsquo;ve defined a testing matrix where we can check 8 combinations of tests. However, by default, these will only queue builds with these configurations; if nothing in our build script takes these variables into account, we won&rsquo;t do anything different when we run our tests. So, to make this useful, we <em>then</em> have to use these environment variables in our <code>.travis.yml</code>'s <code>before_install</code> or <code>install</code> sections. I&rsquo;m building this example for subpackages (and have worked this out for <a href="https://github.com/ljwolf/spreg/blob/master/.travis.yml#L9"><code>spreg</code></a> and <a href="https://github.com/ljwolf/esda/blob/master/.travis.yml#L10"><code>esda</code></a>), so this&rsquo;ll be focused on allowing <code>libpysal</code> to get installed from <code>pypi</code> versus from <code>github</code>.</p>
+<p>Great; we&rsquo;ve defined a testing matrix where we can check 8 combinations of tests. However, by default, these will only queue builds with these configurations; if nothing in our build script takes these variables into account, we won&rsquo;t do anything different when we run our tests. So, to make this useful, we <em>then</em> have to use these environment variables in our <code>.travis.yml</code>&rsquo;s <code>before_install</code> or <code>install</code> sections. I&rsquo;m building this example for subpackages (and have worked this out for <a href="https://github.com/ljwolf/spreg/blob/master/.travis.yml#L9"><code>spreg</code></a> and <a href="https://github.com/ljwolf/esda/blob/master/.travis.yml#L10"><code>esda</code></a>), so this&rsquo;ll be focused on allowing <code>libpysal</code> to get installed from <code>pypi</code> versus from <code>github</code>.</p>
 <p>To change your <code>before_install</code> section depending on these environment variable settings, we need to use <a href="https://github.com/ljwolf/esda/blob/master/.travis.yml#L39">bash conditionals</a>. These are just like Python conditionals (<code>if/else</code> statements), but they&rsquo;re a bit less easy to make <em>just work</em>. So, I&rsquo;d recommend you follow this pattern <em>exactly</em> in your <code>.travis.yml</code> for a variable named <code>PYSAL_PYPI</code> which has been set to either <code>true</code> or <code>false</code>:</p>
 <pre><code>- if &quot;$PYSAL_PYPI&quot;; then
     echo &quot;do option PYSAL_PYPI&quot;; do second command;
