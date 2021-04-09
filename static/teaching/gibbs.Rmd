@@ -1,67 +1,93 @@
 ---
 title: "Gibbs sampling a simple linear regression"
 author: "Levi John Wolf"
-date: "24/01/2018"
+date: "Published: 24/01/2018 (Last Revised: `r format(Sys.time(), '%d/%m/%Y')`)"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 So, Gibbs sampling is one way (among many) to estimate a Bayesian model. It's also one of the many estimating techniques contained under the hood of MLWiN. If you're really interested, I'd highly recommend [Marin & Robert's _Bayesian Essentials with R_](http://www.springer.com/gb/book/9781461486862) (I have a copy I don't use if the library doesn't have it). It's a great, simple introduction to the relevant concepts (and importantly, makes you actually *apply* them). 
 
-So, you're probably familiar with things like maximum likelihood estimation, of which ordinary least squares estimators are a type. Usually, these methods focus on the likelihood function, which is an inversion of the probability problem of concluding the probability of your theory $\theta$ (usually some parameter of interest about a process) from some data $y$. 
+You're probably familiar with things like maximum likelihood estimation, of which ordinary least squares estimators are a type. Usually, these methods focus on the likelihood function, which is an inversion of the probability problem of concluding the probability of your theory $\theta$ (usually some parameter of interest about a process) from some data $y$. 
 
 $$ p(\theta | y) \propto \mathcal{L}(y |  \theta)$$
-where $\mathcal{L}$ is a likelihood function. Likelihoods are not probabilities, but they're related to them. 
+Here, $\mathcal{L}$ is a *likelihood function*, and $a \propto b$ is read as "a *is proportional to* b". Likelihoods are not probabilities, but they're related to them. They express how likely the data ($y$) is, given an assumption about what the underlying parameters are ($\theta$) that govern these outcomes. In *maximum likelihood* approaches, we just look for the value of $\theta$ that maximizes $\mathcal{L}$, which is a pretty straightforward mathematical challenge. This gives us the parameter estimates that are most likely to have generated our data.^[assuming that $\mathcal{L}$ is correctly specified, of course! $\theta$ might be nonsense if you're using the wrong "data generating process" for $y$, which affects the "form" of $\mathcal{L}$! This is called *misspecification*, and is a pretty serious problem in general]
+
+## The Bayesian Interpretation
 
 Usually, Bayesians interpret this statement as saying the probability of your belief given the data should be proportional to the probability of the data given your belief. 
 
 $$ p(\text{belief | data}) \propto \mathcal{L}(\text{data |  belief})$$
 
-But, this is actually missing one part. Formally, this likelihood relationship actually comes from Bayes' Theorem. Since we observe $y$, the data, and want to get the probability our theory $\theta$ is true, we use Bayes' Theorem:
+But, this is actually missing one part!
+
+Formally, this likelihood relationship actually comes from Bayes' Theorem. Since we observe $y$, the data, and want to get the probability our theory $\theta$ is true, we use Bayes' Theorem:
 $$ p(\theta | y) = \frac{p(y | \theta) p(\theta)}{p(y)}$$
-Now, for estimation purposes, we drop $p(y)$ because it's constant with respect to $\theta$: if $y$ is "known," the probability we would observe it over infinite replications is fixed. This means we're left with
+Generally, we ignore $p(y)$, the probability of the data, raw, over all possible theories. We do this for a few reasons. First, $p(y)$ is pretty conceptually hard to grasp without becoming an extra-dimensional being... it has no easy way to specify. Second, it's easy to remove from the expression (mathematically) because it's constant with respect to $\theta$: we take our data $y$ as "known," so probability we would observe it over infinite universes that may operate under different rules is fixed. 
+
+This means we're left with
 
 $$ p(\theta | y) \propto p(y | \theta) p(\theta)$$
 
-Or, in the plain language above, the probability of your belief given the data should be proportional to the probability of the data given your belief, adjusted by the probability of your beliefs are true. 
-$$ p(\theta | y) \propto p(y | \theta) p(\theta)$$
-or
+Or, in the plain language above, the probability of your belief given the data should be proportional to the probability of the data given your belief, adjusted by the probability of your beliefs are true:
+
 $$ p(\text{belief | data}) \propto \mathcal{L}(\text{data |  belief}) p(\text{belief before observing data})$$
 
-We call $p(\theta)$ a "prior probability," and you might've worked with these already in MLWiN. 
+We call $p(\theta)$ a "prior probability," and you might've worked with these already in other packages. 
 
-So, say we have a simple linear regression $y = X\beta + \epsilon$:
+# A Bayesian Regression
+
+So, say we have a simple linear regression:
 $$\begin{align}
 y &= X\beta + \epsilon \\
-\epsilon \sim \mathcal{N}(0,\sigma^2)
+\epsilon &\sim \mathcal{N}(0,\sigma^2)
 \end{align}$$
-Now, to complete the model, we assign the parameters $\beta,\sigma$ a prior. For Gibbs sampling, we need to pick special priors to make the problem tractable.  We'll let $\beta ~ \mathcal{N}(\mu, \tau^2)$, where $\mu$ is our "prior belief" about the average $\beta$ effect we might observe, and $\tau^2$ is how intrinsically noisy we think the effect is. For $\sigma^2$, our prior parameters will correspond to how many observations we think our prior belief about the model variance should be "worth" relative to the observations, and the magnitude of intrinsic noise in the data. 
+
+For us, we need to specify some kind of $p(\theta)$, the probability of our theory before observing data. This is the *prior*, and it means we need to pick some statistical distribution from which we think $\beta,\sigma$ are generated. 
+
+For some estimation methods (like the simple Gibbs sampling discussed here), we need to pick special priors to make the problem easy. We'll let $\beta \sim \mathcal{N}(\mu, \tau^2)$, where $\mu$ is our "prior belief" about the average $\beta$ effect we might observe, and $\tau^2$ is how intrinsically noisy we think the effect is. For $\sigma^2$, our prior parameters $(a,b)$ are for an "inverse gamma" distribution. We use this distribution in part because of its mathematical structure. But, it also gives $a$ and $b$ really natural interpretations: $a$ will correspond to how many "observations" we think our prior belief about the model variance should be worth relative to our real observations in $y$, and $b$ is can then our uncertainty about the variation in the data. If $a$ is small, we don't give our prior much "weight" in terms of our observations. If $b$ is big, then our variance could be really small or really big. 
+
+Together, this makes a full statement of the Bayesian regression, including priors: 
 $$
 \begin{align}
+y &= X\beta + \epsilon \\
+\epsilon &\sim \mathcal{N}(0,\sigma^2) \\
 \beta &\sim \mathcal{N}(\mu, \sigma^2) \\
-\beta &\sim \text{Inverse Gamma}(a,b)
+\sigma^2 &\sim \text{Inverse Gamma}(a,b)
 \end{align}
 $$
-This is only one possible specification. The [inverse gamma distribution](https://en.wikipedia.org/wiki/Inverse-gamma_distribution) is commonly used for modeling the uncertainty around unknown variances, and assigning the $\beta$ parameters a normal prior where $\mu = 0$ is also a common choice. Regardless, since $\epsilon$ is normally distributed, our model of $y$ conditional on our unknown parameters is the typical normal distribution used in regression:
+It's important to remember that this is only one possible specification, and many others are used in practice. Some people even put a prior on $\sigma$, rather than $\sigma^2$. Others model $\sigma^2_i$ as unique variances for each observation, accounting for possible heteroskedasticity. Others may model the full covariance of $y$ directly with an $N \times N$ matrix $\Sigma$. For us, though, these distributions are classically used because they make *Gibbs sampling*, discussed in the next section, easier. 
+
+Regardless, since $\epsilon$ is normally distributed, our model of $y$ conditional on our unknown parameters is the typical normal distribution used in regression:
 $$y | (\beta, \sigma) \sim \mathcal{N}(X\beta, \sigma^2)$$
-This works because, if $\beta$ was known, the mean of $y$ is simply $X\beta$. Our error is modeled as normally distributed with mean 0 and variance $\sigma^2$ by the [Gauss-Markov theorem](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem).
+This works because, if $\beta$ was known, the mean of $y$ is simply $X\beta$. Our error is modeled as normally distributed with mean 0 and variance $\sigma^2$ by the [Gauss-Markov theorem](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem). We're just saying that $\beta$ and $\sigma$ themselves may have some uncertainty we need to factor in. 
 
 Pulling this all back together with the information about $p(\theta)$, our priors, we can use that statement about belief & data we made before to structure our belief after having observed data (sometimes called the "posterior belief" because it's post-observation):
-$$ p(\beta, \sigma^2) \propto p(y | \beta, \sigma^2) p(\beta) p(\sigma^2)$$
-This is pretty complex, and is a function of two parameters, $\beta, \sigma$. But, we know the distributional forms for each of the components on the right hand side:
-$$ p(\beta, \sigma^2) \propto \mathcal{N}(X\beta, \sigma^2) \mathcal{N}(\mu, \tau^2) \text{IG}(a,b)$$
-This is pretty complex as it stands, so we're going to try to simplify it a little more. 
+$$ p(\text{belief | data}) \propto \mathcal{L}(\text{data |  belief}) p(\text{belief before observing data}) $$
+
+is re-spelled:
+
+$$ p(\beta, \sigma^2 | y) \propto p(y | \beta, \sigma^2) p(\beta) p(\sigma^2)$$
+This is pretty complex, and is a function of two parameters, $\beta, \sigma$. But, at least we now have specified the distributional forms for each of the components on the right hand side:
+$$ p(\beta, \sigma^2 | y) \propto \mathcal{N}(X\beta, \sigma^2) \mathcal{N}(\mu, \tau^2) \text{IG}(a,b)$$
+This is pretty complex as it stands, so we're going to try to simplify it a little more so we can actually estimate $\beta$ and $\sigma^2$.
 
 ## Gibbs sampling
 
-Gibbs sampling reduces this statement to a sequence of distributions that are a function of a single parameter. For instance, what if we just pretended we knew what $\sigma^2$ was? Then, the disribution $p(\beta | y, \sigma^2)$ would be much simpler:
+Gibbs sampling reduces this statement to a sequence of distributions that are a function of a single parameter. Put more simply, it means we can treat the complicated function $p(\beta, \sigma^2|y)$, which has two unknowns, as two much more simple functions: $p(\beta | \sigma^2, y)$ and $p(\sigma^2 | \beta, y)$. 
+
+We do this by asking: what if we just pretended we knew what $\sigma^2$ was? Well... the disribution $p(\beta | y, \sigma^2)$ would be much simpler:
 $$ p(\beta | y, \sigma^2) \propto \mathcal{N}(X\beta, \sigma^2) \mathcal{N}(\mu, \tau^2) $$
 If you do some algebra, you can work out the fact that this turns into:
 $$ \beta | y, \sigma^2 \sim \mathcal{N}(m, s) $$
 where $m$ and $s$ are now mixtures of the prior information and information in the data. 
-In fact, if you do the algebra, it'll make clear that $m$ and $s$ have some familiar forms:
+In fact, when you do the algebra, it'll make clear that $m$ and $s$ have some familiar forms:
 $$ m = (X'X)^{-1}X'y \ \ \ \ \ \ \ \ s = \sigma^2(X'X)^{-1}$$
 That is, our prior for $\beta$ is normal, and our "conditional posterior" for $\beta$ is normal. This is called "conditional conjugacy," when the distribution of one of our parameters (assuming everything else is known) is in the same form as our prior belief about the parameter. If we *did* know $\sigma^2$, we could just draw from this using `rnorm` in `R`!
 
-This realization is what Gibbs sampling leverages.  
+This realization is what powers Gibbs sampling.^[For below, we'll let every "hyperparameter," $\mu, \tau^2$  for $\beta$ and $a,b$ for $\sigma^2$, be small enough that we can just drop them from our expressions below. They make things slightly more complicated, and I'm trying to keep this simple. But, Chapter 3 of Bayesian Essentials with R would cover this in more detail.]
 
 Second, the parameters of $\beta$ should be recognizable from a linear regression equation. Specifically, $m$ is the estimator for $\hat{\beta}$ in a typical linear regression! But, since we've now incorporated some uncertainty into $\beta$ using on our prior belief, $\beta$ is considered as *randomly distributed* around that value. Regardless of this uncertainty, on average, $\beta$ will be its least squares estimate. Its randomness around the least squares estimate depends on the *empirical covariance, $(X'X)^{-1}$, and whatever our assumed-known value of $\sigma^2$ is. 
 
@@ -75,58 +101,89 @@ where
 $$ a_n = \frac{n}{2} + a \ \ \ \ \ \ \ \ b_n = (y - X\beta)'(y - X\beta) / 2 $$
 If we only knew $\beta$, this could be sampled using `rinvgamma` from `MCMCpack`. 
 
-For below, we'll let every "hyperparameter," $\mu, \tau^2$  for $\beta$ and $a,b$ for $\sigma^2$, be small enough that we can just drop them from our expressions below. They make things slightly more complicated, and I'm trying to keep this simple. But, Chapter 3 of Bayesian Essentials with R would cover this in more detail. 
+## This is (not) a Trick
 
-## The Trick
+This is a good trick, but you can't just *assume* you know these things... can you?
 
-The trick with this is that we can just start at some good-enough value of $\beta$ or $\sigma^2$, draw the other one \textit{as if that value were correct}, and then use \textit{that} value to draw a better value of the first parameter we assumed. I'll be using a subscript to denote that we're in some "iteration" of the sampler. So, $\beta_k$ is the $\beta$ value we've constructed at the $k$th iteration.
+Well... what if we started at some good-enough value of $\beta$ or $\sigma^2$, draw the other one \textit{as if that value were correct}, and then use \textit{that} value to draw a better value of the first parameter we assumed? Does that give us the right answer in the long run?
 
-Say, for example, we just arbitrarily state a first guess for $\beta$ is zero, so $\beta_1 = 0$. Then, we'd draw sigma randomly from:
+To walk you through how this works, I'll be using a subscript to denote that we're in some "iteration" of the sampler. So, $\beta_k$ is the $\beta$ value we've constructed at the $k$th iteration.
+
+So, for example, we can just arbitrarily state a first guess for $\beta$ is zero (so $\beta_1 = 0$). Then, we'd draw sigma randomly from:
 $$ \sigma^2_1 | y, \beta \sim \text{IG}(\frac{N}{2},(y - X \bullet 0)'(y - X\bullet 0)/2) $$
 Then, we could use this $\sigma^2_1$ we've just drawn as if it's "known" and draw our next iteration's $\beta$, called $\beta_2$, from:
 $$ \beta_2 | y, \sigma^2 \sim \mathcal{N}((X'X)^{-1}X'y, \sigma^2_1 (X'X)^{-1}) $$
-Theorems demonstrated by Geman & Geman (1984) demonstrate that, if we do this back & forth for a long time, the draws of $\beta$ and $\sigma^2$ will get arbitrarily close to the "correct" distributions for $\beta$, $\sigma^2$. 
+Theorems proven by Geman & Geman (1984) demonstrate that, if we do this back & forth for a long time, the draws of $\beta$ and $\sigma^2$ will get arbitrarily close to the "correct" distributions for $\beta$, $\sigma^2$. 
 
-The course of parameter draws taken over iterations is what you'd see as a "traceplot" in MLWiN. Usually, we only analze the end of the trace, since that's assumed to be drawn from the "correct" distribution. But, implementing this in R is pretty straightforward. 
+The course of parameter draws taken over iterations is what you'd see as a "traceplot" in many MCMC packages. Usually, we only analyze the end of the trace, since that's assumed to be drawn from the "correct" distribution. But, implementing this in R is pretty straightforward. 
+
+## Hand-crafted artisinal Gibbs sampling
 
 Just for an example, let's use the `R` `trees` dataset, and do a regression on tree volume using Girth and Height. 
 
-```{r}
+```{r message=F, error=F, warnings=F}
 data(trees)
 attach(trees)
 library(MCMCpack)
+```
 
+You can see the relationships between the two variables below:
 
+```{r}
 plot(Height, Volume, data=trees)
 plot(Girth, Volume, data=trees)
+```
 
+To set up the problem, we'll need to define $X$, $y$, and $n$. 
+```{r}
 X = cbind(trees$Girth, trees$Height)
 y = trees$Volume
 n_obs = length(y)
-X = cbind(rep(1, n_obs), X) # gonna include a constant
-XtX = t(X) %*% X
-n_params = 3 # two covariates and a constant
+```
 
+Further, we'll want to do regression with a constant term, so we need to add a column of $1$s at the start:
+```{r}
+X = cbind(rep(1, n_obs), X) # gonna include a constant
+```
+
+This means we now have *three* parameters (constant, girth, and height) which will be needed for later work:
+```{r}
+n_params = 3 # two covariates and a constant
+```
+
+Further, we can pre-compute some of the expressions that we'll need along the way. This will help us make our simulator more efficient, but it's not necessary for small data like this:
+
+```{r}
+XtX = t(X) %*% X
 beta_hat = solve(XtX, t(X) %*% y) # compute this ahead of time cause we'll need it a lot
 XtXi = solve(XtX)
+```
 
+Finally, we can set starting values for $\beta$ and $\sigma^2$. As before, I suggest starting with some easy ones: set all the $\beta$ to zero and $\sigma^2$ to 1. This works here, but in other problems, you may need better guesses at the starting values to sample efficiently: 
+```{r}
 beta = c(0,0,0) # starting value
-sigma2 = 0 #starting value
+sigma2 = 1 #starting value
+```
+
+Finally, we just need to iterate over $p(\beta_t | \sigma^2_{t-1}, y)$ and $p(\sigma^2_t | \beta_t, y)$ to converge on an answer. We can do this using a simple for loop:
+```{r}
 n_iterations = 5000
 
 beta_out = matrix(data=NA, nrow=n_iterations, ncol=n_params)
 sigma_out = matrix(data = NA, nrow = n_iterations, ncol=1)
 for (i in 1:n_iterations){
-  beta = mvrnorm(n=1, beta_hat, sigma2 * XtXi) # need the multivariate cause we have three beta
+  beta = mvrnorm(n=1, beta_hat, sigma2 * XtXi) # Beta is N(XtXiXty, sigma^2XtXi)
   
   part = (y - X %*% beta)
   
-  sigma2 = rinvgamma(1, n_obs/2, t(part) %*% part * .5 )
+  sigma2 = rinvgamma(1, n_obs/2, t(part) %*% part * .5 ) # sigma^2 is IG(n/2, ....)
   
+  # save the results.
   beta_out[i,] = beta
   sigma_out[i,] = sigma2
 }
 ```
+
 Now, the distribution of the coefficients in the two simulation matrices,  `beta_out` and `sigma_out`, is a *real sample* from the distributions of the parameters. You can verify for yourself by first estimating the model using `lm`:
 ```{r}
 linreg = lm(Volume ~ Girth + Height, data=trees)
@@ -159,7 +216,7 @@ posterior_sds = apply(beta_out, 2, sd)
 std_errs = sqrt(diag(vcov(linreg)))
 print(cbind(posterior_sds, std_errs))
 ```
-and we see they're about the same. 
+and we see they're about the same.^[The Bayesian estimates have slightly large confidence intervals because there is some intrinsic error in simulation, but this generally goes to zero as simulations increase.]
 
 ## Conclusion
 
