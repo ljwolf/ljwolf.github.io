@@ -6,10 +6,25 @@
     <description>Yet Another Geographer (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 30 Sep 2020 10:59:57 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 16 Apr 2021 15:57:51 +0100</lastBuildDate>
     
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The disappointing finitude of screens</title>
+      <link>/posts/on-media/</link>
+      <pubDate>Fri, 16 Apr 2021 15:57:51 +0100</pubDate>
+      
+      <guid>/posts/on-media/</guid>
+      <description>&lt;p&gt;One thing I’ve started to realize over lockdown, as I have restricted access to books, printers&amp;hellip; physical media, is that the new paradigm of touch heavy full screen apps is fundamentally opposed to the “physical” mode of interaction that the desktop computing metaphor tried to mimic.&lt;/p&gt;
+&lt;p&gt;Concerns about skeumorphism aside, the main idea of physical desktops that the desktop computing metaphor matches is that you can arrange documents/windows into stacks within a work area. Reading a book and writing notes? Put the book to one side and your notes on the other (if you&amp;rsquo;ve got the dead tree version) or put the pdf on one side and your Notion on the other (if you&amp;rsquo;re pushing pixels). This seems pretty fundamental for the &amp;ldquo;window&amp;rdquo;-based desktop.&lt;/p&gt;
+&lt;p&gt;The iPad is not a desktop, clearly. Its mode is more oriented towards individual applications you use in full screen. This fullscreen/app-based mode of interaction replaces the document itself. Reading on your iPad aims to mimic the page itself, down to swipe-based page turning and annotation inline rather than alongside.&lt;/p&gt;
+&lt;p&gt;Where this breaks down is in the “scale” of the interface and the &amp;ldquo;total&amp;rdquo; surface that is interactable. It&amp;rsquo;s hard to understate how seriously this limits you. Yes, digital does “search” best, and that’s waaaay powerful. But, It’s way more challenging to, say, easily view two pages of the same document side by side in an ad hoc fashion (like, in the geographer&amp;rsquo;s case, comparing two full-page maps by quickly tearing the pages out and arranging them side by side). This immediately expands the display space, allowing for continuous arrangement and rearrangement of the media being viewed.&lt;/p&gt;
+&lt;p&gt;The document-level interface paradigm of the iPad will never be extensible in this way: display space for physical media is extensible and practically unbounded, but you’re always pushing the limits of your displays for the App-based media. This is clearly why user want bigger phones/iPads with each iteration; also, perennially wider phones won’t fit in hands, so their aspect ratios must elongate.&lt;/p&gt;
+&lt;p&gt;However, they will never be big enough to replicate the experience they imitate; the interaction paradigm is fundamentally unable to go beyond “smart paper,” but what we need are imaginative, inclusive, encompassing, freer, more accessible things like &lt;a href=&#34;https://dynamicland.org/&#34;&gt;Dynamicland&lt;/a&gt;. Wake me when we get there.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Boomeranging: It&#39;s all coming back to us</title>
