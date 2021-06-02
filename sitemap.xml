@@ -1891,6 +1891,11 @@
   </url>
   
   <url>
+    <loc>/rasa/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ph.-d./</loc>
   </url>
   
