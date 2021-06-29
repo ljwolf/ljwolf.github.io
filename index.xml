@@ -3395,7 +3395,7 @@ plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
 &lt;p&gt;&lt;em&gt;Sergio Rey (University of California, Riverside)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Geographers often use “space” and “geography” interchangeably. However, the concept of &lt;em&gt;space&lt;/em&gt; is fairly poorly defined. In quantitative application, &lt;em&gt;space&lt;/em&gt; is invariably represented through a set of abstractions, chosen largely for computational or representational convenience. This chapter will discuss the main concept for what &lt;em&gt;space&lt;/em&gt; in spatial analysis has generally been. It will also discuss possible futures for how representations of spatial processes could be made more useful or powerful or for how the &lt;em&gt;space&lt;/em&gt; in may change.&lt;/p&gt;
 &lt;h4 id=&#34;_place_&#34;&gt;&lt;em&gt;Place&lt;/em&gt;&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;(TBC)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tuuli Toivonen (University of Helsinki)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For spatial analysis, &lt;em&gt;place&lt;/em&gt; is usually the other side of the coin from &lt;em&gt;space&lt;/em&gt;. Intimately connected to the concept of “Region” in &lt;em&gt;regional science&lt;/em&gt; and critically at issue in many urban applications, &lt;em&gt;place&lt;/em&gt; is a critical component of spatial analysis. This chapter will discuss how place has been used in quantitative geography, as well as the new ideas and practices arising in &lt;em&gt;platial&lt;/em&gt; study.&lt;/p&gt;
 &lt;h4 id=&#34;_scale_&#34;&gt;&lt;em&gt;Scale&lt;/em&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;em&gt;Stewart Fotheringham (Arizona State University)&lt;/em&gt;&lt;/p&gt;
@@ -3408,7 +3408,25 @@ plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
 &lt;p&gt;&lt;em&gt;Reproducibility&lt;/em&gt; is a longstanding concern in geographical analysis. In the last half century, though, the increasing complexity and pervasiveness of computers has changed how geographers think of &lt;em&gt;reproducibility&lt;/em&gt;. What, if anything, should be the same from context to context? How can we justify geographical knowledge if results are indeed context-dependent? This chapter will discuss the conceptual issues with reproducibility that have affected the domain in the past, and provide ideas on how the concept of reproducibility may change as geographical analysis evolves.&lt;/p&gt;
 &lt;h3 id=&#34;_agendas-for-domains-of-practice_-coming-soon&#34;&gt;&lt;em&gt;Agendas for Domains of Practice&lt;/em&gt; &lt;em&gt;(coming soon!)&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Geographical analysis, as a domain in itself, involves many different modes of inquiry. Often, these quantitative analyses are distinguished by their methods, but also sometimes by their aims, purposes, and focus of study. In this section of &lt;em&gt;A Research Agenda&lt;/em&gt;, authors will discuss the current state-of-the-art of their field. They will also give a perspective on the future of these areas.&lt;/p&gt;
+&lt;h4 id=&#34;_exploratory-spatial-data-analysisgeographic-data-science_&#34;&gt;&lt;em&gt;Exploratory Spatial Data Analysis/Geographic Data Science&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;TBC &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_generative-modelling-agent-based-cellular-etc_&#34;&gt;&lt;em&gt;Generative Modelling (Agent-Based, Cellular, etc.)&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Clementine Cottineau (TU Delft)&lt;/p&gt;
+&lt;h4 id=&#34;_visualization_&#34;&gt;&lt;em&gt;Visualization&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;TBC &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_movement--mobilities_&#34;&gt;&lt;em&gt;Movement &amp;amp; Mobilities&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;TBC &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_inequalities-and-segregations_&#34;&gt;&lt;em&gt;Inequalities and segregations&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Elijah Knaap (University of California, Riverside)&lt;/p&gt;
+&lt;h4 id=&#34;_spatial-optimizationoperations-research_&#34;&gt;&lt;em&gt;Spatial Optimization/Operations Research&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Daoquin Tong (Arizona State University)&lt;/p&gt;
+&lt;h4 id=&#34;_economic-systems--program-evaluation_&#34;&gt;&lt;em&gt;Economic Systems &amp;amp; Program Evaluation&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;TBC &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_earth-observation_&#34;&gt;&lt;em&gt;Earth Observation&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Michelle Stuhlmacher (DePaul)&lt;/p&gt;
+&lt;h4 id=&#34;_machine-learning_&#34;&gt;&lt;em&gt;Machine Learning&lt;/em&gt;&lt;/h4&gt;
 &lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;_causal-inference_&#34;&gt;&lt;em&gt;Causal Inference&lt;/em&gt;&lt;/h4&gt;
 &lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
