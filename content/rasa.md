@@ -48,7 +48,7 @@ Geographical analysis involves a wide set of academic domains that all share a s
 Geographers often use “space” and “geography” interchangeably. However, the concept of _space_ is fairly poorly defined. In quantitative application, _space_ is invariably represented through a set of abstractions, chosen largely for computational or representational convenience. This chapter will discuss the main concept for what _space_ in spatial analysis has generally been. It will also discuss possible futures for how representations of spatial processes could be made more useful or powerful or for how the _space_ in may change.
 
 #### _Place_
-*(TBC)*
+*Tuuli Toivonen (University of Helsinki)*
 
 For spatial analysis, _place_ is usually the other side of the coin from _space_. Intimately connected to the concept of “Region” in _regional science_ and critically at issue in many urban applications, _place_ is a critical component of spatial analysis. This chapter will discuss how place has been used in quantitative geography, as well as the new ideas and practices arising in _platial_ study.
 
@@ -71,45 +71,44 @@ _Reproducibility_ is a longstanding concern in geographical analysis. In the las
 
 Geographical analysis, as a domain in itself, involves many different modes of inquiry. Often, these quantitative analyses are distinguished by their methods, but also sometimes by their aims, purposes, and focus of study. In this section of _A Research Agenda_, authors will discuss the current state-of-the-art of their field. They will also give a perspective on the future of these areas.
 
-<!--
 
 #### _Exploratory Spatial Data Analysis/Geographic Data Science_
 
- **Daniel Arribas-Bel / Alex Singleton (Liverpool) (TBC)**
+TBC <!--**Daniel Arribas-Bel (Liverpool)-->
 
 ####  _Generative Modelling (Agent-Based, Cellular, etc.)_
 
- **Clementine Cottineau (TU Delft) (TBC)**
+Clementine Cottineau (TU Delft)
 
 #### _Visualization_
 
- **James Cheshire (UCL)**
+TBC <!--**James Cheshire (UCL)**-->
 
 ####  _Movement & Mobilities_
 
-**Rafael Peirera (IPEA)** (TBC)
+TBC <!--**Urska Demsar (St. Andrews)**-->
 
 #### _Inequalities and segregations_
 
- **Elijah Knaap (University of California, Riverside)**
+Elijah Knaap (University of California, Riverside)
 
 #### _Spatial Optimization/Operations Research_
 
-**Daoquin Tong (ASU) (TBC)**
+Daoquin Tong (Arizona State University)
 
 #### _Economic Systems & Program Evaluation_
 
-**Max Nathan (UCL) (TBC)**
+TBC <!--**Max Nathan (UCL) (TBC)**-->
 
 #### _Earth Observation_
 
- **Michelle Stuhlmacher (DePaul) (TBC)**
+Michelle Stuhlmacher (DePaul)
 
 #### _Machine Learning_
 
- **Konstantin Klemmer (NYU/Warwick) (TBC)**
+TBC <!-- **Konstantin Klemmer (NYU/Warwick) (TBC)** -->
 
 ####  _Causal Inference_
 
- **Gareth Griffith (University of Bristol) (TBC)**
--->
+TBC <!-- Gareth Griffith (University of Bristol) (TBC) --> 
+
