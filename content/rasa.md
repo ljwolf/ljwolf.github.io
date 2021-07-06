@@ -74,7 +74,7 @@ Geographical analysis, as a domain in itself, involves many different modes of i
 
 #### _Exploratory Spatial Data Analysis/Geographic Data Science_
 
-TBC <!--**Daniel Arribas-Bel (Liverpool)-->
+Daniel Arribas-Bel (Liverpool) & Anita Graeser (AIT)
 
 ####  _Generative Modelling (Agent-Based, Cellular, etc.)_
 
@@ -106,7 +106,7 @@ Michelle Stuhlmacher (DePaul)
 
 #### _Machine Learning_
 
-TBC <!-- **Konstantin Klemmer (NYU/Warwick) (TBC)** -->
+TBC <!-- Stephen Law (TBC)** -->
 
 ####  _Causal Inference_
 
