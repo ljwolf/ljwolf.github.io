@@ -74,7 +74,7 @@ Geographical analysis, as a domain in itself, involves many different modes of i
 
 #### _Exploratory Spatial Data Analysis/Geographic Data Science_
 
-Daniel Arribas-Bel (Liverpool) & Anita Graeser (AIT)
+Daniel Arribas-Bel (Liverpool) & Anita Graser (AIT)
 
 ####  _Generative Modelling (Agent-Based, Cellular, etc.)_
 
@@ -82,11 +82,11 @@ Clementine Cottineau (TU Delft)
 
 #### _Visualization_
 
-TBC <!--**James Cheshire (UCL)**-->
+James Cheshire (UCL)
 
-####  _Movement & Mobilities_
+#### Integrated Science of Movement 
 
-TBC <!--**Urska Demsar (St. Andrews)**-->
+Urska Demsar (St. Andrews)
 
 #### _Inequalities and segregations_
 
@@ -110,5 +110,5 @@ TBC <!-- Stephen Law (TBC)** -->
 
 ####  _Causal Inference_
 
-TBC <!-- Gareth Griffith (University of Bristol) (TBC) --> 
+Gareth Griffith (University of Bristol)
 
