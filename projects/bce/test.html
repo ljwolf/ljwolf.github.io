@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_555c894574b346edb7ba64a072d4c8f9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                    <style>
+                        .foliumpopup {
+                            
+            background-color: #F0EFEF;
+            border: 2px solid black;
+            border-radius: 3px;
+            box-shadow: 3px;
+        
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            
+            background-color: #F0EFEF;
+            border: 2px solid black;
+            border-radius: 3px;
+            box-shadow: 3px;
+        
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            
+            background-color: #F0EFEF;
+            border: 2px solid black;
+            border-radius: 3px;
+            box-shadow: 3px;
+        
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            
+            background-color: #F0EFEF;
+            border: 2px solid black;
+            border-radius: 3px;
+            box-shadow: 3px;
+        
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            
+                    background-color: #F0EFEF;
+                    border: 2px solid black;
+                    border-radius: 3px;
+                    box-shadow: 3px;
+                
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_555c894574b346edb7ba64a072d4c8f9" ></div>
+        
+</body>
+<script>    
+    
+            var map_555c894574b346edb7ba64a072d4c8f9 = L.map(
+                "map_555c894574b346edb7ba64a072d4c8f9",
+                {
+                    center: [53.0, -1.25],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7b35beebb1f64b80a385aa5ccff093f1 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        
+    
+            var tile_layer_d33d13260ecd4c2aaab732c17b171b93 = L.tileLayer(
+                "https://a.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png",
+                {"attribution": "(C) OpenStreetMap contributors, (C) CARTO", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        
+    
+        function geo_json_89015c0afa194720a5ac78896c46b09e_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "black", "fillOpacity": 0, "lineOpacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_89015c0afa194720a5ac78896c46b09e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_89015c0afa194720a5ac78896c46b09e = L.geoJson(null, {
+                onEachFeature: geo_json_89015c0afa194720a5ac78896c46b09e_onEachFeature,
+            
+                style: geo_json_89015c0afa194720a5ac78896c46b09e_styler,
+        });
+
+        function geo_json_89015c0afa194720a5ac78896c46b09e_add (data) {
+            geo_json_89015c0afa194720a5ac78896c46b09e
+                .addData(data)
+                .addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        }
+            $.ajax("https://www.ljwolf.org/projects/bce/simple_old_districts.geojson", {dataType: 'json', async: false})
+                .done(geo_json_89015c0afa194720a5ac78896c46b09e_add);
+
+        
+    
+    geo_json_89015c0afa194720a5ac78896c46b09e.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["constituency_name", "designation"];
+    let aliases = ["Name:", "Designation:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup", "maxWidth": 800});
+                     
+    
+        function geo_json_90052f23a7d24992a864fb1ea50e5cca_styler(feature) {
+            switch(feature.properties.constituency_name) {
+                default:
+                    return {"color": "red", "fillOpacity": 0, "lineOpacity": 1, "weight": 1};
+            }
+        }
+
+        function geo_json_90052f23a7d24992a864fb1ea50e5cca_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_90052f23a7d24992a864fb1ea50e5cca = L.geoJson(null, {
+                onEachFeature: geo_json_90052f23a7d24992a864fb1ea50e5cca_onEachFeature,
+            
+                style: geo_json_90052f23a7d24992a864fb1ea50e5cca_styler,
+        });
+
+        function geo_json_90052f23a7d24992a864fb1ea50e5cca_add (data) {
+            geo_json_90052f23a7d24992a864fb1ea50e5cca
+                .addData(data)
+                .addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        }
+            $.ajax("https://www.ljwolf.org/projects/bce/simple_new_district_boundaries.geojson", {dataType: 'json', async: false})
+                .done(geo_json_90052f23a7d24992a864fb1ea50e5cca_add);
+
+        
+    
+    geo_json_90052f23a7d24992a864fb1ea50e5cca.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["constituency_name", "designation"];
+    let aliases = ["Name:", "Designation:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup", "maxWidth": 800});
+                     
+    
+        function geo_json_c14db7ec65a14a44833781eb9091801b_styler(feature) {
+            switch(feature.properties.constituency_name) {
+                case "Derby South": case "Derby North": case "Chesterfield": case "Leicester South": case "Leicester East": case "Lincoln": case "Nottingham South": case "Nottingham East": case "Northampton South": case "Northampton North": case "Cambridge": case "Norwich South": case "Norwich North": case "Ipswich": case "Colchester": case "Chelmsford": case "Southend West": case "Castle Point": case "Thurrock": case "Basildon and Billericay": case "Watford": case "Luton North": case "Bedford": case "Battersea": case "Croydon North": case "Croydon South": case "Putney": case "Romford": case "Sutton and Cheam": case "Islington North": case "Chingford and Woodford Green": case "Walthamstow": case "Leyton and Wanstead": case "Ilford North": case "Ilford South": case "Barking": case "Dagenham and Rainham": case "East Ham": case "Poplar and Limehouse": case "Enfield North": case "Edmonton": case "Tottenham": case "Hornsey and Wood Green": case "Ruislip, Northwood and Pinner": case "Uxbridge and South Ruislip": case "Ealing North": case "Ealing Central and Acton": case "Brent Central": case "Feltham and Heston": case "Twickenham": case "Brentford and Isleworth": case "Hackney North and Stoke Newington": case "Hackney South and Shoreditch": case "Richmond Park": case "Kingston and Surbiton": case "Wimbledon": case "Tooting": case "Mitcham and Morden": case "Carshalton and Wallington": case "Streatham": case "Lewisham East": case "Greenwich and Woolwich": case "Erith and Thamesmead": case "Bexleyheath and Crayford": case "Beckenham": case "Gateshead": case "Tynemouth": case "Newcastle upon Tyne North": case "Newcastle upon Tyne East": case "Sunderland Central": case "South Shields": case "Middlesbrough": case "Blackpool South": case "Preston": case "Blackburn": case "Bootle": case "Bury North": case "Bury South": case "Bolton North East": case "Knowsley": case "Oldham West and Royton": case "Ashton-under-Lyne": case "Stretford and Urmston": case "Altrincham and Sale West": case "Wythenshawe and Sale East": case "Stockport": case "Cheadle": case "Birkenhead": case "Manchester Central": case "Wallasey": case "Oxford East": case "Slough": case "Spelthorne": case "Esher and Walton": case "Epsom and Ewell": case "Aldershot": case "Havant": case "Portsmouth North": case "Portsmouth South": case "Gosport": case "Eastleigh": case "Crawley": case "Eastbourne": case "Gillingham and Rainham": case "Basingstoke": case "Bristol South": case "Bristol East": case "Bristol North West": case "Poole": case "Bournemouth West": case "Bournemouth East": case "Cheltenham": case "Gloucester": case "Exeter": case "Torbay": case "Stourbridge": case "Sutton Coldfield": case "Solihull": case "Worcester": case "Coventry South": case "Coventry North West": case "Telford": case "Stoke-on-Trent North": case "Stoke-on-Trent Central": case "Wolverhampton North East": case "Wolverhampton South East": case "West Bromwich West": case "West Bromwich East": case "Warwick and Leamington": case "Kingston upon Hull North": case "Rotherham": case "Sheffield Central": case "York Central": case "Pudsey": case "Leeds North East": case "Bradford West": case "Bradford East": case "Bradford South": case "Huddersfield": case "Leeds Central": case "Sheffield South East": 
+                    return {"color": "white", "fillColor": "#fb9a99", "fillOpacity": 0.5, "lineOpacity": 1, "weight": 0.5};
+                case "Ilkeston and Long Eaton": case "Melton and Syston": case "Blaby, Oadby and Wigston": case "Mid Leicestershire": case "Hinckley and Bosworth": case "Rutland and Stamford": case "Grantham": case "South Lincolnshire": case "Worksop and Retford": case "Corby and East Northamptonshire": case "Wellingborough and Raunds": case "St Neots": case "Lowestoft": case "Ipswich North and Stowmarket": case "North Suffolk": case "Bury St Edmunds and Newmarket": case "Haverhill and Halstead": case "Brentwood": case "Three Rivers": case "Harpenden and Berkhamsted": case "St Albans": case "Hitchin": case "Luton South and South Bedfordshire": case "Dunstable and Leighton Buzzard": case "North Bedfordshire": case "Berwick and Morpeth": case "Whitley Bay and Cramlington": case "Blyth and Ashington": case "Seaham and Peterlee": case "Newton Aycliffe and Sedgefield": case "Stockton West": case "Westmorland and Eden": case "Lancaster": case "Burnley and Bacup": case "West Pennine Moors": case "Heywood": case "Widnes and Halewood": case "St Helens North": case "Denton and Hyde": case "Worsley and Eccles": case "Runcorn and Helsby": case "Northwich": case "South Cheshire": case "Chester North and Neston": case "Copeland and the Western Lakes": case "Morecambe and South Lakeland": case "Bicester": case "Newport Pagnell": case "Buckingham and Bletchley": case "High Wycombe": case "Marlow and South Buckinghamshire": case "Didcot and Wantage": case "Weybridge and Chertsey": case "Dorking and Horley": case "Godalming and Ash": case "Farnham and Bordon": case "Fareham and Waterlooville": case "Hedge End": case "East New Forest": case "West New Forest": case "Bognor Regis": case "Arundel and Littlehampton": case "Shoreham": case "East Grinstead and Uckfield": case "Hailsham and Crowborough": case "Tonbridge": case "Maidstone and Malling": case "Weald of Kent": case "West Thanet": case "Dover and Deal": case "East Isle of Wight": case "West Isle of Wight": case "Mid Berkshire": case "Princes Risborough": case "Torridge and Tavistock": case "Keynsham and North East Somerset": case "Frome": case "Weston-super-Mare": case "Wells and Mendip Hills": case "Bridgwater": case "Mid Dorset and Poole North": case "Cirencester and North Wiltshire": case "Swindon North": case "Swindon South": case "Melksham and Devizes": case "East Wiltshire": case "Trowbridge and Warminster": case "Glastonbury and Somerton": case "Taunton": case "Tiverton and Minehead": case "Honiton": case "Exmouth": case "St Austell and Newquay": case "St Ives": case "Kingswinford and South Staffordshire": case "Bedworth and North Warwickshire": case "Kidderminster": case "Droitwich and Evesham": case "Ludlow and Bridgnorth": case "Shrewsbury": case "Newport and Wellington": case "Stone and Great Wyrley": case "South Humber": case "Goole and Haltemprice": case "Bridlington and Holderness": case "Beverley and The Wolds": case "Doncaster East and Axholme": case "Doncaster Town": case "Rawmarsh and Conisbrough": case "Sheffield Hallam": case "Barnsley South": case "Barnsley North": case "Richmond Yorks": case "Wetherby and Easingwold": case "Selby": case "Pontefract and Castleford": case "Normanton and Hemsworth": case "Ossett and Denby Dale": case "East Cambridgeshire": 
+                    return {"color": "white", "fillColor": "#33a02c", "fillOpacity": 0.5, "lineOpacity": 1, "weight": 0.5};
+                case "Leicester West and Glenfield": case "Nottingham North and Kimberley": case "Deptford": case "West Ham and Beckton": case "Stratford and Bow": case "Bethnal Green and Stepney": case "Southgate and Barnet East": case "Finchley and Muswell Hill": case "Hendon and Golders Green": case "High Barnet and Mill Hill": case "Stanmore and Edgware": case "Kenton and Wembley West": case "Harrow": case "Hayes and West Drayton": case "Southall": case "Hammersmith and Chiswick": case "Fulham and Chelsea West": case "Kensington and Westbourne": case "West Hampstead and Kilburn": case "Westminster and Chelsea East": case "Kentish Town and Bloomsbury": case "Camden Town and St John\u0027s Wood": case "City of London and Islington South": case "Croydon East": case "Norwood": case "Clapham and Brixton": case "Vauxhall and Camberwell": case "Bermondsey and Borough": case "Peckham": case "Dulwich and Sydenham": case "Sidcup and Welling": case "Eltham and Chislehurst": case "Bromley": case "Newcastle upon Tyne West": case "Jarrow and Sunderland West": case "Washington and Sunderland South West": case "Redcar and Eston": case "Blackpool North and Fleetwood": case "Bolton South and Walkden": case "Liverpool Riverside": case "Liverpool Wavertree": case "Liverpool Garston": case "Liverpool Norris Green": case "Manchester Blackley": case "Liverpool West Derby": case "Salford": case "St Helens South": case "Leigh South and Atherton": case "Manchester Longsight": case "Manchester Withington": case "Ellesmere Port": case "Failsworth and Droylsden": case "Reading": case "Earley and Woodley": case "Milton Keynes": case "Southampton Itchen": case "Southampton Test": case "Worthing": case "Brighton Kemptown": case "Brighton Pavilion": case "Hove and Brighton West": case "East Thanet": case "Bristol Central": case "Bristol North East": case "Plymouth Moor View": case "Plymouth Sutton and Devonport": case "Dudley": case "Birmingham Hodge Hill": case "Birmingham Erdington": case "Birmingham Perry Barr": case "Birmingham Ladywood": case "Birmingham Edgbaston": case "Birmingham Yardley": case "Coventry East": case "Wolverhampton West": case "Bloxwich and Brownhills": case "Walsall": case "Birmingham Hall Green": case "Birmingham Northfield": case "Birmingham Selly Oak": case "Halesowen": case "Smethwick and Rowley Regis": case "Great Grimsby and Cleethorpes": case "Sheffield Brightside and Hillsborough": case "Batley and Hipperholme": case "Morley": case "Headingley": case "Sheffield Heeley": 
+                    return {"color": "white", "fillColor": "#e31a1c", "fillOpacity": 0.5, "lineOpacity": 1, "weight": 0.5};
+                case "Peterborough": case "Broxbourne": case "Hornchurch and Upminster": case "Orpington": case "Blaydon": case "Hartlepool": case "Stockton North": case "Darlington": case "Carlisle": case "Pendle": case "Hyndburn": case "Southport": case "Warrington South": case "Warrington North": case "Reigate": case "Bath": case "Newcastle-under-Lyme": case "Stoke-on-Trent South": case "Kingston upon Hull East": case "Kingston upon Hull West and Hessle": case "Halifax": case "Leeds North West": case "Leeds East": 
+                    return {"color": "white", "fillColor": "#1f78b4", "fillOpacity": 0.5, "lineOpacity": 1, "weight": 0.5};
+                case "Makerfield": case "Bracknell": case "Woking": case "Harrogate and Knaresborough": case "Wakefield": case "Dewsbury": 
+                    return {"color": "white", "fillColor": "#ff7f00", "fillOpacity": 0.5, "lineOpacity": 1, "weight": 0.5};
+                default:
+                    return {"color": "white", "fillColor": "#b2df8a", "fillOpacity": 0.5, "lineOpacity": 1, "weight": 0.5};
+            }
+        }
+
+        function geo_json_c14db7ec65a14a44833781eb9091801b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c14db7ec65a14a44833781eb9091801b = L.geoJson(null, {
+                onEachFeature: geo_json_c14db7ec65a14a44833781eb9091801b_onEachFeature,
+            
+                style: geo_json_c14db7ec65a14a44833781eb9091801b_styler,
+        });
+
+        function geo_json_c14db7ec65a14a44833781eb9091801b_add (data) {
+            geo_json_c14db7ec65a14a44833781eb9091801b
+                .addData(data)
+                .addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        }
+            $.ajax("https://www.ljwolf.org/projects/bce/simple_new_district_designation_changes.geojson", {dataType: 'json', async: false})
+                .done(geo_json_c14db7ec65a14a44833781eb9091801b_add);
+
+        
+    
+    geo_json_c14db7ec65a14a44833781eb9091801b.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["constituency_name", "change_designation"];
+    let aliases = ["Name:", "Designation Change:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup", "maxWidth": 800});
+                     
+    
+        function geo_json_cf92bb3c6148409795012bb54be1468f_styler(feature) {
+            switch(feature.properties.constituency_name) {
+                case "High Peak": case "South Derbyshire": case "Derby South": case "Derby North": case "Ilkeston and Long Eaton": case "Chesterfield": case "North West Leicestershire": case "Sleaford and North Hykeham": case "Gainsborough": case "Rushcliffe": case "Mansfield": case "Worksop and Retford": case "Cambridge": case "North East Cambridgeshire": case "South Norfolk": case "Lowestoft": case "Ipswich": case "South Suffolk": case "Chelmsford": case "Rayleigh and Wickford": case "Thurrock": case "Brentwood": case "Epping Forest": case "Hertford and Stortford": case "St Albans": case "Welwyn Hatfield": case "North East Hertfordshire": case "Stevenage": case "Battersea": case "Walthamstow": case "Barking": case "East Ham": case "Poplar and Limehouse": case "Tooting": case "Greenwich and Woolwich": case "Sunderland Central": case "Hartlepool": case "West Lancashire": case "Rochdale": case "Oldham East and Saddleworth": case "Oldham West and Royton": case "Wigan": case "Stretford and Urmston": case "Altrincham and Sale West": case "Wythenshawe and Sale East": case "Macclesfield": case "Cheadle": case "Oxford East": case "Slough": case "Spelthorne": case "Marlow and South Buckinghamshire": case "Henley": case "Woking": case "Havant": case "Portsmouth North": case "Gosport": case "Southampton Itchen": case "Southampton Test": case "East New Forest": case "West New Forest": case "Crawley": case "Eastbourne": case "Hove and Brighton West": case "Tunbridge Wells": case "Dartford": case "Gravesham": case "Rochester and Strood": case "Gillingham and Rainham": case "Sittingbourne and Sheppey": case "Folkestone and Hythe": case "East Isle of Wight": case "West Isle of Wight": case "Newbury": case "North Cornwall": case "Bristol Central": case "Bristol South": case "Weston-super-Mare": case "North Somerset": case "Cheltenham": case "Gloucester": case "Swindon North": case "Taunton": case "Exeter": case "Newton Abbot": case "North Devon": case "St Austell and Newquay": case "Nuneaton": case "Bedworth and North Warwickshire": case "Sutton Coldfield": case "West Worcestershire": case "Worcester": case "Kidderminster": case "Droitwich and Evesham": case "Bromsgrove": case "Coventry North West": case "Shrewsbury": case "North Shropshire": case "Burton": case "Cannock Chase": case "Stratford-on-Avon": case "Sheffield Central": case "Penistone and Stocksbridge": case "Scarborough and Whitby": case "Harrogate and Knaresborough": case "Pontefract and Castleford": case "Colne Valley": case "Leeds North East": case "Bradford East": case "Shipley": 
+                    return {"color": "white", "fillColor": "#FEF6B5", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                case "Derbyshire Dales": case "Amber Valley": case "North East Derbyshire": case "Bolsover": case "Loughborough": case "Louth and Horncastle": case "Ashfield": case "Peterborough": case "North West Cambridgeshire": case "North West Norfolk": case "Suffolk Coastal": case "Harwich and North Essex": case "Maldon": case "Castle Point": case "Basildon and Billericay": case "Mid Bedfordshire": case "Bedford": case "Croydon South": case "Hornchurch and Upminster": case "Deptford": case "Sutton and Cheam": case "Dagenham and Rainham": case "Enfield North": case "Ealing North": case "Hackney South and Shoreditch": case "Richmond Park": case "Carshalton and Wallington": case "Bermondsey and Borough": case "Orpington": case "Berwick and Morpeth": case "Blaydon": case "North West Durham": case "Stockton North": case "Fylde": case "Bootle": case "Knowsley": case "Warrington South": case "Warrington North": case "Manchester Withington": case "Hazel Grove": case "Crewe and Nantwich": case "Congleton": case "Bracknell": case "Buckingham and Bletchley": case "High Wycombe": case "Esher and Walton": case "East Surrey": case "Portsmouth South": case "Brighton Kemptown": case "Brighton Pavilion": case "Canterbury": case "Dover and Deal": case "Torridge and Tavistock": case "Central Devon": case "South East Cornwall": case "Bristol North West": case "West Dorset": case "Poole": case "Bournemouth West": case "Bournemouth East": case "Christchurch": case "Tewkesbury": case "Forest of Dean": case "Yeovil": case "Exmouth": case "Torbay": case "Plymouth Moor View": case "Plymouth Sutton and Devonport": case "Kingswinford and South Staffordshire": case "Rugby": case "Hereford and South Herefordshire": case "North Herefordshire": case "Telford": case "Lichfield": case "Staffordshire Moorlands": case "Birmingham Northfield": case "Birmingham Selly Oak": case "Doncaster North": case "Rother Valley": case "Sheffield Brightside and Hillsborough": case "Sheffield Hallam": case "Richmond Yorks": case "Skipton and Ripon": case "York Outer": case "Calder Valley": case "Keighley": case "Leeds Central": case "Sheffield South East": 
+                    return {"color": "white", "fillColor": "#FFC285", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                case "Blaby, Oadby and Wigston": case "Leicester South": case "Leicester East": case "Hinckley and Bosworth": case "Boston and Skegness": case "South Lincolnshire": case "Nottingham South": case "Nottingham East": case "Broxtowe": case "Sherwood": case "Daventry": case "Kettering": case "South Northamptonshire": case "South West Norfolk": case "Norwich North": case "Broadland": case "Ipswich North and Stowmarket": case "Bury St Edmunds and Newmarket": case "Colchester": case "Clacton": case "South Basildon and East Thurrock": case "Saffron Walden": case "Watford": case "Luton North": case "North Bedfordshire": case "Putney": case "Romford": case "Islington North": case "Chingford and Woodford Green": case "Leyton and Wanstead": case "Ilford North": case "Ilford South": case "Bethnal Green and Stepney": case "Edmonton": case "Tottenham": case "Hornsey and Wood Green": case "Kenton and Wembley West": case "Harrow": case "Ruislip, Northwood and Pinner": case "Southall": case "Ealing Central and Acton": case "Brent Central": case "Brentford and Isleworth": case "Kensington and Westbourne": case "West Hampstead and Kilburn": case "Kentish Town and Bloomsbury": case "Hackney North and Stoke Newington": case "Kingston and Surbiton": case "Wimbledon": case "Mitcham and Morden": case "Croydon East": case "Streatham": case "Peckham": case "Lewisham East": case "Bexleyheath and Crayford": case "Sidcup and Welling": case "Hexham": case "Blyth and Ashington": case "North Durham": case "Bishop Auckland": case "Middlesbrough South and East Cleveland": case "Redcar and Eston": case "Carlisle": case "Westmorland and Eden": case "Ribble Valley": case "Blackpool South": case "Pendle": case "Blackburn": case "Hyndburn": case "South Ribble": case "Sefton Central": case "Bury North": case "Heywood": case "Bury South": case "Bolton West": case "Bolton North East": case "Liverpool Riverside": case "Liverpool Garston": case "Makerfield": case "St Helens North": case "Denton and Hyde": case "Salford": case "St Helens South": case "Manchester Longsight": case "Birkenhead": case "Manchester Central": case "Wallasey": case "Oxford West and Abingdon": case "Windsor": case "Newport Pagnell": case "Aylesbury": case "Didcot and Wantage": case "Weybridge and Chertsey": case "Epsom and Ewell": case "Reigate": case "Dorking and Horley": case "Aldershot": case "North West Hampshire": case "Romsey and Southampton North": case "East Hampshire": case "Chichester": case "Shoreham": case "Horsham": case "Bexhill and Battle": case "Hastings and Rye": case "Hailsham and Crowborough": case "Sevenoaks": case "Tonbridge": case "Chatham and Aylesford": case "East Thanet": case "Chesham and Amersham": case "North East Hampshire": case "Stroud": case "South West Devon": case "Filton and Bradley Stoke": case "Thornbury and Yate": case "Keynsham and North East Somerset": case "Bridgwater": case "North Dorset": case "South Dorset": case "Swindon South": case "East Wiltshire": case "Salisbury": case "Trowbridge and Warminster": case "Glastonbury and Somerton": case "Honiton": case "Totnes": case "St Ives": case "Dudley": case "Birmingham Perry Barr": case "Birmingham Edgbaston": case "Birmingham Yardley": case "Meriden": case "Redditch": case "Coventry South": case "Coventry East": case "Ludlow and Bridgnorth": case "Tamworth": case "Newcastle-under-Lyme": case "Stoke-on-Trent North": case "Stoke-on-Trent South": case "Stafford": case "Wolverhampton North East": case "West Bromwich West": case "West Bromwich East": case "Warwick and Leamington": case "Kenilworth and Southam": case "Birmingham Hall Green": case "Kingston upon Hull North": case "Rotherham": case "Thirsk and Malton": case "York Central": case "Selby": case "Normanton and Hemsworth": case "Batley and Hipperholme": case "Morley": case "Bradford West": case "Bradford South": case "Huddersfield": case "Sheffield Heeley": 
+                    return {"color": "white", "fillColor": "#FA8A76", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                case "Lincoln": case "Corby and East Northamptonshire": case "Dunstable and Leighton Buzzard": case "Hayes and West Drayton": case "Feltham and Heston": case "Twickenham": 
+                    return {"color": "white", "fillColor": "#FFDD9A", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                default:
+                    return {"color": "white", "fillColor": "#F16D7A", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+            }
+        }
+
+        function geo_json_cf92bb3c6148409795012bb54be1468f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cf92bb3c6148409795012bb54be1468f = L.geoJson(null, {
+                onEachFeature: geo_json_cf92bb3c6148409795012bb54be1468f_onEachFeature,
+            
+                style: geo_json_cf92bb3c6148409795012bb54be1468f_styler,
+        });
+
+        function geo_json_cf92bb3c6148409795012bb54be1468f_add (data) {
+            geo_json_cf92bb3c6148409795012bb54be1468f
+                .addData(data)
+                .addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        }
+            $.ajax("https://www.ljwolf.org/projects/bce/simple_new_district_oe.geojson", {dataType: 'json', async: false})
+                .done(geo_json_cf92bb3c6148409795012bb54be1468f_add);
+
+        
+    
+    geo_json_cf92bb3c6148409795012bb54be1468f.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["constituency_name", "designation"];
+    let aliases = ["Name:", "Designation:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup", "maxWidth": 800});
+                     
+    
+            var tile_layer_7d04a9ffefbd439d989f6750d10b3d28 = L.tileLayer(
+                "http://raw.githubusercontent.com/ljwolf/bce-2023-tiles/master/inertia_old_tiles/{z}/{x}/{y}.png",
+                {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.75, "subdomains": "abc", "tms": false}
+            ).addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        
+    
+            var tile_layer_a09490ba93fd4472b0c37928fa73d1a8 = L.tileLayer(
+                "http://raw.githubusercontent.com/ljwolf/bce-2023-tiles/master/inertia_new_tiles/{z}/{x}/{y}.png",
+                {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.75, "subdomains": "abc", "tms": false}
+            ).addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        
+    
+            var tile_layer_f20a26c5e0494cb49fa1d0d040573e25 = L.tileLayer(
+                "http://raw.githubusercontent.com/ljwolf/bce-2023-tiles/master/inertia_change_tiles/{z}/{x}/{y}.png",
+                {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.75, "subdomains": "abc", "tms": false}
+            ).addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        
+    
+        function geo_json_511f4a08a5164cfd9391054dedcff55d_styler(feature) {
+            switch(feature.properties.constituency_name) {
+                case "High Peak": case "Derby South": case "Derby North": case "Ilkeston and Long Eaton": case "Amber Valley": case "North East Derbyshire": case "Chesterfield": case "Bolsover": case "Lincoln": case "Rushcliffe": case "Mansfield": case "Daventry": case "Peterborough": case "Ipswich": case "Clacton": case "Maldon": case "Castle Point": case "Harlow": case "Harpenden and Berkhamsted": case "Welwyn Hatfield": case "Stevenage": case "Dunstable and Leighton Buzzard": case "Bedford": case "Croydon South": case "Sutton and Cheam": case "Walthamstow": case "Hayes and West Drayton": case "Ealing North": case "Richmond Park": case "Tooting": case "Carshalton and Wallington": case "Lewisham East": case "Tynemouth": case "Sunderland Central": case "Hartlepool": case "Bishop Auckland": case "Stockton North": case "West Lancashire": case "Bootle": case "Bolton North East": case "Oldham East and Saddleworth": case "Oldham West and Royton": case "Wigan": case "Stretford and Urmston": case "Warrington South": case "Warrington North": case "Altrincham and Sale West": case "Wythenshawe and Sale East": case "Macclesfield": case "Cheadle": case "Spelthorne": case "Newport Pagnell": case "Marlow and South Buckinghamshire": case "Havant": case "Portsmouth North": case "Portsmouth South": case "Gosport": case "Southampton Itchen": case "Southampton Test": case "East New Forest": case "West New Forest": case "Crawley": case "Brighton Pavilion": case "Hove and Brighton West": case "Gravesham": case "Gillingham and Rainham": case "Sittingbourne and Sheppey": case "Dover and Deal": case "Princes Risborough": case "Central Devon": case "North Cornwall": case "South Dorset": case "Poole": case "Bournemouth West": case "Bournemouth East": case "Forest of Dean": case "Newton Abbot": case "North Devon": case "Plymouth Sutton and Devonport": case "Kingswinford and South Staffordshire": case "Rugby": case "Nuneaton": case "Bedworth and North Warwickshire": case "Sutton Coldfield": case "North Herefordshire": case "West Worcestershire": case "Worcester": case "Kidderminster": case "Droitwich and Evesham": case "Bromsgrove": case "Coventry South": case "Coventry North West": case "Telford": case "Tamworth": case "Burton": case "Stoke-on-Trent North": case "Cannock Chase": case "Stratford-on-Avon": case "Birmingham Selly Oak": case "Doncaster East and Axholme": case "Sheffield Hallam": case "Penistone and Stocksbridge": case "Scarborough and Whitby": case "Richmond Yorks": case "Leeds North East": case "Bradford East": case "Shipley": case "Keighley": case "Sheffield South East": 
+                    return {"color": "white", "fillColor": "#EEB479", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                case "South Derbyshire": case "Leicester South": case "Leicester West and Glenfield": case "Mid Leicestershire": case "Rutland and Stamford": case "Sleaford and North Hykeham": case "Louth and Horncastle": case "South Lincolnshire": case "Broxtowe": case "Newark": case "Worksop and Retford": case "North West Norfolk": case "South West Norfolk": case "Norwich South": case "Broadland": case "North Norfolk": case "Suffolk Coastal": case "South Suffolk": case "Chelmsford": case "Rayleigh and Wickford": case "Basildon and Billericay": case "Epping Forest": case "Saffron Walden": case "Hertford and Stortford": case "Watford": case "Mid Bedfordshire": case "North Bedfordshire": case "Battersea": case "Leyton and Wanstead": case "Barking": case "Dagenham and Rainham": case "Enfield North": case "Uxbridge and South Ruislip": case "Feltham and Heston": case "Hammersmith and Chiswick": case "Camden Town and St John\u0027s Wood": case "Norwood": case "Bermondsey and Borough": case "Orpington": case "Blaydon": case "Newcastle upon Tyne West": case "North West Durham": case "Newton Aycliffe and Sedgefield": case "Darlington": case "Stockton West": case "Lancaster": case "Ribble Valley": case "Fylde": case "Pendle": case "Blackburn": case "Bolton South and Walkden": case "Knowsley": case "St Helens North": case "Manchester Blackley": case "Manchester Longsight": case "Congleton": case "Witney": case "Wokingham": case "Bracknell": case "Maidenhead": case "Buckingham and Bletchley": case "Henley": case "Godalming and Ash": case "Horsham": case "Bexhill and Battle": case "Hastings and Rye": case "Dartford": case "Basingstoke": case "North East Hampshire": case "Bristol Central": case "Bristol South": case "Bristol North West": case "West Dorset": case "North Dorset": case "Mid Dorset and Poole North": case "Christchurch": case "Tewkesbury": case "Cheltenham": case "Gloucester": case "Chippenham": case "Salisbury": case "Tiverton and Minehead": case "Exmouth": case "Exeter": case "Camborne and Redruth": case "Birmingham Perry Barr": case "Birmingham Yardley": case "Hereford and South Herefordshire": case "Redditch": case "Shrewsbury": case "North Shropshire": case "Wolverhampton West": case "Newcastle-under-Lyme": case "Staffordshire Moorlands": case "West Bromwich West": case "Warwick and Leamington": case "Birmingham Hall Green": case "Halesowen": case "Kingston upon Hull East": case "Doncaster North": case "Doncaster Town": case "Skipton and Ripon": case "Harrogate and Knaresborough": case "York Central": case "York Outer": case "Selby": case "Normanton and Hemsworth": case "Bradford West": 
+                    return {"color": "white", "fillColor": "#9CCB86", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                case "Blaby, Oadby and Wigston": case "Leicester East": case "Grantham": case "Nottingham North and Kimberley": case "Ashfield": case "Northampton South": case "Corby and East Northamptonshire": case "Kettering": case "Wellingborough and Raunds": case "North West Cambridgeshire": case "Huntingdon": case "St Neots": case "South Cambridgeshire": case "North East Cambridgeshire": case "Mid Norfolk": case "Lowestoft": case "Ipswich North and Stowmarket": case "Bury St Edmunds and Newmarket": case "Braintree": case "Brentwood": case "Three Rivers": case "Hitchin": case "Croydon North": case "Chingford and Woodford Green": case "Ilford South": case "West Ham and Beckton": case "East Ham": case "Stratford and Bow": case "Bethnal Green and Stepney": case "Southgate and Barnet East": case "Hornsey and Wood Green": case "Finchley and Muswell Hill": case "Hendon and Golders Green": case "Southall": case "Brentford and Isleworth": case "Fulham and Chelsea West": case "Hackney South and Shoreditch": case "Clapham and Brixton": case "Vauxhall and Camberwell": case "Greenwich and Woolwich": case "Redcar and Eston": case "Preston": case "South Ribble": case "Bury North": case "Heywood": case "Bolton West": case "Liverpool Riverside": case "Liverpool Garston": case "Liverpool Norris Green": case "Denton and Hyde": case "Ashton-under-Lyne": case "Liverpool West Derby": case "Runcorn and Helsby": case "Northwich": case "Failsworth and Droylsden": case "Banbury": case "Bicester": case "Oxford West and Abingdon": case "Reading": case "Earley and Woodley": case "Windsor": case "Milton Keynes": case "Aylesbury": case "Didcot and Wantage": case "East Surrey": case "Surrey Heath": case "Farnham and Bordon": case "Hedge End": case "Eastleigh": case "Bognor Regis": case "Arundel and Littlehampton": case "Mid Sussex": case "East Grinstead and Uckfield": case "Tunbridge Wells": case "Chatham and Aylesford": case "Maidstone and Malling": case "East Thanet": case "East Isle of Wight": case "West Isle of Wight": case "Torridge and Tavistock": case "Bristol East": case "Bristol North East": case "Frome": case "Weston-super-Mare": case "North Somerset": case "Bridgwater": case "Melksham and Devizes": case "Trowbridge and Warminster": case "Glastonbury and Somerton": case "Taunton": case "Honiton": case "Birmingham Hodge Hill": case "Solihull": case "Meriden": case "Wolverhampton South East": case "South Humber": case "Great Grimsby and Cleethorpes": case "Scunthorpe": case "Beverley and The Wolds": case "Barnsley North": case "Wetherby and Easingwold": case "Wakefield": case "Halifax": case "Leeds North West": case "Headingley": case "Dewsbury": case "Huddersfield": case "East Cambridgeshire": 
+                    return {"color": "white", "fillColor": "#39B185", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                case "Blackpool North and Fleetwood": 
+                    return {"color": "white", "fillColor": "#009392", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+                default:
+                    return {"color": "white", "fillColor": "#CF597E", "fillOpacity": 0.6, "lineOpacity": 1, "weight": 0.5};
+            }
+        }
+
+        function geo_json_511f4a08a5164cfd9391054dedcff55d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_511f4a08a5164cfd9391054dedcff55d = L.geoJson(null, {
+                onEachFeature: geo_json_511f4a08a5164cfd9391054dedcff55d_onEachFeature,
+            
+                style: geo_json_511f4a08a5164cfd9391054dedcff55d_styler,
+        });
+
+        function geo_json_511f4a08a5164cfd9391054dedcff55d_add (data) {
+            geo_json_511f4a08a5164cfd9391054dedcff55d
+                .addData(data)
+                .addTo(map_555c894574b346edb7ba64a072d4c8f9);
+        }
+            $.ajax("https://www.ljwolf.org/projects/bce/simple_new_inertia_change.geojson", {dataType: 'json', async: false})
+                .done(geo_json_511f4a08a5164cfd9391054dedcff55d_add);
+
+        
+    
+    geo_json_511f4a08a5164cfd9391054dedcff55d.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["constituency_name", "accessibility_change"];
+    let aliases = ["Name:", "Accessibility (% Change):"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup", "maxWidth": 800});
+                     
+    
+            var layer_control_21892b4c13514a4fb9b47861294c82c6 = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_7b35beebb1f64b80a385aa5ccff093f1,
+                },
+                overlays :  {
+                    "Place Labels" : tile_layer_d33d13260ecd4c2aaab732c17b171b93,
+                    "Current Constituencies" : geo_json_89015c0afa194720a5ac78896c46b09e,
+                    "Draft Constituencies" : geo_json_90052f23a7d24992a864fb1ea50e5cca,
+                    "Designation Changes" : geo_json_c14db7ec65a14a44833781eb9091801b,
+                    "Fragmentation" : geo_json_cf92bb3c6148409795012bb54be1468f,
+                    "Current Accessibility" : tile_layer_7d04a9ffefbd439d989f6750d10b3d28,
+                    "Draft Accessibility" : tile_layer_a09490ba93fd4472b0c37928fa73d1a8,
+                    "Accessibility Change" : tile_layer_f20a26c5e0494cb49fa1d0d040573e25,
+                    "Accessibility Change (by Const)" : geo_json_511f4a08a5164cfd9391054dedcff55d,
+                },
+            };
+            L.control.layers(
+                layer_control_21892b4c13514a4fb9b47861294c82c6.base_layers,
+                layer_control_21892b4c13514a4fb9b47861294c82c6.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_555c894574b346edb7ba64a072d4c8f9);
+            geo_json_c14db7ec65a14a44833781eb9091801b.remove();
+            geo_json_cf92bb3c6148409795012bb54be1468f.remove();
+            tile_layer_7d04a9ffefbd439d989f6750d10b3d28.remove();
+            tile_layer_a09490ba93fd4472b0c37928fa73d1a8.remove();
+            geo_json_511f4a08a5164cfd9391054dedcff55d.remove();
+        
+</script>
