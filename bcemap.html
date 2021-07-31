@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_df72b56a665f4a56864d5850c575fae8 {
+                #map_9af9b9e490b044d69d379a0fdb5fc821 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,6 +32,27 @@
                 }
             </style>
         
+    
+                    <style>
+                        .foliumpopup {
+                            
+            background-color: #F0EFEF;
+            border: 2px solid black;
+            border-radius: 3px;
+            box-shadow: 3px;
+        
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
     
                     <style>
                         .foliumpopup {
@@ -161,13 +182,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_df72b56a665f4a56864d5850c575fae8" ></div>
+            <div class="folium-map" id="map_9af9b9e490b044d69d379a0fdb5fc821" ></div>
         
 </body>
 <script>    
     
-            var map_df72b56a665f4a56864d5850c575fae8 = L.map(
-                "map_df72b56a665f4a56864d5850c575fae8",
+            var map_9af9b9e490b044d69d379a0fdb5fc821 = L.map(
+                "map_9af9b9e490b044d69d379a0fdb5fc821",
                 {
                     center: [51.459016, -2.57458],
                     crs: L.CRS.EPSG3857,
@@ -181,46 +202,46 @@
 
         
     
-            var tile_layer_d8f19f15a10a4f6e8a2b4dee11e004e1 = L.tileLayer(
+            var tile_layer_30bcfbc67cae42d4a8927ca6e969a17a = L.tileLayer(
                 "https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png",
                 {"attribution": "(C) CARTO", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-            var tile_layer_1b1ca2c218684501923a203240a3392e = L.tileLayer(
+            var tile_layer_ec68cfe6dcec491983775f6c1ddeeaf5 = L.tileLayer(
                 "http://raw.githubusercontent.com/ljwolf/bce-2023-webtiles/master/worldpop_tiles/{z}/{x}/{y}.png",
                 {"attribution": "(C) WorldPop, University of Southampton", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.8, "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-        function geo_json_4f0b9049c14440f48d43e86e81c67a15_styler(feature) {
+        function geo_json_c71df90793994ac6ac1e572c86a162e3_styler(feature) {
             switch(feature.properties.name) {
                 default:
                     return {"color": "red", "fillOpacity": 0, "opacity": 0.25, "weight": 2};
             }
         }
 
-        function geo_json_4f0b9049c14440f48d43e86e81c67a15_onEachFeature(feature, layer) {
+        function geo_json_c71df90793994ac6ac1e572c86a162e3_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_4f0b9049c14440f48d43e86e81c67a15 = L.geoJson(null, {
-                onEachFeature: geo_json_4f0b9049c14440f48d43e86e81c67a15_onEachFeature,
+        var geo_json_c71df90793994ac6ac1e572c86a162e3 = L.geoJson(null, {
+                onEachFeature: geo_json_c71df90793994ac6ac1e572c86a162e3_onEachFeature,
             
-                style: geo_json_4f0b9049c14440f48d43e86e81c67a15_styler,
+                style: geo_json_c71df90793994ac6ac1e572c86a162e3_styler,
         });
 
-        function geo_json_4f0b9049c14440f48d43e86e81c67a15_add (data) {
-            geo_json_4f0b9049c14440f48d43e86e81c67a15
+        function geo_json_c71df90793994ac6ac1e572c86a162e3_add (data) {
+            geo_json_c71df90793994ac6ac1e572c86a162e3
                 .addData(data)
-                .addTo(map_df72b56a665f4a56864d5850c575fae8);
+                .addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         }
             $.ajax("https://www.ljwolf.org/projects/bce/simple_old_districts.geojson", {dataType: 'json', async: false})
-                .done(geo_json_4f0b9049c14440f48d43e86e81c67a15_add);
+                .done(geo_json_c71df90793994ac6ac1e572c86a162e3_add);
 
         
     
-    geo_json_4f0b9049c14440f48d43e86e81c67a15.bindPopup(
+    geo_json_c71df90793994ac6ac1e572c86a162e3.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -244,34 +265,34 @@
     ,{"className": "foliumpopup", "maxWidth": 800});
                      
     
-        function geo_json_c163e4962e484cd68a8011dde694a049_styler(feature) {
+        function geo_json_170a03da66dc462b937345f973ff3b48_styler(feature) {
             switch(feature.properties.constituency_name) {
                 default:
                     return {"color": "blue", "fillOpacity": 0, "opacity": 0.25, "weight": 2};
             }
         }
 
-        function geo_json_c163e4962e484cd68a8011dde694a049_onEachFeature(feature, layer) {
+        function geo_json_170a03da66dc462b937345f973ff3b48_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_c163e4962e484cd68a8011dde694a049 = L.geoJson(null, {
-                onEachFeature: geo_json_c163e4962e484cd68a8011dde694a049_onEachFeature,
+        var geo_json_170a03da66dc462b937345f973ff3b48 = L.geoJson(null, {
+                onEachFeature: geo_json_170a03da66dc462b937345f973ff3b48_onEachFeature,
             
-                style: geo_json_c163e4962e484cd68a8011dde694a049_styler,
+                style: geo_json_170a03da66dc462b937345f973ff3b48_styler,
         });
 
-        function geo_json_c163e4962e484cd68a8011dde694a049_add (data) {
-            geo_json_c163e4962e484cd68a8011dde694a049
+        function geo_json_170a03da66dc462b937345f973ff3b48_add (data) {
+            geo_json_170a03da66dc462b937345f973ff3b48
                 .addData(data)
-                .addTo(map_df72b56a665f4a56864d5850c575fae8);
+                .addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         }
             $.ajax("https://www.ljwolf.org/projects/bce/simple_new_district_boundaries.geojson", {dataType: 'json', async: false})
-                .done(geo_json_c163e4962e484cd68a8011dde694a049_add);
+                .done(geo_json_170a03da66dc462b937345f973ff3b48_add);
 
         
     
-    geo_json_c163e4962e484cd68a8011dde694a049.bindPopup(
+    geo_json_170a03da66dc462b937345f973ff3b48.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -295,7 +316,7 @@
     ,{"className": "foliumpopup", "maxWidth": 800});
                      
     
-        function geo_json_36a25e4bb6bd4a1f83d58beddb418b52_styler(feature) {
+        function geo_json_86bf4ea27f764bd2a4328d8e2edb9813_styler(feature) {
             switch(feature.properties.constituency_name) {
                 case "Derby South": case "Derby North": case "Chesterfield": case "Leicester South": case "Leicester East": case "Lincoln": case "Nottingham South": case "Nottingham East": case "Northampton South": case "Northampton North": case "Cambridge": case "Norwich South": case "Norwich North": case "Ipswich": case "Colchester": case "Chelmsford": case "Southend West": case "Castle Point": case "Thurrock": case "Basildon and Billericay": case "Watford": case "Luton North": case "Bedford": case "Battersea": case "Croydon North": case "Croydon South": case "Putney": case "Romford": case "Sutton and Cheam": case "Islington North": case "Chingford and Woodford Green": case "Walthamstow": case "Leyton and Wanstead": case "Ilford North": case "Ilford South": case "Barking": case "Dagenham and Rainham": case "East Ham": case "Poplar and Limehouse": case "Enfield North": case "Edmonton": case "Tottenham": case "Hornsey and Wood Green": case "Ruislip, Northwood and Pinner": case "Uxbridge and South Ruislip": case "Ealing North": case "Ealing Central and Acton": case "Brent Central": case "Feltham and Heston": case "Twickenham": case "Brentford and Isleworth": case "Hackney North and Stoke Newington": case "Hackney South and Shoreditch": case "Richmond Park": case "Kingston and Surbiton": case "Wimbledon": case "Tooting": case "Mitcham and Morden": case "Carshalton and Wallington": case "Streatham": case "Lewisham East": case "Greenwich and Woolwich": case "Erith and Thamesmead": case "Bexleyheath and Crayford": case "Beckenham": case "Gateshead": case "Tynemouth": case "Newcastle upon Tyne North": case "Newcastle upon Tyne East": case "Sunderland Central": case "South Shields": case "Middlesbrough": case "Blackpool South": case "Preston": case "Blackburn": case "Bootle": case "Bury North": case "Bury South": case "Bolton North East": case "Knowsley": case "Oldham West and Royton": case "Ashton-under-Lyne": case "Stretford and Urmston": case "Altrincham and Sale West": case "Wythenshawe and Sale East": case "Stockport": case "Cheadle": case "Birkenhead": case "Manchester Central": case "Wallasey": case "Oxford East": case "Slough": case "Spelthorne": case "Esher and Walton": case "Epsom and Ewell": case "Aldershot": case "Havant": case "Portsmouth North": case "Portsmouth South": case "Gosport": case "Eastleigh": case "Crawley": case "Eastbourne": case "Gillingham and Rainham": case "Basingstoke": case "Bristol South": case "Bristol East": case "Bristol North West": case "Poole": case "Bournemouth West": case "Bournemouth East": case "Cheltenham": case "Gloucester": case "Exeter": case "Torbay": case "Stourbridge": case "Sutton Coldfield": case "Solihull": case "Worcester": case "Coventry South": case "Coventry North West": case "Telford": case "Stoke-on-Trent North": case "Stoke-on-Trent Central": case "Wolverhampton North East": case "Wolverhampton South East": case "West Bromwich West": case "West Bromwich East": case "Warwick and Leamington": case "Kingston upon Hull North": case "Rotherham": case "Sheffield Central": case "York Central": case "Pudsey": case "Leeds North East": case "Bradford West": case "Bradford East": case "Bradford South": case "Huddersfield": case "Leeds Central": case "Sheffield South East": 
                     return {"color": "black", "fillColor": "#fb9a99", "fillOpacity": 0.5, "lineOpacity": 0.8, "weight": 0.5};
@@ -312,27 +333,27 @@
             }
         }
 
-        function geo_json_36a25e4bb6bd4a1f83d58beddb418b52_onEachFeature(feature, layer) {
+        function geo_json_86bf4ea27f764bd2a4328d8e2edb9813_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_36a25e4bb6bd4a1f83d58beddb418b52 = L.geoJson(null, {
-                onEachFeature: geo_json_36a25e4bb6bd4a1f83d58beddb418b52_onEachFeature,
+        var geo_json_86bf4ea27f764bd2a4328d8e2edb9813 = L.geoJson(null, {
+                onEachFeature: geo_json_86bf4ea27f764bd2a4328d8e2edb9813_onEachFeature,
             
-                style: geo_json_36a25e4bb6bd4a1f83d58beddb418b52_styler,
+                style: geo_json_86bf4ea27f764bd2a4328d8e2edb9813_styler,
         });
 
-        function geo_json_36a25e4bb6bd4a1f83d58beddb418b52_add (data) {
-            geo_json_36a25e4bb6bd4a1f83d58beddb418b52
+        function geo_json_86bf4ea27f764bd2a4328d8e2edb9813_add (data) {
+            geo_json_86bf4ea27f764bd2a4328d8e2edb9813
                 .addData(data)
-                .addTo(map_df72b56a665f4a56864d5850c575fae8);
+                .addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         }
             $.ajax("https://www.ljwolf.org/projects/bce/simple_new_district_designation_changes.geojson", {dataType: 'json', async: false})
-                .done(geo_json_36a25e4bb6bd4a1f83d58beddb418b52_add);
+                .done(geo_json_86bf4ea27f764bd2a4328d8e2edb9813_add);
 
         
     
-    geo_json_36a25e4bb6bd4a1f83d58beddb418b52.bindPopup(
+    geo_json_86bf4ea27f764bd2a4328d8e2edb9813.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -356,7 +377,7 @@
     ,{"className": "foliumpopup", "maxWidth": 800});
                      
     
-        function geo_json_91f9bc867e9b429198557112c03330e5_styler(feature) {
+        function geo_json_862758de9d4149edb2eb7db014838e76_styler(feature) {
             switch(feature.properties.constituency_name) {
                 case "High Peak": case "Amber Valley": case "Chesterfield": case "Bolsover": case "Melton and Syston": case "Blaby, Oadby and Wigston": case "Mid Leicestershire": case "Hinckley and Bosworth": case "Rushcliffe": case "Gedling": case "Sherwood": case "Worksop and Retford": case "Huntingdon": case "Ipswich North and Stowmarket": case "Braintree": case "Harwich and North Essex": case "Rochford and Southend East": case "Brentwood": case "Saffron Walden": case "North East Hertfordshire": case "North Bedfordshire": case "Wimbledon": case "Orpington": case "Blyth and Ashington": case "South Shields": case "North Durham": case "Washington and Sunderland South West": case "North West Durham": case "Newton Aycliffe and Sedgefield": case "Carlisle": case "Ribble Valley": case "Pendle": case "South Ribble": case "Altrincham and Sale West": case "Northwich": case "Banbury": case "Wokingham": case "Esher and Walton": case "East Surrey": case "Surrey Heath": case "Winchester": case "Gosport": case "Hedge End": case "Worthing": case "Horsham": case "Mid Sussex": case "Hastings and Rye": case "Faversham and Mid Kent": case "East Thanet": case "Mid Berkshire": case "North East Hampshire": case "Frome": case "Weston-super-Mare": case "Poole": case "Tewkesbury": case "Bedworth and North Warwickshire": case "Solihull": case "Meriden": case "Hereford and South Herefordshire": case "Shrewsbury": case "Stoke-on-Trent South": case "Stafford": case "Doncaster East and Axholme": case "Selby": case "Colne Valley": case "Calder Valley": case "Leeds North West": case "Keighley": case "East Cambridgeshire": 
                     return {"color": "black", "fillColor": "#B1C7B3", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
@@ -375,27 +396,27 @@
             }
         }
 
-        function geo_json_91f9bc867e9b429198557112c03330e5_onEachFeature(feature, layer) {
+        function geo_json_862758de9d4149edb2eb7db014838e76_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_91f9bc867e9b429198557112c03330e5 = L.geoJson(null, {
-                onEachFeature: geo_json_91f9bc867e9b429198557112c03330e5_onEachFeature,
+        var geo_json_862758de9d4149edb2eb7db014838e76 = L.geoJson(null, {
+                onEachFeature: geo_json_862758de9d4149edb2eb7db014838e76_onEachFeature,
             
-                style: geo_json_91f9bc867e9b429198557112c03330e5_styler,
+                style: geo_json_862758de9d4149edb2eb7db014838e76_styler,
         });
 
-        function geo_json_91f9bc867e9b429198557112c03330e5_add (data) {
-            geo_json_91f9bc867e9b429198557112c03330e5
+        function geo_json_862758de9d4149edb2eb7db014838e76_add (data) {
+            geo_json_862758de9d4149edb2eb7db014838e76
                 .addData(data)
-                .addTo(map_df72b56a665f4a56864d5850c575fae8);
+                .addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         }
             $.ajax("https://www.ljwolf.org/projects/bce/age.geojson", {dataType: 'json', async: false})
-                .done(geo_json_91f9bc867e9b429198557112c03330e5_add);
+                .done(geo_json_862758de9d4149edb2eb7db014838e76_add);
 
         
     
-    geo_json_91f9bc867e9b429198557112c03330e5.bindPopup(
+    geo_json_862758de9d4149edb2eb7db014838e76.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -419,7 +440,7 @@
     ,{"className": "foliumpopup", "maxWidth": 800});
                      
     
-        function geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1_styler(feature) {
+        function geo_json_e9603343b1864b76b00a252b0bd229cf_styler(feature) {
             switch(feature.properties.constituency_name) {
                 case "High Peak": case "South Derbyshire": case "Derby South": case "Derby North": case "Ilkeston and Long Eaton": case "Chesterfield": case "North West Leicestershire": case "Sleaford and North Hykeham": case "Gainsborough": case "Rushcliffe": case "Mansfield": case "Worksop and Retford": case "Cambridge": case "North East Cambridgeshire": case "South Norfolk": case "Lowestoft": case "Ipswich": case "South Suffolk": case "Chelmsford": case "Rayleigh and Wickford": case "Thurrock": case "Brentwood": case "Epping Forest": case "Hertford and Stortford": case "St Albans": case "Welwyn Hatfield": case "North East Hertfordshire": case "Stevenage": case "Battersea": case "Walthamstow": case "Barking": case "East Ham": case "Poplar and Limehouse": case "Tooting": case "Greenwich and Woolwich": case "Sunderland Central": case "Hartlepool": case "West Lancashire": case "Rochdale": case "Oldham East and Saddleworth": case "Oldham West and Royton": case "Wigan": case "Stretford and Urmston": case "Altrincham and Sale West": case "Wythenshawe and Sale East": case "Macclesfield": case "Cheadle": case "Oxford East": case "Slough": case "Spelthorne": case "Marlow and South Buckinghamshire": case "Henley": case "Woking": case "Havant": case "Portsmouth North": case "Gosport": case "Southampton Itchen": case "Southampton Test": case "East New Forest": case "West New Forest": case "Crawley": case "Eastbourne": case "Hove and Brighton West": case "Tunbridge Wells": case "Dartford": case "Gravesham": case "Rochester and Strood": case "Gillingham and Rainham": case "Sittingbourne and Sheppey": case "Folkestone and Hythe": case "East Isle of Wight": case "West Isle of Wight": case "Newbury": case "North Cornwall": case "Bristol Central": case "Bristol South": case "Weston-super-Mare": case "North Somerset": case "Cheltenham": case "Gloucester": case "Swindon North": case "Taunton": case "Exeter": case "Newton Abbot": case "North Devon": case "St Austell and Newquay": case "Nuneaton": case "Bedworth and North Warwickshire": case "Sutton Coldfield": case "West Worcestershire": case "Worcester": case "Kidderminster": case "Droitwich and Evesham": case "Bromsgrove": case "Coventry North West": case "Shrewsbury": case "North Shropshire": case "Burton": case "Cannock Chase": case "Stratford-on-Avon": case "Sheffield Central": case "Penistone and Stocksbridge": case "Scarborough and Whitby": case "Harrogate and Knaresborough": case "Pontefract and Castleford": case "Colne Valley": case "Leeds North East": case "Bradford East": case "Shipley": 
                     return {"color": "black", "fillColor": "#FEF6B5", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
@@ -434,33 +455,33 @@
             }
         }
 
-        function geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1_onEachFeature(feature, layer) {
+        function geo_json_e9603343b1864b76b00a252b0bd229cf_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1 = L.geoJson(null, {
-                onEachFeature: geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1_onEachFeature,
+        var geo_json_e9603343b1864b76b00a252b0bd229cf = L.geoJson(null, {
+                onEachFeature: geo_json_e9603343b1864b76b00a252b0bd229cf_onEachFeature,
             
-                style: geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1_styler,
+                style: geo_json_e9603343b1864b76b00a252b0bd229cf_styler,
         });
 
-        function geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1_add (data) {
-            geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1
+        function geo_json_e9603343b1864b76b00a252b0bd229cf_add (data) {
+            geo_json_e9603343b1864b76b00a252b0bd229cf
                 .addData(data)
-                .addTo(map_df72b56a665f4a56864d5850c575fae8);
+                .addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         }
             $.ajax("https://www.ljwolf.org/projects/bce/simple_new_district_oe.geojson", {dataType: 'json', async: false})
-                .done(geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1_add);
+                .done(geo_json_e9603343b1864b76b00a252b0bd229cf_add);
 
         
     
-    geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1.bindPopup(
+    geo_json_e9603343b1864b76b00a252b0bd229cf.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
     let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
     let fields = ["constituency_name", "overlay_entropy"];
-    let aliases = ["Name:", "Fragmentation:"];
+    let aliases = ["Name:", "Boundary Fragmentation:"];
     let table = '<table>' +
         String(
         fields.map(
@@ -478,37 +499,98 @@
     ,{"className": "foliumpopup", "maxWidth": 800});
                      
     
-            var tile_layer_2e204d3289404837a1c6a2fbfb525a79 = L.tileLayer(
+        function geo_json_ffaf9280813b4d33a06173be781dfa3f_styler(feature) {
+            switch(feature.properties.constituency_name) {
+                case "High Peak": case "North West Leicestershire": case "Gainsborough": case "Mansfield": case "Worksop and Retford": case "Corby and East Northamptonshire": case "Peterborough": case "Lowestoft": case "Clacton": case "Thurrock": case "Brentwood": case "Hertford and Stortford": case "Welwyn Hatfield": case "Hayes and West Drayton": case "Ealing North": case "Feltham and Heston": case "Twickenham": case "Carshalton and Wallington": case "Hartlepool": case "Crewe and Nantwich": case "Macclesfield": case "Gosport": case "East New Forest": case "Hastings and Rye": case "Eastbourne": case "Tunbridge Wells": case "Gravesham": case "Sittingbourne and Sheppey": case "Folkestone and Hythe": case "Canterbury": case "Dover and Deal": case "East Isle of Wight": case "West Isle of Wight": case "Newbury": case "Torridge and Tavistock": case "North Cornwall": case "Weston-super-Mare": case "North Somerset": case "Forest of Dean": case "Swindon North": case "Yeovil": case "Taunton": case "Exeter": case "Newton Abbot": case "North Devon": case "St Austell and Newquay": case "Nuneaton": case "Shrewsbury": case "North Shropshire": case "Scarborough and Whitby": case "Richmond Yorks": case "Harrogate and Knaresborough": case "Pontefract and Castleford": case "Keighley": 
+                    return {"color": "black", "fillColor": "#FEF6B5", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
+                case "Derbyshire Dales": case "Leicester South": case "Leicester East": case "Nottingham East": case "Gedling": case "Sherwood": case "Daventry": case "Wellingborough and Raunds": case "South West Norfolk": case "Mid Norfolk": case "Norwich North": case "Broadland": case "North Norfolk": case "Witham": case "Harwich and North Essex": case "Castle Point": case "South Basildon and East Thurrock": case "Basildon and Billericay": case "Broxbourne": case "Hertsmere": case "Luton South and South Bedfordshire": case "Luton North": case "North Bedfordshire": case "Romford": case "Deptford": case "Edmonton": case "Tottenham": case "Hornsey and Wood Green": case "Kenton and Wembley West": case "Ruislip, Northwood and Pinner": case "Uxbridge and South Ruislip": case "Southall": case "Ealing Central and Acton": case "Brent Central": case "West Hampstead and Kilburn": case "Hackney South and Shoreditch": case "Kingston and Surbiton": case "Wimbledon": case "Tooting": case "Croydon East": case "Peckham": case "Greenwich and Woolwich": case "Berwick and Morpeth": case "Gateshead": case "Blaydon": case "North Durham": case "North West Durham": case "Middlesbrough South and East Cleveland": case "Carlisle": case "Fylde": case "Hyndburn": case "Southport": case "Chorley": case "Bury North": case "Heywood": case "Bolton North East": case "Knowsley": case "St Helens North": case "St Helens South": case "Manchester Withington": case "Hazel Grove": case "Chester North and Neston": case "Birkenhead": case "Morecambe and South Lakeland": case "Banbury": case "Oxford West and Abingdon": case "Bracknell": case "Newport Pagnell": case "Aylesbury": case "Marlow and South Buckinghamshire": case "Weybridge and Chertsey": case "Epsom and Ewell": case "Reigate": case "East Surrey": case "Guildford": case "North West Hampshire": case "Mid Sussex": case "Hailsham and Crowborough": case "Brighton Kemptown": case "Sevenoaks": case "Tonbridge": case "Chatham and Aylesford": case "Ashford": case "East Thanet": case "North East Hampshire": case "Bristol North West": case "Thornbury and Yate": case "Swindon South": case "Exmouth": case "Truro and Falmouth": case "Camborne and Redruth": case "Bromsgrove": case "Ludlow and Bridgnorth": case "Newport and Wellington": case "Staffordshire Moorlands": case "Stoke-on-Trent North": case "Kenilworth and Southam": case "Birmingham Hall Green": case "Birmingham Northfield": case "Birmingham Selly Oak": case "Scunthorpe": case "Kingston upon Hull East": case "Sheffield Hallam": case "Thirsk and Malton": case "Normanton and Hemsworth": case "Batley and Hipperholme": case "Huddersfield": case "Leeds Central": case "Sheffield South East": 
+                    return {"color": "black", "fillColor": "#FFC285", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
+                case "Melton and Syston": case "Harborough": case "Mid Leicestershire": case "Rutland and Stamford": case "Northampton South": case "St Neots": case "North Suffolk": case "Haverhill and Halstead": case "Braintree": case "Three Rivers": case "Harpenden and Berkhamsted": case "Hitchin": case "Croydon North": case "Stratford and Bow": case "Hendon and Golders Green": case "Camden Town and St John\u0027s Wood": case "Norwood": case "Clapham and Brixton": case "Vauxhall and Camberwell": case "Bromley": case "Beckenham": case "Newcastle upon Tyne North": case "Ribble Valley": case "Blackpool North and Fleetwood": case "Liverpool Norris Green": case "Manchester Blackley": case "Ashton-under-Lyne": case "Liverpool West Derby": case "Runcorn and Helsby": case "Northwich": case "Failsworth and Droylsden": case "Bicester": case "Earley and Woodley": case "Wokingham": case "Dorking and Horley": case "Godalming and Ash": case "Arundel and Littlehampton": case "East Grinstead and Uckfield": case "Weald of Kent": case "Mid Berkshire": case "Princes Risborough": case "Bristol East": case "Bristol North East": case "Frome": case "Wells and Mendip Hills": case "The Cotswolds": case "Tiverton and Minehead": case "Birmingham Hodge Hill": case "Birmingham Ladywood": case "Stone and Great Wyrley": case "Wolverhampton South East": case "Wetherby and Easingwold": case "Wakefield": case "Ossett and Denby Dale": case "Headingley": 
+                    return {"color": "black", "fillColor": "#E15383", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
+                case "Blaby, Oadby and Wigston": case "Leicester West and Glenfield": case "Nottingham North and Kimberley": case "South Cambridgeshire": case "Ipswich North and Stowmarket": case "Fulham and Chelsea West": case "Kensington and Westbourne": case "Westminster and Chelsea East": case "Dulwich and Sydenham": case "Erith and Thamesmead": case "Eltham and Chislehurst": case "Tynemouth": case "Jarrow and Sunderland West": case "Washington and Sunderland South West": case "Newton Aycliffe and Sedgefield": case "Lancaster": case "Preston": case "West Pennine Moors": case "Liverpool Riverside": case "Liverpool Wavertree": case "Widnes and Halewood": case "Denton and Hyde": case "Worsley and Eccles": case "Leigh South and Atherton": case "Tatton": case "South Cheshire": case "Stockport": case "Manchester Central": case "Windsor": case "Fareham and Waterlooville": case "Hedge End": case "Eastleigh": case "Bognor Regis": case "Shoreham": case "Maidstone and Malling": case "Keynsham and North East Somerset": case "Chippenham": case "Melksham and Devizes": case "Glastonbury and Somerton": case "Kingswinford and South Staffordshire": case "Birmingham Erdington": case "Birmingham Perry Barr": case "Meriden": case "Wolverhampton West": case "Bloxwich and Brownhills": case "Walsall": case "Stoke-on-Trent Central": case "Smethwick and Rowley Regis": case "South Humber": case "Doncaster East and Axholme": case "Rawmarsh and Conisbrough": case "Barnsley South": case "Pudsey": case "Leeds North West": 
+                    return {"color": "black", "fillColor": "#F16D7A", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
+                case "Grantham": case "Nottingham South": case "Broxtowe": case "Northampton North": case "South Northamptonshire": case "Huntingdon": case "Bury St Edmunds and Newmarket": case "Rochford and Southend East": case "Southend West": case "Putney": case "Chingford and Woodford Green": case "Leyton and Wanstead": case "Ilford North": case "Ilford South": case "Dagenham and Rainham": case "West Ham and Beckton": case "Bethnal Green and Stepney": case "Southgate and Barnet East": case "Finchley and Muswell Hill": case "High Barnet and Mill Hill": case "Stanmore and Edgware": case "Hammersmith and Chiswick": case "Brentford and Isleworth": case "Hackney North and Stoke Newington": case "Streatham": case "Bexleyheath and Crayford": case "Sidcup and Welling": case "Orpington": case "Hexham": case "Whitley Bay and Cramlington": case "Blyth and Ashington": case "Newcastle upon Tyne West": case "Newcastle upon Tyne East": case "City of Durham": case "Seaham and Peterlee": case "Bishop Auckland": case "Middlesbrough": case "Redcar and Eston": case "Stockton West": case "Westmorland and Eden": case "Workington": case "Blackpool South": case "Burnley and Bacup": case "South Ribble": case "Sefton Central": case "Bury South": case "Bolton West": case "Bolton South and Walkden": case "Liverpool Garston": case "Makerfield": case "Salford": case "Manchester Longsight": case "Ellesmere Port": case "Copeland and the Western Lakes": case "Wirral West": case "Witney": case "Reading": case "Maidenhead": case "Milton Keynes": case "Buckingham and Bletchley": case "Farnham and Bordon": case "Romsey and Southampton North": case "Winchester": case "East Hampshire": case "Worthing": case "Lewes": case "Brighton Pavilion": case "Faversham and Mid Kent": case "West Thanet": case "Chesham and Amersham": case "Filton and Bradley Stoke": case "Bridgwater": case "Mid Dorset and Poole North": case "Tewkesbury": case "Cirencester and North Wiltshire": case "East Wiltshire": case "Honiton": case "Dudley": case "Stourbridge": case "Birmingham Edgbaston": case "Birmingham Yardley": case "Solihull": case "Coventry South": case "Coventry East": case "Stoke-on-Trent South": case "Stafford": case "Wolverhampton North East": case "West Bromwich West": case "West Bromwich East": case "Halesowen": case "Great Grimsby and Cleethorpes": case "Goole and Haltemprice": case "Bridlington and Holderness": case "Beverley and The Wolds": case "Kingston upon Hull West and Hessle": case "Kingston upon Hull North": case "Rotherham": case "Barnsley North": case "Selby": case "Halifax": case "Calder Valley": case "Morley": case "Bradford West": case "Bradford South": case "Dewsbury": case "Leeds East": case "Sheffield Heeley": case "East Cambridgeshire": 
+                    return {"color": "black", "fillColor": "#FA8A76", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
+                default:
+                    return {"color": "black", "fillColor": "#FFDD9A", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
+            }
+        }
+
+        function geo_json_ffaf9280813b4d33a06173be781dfa3f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ffaf9280813b4d33a06173be781dfa3f = L.geoJson(null, {
+                onEachFeature: geo_json_ffaf9280813b4d33a06173be781dfa3f_onEachFeature,
+            
+                style: geo_json_ffaf9280813b4d33a06173be781dfa3f_styler,
+        });
+
+        function geo_json_ffaf9280813b4d33a06173be781dfa3f_add (data) {
+            geo_json_ffaf9280813b4d33a06173be781dfa3f
+                .addData(data)
+                .addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
+        }
+            $.ajax("https://www.ljwolf.org/projects/bce/simple_pop_entropy.geojson", {dataType: 'json', async: false})
+                .done(geo_json_ffaf9280813b4d33a06173be781dfa3f_add);
+
+        
+    
+    geo_json_ffaf9280813b4d33a06173be781dfa3f.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["constituency_name", "pop_entropy"];
+    let aliases = ["Name:", "Population Fragmentation:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup", "maxWidth": 800});
+                     
+    
+            var tile_layer_57ce687a033646dfa318ad14ba7367a6 = L.tileLayer(
                 "http://raw.githubusercontent.com/ljwolf/bce-2023-webtiles/master/smoothness_change_tiles/{z}/{x}/{y}.png",
                 {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.5, "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-            var tile_layer_595c4d4fb3084868a301ef2feab5b64a = L.tileLayer(
+            var tile_layer_aaf5dacb96b54f62a5c216c8a87f36ed = L.tileLayer(
                 "http://raw.githubusercontent.com/ljwolf/bce-2023-webtiles/master/compactness_change_tiles/{z}/{x}/{y}.png",
                 {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.5, "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-            var tile_layer_55173ac600d847e88d7fd014907c9444 = L.tileLayer(
+            var tile_layer_db12b9a21bfe422caeb3f84ff1b766da = L.tileLayer(
                 "http://raw.githubusercontent.com/ljwolf/bce-2023-webtiles/master/inertia_old_tiles/{z}/{x}/{y}.png",
                 {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.75, "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-            var tile_layer_49335500b02e47f5b36b505d15e65232 = L.tileLayer(
+            var tile_layer_bbff9dcb5d474938aee19dced7fd3738 = L.tileLayer(
                 "http://raw.githubusercontent.com/ljwolf/bce-2023-webtiles/master/inertia_new_tiles/{z}/{x}/{y}.png",
                 {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.75, "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-            var tile_layer_6f7aaf452b0e4ec28337843f4abf85c1 = L.tileLayer(
+            var tile_layer_1f49c264019d43d0bc17e3e03980b4b3 = L.tileLayer(
                 "http://raw.githubusercontent.com/ljwolf/bce-2023-webtiles/master/inertia_change_tiles/{z}/{x}/{y}.png",
                 {"attribution": "Analysis by University of Bristol Quantitative Spatial Sciences Lab", "detectRetina": false, "maxNativeZoom": 14, "maxZoom": 14, "minZoom": 7, "noWrap": false, "opacity": 0.75, "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-        function geo_json_6fe8ca295e614f03a931005efddc8ee6_styler(feature) {
+        function geo_json_16d156c119c84dd7bb484e151abf1f2d_styler(feature) {
             switch(feature.properties.constituency_name) {
                 case "High Peak": case "Derby South": case "Derby North": case "Ilkeston and Long Eaton": case "Mid Derbyshire": case "Amber Valley": case "North East Derbyshire": case "Chesterfield": case "Bolsover": case "North West Leicestershire": case "Lincoln": case "Rushcliffe": case "Daventry": case "Peterborough": case "Ipswich": case "Maldon": case "Castle Point": case "Harlow": case "St Albans": case "Welwyn Hatfield": case "Stevenage": case "Dunstable and Leighton Buzzard": case "Bedford": case "Putney": case "Sutton and Cheam": case "Walthamstow": case "Harrow": case "Ruislip, Northwood and Pinner": case "Hayes and West Drayton": case "Twickenham": case "Richmond Park": case "Tooting": case "Carshalton and Wallington": case "Lewisham East": case "Sunderland Central": case "South Shields": case "Hartlepool": case "Stockton North": case "West Lancashire": case "Bootle": case "Rochdale": case "Oldham East and Saddleworth": case "Oldham West and Royton": case "Wigan": case "Stretford and Urmston": case "Warrington South": case "Warrington North": case "Altrincham and Sale West": case "Wythenshawe and Sale East": case "Manchester Withington": case "Crewe and Nantwich": case "Macclesfield": case "Cheadle": case "Wallasey": case "Spelthorne": case "Havant": case "Portsmouth North": case "Portsmouth South": case "Gosport": case "Southampton Itchen": case "Southampton Test": case "East New Forest": case "West New Forest": case "Crawley": case "Hailsham and Crowborough": case "Hove and Brighton West": case "Sevenoaks": case "Gravesham": case "Gillingham and Rainham": case "Sittingbourne and Sheppey": case "Dover and Deal": case "Central Devon": case "North Cornwall": case "South East Cornwall": case "South Dorset": case "Bournemouth West": case "Bournemouth East": case "Forest of Dean": case "Cirencester and North Wiltshire": case "Newton Abbot": case "Torbay": case "North Devon": case "St Austell and Newquay": case "Plymouth Sutton and Devonport": case "Rugby": case "Nuneaton": case "Bedworth and North Warwickshire": case "Sutton Coldfield": case "North Herefordshire": case "West Worcestershire": case "Worcester": case "Kidderminster": case "Droitwich and Evesham": case "Bromsgrove": case "Coventry North West": case "Ludlow and Bridgnorth": case "Burton": case "Stoke-on-Trent North": case "Cannock Chase": case "Stratford-on-Avon": case "Birmingham Northfield": case "Birmingham Selly Oak": case "Sheffield Brightside and Hillsborough": case "Penistone and Stocksbridge": case "Barnsley South": case "Scarborough and Whitby": case "Colne Valley": case "Batley and Hipperholme": case "Morley": case "Leeds North East": case "Bradford East": case "Shipley": case "Keighley": case "Sheffield Heeley": case "Sheffield South East": 
                     return {"color": "black", "fillColor": "#fee695", "fillOpacity": 0.6, "lineOpacity": 0.8, "weight": 0.5};
@@ -525,27 +607,27 @@
             }
         }
 
-        function geo_json_6fe8ca295e614f03a931005efddc8ee6_onEachFeature(feature, layer) {
+        function geo_json_16d156c119c84dd7bb484e151abf1f2d_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_6fe8ca295e614f03a931005efddc8ee6 = L.geoJson(null, {
-                onEachFeature: geo_json_6fe8ca295e614f03a931005efddc8ee6_onEachFeature,
+        var geo_json_16d156c119c84dd7bb484e151abf1f2d = L.geoJson(null, {
+                onEachFeature: geo_json_16d156c119c84dd7bb484e151abf1f2d_onEachFeature,
             
-                style: geo_json_6fe8ca295e614f03a931005efddc8ee6_styler,
+                style: geo_json_16d156c119c84dd7bb484e151abf1f2d_styler,
         });
 
-        function geo_json_6fe8ca295e614f03a931005efddc8ee6_add (data) {
-            geo_json_6fe8ca295e614f03a931005efddc8ee6
+        function geo_json_16d156c119c84dd7bb484e151abf1f2d_add (data) {
+            geo_json_16d156c119c84dd7bb484e151abf1f2d
                 .addData(data)
-                .addTo(map_df72b56a665f4a56864d5850c575fae8);
+                .addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         }
             $.ajax("https://www.ljwolf.org/projects/bce/simple_new_inertia_change.geojson", {dataType: 'json', async: false})
-                .done(geo_json_6fe8ca295e614f03a931005efddc8ee6_add);
+                .done(geo_json_16d156c119c84dd7bb484e151abf1f2d_add);
 
         
     
-    geo_json_6fe8ca295e614f03a931005efddc8ee6.bindPopup(
+    geo_json_16d156c119c84dd7bb484e151abf1f2d.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -569,51 +651,53 @@
     ,{"className": "foliumpopup", "maxWidth": 800});
                      
     
-            var pane_7f50d6a6fdc64e1696c77012f2850740 = map_df72b56a665f4a56864d5850c575fae8.createPane(
+            var pane_9933efb340af4813afbbd95ad73695e1 = map_9af9b9e490b044d69d379a0fdb5fc821.createPane(
                 "labels");
-            pane_7f50d6a6fdc64e1696c77012f2850740.style.zIndex = 750;
+            pane_9933efb340af4813afbbd95ad73695e1.style.zIndex = 750;
             
-                pane_7f50d6a6fdc64e1696c77012f2850740.style.pointerEvents = 'none';
+                pane_9933efb340af4813afbbd95ad73695e1.style.pointerEvents = 'none';
             
         
     
-            var tile_layer_473b4f0a61304c858cdb94f5c530c448 = L.tileLayer(
+            var tile_layer_b1746d8bad024ec1a7247d9a8a6e1438 = L.tileLayer(
                 "https://a.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png",
                 {"attribution": "(C) CARTO", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "pane": "labels", "subdomains": "abc", "tms": false}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
         
     
-            var layer_control_0c42036ab8ea409daa170ef504b8fc59 = {
+            var layer_control_47047f89af9c432fa26b976c5e86f903 = {
                 base_layers : {
                 },
                 overlays :  {
-                    "Population" : tile_layer_1b1ca2c218684501923a203240a3392e,
-                    "Current Constituencies" : geo_json_4f0b9049c14440f48d43e86e81c67a15,
-                    "Draft Constituencies" : geo_json_c163e4962e484cd68a8011dde694a049,
-                    "Designation Changes" : geo_json_36a25e4bb6bd4a1f83d58beddb418b52,
-                    "Average Age (by Constituency)" : geo_json_91f9bc867e9b429198557112c03330e5,
-                    "Boundary Fragmentation" : geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1,
-                    "Smoothness (% Change)" : tile_layer_2e204d3289404837a1c6a2fbfb525a79,
-                    "Compactness (% Change)" : tile_layer_595c4d4fb3084868a301ef2feab5b64a,
-                    "Current Accessibility" : tile_layer_55173ac600d847e88d7fd014907c9444,
-                    "Draft Accessibility" : tile_layer_49335500b02e47f5b36b505d15e65232,
-                    "Accessibility (% Change)" : tile_layer_6f7aaf452b0e4ec28337843f4abf85c1,
-                    "Accessibility (% Change by Constituency)" : geo_json_6fe8ca295e614f03a931005efddc8ee6,
+                    "Population" : tile_layer_ec68cfe6dcec491983775f6c1ddeeaf5,
+                    "Current Constituencies" : geo_json_c71df90793994ac6ac1e572c86a162e3,
+                    "Draft Constituencies" : geo_json_170a03da66dc462b937345f973ff3b48,
+                    "Designation Changes" : geo_json_86bf4ea27f764bd2a4328d8e2edb9813,
+                    "Average Age (by Constituency)" : geo_json_862758de9d4149edb2eb7db014838e76,
+                    "Boundary Fragmentation" : geo_json_e9603343b1864b76b00a252b0bd229cf,
+                    "Population Fragmentation" : geo_json_ffaf9280813b4d33a06173be781dfa3f,
+                    "Smoothness (% Change)" : tile_layer_57ce687a033646dfa318ad14ba7367a6,
+                    "Compactness (% Change)" : tile_layer_aaf5dacb96b54f62a5c216c8a87f36ed,
+                    "Current Accessibility" : tile_layer_db12b9a21bfe422caeb3f84ff1b766da,
+                    "Draft Accessibility" : tile_layer_bbff9dcb5d474938aee19dced7fd3738,
+                    "Accessibility (% Change)" : tile_layer_1f49c264019d43d0bc17e3e03980b4b3,
+                    "Accessibility (% Change by Constituency)" : geo_json_16d156c119c84dd7bb484e151abf1f2d,
                 },
             };
             L.control.layers(
-                layer_control_0c42036ab8ea409daa170ef504b8fc59.base_layers,
-                layer_control_0c42036ab8ea409daa170ef504b8fc59.overlays,
+                layer_control_47047f89af9c432fa26b976c5e86f903.base_layers,
+                layer_control_47047f89af9c432fa26b976c5e86f903.overlays,
                 {"autoZIndex": true, "collapsed": false, "position": "topright"}
-            ).addTo(map_df72b56a665f4a56864d5850c575fae8);
-            geo_json_36a25e4bb6bd4a1f83d58beddb418b52.remove();
-            geo_json_91f9bc867e9b429198557112c03330e5.remove();
-            geo_json_b223d24c6f2e4e4ba67bb8721ba98ad1.remove();
-            tile_layer_2e204d3289404837a1c6a2fbfb525a79.remove();
-            tile_layer_595c4d4fb3084868a301ef2feab5b64a.remove();
-            tile_layer_55173ac600d847e88d7fd014907c9444.remove();
-            tile_layer_49335500b02e47f5b36b505d15e65232.remove();
-            tile_layer_6f7aaf452b0e4ec28337843f4abf85c1.remove();
-            geo_json_6fe8ca295e614f03a931005efddc8ee6.remove();
+            ).addTo(map_9af9b9e490b044d69d379a0fdb5fc821);
+            geo_json_86bf4ea27f764bd2a4328d8e2edb9813.remove();
+            geo_json_862758de9d4149edb2eb7db014838e76.remove();
+            geo_json_e9603343b1864b76b00a252b0bd229cf.remove();
+            geo_json_ffaf9280813b4d33a06173be781dfa3f.remove();
+            tile_layer_57ce687a033646dfa318ad14ba7367a6.remove();
+            tile_layer_aaf5dacb96b54f62a5c216c8a87f36ed.remove();
+            tile_layer_db12b9a21bfe422caeb3f84ff1b766da.remove();
+            tile_layer_bbff9dcb5d474938aee19dced7fd3738.remove();
+            tile_layer_1f49c264019d43d0bc17e3e03980b4b3.remove();
+            geo_json_16d156c119c84dd7bb484e151abf1f2d.remove();
         
 </script>
