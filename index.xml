@@ -12,6 +12,43 @@
     
     
     <item>
+      <title>Report on Boundary Commission for England 2023&#39;s Draft Constituency Plan</title>
+      <link>/bce/</link>
+      <pubDate>Mon, 02 Aug 2021 11:58:16 +0100</pubDate>
+      
+      <guid>/bce/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://www.bristol.ac.uk/geography/research/quantitative-spatial-science/&#34;&gt;University of Bristol Quantitative Spatial Sciences Lab (QuSS)&lt;/a&gt; examined the &lt;a href=&#34;https://boundarycommissionforengland.independent.gov.uk/2023-review/&#34;&gt;Boundary Commission for England&lt;/a&gt;&amp;rsquo;s draft plan for Westminster Parliamentary Constituencies across England. We published our findings in &lt;a href=&#34;https://ljwolf.org/projects/bce/report.pdf&#34;&gt;a report&lt;/a&gt;. To make it easy for voters and the Commission to explore our analyses, we provide a webmap below (and &lt;a href=&#34;https://ljwolf.org/bcemap&#34;&gt;a full-screen version&lt;/a&gt;). We provide textual explanations for the layers in the webmap below.&lt;/p&gt;
+&lt;script&gt;
+    function resizeIframe(obj) {
+      obj.style.height =  1.05*obj.contentWindow.document.body.scrollHeight + &#39;px&#39;;
+    }
+  &lt;/script&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;800&#34; name=&#34;iframe&#34; src=&#34;https://ljwolf.org/bcemap&#34; 
+    frameborder=&#34;0&#34; 
+    scrolling=&#34;no&#34; 
+    onload=&#34;resizeIframe(this)&#34;&gt;
+&lt;/iframe&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Population&lt;/em&gt;: The most recent constrained population estimates from &lt;a href=&#34;https://www.worldpop.org/project/categories?id=3&#34;&gt;WorldPop&lt;/a&gt;. Darker areas are more populated.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Current Constituencies&lt;/em&gt;: Existing parliamentary constituency boundaries from the &lt;a href=&#34;https://boundarycommissionforengland.independent.gov.uk/2023-review/&#34;&gt;Boundary Commission for England&lt;/a&gt;. Shown in red lines.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Draft Constituencies&lt;/em&gt;: Draft of the new parliamentary constituency boundaries from the &lt;a href=&#34;https://boundarycommissionforengland.independent.gov.uk/2023-review/&#34;&gt;BCE&lt;/a&gt;. Shown in blue lines.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Designation Changes&lt;/em&gt;: Change in &amp;ldquo;designation&amp;rdquo; for each constituency. &amp;ldquo;Borough&amp;rdquo; constituencies are supposed to be &amp;ldquo;urban&amp;rdquo;, whereas &amp;ldquo;County&amp;rdquo; constituencies contain rural areas. Clicking/tapping on this layer will show a pop-up with information on the classification change. If a constituency is &amp;ldquo;new&amp;rdquo;, it is because the BCE has given it a new name, which suggests it represents a different set of communities.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Average Age (by Constituency)&lt;/em&gt;: Average age of voting-aged population in a constituency, from the &lt;a href=&#34;https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates&#34;&gt;ONS&lt;/a&gt;. Clicking/tapping this layer will show a popup with information on age in the constituency. This layer is red when voters tend to be younger, and green where voters are older. Areas with missing data are visualized in grey, and have &amp;ldquo;null&amp;rdquo; Average Age.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Boundary Fragmentation&lt;/em&gt;: A measure of how poorly the draft constituency boundaries match up to an existing constituency. Red when the constituency is a poor match, and yellow when the constituency is a perfect match.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Population Fragmentation&lt;/em&gt;: A measure of how poorly the draft constituency population matches up to a previous constituency&amp;rsquo;s population. Red when the constituency groups places that were not grouped before, and yellow when the constituency tends to group people that were grouped before.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Smoothness (% Change)&lt;/em&gt;: Change in a composite measure of constituency shape that represents how &amp;ldquo;sqiggly&amp;rdquo; a district&amp;rsquo;s boundary is. This is mapped by the intersections of constituencies in new and old plans. This layer is red when an area becomes represented by a constituency (or constituencies) that have very squiggly boundaries, compared to previous districts. Areas with very little change are represented in lighter colors.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Compactness (% Change)&lt;/em&gt;: Change in a composite measure of constituency shape that represents how &amp;ldquo;compact&amp;rdquo; a district boundary is. It is symbolized in the same manner as the &lt;em&gt;Smoothness (% Change)&lt;/em&gt; layer.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Current Accessibility&lt;/em&gt;: Measure of how accessible voters are to one another in current constituencies, deriving from the inertia-based measure from Weaver and Hess (1963), that takes into account both the size and the remoteness of the population. Darker colors indicate remote populations, wheras lighter colors represent more connected populations.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Draft Accessibility&lt;/em&gt;: Same inertia-based measure of accessibility, computed using the 2023 BCE Draft plan. As before, darker colors indicate worse accessibility.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Accessibility (% Change)&lt;/em&gt;: Percentage change in accessibility for each grid cell, clipped so that the smallest value is -200% and the largest value is +200%. Blue grid cells become less accessible in their draft constituency, whereas red grid cells become more accessibile in their draft constituency.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Accessibility (% Change by Constituency)&lt;/em&gt;: Percentage change in accessibility, aggregated to the constituency level and again clipped so that the smallest value is -200% and largest is +200%. Clicking on this layer will provide the exact value of the change in that constituency.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Something just hit me about a month after I turned thirty</title>
       <link>/posts/thirty/</link>
       <pubDate>Fri, 16 Jul 2021 14:59:00 +0100</pubDate>
