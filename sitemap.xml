@@ -3,22 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/depop/</loc>
+    <lastmod>2021-08-12T17:07:30+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2021-08-12T17:07:30+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-08-12T17:07:30+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/bce/</loc>
     <lastmod>2021-08-02T11:58:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/</loc>
-    <lastmod>2021-07-16T14:59:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/thirty/</loc>
-    <lastmod>2021-07-16T14:59:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2021-07-16T14:59:00+01:00</lastmod>
   </url>
   
