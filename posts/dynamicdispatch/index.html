@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Dynamic Dispatch is Awesome  - Yet Another Geographer</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/favicon.png">
+
+<link rel="stylesheet" href="/css/style.css?rnd=1629205509" />
+
+<meta property="og:title" content="Dynamic Dispatch is Awesome" />
+<meta property="og:description" content="tldr: the social and technical architecture of object-oriented programming encourages us to centralize our focus onto a few core implementations, objects, of the main concepts we use. This creates coordination problems when we want to extend or modify them; we have to work together and agree on how an object in the commons is modified. Alternatively, dynamic dispatch, a programming strategy that makes the proceedures we exececute depend on the types of their input, solves these social and technical challenges with very few tradeoffsin general." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/dynamicdispatch/" />
+<meta property="article:published_time" content="2021-08-17T13:58:26+01:00" />
+<meta property="article:modified_time" content="2021-08-17T13:58:26+01:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dynamic Dispatch is Awesome"/>
+<meta name="twitter:description" content="tldr: the social and technical architecture of object-oriented programming encourages us to centralize our focus onto a few core implementations, objects, of the main concepts we use. This creates coordination problems when we want to extend or modify them; we have to work together and agree on how an object in the commons is modified. Alternatively, dynamic dispatch, a programming strategy that makes the proceedures we exececute depend on the types of their input, solves these social and technical challenges with very few tradeoffsin general."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Yet Another Geographer</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">About</a>
+    
+    <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">CV</a>
+    
+    <a class="" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html" title="">Affiliation</a>
+    
+    <a class="" href="/teaching/" title="">Teaching</a>
+    
+    <a class=" active" href="/posts/" title="Posts">Posts</a>
+    
+</nav>
+
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header>
+            <h1>Dynamic Dispatch is Awesome</h1>
+        </header>
+        <div class="content">
+            <p><em>tldr: the social and technical architecture of object-oriented programming encourages us to centralize our focus onto a few core implementations, objects, of the main concepts we use. This creates coordination problems when we want to extend or modify them; we have to work together and agree on how an object in the commons is modified. Alternatively, dynamic dispatch, a programming strategy that makes the proceedures we exececute depend on the types of their input, solves these social and technical challenges with very few tradeoffsin general. I recommend using it, if you have not, through the <code>functools.singledispatch</code> library in Python, or the <code>multipledispatch</code> library.</em></p>
+<p>In OOP, the human/social architecture of power inhibits extensibility. In order for the object to &ldquo;do&rdquo; a new thing, you have to extend the object, and we&rsquo;re generally left with a few options on how to do this.</p>
+<p>First, we can <strong>contribute</strong>: provide a patch (or ask the maintainer) to extend the target object. This is hard. It immediately poses a coordination problem between you and the organization that &ldquo;owns&rdquo; the object&rsquo;s library. It&rsquo;s socially expensive, in that you&rsquo;re negotiating directly with the &ldquo;owners&rdquo; about implementation details, documentation, whether the functionality is &ldquo;in scope&rdquo; for the library, and whether the owners feel is appropriate for their maintenance burden. While contributors often can try to enter into the &ldquo;owners&rdquo; maintenance circuit, most &ldquo;drive-by&rdquo; contributions don&rsquo;t really result in long-term participation, as maintaining a library is very different from authoring precise, small, well-defined functionality.</p>
+<p>So, this means that there is a bit of an institutional incentive to develop <em>not invented here syndrome</em> and <strong>extend it yourself</strong>. You patch the object in your own package, and keep around your own special powered-up version of the class. Thinking locally, this makes a lot of sense.  But, over time it presents some pretty severe challenges to an ecosystem. The most significant one, I think, is that in mature ecosystems, a <em>concept</em> has no canonical software implementation as an <em>object</em>. For example, if I&rsquo;m trying to write a new analytics library using graph algorithms, which of the many numerous &ldquo;graph&rdquo; class implementations should I extend? <code>networkx</code>, <code>scipy.sparse.csgraph</code>, <code>igraph</code>, <code>pysal.weights</code>?</p>
+<p>We can pick the most used one, try to send everything into that canonical representation, and then extend or contribute or just pick one of the main representations and assume translators exist elsewhere in the ecosystem. Both options work in the short term, but can incur tons of &ldquo;translation&rdquo; costs for shifting data from one representation into another. Also, since your library is now <em>entirely dependent</em> on its parent class implementation, the implementation details of that class may seriously affect the performance and extensibility of your own library. And, this can leave you on the hook for maintaining your own Swiss army knives to convert objects to objects in the long term.^[Ducktyping, while a neat idea and theoretically very useful, can be very challenging to pull off in a wider sense because <em>names are different for different domains</em>. One person&rsquo;s <code>graph.edges</code> is another person&rsquo;s <code>network.nodes</code>, and they may have very different performance properties to construct, translate, or access depending on the internal representations of the objects.] The latter option is generally <em>not</em> a good idea, as it comes with all the costs of the first option but with a side of fragmentation and reduced interoperability.</p>
+<p>One excellent alternative is <em>dynamic dispatch</em>, like R and Julia do by default and is available in Python&rsquo;s <code>functools.singledispatch</code> standard library decorator or the <code>multipledispatch</code> library. In this case, you have a diverse set of methods can reason <em>concretely</em> about the types of their input. They know exactly how to access their data in efficient methods, and there is no cost in fitting every shape of peg into the same round hole: you can deal directly with the data structures themselves. The way I think of it is that you <em>extend functions</em> to deal with objects of different types, rather than having to extend the <em>classes</em> to provide data (or functions) that you need.</p>
+<p>Critically, it <em>removes the social blocker on extension!</em> I don&rsquo;t have to ask the owner of the object to implement my functionality, or agree upon implementation details of the functionality itself. There are no translation costs to send every object into a single canonical type, and you&rsquo;re able to focus only on the data you need to compute your final result: no big collection of object-to-object converter functions. And, if newer libraries with better representations come out, you can extend the implementations without having to <em>switch</em> to a new canonical representation or jeopardize older implementations. It&rsquo;s great!</p>
+<p>I was first exposed to the concept while learning Julia 0.5 (back in graduate school) and absolutely fell in love with how easy it was to develop new functionality within systems with dynamic dispatch. used this in the new implementations in <a href="https://github.com/pysal/pointpats/blob/master/pointpats/geometry.py"><code>pointpats</code></a>, the <code>[PySAL](https://pysal.org)</code> library for statistical analysis of geographic point patterns, and absolutely <em>love</em> how it works. In <code>pointpats</code>, it allows us to deal with many different representations of input geometries, appropriately computing things like area or point-in-polygon queries using the performant algorithms that the <em>objects themselves</em> have.</p>
+<p>Thus, a function like <code>new_statistic(graph, ...)</code> to work with <code>graph.edges</code> can sit alongside of <code>new_statistic(network, ...)</code> that operates on <code>network.nodes</code>, and both might, at the end, send the final computation off to a third <code>new_statistic()</code> implementation that works on very simple, highly-structured data components, like <code>new_statistic(nodes, edges, ...)</code>. This avoids having to <em>translate</em> explicitly into canonical representations, and lets you extend a function&rsquo;s API <em>endlessly</em> to accommodate new input types or representations.  Alternatively, if you need to make <code>new_statistic()</code> faster/distributed/JIT compiled/etc, you can propagate this to <em>all</em> of the inputs that <code>new_statistic()</code> understands, or just speed up the highly-structured core components in <code>new_statistic(nodes, edges, ...)</code>.</p>
+<p>Some might say that you can get <em>around</em> using a pattern like this with something akin to the endless <code>df.from_XXX</code> methods on <code>pandas.DataFrame</code>; for any input data format, give me back a <code>pandas.DataFrame</code>. This makes a lot of sense for <em>constructing objects from other objects</em>, but it&rsquo;s hard to recommend the <code>from_XXX</code> strategy when you want to write <em>functions</em> that just implement analytical capability. The <code>from_XXX</code> methods make sense when dealing with file input/output, especially, because files generally have <em>way</em> less metadata than objects. However, for making <code>new_statistic()</code> &ldquo;know&rdquo; about both <code>graph</code> and <code>network</code> objects, it seems a bit unnecessary for the <em>user</em> to have to specify <code>new_statistic.from_graph</code> and <code>new_statistic.from_network</code> when the relevant metadata about <code>graph</code> and <code>network</code> objects, such as their <em>class</em>, can be computed quickly in the interpreter.</p>
+<p>Thus, I think that the <em>next</em> library I write from scratch will be implemented in this fashion, and I&rsquo;ll continue to introduce it where it&rsquo;s useful into libraries I contribute to. Fortunately, <code>functools.singledispatch</code> lives in the standard Python library, so there are no &ldquo;extra&rdquo; dependencies for code written in this fashion, and the dispatching itself is very fast.</p>
+
+        </div>
+        <div class="article-info">
+    
+        <div class="article-date">2021-08-17</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>© 2021<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>
