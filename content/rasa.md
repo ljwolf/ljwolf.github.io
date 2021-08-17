@@ -98,7 +98,7 @@ Daoquin Tong (Arizona State University)
 
 #### _Economic Systems & Program Evaluation_
 
-TBC <!--**Max Nathan (UCL) (TBC)**-->
+Max Nathan (UCL)
 
 #### _Earth Observation_
 
@@ -106,7 +106,7 @@ Michelle Stuhlmacher (DePaul)
 
 #### _Machine Learning_
 
-TBC <!-- Stephen Law (TBC)** -->
+Stephen Law (UCL, Alan Turing Institute)
 
 ####  _Causal Inference_
 
