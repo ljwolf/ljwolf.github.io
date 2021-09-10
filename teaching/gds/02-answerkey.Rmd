@@ -111,7 +111,7 @@ knitr::kable(tidy(mermod))
 
 *As in our scatterplots above, the mixed model sees a big difference in the baseline pay between men and women, but sees a very small (if negligible) difference in the effect of height on earnings between men and women: the effect is pretty much the same.*
 ```{r}
-knitr::kable(tidy(mermod, effects="ran_coefs"))
+knitr::kable(tidy(mermod, conf.int=T, effects="ran_coefs"))
 ```
 
 *We can visualize this using the `ranef()` and `dotplot` as we did before in the workbook:*
