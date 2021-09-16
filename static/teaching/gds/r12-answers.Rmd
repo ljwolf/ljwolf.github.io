@@ -1,0 +1,202 @@
+---
+title: "What do you mean?"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+
+Today, we will use the *actual* sales prices of property listings in the WECA area. The best answers will provide both useful visualizations and textual discussion of the correct answer. Code is also useful. In most cases, the answer can be provided in a line of code, a plot, and two or three sentences.  
+
+# 1. Doing Data Science Mentally
+
+Let's get you thinking about conditional probabilities.[^hint-conditionals]. To do this, read in the `sales.csv` data. If listing is:
+
+## 1.1 
+from 1999, what's your best guess as to the price of that house?
+
+```{r}
+library(tidyverse)
+sales = read_csv("../data/sales.csv")
+sales %>% filter(year == 1999) %>% summarize(mean(price))
+```
+## 1.2
+about a *detached house* in 1999, what's your best guess as to the price of that house?  
+```{r}
+sales %>% filter(year == 1999 & property_type == 'detached') %>% summarize(mean(price))
+```
+## 1.3
+for a flat sold as a leasehold, what is the likely price?
+
+```{r}
+sales %>% filter(property_type == 'flat') %>% summarize(mean(price))
+```
+
+## 1.4 
+for a detached house, is it likely to be sold as a freehold or leasehold? 
+
+```{r}
+sales %>% filter(property_type == 'detached') %>% summarize(mean(is_freehold))
+```
+## 1.4 
+for a flat, is it likely to be sold as a freehold or leasehold? 
+
+```{r}
+sales %>% filter(property_type == 'flat') %>% summarize(mean(is_freehold))
+```
+
+## 1.5
+pricier than 500000,  is it likely to be sold as a freehold or leasehold?
+
+```{r}
+sales %>% filter(price > 500000) %>% summarize(mean(is_freehold))
+```
+
+# 2. A Group-based model
+
+Fit a linear model that predicts listing price over the years, treating "year" as a group variable.[^hint-factors] Interpreting this model:
+
+```{r}
+model1 = lm(price ~ as.factor(year)-1, data=sales)
+```
+
+## 2.1
+In this model, what does the estimate for each "year" represent? 
+
+*This is either the mean of each group, or is the contrast between that year and the reference category., which is the first year by default.*
+
+## 2.2
+Which years are *not* "statistically significant?" Why might this be the case?
+
+*If you fit the model using the "contrast" specification, then some of the early years will not be statistically significant. This is because they measure the change relative to 1995; the actual prediction for, say 1996, is `(Intercept) + 1996` in this case. The model which I fit above (with the `-1` term) uses each group separately, like in the pub example from last week.*
+
+## 2.3
+What's the model's prediction of listing price of a detached house in 1999? How does this compare to your guess from section 1?
+
+*Since our model doesn't "know" about property type, we can ignore it in the scenario*:
+```{r}
+scenario = data.frame(year=1999)
+predict(model1, scenario)
+```
+*You can see that this is the same estimate from section 1; you should be expecting this, because (as we saw last week), a group-based model will just use the mean within each group as its prediction, if there aren't any other variables in play.*
+
+## 2.4
+Are there any issues with the model that you can identify? [^hint-bias]
+*Tons! it's biased in terms of both prediction errors in most of the other categorical varuables. For example, in property type:*
+```{r}
+sales %>% mutate(residual = residuals(model1)) %>% group_by(property_type) %>% summarize(mean(residual))
+```
+*But, it's *not really *biased in years, since we've included those as group variables already:*
+```{r}
+sales %>% mutate(residual = residuals(model1)) %>% group_by(year) %>% summarize(mean(residual))
+```
+*You can also see it's heteroskedastic using similar methods*:
+```{r}
+sales %>% mutate(residual = residuals(model1)) %>% group_by(year) %>% summarize(sd(residual))
+```
+*The standard deviation of the residuals doubles within the first 10 years!*
+
+## 2.5 
+Would you use this model to predict next year's prices? Why or why not?
+*In fact, you cant; the model only understands years as different groups, and does not know, for instance, that years follow one another. This is because you've treated them as a factor, rather than as a numeric variable.*
+
+# 3. A Linear Model
+
+Fit a linear model that predicts the log listing price over the years, treating "year" as a continuous variable, including the property type as a group variable.[^hint-factors] 
+
+```{r}
+model2 = lm(log(price) ~ year + property_type, data=sales)
+```
+
+## 3.1
+In this model, what does the estimate for "year" represent?[^hint-log]
+*This represents the typical change in `log(price)` for each year that passes. Thinking hard about how `log`s work, you might also know that if you model `log(y)~X`, then your beta values represent the *percentage change *in y, given a unit change in X! So, the slope here actually represents the estimated annual percentage change in house prices!*
+
+## 3.2
+Why is the intercept negative? Can you adjust X or y to make this more reasonable?[^hint-centering]
+
+*This is because the intercept is our prediction of the house price in year 0... almost 2000 years ago. Since the line can only go straight in this model, our prediction is completely unrealistic. To adjust the "starting" year, we can shift the $X$ values over! If we have $X$, then we can build a new variable $Z = X - k$, where $k$ is the value where we want the intercept to explain. For example, we can plug in $k=1995$ and fit the following model on $Z = X-1995$. This model's intercept, then, describes the predicted log house price when $Z=0$, which corresponds to $X=1995$:*
+
+```{r}
+model2 = lm(log(price) ~ year_shifted + property_type, data=sales %>% mutate(year_shifted = year - 1995))
+model2
+```
+
+*You can see that, since the scale of y and X remained the same, the slope also remains the same. This kind of shifting is very common, as we aim to make what we estimate as useful as possible. You'll also note that the property_type values also remain the same because we're just changing the value of the intercept; the contrast with the intercept will remain the same. Fitting the model with separate intercepts by group would shift all of the group intercepts up from zero*
+
+```{r}
+lm(log(price) ~ year + property_type - 1, data=sales)
+```
+
+```{r}
+lm(log(price) ~ year_shifted + property_type - 1, data=sales %>% mutate(year_shifted = year - 1995))
+```
+
+## 3.3
+In which year is this model's prediction most biased? least biased?
+
+*The 2 biggest underpredictions occur in these years:*
+```{r}
+year_errors = sales %>% 
+  mutate(residual = residuals(model2)) %>% 
+  group_by(year) %>% 
+  summarize(av_error = mean(residual)) %>% 
+  arrange(av_error)
+
+year_errors %>% tail(2)
+```
+*And overpredictions here:*
+```{r}
+year_errors %>% head(2)
+```
+*For the *least *biased values, you need to get the smallest errors:*
+```{r}
+year_errors %>% mutate(abs_error = abs(av_error)) %>% arrange(abs_error) %>% head(2)
+```
+*While still small, they're not 17 zeros small.*
+
+## 3.4
+What's the model's prediction of listing price[^hint-logpred] of a detached house in 1999? How does this compare to your guesses from Sections 1 & 2?
+
+*This can be done in the same manner as before., but now we need to take care of our transformations... Build a scenario:*
+```{r}
+scenario = data.frame(year = 1999, property_type="detached")
+```
+*adjust for any transformations you did to $X$*:
+```{r}
+scenario = scenario %>% mutate(year_shifted = year - 1995)
+```
+*and then predict:*
+```{r}
+pred_logprice = predict(model2, scenario)
+pred_logprice
+```
+*Since we have transformed y, we need to un-transform the prediction to get back the original units:*
+```{r}
+exp(pred_logprice)
+```
+*Given information about the detached house, our prediction is way higher in this model, and is much closer to the $141262$ we got in section 1. The difference here is that our model in this section treats year as a continuous variable, rather than categorical one. $\mathbf{E}[y|X]$ changes because the nature of our $X$ changes!*
+
+## 3.5
+
+Would you use this model to predict next year's prices? Why or why not?
+
+*You can, because the model treats years not as a group, but as a continuous variable.*
+
+## 3.5 Challenge
+Train the same model, but use only data from *before* 1999. What's *this* model's prediction of the listing price in 1999? How does *this* compare to the other three predictions?
+
+*This model represents our true guess when the stakes are high. Our past guesses are all* __in-sample__ *predictions, in that we're just predicting about the things our model already has seen. Here, though, we artificially restrict the data so that we don't know anything about 1999, and predict based on what we know until 1999. This concept of out-of-sample accuracy is extremely important for data science because of its focus on prediction, so we'll cover ways to estiamte this later in the course.*
+```{r}
+model3 = lm(log(price) ~ year + property_type, data=sales %>% filter(year < 1999))
+pred_logprice_pre1999 = predict(model3, data.frame(year=1999, property_type='detached'))
+exp(pred_logprice_pre1999)
+```
+
+
+[^hint-conditionals]: These can all be done easily with `filter()` and `group_by`.
+[^hint-factors]: Be careful! In this model, are `years` numbers or categories? 
+[^hint-bias]: There are three things I would keep in mind here. First, recall that you can use the `residuals(model)` function to extract your model prediction errors and you can also get predictions using `predict(model)`. Second, you may find it useful to create columns containing model predictions or errors. Finally, remember the typical issues that models can have, such as heteroskedasticity in residuals, nonlinearity in response, or bias when predictions are grouped in a way the model ignores. 
+[^hint-lag]: just like the `first()` and `last()` functions used in the last assignment, the `lag()` and `lead()` functions get the previous (or the next) group's values in a group-by.
+[^hint-centering]: Remember, the interpretation of the intercept is our guess for $y$ when $X=0$ ($\mathbf{E}[y|X=0]$). As long as you don't change the *units* of $X$, you can shift it around arbitrarily. 
+[^hint-log]: remember, changing the units of $y$ or $X$ will change your interpretation of the slope in a model.
+[^hint-logpred]: remember that this model is trained using the *log of price*, not *price*. To get back the "price" from a "log of price" variable, you need to use `exp()`; the `exp()` "un-does" the `log()`. For example, `log(750000)`=`r log(750000)`, and `exp(13.5278285)`= `750000`.

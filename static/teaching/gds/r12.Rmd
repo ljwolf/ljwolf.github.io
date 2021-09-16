@@ -1,0 +1,78 @@
+---
+title: "What do you mean?"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+
+Today, we will use the *actual* sales prices of property listings in the WECA area. The best answers will provide both useful visualizations and textual discussion of the correct answer. Code is also useful. In most cases, the answer can be provided in a line of code, a plot, and two or three sentences.  
+
+# 1. Doing Data Science Mentally
+
+Let's get you thinking about conditional probabilities.[^hint-conditionals]. To do this, read in the `sales.csv` data. If listing is:
+
+## 1.1 
+from 1999, what's your best guess as to the price of that house?
+
+## 1.2
+about a *detached house* in 1999, what's your best guess as to the price of that house?  
+
+## 1.3
+for a flat, is it likely to be sold as a freehold or leasehold?
+
+## 1.4 
+for a detached house, is it likely to be sold as a freehold or leasehold? 
+
+## 1.5
+pricier than 500000,  is it likely to be sold as a freehold or leasehold?
+
+# 2. A Group-based model
+
+Fit a linear model that predicts listing price over the years, treating "year" as a group variable.[^hint-factors] Interpreting this model:
+
+## 2.1
+In this model, what does the estimate for each "year" represent? 
+
+## 2.2
+Which years are *not* "statistically significant?" Why might this be the case?
+
+## 2.3
+What's the model's prediction of the listing price of a detached house in 1999? How does this compare to your guess from section 1?
+
+## 2.4
+Are there any issues with the model that you can identify? [^hint-bias]
+
+## 2.5 
+Would you use this model to predict next year's prices? Why or why not?
+
+# 3. A Linear Model
+
+Fit a linear model that predicts the log listing price over the years, treating "year" as a continuous variable.[^hint-factors] 
+
+## 3.1
+In this model, what does the estimate for "year" represent?[^hint-log]
+
+## 3.2
+Why is the intercept negative? Can you adjust X or y to make this more reasonable?[^hint-centering]
+
+## 3.3
+In which year is this model's prediction most biased? least biased?
+
+## 3.4
+What's the model's prediction of listing price[^hint-logpred] of a detached house in 1999? How does this compare to your guesses from Sections 1 & 2?
+
+## 3.5
+
+Would you use this model to predict next year's prices? Why or why not?
+
+## 3.5 Challenge
+Train the same model, but use only data from *before* 1999. What's *this* model's prediction of the listing price in 1999? How does *this* compare to the other three predictions?
+
+
+[^hint-conditionals]: These can all be done easily with `filter()` and `group_by`.
+[^hint-factors]: Be careful! In this model, are `years` numbers or categories? 
+[^hint-bias]: There are three things I would keep in mind here. First, recall that you can use the `residuals(model)` function to extract your model prediction errors and you can also get predictions using `predict(model)`. Second, you may find it useful to create columns containing model predictions or errors. Finally, remember the typical issues that models can have, such as heteroskedasticity in residuals, nonlinearity in response, or bias when predictions are grouped in a way the model ignores. 
+[^hint-lag]: just like the `first()` and `last()` functions used in the last assignment, the `lag()` and `lead()` functions get the previous (or the next) group's values in a group-by.
+[^hint-centering]: Remember, the interpretation of the intercept is our guess for $y$ when $X=0$ ($\mathbf{E}[y|X=0]$). As long as you don't change the *units* of $X$, you can shift it around arbitrarily. 
+[^hint-log]: remember, changing the units of $y$ or $X$ will change your interpretation of the slope in a model.
+[^hint-logpred]: remember that this model is trained using the *log of price*, not *price*. To get back the "price" from a "log of price" variable, you need to use `exp()`; the `exp()` "un-does" the `log()`. For example, `log(750000)`=`r log(750000)`, and `exp(13.5278285)`= `750000`.
