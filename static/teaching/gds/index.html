@@ -461,7 +461,7 @@ if (window.hljs) {
 
 
 <h1 class="title toc-ignore">Geographic Data Science</h1>
-<h4 class="date"><em>Updated: 2021-09-10</em></h4>
+<h4 class="date"><em>Updated: 2021-09-16</em></h4>
 
 
 
@@ -471,7 +471,7 @@ if (window.hljs) {
 <h2>Quick Info:</h2>
 <ul>
 <li><a href="#schedule">Full Schedule</a></li>
-<li><a href="https://www.ole.bris.ac.uk/webapps/discussionboard/do/forum?action=change_status&amp;course_id=_246919_1&amp;nav=cp_discussion_board&amp;conf_id=_368301_1&amp;forum_id=_267099_1&amp;getFilter=hidden">Blackboard Forum</a> (requires login)</li>
+<li><a href="https://www.ole.bris.ac.uk/webapps/blackboard/content/contentWrapper.jsp?course_id=_246919_1&amp;displayName=Blackboard+Forum&amp;href=https%3A%2F%2Fwww.ole.bris.ac.uk%2Fwebapps%2Fdiscussionboard%2Fdo%2Fforum%3Faction%3Dlist_threads%26course_id%3D_246919_1%26nav%3Dcp_discussion_board%26conf_id%3D_368301_1%26forum_id%3D_267099_1&amp;cR2XilcGYOo=jA%2BOBatky8nNtziwlkKvUEkcLb3ULEcWdA3e8J7t0AM%3D">Blackboard Forum</a> (requires login)</li>
 </ul>
 <p>Lectures are 5PM Monday Local Time, delivered <em>online</em>.</p>
 <p>Labs are 9AM Tuesday morning local time, delivered <em>in person</em>.</p>
@@ -481,15 +481,26 @@ if (window.hljs) {
 <p>Geographic data science is an important emerging set of practices and skills that have become useful in a wide variety of environmental and social sciences. This module will teach students the introduction to critical/core concepts in the arrangement and analysis of data. Beyond linear modelling, this module offers students an “instrumental” knowledge of various high-level methods in data science, but also offers a “deeper” route to understanding the more fundamental concepts and theory behind many of the estimators used in day-to-day data science. The purpose of this module is twofold. Its immediate aims are to ensure that students are provided a working introduction to common concepts and concerns that practicing geographic data scientists face. It will include some practical programming and data cleaning skills, but is mainly oriented towards statistical analysis. <strong>This is not a programming course</strong>, but <em>requires</em> some basic programming at the outset to prepare for analysis. Instead, <strong>this course is focused on analysis</strong>, and successful students will need to be able to conduct a successful analysis from start to finish.</p>
 <p>This course is based on a solid understanding of multivariate regression. If you would like to refresh your memory/understanding of linear regression, please consider the review reading listed below in the <a href="#reading">reading</a> section of this document.</p>
 </div>
+<div id="getting-started" class="section level2">
+<h2>Getting Started</h2>
+<p>A short diagnostic quiz to check your background knowledge is <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=MH_ksn3NTkql2rGM8aQVGyT1QLl52bVEvY-gb7G8kvlUN1ROTTBQNThYUDBTM0ozUVVVTVRIQkdYSS4u" target="_blank">here</a>. You can take it as many times as you like. Your responses are anonymous, and will not be connected to your grade in any way.</p>
+<p>If you intend to use your own computer for the unit, make sure you have installed:</p>
+<ul>
+<li>RStudio</li>
+<li>R version 4.0 or higher<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> Those on Windows may find <code>installr::updateR</code> useful.</span></li>
+<li>The <code>tidyverse</code> package</li>
+</ul>
+</div>
 <div id="mark-structure" class="section level2">
 <h2>Mark Structure</h2>
-<p>The course will be structured in four (approximately) two-week blocks. Each block will have</p>
+<p>The course will be structured in four blocks:</p>
 <ul>
-<li>about two hours of timetabled lecture content</li>
-<li>four 2-hour lab practical sessions.</li>
-<li>one “interim” workbook to check your understanding.</li>
+<li><strong>Tidy</strong>: Learn some theory behind why some data is “easy” to work with, and how to leverage this theory to do better analysis. (2 weeks)</li>
+<li><strong>Visualization</strong>: Learn about color, structure, and presentation of scientific diagrams. (2 weeks)</li>
+<li><strong>Regression</strong>: (Re)learn regression as a “supervised” learning problem, focusing on making good guesses given your information. (2+3 weeks)</li>
+<li><strong>Student Choice</strong>: Vote on topics, such as “Clustering,” “Data Reduction,” “NetCDF”, or “Smoothing Regression” (1 week)</li>
 </ul>
-<p>Final marks are based on a mid-term exam and a final. The midterm is 40% of your overall mark, and the final 60%. We will provide answers on the “interim” workbooks as the course progresses. For each assessment, answer keys will be posted after the due date, and the answers will be walked through in class. The final assessment is worth 60% of the overall mark.</p>
+<p>Final marks are based on a mid-term exam and a final. The midterm is 40% of your overall mark, and the final 60%. We will provide answers on the “interim” workbooks as the course progresses. There will be one “consolidation” review before the final. For each assessment, answer keys will be posted after the due date, and the answers will be walked through in class. The final assessment is worth 60% of the overall mark. The midterm will cover the first two topics. The final will be <em>cumulative</em>, meaning that you’ll be expected to know how to tidy and visualize by then.</p>
 <p>In addition to the timetabled lectures, there may be pre-recorded videos to help explain or discuss specific components of the reading. All lectures will be delivered live online.</p>
 <p>The labs are intended as time for <em>peer teaching and learning</em>, so fostering a sense of community is critical for the module.</p>
 </div>
@@ -502,23 +513,24 @@ if (window.hljs) {
 <p>Readings are listed in the <a href="#schedule">schedule</a>. Please attempt the reading each week before the timetabled lecture. In some weeks, there may also be a short recorded lecture to clarify the reading. Readings for the module will be drawn primarily from three sources.</p>
 <ul>
 <li><a href="https://r4ds.had.co.nz/" target="_blank">R4DS</a>, <code>R</code> for data science, by Garrett Grolemund &amp; Hadley Wickham. This source is free to all and publically available.</li>
-<li><a href="http://www.stat.columbia.edu/~gelman/arm/" target="_blank">ARM</a>, Data Analysis using Regression and Multilevel/Hierarchical Models, by Andrew Gelman and Jennifer Hill. This source is not free/public, but <a href="https://www.ole.bris.ac.uk/bbcswebdav/pid-4694315-dt-content-rid-16525938_2/courses/GEOG30021_2020_TB-1/gelman-hill_2006.pdf">is available on Blackboard through the university library</a>.</li>
-<li><a href="https://www.statlearning.com" target="_blank">ISL</a>, Introduction to Statistical Learning, by Gareth James et al. It is available as a <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">PDF from the author’s website</a>.</li>
+<li><a href="https://clauswilke.com/dataviz/index.html">FDV</a> Fundamentals of data visualization, by Claus Wilke. Will generally be useful in this module as a reference for plotting and example of first-class visualization style. The book itself has no code, but you can refer to the R Markdowns used to build the book on the <a href="https://github.com/clauswilke/dataviz">GitHub page</a> by clicking the Rmd file.</li>
+<li><a href="https://www.statlearning.com" target="_blank">ISL</a>, Introduction to Statistical Learning, by Gareth James et al. It is available as a <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">PDF from the author’s website</a>. This book is the best simple introduction to data science concepts out there.</li>
+<li><a href="https://xcelab.net/rm/statistical-rethinking/">SR</a> is an introduction to theory-driven statistical modeling. It’s the single-best book (I think) to learn about how cutting edge contemporary statisticians think about doing statistical analyses. It is slightly too advanced for this course, but simple excerpts may be recommended from time to time.</li>
 </ul>
-<p>Often, ISL and ARM contain very different developments of the same material. Broadly speaking, this arises from the fact that ISL is written from a “machine learning” perspective and “ARM” is written from a “statistical” perspective. I have marked where “alternative” readings can be used to understand or cover the topic from a different perspective. You do not have to read both sources.</p>
-<p>A short diagnostic quiz to check your background knowledge is <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=MH_ksn3NTkql2rGM8aQVGyT1QLl52bVEvY-gb7G8kvlUN1ROTTBQNThYUDBTM0ozUVVVTVRIQkdYSS4u" target="_blank">here</a>. You can take it as many times as you like. Your responses are anonymous, and will not be connected to your grade in any way. A short refresher module may be useful for students who would like to consolidate their knowledge of linear regression. The best coverage I know of is Chapter 3.1-3.4 of ISL, skipping the section on K-nearest neighbor regression in Chapter 3.5. If you want this refresher, try to both read the text and run the code at the end of the chapter.</p>
+<p>Often, ISL and SR contain very different developments of the same material. Broadly speaking, this arises from the fact that ISL is written from a “machine learning” perspective and “SR” is written from a “statistical” perspective. After the schedule, I discuss where “alternative” readings can be used to understand or cover the topic from a different perspective. You <em>do not</em> have to read both sources.</p>
 <p>For reference, other good books to review and consolidate your programming and computation knowledge include:</p>
 <ul>
 <li><a href="https://geocompr.robinlovelace.net/" target="_blank">GR</a>, Geocomputation in <code>R</code>, by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow. This is free to all and publicly available.</li>
 <li><a href="http://adv-r.had.co.nz/" target="_blank">AR</a>, Advanced R, by Hadley Wickham. This is free to all and publicly available. Will not generally be useful in this module, but good to know about if needed.</li>
-<li><a href="https://clauswilke.com/dataviz/index.html">FDA</a> Fundamentals of data visualization, by Claus Wilke. Will generally be useful in this module as a reference for plotting and example of first-class visualization style.</li>
+<li><a href="http://www.stat.columbia.edu/~gelman/arm/" target="_blank">ARM</a>, Data Analysis using Regression and Multilevel/Hierarchical Models, by Andrew Gelman and Jennifer Hill. This source is not free/public, but <a href="https://www.ole.bris.ac.uk/bbcswebdav/pid-4694315-dt-content-rid-16525938_2/courses/GEOG30021_2020_TB-1/gelman-hill_2006.pdf">is available on Blackboard through the university library</a>.</li>
 </ul>
 </div>
 <div id="schedule" class="section level2">
 <h2>Schedule</h2>
 <p>Lectures are held synchronously on Zoom at 5PM Mondays local time.</p>
 <p>One lab practical is held each week on Tuesday at 9AM local time.</p>
-<p>I appreciate that this does not leave much time for consolidating your knowledge from lecture. So, <strong>do the reading before the lecture</strong>, and be proactive in booking appointments in my <a href="https://calendly.com/ljwolf">Monday Afternoon Office Hours</a>. Don’t ask, just book.</p>
+<p>I appreciate that this does not leave much time for consolidating your knowledge from lecture. So, <em>do the reading before the lecture</em>, and be proactive in scheduling appointments in my <a href="https://calendly.com/ljwolf">Monday Afternoon Office Hours</a>.</p>
+<p>Don’t ask, just book.</p>
 <table>
 <thead>
 <tr>
@@ -568,7 +580,7 @@ Tidy
 A vocabulary for data shaping
 </td>
 <td style="text-align:left;">
-R4DS <a href="https://r4ds.had.co.nz/tidy-data.html#pivoting">Ch. 12.3-4</a>, <a href="https://r4ds.had.co.nz/transform.html" target="_blank">5</a>
+R4DS <a href="https://r4ds.had.co.nz/transform.html" target="_blank">5</a>, <a href="https://r4ds.had.co.nz/tidy-data.html#pivoting">12.3-4</a>
 </td>
 <td style="text-align:right;">
 <a href="t2.html">T2</a>
@@ -585,10 +597,10 @@ Viz
 On the Grammar of Graphics
 </td>
 <td style="text-align:left;">
-<a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Paper</a>
+FDA <a href="https://clauswilke.com/dataviz/index.html">1-4</a>
 </td>
 <td style="text-align:right;">
-<a href="https://r4ds.had.co.nz/data-visualisation.html">V1a</a> (<a href="https://r4ds.had.co.nz/graphics-for-communication.html">V1b</a>)
+<a href="https://r4ds.had.co.nz/data-visualisation.html">V1</a>
 </td>
 </tr>
 <tr>
@@ -599,13 +611,13 @@ Viz
 25 October
 </td>
 <td style="text-align:left;width: 17em; ">
-A Taxonomy of Plots
+A taxonomy of plots
 </td>
 <td style="text-align:left;">
-<a href="https://www.data-to-viz.com/#portfolio">Data to Viz</a>
+FDA <a href="https://www.data-to-viz.com/#portfolio">5,9,12,14</a>
 </td>
 <td style="text-align:right;">
-<a href="v2.html">V2</a>
+<a href="https://r4ds.had.co.nz/graphics-for-communication.html">V2</a>
 </td>
 </tr>
 <tr>
@@ -619,7 +631,7 @@ Reg I
 Theory of Statistical Learning
 </td>
 <td style="text-align:left;">
-ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">2</a>
+ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">2.1</a>; SR <a href="https://www.ole.bris.ac.uk/bbcswebdav/pid-6131350-dt-content-rid-22748564_2/xid-22748564_2">1.1-2</a>
 </td>
 <td style="text-align:right;">
 <a href="r11.html">R1.1</a>
@@ -633,10 +645,10 @@ Reg I
 8 November
 </td>
 <td style="text-align:left;width: 17em; ">
-Regression as a Distributional Model
+Regression as a supervised learning task
 </td>
 <td style="text-align:left;">
-ARM 2.1-2, 3.1-3.4
+ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">3.1-2</a>
 </td>
 <td style="text-align:right;">
 <a href="r12.html">R1.2</a>
@@ -650,10 +662,10 @@ Reg II
 15 November
 </td>
 <td style="text-align:left;width: 17em; ">
-Going Beyond The Normal Model
+One task, many solutions
 </td>
 <td style="text-align:left;">
-ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">4.1-3</a>
+ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">3.3-5</a>
 </td>
 <td style="text-align:right;">
 <a href="r21.html">R2.1</a>
@@ -667,10 +679,10 @@ Reg II
 22 November
 </td>
 <td style="text-align:left;width: 17em; ">
-Putting Models in your Models
+Moving beyond the normal task
 </td>
 <td style="text-align:left;">
-ARM 11-12.5
+ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf" target="_blank">4.1-3</a>
 </td>
 <td style="text-align:right;">
 <a href="r22.html">R2.2</a>
@@ -678,30 +690,30 @@ ARM 11-12.5
 </tr>
 <tr>
 <td style="text-align:left;">
-Topic
+Reg II
 </td>
 <td style="text-align:right;">
 29 November
 </td>
 <td style="text-align:left;width: 17em; ">
-A Little Unsupervised Fun
+Justifying your conclusions
 </td>
 <td style="text-align:left;">
-ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf">12.1, 12.2, 12.4</a>
+ISL <a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf">12.1-2, 4</a>
 </td>
 <td style="text-align:right;">
-<a href="s.html">S</a>
+<a href="r23.html">R2.3</a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Close
+Topic
 </td>
 <td style="text-align:right;">
 6 December
 </td>
 <td style="text-align:left;width: 17em; ">
-Review and Consolidation
+Student Choice!
 </td>
 <td style="text-align:left;">
 </td>
@@ -716,18 +728,18 @@ Close
 13 December
 </td>
 <td style="text-align:left;width: 17em; ">
-No Lecture
+Review and Consolidation
 </td>
 <td style="text-align:left;">
 </td>
 <td style="text-align:right;">
-Final
+Mock Final
 </td>
 </tr>
 </tbody>
 </table>
 <p><em>NOTE: abbreviations used in the table are covered in the <a href="#reading">reading</a> section of this document.</em></p>
-<p>For blocks 2 and 3, you can get additional reading by consulting the chapters in the <em>other</em> source. For example, ISL 3.1-4 provides quite a different overview of linear regression than the ARM reading in block 2. And, ARM 5.1-2, 6.1-2 provides a “classical” statistical perspective on <em>generalized linear models</em>, which you may find easier to consult. Try the recommended reading first, and then swap to the other main book’s treatment if you prefer</p>
+<p>SR’s chapter on linear regression covers similar material to ISL, but focuses on the statistical perspective. This means the two are very different: whereas ISL provides a more “classical” presentation of regression for applied settings, SR focuses on explaining the conceptual basis for regression, working from the basic <em>distributional theory</em> of regression up to regression itself. SR’s chapter 5 is, again, similar to ISL 3.3-3.5 but with much greater philosophical and conceptual depth. Equivalents of ISL 4.1-3 exist in SR 9.2, but the level of sophistication may be again more statistical than desired. SR 6 again is an analogue of ISL 12, but they approach the treatment from <em>very</em> different perspectives.</p>
 <hr />
 </div>
 

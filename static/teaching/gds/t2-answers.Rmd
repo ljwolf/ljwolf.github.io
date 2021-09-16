@@ -1,0 +1,159 @@
+---
+title: "Sculpting Data for Fun and Profit"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+
+# The Answers...
+
+```{r message=F}
+library(tidyverse) # for tidy tools and reshaping methods
+library(sf) # for working with spatial data
+library(ggplot2) # for plotting
+weca = st_read('../data/weca.gpkg', quiet=T)
+knitr::kable(head(st_drop_geometry(weca))[,c(4,5,6,7)])
+```
+
+
+## 1. Taking a first look at the data
+
+### 1.1
+
+The following dataset of temperatures from the Filton weather station has a different tidiness problem. Which problem is it, and how can you tell?  
+```{r results=F, message=F}
+library(readr)
+temps = read_csv("../data/bristol_yearly_temps.csv")
+temps
+```
+```{r echo=F}
+knitr::kable(tail(temps, 9))
+```
+
+*This temperature data is too long. It mixes information about different kinds of statistics in the* `stat` *column, and therefore contains many different kinds of temperatures in the* `degrees_celsius` *column. This is Wickham's second problem: multiple variables are stored in a single column; the maximum, minimum, and median temperatures are all stored within the* `degrees_celsius` *column.*
+
+### 1.2
+
+How would you tidy the data & compute the range of temperatures for each year?
+
+*To resolve this issue, we need to* `spread`*, or* `pivot_wider`, *the data to split the `stat` column into three variables.*
+
+```{r results=F}
+temps_wide = pivot_wider(temps, 
+            id_cols=year, # this uniquely identifies each row
+            names_from=stat, # this contains the "names" of our variables
+            values_from=degrees_celsius # this contains the values of our variables
+            ) 
+temps_wide %>% mutate(range = maximum - minimum)
+```
+```{r echo=F}
+knitr::kable(tail(temps_wide %>% mutate(range = maximum - minimum)))
+```
+
+*An alternative approach to compute the temperature range might filter the* `temps` *data. This is more complicated, even though it provides the right result. This is because the actual "pivot" occurs manually: you select the maximum and minimum values individually using the* `filter` *and* `select` *verbs. This only works because you know the columns that will be needed for the range, and that number of columns is relatively small. If the spread were more complicated, or involved more variables, this would entail significant copying & pasting.*
+
+```{r, results=F}
+maxes = temps %>% filter(stat == 'maximum') %>% # get the maximum column
+                     select(-stat) %>% # drop the stat column, just keep year & value
+                     rename(maximum = degrees_celsius) # rename the degrees to maximum
+mins = temps %>% filter(stat=='minimum') %>% 
+                 select(-stat) %>% # drop the stat column, as before
+                 rename(minimum = degrees_celsius) # rename the degrees to minimum
+join = merge(maxes, mins, by='year') # join the minima and maxima by years
+join %>% mutate(range = maximum - minimum) # compute the range
+```
+```{r echo=F}
+knitr::kable(tail(join %>% mutate(range = maximum - minimum)))
+```
+
+### 1.3
+
+The `weca` data has one of these issues. Which one does it have, and how can you tell? 
+
+*The* `weca` *data is too wide. It mixes information about the quarter/year in with the information about price. This means that the data has Wickham's first problem: column headers are values, not variable names. In theory, lsoa, la, price, quarter, and year are distinct variables that each encode a distinct bit of information about the observation. Further, this means that the "tidy" version of this data contains a single row for the price of a single LSOA in a single quarter in a single year. The data needs to be "melted" to become tidy, which will be completed in the next step. *
+
+## 2. Tidying Data
+
+## 2.1
+It will be helpful to have tidy data for some analyses in the remainder of the exercise. Use a pivot to transform the data to make each row measure the price of an LSOA in a specific month & year
+
+```{r message=F, warning=F}
+wecatidy = pivot_longer(weca, price_dec_1995:price_dec_2018, names_to=c(NA, 'quarter', 'year'), names_sep='_', values_to='price')
+```
+```{r echo=F}
+knitr::kable(head(wecatidy))
+```
+
+### 2.2
+
+Using your new tidy data, use `ggplot2` to make a boxplot where the horizontal axis is years, the vertical axis is price, and boxes are colored by local authority.
+
+```{r, fig.fullwidth=T, fig.width=8, fig.height=4}
+ggplot(wecatidy, aes(x=year, y=price, color=la_name)) + geom_boxplot() + theme(axis.text.x = element_text(angle=45, vjust=1, hjust=1))
+```
+
+### 2.3
+Using tidy verbs such as `group_by`, `select`, `mutate`, and `merge`, can you:
+
+- compute the average price for each year?
+*This can be done using a group by + summarize*
+```{r results=F, message=F}
+wecatidy %>% group_by(year) %>% summarize(mean_price = mean(price, na.rm=T))
+```
+```{r echo=F, message=F}
+knitr::kable(head(wecatidy %>% group_by(year) %>% summarize(mean_price = mean(price, na.rm=T))
+))
+```
+
+- compute the average price in each local authority each year?
+*This can be done using a group by + summarize. Note that there are now __two levels__ which we need to capture: the year and the local authority. Summarize operates on each group in sequence, from right to left. Thus, if we `groupby(year, la_name)`, then the summary is built first for `la_name`, then `year`, if requested:*
+```{r results=F, message=F}
+wecatidy %>% group_by(year, la_name) %>% 
+  summarize(mean_price = mean(price, na.rm=T))
+```
+```{r echo=F, message=F}
+knitr::kable(head(wecatidy %>% group_by(year, la_name) %>% 
+  summarize(mean_price = mean(price, na.rm=T))))
+```
+- Compute the median price for each LSOA since 2008?
+*this is slightly more complex, requiring a filter operation, and the recognition that you can groupby(lsoa_code), just like any other group.*
+```{r results=F, message=F}
+wecatidy %>% filter(year >= 2008) %>% 
+  group_by(lsoa_code) %>% summarize(price = median(price))
+```
+```{r echo=F, message=F}
+knitr::kable(head(wecatidy %>% filter(year >= 2008) %>% 
+  group_by(lsoa_code) %>% summarize(price = median(price))))
+```
+- **Challenge: make a map of the *percentage change* in price from 2008 til now in each LSOA?**
+*This requires the hint information, plus everything we've done before. *
+```{r results=F, message=F}
+library(rcartocolor)
+price_changes = wecatidy %>% filter(year >= 2008) %>% # 
+                             group_by(lsoa_code, year) %>% 
+                             summarize(price = median(price, na.rm=T)) %>%
+                             arrange(year) %>%
+                             summarize(pct_change = (last(price) - first(price))/first(price)*100)
+price_changes = merge(weca[c('lsoa_code', 'geom')], price_changes, by='lsoa_code')
+```
+
+The price change table now looks like this:
+```{r echo=F}
+knitr::kable(head(price_changes))
+```
+
+And, we can make a map using either continuous:
+```{r}
+price_changes %>%
+ggplot(., aes(fill=pct_change)) + 
+  geom_sf(lwd=.1) + 
+  scale_fill_carto_c('% Change in Price', palette='Sunset', direction=-1)
+```
+
+or discrete map classification methods, which emphasizes the visual differences. 
+```{r}
+price_changes %>% mutate(map_class = cut(pct_change, quantile(pct_change, probs=seq(0,1,.2)))) %>%
+ggplot(., aes(fill=map_class)) + 
+  geom_sf(lwd=.1) + 
+  scale_fill_carto_d('% Change in Price', palette='Sunset', direction=-1)
+```

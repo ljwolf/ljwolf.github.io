@@ -1,0 +1,216 @@
+---
+title: "Intro to tidy data"
+output: 
+  tufte::tufte_html: default
+    
+---
+
+# Tidying Examples
+
+```{r}
+library(tidyverse)
+```
+
+## Are temperatures rising? 
+
+```{r message=F}
+temps = read_csv('../data/bristol_temps.csv')
+knitr::kable(head(temps))
+```
+
+This data is messy. The values are temperatures in a month, in a year. So, we should have a column for month and a column for year. Yet, we have months on the columns and years on the rows. That means the data *is not tidy*. Tidy data might look something like this: 
+
+```{r echo=F}
+knitr::kable(head(temps %>% pivot_longer(jan:dec, names_to='month', values_to='temperature'), 12))
+```
+
+But, who cares? I can use the `rowMeans` function to get the average temperature in each year. That answers my question:
+
+```{r fig.width=8, fig.height=4}
+plot(temps$year, rowMeans(temps[ , -1]))
+```
+
+But... if we want something that's not the mean? We have `rowSums`, but no `rowSds`, `rowMedians`, basically anything else. However, if we had *tidy* data, we would not have to rely on special functions like `rowMeans`.  So, let's do something better. 
+
+The data currently has a variable (`month`) in its columns. Focusing on the *values* as we discussed above, there are only three variables: `year`, `month`, and `temperature`. If the data were tidy, then these would be the only columns. 
+
+To make data longer, we use the `pivot_longer` function:
+
+```{r}
+temps %>% pivot_longer(jan:dec)
+```
+
+This is *almost* our tidy example from above, except the column names are wrong. We can re-name the columns inside of the `pivot_longer` call:
+
+```{r}
+long_temps = temps %>% pivot_longer(jan:dec, names_to='month', values_to='temp')
+knitr::kable(head(long_temps))
+```
+
+Together, this gives us what we need to replicate the `rowMeans` solution in a tidy fashion. This would involve computing the average temperature in each year in this long data.
+That is, we need to *group* the data *by* a specific column, and then *summarize* the values within each group. 
+
+We can do that with `group_by` and `summarize`. `group_by` is an operation that collects together sets of rows based on a common value. Then, we typically use the `summarize()` function (or `summarise`) to transform the values in each group according to some rule. Here, we use the standard `R` `mean` function to get the mean of the temperatures in each group. This gives us a similar result to the `rowMeans` above.
+
+
+```{r}
+long_temps %>% group_by(year) %>% summarize(mean_temp = mean(temp))
+```
+We can plot this in the same way, or use `ggplot2` to make a plot that's a little more pretty:
+
+```{r}
+long_temps %>%
+          group_by(year) %>% # make the groups for each year
+          summarize(temp = mean(temp)) %>% # get the average temperature
+      ggplot(aes(x=year, y=temp)) + # plot the result
+        geom_point() + 
+        geom_line() + 
+        geom_smooth()
+```
+
+Alternatively, with the tidy data already, we can plot the values by year in quite a few ways. Just as a bunch of dots in each year:
+
+```{r}
+ggplot(long_temps, aes(x=year, y=temp)) + geom_point() + geom_smooth()
+```
+
+or as a set of boxplots in each year:
+
+```{r}
+ggplot(long_temps, aes(x=year, group=year, y=temp)) + geom_boxplot()
+```
+
+## What's the climate curve for Bristol?
+
+A *climate curve* shows the range of temperatures a place experiences every month. It's kind of a standard summary of the climate of a place, and basically [every Wikipedia page on a place a version of one](https://en.wikipedia.org/wiki/Bristol#Climate). For this, we would need to get a summary of the typical temperature per month and plot *that*. 
+
+There are a few ways this could get done using the tidy data, but doing this with the standard data would be very verbose. 
+
+First, we could use the `group` option in `ggplot`:
+
+```{r}
+ggplot(long_temps, aes(x=month, y=temp, group=year)) + geom_line()
+```
+
+But that doesn't look quite right: it's sorting the months in alphabetical order, not calendar order. We can force this order, though, by making the months an *ordered factor*, which is like a categorical variable with a set ordering. This is very simple to do, and requires us to first get the order of the factors. I'll do this by taking them from our original un-tidy dataframe: 
+
+```{r}
+month_order = colnames(select(temps, -year))
+```
+
+and the using `ordered` to force the months into an ordered categorical variable: 
+```{r}
+long_temps['month'] = ordered(long_temps$month, levels=month_order)
+```
+
+Finally we can make our plot: 
+```{r}
+long_temps %>% ggplot(aes(x=month, y=temp, group=year)) +
+              geom_line(alpha=.1) + 
+              geom_smooth(color='orangered', se=F, aes(group=NA))
+```
+
+## What's the relationship beteen Phosphate and Salinity?
+
+This data contains information on sample sites in the ocean. It provides measures of nutrients, as well as information on the prevalence of species of phytoplankton. 
+
+```{r message=F}
+species = read_csv('../data/species.csv')
+knitr::kable(head(species))
+```
+
+For this specific question, the data is actually tidy! the values for, say, the `Salinity` or `Phosphate` column represent the salinity of a specific sample site in the ocean. If we want to ask questions about the relationship between those *variables* for each of those *observations*, then the data is tidy enough:
+
+```{r}
+species %>% ggplot(aes(x=Phosphate, y=Salinity)) + geom_point()
+```
+
+## What's the species distribution?
+
+However, an enterprising student will notice: the species/genera prevalence columns are not tidy! Each Genus is denoted by the first letter in the species name. So, the values in the column called `E. Huxleyi` __actually__ reflects the *prevalence* (in organisms per volume) of the organism `E. Huxleyi`. Further, that column name __actually__ mixes the genera & species name together! So, asking questions about the relationship between species and genera, or the co-occurence of genera/species has to tidy this data a bit. 
+
+To split the data up again, we can use `pivot_longer` again in the same way we did before: 
+```{r}
+species_long = species %>% pivot_longer(`A. robusta`:`S. florida`, names_to=c("Genus", "Species"), names_sep='. ', values_to='prevalence')
+```
+
+But, note now that we've *duplicated* tons of measurements of the other rows! This automatically demonstrates why it's sometimes not economical to input data in a tidy format... it often involves a lot of repetition! Now, though, we can look at the distributions of species/genera in our data, since each value of the `prevalence` column is a single observation of the prevalence of a single organism. 
+
+```{r}
+species_long %>%
+  ggplot(aes(x=Genus, y=prevalence, color=Species)) + geom_boxplot() + 
+  scale_y_continuous(trans='log10') + annotation_logticks(sides='l') + ylab("Prevalence (log10)")
+```
+
+# Lecture Notes
+Be patient!
+<!---
+[Tidy Cheat Sheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+```{r}
+# read in data
+sites = read_csv('../data/species.csv')
+temps = read_csv('../data/bristol_temps.csv')
+# pivot longer
+
+long_temps = temps %>% pivot_longer(jan:dec, names_to='month', 
+                                    values_to='temperature')
+species = sites %>% pivot_longer(`A. robusta`:`S. florida`,
+                                  values_to='prevalence', 
+                                  names_to='species_name')
+
+# go back (broken)
+species %>% pivot_wider(names_from = 'species_name', values_from='prevalence')
+
+# go back (reducing duplicates)
+species %>% pivot_wider(names_from = 'species_name', values_from='prevalence', values_fn=mean)
+
+# show how separate/unite work
+species = species %>% separate(species_name, c('genus', 'species'), sep='. ')
+species %>% unite('organism', genus, species, sep='. ')
+
+# 
+species 
+
+# useful group_bys
+species %>% group_by(Date, genus) %>% 
+  summarize(prevalence = sum(prevalence), 
+            n_species_seen = sum(prevalence > 0), 
+            n_species = n())
+
+species %>% group_by(Date, genus) %>% 
+  summarize(prevalence = sum(prevalence), 
+            n_species_seen = sum(prevalence > 0), 
+            n_species = n()) %>%
+  summarize(prevalence = sum(prevalence))
+```
+--->
+
+# All the functions you may want:
+
+- `pivot_wider()`: take rows and convert them into columns
+- `pivot_longer()`: take columns and convert them into rows
+- `group_by(group_name) %>% summarize(group_summary = ..., group_summary2=...)`: split the dataframe into groups based on the unique values of `group_name` & summarize those groups using one (or more) functions
+  - `count()/n()`: count the number of observations in the group
+  - `first(variable)`: get the first value of `variable` in the group
+  - `last(variable)`: get the last value of `variable` in the group
+  - `n_distinct(variable)`: get the number of unique values of `variable` in the group. Gives the number of unqiue *rows* if `variable` is omitted. 
+- `filter()`: subset the data by rows according to some condition(s)
+  - `between(variable, lower, higher)`: is `TRUE` for rows where the value of `variable` is at least as large as `lower` and at most as large as `higher`. 
+  - `distinct(variable)`: is `TRUE` for rows when the value for that row not yet been seen (going from the first row to the last row)
+- `select()`: subset the data by columns according to some condition(s)
+  - `contains(variable,value)`: is `TRUE` for rows where `variable` is a string that contains `value`. See `??tidy_select` for more.
+- `mutate(new_variable = do_something(old_variable))`: add a `new_variable` to the data that is computed using an `old_variable` of the dataframe
+  - `transmute(new_variable = do_something(old_variable))`:  same as mutate, but only `new_variable` is returned
+  - `rename(new_name = old_name)`: rename the `old_name` column to be called `new_name` 
+- `separate(variable, sep="_")/unite(variable1, variable2, sep="_")`: split (or join) a column into new columns based on a separator, `sep`
+  - `separate_rows(variable, sep=':')`: split a column into *rows*, where each new row is a copy of the original, but now its value of `variable` has been split according to `sep`
+- `arrange(variable)`: sort the dataframe based on increasing values of `variable` (i.e. sort is ascending)
+  - `arrange(desc(variable))` sort the dataframe based on *decreasing* values of `variable`
+- joins: merge dataframes based on set theory
+  - `left/right/inner/full_join()` 
+  - `semi/anti_join`
+- `expand_grid(a, b, c)`: make a new dataframe out of all the combinations of values in `a`, `b`, and `c`
+  - `seq(start, stop, step)`: make a sequence from the `start` to the `stop` with a step size of `step`
+  - `rep(vector, number)`: repeat the `vector` 
+

@@ -1,0 +1,11 @@
+<details>
+  <summary style="solid #ccc;padding:5px;">
+    {{ with .Get 0}}{{.}}
+    {{else}}Click to expand{{ end }}
+  </summary>
+  </br>
+  {{ .Inner | markdownify }}
+  </br>
+  </br>
+
+</details>
