@@ -1,0 +1,104 @@
+---
+title: 'Regression as a supervised learning task'
+author: "Levi John Wolf"
+output:
+  tufte::tufte_html: default 
+---
+
+So far in your time at Bristol, you've mainly focused on linear models. That is, we've mainly focused on models that look like this:
+$$ y_i = \alpha + x_{1i}\beta_1 + x_{2i}\beta + ... + e_i$$
+where we assume that the error $e_i$ is normally-distributed with a mean of zero and a variance that is constant for all the observations. You've looked at this model to investigate things like *bias* (when your errors are *not* zero, on average) and heteroskedasticity (when your errors are *not* distributed with a common variance, some observations seem to be noisier than others); you've used it to predict many different kinds of things. 
+
+# Thinking distributionally
+
+But, let's stop and think critically about what this represents in terms of *probability*, not *statistics*.^[My single biggest goal in this course is to get you thinking in terms of guesses and predictions... from statistics to [*statistical thinking*](https://doi.org/10.1080/10691898.2002.11910677), this is one of the most difficult parts of stats, [even for statisticians](https://doi.org/10.1080/00031305.2018.1518264)!] A regression model is a kind of *distributional model* that describes how our *expectation* of what value some outcome $y$ will take. This *expectation*, spelled $\mathbf{E}[y]$, is just a guess about what we think $y$ will be. 
+
+## The way you've already learned to build guesses
+So, clearly, we want to guess well; if the "expected value" is our guess for what $y_i$ will be, what's our **best** guess for $y_i$? Well... it depends on how we build our guesses. For example, consider the data on waiting times from order to pint at local bars for a student thirsty Thursday event:
+```{r echo=F, warning=F, message=F}
+library(tidyverse)
+times = read_csv('../data/waiting_times.csv')
+knitr::kable(times[c('pub','waiting')], digits=2)
+```
+Just eyeballing it, about how long do folks wait for a pint? 
+```{r}
+model_1 = lm(waiting ~ 1, data=times)
+summary(model_1)
+```
+About 4 minutes, or 3.7 minutes to be precise. That means $\mathbf{E}[y] = 3.7$. Further, you can see that the residual standard deviation, the $\sigma$ for $e_i$, is 3.92.^[Check that this is *exactly the same* as the `sd(times$waiting)` if you like]. This is because our simple linear model is:
+$$ waiting_i = 3.7 + e_i$$
+which is just another way to spell a *distributional model* for your wait times: they're bell-shaped and typically about 4 minutes:
+$$ \text{waiting}_i \sim \mathcal{N}(3.7, 3.92^2)$$
+Now; this can be a *good* model, or it can be a *bad* model; it's just one of many. We can see that the *average* prediction miss of this model is (basically) zero^[remember, scientific notation means `r mean(residuals(model_1))` has sixteen zeros to the right of the decimal before hitting that first 6, so it's `.00000000000000006`], since regression is an *unbiased* predictor:
+```{r}
+mean(residuals(model_1))
+```
+But, just eyeballing the data, it looks like if we guess that our wait is always $3.7$ minutes, we'll be *really* wrong in the Milk Thistle, and possibly the Berkeley. This means that, while regression is unbiased *on average*, regression is usually not *unbiased for everyone*.^[This is one technical manifestation of the *extremely* complex problem of algorithmic bias, where our statistical/analytical algorithms generate predictions that systematically mis-predict groups despite being "unbiased" on average.] You can see this yourself by looking at the average prediction error *within* pubs:
+```{r}
+times %>% mutate(residual = residuals(model_1)) %>% group_by(pub) %>% summarize(mean(residual))
+```
+Our guess of 3.7 minutes overall is a big overestimate in the Gallimaufrey^[a negative residual means the prediction is too high.], a big underestimate in the Milk Thistle, and is a slight underestimate for the wait times at the Berkeley. Likewise, we could see if our predictions are different for, say, what kind of drink is ordered:
+```{r}
+times %>% mutate(residual = residuals(model_1)) %>% group_by(drinktype) %>% summarize(mean(residual))
+```
+Which suggests you'll wait a bit longer than our guess for a cocktail and a bit shorter for a beer. 
+
+## Building a better model
+
+So, we see some specific ways our model is flawed. An *improvement* to this guess might consider more information, in order to remove these kinds of biases. Keeping us in the language of "guessing," you likely would not assume that your wait time for service at a very busy nightclub would be the same as the wait time at a sleepy local tavern. They're different, and your guess will probably be different for those different groups. 
+
+So, we can make a guess based on the pub someone waited in. If we were to just think about the waiting times *for that pub*, we might have better predictions:
+
+```{r}
+model_2 = lm(waiting ~ 0 + pub, data=times)
+summary(model_2)
+```
+In *this* model, our best guess for the waiting time is *the same as* the average waiting time in your pub:
+```{r}
+times %>% group_by(pub) %>% summarize(mean(waiting))
+```
+This shows you that $\mathbf{E}[y]$, our best guess about what $y$ will be, is not necessarily going to be the same as $\mathbf{E}[y|X]$, our best guess about what $y$ will be *knowing* $X$.^[Or, $\mathbf{E}[\text{wait time}] \neq \mathbf{E}[\text{wait time} | 
+\text{pub}]$] 
+
+For a statement of our model, we could write:
+$$ y_i|\text{pub you're in} \sim \begin{cases} \text{in Berkeley:} & \text{about 4.7 minutes} \\
+\text{in Gallimaufry:} & \text{about 1.4 minutes} \\
+\text{in Milk Thistle:} & \text{about 6.25 minutes}
+\end{cases}
+$$
+**Our best guess, absent any other information, is just the mean within each group. This is important.** Regression gives you the *expected value* of an outcome _given_ the data you've observed. And, since we want some idea of how certain these predictions are, we model how sure we are of this guess using some measure of the *variance* of that expected value. When we know extra information about $y$, we're modelling the **conditional expectation**, $\mathbf{E}[y | x]$. 
+
+You can see for yourself that this is the same for every pub using the `predict` function. This is a __critical__ function to use in order to treat your model as a *prediction engine*. To use it, you can get the predictions directly for the data on which you fitted:
+
+```{r}
+predict(model_2)
+```
+
+Or, you can build a *scenario* in which you're interested in making a prediction. This is a dataframe where each row has the values of $X$ to describe a unique situation. Here, our model just knows about pubs, so we can make a scenario where each row just includes the pub information:
+```{r}
+scenario = data.frame(pub=c("The Berkeley", "The Gallimaufry", "The Milk Thistle"))
+scenario %>% head() %>% knitr::kable()
+```
+
+and we can use this to predict *just* for that dataframe:
+```{r}
+predict(model_2, scenario)
+```
+
+Note that $y_i$ **may never be normally-distributed by itself** in this example, even though $e_i$ might... The Gallimaufrey's average waiting time is quite small and its standard error is about the same size as the estimate. If the waiting times at the Gallimaufrey were normal, we'd expect to see about half the distribution have a waiting time below 1.4 minutes, and we'd thus expect some waiting times to be be negative!
+
+# Lots of things can have conditional expectation
+
+What if we're trying to pick a venue for the next thirsty Thursday event, knowing that our impatient friend will only come if he's not forced to wait "too long" for a drink. He reveals that he's recorded whether he felt the wait was too long in a *new* variable:
+```{r echo=F}
+knitr::kable(times %>% select(-pub_number))
+```
+Now, how can we predict what waits will be "too long?" That is, how can we model $\mathbf{E}[y]$? Well... you could give a really bad/vague guess: your friend doesn't wait too long on average:
+```{r}
+sum(times$long_wait)/nrow(times)
+```
+That is $\mathbf{E}[y]$ when $y$ is binary: the percentage of time that $y=1$. For convenience, let's call that $\pi$. It just so happens this is *also* the mean of a binary variable:
+```{r}
+mean(times$long_wait)
+```
+which is spooky and also convenient.^[and based on the fact that the *expectation* is a fancy version of the weighted average!] We'll cover more on models that focus on this kind of binary outcome later, but the general structure always remains the same: we're coming up with a good way to guess $y$, using the information in $X$. This is $\mathbf{E}[y|X]$, regardless of whether $y$ is wait times, drink type, or an impatient friend's behavior.
