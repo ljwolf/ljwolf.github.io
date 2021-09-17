@@ -1,0 +1,12 @@
+---
+title: ""
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default---
+---
+Be patient please!
+
+<!--
+- multiple slopes (mlm or interaction)
+- local regression
+-->
