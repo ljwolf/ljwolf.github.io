@@ -5,96 +5,39 @@ output:
   tufte::tufte_html: default 
 ---
 
-So far in your time at Bristol, you've mainly focused on linear models. That is, we've mainly focused on models that look like this:
-$$ y_i = \alpha + x_{1i}\beta_1 + x_{2i}\beta + ... + e_i$$
-where we assume that the error $e_i$ is normally-distributed with a mean of zero and a variance that is constant for all the observations. You've looked at this model to investigate things like *bias* (when your errors are *not* zero, on average) and heteroskedasticity (when your errors are *not* distributed with a common variance, some observations seem to be noisier than others); you've used it to predict many different kinds of things. 
+## An impatient patron
 
-# Thinking distributionally
+Returning to our pub data from R11:
 
-But, let's stop and think critically about what this represents in terms of *probability*, not *statistics*.^[My single biggest goal in this course is to get you thinking in terms of guesses and predictions... from statistics to [*statistical thinking*](https://doi.org/10.1080/10691898.2002.11910677), this is one of the most difficult parts of stats, [even for statisticians](https://doi.org/10.1080/00031305.2018.1518264)!] A regression model is a kind of *distributional model* that describes how our *expectation* of what value some outcome $y$ will take. This *expectation*, spelled $\mathbf{E}[y]$, is just a guess about what we think $y$ will be. 
-
-## The way you've already learned to build guesses
-So, clearly, we want to guess well; if the "expected value" is our guess for what $y_i$ will be, what's our **best** guess for $y_i$? Well... it depends on how we build our guesses. For example, consider the data on waiting times from order to pint at local bars for a student thirsty Thursday event:
 ```{r echo=F, warning=F, message=F}
 library(tidyverse)
 times = read_csv('../data/waiting_times.csv')
-knitr::kable(times[c('pub','waiting')], digits=2)
-```
-Just eyeballing it, about how long do folks wait for a pint? 
-```{r}
-model_1 = lm(waiting ~ 1, data=times)
-summary(model_1)
-```
-About 4 minutes, or 3.7 minutes to be precise. That means $\mathbf{E}[y] = 3.7$. Further, you can see that the residual standard deviation, the $\sigma$ for $e_i$, is 3.92.^[Check that this is *exactly the same* as the `sd(times$waiting)` if you like]. This is because our simple linear model is:
-$$ waiting_i = 3.7 + e_i$$
-which is just another way to spell a *distributional model* for your wait times: they're bell-shaped and typically about 4 minutes:
-$$ \text{waiting}_i \sim \mathcal{N}(3.7, 3.92^2)$$
-Now; this can be a *good* model, or it can be a *bad* model; it's just one of many. We can see that the *average* prediction miss of this model is (basically) zero^[remember, scientific notation means that `r mean(residuals(model_1))` has sixteen zeros to the right of the decimal before hitting that first 6, so it's `.00000000000000006`], since regression is an *unbiased* predictor:
-```{r}
-mean(residuals(model_1))
+knitr::kable(times %>% select(-pub_number), digits=2)
 ```
 
-An *improvement* to this guess might consider which pub someone waited in. If we were to just think about the waiting times *for that pub*, we might have better predictions. 
+Let's say that we were trying to predict what your friend thought was a "long wait." Eyeballing the table above, it looks like the average wait time is different in different pubs, as we saw before. More to the point, though, is that long waits in The Gallimaufry might be short waits at Milk Thistle^[like, your friend thought a half-minute wait at the Galley was too long but a 2.5 minute wait at the Milk Thistle was OK. What a demanding patron!]: there's more than just waiting time or pub location, we need both to make this prediction correctly. The absolute length of the wait is only part of the picture. Your friend clearly values the ambiance of a place when deciding whether the wait is short or not, since a long wait at the Gallimaufry is much shorter than a short wait at the Milk Thistle!
 
-
-This can give us a *better* prediction:
-```{r}
-summary(lm(waiting ~ 0 + pub, data=times))
-```
-In *this* model, our best guess for your waiting time is the *average* waiting time in your pub:
-```{r}
-times %>% group_by(pub) %>% summarize(mean(waiting))
-```
-This means $\mathbf{E}[y]$ changes depending on the pub. We could write:
-$$ y_i|\text{pub you're in} \sim \begin{cases} \text{in Berkeley:} & \text{about 4.7 minutes} \\
-\text{in Gallimaufry:} & \text{about 1.4 minutes} \\
-\text{in Milk Thistle:} & \text{about 6.25 minutes}
-\end{cases}
-$$
-**Our best guess, absent any other information, is just the mean within each group. This is important.** Regression gives you the *expected value* of an outcome given the data you've observed.^[Note that $y_i$ **will likely never be normally-distributed by itself** in this example, even though $e_i$ might... The Galli's average waiting time is quite small and its standard deviation is about the same size. If the waiting time were normal, we'd need to see about half the distribution have a waiting time below 1.4 minutes, and some waiting times **must** be negative!] And, since we want some idea of how certain these predictions are, we model how sure we are of this guess using some measure of the *variance* of that expected value. When we know extra information about $y$, we're modelling the **conditional expectation**, $\mathbf{E}[y | x]$.  
-
-# Lots of things can have conditional expectation
-
-What if we're trying to pick a venue for the next thirsty Thursday event, knowing that our impatient friend will only come if he's going to wait "too long" for a drink. He reveals that he's recorded whether he felt the wait was too long in a *new* variable:
-```{r echo=F}
-set.seed(2478879)
-multiplier = ifelse(times$pub == "The Berkeley", 1,
-                    ifelse(times$pub == "The Milk Thistle", .8, 2))
-impatience = multiplier*times$waiting + multiplier*.5 + runif(nrow(times), 0 , 6)
-times['long_wait'] = impatience > 5
-times['drinktype'] = ifelse(impatience %% 2 > 1, "Cocktail", "Beer")
-knitr::kable(times %>% select(-pub_number))
-```
-Now, how can we predict what waits will be "too long?" That is, how can we model $\mathbf{E}[y]$? Well... you could give a really bad/vague guess: your friend doesn't wait too long on average:
-```{r}
-sum(times$long_wait)/nrow(times)
-```
-That is $\mathbf{E}[y]$ when $y$ is binary: the percentage of time that $y=1$. For convenience, let's call that $\pi$. It just so happens this is *also* the mean of a binary variable:
-```{r}
-mean(times$long_wait)
-```
-which is spooky and also convenient.^[and based on the fact that the *expectation* is a fancy version of the weighted average!]
-
-But, just eyeballing the table above, it looks like there are some issues. For example, the average wait time is different in different pubs, as we saw before. More to the point, though, is that long waits in The Gallimaufry might be short waits at Milk Thistle^[like, your friend thought a half-minute wait at the Galley was too long but a 2.5 minute wait at the Milk Thistle was OK. What a demanding patron!]: there's more than just waiting time or pub location, we need both. Absolute length of the wait is only part of the picture. Your friend clearly values the ambiance of a place when deciding whether the wait is short or not, since a long wait at the Gallimaufry is much shorter than a short wait at the Milk Thistle!
+You can see this in the table below. There, we split the data by pub & whether the wait was "long," and then look at the number of observations in each group. For example, your friend only had one short wait in the Berkeley, while they had 2 short waits in the Gallimaufry. Their two long waits in the Milk Thistle were for an average of 10 minutes, but their average long wait in the Berkeley was only about 5 minutes. Thus, you can see that your friend cares about the pub they're in.
 
 ```{r message=F}
 knitr::kable(times %>% group_by(pub, long_wait) %>% 
-               summarize(n_too_long = n(), mean_wait_time = mean(waiting)))
+               summarize(count = n(), mean_wait_time = mean(waiting)))
 ```
+## A simple approach for binary predictions 
 
-You could simply try predicting the probability using a linear model^[Technically, this model is called a *linear probability model*, since you are using a linear regression to predict probabilities for a binary outcome, but there's nothing inherently different about the model itself, only $y$.] to predict whether the wait was long based on the wait time and the pub: 
+You could simply try predicting the probability a wait was long using a linear model^[Technically, this model is called a *linear probability model*, since you are using a linear regression to predict probabilities for a binary outcome, but there's nothing inherently different about the model itself, only $y$.]. This puts your binary variable as the $y$, and can include any $X$ values as predictors: 
 ```{r fig.margin=T, warning=T}
 wait_model2 = lm(long_wait ~ 0 + pub + waiting, data=times)
 knitr::kable(broom::tidy(wait_model2))
 ```
-OK, this is *definitely* useful, since we can prove your friend definitely allows for longer waits at the Milk Thistle: the effect is negative, so the "baseline" probability of a long wait at the Milk Thistle is lower even *controlling for waiting time!*  Graphically, this model describes the following lines^[If you're surprised that there are *lines*, and not just one *line*, that's OK. It's the "next step" from our model of pub waiting times from above. This model is: $$y_i = \begin{cases} \text{if at berkeley:} & \alpha_b \\ \text{if at gallimaufry:} & \alpha_g \\ \text{if at milk thistle:} & \alpha_{m} \end{cases} + \text{wait time}*\beta + e_i$$ Each $\alpha$ is a different slope that's used to represent the *baseline wait* in that group, just like we used the average wait in the pub before. But, here, we also are using the actual wait time to improve our predictions.] of best fit:
+This model "sees" $y$ as a bunch of either zeros or ones, and tries to fit an line that passes through them. Graphically, this model describes the following lines^[If you're surprised that there are *lines*, and not just one *line*, that's OK. It's the "next step" from our model of pub waiting times from above. This model is: $$y_i = \begin{cases} \text{if at berkeley:} & \alpha_b \\ \text{if at gallimaufry:} & \alpha_g \\ \text{if at milk thistle:} & \alpha_{m} \end{cases} + \text{wait time}*\beta + e_i$$ Each $\alpha$ is a different slope that's used to represent the *baseline wait* in that group, just like we used the average wait in the pub before. But, here, we also are using the actual wait time to improve our predictions.] of best fit:
 ```{r echo=F, warning=F, message=F}
 ggplot(times, aes(x=waiting, y=as.numeric(long_wait), color=pub, group=pub)) + 
   geom_point() + 
   geom_line(aes(y=predict(wait_model2))) + 
   labs(x="Wait time (minutes)", y='Whether wait is "long"') + theme(legend.position='bottom')
 ```
-
+OK, this is *definitely* useful, since we can prove your friend definitely allows for longer waits at the Milk Thistle: the intercept for the Milk Thistle is *way* below the other two pubs, which suggests that the "baseline" probability of a long wait at the Milk Thistle is lower, even *controlling for waiting time!* For comparison, look at the plot:a wait of about 5 minutes has around a 40% chance of being a "too long" wait at the Milk Thistle, but has a nearly 90% chance if you're at the Berkeley, and is basically 100% for the Gallimaufry!
 
 ```{r fig.margin=T, warning=F, message=F, fig.width=3, fig.height=2, echo=F}
 times %>% mutate(resid = resid(wait_model2)) %>% 
@@ -104,9 +47,9 @@ ggplot(aes(x=resid)) + geom_rug(aes(color=long_wait)) +
   xlim(-1, 1) + theme(legend.position='bottom')
 ```
 
-Looking at those lines, you know that the residuals are going to have some odd structure: $y$ can only be zero (if the wait is not too long) or one (if the wait is too long). This means that the residual, usually $y - \hat{y}$, will instead be $0-p_i$ or $1 - p_i$, since $\hat{y}$ in this model is a "predicted probability that $y_i$ is one" ($p_i$), and $y_i$ is only ever zero or one. While it's possible for these residuals to be distributed normally in abstract, it's unlikely in practice. This is *not* what we want to see for linear regression, so we have to be *very* careful about interpreting this model. 
+This strategy, predicting a binary outcome just using a linear regression, has a few issues, however. First, look more closely at those lines: you know that the residuals are going to have some odd structure: $y$ can only be zero (if the wait is not too long) or one (if the wait is too long). This means that the residual, $y - \hat{y}$, will be $0-\hat{y}$ or $1 - \hat{y}$, since $y_i$ is only ever zero or one. While it's possible for these residuals to be distributed normally in abstract, it's unlikely in practice. This is *not* what we want to see for linear regression, so we have to be *very* careful about interpreting this model. 
 
-You can see that the predictions can go a little bit funky... If your friend waits for seven minutes at the Galli, there is a *probability greater than 1* that the wait will be too long:
+You can also see that the predictions can go a little bit funky... If your friend waits for seven minutes at the Galli, there is a *probability greater than 1* that the wait will be too long:
 
 ```{r}
 scenario = data.frame(pub='The Gallimaufry', waiting=7)
@@ -128,22 +71,35 @@ The Bernoulli distribution still has our nice property from before, where $\math
 
 So, we transform the probability using the *logit transformation*:
 $$logit(y_i) = \log\left(\frac{\pi_i}{1 - \pi_i}\right)$$
-Breaking this down, $\frac{\pi_i}{1 - \pi_i}$ is something called the *odds* of $y_i$ happening. You may have heard this before: if a horse has two-to-one (spelled: $2:1$) odds of winning a race, it means that the betters believe that it is 2 times more likely that the horse loses than that they win. A horse that has 15:1 odds is a very unlikely winner[^hence the saying "long odds" meaning that you have some incredibly-long-number to one chance of succeeding.]. 
-
-Mathematically, odds can vary between zero and infinity: when $\pi_i$ is very small, the odds the odds are very small (well below 1). In our example before, the horse with two-to-one odds has $\pi=.3\bar{3}$, since that value of $\pi$ is the only solution to $\frac{\pi_i}{1-\pi_i} = \frac{1}{2}$. Our horse with 15:1 odds has $\pi = 1/16$, since $\frac{\frac{1}{16}}{1 - \frac{1}{16}} = \frac{1}{15}$. This may seem indirect, but bear with me. 
+Breaking this down, $\frac{\pi_i}{1 - \pi_i}$ is something called the *odds* of $y_i$ happening. You may have heard this before: if a horse has two-to-one (spelled: $2:1$) odds of winning a race, it means that the betters believe that it is 2 times more likely that the horse loses than that they win. A horse that has 15:1 odds is a very unlikely winner^[hence the saying "long odds" meaning that you have some incredibly-long-number to one chance of succeeding.]. 
 
 ```{r echo=F, fig.margin=T, fig.width=3, fig.height=3}
 alog = round(log(1/100001), 3)
 blog = round(log(1/1001), 3)
 clog = round(log(1/3), 3)
 dlog = round(log(3), 3)
-qplot(x=seq(0,1,.01), y=log(seq(.0,1,.01)/(1 - seq(0,1,.01))), geom='line', xlab = 'Probability', ylab = 'Log Odds', )
+qplot(x=seq(0,1,.01), y=seq(.0,1,.01)/(1 - seq(0,1,.01)), geom='line', xlab = 'Probability', ylab = 'Odds', ) + geom_vline(aes(xintercept=1), lty=3) + ylim(0,5)
 ```
-Something very cool happens when we take the *logarithm* of an odds. When $p_i < .5$, the odds are between $0$ and $1$. When $p_i>.5$, the odds are between $1$ and infinity. The *logarithm* of the odds becomes *negative* when $p_i < .5$ and becomes *positive* when $p_i > .5$. This means that you get a kind of "S"-like curve that gets really steep when $p_i$ gets close to its boundary. This "stretches" the log odds space out as $p_i$ gets really small or really large; small changes in $p_i$ in this area create large changes in log odds. This is kind of intuitive: a change from a 100000:1 odds to 1000:1 odds still means the event is still extremely unlikely *and* the change the probability is not that large in absolute terms. But that's actually a *huge* change in terms of the log odds: they go from $\log(1/100001)=$`r alog` to $\log(1/1001)=$`r blog`... almost a halving of the log odds while the  *absolute change in probability* change is very small.^[ That's more than the change in log odds when moving from $p_i = .25$ to $p_i = .75$, which is about `r dlog - clog`!] In sum, this is a pretty good way to model how probabilities work: we want to magnify the changes that represent large *relative* changes, but we don't want to squash the relative changes that happen in the middle, for things that have around 1:1 odds. 
+Mathematically, odds can vary between zero and infinity: when $\pi_i$ is very small, the odds the odds are very small (well below 1). In our example before, the horse with two-to-one odds has $\pi=.3\bar{3}$, since that value of $\pi$ is the only solution to $\frac{\pi_i}{1-\pi_i} = \frac{1}{2}$. Our horse with 15:1 odds has $\pi = 1/16$, since $\frac{\frac{1}{16}}{1 - \frac{1}{16}} = \frac{1}{15}$. 
+
+
+This may seem indirect, but bear with me. On the right, you can see a plot of the odds versus the probability for those odds. You can see that the odds are below 1 for probabilities less than $.5$, and become increasingly large (indeed, going to infinity) as the probabilities approach 1. 
+
+```{r echo=F, fig.margin=T, fig.width=3, fig.height=3}
+alog = round(log(1/100001), 3)
+blog = round(log(1/1001), 3)
+clog = round(log(1/3), 3)
+dlog = round(log(3), 3)
+qplot(x=seq(0,1,.01), y=log(seq(.0,1,.01)/(1 - seq(0,1,.01))), geom='line', xlab = 'Probability', ylab = 'Log Odds', ) + geom_vline(aes(xintercept=1), lty=3) + geom_vline(aes(xintercept=0), lty=3)
+```
+
+Something very cool happens when we take the *logarithm* of an odds. This is shown on the right. When $\pi_i < .5$, the odds are between $0$ and $1$. When $\pi_i>.5$, the odds are between $1$ and infinity. The *logarithm* of the odds becomes *negative* when $\pi_i < .5$ and becomes *positive* when $\pi_i > .5$. This means that you get a kind of "S"-like curve that gets really steep when $p_i$ gets close to its boundary. This "stretches" the log odds space out as $\pi_i$ gets really small or really large; small changes in $p_i$ in this area create large changes in log odds. This is kind of intuitive: a change from a 100000:1 odds to 1000:1 odds still means the event is still extremely unlikely *and* the change the probability is not that large in absolute terms. But that's actually a *huge* change in terms of the log odds: they go from $\log(1/100001)=$`r alog` to $\log(1/1001)=$`r blog`... almost a halving of the log odds while the  *absolute change in probability* change is very small.^[ That's more than the change in log odds when moving from $p_i = .25$ to $p_i = .75$, which is about `r dlog - clog`!] In sum, this is a pretty good way to model how probabilities work: we want to magnify the changes that represent large *relative* changes, but we don't want to squash the relative changes that happen in the middle, for things that have around 1:1 odds. 
+
+## the "logistic" regression
 
 If we do this, then our model can be stated *just like a linear model*:
 $$ logit(y_i) = \log\left(\frac{\pi_i}{1 - \pi_i}\right) = \alpha + x_i\beta + e_i$$
-This is basically three transformations: from binary to probability, from probability to odds, and then from odds to *log* odds. We run a standard linear regression on the *log odds scale*, and then transform it back to the *probability scale*. The transformation from log odds back to the probability scale is called the *logistic* function, hence why this approach is called *logistic regression*. You can see each step of this process below, moving from our linear model for outcomes on the *log odds* scale (left) to an exponential function in terms of the odds (middle), and then to a *logistic* function in terms of the probabilities (right): 
+This is basically three transformations: from binary to probability, from probability to odds, and then from odds to *log* odds. We run a standard linear regression on the *log odds scale*, and then transform it back to the *probability scale*. The transformation from log odds back to the probability scale is called the *logistic* function, hence why this approach is called *logistic regression*. You can see each step of this process below, where you can see the three different "steps" in the transormation plotted against $X$. Moving from our linear model for outcomes on the *log odds* scale (left) to an exponential function in terms of the odds (middle), and then to a *logistic* function in terms of the probabilities (right), you can see how the line gets 'bent' by the transformations: 
 
 ```{r, echo=F, fig.fullwidth=T, fig.height=3, fig.width=8}
 x = seq(-6, 6, .1)
@@ -166,9 +122,9 @@ scenario_long= scenario_long %>% mutate(scale = case_when(outcome %in% c("log_od
                                                      
 ggplot(scenario_long, aes(x=x, y=value, color=parameterization)) + geom_line() + facet_wrap(~scale, scales="free_y") + ylab('') + theme(legend.position = 'bottom')
 ```
-This is nice! as your $\alpha + x_i\beta$ get really small, you get $\pi_i$ that stay around zero! As $\alpha + x_i\beta$ get large, you get probabilities that stay really close to 1! This means that we never get predicted probabilities larger than 1 or smaller than zero like we did with our earlier model. 
+This is nice! as your $\alpha + x_i\beta$ get really small, you get $\pi_i$ that stay around zero! As $\alpha + x_i\beta$ get large, you get probabilities that stay really close to 1! This means that we never get predicted probabilities larger than 1 or smaller than zero like we did with our earlier model. Further, we have some control over the way the curve moves: in this case, the $\beta$ parameter governs how "steep" that central part of the curve is, and the $\alpha$ parameter moves the curve left and right. 
 
-Fortunately, it's pretty simple to fit a model like this in R. We can use the `glm()` command and use the exact same formula we did before. However, we need to tell `R` that the `family` of this GLM is `binomial()`, not `gaussian()`, which would simply return the same thing as our original `lm()` command.
+Fortunately, it's pretty simple to fit a model like this in R. We can use the `glm()` command and use the exact same formula we did before. However, we need to tell `R` that the `family` of this GLM is `binomial()`, not `gaussian()`, which would simply return the same thing as our earlier `lm()` fitted directly to the binary data. 
 
 ```{r}
 wait_model3= glm(long_wait ~ 1 + pub + waiting, data=times, family=binomial())
@@ -183,7 +139,14 @@ Two things might surprise you here:
 Now, we can plot the results in the exact same manner as before, but instead of straight lines, we get these s-shaped *logistic* curves:
 ```{r}
 predicted_probabilities = predict(wait_model3, type='response')
-ggplot(times, aes(x=waiting, y=as.numeric(long_wait), group=pub, color=pub)) + geom_point() + geom_line(aes(y=predicted_probabilities)) + labs(x='waiting time', y='long wait')
+ggplot(times, 
+       aes(x=waiting, 
+           y=as.numeric(long_wait), 
+           group=pub, 
+           color=pub)) +
+  geom_point() +
+  geom_line(aes(y=predicted_probabilities)) + 
+  labs(x='waiting time', y='long wait')
 ```
 Or, smoothing out our plot a little bit more with faked data, we can see the curvature really well^[Step through each line on in `R` on your own and take a look at the final `scenario` dataframe to see the result.]
 ```{r}
@@ -221,4 +184,4 @@ table(predicted_probabilities > .7, times$long_wait)
 ```
 Our false positive rate is now *zero* ($\frac{0}{5} = 0$), and our accuracy is now 83% ($\frac{5 + 9}{17} = .83$)! But, this comes at a cost: our earlier model had a *false negative rate* of 16%, meaning that 2 observations were predicted *false* that were actually *true*. 
 
-If this were, say... a *cancer* screening where `TRUE` meant "has cancer," we *definitely* want to make sure that everyone who has cancer is correctly predicted as having cancer. So, while it may seem acceptable to improve the accuracy and false positive rate by increasing our threshold, it's also not always the case that *raw accuracy* is what matters. This is why there are *tons* of different scores that summarize the confusion matrix; they're each capturing something different about the performance of your classifier *relative to* some objective you care about. Generally, accuracy is fine if classes are roughly the same size and you care about both directions of mis-prediction equally. 
+If this were, say... a *cancer* screening where `TRUE` meant "has cancer," we *definitely* want to make sure that everyone who has cancer is correctly predicted as having cancer. So, while it may seem acceptable to improve the accuracy and false positive rate by increasing our threshold, it's also not always the case that *raw accuracy* is what matters. This is why there are *tons* of different scores that summarize the confusion matrix; they're each capturing something different about the performance of your classifier *relative to* some objective you care about. Commonly used scores, such as the F1 score or the "Area under the Reciever Operating Characteristic curve (AUC-ROC)" balance the four kinds of prediction types in the confusion matrix.  Generally, the overall accuracy is fine if classes are roughly the same size and you care about both directions of mis-prediction equally. 
