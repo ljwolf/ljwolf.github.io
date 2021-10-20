@@ -1,0 +1,226 @@
+---
+title: "Midterm Asessment"
+author: ''
+date: 'Due: Wednesday, 3rd November, at 2PM London'
+output:
+  html_document:
+    theme: flatly
+    highlight: kate
+    toc: yes
+    toc_float: yes
+---
+
+This assessment will test your knowledge & abilities to work with data in R. Complete what you can; incomplete answers will still be able to achieve partial credit, and non-working code or descriptions of what you *think* you should do will also receive partial credit. Also, if a question has a (c) next to it, it's considered a **"Challenge" question**! So, you can still score OK if you leave it blank. Submit the HTML or PDF of the "knitted" document for maximum points. 
+
+Data for the assessment is available alongside this document on the course blackboard, or [here](https://ljwolf.org/teaching/gds/midterm-data.zip).
+
+```{r, show=F, echo=F, warning=F, message=F}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+kable <- function(data){
+  knitr::kable(data) %>% 
+    kable_styling(., bootstrap_options = c("striped", "hover"))
+}
+```
+
+
+# Section 1: Concepts {.tabset}
+
+The data sets shown in the tabs below are included with your midterm assessment. Each of the data sets may have one (or more) "tidy" issues, and thus may violate the three rules of tidy data we've discussed before in the course:
+
+1. Each *variable* must have its own **column**.
+2. Each *sample* must have its own **row**.
+3. Every *value* must have its own **cell**.
+
+Using this information,^[You may also find the [original *Tidy Data* paper](http://www.jstatsoft.org/v59/i10/paper) useful in describing the different commonly-encountered issues in data formatting.] describe the following data sets in terms of their "tidyness." Are the data sets tidy? If so, why? If not, why not? Note that I'm asking for a short paragraph; no code is needed to answer these fully. 
+
+Sometimes, I also provide a rationale for why the data is displayed this way. This* **does not mean** *the data is tidy!
+
+*Note: click the tabs to cycle through each of the data sets. *
+
+## Movies
+This data set describes the finances of movies in terms of the movie budget (`budget`), the domestic (US) gross box office revenue (`domgross`) and the international box office revenue (`intgross`) from 1970 to 2013.^[Remember: I'm just using the `knitr::kable()` function to print the table all pretty-like in the RMarkdown.] 
+
+```{r movies, message=F, warning=F}
+movies <- read_csv('./midterm-movies.csv')
+movies %>% head(12) %>% kable()
+```
+
+## Aussie Birds
+This dataset counts the numbers of bird species recorded in urban or rural parts of bioregions across Australia. The survey was conducted from 2014 to 2015. Shown below are the first 10 columns of six random rows from the dataframe, as there are many more bird species in Australia. This data is formatted this way in order to make the selection of specific species easy.
+```{r birds, message=F, warning=F}
+birds <- read_csv('./midterm-birds.csv')
+birds %>% drop_na() %>% arrange(bioregions) %>% sample_n(6) %>% select(1:10) %>% kable()
+```
+
+## Songs
+This dataset describes 32,833 songs on Spotify in terms of statistics that Spotify record about the song.^[This is scraped using the [`spotifyr` package.](https://www.rcharlie.com/spotifyr/)] Below, I only a show a few columns from the dataset, but a few columns are explained.^[
+`danceability` measures how suitable a track is for dancing, varies from 0 (not danceable) to 1 (danceable). `energy` is a measure of the "intensity" of the song, varies from 0 (very relaxing, Shoegaze) to 1 (very energetic, Death Metal). `loudness` is the average decibel value of the track, varies from -60 to zero. `speechiness` gives the level of "talkiness" in a track, varies from 0 (no spoken words) to 1 (all spoken words), but tracks over *.66* are *probably* nearly all spoken word, and tracks below *.33* are *probably* songs. `acousticness` is the same as `speechiness`, but measuring whether instruments are not amplified; `liveness` but for whether the track has a live audience. `valence` tells you whether a track is "happy," with higher scores indicate happier music. Finally, `tempo` records the average beats per minute for the track and `duration_ms` provides the duration of the song in milliseconds. 
+] This data is formatted directly from the Spotify API, and so is structured for ease of use in a database.
+```{r spotify, message=F, warning=F}
+spotify <- read_csv('./midterm-songs.csv')
+spotify %>% select(track_name, track_artist, 
+                   track_popularity, 
+                   danceability, loudness, duration_ms) %>% 
+  sample_n(10, weight=track_popularity) %>% 
+  kable()
+```
+
+## French Trains
+
+These are the number of trains that have run between any two stations for services operated by the National Society of French Railways, the state-owned rail company in France, from 2015 to 2018. Below, I just show the first ten originating stations (where the trains leave from) and the first four destination stations (where the trains arrive). This kind of data is often called "spatial interaction data," and is used to measure the "interaction" between different spatial units. It is often presented in this format for usability: readers can scan across a row to quickly compare the number of trains that destinations receive from a specific origin. 
+
+```{r train, message=F, warning=F}
+trains <- read_csv('./midterm-trains.csv')
+trains %>% 
+  select(1:5) %>% 
+  slice(1:10) %>% 
+  kable()
+```
+
+## EU Energy
+
+The following table records the percentage energy supplied by different forms of energy across countries in the EU, as well as the ["EU-28"](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:EU_enlargements) and ["EA-19"](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Euro_area_enlargements) groups of European member nations. This kind of wide-but-short display format is often useful to fit tables like this alongside text in a document.
+```{r energy, message=F, warning=F}
+energy <- read_csv('./midterm-energy.csv')
+energy %>% select(1:12) %>% kable()
+```
+
+## MarioKart
+This dataset describes MarioKart 64 "World Record" races. There are typically two "categories" in MarioKart racing: the "Single Lap" category---how fast a racer can complete a single lap---and "Three Lap," which measures the time to complete a typical three-lap race. Along with the times (in seconds), the date for the most recent world record is recorded. This is often the format in which tables like this are viewed. 
+```{r mariokart, message=F, warning=F}
+mk_records <- read_csv('./midterm-races.csv')
+mk_records %>% kable()
+```
+
+## Eco Risk
+
+The following are [Paini et al.](https://www.pnas.org/content/113/27/7575)'s estimates of the potential cost (in millions of USD) of invasive species to the ecosystem of each country. This is a direct digitization of [table S2 in the Supplemental Material](https://www.pnas.org/content/pnas/suppl/2016/06/16/1602205113.DCSupplemental/pnas.1602205113.sapp.pdf), so the formatting of the table is decided by concerns of printing and typesetting.^[Note that I'm using the `name_repair` option of `read_csv()` in order to get *exactly* the column names that are in `midterm-risk.csv`. Without this option, `readr::read_csv` will append extra values to the column names in order to ensure they are each unique. Try this by removing the `name_repair` argument, or setting it equal to `"unique"` instead of `"minimal"`.]
+```{r risk, message=F, warning=F}
+risk <- read_csv('./midterm-risk.csv', name_repair='minimal')
+risk %>% kable()
+```
+
+
+# Section 2: Cleaning {.tabset}
+
+For each of the data sets in Section 1, can you create a tidy version of the data set?
+
+## Movies
+
+<span style="color: white;">hint: this may need to take rows and turn them into columns!<span>
+
+```{r, eval=F}
+movies %>%
+```
+
+## Aussie Birds
+
+<span style="color: white;">hint: this may need to take columns and turn them into rows!<span>
+
+```{r eval=F}
+birds %>% 
+```
+
+## Songs
+
+<span style="color: white;">hint: pay attention to the three rules; sometimes, you get lucky!<span>
+
+```{r, eval=F}
+songs %>% 
+```
+
+## French Trains
+
+<span style="color: white;">hint: think very carefully about what the variables are here!<span>
+
+```{r, eval=F}
+trains %>%
+```
+
+
+## EU Energy
+
+<span style="color: white;">hint: sometimes, we must pivot one direction before we pivot another!<span>
+
+```{r, eval=F}
+energy %>% 
+```
+
+## MarioKart
+
+<span style="color: white;">hint: sometimes, you may need to pivot twice in the same direction!<span>
+
+```{r, eval=F}
+mk_records %>%
+```
+
+## Eco Risk
+
+<span style="color: white;">hint: this data frame is uniquely messy! Try splitting it into parts that all look tidy, and then bringing them back together.<span>
+
+```{r, eval=F}
+risk %>%
+```
+
+
+# Section 3: Analysis
+
+In this section, I'll ask some specific questions about *two* of the data sets: Movies & Songs.  
+
+## Movies{.tabset}
+
+### 3.1 
+
+Which ten movies *lost* the most money domestically? Are these the same movies that lost the most money *overall*?
+
+### 3.2
+
+What is the average budget for a movie in each year?
+
+### 3.3
+
+Which movie had the largest gap between domestic and overseas box office performance?
+
+### 3.4
+
+Make a visualization that shows how the *budget* for movies has increased over time. Discuss how you designed the plot in order to emphasize this message.
+
+### 3.5
+
+Make a visualization that shows how the typical *profit* movies make has generally *not* changed over time, but that a few outliers do make increasingly more money. Discuss how you designed the plot in order to emphasize this message. 
+
+### 3.6(c)
+You're a data scientist working for a movie studio. Your executive is considering whether to take a risk on making a "new" movie, or whether it'd be a safer bet to make a sequel to an existing movie. So, she asks:
+
+> Do sequels make more profit per dollar spent than non-sequels?  
+
+Can you answer her question?^[Note that you can use the `str_detect()` function in the tidyverse's `stringr` package to give `TRUE` when a movie name contains `2` or a `II`, and `FALSE` otherwise. Also, it's ok if you accidentally pick up movies that have `III` or `IIII` or `H20` in their name using this strategy; we're just making an educated guess.]
+
+## Songs{.tabset}
+
+### 3.7
+What's your best guess about the length of a track with higher than 75% popularity? How about your best guess for the popularity of a track between 2 and 3 minutes long? Which "piece" of information (popularity > 75% or duration between 2 & 3 minutes) gives you more useful information, and why do you think that?^[You may find it helpful to make a plot!]
+
+### 3.8 (c)
+
+What is the typical "energy" of each of the playlist genres? How about the typical "valence," meaning "happiness," of the genres? 
+
+### 3.9 (c)
+
+Make four plots^[It's OK if they're totally separate plots! That is, I don't expect you to use `facet_grid()`] to visualize the relationship between danceability and a few variables:
+
+- `tempo`
+- `energy`
+- `valence`
+- `playlist_genre`
+
+Make sure to take into account whether the relationship is linear and address *overplotting* if necessary. Given these plots, what kinds of songs tend to be danceable?
+
+### 3.10 (c)
+
+Let's assume that the difference between a band's *median* track popularity and its *maximum* track popularity represents that band's *one-hit-wonderness*. If this is the case, what are the Top 10 "one-hit-wonder" bands in the dataset? 
+Given the results, does this comport with your understanding of what a "one hit wonder" is?
+
