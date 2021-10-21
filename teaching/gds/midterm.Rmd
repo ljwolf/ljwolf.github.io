@@ -1,6 +1,6 @@
 ---
 title: "Midterm Asessment"
-author: ''
+author: 'DRAFT (Pending Moderation)'
 date: 'Due: Wednesday, 3rd November, at 2PM London'
 output:
   html_document:
