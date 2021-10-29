@@ -1,5 +1,5 @@
 /* Basic */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Quattrocento&family=Arvo&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=IBM+Plex+Mono&family=Quattrocento&family=Arvo&display=swap')
 html {
     font-family: 'IBM Plex Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* 1 */
@@ -107,7 +107,7 @@ pre {
 code,
 pre,
 kbd {
-    font-family: monospace;
+    font-family: "IBM Plex Mono", monospace;
     font-size: 0.90em;
     line-height: 154%;
 }

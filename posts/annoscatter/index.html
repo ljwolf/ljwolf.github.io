@@ -16,7 +16,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1635245339" />
+<link rel="stylesheet" href="/css/style.css?rnd=1635505395" />
 
 <meta property="og:title" content="Annoscatter" />
 <meta property="og:description" content="I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like annoscatter(df." />
@@ -71,29 +71,29 @@
             <p>I found this function super useful in my dissertation and more generally in my work. What it does is take <code>x</code>,<code>y</code> coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like <code>annoscatter(df.year, df.leverage, df.district_id)</code>.</p>
 <p><img src="images/annoscatter.png" alt="annoscatter"></p>
 <p>Not sure if there&rsquo;s a more elegant solution to this using matplotlib, but I really like how it looks, especially since there&rsquo;s also passthrough keyword dictionaries implemented like seaborn. Not sure if <a href="https://github.com/mwaskom">@mwaskom</a> would take a PR for something as simple as this, though.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">annoscatter</span>(x,y, text, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>, markersize<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, 
-                ax <span style="color:#f92672">=</span> None, fig <span style="color:#f92672">=</span> None, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;k&#39;</span>,
-                fig_kw <span style="color:#f92672">=</span> dict(), 
-                scatter_kw <span style="color:#f92672">=</span> dict(), ann_kw<span style="color:#f92672">=</span>dict()):
-    <span style="color:#66d9ef">if</span> ax <span style="color:#f92672">is</span> None:
-        <span style="color:#66d9ef">if</span> fig <span style="color:#f92672">is</span> None:
-            fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(<span style="color:#f92672">**</span>fig_kw)
-        ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>gca()
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (marker <span style="color:#f92672">is</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">or</span> markersize <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
-        scatter_kw[<span style="color:#e6db74">&#39;marker&#39;</span>] <span style="color:#f92672">=</span> marker
-        scatter_kw[<span style="color:#e6db74">&#39;s&#39;</span>] <span style="color:#f92672">=</span> markersize
-        ax<span style="color:#f92672">.</span>scatter(x,y, <span style="color:#f92672">**</span>scatter_kw)
-    <span style="color:#66d9ef">else</span>:
-        scatter_kw[<span style="color:#e6db74">&#39;alpha&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        ax<span style="color:#f92672">.</span>scatter(x,y,<span style="color:#f92672">**</span>scatter_kw)
-    <span style="color:#66d9ef">if</span> isinstance(color, str):
-        colors <span style="color:#f92672">=</span> [color]<span style="color:#f92672">*</span>len(x)
-    <span style="color:#66d9ef">else</span>:
-        colors <span style="color:#f92672">=</span> list(color)
-    <span style="color:#66d9ef">for</span> xi,yi,string,c <span style="color:#f92672">in</span> zip(x,y,text,colors):
-        ax<span style="color:#f92672">.</span>annotate(s<span style="color:#f92672">=</span>string, xy<span style="color:#f92672">=</span>(xi,yi), color<span style="color:#f92672">=</span>c, <span style="color:#f92672">**</span>ann_kw)
-    <span style="color:#66d9ef">return</span> ax
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.pyplot</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">plt</span>
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">annoscatter</span>(x,y, text, marker<span style="color:#666">=</span><span style="color:#ba2121">&#39;.&#39;</span>, markersize<span style="color:#666">=</span><span style="color:#666">1</span>, 
+                ax <span style="color:#666">=</span> None, fig <span style="color:#666">=</span> None, color<span style="color:#666">=</span><span style="color:#ba2121">&#39;k&#39;</span>,
+                fig_kw <span style="color:#666">=</span> <span style="color:#008000">dict</span>(), 
+                scatter_kw <span style="color:#666">=</span> <span style="color:#008000">dict</span>(), ann_kw<span style="color:#666">=</span><span style="color:#008000">dict</span>()):
+    <span style="color:#008000;font-weight:bold">if</span> ax <span style="color:#a2f;font-weight:bold">is</span> None:
+        <span style="color:#008000;font-weight:bold">if</span> fig <span style="color:#a2f;font-weight:bold">is</span> None:
+            fig <span style="color:#666">=</span> plt<span style="color:#666">.</span>figure(<span style="color:#666">**</span>fig_kw)
+        ax <span style="color:#666">=</span> plt<span style="color:#666">.</span>gca()
+    <span style="color:#008000;font-weight:bold">if</span> <span style="color:#a2f;font-weight:bold">not</span> (marker <span style="color:#a2f;font-weight:bold">is</span> <span style="color:#ba2121">&#39;&#39;</span> <span style="color:#a2f;font-weight:bold">or</span> markersize <span style="color:#666">==</span> <span style="color:#666">0</span>):
+        scatter_kw[<span style="color:#ba2121">&#39;marker&#39;</span>] <span style="color:#666">=</span> marker
+        scatter_kw[<span style="color:#ba2121">&#39;s&#39;</span>] <span style="color:#666">=</span> markersize
+        ax<span style="color:#666">.</span>scatter(x,y, <span style="color:#666">**</span>scatter_kw)
+    <span style="color:#008000;font-weight:bold">else</span>:
+        scatter_kw[<span style="color:#ba2121">&#39;alpha&#39;</span>] <span style="color:#666">=</span> <span style="color:#666">0</span>
+        ax<span style="color:#666">.</span>scatter(x,y,<span style="color:#666">**</span>scatter_kw)
+    <span style="color:#008000;font-weight:bold">if</span> <span style="color:#008000">isinstance</span>(color, <span style="color:#008000">str</span>):
+        colors <span style="color:#666">=</span> [color]<span style="color:#666">*</span><span style="color:#008000">len</span>(x)
+    <span style="color:#008000;font-weight:bold">else</span>:
+        colors <span style="color:#666">=</span> <span style="color:#008000">list</span>(color)
+    <span style="color:#008000;font-weight:bold">for</span> xi,yi,string,c <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">zip</span>(x,y,text,colors):
+        ax<span style="color:#666">.</span>annotate(s<span style="color:#666">=</span>string, xy<span style="color:#666">=</span>(xi,yi), color<span style="color:#666">=</span>c, <span style="color:#666">**</span>ann_kw)
+    <span style="color:#008000;font-weight:bold">return</span> ax
 </code></pre></div>
         </div>
         <div class="article-info">
@@ -121,6 +121,9 @@
                 <p>© 2021<br>
 Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
 </p>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
             
         </footer>
     </div>

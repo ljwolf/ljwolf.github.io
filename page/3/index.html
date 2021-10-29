@@ -17,13 +17,13 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1635245339" />
+<link rel="stylesheet" href="/css/style.css?rnd=1635505395" />
 
 <meta property="og:title" content="Yet Another Geographer" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2021-08-17T13:58:26+01:00" />
+<meta property="og:updated_time" content="2021-10-29T09:46:42+01:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yet Another Geographer"/>
@@ -63,6 +63,29 @@
         <main>
             
     
+    
+    <article class="post-list">
+        <header> 
+            <h1>
+                <a href="/posts/perftesting/">Perftesting</a>
+            </h1>
+        </header>
+
+        <div class="content">
+            I&rsquo;ve always been interested in how PySAL stacks up with NetworkX for building the dual graph of polygonal lattices, so I did some perftesting. This is by far the most common spatial operation I do on a day to day basis, and it looks like PySAL&rsquo;s constructors still are the fastest for cases where we can assume planarity. But, with how simple the geopandas-only solution is, I look foward to the day when the geopandas.
+        </div>
+
+        
+        <div class="article-info">
+    
+        <div class="article-date">2018-07-24</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
     
     <article class="post-list">
         <header> 
@@ -337,31 +360,6 @@ $$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$
 </div>
     </article>
     
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/posts/does-projection-matter/">Does projection matter for compactness indices?</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            This is a quick and dirty exploration of the compactness impacts of changing the projection of data on compactness measures.
-import geopandas as gpd import numpy as np import matplotlib.pyplot as plt from compact import reock as _reock import pysal as ps import seaborn as sns %matplotlib inline The data I&rsquo;m using is the 113th districts from my Scientific Data publication, sourced originally from Jeff Lewis.
-df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#34;Alaska&#34;,&#34;Hawaii&#34;)&#39;) df.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2018-02-18</div>
-    
-    <div class="article-taxonomies">
-        
-            
-    </div>
-</div>
-    </article>
-    
     
     
     
@@ -388,6 +386,9 @@ df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#
                 <p>© 2021<br>
 Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
 </p>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
             
         </footer>
     </div>
