@@ -12,7 +12,7 @@ disqusShortname = ""
 SectionPagesMenu = "main"
 
 # use Chroma for syntax highlight
-pygmentsStyle = "monokai" # other dark style options: vim, fruity, monokai
+pygmentsStyle = "pygments" # other dark style options: vim, fruity, monokai
 # enable syntax highlight for code blocks
 pygmentsCodeFences = true
 
