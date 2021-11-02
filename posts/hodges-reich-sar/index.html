@@ -16,10 +16,10 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1635505807" />
+<link rel="stylesheet" href="/css/style.css?rnd=1635847778" />
 
 <meta property="og:title" content="throwing in a spatially-correlated random effect may mess up the fixed effect you love - revisiting Hodges and Reich (2010) for SAR models" />
-<meta property="og:description" content="import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+<meta property="og:description" content="import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&lsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
 $$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/hodges-reich-sar/" />
@@ -28,7 +28,7 @@ $$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="throwing in a spatially-correlated random effect may mess up the fixed effect you love - revisiting Hodges and Reich (2010) for SAR models"/>
-<meta name="twitter:description" content="import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
+<meta name="twitter:description" content="import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&lsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
 $$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$"/>
 
 
@@ -76,13 +76,13 @@ $$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$"/>
 <span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.pyplot</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">plt</span>
 <span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">geopandas</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">gpd</span>
 <span style="color:#666">%</span>matplotlib inline
-</code></pre></div><p>This is just a quick demonstration of what I understand from <a href="https://www4.stat.ncsu.edu/~bjreich/papers/FixedEffectsYouLove.pdf">Hodges &amp; Reich (2010)</a>&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:</p>
+</code></pre></div><p>This is just a quick demonstration of what I understand from <a href="https://www4.stat.ncsu.edu/~bjreich/papers/FixedEffectsYouLove.pdf">Hodges &amp; Reich (2010)</a>&lsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:</p>
 <p>$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$</p>
 <p>might not be equal to the estimates from a specific type of spatial autoregressive error model, such as the SAR error model:</p>
 <p>$$ Y \sim\mathcal{N}\left(X\hat{\beta}, \left[(I - \lambda \mathbf{W})'(I - \lambda \mathbf{W})\right]^{-1}\sigma^2\right) $$</p>
 <p>when (and only when) the filtered error term $(I - \lambda \mathbf{W})^{-1}\epsilon$ (for gaussian $\epsilon$ with dispersion $\sigma$) is correlated with at least one $X_j$, $j = 1, 2, \dots, P$.</p>
 <p>Hodges &amp; Reich (2010) consider a CAR model, but they argue (and I agree): the logic of the issue applies generally.
-The idea also touches on <a href="http://www.tandfonline.com/doi/abs/10.1080/17421770802353758">LeSage &amp; Fischer (2008)</a>&rsquo;s argument motivating a spatial Durbin regression as &ldquo;accounting for spatially-patterned ommitted covariates,&rdquo; (Section 2.1, effective around page 280).</p>
+The idea also touches on <a href="http://www.tandfonline.com/doi/abs/10.1080/17421770802353758">LeSage &amp; Fischer (2008)</a>&lsquo;s argument motivating a spatial Durbin regression as &ldquo;accounting for spatially-patterned ommitted covariates,&rdquo; (Section 2.1, effective around page 280).</p>
 <p>It&rsquo;s pretty simple to show how it might affect regression below, so I&rsquo;ve cooked up a short example using the Baltimore data. I think it&rsquo;s important to understand this (just like apparent variance inflation in simulation designs due to $tr(\left[I - \lambda \mathbf{W}\right]^{-1}) \geq N$).</p>
 <p>This is just one of those areas where, in theory, a &ldquo;well-behaved&rdquo; statement leads to results we&rsquo;d want (identical estimates of $\beta$ between OLS and spatial error models), but when we use these models in reality, we must accept that empirical conditions will degrade these expectations.</p>
 <p>So I&rsquo;ll illustrate it on a standard PySAL dataset below, trying to show it as simply as possible.</p>

@@ -17,7 +17,10 @@ from 1999, what's your best guess as to the price of that house?
 ## 1.2
 about a *detached house* in 1999, what's your best guess as to the price of that house?  
 
-# 2. A Group-based model
+## 1.3 
+Is the relationship between house price and year linear? is it "homoskedastic?"^[That is, does its variance stay the same over time?] 
+
+# 2. One Linear model
 
 Fit a linear model that predicts listing price over the years, treating "year" as a group variable.[^hint-factors] Interpreting this model:
 
@@ -30,13 +33,16 @@ Which years are *not* "statistically significant?" Why might this be the case?
 ## 2.3
 What's the model's prediction of the listing price of a detached house in 1999? How does this compare to your guess from section 1?
 
+## 2.4 (Challenge)
+Is the estimated relationship between price and year *in this model* linear?
+
 ## 2.4
 Are there any issues with the model that you can identify? [^hint-bias]
 
 ## 2.5 
-Would you use this model to predict next year's prices? Why or why not?
+Can you use this model to predict next year's prices? Why or why not?
 
-# 3. A Linear Model
+# 3. Another Linear Model
 
 Fit a linear model that predicts the log listing price over the years, treating "year" as a continuous variable.[^hint-factors] 
 

@@ -140,7 +140,7 @@ The latter option is generally &lt;em&gt;not&lt;/em&gt; a good idea, as it comes
       <pubDate>Thu, 12 Aug 2021 17:07:30 +0100</pubDate>
       
       <guid>/posts/depop/</guid>
-      <description>&lt;p&gt;Over the last month and a half or so, my colleagues at the &lt;a href=&#34;https://www.bristol.ac.uk/geography/research/quantitative-spatial-science/&#34;&gt;University of Bristol Quantitative Spatial Sciences Lab (QuSS)&lt;/a&gt; have done a hell of a job examining the &lt;a href=&#34;https://boundarycommissionforengland.independent.gov.uk/2023-review/&#34;&gt;Boundary Commission for England&lt;/a&gt;&amp;rsquo;s draft plan for Westminster Parliamentary Constituencies across England. We published our findings in &lt;a href=&#34;https://ljwolf.org/projects/bce/report.pdf&#34;&gt;a report&lt;/a&gt; and a webmap (&lt;a href=&#34;https://ljwolf.org/bce&#34;&gt;with explanation&lt;/a&gt;, &lt;a href=&#34;https://ljwolf.org/bcemap&#34;&gt;full-screen&lt;/a&gt;).&lt;/p&gt;
+      <description>&lt;p&gt;Over the last month and a half or so, my colleagues at the &lt;a href=&#34;https://www.bristol.ac.uk/geography/research/quantitative-spatial-science/&#34;&gt;University of Bristol Quantitative Spatial Sciences Lab (QuSS)&lt;/a&gt; have done a hell of a job examining the &lt;a href=&#34;https://boundarycommissionforengland.independent.gov.uk/2023-review/&#34;&gt;Boundary Commission for England&lt;/a&gt;&amp;lsquo;s draft plan for Westminster Parliamentary Constituencies across England. We published our findings in &lt;a href=&#34;https://ljwolf.org/projects/bce/report.pdf&#34;&gt;a report&lt;/a&gt; and a webmap (&lt;a href=&#34;https://ljwolf.org/bce&#34;&gt;with explanation&lt;/a&gt;, &lt;a href=&#34;https://ljwolf.org/bcemap&#34;&gt;full-screen&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;One thing that was &lt;em&gt;very&lt;/em&gt; surprising to me is the interplay between depopulation and boundary change:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;(c), surprise! the North is pretty re-drawn. It could be due to population change (which is generally pretty rough on the shape of constituencies) but the rapidly-growing South West is the least-redrawn part of the map! Is depopulation harder to redistrict? Needs more science.&lt;/p&gt;&amp;mdash; ljw (@levijohnwolf) &lt;a href=&#34;https://twitter.com/levijohnwolf/status/1422226557741961226?ref_src=twsrc%5Etfw&#34;&gt;August 2, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
@@ -353,7 +353,7 @@ The latter option is generally &lt;em&gt;not&lt;/em&gt; a good idea, as it comes
       <pubDate>Tue, 10 Sep 2019 15:51:29 +0100</pubDate>
       
       <guid>/posts/qestival/</guid>
-      <description>&lt;p&gt;On the 11th, I&amp;rsquo;ll be speaking at the &lt;a href=&#34;http://socialsciences.exeter.ac.uk/q-step/events/q-estival/&#34;&gt;Q-estival at the University of Exeter&lt;/a&gt;&amp;rsquo;s Q-Step Centre. The Q-Step program is a program to promote a &amp;ldquo;step change&amp;rdquo; in quantitative social science skills in the UK. I&amp;rsquo;m the Bristol Geography lead for the program. I&amp;rsquo;m real excited to take my first trip out to Exeter, see the place, and talk about some interesting computational social science!&lt;/p&gt;
+      <description>&lt;p&gt;On the 11th, I&amp;rsquo;ll be speaking at the &lt;a href=&#34;http://socialsciences.exeter.ac.uk/q-step/events/q-estival/&#34;&gt;Q-estival at the University of Exeter&lt;/a&gt;&amp;lsquo;s Q-Step Centre. The Q-Step program is a program to promote a &amp;ldquo;step change&amp;rdquo; in quantitative social science skills in the UK. I&amp;rsquo;m the Bristol Geography lead for the program. I&amp;rsquo;m real excited to take my first trip out to Exeter, see the place, and talk about some interesting computational social science!&lt;/p&gt;
 &lt;p&gt;In my talk, I&amp;rsquo;ll present some work I&amp;rsquo;ve done with Eli Knaap &amp;amp; Serge Rey on urban social boundaries. The preprint has been available on &lt;a href=&#34;https://osf.io/vd3uk&#34;&gt;SocARXIV&lt;/a&gt;for a while now, but now stands as an &lt;em&gt;accepted manuscript to Environment and Planning, B: Urban Analytics and City Science&lt;/em&gt;! Further, the algorithms I&amp;rsquo;ll be talking about today are already implemented in &lt;a href=&#34;https://github.com/pysal/esda&#34;&gt;pysal/esda&lt;/a&gt;, the python package for exploratory spatial statistics.&lt;/p&gt;
 &lt;p&gt;Check out the &lt;a href=&#34;https://www.dropbox.com/s/94zgcxxue27njew/2019-boundaries-qestival.pdf?dl=0&#34;&gt;slide deck here&lt;/a&gt;, and I hope to see you in Exeter!&lt;/p&gt;
 </description>
@@ -535,7 +535,7 @@ Source,” &lt;em&gt;Journal of Geographical Systems&lt;/em&gt; 11, no. 2 (June 
       <guid>/posts/email-charter/</guid>
       <description>&lt;h1 id=&#34;the-university-of-bristol-email-charter&#34;&gt;The University of Bristol Email Charter&lt;/h1&gt;
 &lt;p&gt;I &lt;em&gt;really&lt;/em&gt; like the University of Bristol&amp;rsquo;s new &lt;a href=&#34;https://bristol.ac.uk/media-library/sites/hr/documents/wellbeing/email-charter.pdf&#34;&gt;email charter&lt;/a&gt;. But, I think it could be made a little more clear and actionable, especially since it can build off of previous work and thought about making emails clearer, shorter, and fewer in number. Below, I&amp;rsquo;ll go through the points listed in the original charter and try to make them clearer. I&amp;rsquo;ll also try to add some &lt;em&gt;actions&lt;/em&gt; that add some teeth to the points. My comments are in italics.&lt;/p&gt;
-&lt;h2 id=&#34;respect-recipients-time&#34;&gt;Respect Recipients&#39; Time&lt;/h2&gt;
+&lt;h2 id=&#34;respect-recipients-time&#34;&gt;Respect Recipients&amp;rsquo; Time&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;As the message sender, the onus is on you to minimize the time your email will take to process.&lt;/p&gt;
@@ -585,7 +585,7 @@ Source,” &lt;em&gt;Journal of Geographical Systems&lt;/em&gt; 11, no. 2 (June 
 &lt;h2 id=&#34;give-a-gift&#34;&gt;Give a Gift&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;If your email message can be expressed in less than 10 words, put it in the subject line and leave a short statement in the subject.&lt;/li&gt;
-&lt;li&gt;Ending an email with &amp;ldquo;no need to respond&amp;rdquo; if you do not need a response to a question or action. &lt;em&gt;However, consider whether sending an email at all is the appropriate way to state what would need to be stated in this fashion. It is patronizing to send a long email informing others of &lt;strong&gt;your&lt;/strong&gt; thoughts, but suggesting others&#39; thoughts are not needed&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Ending an email with &amp;ldquo;no need to respond&amp;rdquo; if you do not need a response to a question or action. &lt;em&gt;However, consider whether sending an email at all is the appropriate way to state what would need to be stated in this fashion. It is patronizing to send a long email informing others of &lt;strong&gt;your&lt;/strong&gt; thoughts, but suggesting others&amp;rsquo; thoughts are not needed&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Take an action or make a distinct proposal, and suggest that it be approved unless folks reply to object.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;cut-contentless-responses&#34;&gt;Cut Contentless Responses&lt;/h2&gt;
@@ -752,7 +752,7 @@ I call these tests &lt;em&gt;lookahead&lt;/em&gt; tests, since they&amp;rsquo;re
 &lt;li&gt;make sure that your repeat &lt;code&gt;env&lt;/code&gt; every time you have an entry in &lt;code&gt;allow_failures&lt;/code&gt;, so travis can attempt to match your previously-defined setup patterns.&lt;/li&gt;
 &lt;li&gt;don&amp;rsquo;t forget to include the python versions you&amp;rsquo;re testing in the first line of the &lt;code&gt;allow_failures&lt;/code&gt; entries.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Great; we&amp;rsquo;ve defined a testing matrix where we can check 8 combinations of tests. However, by default, these will only queue builds with these configurations; if nothing in our build script takes these variables into account, we won&amp;rsquo;t do anything different when we run our tests. So, to make this useful, we &lt;em&gt;then&lt;/em&gt; have to use these environment variables in our &lt;code&gt;.travis.yml&lt;/code&gt;&amp;rsquo;s &lt;code&gt;before_install&lt;/code&gt; or &lt;code&gt;install&lt;/code&gt; sections. I&amp;rsquo;m building this example for subpackages (and have worked this out for &lt;a href=&#34;https://github.com/ljwolf/spreg/blob/master/.travis.yml#L9&#34;&gt;&lt;code&gt;spreg&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://github.com/ljwolf/esda/blob/master/.travis.yml#L10&#34;&gt;&lt;code&gt;esda&lt;/code&gt;&lt;/a&gt;), so this&amp;rsquo;ll be focused on allowing &lt;code&gt;libpysal&lt;/code&gt; to get installed from &lt;code&gt;pypi&lt;/code&gt; versus from &lt;code&gt;github&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Great; we&amp;rsquo;ve defined a testing matrix where we can check 8 combinations of tests. However, by default, these will only queue builds with these configurations; if nothing in our build script takes these variables into account, we won&amp;rsquo;t do anything different when we run our tests. So, to make this useful, we &lt;em&gt;then&lt;/em&gt; have to use these environment variables in our &lt;code&gt;.travis.yml&lt;/code&gt;&#39;s &lt;code&gt;before_install&lt;/code&gt; or &lt;code&gt;install&lt;/code&gt; sections. I&amp;rsquo;m building this example for subpackages (and have worked this out for &lt;a href=&#34;https://github.com/ljwolf/spreg/blob/master/.travis.yml#L9&#34;&gt;&lt;code&gt;spreg&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://github.com/ljwolf/esda/blob/master/.travis.yml#L10&#34;&gt;&lt;code&gt;esda&lt;/code&gt;&lt;/a&gt;), so this&amp;rsquo;ll be focused on allowing &lt;code&gt;libpysal&lt;/code&gt; to get installed from &lt;code&gt;pypi&lt;/code&gt; versus from &lt;code&gt;github&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;To change your &lt;code&gt;before_install&lt;/code&gt; section depending on these environment variable settings, we need to use &lt;a href=&#34;https://github.com/ljwolf/esda/blob/master/.travis.yml#L39&#34;&gt;bash conditionals&lt;/a&gt;. These are just like Python conditionals (&lt;code&gt;if/else&lt;/code&gt; statements), but they&amp;rsquo;re a bit less easy to make &lt;em&gt;just work&lt;/em&gt;. So, I&amp;rsquo;d recommend you follow this pattern &lt;em&gt;exactly&lt;/em&gt; in your &lt;code&gt;.travis.yml&lt;/code&gt; for a variable named &lt;code&gt;PYSAL_PYPI&lt;/code&gt; which has been set to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;- if &amp;quot;$PYSAL_PYPI&amp;quot;; then
     echo &amp;quot;do option PYSAL_PYPI&amp;quot;; do second command;
@@ -844,7 +844,7 @@ Our culture needs to change and, if there&amp;rsquo;s one thing the replicabilit
 &lt;h2 id=&#34;reproducibility-as-praxis-competition-as-the-engine-of-science&#34;&gt;Reproducibility as praxis; competition as the engine of science.&lt;/h2&gt;
 &lt;p&gt;This is where I see more competition-driven models of science as super beneficial for our field.
 Like &lt;a href=&#34;https://en.wikipedia.org/wiki/Hilbert%27s_program&#34;&gt;Hilbert&amp;rsquo;s Program&lt;/a&gt; or the &lt;a href=&#34;http://www.claymath.org/millennium-problems&#34;&gt;Millenium problems&lt;/a&gt;, focusing attention onto specific, identifiable common problems in a field and incentivizing their solution through reputation or modest financial gains is a great way to help tie together academic conversations.
-The benefits of these kinds of competitions/challenge programs is that they &lt;em&gt;force&lt;/em&gt; us to consider similar/identical problems, speak on common datasets, and actually &lt;strong&gt;engage with each others&#39; research!&lt;/strong&gt;
+The benefits of these kinds of competitions/challenge programs is that they &lt;em&gt;force&lt;/em&gt; us to consider similar/identical problems, speak on common datasets, and actually &lt;strong&gt;engage with each others&amp;rsquo; research!&lt;/strong&gt;
 While it&amp;rsquo;s sometimes difficult to frame these questions in sufficiently precise statements as to make them answerable, this is the point of setting collective research agendas.
 The broader quant geographic community may benefit from these kinds of exercises.
 Personally, it was so stimulating to attend the GISRUK CDRC data challenge and see three other groups of people use totally different methods to solve a similar problem on the same data as what I did; their perspectives both helped me deepen my own understanding of &lt;em&gt;why I did what I did&lt;/em&gt;, and helped me understand how I might do something differently in the future.&lt;/p&gt;
@@ -981,7 +981,7 @@ adding a bit more semanic structure/nesting to the &lt;code&gt;pyplot&lt;/code&g
       <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
       
       <guid>/posts/spatial_acf/</guid>
-      <description>&lt;p&gt;I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&#39;&#39; at which processes operate electorally.
+      <description>&lt;p&gt;I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&amp;rsquo;&amp;rsquo; at which processes operate electorally.
 I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated.
 The typical diameter at which the so-called &amp;ldquo;spatial autocorrelation function&amp;rdquo; goes to zero denotes how wide a typical spatial cluster might be,
 and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold.&lt;/p&gt;
@@ -1097,7 +1097,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;p&gt;With this adjacency matrix, we can compute a few interesting spatial statistics. The first, the Bivariate Moran statistic (from &lt;a href=&#34;dx.doi.org/10.1111/j.1538-4632.1985.tb00849.x&#34;&gt;Wartenburg (1985)&lt;/a&gt;, a kind of &lt;a href=&#34;https://en.wikipedia.org/wiki/Mantel_test&#34;&gt;Mantel statistic&lt;/a&gt;), relates a set of observations to the &lt;em&gt;spatial lag&lt;/em&gt; of another set of observations.&lt;/p&gt;
 &lt;p&gt;To be clear, the spatial lag is analogous to the temporal lag of a variate. In this case, the &lt;em&gt;spatial lag&lt;/em&gt; refers to the average of the neighboring values around each observation. Using a row-standardized adjacency matrix (\mathbf{W}), the lag of (Y) is expressed simply as (\mathbf{W}Y).&lt;/p&gt;
 &lt;p&gt;This means that the bivariate Moran&amp;rsquo;s I statistic is stated for centered attribute vectors (y) and (x):
-\[ \frac{x&#39;\mathbf{W}y}{x&amp;rsquo;x}\]&lt;/p&gt;
+\[ \frac{x&amp;rsquo;\mathbf{W}y}{x&amp;rsquo;x}\]&lt;/p&gt;
 &lt;p&gt;This results in a single statistic (and accompanying (p)-values computed using permutation methods) that relates the values of attribute (x) to the &lt;em&gt;lag&lt;/em&gt; of (y). We can use this statistic to relate votes between two times. In the following, we see that county vote in the previous year is a good predictor of the vote in the next year:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;bvi &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; ps&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;Moran_BV(votes[&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;tpv_2008&amp;#39;&lt;/span&gt;], votes[&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;tpv_2012&amp;#39;&lt;/span&gt;], w&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;W)
 bvi&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;I, bvi&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;p_sim
@@ -1155,7 +1155,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#3
    &lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;sort_values([&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;mlocal_1216&amp;#39;&lt;/span&gt;], ascending&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;False)
    &lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#666&#34;&gt;25&lt;/span&gt;))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;There aren&amp;rsquo;t many observations in this quadrant. This indicates quadrants whose swing was more Republican than average while their neighbors&#39; swings were more &lt;em&gt;Democrat&lt;/em&gt; than average. Note that this relates to the &lt;em&gt;mean national swing&lt;/em&gt; as the unweighted average swing at the county level. So, this captues the counties who swung &lt;em&gt;more&lt;/em&gt; Republican than average over counties &lt;strong&gt;while their neighbors swung more Democrat&lt;/strong&gt; than average.&lt;/p&gt;
+&lt;p&gt;There aren&amp;rsquo;t many observations in this quadrant. This indicates quadrants whose swing was more Republican than average while their neighbors&amp;rsquo; swings were more &lt;em&gt;Democrat&lt;/em&gt; than average. Note that this relates to the &lt;em&gt;mean national swing&lt;/em&gt; as the unweighted average swing at the county level. So, this captues the counties who swung &lt;em&gt;more&lt;/em&gt; Republican than average over counties &lt;strong&gt;while their neighbors swung more Democrat&lt;/strong&gt; than average.&lt;/p&gt;
 &lt;p&gt;We see some pretty counter-iintuitive counties here. Linn county, OR and Lake county, CO weren&amp;rsquo;t things that were on my radar, but it seems they&amp;rsquo;ve moved anomalously towards the Republicans while their neighbors intensified in Democratic support.&lt;/p&gt;
 &lt;h3 id=&#34;quadrant-iv&#34;&gt;Quadrant IV&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;(lmos&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;query(&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;mlocal_p_1216 &amp;lt; .01 and mlocal_quad_1216 == 4&amp;#39;&lt;/span&gt;)
@@ -1219,9 +1219,9 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;images/spacf_output_58_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Interpreting this, we have to move around 16 counties out before the autocorrelation between counties becomes negative. Remember, this statistic considers only (k)-minimal neighbors, not all observations below (k)th order neighbors. If you don&amp;rsquo;t consider (k)-minimal neighbors (rather than (k)th order), then sets of higher-order neighbors will contain the set of lower-order neighbors.&lt;/p&gt;
 &lt;p&gt;In a time series context, this would be akin to considering both the observation from 2 periods ago &lt;em&gt;and&lt;/em&gt; the previous observation in the set of 2nd order neighbors. In contrast, this graph shows the correlation as the set of &amp;ldquo;considered&amp;rdquo; counties radiates uniformly outwards from each focal county.&lt;/p&gt;
-&lt;p&gt;Thus, a typical ``cluster&#39;&#39; in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you&amp;rsquo;re right. We need to account for the &lt;em&gt;whole&lt;/em&gt; neighborhood contained with the (k)-radius cluster:&lt;/p&gt;
+&lt;p&gt;Thus, a typical ``cluster&amp;rsquo;&amp;rsquo; in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you&amp;rsquo;re right. We need to account for the &lt;em&gt;whole&lt;/em&gt; neighborhood contained with the (k)-radius cluster:&lt;/p&gt;
 &lt;h3 id=&#34;conditional-width-of-cluster-size&#34;&gt;Conditional width of cluster size&lt;/h3&gt;
-&lt;p&gt;The partial correlation plot &lt;em&gt;does&lt;/em&gt; condition on the neighbors below (k)-th order. So, the correlation between the (k)-minimal neighbors and the source observations is conditional on 1st through (k-1)-minimal neighbors. We can use this plot to adequately identify the ``order&#39;&#39; of the spatial process, if we treat it as a spatial markov random field.&lt;/p&gt;
+&lt;p&gt;The partial correlation plot &lt;em&gt;does&lt;/em&gt; condition on the neighbors below (k)-th order. So, the correlation between the (k)-minimal neighbors and the source observations is conditional on 1st through (k-1)-minimal neighbors. We can use this plot to adequately identify the ``order&amp;rsquo;&amp;rsquo; of the spatial process, if we treat it as a spatial markov random field.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;plags &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; spacf&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;sppacf(votes[[&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;tpv_2016&amp;#39;&lt;/span&gt;]]&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;values &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt;votes[[&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;tpv_2012&amp;#39;&lt;/span&gt;]]&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;values , W, order&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10&lt;/span&gt;)
 plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;figure(figsize&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#666&#34;&gt;1.6&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;4&lt;/span&gt;,&lt;span style=&#34;color:#666&#34;&gt;4&lt;/span&gt;))
 plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;plot(plags, linewidth&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;5&lt;/span&gt;, color&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;slategrey&amp;#39;&lt;/span&gt;)
@@ -1249,7 +1249,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/171389427489/this-is-an-interesting-little-exploration-i-did&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/171389427489/this-is-an-interesting-little-exploration-i-did&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/171389427489/this-is-an-interesting-little-exploration-i-did&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1262,7 +1262,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/171344889664/i-often-find-myself-looking-for-spaces-like-those&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/171344889664/i-often-find-myself-looking-for-spaces-like-those&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/171344889664/i-often-find-myself-looking-for-spaces-like-those&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1278,13 +1278,13 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;plt&lt;/span&gt;
 &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;geopandas&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;gpd&lt;/span&gt;
 &lt;span style=&#34;color:#666&#34;&gt;%&lt;/span&gt;matplotlib inline
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is just a quick demonstration of what I understand from &lt;a href=&#34;https://www4.stat.ncsu.edu/~bjreich/papers/FixedEffectsYouLove.pdf&#34;&gt;Hodges &amp;amp; Reich (2010)&lt;/a&gt;&amp;rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is just a quick demonstration of what I understand from &lt;a href=&#34;https://www4.stat.ncsu.edu/~bjreich/papers/FixedEffectsYouLove.pdf&#34;&gt;Hodges &amp;amp; Reich (2010)&lt;/a&gt;&amp;lsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:&lt;/p&gt;
 &lt;p&gt;$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$&lt;/p&gt;
 &lt;p&gt;might not be equal to the estimates from a specific type of spatial autoregressive error model, such as the SAR error model:&lt;/p&gt;
 &lt;p&gt;$$ Y \sim\mathcal{N}\left(X\hat{\beta}, \left[(I - \lambda \mathbf{W})&#39;(I - \lambda \mathbf{W})\right]^{-1}\sigma^2\right) $$&lt;/p&gt;
 &lt;p&gt;when (and only when) the filtered error term $(I - \lambda \mathbf{W})^{-1}\epsilon$ (for gaussian $\epsilon$ with dispersion $\sigma$) is correlated with at least one $X_j$, $j = 1, 2, \dots, P$.&lt;/p&gt;
 &lt;p&gt;Hodges &amp;amp; Reich (2010) consider a CAR model, but they argue (and I agree): the logic of the issue applies generally.
-The idea also touches on &lt;a href=&#34;http://www.tandfonline.com/doi/abs/10.1080/17421770802353758&#34;&gt;LeSage &amp;amp; Fischer (2008)&lt;/a&gt;&amp;rsquo;s argument motivating a spatial Durbin regression as &amp;ldquo;accounting for spatially-patterned ommitted covariates,&amp;rdquo; (Section 2.1, effective around page 280).&lt;/p&gt;
+The idea also touches on &lt;a href=&#34;http://www.tandfonline.com/doi/abs/10.1080/17421770802353758&#34;&gt;LeSage &amp;amp; Fischer (2008)&lt;/a&gt;&amp;lsquo;s argument motivating a spatial Durbin regression as &amp;ldquo;accounting for spatially-patterned ommitted covariates,&amp;rdquo; (Section 2.1, effective around page 280).&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s pretty simple to show how it might affect regression below, so I&amp;rsquo;ve cooked up a short example using the Baltimore data. I think it&amp;rsquo;s important to understand this (just like apparent variance inflation in simulation designs due to $tr(\left[I - \lambda \mathbf{W}\right]^{-1}) \geq N$).&lt;/p&gt;
 &lt;p&gt;This is just one of those areas where, in theory, a &amp;ldquo;well-behaved&amp;rdquo; statement leads to results we&amp;rsquo;d want (identical estimates of $\beta$ between OLS and spatial error models), but when we use these models in reality, we must accept that empirical conditions will degrade these expectations.&lt;/p&gt;
 &lt;p&gt;So I&amp;rsquo;ll illustrate it on a standard PySAL dataset below, trying to show it as simply as possible.&lt;/p&gt;
@@ -1563,7 +1563,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/this-brexit-analysis-for-the-gisruk-competitions/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/170924246034/this-brexit-analysis-for-the-gisruk-competitions&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/170924246034/this-brexit-analysis-for-the-gisruk-competitions&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/170924246034/this-brexit-analysis-for-the-gisruk-competitions&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1575,7 +1575,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/this-should-probably-be-a-tweet/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/170848393729/this-should-probably-be-a-tweet&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/170848393729/this-should-probably-be-a-tweet&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/170848393729/this-should-probably-be-a-tweet&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1588,7 +1588,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/170340352694/never-thought-id-be-complaining-about-only-having&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/170340352694/never-thought-id-be-complaining-about-only-having&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/170340352694/never-thought-id-be-complaining-about-only-having&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1601,7 +1601,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/170285809114/its-neat-that-this-new-algorithm-is-working&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/170285809114/its-neat-that-this-new-algorithm-is-working&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/170285809114/its-neat-that-this-new-algorithm-is-working&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1614,7 +1614,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/164316207339/i-forgot-how-killer-the-builtin-matplotlib&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/164316207339/i-forgot-how-killer-the-builtin-matplotlib&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/164316207339/i-forgot-how-killer-the-builtin-matplotlib&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1626,7 +1626,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/an-article-ill-never-get-to-write-because-my/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/163152480844/an-article-ill-never-get-to-write-because-my&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/163152480844/an-article-ill-never-get-to-write-because-my&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/163152480844/an-article-ill-never-get-to-write-because-my&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1642,7 +1642,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/162645483709/i-think-thisll-end-up-being-the-big-story-from-my&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/162645483709/i-think-thisll-end-up-being-the-big-story-from-my&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/162645483709/i-think-thisll-end-up-being-the-big-story-from-my&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1661,7 +1661,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/162370153119/some-thoughts-on-rise-of-the-thought-leader&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/162370153119/some-thoughts-on-rise-of-the-thought-leader&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/162370153119/some-thoughts-on-rise-of-the-thought-leader&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1672,7 +1672,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/i-am-sure-my-dissertation-would-be-finished/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/159237146849/i-am-sure-my-dissertation-would-be-finished&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/159237146849/i-am-sure-my-dissertation-would-be-finished&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/159237146849/i-am-sure-my-dissertation-would-be-finished&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1691,7 +1691,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/158788630024/i-guess-i-have-code-and-math-working-now&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/158788630024/i-guess-i-have-code-and-math-working-now&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/158788630024/i-guess-i-have-code-and-math-working-now&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1702,7 +1702,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/spatial-econometric-hmc-in-python/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/158786021349/spatial-econometric-hmc-in-python&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/158786021349/spatial-econometric-hmc-in-python&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/158786021349/spatial-econometric-hmc-in-python&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1714,7 +1714,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/is-my-uptime-excited-or-scared-you-decide/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;you decide.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/158464131179/is-my-uptime-excited-or-scared-you-decide&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/158464131179/is-my-uptime-excited-or-scared-you-decide&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/158464131179/is-my-uptime-excited-or-scared-you-decide&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1727,7 +1727,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/157594826829/all-those-p-values-will-be-lost-in-time-like&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/157594826829/all-those-p-values-will-be-lost-in-time-like&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/157594826829/all-those-p-values-will-be-lost-in-time-like&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1738,7 +1738,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/an-update-on-phd-burnout/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/155457780239/an-update-on-phd-burnout&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/155457780239/an-update-on-phd-burnout&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/155457780239/an-update-on-phd-burnout&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1749,7 +1749,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/a-short-exploration-of-the-2016-electoral-swing/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/153806452919/a-short-exploration-of-the-2016-electoral-swing&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/153806452919/a-short-exploration-of-the-2016-electoral-swing&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/153806452919/a-short-exploration-of-the-2016-electoral-swing&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1760,7 +1760,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/want-to-draw-spatially-correlated-values-wihtout/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/153529420134/want-to-draw-spatially-correlated-values-wihtout&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/153529420134/want-to-draw-spatially-correlated-values-wihtout&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/153529420134/want-to-draw-spatially-correlated-values-wihtout&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1771,8 +1771,8 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/working-between-python-2-and-python-3/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Whereas on my test server, this works, on the python 2 compute server, this yields zero always, since &lt;!-- raw HTML omitted --&gt;n_accepted&lt;!-- raw HTML omitted --&gt; is an &lt;!-- raw HTML omitted --&gt;int&lt;!-- raw HTML omitted --&gt; less than the int &lt;!-- raw HTML omitted --&gt;_total_iterations.&lt;!-- raw HTML omitted --&gt; Thus, the tuner takes the acceptance rate to be zero, even when the acceptance rate is likely never zero.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;After my summer of code experience, I’ve come to think this division behavior is &lt;!-- raw HTML omitted --&gt;the scariest&lt;!-- raw HTML omitted --&gt; design choice in python 2, and makes the jump from 2 to 3 and back &lt;!-- raw HTML omitted --&gt;so fraught&lt;!-- raw HTML omitted --&gt;. I totally forget about &lt;!-- raw HTML omitted --&gt;&lt;strong&gt;future&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt; because in 90% of my environments, I don’t need it. And, when I have to maintain code in both 2 and 3, bugs like this can’t be autoconverted, and often will only show by causing the program to act strangely, but not fail.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/153334732599/working-between-python-2-and-python-3&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/153334732599/working-between-python-2-and-python-3&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Whereas on my test server, this works, on the python 2 compute server, this yields zero always, since &lt;!-- raw HTML omitted --&gt;n_accepted&lt;!-- raw HTML omitted --&gt; is an &lt;!-- raw HTML omitted --&gt;int&lt;!-- raw HTML omitted --&gt; less than the int &lt;!-- raw HTML omitted --&gt;_total_iterations.&lt;!-- raw HTML omitted --&gt; Thus, the tuner takes the acceptance rate to be zero, even when the acceptance rate is likely never zero.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;After my summer of code experience, I’ve come to think this division behavior is &lt;!-- raw HTML omitted --&gt;the scariest&lt;!-- raw HTML omitted --&gt; design choice in python 2, and makes the jump from 2 to 3 and back &lt;!-- raw HTML omitted --&gt;so fraught&lt;!-- raw HTML omitted --&gt;. I totally forget about &lt;!-- raw HTML omitted --&gt;__future__&lt;!-- raw HTML omitted --&gt; because in 90% of my environments, I don’t need it. And, when I have to maintain code in both 2 and 3, bugs like this can’t be autoconverted, and often will only show by causing the program to act strangely, but not fail.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/153334732599/working-between-python-2-and-python-3&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1783,7 +1783,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/yet-another-elections-simulator/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/152313215409/yet-another-elections-simulator&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/152313215409/yet-another-elections-simulator&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/152313215409/yet-another-elections-simulator&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1795,7 +1795,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/finally-got-this-elections-simulator-working-the/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;finally got this elections simulator working, based on Linzer&amp;rsquo;s 2012 paper on gaussian mixture modelling for elections data.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/151986067019/finally-got-this-elections-simulator-working-the&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/151986067019/finally-got-this-elections-simulator-working-the&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/151986067019/finally-got-this-elections-simulator-working-the&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1808,7 +1808,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;images directly in the terminal! no fuss! although you have to use a special terminal emulator&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/151632705649/every-time-i-use-a-sixel-based-library-it-just&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/151632705649/every-time-i-use-a-sixel-based-library-it-just&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/151632705649/every-time-i-use-a-sixel-based-library-it-just&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1820,7 +1820,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;my spatially-correlated variance components model is finally coming together :)&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/151582868789/at-top-a-metropolis-within-gibbs-sampled-sar&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/151582868789/at-top-a-metropolis-within-gibbs-sampled-sar&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/151582868789/at-top-a-metropolis-within-gibbs-sampled-sar&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1831,7 +1831,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/how-one-weird-trick-helps-you-evaluate-correlated/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/151491815214/how-one-weird-trick-helps-you-evaluate-correlated&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/151491815214/how-one-weird-trick-helps-you-evaluate-correlated&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/151491815214/how-one-weird-trick-helps-you-evaluate-correlated&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1845,7 +1845,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;above is their geweke statistic versus my version &amp;amp; that found in CODA.&lt;/p&gt;
 &lt;p&gt;Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/151085840099/because-i-actually-post-all-of-my-stuff-to-gists&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/151085840099/because-i-actually-post-all-of-my-stuff-to-gists&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/151085840099/because-i-actually-post-all-of-my-stuff-to-gists&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1856,7 +1856,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/the-importance-of-centering-variables/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/150949047464/the-importance-of-centering-variables&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/150949047464/the-importance-of-centering-variables&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/150949047464/the-importance-of-centering-variables&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1870,7 +1870,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/150300301154/found-another-error-in-the-clea-as-i-am-building&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/150300301154/found-another-error-in-the-clea-as-i-am-building&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/150300301154/found-another-error-in-the-clea-as-i-am-building&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1881,7 +1881,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/the-joys-of-using-political-data/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/149764483499/the-joys-of-using-political-data&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/149764483499/the-joys-of-using-political-data&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/149764483499/the-joys-of-using-political-data&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1892,7 +1892,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/149591324934/working-on-a-paper-about-models-that-can-have-very&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/149591324934/working-on-a-paper-about-models-that-can-have-very&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/149591324934/working-on-a-paper-about-models-that-can-have-very&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1903,7 +1903,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/progress-in-a-human-geography/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/149447103099/progress-in-a-human-geography&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/149447103099/progress-in-a-human-geography&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/149447103099/progress-in-a-human-geography&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1914,7 +1914,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/formally-winding-down-gsoc/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/149088232834/formally-winding-down-gsoc&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/149088232834/formally-winding-down-gsoc&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/149088232834/formally-winding-down-gsoc&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1925,7 +1925,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/148526668179/as-im-having-to-wind-down-on-summer-of-code-work&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/148526668179/as-im-having-to-wind-down-on-summer-of-code-work&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/148526668179/as-im-having-to-wind-down-on-summer-of-code-work&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1952,7 +1952,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/147934748469/a-post-scipy-chicago-update&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/147934748469/a-post-scipy-chicago-update&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/147934748469/a-post-scipy-chicago-update&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1963,7 +1963,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/im-trying-to-recover-from-a-bit-of-burnout-this/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/147564537909/im-trying-to-recover-from-a-bit-of-burnout-this&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/147564537909/im-trying-to-recover-from-a-bit-of-burnout-this&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/147564537909/im-trying-to-recover-from-a-bit-of-burnout-this&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1974,7 +1974,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/using-soft-dependencies-effectively/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/147281675654/using-soft-dependencies-effectively&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/147281675654/using-soft-dependencies-effectively&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/147281675654/using-soft-dependencies-effectively&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1985,7 +1985,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/partially-applied-classes-with-new/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/146381586854/partially-applied-classes-with-new&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/146381586854/partially-applied-classes-with-new&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/146381586854/partially-applied-classes-with-new&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2001,7 +2001,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/146181184144/more-on-the-log-determinant-stuff-i-think-ive&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/146181184144/more-on-the-log-determinant-stuff-i-think-ive&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/146181184144/more-on-the-log-determinant-stuff-i-think-ive&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2027,7 +2027,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/146080088369/thisll-be-a-more-lucid-writeup-of-what-i-was&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/146080088369/thisll-be-a-more-lucid-writeup-of-what-i-was&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/146080088369/thisll-be-a-more-lucid-writeup-of-what-i-was&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2038,7 +2038,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/man-im-so-close-to-a-pretty-massive-speedup-of/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/146054502134/man-im-so-close-to-a-pretty-massive-speedup-of&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/146054502134/man-im-so-close-to-a-pretty-massive-speedup-of&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/146054502134/man-im-so-close-to-a-pretty-massive-speedup-of&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2074,7 +2074,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/145529412394/gsoc-call-notes-june-6-2016&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/145529412394/gsoc-call-notes-june-6-2016&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/145529412394/gsoc-call-notes-june-6-2016&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2091,7 +2091,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/145377908429/the-beginnings-of-a-new-api&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/145377908429/the-beginnings-of-a-new-api&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/145377908429/the-beginnings-of-a-new-api&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2108,7 +2108,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/145342859409/visual-display-of-complex-data-can-be-pretty&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/145342859409/visual-display-of-complex-data-can-be-pretty&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/145342859409/visual-display-of-complex-data-can-be-pretty&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2124,7 +2124,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/144898901434/call-notes-about-my-request-for-comment&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/144898901434/call-notes-about-my-request-for-comment&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/144898901434/call-notes-about-my-request-for-comment&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2135,7 +2135,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/gsoc-introduction/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/144823917304/gsoc-introduction&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/144823917304/gsoc-introduction&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/144823917304/gsoc-introduction&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2246,7 +2246,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/144624526699/rfc-for-gsoc-feedback&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/144624526699/rfc-for-gsoc-feedback&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/144624526699/rfc-for-gsoc-feedback&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2267,7 +2267,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/144578503954/puzzles-about-misreplication&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/144578503954/puzzles-about-misreplication&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/144578503954/puzzles-about-misreplication&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2278,7 +2278,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/kinda-nice-when-the-model-youre-working-with/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/144494958589/kinda-nice-when-the-model-youre-working-with&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/144494958589/kinda-nice-when-the-model-youre-working-with&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/144494958589/kinda-nice-when-the-model-youre-working-with&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2290,7 +2290,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/lit-review-habits/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/143457868834/lit-review-habits&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/143457868834/lit-review-habits&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/143457868834/lit-review-habits&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2457,7 +2457,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/141637449594/bringing-classifiers-alive-in-pysal&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/141637449594/bringing-classifiers-alive-in-pysal&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/141637449594/bringing-classifiers-alive-in-pysal&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2469,7 +2469,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/yep-thats-image-view-from-within-a-terminal/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;thanks, libsixel&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/141535488839/yep-thats-image-view-from-within-a-terminal&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/141535488839/yep-thats-image-view-from-within-a-terminal&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/141535488839/yep-thats-image-view-from-within-a-terminal&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2480,7 +2480,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/npr-north-carolina-voters-are-likely-to-be/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/140876677624/npr-north-carolina-voters-are-likely-to-be&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/140876677624/npr-north-carolina-voters-are-likely-to-be&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/140876677624/npr-north-carolina-voters-are-likely-to-be&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2502,7 +2502,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/139808556364/a-quick-note-on-hierarchical-linear-models&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/139808556364/a-quick-note-on-hierarchical-linear-models&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/139808556364/a-quick-note-on-hierarchical-linear-models&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2527,7 +2527,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/139457868619/trivial-python-multiprocessing&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/139457868619/trivial-python-multiprocessing&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/139457868619/trivial-python-multiprocessing&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2559,7 +2559,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/139404598754/a-bite-of-a-free-lunch-optimizing-numerical&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/139404598754/a-bite-of-a-free-lunch-optimizing-numerical&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/139404598754/a-bite-of-a-free-lunch-optimizing-numerical&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2571,7 +2571,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/one-of-my-favorite-diagrams-from-micah-altmans/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;from micah altman&amp;rsquo;s fantastic dissertation.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/139003960829/one-of-my-favorite-diagrams-from-micah-altmans&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/139003960829/one-of-my-favorite-diagrams-from-micah-altmans&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/139003960829/one-of-my-favorite-diagrams-from-micah-altmans&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2582,7 +2582,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/a-tricky-bit-implementing-skyums-algorithm/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/137737097374/a-tricky-bit-implementing-skyums-algorithm&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/137737097374/a-tricky-bit-implementing-skyums-algorithm&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/137737097374/a-tricky-bit-implementing-skyums-algorithm&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2593,7 +2593,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/trajectories-transitions/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/137311097204/trajectories-transitions&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/137311097204/trajectories-transitions&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/137311097204/trajectories-transitions&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2605,7 +2605,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/thelandofmaps-us-congressional-districts/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/137262070644/thelandofmaps-us-congressional-districts&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/137262070644/thelandofmaps-us-congressional-districts&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/137262070644/thelandofmaps-us-congressional-districts&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2616,7 +2616,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/welp-that-was-fun-headed-back-to-phx/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/135410899354/welp-that-was-fun-headed-back-to-phx&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/135410899354/welp-that-was-fun-headed-back-to-phx&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/135410899354/welp-that-was-fun-headed-back-to-phx&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2636,7 +2636,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/134890851709/the-competence-ceiling&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/134890851709/the-competence-ceiling&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/134890851709/the-competence-ceiling&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2647,7 +2647,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/new-york-is-very-nice/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/134436524204/new-york-is-very-nice&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/134436524204/new-york-is-very-nice&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/134436524204/new-york-is-very-nice&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2658,7 +2658,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/the-compilation-errorreading-technical-articles/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/131828343409/the-compilation-errorreading-technical-articles&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/131828343409/the-compilation-errorreading-technical-articles&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/131828343409/the-compilation-errorreading-technical-articles&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2669,7 +2669,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/131314971584/fits-nicely-with-one-of-my-favorite-quotes-as-a&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/131314971584/fits-nicely-with-one-of-my-favorite-quotes-as-a&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/131314971584/fits-nicely-with-one-of-my-favorite-quotes-as-a&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2680,7 +2680,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/having-a-last-name-of-wolf-has-never-been-an/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/130797097034/having-a-last-name-of-wolf-has-never-been-an&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/130797097034/having-a-last-name-of-wolf-has-never-been-an&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/130797097034/having-a-last-name-of-wolf-has-never-been-an&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2719,7 +2719,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/130708836859/some-realizations-on-foss-governance&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/130708836859/some-realizations-on-foss-governance&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/130708836859/some-realizations-on-foss-governance&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2730,7 +2730,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/two-points-in-learning-to-program/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/130600717284/two-points-in-learning-to-program&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/130600717284/two-points-in-learning-to-program&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/130600717284/two-points-in-learning-to-program&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2741,7 +2741,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/ah-yes-i-am-in-fact-skilled-in-spatial/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/130290300219/ah-yes-i-am-in-fact-skilled-in-spatial&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/130290300219/ah-yes-i-am-in-fact-skilled-in-spatial&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/130290300219/ah-yes-i-am-in-fact-skilled-in-spatial&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2752,7 +2752,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/things-i-remind-myself-always/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/129337465084/things-i-remind-myself-always&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/129337465084/things-i-remind-myself-always&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/129337465084/things-i-remind-myself-always&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2763,7 +2763,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/first-cartodb-map/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/127619060729/first-cartodb-map&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/127619060729/first-cartodb-map&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/127619060729/first-cartodb-map&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2778,7 +2778,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/125470664109/on-the-subject-of-porting&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/125470664109/on-the-subject-of-porting&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/125470664109/on-the-subject-of-porting&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2789,7 +2789,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/getting-excited-about-some-cool-new-exploration/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/125326394569/getting-excited-about-some-cool-new-exploration&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/125326394569/getting-excited-about-some-cool-new-exploration&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/125326394569/getting-excited-about-some-cool-new-exploration&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2812,7 +2812,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/125215868119/reflections-on-a-hard-won-win-for-pysal&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/125215868119/reflections-on-a-hard-won-win-for-pysal&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/125215868119/reflections-on-a-hard-won-win-for-pysal&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2824,7 +2824,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/that-compression-is-bewilderingly-good-the-full/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/125206351674/that-compression-is-bewilderingly-good-the-full&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/125206351674/that-compression-is-bewilderingly-good-the-full&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/125206351674/that-compression-is-bewilderingly-good-the-full&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2836,7 +2836,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/i-have-written-more-code-in-the-day-after-scipy/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/124027750054/i-have-written-more-code-in-the-day-after-scipy&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/124027750054/i-have-written-more-code-in-the-day-after-scipy&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/124027750054/i-have-written-more-code-in-the-day-after-scipy&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2847,7 +2847,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/gearing-up-for-the-last-day-of-scipy-2015/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/123862261199/gearing-up-for-the-last-day-of-scipy-2015&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/123862261199/gearing-up-for-the-last-day-of-scipy-2015&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/123862261199/gearing-up-for-the-last-day-of-scipy-2015&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2866,7 +2866,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/121892041274/i-usually-dont-think-much-about&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/121892041274/i-usually-dont-think-much-about&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/121892041274/i-usually-dont-think-much-about&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2878,7 +2878,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/cenpy-big-query/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/121692978004/cenpy-big-query&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/121692978004/cenpy-big-query&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/121692978004/cenpy-big-query&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2889,7 +2889,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/mulitprocessing-business-in-the-front-parallel/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/121376901874/mulitprocessing-business-in-the-front-parallel&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/121376901874/mulitprocessing-business-in-the-front-parallel&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/121376901874/mulitprocessing-business-in-the-front-parallel&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2906,7 +2906,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/121293267709/cenpy-is-now-pip-installable&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/121293267709/cenpy-is-now-pip-installable&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/121293267709/cenpy-is-now-pip-installable&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2919,7 +2919,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/120881995674/maybe-the-shapefile-was-right-after-all-is-right&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/120881995674/maybe-the-shapefile-was-right-after-all-is-right&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/120881995674/maybe-the-shapefile-was-right-after-all-is-right&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2933,7 +2933,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/120805077929/cenpy-an-exploratory-interface-to-the-census&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/120805077929/cenpy-an-exploratory-interface-to-the-census&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/120805077929/cenpy-an-exploratory-interface-to-the-census&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2945,7 +2945,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/heads-up-pip-bug/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/119697266474/heads-up-pip-bug&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/119697266474/heads-up-pip-bug&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/119697266474/heads-up-pip-bug&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2959,7 +2959,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/119662508644/scattershot-my-summer-job-sf-and-gitter-irc&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/119662508644/scattershot-my-summer-job-sf-and-gitter-irc&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/119662508644/scattershot-my-summer-job-sf-and-gitter-irc&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2979,7 +2979,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/119345228474/happy-geohacking&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/119345228474/happy-geohacking&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/119345228474/happy-geohacking&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2990,7 +2990,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/this-is-insane-the-speed-differences-between/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/109357444384/this-is-insane-the-speed-differences-between&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/109357444384/this-is-insane-the-speed-differences-between&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/109357444384/this-is-insane-the-speed-differences-between&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3001,7 +3001,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/and-what-did-we-learn-today-kids/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/103236294459/and-what-did-we-learn-today-kids&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/103236294459/and-what-did-we-learn-today-kids&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/103236294459/and-what-did-we-learn-today-kids&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3012,7 +3012,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/its-funny-how-a-little-math-can-simplify-a/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/101273411639/its-funny-how-a-little-math-can-simplify-a&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/101273411639/its-funny-how-a-little-math-can-simplify-a&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/101273411639/its-funny-how-a-little-math-can-simplify-a&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3065,7 +3065,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/101245858269/making-sense-of-nmmi&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/101245858269/making-sense-of-nmmi&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/101245858269/making-sense-of-nmmi&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3077,7 +3077,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/you-know-i-like-all-this-math-and-engineering/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/100771770239/you-know-i-like-all-this-math-and-engineering&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/100771770239/you-know-i-like-all-this-math-and-engineering&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/100771770239/you-know-i-like-all-this-math-and-engineering&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3091,7 +3091,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/98908896789/voronoi-gripes&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/98908896789/voronoi-gripes&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/98908896789/voronoi-gripes&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3102,7 +3102,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/about-the-voronoi-diagram-problem/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/98870783624/about-the-voronoi-diagram-problem&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/98870783624/about-the-voronoi-diagram-problem&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/98870783624/about-the-voronoi-diagram-problem&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3121,7 +3121,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/98840800049/a-fun-little-bug-in-my-apparently-outdated-qgis&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/98840800049/a-fun-little-bug-in-my-apparently-outdated-qgis&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/98840800049/a-fun-little-bug-in-my-apparently-outdated-qgis&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3170,7 +3170,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/98496154574/some-new-realizations-on-oooooold-material&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/98496154574/some-new-realizations-on-oooooold-material&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/98496154574/some-new-realizations-on-oooooold-material&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3182,7 +3182,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/a-short-realization-on-gelman-king-1994/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/97287883904/a-short-realization-on-gelman-king-1994&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/97287883904/a-short-realization-on-gelman-king-1994&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/97287883904/a-short-realization-on-gelman-king-1994&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3193,7 +3193,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/so-say-youre-working-with-two-states/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/95500223474/so-say-youre-working-with-two-states&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/95500223474/so-say-youre-working-with-two-states&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/95500223474/so-say-youre-working-with-two-states&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3204,7 +3204,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/my-time-using-linux-has-apparently-made-me-quite/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/89112989819/my-time-using-linux-has-apparently-made-me-quite&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/89112989819/my-time-using-linux-has-apparently-made-me-quite&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/89112989819/my-time-using-linux-has-apparently-made-me-quite&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3215,7 +3215,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/going-to-scipy-2014/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/87201175900/going-to-scipy-2014&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/87201175900/going-to-scipy-2014&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/87201175900/going-to-scipy-2014&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3226,7 +3226,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/ok-so-i-think-my-days-of-using-texstudio-are/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/85162213334/ok-so-i-think-my-days-of-using-texstudio-are&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/85162213334/ok-so-i-think-my-days-of-using-texstudio-are&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/85162213334/ok-so-i-think-my-days-of-using-texstudio-are&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3237,7 +3237,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/track-changes-may-in-fact-be-the-worst/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/84405626889/track-changes-may-in-fact-be-the-worst&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/84405626889/track-changes-may-in-fact-be-the-worst&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/84405626889/track-changes-may-in-fact-be-the-worst&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3248,7 +3248,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/something-about-custom-blue-gamuts-makes-for-a/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/84292178194/something-about-custom-blue-gamuts-makes-for-a&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/84292178194/something-about-custom-blue-gamuts-makes-for-a&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/84292178194/something-about-custom-blue-gamuts-makes-for-a&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3259,7 +3259,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/gotta-wonder-if-her-parents-were-just-having-a/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/83633422918/gotta-wonder-if-her-parents-were-just-having-a&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/83633422918/gotta-wonder-if-her-parents-were-just-having-a&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/83633422918/gotta-wonder-if-her-parents-were-just-having-a&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3270,7 +3270,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/answer-keys-that-simply-tell-you/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/82874272373/answer-keys-that-simply-tell-you&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/82874272373/answer-keys-that-simply-tell-you&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/82874272373/answer-keys-that-simply-tell-you&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3281,7 +3281,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/its-so-frustrating-to-see-a-cool-idea-fall-by-the/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/82171050849/its-so-frustrating-to-see-a-cool-idea-fall-by-the&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/82171050849/its-so-frustrating-to-see-a-cool-idea-fall-by-the&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/82171050849/its-so-frustrating-to-see-a-cool-idea-fall-by-the&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3292,7 +3292,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/the-face-of-needing-a-spring-break/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/78888167020/the-face-of-needing-a-spring-break&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/78888167020/the-face-of-needing-a-spring-break&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/78888167020/the-face-of-needing-a-spring-break&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3304,7 +3304,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       <guid>/modified-an-existing-asu-beamer-template/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/78635674299/modified-an-existing-asu-beamer-template&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/78635674299/modified-an-existing-asu-beamer-template&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/78635674299/modified-an-existing-asu-beamer-template&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3315,7 +3315,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/welcome-week-tips/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/78417153835/welcome-week-tips&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/78417153835/welcome-week-tips&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/78417153835/welcome-week-tips&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3326,7 +3326,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/77996900074/i-guess-this-is-how-productivity-works-terminal&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/77996900074/i-guess-this-is-how-productivity-works-terminal&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/77996900074/i-guess-this-is-how-productivity-works-terminal&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3337,7 +3337,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/knowing-when-to-stop-reading-and-start-writing-is/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/77776702777/knowing-when-to-stop-reading-and-start-writing-is&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/77776702777/knowing-when-to-stop-reading-and-start-writing-is&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/77776702777/knowing-when-to-stop-reading-and-start-writing-is&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3348,7 +3348,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/77264557503/first-simple-program-in-julia-a-greedy-knapsack&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/77264557503/first-simple-program-in-julia-a-greedy-knapsack&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/77264557503/first-simple-program-in-julia-a-greedy-knapsack&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3359,7 +3359,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/went-crawling-back-into-workflowys-arms-today/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/76555996119/went-crawling-back-into-workflowys-arms-today&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/76555996119/went-crawling-back-into-workflowys-arms-today&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/76555996119/went-crawling-back-into-workflowys-arms-today&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3370,7 +3370,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/this-is-a-brighter-moment-of-graduate-school/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/76025082525/this-is-a-brighter-moment-of-graduate-school&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/76025082525/this-is-a-brighter-moment-of-graduate-school&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/76025082525/this-is-a-brighter-moment-of-graduate-school&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3381,7 +3381,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/time-management-or-fortitude/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75780723939/time-management-or-fortitude&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75780723939/time-management-or-fortitude&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/75780723939/time-management-or-fortitude&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3392,7 +3392,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75570984570/just-shipped-my-first-draft-off-deadlined-march&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75570984570/just-shipped-my-first-draft-off-deadlined-march&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/75570984570/just-shipped-my-first-draft-off-deadlined-march&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3403,7 +3403,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/on-perpsective/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75501321681/on-perpsective&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75501321681/on-perpsective&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/75501321681/on-perpsective&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3414,7 +3414,7 @@ plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
       
       <guid>/initialization/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75352899950/initialization&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75352899950/initialization&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&#39;https://yetanothergeographer.tumblr.com/75352899950/initialization&#39;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     

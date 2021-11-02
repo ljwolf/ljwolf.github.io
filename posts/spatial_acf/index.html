@@ -16,10 +16,10 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1635505807" />
+<link rel="stylesheet" href="/css/style.css?rnd=1635847778" />
 
 <meta property="og:title" content="Spatial Autocorrelation Functions" />
-<meta property="og:description" content="I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&#39;&#39; at which processes operate electorally. I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. The typical diameter at which the so-called &ldquo;spatial autocorrelation function&rdquo; goes to zero denotes how wide a typical spatial cluster might be, and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold." />
+<meta property="og:description" content="I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&rsquo;&rsquo; at which processes operate electorally. I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. The typical diameter at which the so-called &ldquo;spatial autocorrelation function&rdquo; goes to zero denotes how wide a typical spatial cluster might be, and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/spatial_acf/" />
 <meta property="article:published_time" content="2018-03-09T17:34:20+00:00" />
@@ -27,7 +27,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spatial Autocorrelation Functions"/>
-<meta name="twitter:description" content="I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&#39;&#39; at which processes operate electorally. I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. The typical diameter at which the so-called &ldquo;spatial autocorrelation function&rdquo; goes to zero denotes how wide a typical spatial cluster might be, and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold."/>
+<meta name="twitter:description" content="I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&rsquo;&rsquo; at which processes operate electorally. I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. The typical diameter at which the so-called &ldquo;spatial autocorrelation function&rdquo; goes to zero denotes how wide a typical spatial cluster might be, and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold."/>
 
 
 
@@ -68,7 +68,7 @@
             <h1>Spatial Autocorrelation Functions</h1>
         </header>
         <div class="content">
-            <p>I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale'' at which processes operate electorally.
+            <p>I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&rsquo;&rsquo; at which processes operate electorally.
 I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated.
 The typical diameter at which the so-called &ldquo;spatial autocorrelation function&rdquo; goes to zero denotes how wide a typical spatial cluster might be,
 and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold.</p>
@@ -184,7 +184,7 @@ plt<span style="color:#666">.</span>show()
 <p>With this adjacency matrix, we can compute a few interesting spatial statistics. The first, the Bivariate Moran statistic (from <a href="dx.doi.org/10.1111/j.1538-4632.1985.tb00849.x">Wartenburg (1985)</a>, a kind of <a href="https://en.wikipedia.org/wiki/Mantel_test">Mantel statistic</a>), relates a set of observations to the <em>spatial lag</em> of another set of observations.</p>
 <p>To be clear, the spatial lag is analogous to the temporal lag of a variate. In this case, the <em>spatial lag</em> refers to the average of the neighboring values around each observation. Using a row-standardized adjacency matrix (\mathbf{W}), the lag of (Y) is expressed simply as (\mathbf{W}Y).</p>
 <p>This means that the bivariate Moran&rsquo;s I statistic is stated for centered attribute vectors (y) and (x):
-\[ \frac{x'\mathbf{W}y}{x&rsquo;x}\]</p>
+\[ \frac{x&rsquo;\mathbf{W}y}{x&rsquo;x}\]</p>
 <p>This results in a single statistic (and accompanying (p)-values computed using permutation methods) that relates the values of attribute (x) to the <em>lag</em> of (y). We can use this statistic to relate votes between two times. In the following, we see that county vote in the previous year is a good predictor of the vote in the next year:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">bvi <span style="color:#666">=</span> ps<span style="color:#666">.</span>Moran_BV(votes[<span style="color:#ba2121">&#39;tpv_2008&#39;</span>], votes[<span style="color:#ba2121">&#39;tpv_2012&#39;</span>], w<span style="color:#666">=</span>W)
 bvi<span style="color:#666">.</span>I, bvi<span style="color:#666">.</span>p_sim
@@ -242,7 +242,7 @@ plt<span style="color:#666">.</span>title(<span style="color:#ba2121">&#39;Chang
    <span style="color:#666">.</span>sort_values([<span style="color:#ba2121">&#39;mlocal_1216&#39;</span>], ascending<span style="color:#666">=</span>False)
    <span style="color:#666">.</span>head(<span style="color:#666">25</span>))
 </code></pre></div><!-- raw HTML omitted -->
-<p>There aren&rsquo;t many observations in this quadrant. This indicates quadrants whose swing was more Republican than average while their neighbors' swings were more <em>Democrat</em> than average. Note that this relates to the <em>mean national swing</em> as the unweighted average swing at the county level. So, this captues the counties who swung <em>more</em> Republican than average over counties <strong>while their neighbors swung more Democrat</strong> than average.</p>
+<p>There aren&rsquo;t many observations in this quadrant. This indicates quadrants whose swing was more Republican than average while their neighbors&rsquo; swings were more <em>Democrat</em> than average. Note that this relates to the <em>mean national swing</em> as the unweighted average swing at the county level. So, this captues the counties who swung <em>more</em> Republican than average over counties <strong>while their neighbors swung more Democrat</strong> than average.</p>
 <p>We see some pretty counter-iintuitive counties here. Linn county, OR and Lake county, CO weren&rsquo;t things that were on my radar, but it seems they&rsquo;ve moved anomalously towards the Republicans while their neighbors intensified in Democratic support.</p>
 <h3 id="quadrant-iv">Quadrant IV</h3>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(lmos<span style="color:#666">.</span>query(<span style="color:#ba2121">&#39;mlocal_p_1216 &lt; .01 and mlocal_quad_1216 == 4&#39;</span>)
@@ -306,9 +306,9 @@ plt<span style="color:#666">.</span>show()
 </code></pre></div><p><img src="images/spacf_output_58_0.png" alt="png"></p>
 <p>Interpreting this, we have to move around 16 counties out before the autocorrelation between counties becomes negative. Remember, this statistic considers only (k)-minimal neighbors, not all observations below (k)th order neighbors. If you don&rsquo;t consider (k)-minimal neighbors (rather than (k)th order), then sets of higher-order neighbors will contain the set of lower-order neighbors.</p>
 <p>In a time series context, this would be akin to considering both the observation from 2 periods ago <em>and</em> the previous observation in the set of 2nd order neighbors. In contrast, this graph shows the correlation as the set of &ldquo;considered&rdquo; counties radiates uniformly outwards from each focal county.</p>
-<p>Thus, a typical ``cluster'' in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you&rsquo;re right. We need to account for the <em>whole</em> neighborhood contained with the (k)-radius cluster:</p>
+<p>Thus, a typical ``cluster&rsquo;&rsquo; in the sense of counties being more related to each other than not, is a subgraph somewhere south of 15-counties in radius. If this seems too big to you, you&rsquo;re right. We need to account for the <em>whole</em> neighborhood contained with the (k)-radius cluster:</p>
 <h3 id="conditional-width-of-cluster-size">Conditional width of cluster size</h3>
-<p>The partial correlation plot <em>does</em> condition on the neighbors below (k)-th order. So, the correlation between the (k)-minimal neighbors and the source observations is conditional on 1st through (k-1)-minimal neighbors. We can use this plot to adequately identify the ``order'' of the spatial process, if we treat it as a spatial markov random field.</p>
+<p>The partial correlation plot <em>does</em> condition on the neighbors below (k)-th order. So, the correlation between the (k)-minimal neighbors and the source observations is conditional on 1st through (k-1)-minimal neighbors. We can use this plot to adequately identify the ``order&rsquo;&rsquo; of the spatial process, if we treat it as a spatial markov random field.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plags <span style="color:#666">=</span> spacf<span style="color:#666">.</span>sppacf(votes[[<span style="color:#ba2121">&#39;tpv_2016&#39;</span>]]<span style="color:#666">.</span>values <span style="color:#666">-</span>votes[[<span style="color:#ba2121">&#39;tpv_2012&#39;</span>]]<span style="color:#666">.</span>values , W, order<span style="color:#666">=</span><span style="color:#666">10</span>)
 plt<span style="color:#666">.</span>figure(figsize<span style="color:#666">=</span>(<span style="color:#666">1.6</span><span style="color:#666">*</span><span style="color:#666">4</span>,<span style="color:#666">4</span>))
 plt<span style="color:#666">.</span>plot(plags, linewidth<span style="color:#666">=</span><span style="color:#666">5</span>, color<span style="color:#666">=</span><span style="color:#ba2121">&#39;slategrey&#39;</span>)
