@@ -36,10 +36,10 @@ What's the model's prediction of the listing price of a detached house in 1999? 
 ## 2.4 (Challenge)
 Is the estimated relationship between price and year *in this model* linear?
 
-## 2.4
+## 2.5
 Are there any issues with the model that you can identify? [^hint-bias]
 
-## 2.5 
+## 2.6
 Can you use this model to predict next year's prices? Why or why not?
 
 # 3. Another Linear Model
