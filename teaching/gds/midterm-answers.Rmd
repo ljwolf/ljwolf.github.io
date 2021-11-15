@@ -1,0 +1,595 @@
+---
+title: "Midterm Asessment"
+author: ''
+date: 'Due: Wednesday, 3rd November, at 2PM London'
+output:
+  html_document:
+    theme: flatly
+    highlight: kate
+    toc: yes
+    toc_float: yes
+---
+
+This assessment will test your knowledge & abilities to work with data in R. Complete what you can; incomplete answers will still be able to achieve partial credit, and non-working code or descriptions of what you *think* you should do will also receive partial credit. Also, if a question has a (c) next to it, it's considered a **"Challenge" question**! So, you can still score OK if you leave it blank. Submit the HTML or PDF of the "knitted" document for maximum points. 
+
+Data for the assessment is available alongside this document on the course blackboard, or [here](https://ljwolf.org/teaching/gds/midterm-data.zip).
+
+```{r, show=F, echo=F, warning=F, message=F}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+kable <- function(data){
+  knitr::kable(data) %>% 
+    kable_styling(., bootstrap_options = c("striped", "hover"))
+}
+```
+
+
+# Section 1: Concepts {.tabset}
+
+The data sets shown in the tabs below are included with your midterm assessment. Each of the data sets may have one (or more) "tidy" issues, and thus may violate the three rules of tidy data we've discussed before in the course:
+
+1. Each *variable* must have its own **column**.
+2. Each *sample* must have its own **row**.
+3. Every *value* must have its own **cell**.
+
+Using this information,^[You may also find the [original *Tidy Data* paper](http://www.jstatsoft.org/v59/i10/paper) useful in describing the different commonly-encountered issues in data formatting.] describe the following data sets in terms of their "tidyness." Are the data sets tidy? If so, why? If not, why not? Note that I'm asking for a short paragraph; no code is needed to answer these fully. 
+
+Sometimes, I also provide a rationale for why the data is displayed this way. This* **does not mean** *the data is tidy!
+
+*Note: click the tabs to cycle through each of the data sets. *
+
+## Movies
+This data set describes the finances of movies in terms of the movie budget (`budget`), the domestic (US) gross box office revenue (`domgross`) and the international box office revenue (`intgross`) from 1970 to 2013.^[Remember: I'm just using the `knitr::kable()` function to print the table all pretty-like in the RMarkdown.] 
+
+```{r movies, message=F, warning=F}
+movies <- read_csv('./midterm-movies.csv')
+movies %>% head(12) %>% kable()
+```
+
+*This dataset is __not tidy__. The column "finance" contains the different variable names that need to get turned into columns. This means that the column "dollars" does all contain dollar amounts, but they come from the same __sample__: the movie. Your target should have a dataframe where each row is a movie, and each column expresses the year of the movie, the budget of the movie, the domestic gross of the movie, and the international gross of the movie.* 
+
+## Aussie Birds
+This dataset counts the numbers of bird species recorded in urban or rural parts of bioregions across Australia. The survey was conducted from 2014 to 2015. Shown below are the first 10 columns of six random rows from the dataframe, as there are many more bird species in Australia. This data is formatted this way in order to make the selection of specific species easy.
+```{r birds, message=F, warning=F}
+birds <- read_csv('./midterm-birds.csv')
+birds %>% drop_na() %>% arrange(bioregions) %>% sample_n(6) %>% select(1:10) %>% kable()
+```
+
+*This dataset is __not tidy__. The "species" variable is implicit, and spread along columns... In order to tidy it, your final dataframe should have year, urban/rural classification, bioregion, species, and count.*
+
+## Songs
+This dataset describes 32,833 songs on Spotify in terms of statistics that Spotify record about the song.^[This is scraped using the [`spotifyr` package.](https://www.rcharlie.com/spotifyr/)] Below, I only a show a few columns from the dataset, but a few columns are explained.^[
+`danceability` measures how suitable a track is for dancing, varies from 0 (not danceable) to 1 (danceable). `energy` is a measure of the "intensity" of the song, varies from 0 (very relaxing, Shoegaze) to 1 (very energetic, Death Metal). `loudness` is the average decibel value of the track, varies from -60 to zero. `speechiness` gives the level of "talkiness" in a track, varies from 0 (no spoken words) to 1 (all spoken words), but tracks over *.66* are *probably* nearly all spoken word, and tracks below *.33* are *probably* songs. `acousticness` is the same as `speechiness`, but measuring whether instruments are not amplified; `liveness` but for whether the track has a live audience. `valence` tells you whether a track is "happy," with higher scores indicate happier music. Finally, `tempo` records the average beats per minute for the track and `duration_ms` provides the duration of the song in milliseconds. 
+] This data is formatted directly from the Spotify API, and so is structured for ease of use in a database.
+```{r spotify, message=F, warning=F}
+spotify <- read_csv('./midterm-songs.csv')
+spotify %>% select(track_name, track_artist, 
+                   track_popularity, 
+                   danceability, loudness, duration_ms) %>% 
+  sample_n(10, weight=track_popularity) %>% 
+  kable()
+```
+
+*This dataset is __tidy__*`r emo::ji('party')`*Each row denotes a song on spotify. The only way you may think it's not tidy is if the song variable contains information on the remix and collaborator(s) on the song. This is true, but the distinction between where a variable stops and where it starts is not always so clear. If the track title includes "(feat. Jay-Z)", then you can use __feature engineering__ to build a new variable that tries to extract this information. However, each cell has not intentionally coded a value that includes "feat." or "Remix" info, so it's less reasonable to suggest that __all of__* `track_title` *contains two (or more) variables.* 
+
+## French Trains
+
+These are the number of trains that have run between any two stations for services operated by the National Society of French Railways, the state-owned rail company in France, from 2015 to 2018. Below, I just show the first ten originating stations (where the trains leave from) and the first four destination stations (where the trains arrive). This kind of data is often called "spatial interaction data," and is used to measure the "interaction" between different spatial units. It is often presented in this format for usability: readers can scan across a row to quickly compare the number of trains that destinations receive from a specific origin. 
+
+```{r train, message=F, warning=F}
+trains <- read_csv('./midterm-trains.csv')
+trains %>% 
+  select(1:5) %>% 
+  slice(1:10) %>% 
+  kable()
+```
+
+*This dataset is __not tidy__! the "destination" variable is spread implicitly over the columns. That is, the data is wider than it should be to be tidy. The tidy dataset would have source, destination, and count columns.*
+
+## EU Energy
+
+The following table records the percentage energy supplied by different forms of energy across countries in the EU, as well as the ["EU-28"](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:EU_enlargements) and ["EA-19"](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Euro_area_enlargements) groups of European member nations. This kind of wide-but-short display format is often useful to fit tables like this alongside text in a document.
+```{r energy, message=F, warning=F}
+energy <- read_csv('./midterm-energy.csv')
+energy %>% select(1:12) %>% kable()
+```
+
+*This dataset is __not tidy__! Its transpose, however, is! One "measurement" or "sample" should correspond to a row. So, generally speaking, we'd want one set of observations to all hang logically together, recording all the information we have about a unit of analysis. So, the clearest "tidy" version for this data is long, with one column of "energy type," one column of "country", and then the country column. How to deal with the EU/EA groupings of countries can be done either through redefining what the "country" variable means (it could be "energy_market" or "supply_zone"), or the values could be separated into their own tables, or could be used to indicate the aggregation into which each country falls. For the "total" energy type, though, that needs to be removed from this representation. I wouldn't expect the latter, but either of the first two are reasonable.*
+ 
+*One common interpretation of the tidy version of this data is just the transpose of the current dataframe. I can understand this, but it's not as clear; the "energy type" variable is split across columns in this case.*
+ 
+
+## MarioKart
+This dataset describes MarioKart 64 "World Record" races. There are typically two "categories" in MarioKart racing: the "Single Lap" category---how fast a racer can complete a single lap---and "Three Lap," which measures the time to complete a typical three-lap race. Along with the times (in seconds), the date for the most recent world record is recorded. This is often the format in which tables like this are viewed. 
+```{r mariokart, message=F, warning=F}
+mk_records <- read_csv('./midterm-races.csv')
+mk_records %>% kable()
+```
+
+*This data is not tidy! the variable "race type" is spread over the columns, but is mixed into each of the relevant features. This will be somewhat more challenging to tidy! The target dataframe should have one world record for each row, with columns track, event, time, and date as columns.*
+
+## Eco Risk
+
+The following are [Paini et al.](https://www.pnas.org/content/113/27/7575)'s estimates of the potential cost (in millions of USD) of invasive species to the ecosystem of each country. This is a direct digitization of [table S2 in the Supplemental Material](https://www.pnas.org/content/pnas/suppl/2016/06/16/1602205113.DCSupplemental/pnas.1602205113.sapp.pdf), so the formatting of the table is decided by concerns of printing and typesetting.^[Note that I'm using the `name_repair` option of `read_csv()` in order to get *exactly* the column names that are in `midterm-risk.csv`. Without this option, `readr::read_csv` will append extra values to the column names in order to ensure they are each unique. Try this by removing the `name_repair` argument, or setting it equal to `"unique"` instead of `"minimal"`.]
+```{r risk, message=F, warning=F}
+risk <- read_csv('./midterm-risk.csv', name_repair='minimal')
+risk %>% kable()
+```
+
+*This data is not tidy! It should only contain three columns in the "cleaned" version. The most reasonable way to clean this datay may also not involve pivots...*
+
+# Section 2: Cleaning {.tabset}
+
+For each of the data sets in Section 1, can you create a tidy version of the data set?
+
+## Movies
+
+<span style="color: white;">hint: this may need to take rows and turn them into columns!<span>
+
+*This one is a very straightforward `pivot_wider()`:*
+
+```{r}
+movies_tidy <- movies %>% 
+  pivot_wider(id_cols=c(year, movie_name), 
+              names_from=finance, 
+              values_from=dollars)
+movies_tidy %>% head(6) %>% kable()
+```
+
+## Aussie Birds
+
+<span style="color: white;">hint: this may need to take columns and turn them into rows!<span>
+
+*This one is a very straight-forward `pivot_longer()`, where the bird columns are converted into rows:*
+
+```{r}
+birds_tidy <- birds %>% pivot_longer(`Bassian Thrush`:`Grey Fantail`)
+birds_tidy %>% head(6) %>% kable()
+```
+
+## Songs
+
+<span style="color: white;">hint: pay attention to the three rules; sometimes, you get lucky!<span>
+
+*This one is already tidy:*
+
+```{r}
+spotify <- spotify
+spotify %>% head(6) %>% kable()
+```
+
+## French Trains
+
+<span style="color: white;">hint: think very carefully about what the variables are here!<span>
+
+*This one again is a pivot_longer, but you need to make sure to duplicate __only__ the departure station!*
+
+```{r}
+trains_tidy <- trains %>% pivot_longer(-departure_station, 
+                        names_to='destination_station', 
+                        values_to='n_trains')
+trains_tidy %>% head(6) %>% kable()
+```
+
+
+## EU Energy
+
+<span style="color: white;">hint: sometimes, we must pivot one direction before we pivot another!<span>
+
+*This one is a `pivot_longer()`, with a `filter()` to make the `energy_type()` column a true variable. Alternatively, you could `pivot_wider()` after this, as discussed above, but this is not quite tidy: the `energy_type` variable would be spread over columns.*
+
+```{r}
+energy_tidy <- energy %>% 
+  pivot_longer(EU_28:GE, names_to="market", values_to="percent") %>% 
+  filter(energy_type != "Total")
+energy_tidy %>% head(6) %>% kable()
+```
+
+## MarioKart
+
+<span style="color: white;">hint: sometimes, you may need to pivot twice in the same direction!<span>
+
+*This one can be done by splitting and re-combining the data. It uses two pivots, either pivoting twice on the original data, or by splitting the dataset. This kind of "split and pivot" can be more complicated, but will be easier to understand. As a rule, split the data into bits that themselves are tidy, and then join them back together if that's useful.*
+
+```{r, eval=F}
+# clean only times
+times <- mk_records %>%
+  select(track, ends_with("record")) %>%
+  pivot_longer(ends_with("record"), 
+               names_to='race_type', 
+               values_to='duration') %>%
+  separate(race_type, c('event', NA, NA, NA))
+
+# clean only dates
+dates <- mk_records %>%
+  select(track, ends_with('date')) %>% 
+  pivot_longer(ends_with("date"), 
+               names_to='race_type', 
+               values_to='datetime') %>% 
+  separate(race_type, c('event', NA, NA, NA, NA))
+
+# merge everything back together, could use the merge or the *_join functions from the reading.
+mk_tidy <- inner_join(times, dates, by=c("track", "event"))
+
+mk_tidy %>% head(6) %>% kable()
+
+```
+
+## Eco Risk
+
+<span style="color: white;">hint: this data frame is uniquely messy! Try splitting it into parts that all look tidy, and then bringing them back together.<span>
+
+*This one basically __must__ be split and recombined. In theory, one could use the "melt and cast" strategy from the Tidy Data paper to first make the data as long as possible, then pivot it based on the columns you want. The `pivot_longer()` function is less powerul in this way, because it does not convert data types by default. So, the easiest direct approach is the split & recombine, as follows:*
+
+```{r, eval=F}
+risk_tidy <- rbind(risk[1:3], #first set of columns
+                   risk[4:6], #second set of columns
+                   risk[7:9]  #third set of columns
+                   )
+risk_tidy %>% head(6) %>% kable()
+```
+
+*For the melt & cast strategy from the very first reading, we leverage the fact that the "melt" function forces everything into the same type (if it can) so that it can all be stacked on top of one another. This usually means everything is converted into character data, and we have to manually convert it back at the end:*
+
+```{r}
+library(reshape2)
+
+
+risk %>% 
+  melt(id.vars = 'country') %>% 
+  pivot_wider(id_cols=country, 
+              names_from=variable, 
+              values_from=value) %>%
+  mutate(rank=as.numeric(rank)) %>%
+  head(7) %>% kable()
+```
+
+
+# Section 3: Analysis
+
+In this section, I'll ask some specific questions about *two* of the data sets: Movies & Songs.  
+
+## Movies{.tabset}
+
+### 3.1 
+
+Which ten movies *lost* the most money domestically? Are these the same movies that lost the most money *overall*?
+
+*There are a few ways you can do this. The very simple way is to compute the profit, sort on the profit, and then show the two separate dataframes:*
+```{r}
+movies_tidy %>% 
+  ### do the domestic profits
+  # compute the domestic profit
+  mutate(domestic_profit = domgross - budget) %>%
+  # sort the data by domestic profit
+  arrange(domestic_profit) %>%
+  # grab the lowest 10 profits, which will be the
+  # first ten rows:
+  head(10) %>%
+  kable()
+```
+
+You can do this again to get a second dataframe for the movies:
+
+```{r}
+movies_tidy %>% 
+  ### do the total profits
+  # compute the total profit
+  mutate(profit = intgross - budget) %>%
+  # sort the data by domestic profit
+  arrange(profit) %>%
+  # grab the lowest 10 profits, which will be the
+  # first ten rows:
+  head(10) %>%
+  kable()
+
+```
+
+*This is nice, but makes it hard to see the exact relationship between the top 10 films in either category; we just see the 10 lossmaking movies for one kind of profit, and then 10 in the other. We cannot say, for instance, where the 10 domestic losers fall in the overall profit table. Interestingly, the only time we're "slicing" the data happens at the `head()` function. So, we can string these two things together, and just do the filtering at the end:*
+
+```{r}
+movies_tidy %>% 
+  ### do the domestic profits
+  # compute the domestic profit
+  mutate(domestic_profit = domgross - budget) %>%
+  # sort the data by domestic profit
+  arrange(domestic_profit) %>%
+  # assign the "row number" to each of these movies, so that
+  # the movie with the smallest domestic profit gets "domestic_rank" of 1
+  # and the next-smallest has a "domestic_rank" of 2
+  mutate(domestic_rank = row_number()) %>%
+  ### do the foreign profits
+  # compute the overall profit
+  mutate(profit = intgross - budget) %>%
+  # sort the data by this profit
+  arrange(profit) %>%
+  # again, assign the row number of the sorted data to a rank variable
+  mutate(rank = row_number()) %>% 
+  # select out the columns we want to see
+  select(year, movie_name, domestic_rank, domestic_profit, rank, profit) %>%
+  ### keep only the top 10 movies either domestic or foreign:
+  filter(domestic_rank <= 10 | rank <= 10) %>%
+  # sort by domestic rank, just because:
+  arrange(domestic_rank) %>%
+  kable()
+```
+
+
+Now, we see that the movies that lost the most money domestically can have *wildly* different profits internationally. For example, John Carter lost the most money domestically, but actually *made a profit* internationally! Same with Prince of Persia and Hugo. But, some movies did lose a lot of money both internationally and domestically, such as 47 Ronin or Mars Meeds Moms. 
+
+
+### 3.2
+
+What is the average budget for a movie in each year?
+
+```{r}
+movies_tidy %>% 
+  group_by(year) %>% 
+  summarize(avg_budget = mean(budget, na.rm=T)) %>%
+  tail(10) %>%
+  kable()
+```
+
+### 3.3
+
+Which movie had the largest gap between domestic and overseas box office performance?
+
+*Depending on how you solve this problem, you may need to drop the NA values. You can use the `drop_na()` function.*
+
+```{r}
+movies_tidy %>%
+  mutate(gap = abs(domgross - intgross)) %>% 
+  drop_na(gap) %>%
+  arrange(gap) %>% 
+  select(year, movie_name, gap) %>%
+  tail(10) %>% kable()
+```
+
+### 3.4
+
+Make a visualization that shows how the *budget* for movies has increased over time. Discuss how you designed the plot in order to emphasize this message.
+
+*You may think that something like the following plot illustrates this well:*
+
+```{r}
+ggplot(movies_tidy, aes(x=year, y=budget/1000000)) + 
+  geom_jitter(alpha=.25) +
+  geom_smooth(se=F, color='orangered') + 
+  xlab("Year Movie was Made") + 
+  ylab("Budget (Millions USD)")
+```
+*But, visually, half of this plot is empty! There are a few ways you can address this. First, you could just plot the average and focus in on that range:*
+
+```{r}
+ggplot(movies_tidy, aes(x=year, y=budget/1000000)) + 
+  geom_jitter(alpha=.1) +
+  geom_smooth(se=F, color='orangered') + 
+  xlab("Year Movie was Made") + 
+  ylab("Budget (Millions USD)") + 
+  ylim(0,100)
+```
+
+*Or, you could change the scale:*
+
+```{r}
+ggplot(movies_tidy, aes(x=year, y=budget/1000000)) + 
+  geom_jitter(alpha=.1) +
+  geom_smooth(se=F, color='orangered') + 
+  xlab("Year Movie was Made") + 
+  ylab("Budget (Millions USD)") + 
+  scale_y_log10(limits=c(.1, 200))
+```
+
+### 3.5
+
+Make a visualization that shows how the typical *profit* movies make has generally *not* changed over time, but that a few outliers do make increasingly more money. Discuss how you designed the plot in order to emphasize this message. 
+
+*A very simple plot to do this might consider the following:*
+
+```{r}
+movies_tidy %>% 
+  mutate(profit=intgross - budget) %>%
+  ggplot(aes(x=year, y=profit)) +
+  geom_jitter(alpha=.1) + geom_smooth()
+```
+*A more sophisticated perspective might aim to strategically define the outliers, and then label them separately:*
+```{r}
+outlier_earners <- movies_tidy %>%
+  # get the profit
+  mutate(profit = intgross - budget) %>%
+  # drop any movies that have NA profits
+  drop_na(profit) %>%
+  ### within each year
+  group_by(year) %>%
+  # arrange the movies by profit
+  arrange(desc(profit)) %>%
+  # then compute the difference between the movie and the next-highest earner
+  mutate(profit_gap_to_next_movie = profit - lead(profit)) %>%
+  # sort on this value
+  arrange(profit_gap_to_next_movie) %>% 
+  # and drop any NAs from this
+  drop_na(profit_gap_to_next_movie) %>%
+  # take the 20 movies that have the largest gap between their
+  # earnings and the next highest earnings:
+  tail(20)
+outlier_earners %>% kable()
+```
+*You can see that, clearly, these are the big blockbuster movies that earn a ton of money. So, we can use these as separate datasets in tandem to highlight their location on the plot:*
+```{r}
+non_outliers = movies_tidy %>% 
+  # This ensures that movies that are in the outliers are 
+  # dropped from the "non-outliers"
+  # breaking it down, 
+  # ! means "not", 
+  # movie_name %in% outlier_earners$movie_name is True when 
+  # the movie_name is contained within the set of outlier_earners
+  # movie names.
+  filter(!(movie_name %in% outlier_earners$movie_name)) %>%
+  # Then, we'll need the profit variable to do the plotting
+  mutate(profit=intgross - budget)
+
+ggplot() + 
+  # non-outlier points
+  geom_jitter(data=non_outliers, 
+             aes(x=year, y=profit), color='black', alpha=.1) +
+  # non-outlier profit trend
+  geom_smooth(data=non_outliers,
+            aes(x=year, y=profit), se=F) +
+  # outliers
+  geom_point(data=outlier_earners, 
+             aes(x=year, y=profit), color='red') + 
+  # trend among outliers
+  geom_smooth(data=outlier_earners, 
+              aes(x=year, y=profit), color='red', se=F)
+```
+
+
+### 3.6(c)
+You're a data scientist working for a movie studio. Your executive is considering whether to take a risk on making a "new" movie, or whether it'd be a safer bet to make a sequel to an existing movie. So, she asks:
+
+> Do sequels make more profit per dollar spent than non-sequels?  
+
+Can you answer her question?^[Note that you can use the `str_detect()` function in the tidyverse's `stringr` package to give `TRUE` when a movie name contains `2` or a `II`, and `FALSE` otherwise. Also, it's ok if you accidentally pick up movies that have `III` or `IIII` or `H20` in their name using this strategy; we're just making an educated guess.]
+
+*So, let's first look at the movies that have a "2" or "II" in their title:*
+```{r}
+is_sequel = str_detect(movies_tidy$movie_name, c("2", "II"))
+movies_tidy %>% 
+  mutate(is_sequel = is_sequel) %>%
+  filter(is_sequel) %>% kable()
+```
+*Looks pretty good! So, let's look at the "return", or profit per dollar, of these two sets of movies:*
+
+```{r}
+movies_tidy %>% 
+  mutate(is_sequel=is_sequel) %>% 
+  mutate(profit = intgross - budget) %>% 
+  mutate(return_on_investment = profit/budget) %>%
+  group_by(is_sequel) %>% 
+  summarise(median_return = median(return_on_investment, na.rm=T),
+            ) %>% 
+  kable()
+```
+*The median sequel has about 37% higher returns than the median non-sequel. But! there is a very long tail:*
+
+```{r}
+movies_tidy %>% 
+  mutate(is_sequel=is_sequel) %>% 
+  mutate(profit = intgross - budget) %>% 
+  mutate(return_on_investment = profit/budget) %>%
+  ggplot(aes(x=return_on_investment, group=is_sequel, color=is_sequel)) +
+  geom_boxplot()
+```
+*You can see that the non-sequels have some amazing returns on investment (400 here means that the profit is 400 times the budget!) but you can see that this long tail is very sparse, compared to the middle of the data. Let's focus in on the medians, which are somewhere between 1 and 2:*
+
+```{r}
+movies_tidy %>% 
+  mutate(is_sequel=is_sequel) %>% 
+  mutate(profit = intgross - budget) %>% 
+  mutate(return_on_investment = profit/budget) %>%
+  ggplot(aes(x=return_on_investment, group=is_sequel, color=is_sequel)) +
+  geom_boxplot() + 
+  xlim(-1,4)
+```
+
+*So, we see that sequels tend to have slightly higher returns to investment on average, but that the long tail of non-sequels can yield some seriously high returns, if you get lucky.*
+
+## Songs{.tabset}
+
+### 3.7
+What's your best guess about the length of a track with higher than 75% popularity? How about your best guess for the popularity of a track between 2 and 3 minutes long? Which "piece" of information (popularity > 75% or duration between 2 & 3 minutes) gives you more useful information, and why do you think that?^[You may find it helpful to make a plot!]
+
+```{r}
+ggplot(spotify, aes(x=duration_ms/1000/60, y=track_popularity)) +
+  geom_hex() + 
+  xlab("Duration (minutes)") + 
+  ylab("Track Popularity") + 
+  scale_fill_viridis_c(option='plasma')
+
+```
+
+
+*Just describing what we see, you can see that most of the popular songs are somewhere between 2.5 minutes and 3 minutes. You can also see that songs that are about this length(between 2.5 and 3 minutes) can have basically any popularity... seems like there are a lot of 3-minute tracks that have zero popularity! Thus, knowing a song is popular gives you way more information than knowing a song is 3 minutes long.*
+
+*Doing this in a table, rather than graphically:*
+
+```{r}
+spotify %>% 
+  mutate(duration_mins = duration_ms/1000/60) %>%
+  filter(track_popularity > 75) %>%
+  summarize(mean_duration = mean(duration_mins),
+            sd_duration=sd(duration_mins)) %>% kable()
+```
+```{r}
+spotify %>% 
+  mutate(duration_mins = duration_ms/1000/60) %>%
+  filter((2 <= duration_mins)&(duration_mins <= 3)) %>%
+  summarize(mean_popularity = mean(track_popularity),
+            sd_popularity=sd(track_popularity)) %>% kable()
+```
+
+*You can see that the standard deviation of the track popularity is about half of the average popularity of songs between 2 and 3 minutes, while the standard deviation of the track duration is only about a fifth of the mean. This suggests that there is much more variability around the mean popularity for songs between 2 and 3 minutes than there is in the duration of songs at 75% popularity or above!*
+
+### 3.8 (c)
+
+What is the typical "energy" of each of the playlist genres? How about the typical "valence," meaning "happiness," of the genres?
+
+```{r}
+spotify %>% 
+  group_by(playlist_genre) %>% 
+  summarize(valence = median(valence), energy = median(energy)) %>%
+  kable()
+```
+
+### 3.9 (c)
+
+Make four plots^[It's OK if they're totally separate plots! That is, I don't expect you to use `facet_grid()`] to visualize the relationship between danceability and a few variables:
+
+- `tempo`
+- `energy`
+- `valence`
+- `playlist_genre`
+
+Make sure to take into account whether the relationship is linear and address *overplotting* if necessary. Given these plots, what kinds of songs tend to be danceable?
+
+```{r}
+library(ggpubr)
+
+tempo <- ggplot(spotify, 
+                aes(x=tempo, y=danceability)) +
+  geom_point(alpha=.1) + 
+  geom_smooth(aes(color=playlist_genre), se=F)
+energy <- ggplot(spotify, aes(x=energy, y=danceability)) + 
+  geom_point(alpha=.1) + 
+  geom_smooth(aes(color=playlist_genre), se=F)
+valence <- ggplot(spotify, aes(x=valence, y=danceability)) + 
+  geom_point(alpha=.1) + 
+  geom_smooth(aes(color=playlist_genre), se=F)
+playlist_genre <- ggplot(spotify, 
+                         aes(group=playlist_genre, 
+                             y=danceability, 
+                             color=playlist_genre)) + 
+  geom_boxplot() 
+
+ggarrange(tempo, energy, valence, playlist_genre, ncol=2, nrow=2)
+
+```
+
+*Interpreting this, (1a) most songs are danceable if they are around 100/120 tempo; as songs become too fast or too slow, they become less danceable; (1b) but, __latin__ songs have a "second peak" (slightly below 200) where songs get a little bit more danceable again; (2) songs of moderate energy tend to be danceable, but __latin__ songs that are high energy are more danceable, whereas low-energy rap songs tend to be more danceable; (3) as songs get happier, they always get more danceable, regardless of genre; (4) Rock songs are clearly less danceable in general, and the most danceable genre is rap, but this is closely followed by Latin.*
+
+### 3.10 (c)
+
+Let's assume that the difference between a band's *median* track popularity and its *maximum* track popularity represents that band's *one-hit-wonderness*. If this is the case, what are the Top 10 "one-hit-wonder" bands in the dataset? 
+Given the results, does this comport with your understanding of what a "one hit wonder" is?
+
+```{r}
+
+one_hit_wonders = spotify %>% 
+  group_by(track_artist) %>% 
+  summarize(one_hit_wonderness = max(track_popularity) - median(track_popularity)) %>%
+  arrange(desc(one_hit_wonderness))
+one_hit_wonders %>% head(10) %>% kable()
+```
+*Sure; Lynyrd Skynyrd makes sense given the perennial popularity of "Sweet Home Alabama", but you may not know who, say Duki or YG are. And, alternatively, KISS and Thin Lizzy are certainly __not__ one hit wonders; they have a ton of very well-rated songs. So, one thing that may be missing in terms of the measure of one-hit-wonderness may be a measure of how many albums the artist has, or how many popular songs the artist has.*
