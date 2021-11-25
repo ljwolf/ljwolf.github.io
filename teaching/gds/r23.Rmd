@@ -1,0 +1,293 @@
+---
+title: "Validating models"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default---
+---
+
+# Training (and assessing) models in DS
+
+Today, we'll cover a little bit of using the `caret` package for model training. 
+
+```{r message=F}
+library(caret)
+library(sf)
+library(tidyverse)
+library(ggpubr)
+library(knitr)
+```
+
+```{r}
+spotify <- read_csv('../data/midterm-songs.csv')
+```
+
+```{r}
+ggplot(spotify, aes(x=tempo, y=danceability)) + 
+  geom_point(alpha=.1) + 
+  geom_smooth(se=F, method='lm', color='red') + 
+  geom_smooth(se=F)
+```
+First, note that the linear model really does not work here... it totally misses the fact that danceability gets *better* with some rises in tempo, then decreases after the most danceable tempos of around 100 beats per minute. Second, note that the warning for the second smoother says that the "method = gam", with "formula = s(x, bs='cs')". This means that the model used is a [*generalized additive model*](https://noamross.github.io/gams-in-r-course/chapter1) (from the `mcgv` package), with a formula `y ~ s(x, bs='cs')`, which means:
+
+- `y`, our outcome, 
+- is modeled as a *smooth* `s()` function of `x`, 
+- where the "basis function" `bs` of the smooth (that is, the function used for each of the x ranges) 
+- is a cubic shrinkage spline `cs`.
+  
+You could fit this model directly, too! 
+```{r}
+library(mgcv)
+
+m1 = gam(danceability ~ s(tempo, bs='cs'), data=spotify)
+```
+This is your first Generalized Additive Model, a spline model!
+
+Let's compare this to a standard linear model:
+```{r}
+m0 = lm(danceability ~ tempo, data=spotify)
+```
+
+We can see the predictions from the two easily. Let's first build a "fake " dataframe that has some info we want to predict: tempos evenly spaced from zero to 200: 
+```{r}
+scenario = data.frame(tempo = seq(0,200, 1))
+scenario
+```
+Then, we can use the `predict()` function to get each of the models' predictions:
+```{r}
+p0 = predict(m0, scenario)
+p1 = predict(m1, scenario)
+scenario <- scenario %>% mutate(p0 = p0, p1 = p1)
+```
+
+Plotting these ourselves:^[Remember, when I use the full stop (`.`) in `data=.`, I'm saying "stick the output of the pipe right at the stop!"]
+```{r}
+spotify %>%
+  ggplot(data=., aes(x=tempo, y=danceability)) + 
+    geom_point(alpha=.1) + 
+    geom_line(data = scenario, 
+              aes(y=p0), color='red', lwd=1) + 
+    geom_line(data = scenario, 
+              aes(y=p1), color='blue', lwd=1)
+```
+When it comes to choosing between the two models, we can use the *mean squared error*, which is the average squared error of the two models. First, thinking about the standard linear model:
+
+```{r}
+mean(residuals(m0)^2)
+
+```
+And second, about our smooth model:
+```{r}
+mean(residuals(m1)^2)
+```
+The GAM has a lower squared error. And, we can see that the bias in predictions, too; the Linear model really under-predicts danceablity for slow songs, while the generalized additive model 
+
+```{r}
+g1 = spotify %>% mutate(r0 = residuals(m0), 
+                   r1 = residuals(m1)) %>%
+  ggplot(., aes(x=tempo, y=r1)) + 
+  geom_point(aes(y=r1), color='darkred', alpha=.1) + 
+  ggtitle('Generalized Additive Model') + 
+  ylim(-.8, .4)
+
+g2 = spotify %>% mutate(r0 = residuals(m0), 
+                   r1 = residuals(m1)) %>%
+  ggplot(., aes(x=tempo, y=r0)) +
+  geom_point(aes(y=r0), color='darkblue', alpha=.1) + 
+  ggtitle("Linear Model")+ 
+  ylim(-.8, .4)
+
+ggarrange(g1, g2)
+```
+
+# A general interface to data science models
+
+Now, you could learn all the different packages to fit models, but they all generally vary in their interfaces, options, and methods to train. So, the `caret` package attempts to make things easy, providing a standard interface for model fitting and comparison. For the same example we did above:
+
+```{r}
+library(caret)
+cm0 <- train(danceability ~ tempo, data=spotify, method='lm')
+```
+And, although the package does not support more complex generalized additive models, it does support very simple ones like the one we used here:
+
+```{r}
+cm1 <- train(danceability ~ tempo, data=spotify, method='gam')
+```
+
+A full list of models is [mind-bogglingly big](https://topepo.github.io/caret/available-models.html), so it doesn't quite make sense to teach the specifics of *all* of them. However, you can notice a few common names (such as "bagging", "boosting", or "random forest") that we will discuss next week. 
+
+# Preprocessing the data
+
+Sometimes, models will be sensitive to whether the data is "scaled." For example, thinking about a $k$-nearest neighbor methods, what observations are going to be considered "near" a given point will depend on the magnitude of the $X$ variables. For example, imagine we are trying to predict the price of a bike. We have data like the following:
+
+```{r, echo=F}
+bikes <- data.frame(
+  bike_no = c(
+    1:5
+  ),
+  weight = c(
+    9.6,
+    8.0,
+    8.9,
+    10.2,
+    11.6
+  ),
+  gears = c(
+    12, 
+    10,
+    1,
+    12,
+    20
+  ),
+  rim_thickness = c(
+    620,
+    700,
+    570,
+    700,
+    850
+  ),
+  price = c(
+    200,
+    280,
+    700,
+    650,
+    800
+  )
+)
+bikes %>% kable()
+```
+The weight of bikes is usually rated in kilograms, and the rim thickness in millimeters^[or an archiaic "C" gauge, which we won't deal with here]. Imagine our "target" bike weighs 8 pounds, has 10 gears, with a rim thickness of 620 milimeters. The simplest $k$-nn classifier with $k=1$ is going to find the "closest" bike to our target, and predict that its price is exactly the price of what we've seen before. So, which bike is the most similar to our target? Bike 1, even though it's both heavier and has more speeds. In contrast, bike 2 has the same weight and gears, but slightly thicker tires. But! because we've trained our model to see one "milimeter" as the same unit of distance as one "kilogram," the distance between rim thicknesses will dominate classification. 
+
+Some techniques, like $k$-nn regression/classification, are extremely sensitive to this, and do not work well if the data is left in a raw form. However, the "goodness of fit" of many other techniques, such as linear regression or decision trees, do not depend on the scale of the input. So, we should usually make sure to use the "`preprocess=c('center','scale')`" option to *at least* center and re-scale the data.
+
+# Tuning parameters
+
+Further, each of these models has its own set of "tuning" parameters that you need to explore and balance in order to get good results. Remember that, for classic parameteric models like linear regression, logistic regression, etc; they don't use these kinds of tuning parameters because they assume a specific *distributional model* for the data, and the relevant parameters of that model can be chosen immediately by exploiting mathematical structure. In contrast, most data science methods don't make these assumptions, and so require *us* to find good values of these parameters. 
+
+So, caret supports sending along extra "arguments" to the fitting function through the `tuneGrid` option. For this, we need to build our own dataframe that describes the different combinations of parameters we want to explore. So, for example, if we wanted to fit a $k$-nn model for $k$ from 1 to 10, we'd first build a dataframe with that as a column:
+
+```{r}
+k5 <- data.frame(k=1:5)
+k5
+```
+
+And then send that along as the `tuneGrid` parameter:^[As a warning! this may take a bit to complete...]
+
+```{r}
+demo_knn <- train(danceability ~ tempo, data=spotify, method='knn', tuneGrid=k5)
+plot(demo_knn)
+```
+Often, we want to see that the routine finds some kind of "optimal" value for the tuning parameters. Here, we're seeing the root mean square error as the number of neighbors increases, and the lowest error occurs at $k=5$. If you ever see that your model reaches its "best" score at one "end" of your tuning space (as it does here,) you should explore the tuning parameters beyond that value. For example, we may need to increase $k$ to find a good spot to "stop" tuning:
+
+```{r}
+ktest = data.frame(k=seq(1,100,10))
+demo_knn2 <- train(danceability ~ tempo, data=spotify, method='knn', tuneGrid=ktest, trControl=trainControl(method='boot'))
+plot(demo_knn2)
+```
+
+The parameters that a model must search are listed in [the table](https://topepo.github.io/caret/available-models.html), and they often will be specific for each kind of model. 
+
+# Crossvalidation
+
+The nice thing about using caret is that you get a standardized interface to training models. For example, crossvalidation (for any model type) can be done very easily using the `trainControl` method. For example, to set up cross-validation with 5 folds, repeated 10 times:
+
+```{r}
+training_options <- trainControl(method='repeatedcv', 
+                                 number=5, # number of "folds"
+                                 repeats=10 # how many times to repeat the procedure
+                                 )
+```
+
+Then, we can do this on a linear model:
+```{r}
+cm0_cv <- train(danceability ~ tempo, 
+                data=spotify, 
+                method='lm',
+                trControl=training_options)
+cm0_cv
+```
+Which shows the R-squared, the root mean square error, and the mean absolute error (MAE). We can access the fitted model directly:
+
+```{r}
+cm0_cv$finalModel
+```
+or compare two models:
+```{r}
+cm1_cv <- train(danceability ~ tempo, 
+                data=spotify, 
+                method='gam', 
+                trControl=training_options)
+cm1_cv
+```
+
+# Your turn
+
+1. using `caret`, train the following models:
+   - using 5-fold crossvalidation repeated 10 times, train a *linear regression* (`method='lm'`)  to predict the danceability of a song based on the tempo, valence, and energy of a song. 
+   - Using the same configuration, fit a $k$-nearest neighbor classifier (`method='knn'`). Make sure to find the "right" $k$ using the techniques we discussed. 
+   - using the same configuration, train a *kernel regression* (`method='gamLoess'`) 
+   - Which has the best in sample performance? Which has the best out-of-sample performance? Given what you know about the *bias-variance* tradeoff, why might this be the best model? 
+   - if you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+   - Using the best model, plot the predicted danceability for an r&b song as a function of tempo, given a valence of .5 and an energy of .5.^[remember, the `predict` function still works with `caret`-trained models. So, build a big new dataframe for yourself using `data.frame(tempo=..., valence=.5, )`! And, remember: `seq(a,b,s)` gives you a set of regularly-spaced numbers from start `a` to finish `b` separated by step-size `s`. Try it now for yourself: run `seq(1,10,2)` at the console. Compare it to `seq(2, 20, 1)` and `seq(1, 5, .1)`!]
+
+<!---
+```{r, eval=F}
+dance_lm <- train(danceability ~ tempo + valence + energy, 
+                data=spotify, 
+                method='lm', 
+                trControl=training_options)
+dance_knn <- train(danceability ~ tempo + valence + energy, 
+                data=spotify, 
+                method='knn', 
+                trControl=training_options)
+dance_gam <- train(danceability ~ tempo + valence + energy, 
+                data=spotify, 
+                method='gamLoess', 
+                trControl=training_options)
+```
+--->
+
+
+2. using `caret`, train the following binary classifiers:
+   - using 5-fold crossvalidation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict whether or not a song is a rock song, based on its danceability, valence, energy, and tempo. 
+   - using the same crossvalidation setup, train a *logistic* model (`method='glm', family='binomial'`) to predict the genre of a song based on the same covariates.
+   - which has the best *in-sample* accuracy? which has the worst?
+   - if you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+   - Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. Which model performs best, in your view? Make use of the accuracy, sensitivity, and specificity, if useful! 
+
+<!---
+```{r, eval=F}
+spotify <- spotify %>% mutate(is_rock = as.factor(playlist_genre == 'rock'))
+genre_knn <- train(is_rock ~ tempo + valence + energy + danceability,  
+                data=spotify, 
+                method='knn', 
+                preprocess=c('center','scale'),
+                trControl=training_options, 
+                tuneGrid=data.frame(k=1:20))
+genre_glm <- train(is_rock ~ tempo + valence + energy + danceability, 
+                data=spotify, 
+                method='glm',
+                family = 'binomial',
+                trControl=training_options)
+```
+--->
+
+3. using `caret`, train the following multi-class classifiers:
+   - using 5-fold crossvalidation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict a song's genre, based on variables you think might help to predict the outcome.
+   - using the same crossvalidation setup, train a *multinomial logistic* model (`method='multinom'`) to predict the genre of a song based on the same covariates.
+   - which has the best *in-sample* accuracy? which has the worst?
+   - if you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+   - Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. For the model with the best accuracy, are there any classes that the model generally confuses? 
+   - **challenge**: The `yardstick` library is a tidy library designed to make it easy to evaluate various model accuracy measures with `caret` models. Using `yardstick::precision()`, compute the precision for these two models. 
+
+<!---
+```{r, eval=F}
+genre_knn <- train(playlist_genre ~ tempo + valence + energy + danceability,  
+                data=spotify, 
+                method='knn', 
+                trControl=training_options)
+genre_glm <- train(playlist_genre ~ tempo + valence + energy + danceability, 
+                data=spotify, 
+                method='multinom',
+                trControl=training_options)
+```
+--->
