@@ -21,12 +21,15 @@ library(knitr)
 spotify <- read_csv('../data/midterm-songs.csv')
 ```
 
+Let's look again at something clearly nonlinear: the relationship between tempo and danceability:
+
 ```{r}
 ggplot(spotify, aes(x=tempo, y=danceability)) + 
   geom_point(alpha=.1) + 
   geom_smooth(se=F, method='lm', color='red') + 
   geom_smooth(se=F)
 ```
+
 First, note that the linear model really does not work here... it totally misses the fact that danceability gets *better* with some rises in tempo, then decreases after the most danceable tempos of around 100 beats per minute. Second, note that the warning for the second smoother says that the "method = gam", with "formula = s(x, bs='cs')". This means that the model used is a [*generalized additive model*](https://noamross.github.io/gams-in-r-course/chapter1) (from the `mcgv` package), with a formula `y ~ s(x, bs='cs')`, which means:
 
 - `y`, our outcome, 
@@ -50,7 +53,7 @@ m0 = lm(danceability ~ tempo, data=spotify)
 We can see the predictions from the two easily. Let's first build a "fake " dataframe that has some info we want to predict: tempos evenly spaced from zero to 200: 
 ```{r}
 scenario = data.frame(tempo = seq(0,200, 1))
-scenario
+scenario %>% head(10) %>% kable()
 ```
 Then, we can use the `predict()` function to get each of the models' predictions:
 ```{r}
@@ -69,6 +72,7 @@ spotify %>%
     geom_line(data = scenario, 
               aes(y=p1), color='blue', lwd=1)
 ```
+
 When it comes to choosing between the two models, we can use the *mean squared error*, which is the average squared error of the two models. First, thinking about the standard linear model:
 
 ```{r}
@@ -107,6 +111,7 @@ Now, you could learn all the different packages to fit models, but they all gene
 library(caret)
 cm0 <- train(danceability ~ tempo, data=spotify, method='lm')
 ```
+
 And, although the package does not support more complex generalized additive models, it does support very simple ones like the one we used here:
 
 ```{r}
@@ -155,6 +160,7 @@ bikes <- data.frame(
 )
 bikes %>% kable()
 ```
+
 The weight of bikes is usually rated in kilograms, and the rim thickness in millimeters^[or an archiaic "C" gauge, which we won't deal with here]. Imagine our "target" bike weighs 8 pounds, has 10 gears, with a rim thickness of 620 milimeters. The simplest $k$-nn classifier with $k=1$ is going to find the "closest" bike to our target, and predict that its price is exactly the price of what we've seen before. So, which bike is the most similar to our target? Bike 1, even though it's both heavier and has more speeds. In contrast, bike 2 has the same weight and gears, but slightly thicker tires. But! because we've trained our model to see one "milimeter" as the same unit of distance as one "kilogram," the distance between rim thicknesses will dominate classification. 
 
 Some techniques, like $k$-nn regression/classification, are extremely sensitive to this, and do not work well if the data is left in a raw form. However, the "goodness of fit" of many other techniques, such as linear regression or decision trees, do not depend on the scale of the input. So, we should usually make sure to use the "`preprocess=c('center','scale')`" option to *at least* center and re-scale the data.
@@ -176,6 +182,7 @@ And then send that along as the `tuneGrid` parameter:^[As a warning! this may ta
 demo_knn <- train(danceability ~ tempo, data=spotify, method='knn', tuneGrid=k5)
 plot(demo_knn)
 ```
+
 Often, we want to see that the routine finds some kind of "optimal" value for the tuning parameters. Here, we're seeing the root mean square error as the number of neighbors increases, and the lowest error occurs at $k=5$. If you ever see that your model reaches its "best" score at one "end" of your tuning space (as it does here,) you should explore the tuning parameters beyond that value. For example, we may need to increase $k$ to find a good spot to "stop" tuning:
 
 ```{r}
@@ -198,6 +205,7 @@ training_options <- trainControl(method='repeatedcv',
 ```
 
 Then, we can do this on a linear model:
+
 ```{r}
 cm0_cv <- train(danceability ~ tempo, 
                 data=spotify, 
@@ -205,12 +213,15 @@ cm0_cv <- train(danceability ~ tempo,
                 trControl=training_options)
 cm0_cv
 ```
+
 Which shows the R-squared, the root mean square error, and the mean absolute error (MAE). We can access the fitted model directly:
 
 ```{r}
 cm0_cv$finalModel
 ```
+
 or compare two models:
+
 ```{r}
 cm1_cv <- train(danceability ~ tempo, 
                 data=spotify, 
@@ -221,13 +232,16 @@ cm1_cv
 
 # Your turn
 
-1. using `caret`, train the following models:
-   - using 5-fold crossvalidation repeated 10 times, train a *linear regression* (`method='lm'`)  to predict the danceability of a song based on the tempo, valence, and energy of a song. 
-   - Using the same configuration, fit a $k$-nearest neighbor classifier (`method='knn'`). Make sure to find the "right" $k$ using the techniques we discussed. 
-   - using the same configuration, train a *kernel regression* (`method='gamLoess'`) 
-   - Which has the best in sample performance? Which has the best out-of-sample performance? Given what you know about the *bias-variance* tradeoff, why might this be the best model? 
-   - if you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
-   - Using the best model, plot the predicted danceability for an r&b song as a function of tempo, given a valence of .5 and an energy of .5.^[remember, the `predict` function still works with `caret`-trained models. So, build a big new dataframe for yourself using `data.frame(tempo=..., valence=.5, )`! And, remember: `seq(a,b,s)` gives you a set of regularly-spaced numbers from start `a` to finish `b` separated by step-size `s`. Try it now for yourself: run `seq(1,10,2)` at the console. Compare it to `seq(2, 20, 1)` and `seq(1, 5, .1)`!]
+## Regression
+
+
+With `caret`, train the following models:
+- Using 5-fold crossvalidation repeated 10 times, train a *linear regression* (`method='lm'`)  to predict the danceability of a song based on the tempo, valence, and energy of a song. 
+- Using the same configuration, fit a $k$-nearest neighbor classifier (`method='knn'`). Make sure to find the "right" $k$ using the techniques we discussed. 
+- Using the same configuration, train a *kernel regression* (`method='gamLoess'`) 
+- Which has the best in sample performance? Which has the best out-of-sample performance? Given what you know about the *bias-variance* tradeoff, why might this be the best model? 
+- If you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+- Using the best model, plot the predicted danceability for an r&b song as a function of tempo, given a valence of .5 and an energy of .5.^[Remember, the `predict` function still works with `caret`-trained models. So, build a big new dataframe for yourself using `data.frame(tempo=..., valence=.5, )`! And, remember: `seq(a,b,s)` gives you a set of regularly-spaced numbers from start `a` to finish `b` separated by step-size `s`. Try it now for yourself: run `seq(1,10,2)` at the console. Compare it to `seq(2, 20, 1)` and `seq(1, 5, .1)`!]
 
 <!---
 ```{r, eval=F}
@@ -247,12 +261,15 @@ dance_gam <- train(danceability ~ tempo + valence + energy,
 --->
 
 
-2. using `caret`, train the following binary classifiers:
-   - using 5-fold crossvalidation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict whether or not a song is a rock song, based on its danceability, valence, energy, and tempo. 
-   - using the same crossvalidation setup, train a *logistic* model (`method='glm', family='binomial'`) to predict the genre of a song based on the same covariates.
-   - which has the best *in-sample* accuracy? which has the worst?
-   - if you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
-   - Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. Which model performs best, in your view? Make use of the accuracy, sensitivity, and specificity, if useful! 
+## Binary Classification
+
+With `caret`, train the following binary classifiers:
+
+- Using 5-fold crossvalidation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict whether or not a song is a rock song, based on its danceability, valence, energy, and tempo. 
+- Using the same crossvalidation setup, train a *logistic* model (`method='glm', family='binomial'`) to predict the genre of a song based on the same covariates.
+- Which has the best *in-sample* accuracy? which has the worst?
+- If you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+- Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. Which model performs best, in your view? Make use of the accuracy, sensitivity, and specificity, if useful! 
 
 <!---
 ```{r, eval=F}
@@ -271,13 +288,16 @@ genre_glm <- train(is_rock ~ tempo + valence + energy + danceability,
 ```
 --->
 
-3. using `caret`, train the following multi-class classifiers:
-   - using 5-fold crossvalidation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict a song's genre, based on variables you think might help to predict the outcome.
-   - using the same crossvalidation setup, train a *multinomial logistic* model (`method='multinom'`) to predict the genre of a song based on the same covariates.
-   - which has the best *in-sample* accuracy? which has the worst?
-   - if you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
-   - Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. For the model with the best accuracy, are there any classes that the model generally confuses? 
-   - **challenge**: The `yardstick` library is a tidy library designed to make it easy to evaluate various model accuracy measures with `caret` models. Using `yardstick::precision()`, compute the precision for these two models. 
+## Multi-class Classification
+
+With `caret`, train the following multi-class classifiers:
+
+- Using 5-fold crossvalidation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict a song's genre, based on variables you think might help to predict the outcome.
+- Using the same cross-validation setup, train a *multinomial logistic* model (`method='multinom'`) to predict the genre of a song based on the same covariates.
+- Which has the best *in-sample* accuracy? which has the worst?
+- If you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+- Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. For the model with the best accuracy, are there any classes that the model generally confuses? 
+- **challenge**: The `yardstick` library is a tidy library designed to make it easy to evaluate various model accuracy measures with `caret` models. Using `yardstick::precision()`, compute the precision for these two models. 
 
 <!---
 ```{r, eval=F}
