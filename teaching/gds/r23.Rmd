@@ -68,9 +68,11 @@ spotify %>%
   ggplot(data=., aes(x=tempo, y=danceability)) + 
     geom_point(alpha=.1) + 
     geom_line(data = scenario, 
-              aes(y=p0), color='red', lwd=1) + 
+              aes(y=p0), 
+              color='red', lwd=1) + 
     geom_line(data = scenario, 
-              aes(y=p1), color='blue', lwd=1)
+              aes(y=p1), 
+              color='blue', lwd=1)
 ```
 
 When it comes to choosing between the two models, we can use the *mean squared error*, which is the average squared error of the two models. First, thinking about the standard linear model:
@@ -83,7 +85,7 @@ And second, about our smooth model:
 ```{r}
 mean(residuals(m1)^2)
 ```
-The GAM has a lower squared error. And, we can see that the bias in predictions, too; the Linear model really under-predicts danceablity for slow songs, while the generalized additive model 
+The GAM has a lower squared error. And, we can see that the bias in predictions, too; the Linear model really under-predicts danceablity for slow songs, while the generalized additive model has a different pattern of error, it's not as clearly biased in terms of mis-predicting most slow songs (or fast songs) in the same direction. 
 
 ```{r}
 g1 = spotify %>% mutate(r0 = residuals(m0), 
@@ -107,14 +109,14 @@ ggarrange(g1, g2)
 
 Now, you could learn all the different packages to fit models, but they all generally vary in their interfaces, options, and methods to train. So, the `caret` package attempts to make things easy, providing a standard interface for model fitting and comparison. For the same example we did above:
 
-```{r}
+```{r cache=T}
 library(caret)
 cm0 <- train(danceability ~ tempo, data=spotify, method='lm')
 ```
 
 And, although the package does not support more complex generalized additive models, it does support very simple ones like the one we used here:
 
-```{r}
+```{r cache=T}
 cm1 <- train(danceability ~ tempo, data=spotify, method='gam')
 ```
 
@@ -169,7 +171,7 @@ Some techniques, like $k$-nn regression/classification, are extremely sensitive 
 
 Further, each of these models has its own set of "tuning" parameters that you need to explore and balance in order to get good results. Remember that, for classic parameteric models like linear regression, logistic regression, etc; they don't use these kinds of tuning parameters because they assume a specific *distributional model* for the data, and the relevant parameters of that model can be chosen immediately by exploiting mathematical structure. In contrast, most data science methods don't make these assumptions, and so require *us* to find good values of these parameters. 
 
-So, caret supports sending along extra "arguments" to the fitting function through the `tuneGrid` option. For this, we need to build our own dataframe that describes the different combinations of parameters we want to explore. So, for example, if we wanted to fit a $k$-nn model for $k$ from 1 to 10, we'd first build a dataframe with that as a column:
+So, caret supports sending along extra "arguments" to the fitting function through the `tuneGrid` option. For this, we need to build our own dataframe that describes the different combinations of parameters we want to explore. So, for example, if we wanted to fit a $k$-nn model for $k$ from 1 to 5, we'd first build a dataframe with that as a column:
 
 ```{r}
 k5 <- data.frame(k=1:5)
@@ -178,14 +180,14 @@ k5
 
 And then send that along as the `tuneGrid` parameter:^[As a warning! this may take a bit to complete...]
 
-```{r}
+```{r cache=T}
 demo_knn <- train(danceability ~ tempo, data=spotify, method='knn', tuneGrid=k5)
 plot(demo_knn)
 ```
 
 Often, we want to see that the routine finds some kind of "optimal" value for the tuning parameters. Here, we're seeing the root mean square error as the number of neighbors increases, and the lowest error occurs at $k=5$. If you ever see that your model reaches its "best" score at one "end" of your tuning space (as it does here,) you should explore the tuning parameters beyond that value. For example, we may need to increase $k$ to find a good spot to "stop" tuning:
 
-```{r}
+```{r cache=T}
 ktest = data.frame(k=seq(1,100,10))
 demo_knn2 <- train(danceability ~ tempo, data=spotify, method='knn', tuneGrid=ktest, trControl=trainControl(method='boot'))
 plot(demo_knn2)
@@ -206,7 +208,7 @@ training_options <- trainControl(method='repeatedcv',
 
 Then, we can do this on a linear model:
 
-```{r}
+```{r cache=T}
 cm0_cv <- train(danceability ~ tempo, 
                 data=spotify, 
                 method='lm',
@@ -222,7 +224,7 @@ cm0_cv$finalModel
 
 or compare two models:
 
-```{r}
+```{r cache=T}
 cm1_cv <- train(danceability ~ tempo, 
                 data=spotify, 
                 method='gam', 
@@ -236,6 +238,7 @@ cm1_cv
 
 
 With `caret`, train the following models:
+
 - Using 5-fold crossvalidation repeated 10 times, train a *linear regression* (`method='lm'`)  to predict the danceability of a song based on the tempo, valence, and energy of a song. 
 - Using the same configuration, fit a $k$-nearest neighbor classifier (`method='knn'`). Make sure to find the "right" $k$ using the techniques we discussed. 
 - Using the same configuration, train a *kernel regression* (`method='gamLoess'`) 
