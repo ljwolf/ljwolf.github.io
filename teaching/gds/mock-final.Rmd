@@ -15,7 +15,7 @@ Armed with a survey on ethnicity, gender, yearly earnings, and height: the ONS w
 
 > How much does your height affect how much you get paid?
 
-You observe that yes, taller people do tend to earn more, up to a point. Your colleague makes a bet that it's more about *age* than *height*: we are at our maximum height towards the early-to-middle peak of our earning potential, then tend to shrink as we get older. So, you set out to answer this question?
+You [seem to recall that taller people do tend to earn more](https://www.theguardian.com/money/shortcuts/2015/apr/29/do-tall-people-really-deserve-to-earn-more). Your colleague makes a bet that it's more about *age* than *height*: we are at our maximum height towards the early-to-middle peak of our earning potential, then tend to shrink as we get older. So, you set out to answer this question.
 
 ```{r message=F, warning=F}
 library(tidyverse)
@@ -105,7 +105,7 @@ Which function would you pick to model this data and why?[^hint-linearmodel]
 
 # 3 Building a better model
 
-For your preferred model from part 2, use `caret` to fit that model specification also including "age" as a variable.[^hint-interactions] In addition, pick one of the three machine learning techniques below to compare against:
+For your preferred functional form from part 2, use `caret` to fit a model using that function for "age" as a variable, including also height, race, and education.[^hint-interactions] In addition, pick one of the three machine learning techniques below to compare against:
 
 - A K-nearest neighbor regression (`method='knn'`)
 - A LOESS regression (`method='gamLoess'`)
