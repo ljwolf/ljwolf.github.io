@@ -1,0 +1,135 @@
+---
+title: "Geographic Data Science"
+date: '*Updated: `r Sys.Date()`*'
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+
+Levi John Wolf (levi.john.wolf[at]bristol.ac.uk)
+
+Office hours: 2-5 PM Mondays ([calendly.com/ljwolf](https://calendly.com/ljwolf){target='_blank'})[^office-hours]
+
+## Quick Info:
+
+- [Full Schedule](#schedule)
+- [Blackboard Forum](https://www.ole.bris.ac.uk/webapps/blackboard/content/contentWrapper.jsp?course_id=_246919_1&displayName=Blackboard+Forum&href=https%3A%2F%2Fwww.ole.bris.ac.uk%2Fwebapps%2Fdiscussionboard%2Fdo%2Fforum%3Faction%3Dlist_threads%26course_id%3D_246919_1%26nav%3Dcp_discussion_board%26conf_id%3D_368301_1%26forum_id%3D_267099_1&cR2XilcGYOo=jA%2BOBatky8nNtziwlkKvUEkcLb3ULEcWdA3e8J7t0AM%3D) (requires login)
+- [Midterm Assignment](midterm.html) ([data](midterm-data.zip), [answers](midterm-answers.html))
+- [Topic Survey: Regression Trees win!](topic-survey.html)
+- [Mock Final](mock-final.html)
+
+Lectures are 5PM Monday Local Time, delivered *online*.
+
+Labs are 9AM Tuesday morning local time, delivered *in person*. 
+
+## Purpose
+
+Geographic data science is an important emerging set of practices and skills that have become useful in a wide variety of environmental and social sciences. This module will teach students the introduction to critical/core concepts in the arrangement and analysis of data. Beyond linear modelling, this module offers students an "instrumental" knowledge of various high-level methods in data science, but also offers a "deeper" route to understanding the more fundamental concepts and theory behind many of the estimators used in day-to-day data science. 
+The purpose of this module is twofold. Its immediate aims are to ensure that students are provided a working introduction to common concepts and concerns that practicing geographic data scientists face. It will include some practical programming and data cleaning skills, but is mainly oriented towards statistical analysis. **This is not a programming course**, but *requires* some basic programming at the outset to prepare for analysis. Instead, **this course is focused on analysis**, and successful students will need to be able to conduct a successful analysis from start to finish. 
+
+This course is based on a solid understanding of multivariate regression. If you would like to refresh your memory/understanding of linear regression, please consider the review reading listed below in the [reading](#reading) section of this document. 
+
+## Getting Started
+
+
+A short diagnostic quiz to check your background knowledge is [here](https://forms.office.com/Pages/ResponsePage.aspx?id=MH_ksn3NTkql2rGM8aQVGyT1QLl52bVEvY-gb7G8kvlUN1ROTTBQNThYUDBTM0ozUVVVTVRIQkdYSS4u){target='_blank'}. You can take it as many times as you like. Your responses are anonymous, and will not be connected to your grade in any way. 
+
+If you intend to use your own computer for the unit, make sure you have installed:
+
+- RStudio
+- R version 4.0 or higher^[Those on Windows may find `installr::updateR` useful.]
+- The `tidyverse` package
+
+## Mark Structure
+
+The course will be structured in four blocks:
+
+- **Tidy**: Learn some theory behind why some data is "easy" to work with, and how to leverage this theory to do better analysis. (2 weeks)
+- **Visualization**: Learn about color, structure, and presentation of scientific diagrams. (2 weeks)
+- **Regression**: (Re)learn regression as a "supervised" learning problem, focusing on making good guesses given your information. (2+3 weeks)
+- **Student Choice**: Vote on topics, such as "Clustering," "Data Reduction," "NetCDF", or "Smoothing Regression" (1 week)
+
+Final marks are based on a mid-term exam and a final. The midterm is 40% of your overall mark, and the final 60%. We will provide answers on the "interim" workbooks as the course progresses. There will be one "consolidation" review before the final. For each assessment, answer keys will be posted after the due date, and the answers will be walked through in class. The final assessment is worth 60% of the overall mark. The midterm will cover the first two topics. The final will be *cumulative*, meaning that you'll be expected to know how to tidy and visualize by then. 
+
+In addition to the timetabled lectures, there may be pre-recorded videos to help explain or discuss specific components of the reading. All lectures will be delivered live online.  
+
+The labs are intended as time for *peer teaching and learning*, so fostering a sense of community is critical for the module. 
+
+## Materials
+
+Data for assessments will be uploaded to Blackboard, as well as on the schedule at the bottom of this syllabus. The data required for the course is uploaded [here](https://ljwolf.org/teaching/gds/data.zip){target='_blank'}, as well as on blackboard. 
+
+## Reading
+
+Readings are listed in the [schedule](#schedule). Please attempt the reading each week before the timetabled lecture. In some weeks, there may also be a short recorded lecture to clarify the reading. Readings for the module will be drawn primarily from three sources. 
+
+- [R4DS](https://r4ds.had.co.nz/){target='_blank'}, `R` for data science, by Garrett Grolemund & Hadley Wickham. This source is free to all and publically available.
+- [FDV](https://clauswilke.com/dataviz/index.html) Fundamentals of data visualization, by Claus Wilke. Will generally be useful in this module as a reference for plotting and example of first-class visualization style. The book itself has no code, but you can refer to the R Markdowns used to build the book on the [GitHub page](https://github.com/clauswilke/dataviz) by clicking the Rmd file. 
+- [ISL](https://www.statlearning.com){target='_blank'}, Introduction to Statistical Learning, by Gareth James et al. It is available as a [PDF from the author's website](https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf){target='_blank'}. This book is the best simple introduction to data science concepts out there. 
+- [SR](https://xcelab.net/rm/statistical-rethinking/) is an introduction to theory-driven statistical modeling. It's the single-best book (I think) to learn about how cutting edge contemporary statisticians think about doing statistical analyses. It is slightly too advanced for this course, but simple excerpts may be recommended from time to time.  
+
+Often, ISL and SR contain very different developments of the same material. Broadly speaking, this arises from the fact that ISL is written from a "machine learning" perspective and "SR" is written from a "statistical" perspective. After the schedule, I discuss where "alternative" readings can be used to understand or cover the topic from a different perspective. You _do not_ have to read both sources. 
+
+For reference, other good books to review and consolidate your programming and computation knowledge include:
+
+- [GR](https://geocompr.robinlovelace.net/){target='_blank'}, Geocomputation in `R`, by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow. This is free to all and publicly available.
+- [AR](http://adv-r.had.co.nz/){target='_blank'}, Advanced R, by Hadley Wickham. This is free to all and publicly available. Will not generally be useful in this module, but good to know about if needed. 
+- [ARM](http://www.stat.columbia.edu/~gelman/arm/){target='_blank'}, Data Analysis using Regression and Multilevel/Hierarchical Models, by Andrew Gelman and Jennifer Hill. This source is not free/public, but [is available on Blackboard through the university library](https://www.ole.bris.ac.uk/bbcswebdav/pid-4694315-dt-content-rid-16525938_2/courses/GEOG30021_2020_TB-1/gelman-hill_2006.pdf). 
+
+## Schedule
+
+Lectures are held synchronously on Zoom at 5PM Mondays local time. 
+
+One lab practical is held each week on Tuesday at 9AM local time. 
+
+I appreciate that this does not leave much time for consolidating your knowledge from lecture. So, *do the reading before the lecture*, and be proactive in scheduling appointments in my [Monday Afternoon Office Hours](https://calendly.com/ljwolf). 
+
+Don't ask, just book. 
+
+For all materials I have written, if you change the `.html` at the end of the URL to `.Rmd`, you can download the original R Markdown for the assignment. For example, the first comprehension material is available at `https://ljwolf.org/teaching/gds/t1.html`, and the R Markdown used to build that material is `https://ljwolf.org/teaching/gds/t1.Rmd`.
+
+```{r, echo=F}
+schedule = data.frame("Block"=c("Tidy","Tidy","Viz","Viz","Reg I","Reg I","Reg II", "Reg II", "Reg II","Topic","Close"),
+                      "Week Starting"=c("27 September", "4 October", 
+                                      "18 October", "25 October", 
+                                      "1 November", 
+                                      "8 November", 
+                                      "15 November", "22 November", 
+                                      "29 November", "6 December", "13 December"), 
+                      "Topic"=c("The normal form for data", "A vocabulary for data shaping", "On the Grammar of Graphics", "A taxonomy of plots", "Theory of Statistical Learning",
+  "Regression as a supervised learning task", 
+  "Consolidation week",
+  "Moving beyond the normal task",
+  "Justifying your conclusions", 
+  "Student Choice!", "Review and Consolidation"), 
+                      "Reading" = c("R4DS [12.1-2](https://r4ds.had.co.nz/tidy-data.html){target='_blank'}, [Paper](http://www.jstatsoft.org/v59/i10/paper){target='_blank'}","R4DS [5](https://r4ds.had.co.nz/transform.html){target='_blank'}, [12.3-4](https://r4ds.had.co.nz/tidy-data.html#pivoting)",
+                                  "FDA [1-4](https://clauswilke.com/dataviz/index.html)","FDA [5,9,12,14](https://clauswilke.com/dataviz/index.html)",
+                                  "ISL [2.1](https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf#26){target='_blank'}; SR [1.1-2](https://www.ole.bris.ac.uk/bbcswebdav/pid-6131350-dt-content-rid-22748564_2/xid-22748564_2)",
+                                  "ISL [3.1-2](https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf#page=69){target='_blank'}", 
+                                  "ISL [3.3-5](https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf#page=93){target='_blank'}",
+                                  "ISL [4.1-3](https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf#page=139){target='_blank'}",
+                                  "ISL [5.1](https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf#page=206)",
+                                  "ISL [8.1-2](https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf#page=335)",""),
+                      "Materials" =c("[T1](t1.html)", "[T2](t2.html)",
+"[V1](https://r4ds.had.co.nz/data-visualisation.html)", "[V2](https://r4ds.had.co.nz/graphics-for-communication.html)",
+                                   "[R1.1](r11.html)", 
+                                   "[R1.2](r12.html)", 
+                                   "[MA](midterm-answers.html) [R1.2A](r12-answers.html)", 
+                                   "[R2.2](r22.html)",
+                                   "[R2.3](r23.html)", "[Trees](trees.html)", "[Mock Final](mock-final.html)"))
+```
+
+```{r, echo=F}
+kableExtra::column_spec(knitr::kable(schedule, padding=5, align="lrllr"), 3, width='17em')
+```
+*NOTE: abbreviations used in the table are covered in the [reading](#reading) section of this document.*
+
+
+### Alternative Readings
+
+SR's chapter on linear regression covers similar material to ISL, but focuses on the statistical perspective. This means the two are very different: whereas ISL provides a more "classical" presentation of regression for applied settings, SR focuses on explaining the conceptual basis for regression, working from the basic _distributional theory_ of regression up to regression itself. SR's chapter 5 is, again, similar to ISL 3.3-3.5 but with much greater philosophical and conceptual depth. Equivalents of ISL 4.1-3 exist in SR 9.2, but the level of sophistication may be again more statistical than desired. SR 6 again is an analogue of ISL 12, but they approach the treatment from _very_ different perspectives. 
+
+---
+
+[^office-hours]: Or, of course, by request. 
+
