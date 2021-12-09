@@ -1,0 +1,188 @@
+---
+title: "Mock final: "
+output:   
+  html_document:
+    theme: flatly
+    highlight: kate
+    toc: yes
+    toc_float: yes
+---
+
+
+# 0 The Data
+
+Armed with a survey on ethnicity, gender, yearly earnings, and height: the ONS wants to know: 
+
+> How much does your height affect how much you get paid?
+
+You observe that yes, taller people do tend to earn more, up to a point. Your colleague makes a bet that it's more about *age* than *height*: we are at our maximum height towards the early-to-middle peak of our earning potential, then tend to shrink as we get older. So, you set out to answer this question?
+
+```{r message=F, warning=F}
+library(tidyverse)
+earnings = read_csv('../data/earnings.csv')
+earnings %>% head(6) %>% knitr::kable()
+```
+
+# 1 Exploration & Visualization {.tabset}
+
+This section, use `tidyverse` tools, like `group_by` and `summarize`, to obtain the answers to these questions. No statistical models are required in this section, but they can be used if you feel they are appropriate. 
+
+## 1.1 
+
+What is your best guess about the price and height of each age band? 
+
+## 1.2
+
+Focusing on `earnings` as your outcome variable, use `ggplot` to show me the relationship between earnings & age, as well as earnings & height. Discuss how you designed the plot to emphasize your interpretations, as well as address possible graphical issues such as overplotting. 
+
+## 1.3
+
+The following dataset summarises the median earnings for each demographic in the data: 
+
+```{r echo=F, message=F, warnings=F}
+earnings %>% 
+  group_by(race, education) %>% 
+  summarize(earnings=mean(earnings, na.rm=T)) %>% 
+  pivot_wider(id_cols=race, 
+              names_from=education, 
+              values_from=earnings,
+              values_fill=0) %>% knitr::kable()
+```
+
+Is this dataframe tidy? Why or why not? Make sure to use the three rules of tidy data to justify your answer. If you can, tell me the "tidy" form for this data, and in what situations we might prefer the "tidy" or "messy" form.
+
+## 1.4 **challenge**
+
+Can you generate the table I constructed in 1.4 using the `earning` dataset?
+
+## 1.5 **challenge**
+
+What is the highest earnings for a man & a woman in each of the education classes? 
+
+# 2 What is the relationship between earnings and height? {.tabset}
+
+Look at the plot showing the relationship between earnings and height within the data:
+
+```{r fig.height=3, fig.width=8, message=F, warning=F}
+ggplot(earnings, aes(x=height, y=earnings, color=age_band)) + 
+  geom_point(aes(color=NULL), color='black', alpha=.1, position = 'jitter') + 
+  geom_smooth(method=lm, se=F) + 
+  facet_wrap(~age_band)
+```
+
+## 2.1 
+
+Looking at the relationship between `earnings` and `height`, does it appear to be linear? homoskedastic? is it the same for all of the age groups?
+
+## 2.2
+
+Your friend suggests taking a classic "statistical" approach before getting more complex. They suggest two possible model forms to explore:
+
+- Fit a linear model: `earnings ~ age`
+- Fit a quadratic model: `earnings ~ poly(age,2)`
+- Fit a cubic model: `earnings ~ poly(age, 3)`
+
+Below, I plot these separately by sex (with a $\sqrt{y}$ scale to reduce the visual emphasis on high earners):
+
+```{r fig.width=8, fig.height=3, fig.fullwidth=T, warning=F, message=F}
+ggplot(earnings, aes(x=age, y=earnings)) + 
+  geom_point(alpha=.25, lwd=0) + 
+  geom_smooth(method=lm, se=F,
+              aes(color='linear')) +
+  geom_smooth(method=lm,
+              formula= y~1+poly(x,2), se=F,
+              aes(color='quadratic')
+              ) + 
+  geom_smooth(method=lm,
+              formula=y~1+poly(x,3), se=F,
+              aes(color='cubic')
+              ) + 
+  facet_grid(~sex) + 
+  scale_y_sqrt()
+```
+
+Which function would you pick to model this data and why?[^hint-linearmodel]
+
+# 3 Building a better model
+
+For your preferred model from part 2, use `caret` to fit that model specification also including "age" as a variable.[^hint-interactions] In addition, pick one of the three machine learning techniques below to compare against:
+
+- A K-nearest neighbor regression (`method='knn'`)
+- A LOESS regression (`method='gamLoess'`)
+- A Random Forest regression (`method='rf'`)
+
+Which machine learning technique is most appropriate here and why? Would you prefer it to the model from part 2? Why or why not?^[hint-regression-rubric]
+
+# 4 Do short people earn more?
+
+Given your preferred model from part 3, answer the prompt question. Do short people earn less than their similarly-experienced counterparts? 
+
+**Challenge**: What is the "premium" (that is, the "extra cash") that you get for being tall? You may want to plot this as a function of age. 
+
+# 5 Classifying house sales (**challenge**) {.tabset}
+
+Now, we'll move to the `sales` dataset, to understand the prices of houses in the [UK Price Paid Database](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) for the WECA area (Bath, Bristol, and South Gloucestershire)
+```{r}
+sales = read_csv('../data/sales.csv')
+sales %>% head(5) %>% knitr::kable()
+```
+
+
+There are a few relevant variables we need to consider:
+
+- `year`: the year that a property was sold
+- `property_type`: the kind of property being sold, such as
+  - `flat`, which is a single residential unit within a multi-tenant building.
+  - `semidetached`, a house that shares a single wall with another house. 
+  - `terraced`, a house that is attached to two houses, one on either side. 
+  - `detached`, a house that is free-standing, with no attached units. 
+- `county`: the county where the sale occurred, such as `Bristol`, `Bath` or `South Gloucestershire`. 
+- `district`: the district where the sale occurred. In this dataset, it's the same as the `county`.
+- `town`: the town or city where the sale occurred. A few include: `Bristol`, `Weston-Super-Mare`, `Cheltenham`, `Stroud`, `Bath`.
+- `is_newbuild`: whether the property being sold was constructed for the purpose of this sale. 
+- `is_freehold`: whteher a property is sold as a "freehold", that is, "no strings attached." This is usually contrasted with "leasehold" properties, where the purchase is for a long fixed-term right to inhabit the property... a kind of "super"-tenancy. 
+
+With this, I'll first make prices *relative to* the year median price^[This mutate works *by group*, since we've done it after the group_by! The median(price) is the median price within group, and then price/median(price) will compute the price, divided by the median price in each group. Remember that if we wanted to just get a single dataframe of median prices each year, we'd use summarize instead of mutate.]:
+```{r}
+sales <- sales %>% 
+  group_by(year, town) %>% 
+  mutate(price_index = percent_rank(price)) %>%
+  ungroup() # turn off grouping now that we're done with it!
+```
+
+Now, the `price_index` represents the "percent rank" of the price of a house in each town and year. Put simply, this is the percent of all other houses sold in the same town & same year that are cheaper than the house itself. So, for example:
+
+```{r}
+test <- sample_n(sales, size=1)
+test %>% select(id, price, price_index, year, town) %>% knitr::kable()
+```
+
+This house was sold in `r test$town %>% stringr::str_to_title()` in `r test$year`. This means it is more expensive than `r round(test$price_index*100,0)`% houses sold in `r test$year` in the `r test$town %>% stringr::str_to_title()` market.
+
+
+Now, let's fit a decision tree to predict the type of property in the sale:
+
+```{r}
+library(rpart)
+library(rpart.plot)
+salestree = rpart(property_type ~ price_index + is_newbuild + is_freehold, 
+                  data=sales,
+                  control=rpart.control(cp=.005)
+                  )
+prp(salestree, faclen=25, varlen=25, )
+```
+
+## 5.1 
+
+Using the decision tree, can you tell me what *the most* important feature is for predicting flat type? Does being a "newbuild" property matter? What kinds of houses tend to be the most expensive in their market?
+
+
+## 5.2 
+
+Compare the multinomial logistic (`method='multinom')` and random forest (`method='rf'`) clasifiers trained using the same equation as in the decision tree above. Which model would you prefer to classify property types and why?[^hint-classification-rubric]
+
+[^hint-linearmodel]:  In the response, feel free to consider (1) the statistical significance of the models, (2) the overall predictive accuracy of the models, (3) the structure of the prediction vs. fit plot, or (4) the shape of the curves implied by the model.
+[^hint-interactions]: Remember: if you want the curves to vary by country, you can either fit separate models for each group, or use interaction effects. So, `log(y) ~ group + x:group` will fit a different model predicting the log of y for each group in the `group` variable, or `y ~ group + poly(x,2):group` will fit a separate quadratic model for each group. Also, remember to center and scale your X variables to improves the numerical stability of the estimating algorithms.
+[^hint-regression-rubric]:A strong response might consider (1) the theoretical/empirical appropriateness of the linear model from part 2, (2) the theoretical/empirical appropriateness of the chosen alternative algorithm, (3) a comparison of the predictions/prediction curves for the two models, (4) the predictive accuracy of the two curves, (5) the bias of the models for different kinds of observations (country, variety, etc.) And, don't forget that the hyperparameters may need to be tuned...
+[^hint-classification-rubric]: A good response might consider the confusion matrix and/or the model accuracy. 
+
