@@ -369,7 +369,7 @@ dance_gam <- train(danceability ~ tempo + valence + energy,
 <p>With <code>caret</code>, train the following binary classifiers:</p>
 <ul>
 <li>Using 5-fold crossvalidation repeated 10 times, train a <span class="math inline">\(K\)</span>-nearest neighbor classifier (<code>method=&#39;knn&#39;</code>) to predict whether or not a song is a rock song, based on its danceability, valence, energy, and tempo.</li>
-<li>Using the same crossvalidation setup, train a <em>logistic</em> model (<code>method=&#39;glm&#39;, family=&#39;binomial&#39;</code>) to predict the genre of a song based on the same covariates.</li>
+<li>Using the same crossvalidation setup, train a <em>logistic</em> model (<code>method=&#39;glm&#39;, family=&#39;binomial&#39;</code>) to predict whether a song is a rock song based on the same covariates.</li>
 <li>Which has the best <em>in-sample</em> accuracy? which has the worst?</li>
 <li>If you use preprocessing (<code>preprocess=c(&#39;center&#39;, &#39;scale&#39;)</code>), do results change?</li>
 <li>Using the <code>confusionMatrix()</code> function from the <code>caret</code> package, show me the confusion matrix for these models. Which model performs best, in your view? Make use of the accuracy, sensitivity, and specificity, if useful!</li>
