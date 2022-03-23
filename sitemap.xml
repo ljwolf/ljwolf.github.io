@@ -1,1937 +1,1161 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/posts/stpetersburg/</loc>
     <lastmod>2021-10-29T09:46:42+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/</loc>
     <lastmod>2021-10-29T09:46:42+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-10-29T09:46:42+01:00</lastmod>
+  </url><url>
     <loc>/posts/dynamicdispatch/</loc>
     <lastmod>2021-08-17T13:58:26+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/depop/</loc>
     <lastmod>2021-08-12T17:07:30+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/bce/</loc>
     <lastmod>2021-08-02T11:58:16+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2021-08-02T11:58:16+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/thirty/</loc>
     <lastmod>2021-07-16T14:59:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/on-media/</loc>
     <lastmod>2021-04-16T15:57:51+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/boomerang/</loc>
     <lastmod>2020-09-30T10:59:57+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/olsson-counterfactuals/</loc>
     <lastmod>2020-08-10T22:21:38+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/teaching/</loc>
     <lastmod>2020-08-10T22:21:38+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/2020-sm2-lectures/</loc>
     <lastmod>2020-03-09T12:02:47+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/20200208-jan-feb-talks/</loc>
     <lastmod>2020-02-08T10:07:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/columbia-gsapp-series/</loc>
     <lastmod>2019-11-17T15:29:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/disabling/</loc>
     <lastmod>2019-09-19T09:48:35+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/qestival/</loc>
     <lastmod>2019-09-10T15:51:29+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/deepwork/</loc>
     <lastmod>2019-07-24T13:19:16-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/opencode/</loc>
     <lastmod>2019-07-15T01:46:40+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/email-charter/</loc>
     <lastmod>2019-06-17T14:13:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/cenpy-1-0/</loc>
     <lastmod>2019-04-08T12:44:33+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/crunchtober/</loc>
     <lastmod>2018-10-24T23:25:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/whose_fixed/</loc>
     <lastmod>2018-09-13T15:25:50+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/geometry/</loc>
     <lastmod>2018-07-30T09:48:17-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/testingmatrix/</loc>
     <lastmod>2018-07-24T13:52:51-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/perftesting/</loc>
     <lastmod>2018-07-24T11:30:20-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/challenge/</loc>
     <lastmod>2018-04-20T16:54:18+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/cdrc-brexit/</loc>
     <lastmod>2018-04-18T01:46:46+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/gis/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/2018/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/clustering/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/conference-paper/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/gisruk/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/2018-gisruk/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/paper/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/preprints/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/mpl-is-just-fine/</loc>
     <lastmod>2018-03-18T22:02:05+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/python/</loc>
     <lastmod>2018-03-12T23:52:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/annoscatter/</loc>
     <lastmod>2018-03-12T23:52:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/dissertation/</loc>
     <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/elections/</loc>
     <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/esda/</loc>
     <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/spatial-autocorrelation/</loc>
     <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/spatial_acf/</loc>
     <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/swing/</loc>
     <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/about/</loc>
     <lastmod>2018-03-02T19:33:34+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/analysis/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/brexit/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/geography/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/mac/</loc>
-    <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/machine-learning/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/simulation/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/statistics/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/image/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/imported/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/this-is-an-interesting-little-exploration-i-did/</loc>
     <lastmod>2018-02-28T15:46:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-often-find-myself-looking-for-spaces-like-those/</loc>
     <lastmod>2018-02-27T08:46:37+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/hodges-reich-sar/</loc>
     <lastmod>2018-02-24T15:32:22+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/does-projection-matter/</loc>
     <lastmod>2018-02-18T12:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/this-brexit-analysis-for-the-gisruk-competitions/</loc>
     <lastmod>2018-02-15T20:09:35+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/this-should-probably-be-a-tweet/</loc>
     <lastmod>2018-02-13T17:44:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/never-thought-id-be-complaining-about-only-having/</loc>
     <lastmod>2018-01-31T07:07:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/airbnb/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/brooklyn/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/economics/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/gis/</loc>
+    <lastmod>2018-01-29T20:05:03+00:00</lastmod>
+  </url><url>
     <loc>/tags/neighborhoods/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/neighbourhoods/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/price/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/stats/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ml/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/its-neat-that-this-new-algorithm-is-working/</loc>
     <lastmod>2018-01-29T20:05:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-forgot-how-killer-the-builtin-matplotlib/</loc>
     <lastmod>2017-08-17T23:38:37+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2017-07-18T19:45:46+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/redistricting/</loc>
     <lastmod>2017-07-18T19:45:46+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/an-article-ill-never-get-to-write-because-my/</loc>
     <lastmod>2017-07-18T19:45:46+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/acadeimca/</loc>
     <lastmod>2017-07-05T18:56:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/gerrymandering/</loc>
     <lastmod>2017-07-05T18:56:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-think-thisll-end-up-being-the-big-story-from-my/</loc>
     <lastmod>2017-07-05T18:56:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/academic/</loc>
     <lastmod>2017-06-28T17:18:34+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/intellectual/</loc>
     <lastmod>2017-06-28T17:18:34+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/thought-leader/</loc>
     <lastmod>2017-06-28T17:18:34+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/long-form/</loc>
     <lastmod>2017-06-28T17:18:34+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/some-thoughts-on-rise-of-the-thought-leader/</loc>
     <lastmod>2017-06-28T17:18:34+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-am-sure-my-dissertation-would-be-finished/</loc>
     <lastmod>2017-04-05T15:45:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/prettify.js/</loc>
     <lastmod>2017-03-24T17:18:18+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-guess-i-have-code-and-math-working-now/</loc>
     <lastmod>2017-03-24T17:18:18+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/math/</loc>
-    <lastmod>2017-03-24T17:18:18+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/mathjax/</loc>
     <lastmod>2017-03-24T17:18:18+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/bayes/</loc>
-    <lastmod>2017-03-24T15:52:55+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/bayesian/</loc>
     <lastmod>2017-03-24T15:52:55+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/econometrics/</loc>
     <lastmod>2017-03-24T15:52:55+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/hmc/</loc>
     <lastmod>2017-03-24T15:52:55+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/spatial-econometrics/</loc>
     <lastmod>2017-03-24T15:52:55+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/spatial-econometric-hmc-in-python/</loc>
     <lastmod>2017-03-24T15:52:55+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/is-my-uptime-excited-or-scared-you-decide/</loc>
     <lastmod>2017-03-16T01:12:41+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/uptime/</loc>
     <lastmod>2017-03-16T01:12:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/data/</loc>
+  </url><url>
+    <loc>/tags/bayes/</loc>
     <lastmod>2017-02-22T22:09:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/data-science/</loc>
     <lastmod>2017-02-22T22:09:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/all-those-p-values-will-be-lost-in-time-like/</loc>
     <lastmod>2017-02-22T22:09:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/grad-school/</loc>
     <lastmod>2017-01-05T19:27:59+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/graduate-school/</loc>
     <lastmod>2017-01-05T19:27:59+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/phd/</loc>
     <lastmod>2017-01-05T19:27:59+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/an-update-on-phd-burnout/</loc>
     <lastmod>2017-01-05T19:27:59+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/burnout/</loc>
     <lastmod>2017-01-05T19:27:59+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/politics/</loc>
     <lastmod>2016-11-29T00:07:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/programming/</loc>
     <lastmod>2016-11-29T00:07:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/a-short-exploration-of-the-2016-electoral-swing/</loc>
     <lastmod>2016-11-29T00:07:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/spatial-statistics/</loc>
     <lastmod>2016-11-22T15:57:26+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/want-to-draw-spatially-correlated-values-wihtout/</loc>
     <lastmod>2016-11-22T15:57:26+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/working-between-python-2-and-python-3/</loc>
     <lastmod>2016-11-18T01:52:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/academia/</loc>
     <lastmod>2016-10-25T19:53:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/foss/</loc>
     <lastmod>2016-10-25T19:53:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/yet-another-elections-simulator/</loc>
     <lastmod>2016-10-25T19:53:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/finally-got-this-elections-simulator-working-the/</loc>
     <lastmod>2016-10-18T14:00:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/cli/</loc>
     <lastmod>2016-10-10T19:25:04+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/graphics/</loc>
     <lastmod>2016-10-10T19:25:04+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/every-time-i-use-a-sixel-based-library-it-just/</loc>
     <lastmod>2016-10-10T19:25:04+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/at-top-a-metropolis-within-gibbs-sampled-sar/</loc>
     <lastmod>2016-10-09T18:53:35+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/computation/</loc>
     <lastmod>2016-10-07T20:09:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/how-one-weird-trick-helps-you-evaluate-correlated/</loc>
     <lastmod>2016-10-07T20:09:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/bayesian-statistics/</loc>
     <lastmod>2016-09-29T00:13:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/r/</loc>
+    <lastmod>2016-09-29T00:13:20+00:00</lastmod>
+  </url><url>
     <loc>/because-i-actually-post-all-of-my-stuff-to-gists/</loc>
     <lastmod>2016-09-29T00:13:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/estimation/</loc>
     <lastmod>2016-09-26T01:32:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/markov-chain-monte-carlo/</loc>
     <lastmod>2016-09-26T01:32:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/the-importance-of-centering-variables/</loc>
     <lastmod>2016-09-26T01:32:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/clea/</loc>
     <lastmod>2016-09-12T02:28:19+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/dissertatino/</loc>
     <lastmod>2016-09-12T02:28:19+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/found-another-error-in-the-clea-as-i-am-building/</loc>
     <lastmod>2016-09-12T02:28:19+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/the-joys-of-using-political-data/</loc>
     <lastmod>2016-08-31T18:08:02+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/working-on-a-paper-about-models-that-can-have-very/</loc>
     <lastmod>2016-08-28T02:57:29+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/progress-in-a-human-geography/</loc>
     <lastmod>2016-08-25T00:18:37+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/formally-winding-down-gsoc/</loc>
     <lastmod>2016-08-17T14:15:52+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/gsoc/</loc>
     <lastmod>2016-08-17T14:15:52+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/trace/</loc>
     <lastmod>2016-08-06T00:09:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/as-im-having-to-wind-down-on-summer-of-code-work/</loc>
     <lastmod>2016-08-06T00:09:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/development/</loc>
     <lastmod>2016-07-25T02:52:31+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/see-i-wont-forget-to-tag-it-this-time/</loc>
     <lastmod>2016-07-25T02:52:31+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/software/</loc>
     <lastmod>2016-07-25T02:52:31+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/a-post-scipy-chicago-update/</loc>
     <lastmod>2016-07-25T02:52:31+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/im-trying-to-recover-from-a-bit-of-burnout-this/</loc>
     <lastmod>2016-07-17T19:27:14+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/pysal/</loc>
     <lastmod>2016-07-12T04:39:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/using-soft-dependencies-effectively/</loc>
     <lastmod>2016-07-12T04:39:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/but-definitely-not-all-the-way/</loc>
     <lastmod>2016-06-23T20:59:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/functional-programming/</loc>
     <lastmod>2016-06-23T20:59:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/kind-of/</loc>
     <lastmod>2016-06-23T20:59:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/partially-applied-classes-with-new/</loc>
     <lastmod>2016-06-23T20:59:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/more-on-the-log-determinant-stuff-i-think-ive/</loc>
     <lastmod>2016-06-19T20:37:12+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/thisll-be-a-more-lucid-writeup-of-what-i-was/</loc>
     <lastmod>2016-06-17T18:27:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/bayesian-computing/</loc>
     <lastmod>2016-06-17T05:02:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/man-im-so-close-to-a-pretty-massive-speedup-of/</loc>
     <lastmod>2016-06-17T05:02:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/gsoc-call-notes-june-6-2016/</loc>
     <lastmod>2016-06-06T19:11:28+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/the-beginnings-of-a-new-api/</loc>
     <lastmod>2016-06-03T20:07:42+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/visual-display-of-complex-data-can-be-pretty/</loc>
     <lastmod>2016-06-03T01:40:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/call-notes-about-my-request-for-comment/</loc>
     <lastmod>2016-05-25T04:23:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/gsoc-introduction/</loc>
     <lastmod>2016-05-23T17:20:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/spatial-analysis/</loc>
     <lastmod>2016-05-19T19:12:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/rfc-for-gsoc-feedback/</loc>
     <lastmod>2016-05-19T19:12:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/replicability/</loc>
     <lastmod>2016-05-18T20:48:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/puzzles-about-misreplication/</loc>
     <lastmod>2016-05-18T20:48:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/science/</loc>
     <lastmod>2016-05-18T20:48:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/kinda-nice-when-the-model-youre-working-with/</loc>
     <lastmod>2016-05-17T04:10:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/lit-review-habits/</loc>
     <lastmod>2016-04-26T21:36:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/bringing-classifiers-alive-in-pysal/</loc>
     <lastmod>2016-03-24T22:32:23+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/libsixel/</loc>
     <lastmod>2016-03-23T03:41:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/yep-thats-image-view-from-within-a-terminal/</loc>
     <lastmod>2016-03-23T03:41:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/npr-north-carolina-voters-are-likely-to-be/</loc>
     <lastmod>2016-03-11T17:35:10+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/modelling/</loc>
     <lastmod>2016-02-22T16:23:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/a-quick-note-on-hierarchical-linear-models/</loc>
     <lastmod>2016-02-22T16:23:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/geoprocessing/</loc>
     <lastmod>2016-02-16T21:18:10+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/multiprocessing/</loc>
     <lastmod>2016-02-16T21:18:10+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/tumblr-markdown-doesnt-support-codeblocks-with-returns/</loc>
     <lastmod>2016-02-16T21:18:10+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/trivial-python-multiprocessing/</loc>
     <lastmod>2016-02-16T21:18:10+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/learning/</loc>
     <lastmod>2016-02-16T00:09:02+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/optimization/</loc>
     <lastmod>2016-02-16T00:09:02+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/studyblr/</loc>
     <lastmod>2016-02-16T00:09:02+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/a-bite-of-a-free-lunch-optimizing-numerical/</loc>
     <lastmod>2016-02-16T00:09:02+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/tanstaafl/</loc>
     <lastmod>2016-02-16T00:09:02+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/one-of-my-favorite-diagrams-from-micah-altmans/</loc>
     <lastmod>2016-02-09T14:40:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/computational-geometry/</loc>
     <lastmod>2016-01-21T02:07:35+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/geometry/</loc>
     <lastmod>2016-01-21T02:07:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/me/</loc>
-    <lastmod>2016-01-21T02:07:35+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/metaprogramming/</loc>
     <lastmod>2016-01-21T02:07:35+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/a-tricky-bit-implementing-skyums-algorithm/</loc>
     <lastmod>2016-01-21T02:07:35+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/political-science/</loc>
     <lastmod>2016-01-14T18:41:26+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/trajectories-transitions/</loc>
     <lastmod>2016-01-14T18:41:26+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/gotta-get-the-word-out/</loc>
     <lastmod>2016-01-13T23:10:08+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/thelandofmaps-us-congressional-districts/</loc>
     <lastmod>2016-01-13T23:10:08+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/cartodb/</loc>
     <lastmod>2015-12-17T19:18:26+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/welp-that-was-fun-headed-back-to-phx/</loc>
     <lastmod>2015-12-17T19:18:26+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/the-competence-ceiling/</loc>
     <lastmod>2015-12-09T20:45:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/consulting/</loc>
     <lastmod>2015-12-02T21:42:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/mapping/</loc>
     <lastmod>2015-12-02T21:42:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/new-york-is-very-nice/</loc>
     <lastmod>2015-12-02T21:42:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/math/</loc>
+    <lastmod>2015-10-24T15:20:46+00:00</lastmod>
+  </url><url>
     <loc>/the-compilation-errorreading-technical-articles/</loc>
     <lastmod>2015-10-24T15:20:46+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/alan-kay/</loc>
     <lastmod>2015-10-16T20:02:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/albert-einstein/</loc>
     <lastmod>2015-10-16T20:02:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/design-patterns/</loc>
     <lastmod>2015-10-16T20:02:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/pattern/</loc>
     <lastmod>2015-10-16T20:02:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/fits-nicely-with-one-of-my-favorite-quotes-as-a/</loc>
     <lastmod>2015-10-16T20:02:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/animals/</loc>
     <lastmod>2015-10-09T01:21:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ci-is-a-jerk/</loc>
     <lastmod>2015-10-09T01:21:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/having-a-last-name-of-wolf-has-never-been-an/</loc>
     <lastmod>2015-10-09T01:21:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/numpy/</loc>
     <lastmod>2015-10-07T18:10:06+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/scientific-python/</loc>
     <lastmod>2015-10-07T18:10:06+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/some-realizations-on-foss-governance/</loc>
     <lastmod>2015-10-07T18:10:06+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/two-points-in-learning-to-program/</loc>
     <lastmod>2015-10-06T01:17:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/not-a-skill/</loc>
     <lastmod>2015-10-01T16:56:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/what-would-that-even-mean/</loc>
     <lastmod>2015-10-01T16:56:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/ah-yes-i-am-in-fact-skilled-in-spatial/</loc>
     <lastmod>2015-10-01T16:56:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/this-is-a-subject-fetish/</loc>
     <lastmod>2015-10-01T16:56:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/thank-you-janet-franklin/</loc>
     <lastmod>2015-09-18T03:29:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/things-i-remind-myself-always/</loc>
     <lastmod>2015-09-18T03:29:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/cartography/</loc>
     <lastmod>2015-08-26T02:26:08+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/folium/</loc>
     <lastmod>2015-08-26T02:26:08+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/first-cartodb-map/</loc>
     <lastmod>2015-08-26T02:26:08+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/2-to-3/</loc>
     <lastmod>2015-07-30T20:17:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/porting/</loc>
     <lastmod>2015-07-30T20:17:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/python-2-to-3/</loc>
     <lastmod>2015-07-30T20:17:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/python-3/</loc>
     <lastmod>2015-07-30T20:17:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/on-the-subject-of-porting/</loc>
     <lastmod>2015-07-30T20:17:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/political-geography/</loc>
     <lastmod>2015-07-29T02:49:09+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/getting-excited-about-some-cool-new-exploration/</loc>
     <lastmod>2015-07-29T02:49:09+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/seaborn/</loc>
     <lastmod>2015-07-29T02:49:09+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/py3k/</loc>
     <lastmod>2015-07-27T21:10:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/reflections-on-a-hard-won-win-for-pysal/</loc>
     <lastmod>2015-07-27T21:10:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/census/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/census-data/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/compression/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/tar/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/unix/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/uscb/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/that-compression-is-bewilderingly-good-the-full/</loc>
     <lastmod>2015-07-27T18:54:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/all-fired-up-typing-in-airplanes-and-busses/</loc>
     <lastmod>2015-07-13T21:36:32+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/scipy/</loc>
-    <lastmod>2015-07-13T21:36:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-have-written-more-code-in-the-day-after-scipy/</loc>
     <lastmod>2015-07-13T21:36:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/scipy2015/</loc>
     <lastmod>2015-07-13T21:36:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/scipy/</loc>
+    <lastmod>2015-07-12T00:22:13+00:00</lastmod>
+  </url><url>
     <loc>/gearing-up-for-the-last-day-of-scipy-2015/</loc>
     <lastmod>2015-07-12T00:22:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/anonymity/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/as-i-get-these-days/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/feminist-software-foundation/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/github/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/human-geography/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/identity/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/pseudonymity/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/publicity/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ssh/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/tox/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/and-this-is-about-as/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-usually-dont-think-much-about/</loc>
     <lastmod>2015-06-18T23:49:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/acs.r/</loc>
     <lastmod>2015-06-16T15:27:27+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/demographics/</loc>
     <lastmod>2015-06-16T15:27:27+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/social-science/</loc>
     <lastmod>2015-06-16T15:27:27+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cenpy-big-query/</loc>
     <lastmod>2015-06-16T15:27:27+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/i-know-its-not-the-right-spelling/</loc>
     <lastmod>2015-06-12T17:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/mulitprocessing-business-in-the-front-parallel/</loc>
     <lastmod>2015-06-12T17:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/mullets/</loc>
     <lastmod>2015-06-12T17:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/api/</loc>
     <lastmod>2015-06-11T15:58:41+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/data/</loc>
+    <lastmod>2015-06-11T15:58:41+00:00</lastmod>
+  </url><url>
     <loc>/tags/data-hacking/</loc>
     <lastmod>2015-06-11T15:58:41+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cenpy-is-now-pip-installable/</loc>
     <lastmod>2015-06-11T15:58:41+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/geojson/</loc>
     <lastmod>2015-06-06T17:26:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ogc/</loc>
     <lastmod>2015-06-06T17:26:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/simplefeatures/</loc>
     <lastmod>2015-06-06T17:26:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/wkt/</loc>
     <lastmod>2015-06-06T17:26:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/maybe-the-shapefile-was-right-after-all-is-right/</loc>
     <lastmod>2015-06-06T17:26:38+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/civic-hacking/</loc>
     <lastmod>2015-06-05T18:01:54+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/us-census-bureau/</loc>
     <lastmod>2015-06-05T18:01:54+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cenpy-an-exploratory-interface-to-the-census/</loc>
     <lastmod>2015-06-05T18:01:54+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/debian/</loc>
     <lastmod>2015-05-23T14:33:14+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/pip/</loc>
     <lastmod>2015-05-23T14:33:14+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/heads-up-pip-bug/</loc>
     <lastmod>2015-05-23T14:33:14+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/bernal-heights/</loc>
     <lastmod>2015-05-23T02:46:29+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/gitter/</loc>
     <lastmod>2015-05-23T02:46:29+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/san-francisco/</loc>
     <lastmod>2015-05-23T02:46:29+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/sf/</loc>
     <lastmod>2015-05-23T02:46:29+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/irc/</loc>
     <lastmod>2015-05-23T02:46:29+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/scattershot-my-summer-job-sf-and-gitter-irc/</loc>
     <lastmod>2015-05-23T02:46:29+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/geospatial/</loc>
     <lastmod>2015-05-19T03:06:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/happy-geohacking/</loc>
     <lastmod>2015-05-19T03:06:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/numpy-masterrace/</loc>
     <lastmod>2015-01-27T22:01:33+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/speed-comparisons/</loc>
     <lastmod>2015-01-27T22:01:33+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/this-is-ridic/</loc>
     <lastmod>2015-01-27T22:01:33+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/this-is-insane-the-speed-differences-between/</loc>
     <lastmod>2015-01-27T22:01:33+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/and-what-did-we-learn-today-kids/</loc>
     <lastmod>2014-11-21T18:34:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/its-funny-how-a-little-math-can-simplify-a/</loc>
     <lastmod>2014-10-29T15:00:06+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/compacness/</loc>
     <lastmod>2014-10-29T05:36:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/making-sense-of-nmmi/</loc>
     <lastmod>2014-10-29T05:36:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/engineering/</loc>
     <lastmod>2014-10-23T16:25:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/give-me-ml-or-give-me-death/</loc>
     <lastmod>2014-10-23T16:25:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/normal-equations-dont-mean-shit/</loc>
     <lastmod>2014-10-23T16:25:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/you-know-i-like-all-this-math-and-engineering/</loc>
     <lastmod>2014-10-23T16:25:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/voronoi-gripes/</loc>
     <lastmod>2014-10-01T15:28:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/qgis/</loc>
     <lastmod>2014-10-01T01:47:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/voronoi/</loc>
     <lastmod>2014-10-01T01:47:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/about-the-voronoi-diagram-problem/</loc>
     <lastmod>2014-10-01T01:47:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/bug/</loc>
     <lastmod>2014-10-01T01:47:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/open-source/</loc>
     <lastmod>2014-09-30T18:57:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/oss/</loc>
     <lastmod>2014-09-30T18:57:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/computing/</loc>
     <lastmod>2014-09-30T18:57:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/a-fun-little-bug-in-my-apparently-outdated-qgis/</loc>
     <lastmod>2014-09-30T18:57:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/mathematics/</loc>
     <lastmod>2014-09-26T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/some-new-realizations-on-oooooold-material/</loc>
     <lastmod>2014-09-26T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/electoral-analysis/</loc>
     <lastmod>2014-09-12T04:01:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/a-short-realization-on-gelman-king-1994/</loc>
     <lastmod>2014-09-12T04:01:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/data-wrangling/</loc>
     <lastmod>2014-08-22T19:55:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/factor-issues/</loc>
     <lastmod>2014-08-22T19:55:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/scientific-computing./</loc>
     <lastmod>2014-08-22T19:55:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/so-say-youre-working-with-two-states/</loc>
     <lastmod>2014-08-22T19:55:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/package-management/</loc>
     <lastmod>2014-06-17T21:26:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/software-griping/</loc>
     <lastmod>2014-06-17T21:26:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/my-time-using-linux-has-apparently-made-me-quite/</loc>
     <lastmod>2014-06-17T21:26:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/austin/</loc>
     <lastmod>2014-05-29T10:02:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tex/</loc>
-    <lastmod>2014-05-29T10:02:09+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/texas/</loc>
     <lastmod>2014-05-29T10:02:09+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/going-to-scipy-2014/</loc>
     <lastmod>2014-05-29T10:02:09+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/coding/</loc>
     <lastmod>2014-05-08T18:59:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/computers/</loc>
     <lastmod>2014-05-08T18:59:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/ok-so-i-think-my-days-of-using-texstudio-are/</loc>
     <lastmod>2014-05-08T18:59:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/mac/</loc>
+    <lastmod>2014-05-01T03:59:44+00:00</lastmod>
+  </url><url>
     <loc>/tags/memory-issues/</loc>
     <lastmod>2014-05-01T03:59:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/microsoft/</loc>
     <lastmod>2014-05-01T03:59:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/microsoft-word-for-mac/</loc>
     <lastmod>2014-05-01T03:59:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/glitch/</loc>
     <lastmod>2014-05-01T03:59:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/track-changes-may-in-fact-be-the-worst/</loc>
     <lastmod>2014-05-01T03:59:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/maxflow/</loc>
     <lastmod>2014-04-29T23:44:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/mincut/</loc>
     <lastmod>2014-04-29T23:44:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/notes-to-self/</loc>
     <lastmod>2014-04-29T23:44:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/something-about-custom-blue-gamuts-makes-for-a/</loc>
     <lastmod>2014-04-29T23:44:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/maps/</loc>
     <lastmod>2014-04-29T23:44:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/academe/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/citation/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/farrah-jacquez/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/google-scholar/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/health/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/research/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/frere-jacques/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/gotta-wonder-if-her-parents-were-just-having-a/</loc>
     <lastmod>2014-04-23T13:46:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/answer-keys/</loc>
     <lastmod>2014-04-16T03:12:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/answer-keys-that-simply-tell-you/</loc>
     <lastmod>2014-04-16T03:12:11+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/sandbox/</loc>
     <lastmod>2014-04-09T01:51:21+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/institutional-design/</loc>
     <lastmod>2014-04-09T01:51:21+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/its-so-frustrating-to-see-a-cool-idea-fall-by-the/</loc>
     <lastmod>2014-04-09T01:51:21+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/me/</loc>
+    <lastmod>2014-03-07T18:05:57+00:00</lastmod>
+  </url><url>
     <loc>/tags/my-face/</loc>
     <lastmod>2014-03-07T18:05:57+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/personal/</loc>
     <lastmod>2014-03-07T18:05:57+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/the-face-of-needing-a-spring-break/</loc>
     <lastmod>2014-03-07T18:05:57+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/asu/</loc>
     <lastmod>2014-03-05T04:14:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/beamer/</loc>
     <lastmod>2014-03-05T04:14:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/tex/</loc>
+    <lastmod>2014-03-05T04:14:20+00:00</lastmod>
+  </url><url>
     <loc>/tags/latex/</loc>
     <lastmod>2014-03-05T04:14:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/modified-an-existing-asu-beamer-template/</loc>
     <lastmod>2014-03-05T04:14:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/college/</loc>
     <lastmod>2014-03-03T01:34:50+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/ph.d./</loc>
-    <lastmod>2014-03-03T01:34:50+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/welcome-week-tips/</loc>
     <lastmod>2014-03-03T01:34:50+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/editor-wars-are-so-silly/</loc>
     <lastmod>2014-02-27T05:10:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/julialang/</loc>
     <lastmod>2014-02-27T05:10:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/shapefiles/</loc>
     <lastmod>2014-02-27T05:10:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/text-editors/</loc>
     <lastmod>2014-02-27T05:10:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/julia/</loc>
     <lastmod>2014-02-27T05:10:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/i-guess-this-is-how-productivity-works-terminal/</loc>
     <lastmod>2014-02-27T05:10:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/knowing-when-to-stop-reading-and-start-writing-is/</loc>
     <lastmod>2014-02-24T23:39:19+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/operations-research/</loc>
     <lastmod>2014-02-20T04:32:52+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/first-simple-program-in-julia-a-greedy-knapsack/</loc>
     <lastmod>2014-02-20T04:32:52+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/hackflowy/</loc>
     <lastmod>2014-02-13T15:35:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/outline/</loc>
     <lastmod>2014-02-13T15:35:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/prodcutivity/</loc>
     <lastmod>2014-02-13T15:35:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/work/</loc>
-    <lastmod>2014-02-13T15:35:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/workflowy/</loc>
     <lastmod>2014-02-13T15:35:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/went-crawling-back-into-workflowys-arms-today/</loc>
     <lastmod>2014-02-13T15:35:53+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/this-is-a-brighter-moment-of-graduate-school/</loc>
     <lastmod>2014-02-08T14:31:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/classes/</loc>
     <lastmod>2014-02-06T02:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/school/</loc>
     <lastmod>2014-02-06T02:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/time-management/</loc>
     <lastmod>2014-02-06T02:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/undergraduate/</loc>
     <lastmod>2014-02-06T02:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/university/</loc>
     <lastmod>2014-02-06T02:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/work/</loc>
+    <lastmod>2014-02-06T02:48:16+00:00</lastmod>
+  </url><url>
     <loc>/time-management-or-fortitude/</loc>
     <lastmod>2014-02-06T02:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/adorno/</loc>
     <lastmod>2014-02-04T02:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/anxiety/</loc>
     <lastmod>2014-02-04T02:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/modernity/</loc>
     <lastmod>2014-02-04T02:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/nerves/</loc>
     <lastmod>2014-02-04T02:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/nervous/</loc>
     <lastmod>2014-02-04T02:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/nervousness/</loc>
     <lastmod>2014-02-04T02:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/just-shipped-my-first-draft-off-deadlined-march/</loc>
     <lastmod>2014-02-04T02:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/on-perpsective/</loc>
     <lastmod>2014-02-03T14:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/arizona-state/</loc>
     <lastmod>2014-02-02T05:07:45+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/ph.-d./</loc>
-    <lastmod>2014-02-02T05:07:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/initialization/</loc>
     <lastmod>2014-02-02T05:07:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/diss-survey/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/another-year/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/rasa/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/tags/ph.-d./</loc>
+  </url><url>
+    <loc>/tags/ph.d./</loc>
+  </url><url>
     <loc>/categories/</loc>
   </url>
-  
 </urlset>

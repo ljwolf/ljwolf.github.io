@@ -16,15 +16,16 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1639071369" />
+<link rel="stylesheet" href="/css/style.css?rnd=1648042051" />
 
 <meta property="og:title" content="A Famously Bad Gamble" />
 <meta property="og:description" content="Man, I am so easily nerd-sniped. First, I can just tell that the wedding profession matcher is going to push me to dig out all sorts of weird, distinctive patterns in the pairings between professionals. But, recently, I found myself idly simulating the answer to another kind of question altogether.
 The St. Petersburg Paradox The St. Petersburg Paradox describes a game with a mathematically &ldquo;infinite&rdquo; expected payoff but one that definitely does not feel worth playing." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/stpetersburg/" />
+<meta property="og:url" content="/posts/stpetersburg/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-29T09:46:42+01:00" />
 <meta property="article:modified_time" content="2021-10-29T09:46:42+01:00" />
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A Famously Bad Gamble"/>
@@ -89,65 +90,65 @@ The St. Petersburg Paradox The St. Petersburg Paradox describes a game with a ma
 <h1 id="simulating-an-answer">Simulating an Answer</h1>
 <p>To figure this out empirically, you can just <em>simulate</em> the outcomes of this process, and determine what you&rsquo;d need to bet in these simulations to break even. Here, I&rsquo;ll write the gamble using Python, and we can piece together the distribution of results.</p>
 <p>First, we build a python function describing the <em>game</em> itself:</p>
-<div class="highlight"><div style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+<div class="highlight"><div style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">numpy</span><span style="color:#666">,</span> <span style="color:#00f;font-weight:bold">seaborn</span>
-<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">numba</span> <span style="color:#008000;font-weight:bold">import</span> njit <span style="color:#408080;font-style:italic"># let&#39;s go fast 🚀</span>
-
-<span style="color:#a2f">@njit</span>
-<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">st_petersburg</span>(stake<span style="color:#666">=</span><span style="color:#666">2</span>, p_heads<span style="color:#666">=.</span><span style="color:#666">5</span>, max_iterations<span style="color:#666">=</span><span style="color:#666">1e9</span>):
-    i <span style="color:#666">=</span> <span style="color:#666">0</span>
-    <span style="color:#008000;font-weight:bold">while</span> i <span style="color:#666">&lt;</span> max_iterations:
-        is_tails <span style="color:#666">=</span> numpy<span style="color:#666">.</span>random<span style="color:#666">.</span>random() <span style="color:#666">&gt;</span> p_heads
-        <span style="color:#008000;font-weight:bold">if</span> is_tails:
-            <span style="color:#008000;font-weight:bold">return</span> stake
-        stake <span style="color:#666">*=</span> <span style="color:#666">2</span>
-        i <span style="color:#666">+=</span> <span style="color:#666">1</span></code></pre></td></tr></table>
+<pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">numpy</span><span style="color:#666">,</span> <span style="color:#00f;font-weight:bold">seaborn</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">numba</span> <span style="color:#008000;font-weight:bold">import</span> njit <span style="color:#408080;font-style:italic"># let&#39;s go fast 🚀</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">@njit</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">st_petersburg</span>(stake<span style="color:#666">=</span><span style="color:#666">2</span>, p_heads<span style="color:#666">=</span><span style="color:#666">.5</span>, max_iterations<span style="color:#666">=</span><span style="color:#666">1e9</span>):
+</span></span><span style="display:flex;"><span>    i <span style="color:#666">=</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">while</span> i <span style="color:#666">&lt;</span> max_iterations:
+</span></span><span style="display:flex;"><span>        is_tails <span style="color:#666">=</span> numpy<span style="color:#666">.</span>random<span style="color:#666">.</span>random() <span style="color:#666">&gt;</span> p_heads
+</span></span><span style="display:flex;"><span>        <span style="color:#008000;font-weight:bold">if</span> is_tails:
+</span></span><span style="display:flex;"><span>            <span style="color:#008000;font-weight:bold">return</span> stake
+</span></span><span style="display:flex;"><span>        stake <span style="color:#666">*=</span> <span style="color:#666">2</span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#666">+=</span> <span style="color:#666">1</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Now, to see this work:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
-<span style="color:#666">2</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
+</span></span><span style="display:flex;"><span><span style="color:#666">2</span></span></span></code></pre></div>
 <p>Oof! One game in, and we can&rsquo;t even get past the first flip! Let&rsquo;s try a few more times:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
-<span style="color:#666">2</span>
-<span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
-<span style="color:#666">2</span>
-<span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
-<span style="color:#666">8</span>
-<span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
-<span style="color:#666">16</span>
-<span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
-<span style="color:#666">2</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
+</span></span><span style="display:flex;"><span><span style="color:#666">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
+</span></span><span style="display:flex;"><span><span style="color:#666">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
+</span></span><span style="display:flex;"><span><span style="color:#666">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
+</span></span><span style="display:flex;"><span><span style="color:#666">16</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> st_petersburg()
+</span></span><span style="display:flex;"><span><span style="color:#666">2</span></span></span></code></pre></div>
 <p>OK, well, a few wins there. Let&rsquo;s go <em>all in</em> on the simulation, and construct 10,000 realizations:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">&gt;&gt;&gt;</span> winnings <span style="color:#666">=</span> [st_petersburg() <span style="color:#008000;font-weight:bold">for</span> _ <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(<span style="color:#666">10</span>_000)]</code></pre></div>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> winnings <span style="color:#666">=</span> [st_petersburg() <span style="color:#008000;font-weight:bold">for</span> _ <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(<span style="color:#666">10_000</span>)]</span></span></code></pre></div>
 <p>So, we&rsquo;ve run our simulations. What do the typical winnings look like?</p>
-<p>Well, we can visualize them using the <em>empirical cumulative density function</em>, which is (in my opinion), a <a href="https://medium.com/convergeml/why-ecdf-is-better-than-a-histogram-85deda4129ed">better way at understanding the distribution of values than a typical histogram</a>.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">&gt;&gt;&gt;</span> ax <span style="color:#666">=</span> seaborn<span style="color:#666">.</span>ecdfplot(winnings); ax<span style="color:#666">.</span>set_xlim(<span style="color:#666">0</span>,<span style="color:#666">50</span>); plt<span style="color:#666">.</span>show()</code></pre></div>
+<p>Well, we can visualize them using the <em>empirical cumulative density function</em>, which is (in my opinion), a <a href="https://medium.com/convergeml/why-ecdf-is-better-than-a-histogram-85deda4129ed">better way at understanding the distribution of values than a typical histogram.</a>.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#666">&gt;&gt;&gt;</span> ax <span style="color:#666">=</span> seaborn<span style="color:#666">.</span>ecdfplot(winnings); ax<span style="color:#666">.</span>set_xlim(<span style="color:#666">0</span>,<span style="color:#666">50</span>); plt<span style="color:#666">.</span>show()</span></span></code></pre></div>
 <p><img src="/images/stpete_ecdfplot.png" alt="Empirical CDF of Winnings in the St. Petersburg Game"></p>
 <p>I think of this plot like this.</p>
 <p>The line expresses <em>the fraction of values</em> that are at least as big as the X value. As you go from left to right, you &ldquo;see&rdquo; more data, and your line rises. When the line rises quickly, it means a lot of data falls in a small range of values, and when it rises slowly, it means that very few points (if any) are in that range. You can also think of the line as plotting the &ldquo;percentile&rdquo; of the value on the X axis; when the line passes through (11, .9), then you know that 11 is in the 90th percentile of values in your data, with 90% of the values being <em>smaller than (or equal to)</em> 11.</p>
-<p>The nice thing about this plot is that we can <em>immediately see</em> the percent of simulations where we&rsquo;d lose money. The blue line shows you the percent of simulations where you&rsquo;d <em>lose money</em> if you paid the value on the X axis to enter the game. For example, if you paid 10 bucks to play the game, you&rsquo;d only break even or profit about 12% of the time. While that seems small, the odds of winning here are <em>quite</em> good for the player (7ish to 1 odds to win), compared to <a href="https://en.wikipedia.org/wiki/Roulette#Bet_odds_table">typical casino games</a>. But, among those games where you&rsquo;d win, you&rsquo;d only win a median of 6 bucks, over and above the entry fee. Moving to a $20 entry fee about halves this chance of breaking even, and doubles the median profit to 12 bucks. But, moving to a $40 halves your chances of breaking even <em>again</em>, and the median profit skyrockets to 88 bucks!</p>
-<p>Of course, armed with this, you can decide how &ldquo;risk tolerant&rdquo; you are. You can find the entry price past which it doesn&rsquo;t make sense for you to risk playing the game.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> So, how much would <em>you</em> pay to play the St. Petersburg game?</p>
+<p>The nice thing about this plot is that we can <em>immediately see</em> the percent of simulations where we&rsquo;d lose money. The blue line shows you the percent of simulations where you&rsquo;d <em>lose money</em> if you paid the value on the X axis to enter the game. For example, if you paid 10 bucks to play the game, you&rsquo;d only break even or profit about 12% of the time. While that seems small, the odds of winning here are <em>quite</em> good for the player (7ish to 1 odds to win), compared to <a href="https://en.wikipedia.org/wiki/Roulette#Bet_odds_table">typical casino games</a>. But, among those games where you&rsquo;d win, you&rsquo;d only win a median of 6 bucks, over and above the entry fee. Moving to a $20 entry fee about halves this chance of breaking even, and doubles the median profit to 12 bucks. But, moving to a $40 halves your chances of breaking even <em>again</em>, but the median profit skyrockets to 88 bucks!</p>
+<p>Of course, armed with this, you can decide how &ldquo;risk tolerant&rdquo; you are and find the entry price past it doesn&rsquo;t make sense for you to risk playing the game.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> So, how much would <em>you</em> pay to play the St. Petersburg game?</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>And, of course, I&rsquo;m not dealing with the fact this could be an <em>iterative</em> game&hellip;. say you bet $10, win 6, but then play again at $16! Your odds of breaking even immediately halve, due to the way the payout rises with entry price. The <a href="https://en.wikipedia.org/wiki/Repeated_game">theory of iterative games</a> is usually <em>way</em> more complicated than that for single games, and <a href="http://www.math.u-szeged.hu/CsorgoEmlek/talks/Gyorfi.pdf">this is no exception!</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>And, of course, I&rsquo;m not dealing with the fact this could be an <em>iterative</em> game&hellip;. say you bet $10, win 6, but then play again at $16! Your odds of breaking even immediately halve, due to the way the payout rises with entry price. The <a href="https://en.wikipedia.org/wiki/Repeated_game">theory of iterative games</a> is usually <em>way</em> more complicated than that for single games, and <a href="http://www.math.u-szeged.hu/CsorgoEmlek/talks/Gyorfi.pdf">this is no exception!</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -169,7 +170,7 @@ The St. Petersburg Paradox The St. Petersburg Paradox describes a game with a ma
         </main>
         <footer>
             
-                <p>© 2021<br>
+                <p>© 2022<br>
 Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
 </p>
 <script type="text/javascript"
