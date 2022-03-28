@@ -53,19 +53,46 @@ predict(model1, scenario)
 ```
 *You can see that this is the same estimate from section 1; you should be expecting this, because (as we saw last week), a group-based model will just use the mean within each group as its prediction, if there aren't any other variables in play.*
 
-## 2.4
+## 2.4 (Challenge)
+Is the estimated relationship between price and year *in this model* linear?
+*No! you can see this very quickly by just plotting the model's predictions for each year. It almost exactly matches the predictions from the `geom_smooth()`, which you know is a kernel regression, and thus is very nonlinear! *
+
+```{r}
+scenario = data.frame(year=seq(1995, 2017, 1))
+scenario %>% 
+  mutate(prediction = predict(model1, .)) %>%
+  ggplot(aes(x=year, y=prediction)) + 
+  geom_point() + 
+  geom_smooth(data=sales, aes(x=year, y=price), se=F)
+
+```
+
+*So, why do we call this a "linear model"? Well... it's the linear combination of*
+$$ y = \text{is_1995}*\beta_1 + \text{is_1996}*\beta_2 + ... + \text{is_2017}*\beta_23 + e_i$$
+*Those $\text{is_1995}$ effects are grouping variables (sometimes called "one hot variables") that are 1 when an observation obeys the condition and zero otherwise). R automatically builds them for any variable that's a "factor" (a.k.a. "category"). This is the same logic we've discussed before for __spline models__, nonlinear models that split up the data into separate "regions" and fit a regression in that region. Here, our "separate" regression happens within each year!*
+
+## 2.5
 Are there any issues with the model that you can identify? [^hint-bias]
 *Tons! it's biased in terms of both prediction errors in most of the other categorical varuables. For example, in property type:*
 ```{r}
-sales %>% mutate(residual = residuals(model1)) %>% group_by(property_type) %>% summarize(mean(residual))
+sales %>% 
+  mutate(residual = residuals(model1)) %>% 
+  group_by(property_type) %>% 
+  summarize(mean(residual))
 ```
 *But, it's *not really *biased in years, since we've included those as group variables already:*
 ```{r}
-sales %>% mutate(residual = residuals(model1)) %>% group_by(year) %>% summarize(mean(residual))
+sales %>% 
+  mutate(residual = residuals(model1)) %>% 
+  group_by(year) %>% 
+  summarize(mean(residual))
 ```
 *You can also see it's heteroskedastic using similar methods*:
 ```{r}
-sales %>% mutate(residual = residuals(model1)) %>% group_by(year) %>% summarize(sd(residual))
+sales %>% 
+  mutate(residual = residuals(model1)) %>% 
+  group_by(year) %>% 
+  summarize(sd(residual))
 ```
 *The standard deviation of the residuals doubles within the first 10 years!*
 
