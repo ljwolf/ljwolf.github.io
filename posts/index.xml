@@ -6,10 +6,49 @@
     <description>Yet Another Geographer (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 29 Oct 2021 09:46:42 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 28 Mar 2022 13:29:52 +0100</lastBuildDate>
     
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A stray thought on the US, UK, and celebrity in Politics</title>
+      <link>/posts/celebs-in-politics/</link>
+      <pubDate>Mon, 28 Mar 2022 13:29:52 +0100</pubDate>
+      
+      <guid>/posts/celebs-in-politics/</guid>
+      <description>&lt;p&gt;Lots of people criticize American democracy for being very celebrity-driven,&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; in the sense that the media portrays it often as a set of individual conflicts between celebrity-politicians whose career trajectory is ultimately decided by name recognition. But, because there&amp;rsquo;s no one point of media focus, opposition politicians can avoid position-taking&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; fairly easily… they can keep their head down. Conversely, this means that opposition politicians that want to “break out” of their current party hierarchy can use the media as a tool to circumvent the party.&lt;/p&gt;
+&lt;p&gt;In the UK, though, politics are &lt;em&gt;extremely&lt;/em&gt; individual, in the sense that you&amp;rsquo;ve (generally) got a one-v-one at the top: the Leader of the Opposition (LOTO) and the Prime Minister (PM). There is always an “alternative candidate” for executive, and the media continually reports on this as a direct individual conflict between two individuals, generally not parties. This is an “election” framing in American systems, which you generally only see every 4 years. Indeed, the LOTO/PM metonymically serves as their party, and individuals refer interchangeably to the two. The equivalent framing in the US is much more group-related, more about Red vs. Blue.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; In contrast, the LOTO (and thus the “opposition” collectively) takes positions &lt;em&gt;continually&lt;/em&gt;: the media asks the leader of the opposition about everything and anything, they respond, and end up setting policy with that response.&lt;/p&gt;
+&lt;p&gt;What I find interesting about this is how it adjusts the incentives for position-taking, a critical front in the “culture war.” In “culture war,” stances on social policies become placed on the same level as aesthetic or moralistic statements about the culture in which politics itself operates. This means that some of the “position taking” will be about policy, but much else is not&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;In America, the incentive to use the media as an end-run on your party’s leadership structure generally winds up polarizing elites. Fringe politicians make ever more radical public statements in order to get media attention… but once an issue is “over” (i.e. out of the media) these positions are often forgotten. Position-taking is continual, distributed, and often conflictual within parties; this reinforces the “maverick” independent political style, and thus reinforces what most think of as “personality-driven.”&lt;/p&gt;
+&lt;p&gt;In Britain, though, non-leader politicians have basically no incentive to take alternative positions: it “distracts” from the title fight between the LOTO and the PM. (This is reinforced by whip powers and party membership systems, which are very strong in the UK.) The main political construct for this, usually, is the “backbench” of a party. But this has massively less access and presentation in the media than the American analogue.&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;So, this makes UK politics way more “celebrity-driven” in my eyes than the US, but in a different sense. In the UK’s “individual” system, &lt;em&gt;politics is celebrity:&lt;/em&gt; “normal” politics is a staged fight between individual leaders of distinct political communities whose &lt;em&gt;celebrity is an effect of their political function&lt;/em&gt;. In contrast, the US is a “mass” conflict where &lt;em&gt;celebrity is political,&lt;/em&gt; in that “normal” politics incentivizes individuals to seek or use their existing &lt;em&gt;celebrity to create political power.&lt;/em&gt;&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;As attention to media continues to decentralize, I wonder how this will affect each system differently. The “traditional” take about this in the US seems to be that it will cause &lt;a href=&#34;https://en.wikipedia.org/wiki/Bully_pulpit&#34;&gt;the bully pulpit&lt;/a&gt; to decline, and politicians on the outside of the party power structure will be increasingly incentivized to seek the media as an alternative mechanism for climbing within their own parties. I wonder whether the same structural changes in media will cause parties in the UK to fragment, as the intensification of micro-celebrity pushes party members to take more positions independently of the LOTO/PM.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Here, I&amp;rsquo;m thinking of Neil Postman&amp;rsquo;s claim that politicans have become &amp;ldquo;assimilated&amp;rdquo; into the realm of television. No doubt that&amp;rsquo;s only intensified with the decentralization of media.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;I refer to position-taking in &lt;a href=&#34;https://politicalscience.yale.edu/publications/congress-electoral-connection&#34;&gt;the Mayhew sense&lt;/a&gt;, as one of the three main actions involved in politics and reflecting a public announcement of a politician&amp;rsquo;s position on an issue.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Although, powerful legislators may fill this role, like Nancy Pelosi did under late GW Bush &amp;amp; Trump presidencies or Mitch McConnell did in the Obama and Biden presidencies.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;In these political issues, I think position-taking is intended to create social pressure on the actors who do have power to make policy; it&amp;rsquo;s like public lobbying from a political authority. &amp;lt;!&amp;mdash; For example, national political leaders talk about &amp;ldquo;critical race theory&amp;rdquo; to signal attitudes to local school boards or the &amp;ldquo;statue debate&amp;rdquo; to signal to city governments (and, in the US, state governments).&amp;mdash;&amp;gt;Note that often this policy power resides not with people in governments but instead the members of corporate boards.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Like, contrast the media exposure of &lt;a href=&#34;https://en.wikipedia.org/wiki/The_Squad_(United_States_Congress)&#34;&gt;&amp;ldquo;the Squad&amp;rdquo;&lt;/a&gt; to many contemporary set of legislators in the UK. The best analogue I can think of is the &lt;a href=&#34;https://en.wikipedia.org/wiki/European_Research_Group&#34;&gt;European Research Group&lt;/a&gt;, which again is a bit more specifically defined by a set of policies.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;I know that getting elected in the US can make you famous, but this is largely epiphenominal to the role itself. To advance, you need to build celebrity. I admit this with all appropriate caveats. However, I still believe this distinction is important to understand how the systems relate: celebrity is a structurally incentivised route to power in the party, like &lt;a href=&#34;https://www.theguardian.com/books/2021/oct/23/the-dawn-of-everything-by-david-graeber-and-david-wengrow-review-inequality-is-not-the-price-of-civilisation&#34;&gt;Graeber and Wengrow&lt;/a&gt; note for money. In the other system, celebrity is only an informal benefit to getting selected by your political party, and further celebrity isn&amp;rsquo;t clearly going to enhance your political power within that party.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
     
     <item>
       <title>A Famously Bad Gamble</title>

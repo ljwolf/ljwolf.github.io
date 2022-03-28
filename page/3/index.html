@@ -17,7 +17,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1648042051" />
+<link rel="stylesheet" href="/css/style.css?rnd=1648473336" />
 
 <meta property="og:title" content="Yet Another Geographer" />
 <meta property="og:description" content="" />
@@ -63,6 +63,30 @@
         <main>
             
     
+    
+    <article class="post-list">
+        <header> 
+            <h1>
+                <a href="/posts/testingmatrix/">Using lookahead testing</a>
+            </h1>
+        </header>
+
+        <div class="content">
+            To help subpackages that depend on libpysal, the API will change shortly to be in line with our desired migrating.pysal.org API.
+If you test your package against the pypi version of libpysal (which you get using pip install libpysal), you already know that your changes don&rsquo;t break with respect to what exists. However, if you&rsquo;d like to give yourself some lead time to detect if there are breaking changes in the development version of libpysal on github, feel free to follow these directions on how to set up optional tests on travis.
+        </div>
+
+        
+        <div class="article-info">
+    
+        <div class="article-date">2018-07-24</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
     
     <article class="post-list">
         <header> 
@@ -332,30 +356,6 @@ I was intrigued by the prospect of using spectral clustering for constrained clu
                     
                 </ul>
         
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/posts/hodges-reich-sar/">throwing in a spatially-correlated random effect may mess up the fixed effect you love - revisiting Hodges and Reich (2010) for SAR models</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
-$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2018-02-24</div>
-    
-    <div class="article-taxonomies">
-        
-            
     </div>
 </div>
     </article>
