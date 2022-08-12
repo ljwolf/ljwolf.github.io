@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> mapping on Yet Another Geographer</title>
+    <title>mapping on Yet Another Geographer</title>
     <link>/tags/mapping/</link>
-    <description>Yet Another Geographer ( mapping)</description>
+    <description>Yet Another Geographer (mapping)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 02 Dec 2015 21:42:39 +0000</lastBuildDate>
@@ -19,17 +19,6 @@
       <guid>/new-york-is-very-nice/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/134436524204/new-york-is-very-nice&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/134436524204/new-york-is-very-nice&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First CartoDB map</title>
-      <link>/first-cartodb-map/</link>
-      <pubDate>Wed, 26 Aug 2015 02:26:08 +0000</pubDate>
-      
-      <guid>/first-cartodb-map/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/127619060729/first-cartodb-map&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/127619060729/first-cartodb-map&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     

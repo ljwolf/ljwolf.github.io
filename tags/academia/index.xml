@@ -1,48 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> academia on Yet Another Geographer</title>
+    <title>academia on Yet Another Geographer</title>
     <link>/tags/academia/</link>
-    <description>Yet Another Geographer ( academia)</description>
+    <description>Yet Another Geographer (academia)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 25 Oct 2016 19:53:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2015 03:29:53 +0000</lastBuildDate>
     
     <atom:link href="/tags/academia/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Yet another elections simulator</title>
-      <link>/yet-another-elections-simulator/</link>
-      <pubDate>Tue, 25 Oct 2016 19:53:11 +0000</pubDate>
-      
-      <guid>/yet-another-elections-simulator/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/152313215409/yet-another-elections-simulator&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/152313215409/yet-another-elections-simulator&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Untitled</title>
-      <link>/im-trying-to-recover-from-a-bit-of-burnout-this/</link>
-      <pubDate>Sun, 17 Jul 2016 19:27:14 +0000</pubDate>
-      
-      <guid>/im-trying-to-recover-from-a-bit-of-burnout-this/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/147564537909/im-trying-to-recover-from-a-bit-of-burnout-this&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/147564537909/im-trying-to-recover-from-a-bit-of-burnout-this&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The “Compilation Error”Reading Technical Articles</title>
-      <link>/the-compilation-errorreading-technical-articles/</link>
-      <pubDate>Sat, 24 Oct 2015 15:20:46 +0000</pubDate>
-      
-      <guid>/the-compilation-errorreading-technical-articles/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/131828343409/the-compilation-errorreading-technical-articles&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/131828343409/the-compilation-errorreading-technical-articles&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Things I remind myself always</title>
@@ -52,25 +19,6 @@
       <guid>/things-i-remind-myself-always/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/129337465084/things-i-remind-myself-always&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/129337465084/things-i-remind-myself-always&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>vornoi bugs</title>
-      <link>/a-fun-little-bug-in-my-apparently-outdated-qgis/</link>
-      <pubDate>Tue, 30 Sep 2014 18:57:00 +0000</pubDate>
-      
-      <guid>/a-fun-little-bug-in-my-apparently-outdated-qgis/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/98840800049/a-fun-little-bug-in-my-apparently-outdated-qgis&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/98840800049/a-fun-little-bug-in-my-apparently-outdated-qgis&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -124,95 +72,6 @@
     </item>
     
     <item>
-      <title>Going to Scipy 2014</title>
-      <link>/going-to-scipy-2014/</link>
-      <pubDate>Thu, 29 May 2014 10:02:09 +0000</pubDate>
-      
-      <guid>/going-to-scipy-2014/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/87201175900/going-to-scipy-2014&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/87201175900/going-to-scipy-2014&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Modified an existing ASU beamer template</title>
-      <link>/modified-an-existing-asu-beamer-template/</link>
-      <pubDate>Wed, 05 Mar 2014 04:14:20 +0000</pubDate>
-      
-      <guid>/modified-an-existing-asu-beamer-template/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/78635674299/modified-an-existing-asu-beamer-template&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/78635674299/modified-an-existing-asu-beamer-template&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome Week Tips</title>
-      <link>/welcome-week-tips/</link>
-      <pubDate>Mon, 03 Mar 2014 01:34:50 +0000</pubDate>
-      
-      <guid>/welcome-week-tips/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/78417153835/welcome-week-tips&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/78417153835/welcome-week-tips&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>starting to learn julia</title>
-      <link>/i-guess-this-is-how-productivity-works-terminal/</link>
-      <pubDate>Thu, 27 Feb 2014 05:10:00 +0000</pubDate>
-      
-      <guid>/i-guess-this-is-how-productivity-works-terminal/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/77996900074/i-guess-this-is-how-productivity-works-terminal&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/77996900074/i-guess-this-is-how-productivity-works-terminal&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>first simple program in julia- a greedy knapsack</title>
-      <link>/first-simple-program-in-julia-a-greedy-knapsack/</link>
-      <pubDate>Thu, 20 Feb 2014 04:32:52 +0000</pubDate>
-      
-      <guid>/first-simple-program-in-julia-a-greedy-knapsack/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/77264557503/first-simple-program-in-julia-a-greedy-knapsack&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/77264557503/first-simple-program-in-julia-a-greedy-knapsack&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>went crawling back into workflowy&#39;s arms today</title>
-      <link>/went-crawling-back-into-workflowys-arms-today/</link>
-      <pubDate>Thu, 13 Feb 2014 15:35:53 +0000</pubDate>
-      
-      <guid>/went-crawling-back-into-workflowys-arms-today/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/76555996119/went-crawling-back-into-workflowys-arms-today&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/76555996119/went-crawling-back-into-workflowys-arms-today&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Time Management or Fortitude</title>
-      <link>/time-management-or-fortitude/</link>
-      <pubDate>Thu, 06 Feb 2014 02:48:16 +0000</pubDate>
-      
-      <guid>/time-management-or-fortitude/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75780723939/time-management-or-fortitude&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75780723939/time-management-or-fortitude&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>whew.... first &#34;thing&#34; sent off in grad school</title>
-      <link>/just-shipped-my-first-draft-off-deadlined-march/</link>
-      <pubDate>Tue, 04 Feb 2014 02:31:00 +0000</pubDate>
-      
-      <guid>/just-shipped-my-first-draft-off-deadlined-march/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75570984570/just-shipped-my-first-draft-off-deadlined-march&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75570984570/just-shipped-my-first-draft-off-deadlined-march&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>On Perpsective</title>
       <link>/on-perpsective/</link>
       <pubDate>Mon, 03 Feb 2014 14:00:00 +0000</pubDate>
@@ -220,17 +79,6 @@
       <guid>/on-perpsective/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75501321681/on-perpsective&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75501321681/on-perpsective&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Initialization</title>
-      <link>/initialization/</link>
-      <pubDate>Sun, 02 Feb 2014 05:07:45 +0000</pubDate>
-      
-      <guid>/initialization/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/75352899950/initialization&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/75352899950/initialization&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -17,7 +17,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1649429062" />
+<link rel="stylesheet" href="/css/style.css?rnd=1660310947" />
 
 <meta property="og:title" content="Yet Another Geographer" />
 <meta property="og:description" content="" />
@@ -63,30 +63,6 @@
         <main>
             
     
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/posts/testingmatrix/">Using lookahead testing</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            To help subpackages that depend on libpysal, the API will change shortly to be in line with our desired migrating.pysal.org API.
-If you test your package against the pypi version of libpysal (which you get using pip install libpysal), you already know that your changes don&rsquo;t break with respect to what exists. However, if you&rsquo;d like to give yourself some lead time to detect if there are breaking changes in the development version of libpysal on github, feel free to follow these directions on how to set up optional tests on travis.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2018-07-24</div>
-    
-    <div class="article-taxonomies">
-        
-            
-    </div>
-</div>
-    </article>
     
     <article class="post-list">
         <header> 
@@ -195,29 +171,6 @@ I was intrigued by the prospect of using spectral clustering for constrained clu
                     
                 </ul>
         
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/posts/mpl-is-just-fine/">Mpl Is Just Fine</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            I&rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&rsquo;m still learning things that exist within the pylab interface&hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2018-03-18</div>
-    
-    <div class="article-taxonomies">
-        
-            
     </div>
 </div>
     </article>
@@ -353,6 +306,62 @@ I was intrigued by the prospect of using spectral clustering for constrained clu
                 <ul class="article-tags">
                     
                         <li><a href="/tags/imported">#imported</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+    </article>
+    
+    <article class="post-list">
+        <header> 
+            <h1>
+                <a href="/posts/does-projection-matter/">Does projection matter for compactness indices?</a>
+            </h1>
+        </header>
+
+        <div class="content">
+            This is a quick and dirty exploration of the compactness impacts of changing the projection of data on compactness measures.
+import geopandas as gpd import numpy as np import matplotlib.pyplot as plt from compact import reock as _reock import pysal as ps import seaborn as sns %matplotlib inline The data I&rsquo;m using is the 113th districts from my Scientific Data publication, sourced originally from Jeff Lewis.
+df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#34;Alaska&#34;,&#34;Hawaii&#34;)&#39;) df.
+        </div>
+
+        
+        <div class="article-info">
+    
+        <div class="article-date">2018-02-18</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
+    
+    <article class="post-list">
+        <header> 
+            <h1>
+                <a href="/this-brexit-analysis-for-the-gisruk-competitions/">Finally making headway on Brexit Data</a>
+            </h1>
+        </header>
+
+        <div class="content">
+            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
+        </div>
+
+        
+        <div class="article-info">
+    
+        <div class="article-date">2018-02-15</div>
+    
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="/tags/imported">#imported</a></li>
+                    
+                        <li><a href="/tags/image">#image</a></li>
                     
                 </ul>
         
