@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> elections on Yet Another Geographer</title>
+    <title>elections on Yet Another Geographer</title>
     <link>/tags/elections/</link>
-    <description>Yet Another Geographer ( elections)</description>
+    <description>Yet Another Geographer (elections)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 09 Mar 2018 17:34:20 +0000</lastBuildDate>
@@ -266,6 +266,17 @@ Thus, the (k)th order spatial autocorrelation function is:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;show()
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;images/spacf_output_62_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Interpreting this, we see that the first order neighbors are typically sufficient to capture the full extent of correlation between counties. Conditional on the first-order neighbors, higher-order neighbor correlation pretty-much disappears..&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A short exploration of the 2016 electoral swing</title>
+      <link>/a-short-exploration-of-the-2016-electoral-swing/</link>
+      <pubDate>Tue, 29 Nov 2016 00:07:16 +0000</pubDate>
+      
+      <guid>/a-short-exploration-of-the-2016-electoral-swing/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/153806452919/a-short-exploration-of-the-2016-electoral-swing&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/153806452919/a-short-exploration-of-the-2016-electoral-swing&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
     </item>
     

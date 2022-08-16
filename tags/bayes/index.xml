@@ -6,10 +6,71 @@
     <description>Yet Another Geographer ( bayes)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 12 Sep 2014 04:01:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Feb 2017 22:09:11 +0000</lastBuildDate>
     
     <atom:link href="/tags/bayes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>all those p-values will be lost in time</title>
+      <link>/all-those-p-values-will-be-lost-in-time-like/</link>
+      <pubDate>Wed, 22 Feb 2017 22:09:11 +0000</pubDate>
+      
+      <guid>/all-those-p-values-will-be-lost-in-time-like/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/157594826829/all-those-p-values-will-be-lost-in-time-like&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/157594826829/all-those-p-values-will-be-lost-in-time-like&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>metropolis-within-gibbs</title>
+      <link>/at-top-a-metropolis-within-gibbs-sampled-sar/</link>
+      <pubDate>Sun, 09 Oct 2016 18:53:35 +0000</pubDate>
+      
+      <guid>/at-top-a-metropolis-within-gibbs-sampled-sar/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;my spatially-correlated variance components model is finally coming together :)&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/151582868789/at-top-a-metropolis-within-gibbs-sampled-sar&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/151582868789/at-top-a-metropolis-within-gibbs-sampled-sar&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>something&#39;s up with PyMC3&#39;s diagnostics...</title>
+      <link>/because-i-actually-post-all-of-my-stuff-to-gists/</link>
+      <pubDate>Thu, 29 Sep 2016 00:13:20 +0000</pubDate>
+      
+      <guid>/because-i-actually-post-all-of-my-stuff-to-gists/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;above is their geweke statistic versus my version &amp;amp; that found in CODA.&lt;/p&gt;
+&lt;p&gt;Not sure what&amp;rsquo;s up, but it&amp;rsquo;s not good&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/151085840099/because-i-actually-post-all-of-my-stuff-to-gists&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/151085840099/because-i-actually-post-all-of-my-stuff-to-gists&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>spatially-varying coefficients models</title>
+      <link>/working-on-a-paper-about-models-that-can-have-very/</link>
+      <pubDate>Sun, 28 Aug 2016 02:57:29 +0000</pubDate>
+      
+      <guid>/working-on-a-paper-about-models-that-can-have-very/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/149591324934/working-on-a-paper-about-models-that-can-have-very&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/149591324934/working-on-a-paper-about-models-that-can-have-very&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>spatially-varying components models are finally coming together</title>
+      <link>/as-im-having-to-wind-down-on-summer-of-code-work/</link>
+      <pubDate>Sat, 06 Aug 2016 00:09:56 +0000</pubDate>
+      
+      <guid>/as-im-having-to-wind-down-on-summer-of-code-work/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; imported from:&lt;!-- raw HTML omitted --&gt; &amp;lt;a href=&amp;lsquo;&lt;a href=&#34;https://yetanothergeographer.tumblr.com/148526668179/as-im-having-to-wind-down-on-summer-of-code-work&#39;&#34;&gt;https://yetanothergeographer.tumblr.com/148526668179/as-im-having-to-wind-down-on-summer-of-code-work&#39;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;yetanothergeographer&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A Short Realization on Gelman-King (1994)</title>
