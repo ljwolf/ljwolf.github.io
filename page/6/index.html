@@ -17,7 +17,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1678452595" />
+<link rel="stylesheet" href="/css/style.css?rnd=1680009573" />
 
 <meta property="og:title" content="Yet Another Geographer" />
 <meta property="og:description" content="" />
@@ -50,7 +50,7 @@
     
     <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">CV</a>
     
-    <a class="" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html" title="">Affiliation</a>
+    <a class="" href="https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/" title="">Affiliation</a>
     
     <a class="" href="/teaching/" title="">Teaching</a>
     
@@ -67,32 +67,85 @@
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/finally-got-this-elections-simulator-working-the/">elections simulators</a>
+                <a href="/posts/mpl-is-just-fine/">Mpl Is Just Fine</a>
             </h1>
         </header>
 
         <div class="content">
-            finally got this elections simulator working, based on Linzer&rsquo;s 2012 paper on gaussian mixture modelling for elections data.
-imported from:&lt;a href=&lsquo;https://yetanothergeographer.
+            I&rsquo;ve been using matplotlib for nearly 5 years at least once a week. I&rsquo;m still learning things that exist within the pylab interface&hellip; not the most ideal UX. For instance, I just learned about plt.axvline, which I could use to draw vertical lines in my code instead of what I usually use, plt.vlines(coordinate_list, *plt.gca().get_ylim()), but it&rsquo;s not as general as plt.vlines since it actually plots a rectangle. Still, though, for most of what I do (which is a single vertical line for drawing specific axes/time breaks in a plot) it&rsquo;s easier.
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2016-10-18</div>
+        <div class="article-date">2018-03-18</div>
+    
+    <div class="article-taxonomies">
+        
+            
+    </div>
+</div>
+    </article>
+    
+    <article class="post-list">
+        <header> 
+            <h1>
+                <a href="/posts/annoscatter/">Annoscatter</a>
+            </h1>
+        </header>
+
+        <div class="content">
+            I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&rsquo;s just a call like annoscatter(df.
+        </div>
+
+        
+        <div class="article-info">
+    
+        <div class="article-date">2018-03-12</div>
     
     <div class="article-taxonomies">
         
             
                 <ul class="article-tags">
+                    
+                        <li><a href="/tags/python">#python</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+    </article>
+    
+    <article class="post-list">
+        <header> 
+            <h1>
+                <a href="/posts/spatial_acf/">Spatial Autocorrelation Functions</a>
+            </h1>
+        </header>
+
+        <div class="content">
+            I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&rsquo;&rsquo; at which processes operate electorally. I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated. The typical diameter at which the so-called &ldquo;spatial autocorrelation function&rdquo; goes to zero denotes how wide a typical spatial cluster might be, and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold.
+        </div>
+
+        
+        <div class="article-info">
+    
+        <div class="article-date">2018-03-09</div>
+    
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="/tags/spatial%20autocorrelation">#spatial autocorrelation</a></li>
+                    
+                        <li><a href="/tags/esda">#esda</a></li>
                     
                         <li><a href="/tags/dissertation">#dissertation</a></li>
                     
-                        <li><a href="/tags/%20python"># python</a></li>
+                        <li><a href="/tags/swing">#swing</a></li>
                     
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
+                        <li><a href="/tags/elections">#elections</a></li>
                     
                 </ul>
         
@@ -103,37 +156,22 @@ imported from:&lt;a href=&lsquo;https://yetanothergeographer.
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/every-time-i-use-a-sixel-based-library-it-just/">libsixel is real cool</a>
+                <a href="/posts/archive/">Old Posts</a>
             </h1>
         </header>
 
         <div class="content">
-            images directly in the terminal! no fuss! although you have to use a special terminal emulator&hellip;
-imported from:&lt;a href=&lsquo;https://yetanothergeographer.
+            All of my old posts are still live on Yet another geographer (at least until Tumblr decides to cave in on itself!) I may continue to update there with smaller reflections.
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2016-10-10</div>
+        <div class="article-date">2018-03-09</div>
     
     <div class="article-taxonomies">
         
             
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/python">#python</a></li>
-                    
-                        <li><a href="/tags/%20graphics"># graphics</a></li>
-                    
-                        <li><a href="/tags/%20cli"># cli</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
     </div>
 </div>
     </article>
@@ -141,290 +179,20 @@ imported from:&lt;a href=&lsquo;https://yetanothergeographer.
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/at-top-a-metropolis-within-gibbs-sampled-sar/">metropolis-within-gibbs</a>
+                <a href="/posts/another-year/"></a>
             </h1>
         </header>
 
         <div class="content">
-            my spatially-correlated variance components model is finally coming together :)
-imported from:&lt;a href=&lsquo;https://yetanothergeographer.
+            
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2016-10-09</div>
-    
     <div class="article-taxonomies">
         
             
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/statistics">#statistics</a></li>
-                    
-                        <li><a href="/tags/%20python"># python</a></li>
-                    
-                        <li><a href="/tags/%20bayes"># bayes</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/how-one-weird-trick-helps-you-evaluate-correlated/">How one weird trick helps you evaluate correlated Normal distributions quickly</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2016-10-07</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/python">#python</a></li>
-                    
-                        <li><a href="/tags/%20statistics"># statistics</a></li>
-                    
-                        <li><a href="/tags/%20computation"># computation</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/because-i-actually-post-all-of-my-stuff-to-gists/">something&#39;s up with PyMC3&#39;s diagnostics...</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            above is their geweke statistic versus my version &amp; that found in CODA.
-Not sure what&rsquo;s up, but it&rsquo;s not good&hellip;
-imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2016-09-29</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/python">#python</a></li>
-                    
-                        <li><a href="/tags/%20r"># r</a></li>
-                    
-                        <li><a href="/tags/%20bayesian%20statistics"># bayesian statistics</a></li>
-                    
-                        <li><a href="/tags/%20bayes"># bayes</a></li>
-                    
-                        <li><a href="/tags/%20statistics"># statistics</a></li>
-                    
-                        <li><a href="/tags/%20geography"># geography</a></li>
-                    
-                        <li><a href="/tags/%20gis"># gis</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/the-importance-of-centering-variables/">The importance of centering variables</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2016-09-26</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/geography">#geography</a></li>
-                    
-                        <li><a href="/tags/%20statistics"># statistics</a></li>
-                    
-                        <li><a href="/tags/%20estimation"># estimation</a></li>
-                    
-                        <li><a href="/tags/%20markov%20chain%20monte%20carlo"># markov chain monte carlo</a></li>
-                    
-                        <li><a href="/tags/%20bayesian%20statistics"># bayesian statistics</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/found-another-error-in-the-clea-as-i-am-building/">debugging the constituency level electoral archive</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2016-09-12</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/politics">#politics</a></li>
-                    
-                        <li><a href="/tags/%20clea"># clea</a></li>
-                    
-                        <li><a href="/tags/%20dissertatino"># dissertatino</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/the-joys-of-using-political-data/">The joys of using political data</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2016-08-31</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/working-on-a-paper-about-models-that-can-have-very/">spatially-varying coefficients models</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2016-08-28</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/bayesian%20statistics">#bayesian statistics</a></li>
-                    
-                        <li><a href="/tags/%20bayes"># bayes</a></li>
-                    
-                        <li><a href="/tags/%20geography"># geography</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/progress-in-a-human-geography/">Progress in (a) Human Geography</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2016-08-25</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                </ul>
-        
     </div>
 </div>
     </article>
@@ -440,9 +208,7 @@ imported from:&lt;a href=&lsquo;https://yetanothergeographer.
                 
             
         </div>
-        <div class="right pagination-item ">
-            
-            <a href="/page/7/">To old posts</a>
+        <div class="right pagination-item disabled">
             
         </div>
     </div>

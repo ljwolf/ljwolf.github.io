@@ -17,7 +17,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
-<link rel="stylesheet" href="/css/style.css?rnd=1678452595" />
+<link rel="stylesheet" href="/css/style.css?rnd=1680009573" />
 
 <meta property="og:title" content="Yet Another Geographer" />
 <meta property="og:description" content="" />
@@ -50,7 +50,7 @@
     
     <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">CV</a>
     
-    <a class="" href="http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html" title="">Affiliation</a>
+    <a class="" href="https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/" title="">Affiliation</a>
     
     <a class="" href="/teaching/" title="">Teaching</a>
     
@@ -67,19 +67,18 @@
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/posts/hodges-reich-sar/">throwing in a spatially-correlated random effect may mess up the fixed effect you love - revisiting Hodges and Reich (2010) for SAR models</a>
+                <a href="/posts/email-charter/">Email Charter</a>
             </h1>
         </header>
 
         <div class="content">
-            import pysal as ps import numpy as np import pandas as pd import matplotlib.pyplot as plt import geopandas as gpd %matplotlib inline This is just a quick demonstration of what I understand from Hodges &amp; Reich (2010)&rsquo;s argument about the structure of spatial error terms. Essentially, his claim is that the substantive estimates ($\hat{\beta}$) from an ordinary least squares regression over $N$ observations and $P$ covariates:
-$$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$
+            The University of Bristol Email Charter I really like the University of Bristol&rsquo;s new email charter. But, I think it could be made a little more clear and actionable, especially since it can build off of previous work and thought about making emails clearer, shorter, and fewer in number. Below, I&rsquo;ll go through the points listed in the original charter and try to make them clearer. I&rsquo;ll also try to add some actions that add some teeth to the points.
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2018-02-24</div>
+        <div class="article-date">2019-06-17</div>
     
     <div class="article-taxonomies">
         
@@ -91,20 +90,19 @@ $$ Y \sim \mathcal{N}(X\hat{\beta}, \sigma^2)$$
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/posts/does-projection-matter/">Does projection matter for compactness indices?</a>
+                <a href="/posts/cenpy-1-0/">Cenpy 1.0.0</a>
             </h1>
         </header>
 
         <div class="content">
-            This is a quick and dirty exploration of the compactness impacts of changing the projection of data on compactness measures.
-import geopandas as gpd import numpy as np import matplotlib.pyplot as plt from compact import reock as _reock import pysal as ps import seaborn as sns %matplotlib inline The data I&rsquo;m using is the 113th districts from my Scientific Data publication, sourced originally from Jeff Lewis.
-df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#34;Alaska&#34;,&#34;Hawaii&#34;)&#39;) df.
+            I&rsquo;m really excited to announce that my longstanding package to work the with US Census Bureau API, cenpy, has gotten some long-needed love and attention. The new method of working with the data is really slick (if I do say so myself).
+Check it out in this gist! If you like it, hate it, or want to improve it, hit me up over on the project or on my twitter.
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2018-02-18</div>
+        <div class="article-date">2019-04-08</div>
     
     <div class="article-taxonomies">
         
@@ -116,30 +114,25 @@ df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/this-brexit-analysis-for-the-gisruk-competitions/">Finally making headway on Brexit Data</a>
+                <a href="/posts/crunchtober/">Crunchtober</a>
             </h1>
         </header>
 
         <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
+            One thing I find so difficult to accept is crunch time. Not that I can’t cope or even succeed in crunch, per se. But, rather, I&rsquo;m beginning to find it very peculiar that folks respond to difficult times through the faith in their ephemerality&hellip; as if
+ this specific difficult phase is going to pass
+ is somehow heartening.
+Sometimes, when my job is at its worst, I hear this a lot.
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2018-02-15</div>
+        <div class="article-date">2018-10-24</div>
     
     <div class="article-taxonomies">
         
             
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
     </div>
 </div>
     </article>
@@ -147,28 +140,24 @@ df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/this-should-probably-be-a-tweet/">this should probably be a tweet</a>
+                <a href="/posts/whose_fixed/">Who&#39;s Fixed?</a>
             </h1>
         </header>
 
         <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
+            When comparing a multilevel model to a fixed-level model, it&rsquo;s important to consider how things are parameterized. For instance, let&rsquo;s say you&rsquo;re conducting comparisons between a no-pooling model and a partial pooling variance components model. In this case, we have:
+$$ y= \Delta u + \epsilon$$
+as the specification, where $\Delta$ is the dummy variable matrix, $y$ is the outcome of interest, and $\epsilon$ is the usual homoeskedastic error term for the responses.
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2018-02-13</div>
+        <div class="article-date">2018-09-13</div>
     
     <div class="article-taxonomies">
         
             
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                </ul>
-        
     </div>
 </div>
     </article>
@@ -176,221 +165,22 @@ df = gpd.read_file(&#39;./districts113.shp&#39;).query(&#39;STATENAME not in (&#
     <article class="post-list">
         <header> 
             <h1>
-                <a href="/never-thought-id-be-complaining-about-only-having/">running on all cores</a>
+                <a href="/posts/geometry/">The Geometer&#39;s Angle</a>
             </h1>
         </header>
 
         <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
+            The Geometer&rsquo;s Angle What John O&rsquo;Loughlin talks about in his recent presidential address in Political Geography strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I got from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [1,2,3] he suggested that electoral analysis needed to go beyond this.
         </div>
 
         
         <div class="article-info">
     
-        <div class="article-date">2018-01-31</div>
+        <div class="article-date">2018-07-30</div>
     
     <div class="article-taxonomies">
         
             
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/its-neat-that-this-new-algorithm-is-working/">price clusters in airbnbs in brooklyn</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2018-01-29</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/ml">#ml</a></li>
-                    
-                        <li><a href="/tags/%20stats"># stats</a></li>
-                    
-                        <li><a href="/tags/%20clustering"># clustering</a></li>
-                    
-                        <li><a href="/tags/%20brooklyn"># brooklyn</a></li>
-                    
-                        <li><a href="/tags/%20neighbourhoods"># neighbourhoods</a></li>
-                    
-                        <li><a href="/tags/%20neighborhoods"># neighborhoods</a></li>
-                    
-                        <li><a href="/tags/%20airbnb"># airbnb</a></li>
-                    
-                        <li><a href="/tags/%20price"># price</a></li>
-                    
-                        <li><a href="/tags/%20economics"># economics</a></li>
-                    
-                        <li><a href="/tags/%20geography"># geography</a></li>
-                    
-                        <li><a href="/tags/%20gis"># gis</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/i-forgot-how-killer-the-builtin-matplotlib/">matplotlib.ion mode</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2017-08-17</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/an-article-ill-never-get-to-write-because-my/">An article I’ll never get to write because my hypothesis was wrong.</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2017-07-18</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/geography">#geography</a></li>
-                    
-                        <li><a href="/tags/%20redistricting"># redistricting</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/i-think-thisll-end-up-being-the-big-story-from-my/">the highest dimension scatter</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2017-07-05</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/gerrymandering">#gerrymandering</a></li>
-                    
-                        <li><a href="/tags/%20acadeimca"># acadeimca</a></li>
-                    
-                        <li><a href="/tags/%20dissertation"># dissertation</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                        <li><a href="/tags/image">#image</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-    </article>
-    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="/some-thoughts-on-rise-of-the-thought-leader/">Some thoughts on “Rise of the Thought Leader”</a>
-            </h1>
-        </header>
-
-        <div class="content">
-            imported from:&lt;a href=&lsquo;https://yetanothergeographer.
-        </div>
-
-        
-        <div class="article-info">
-    
-        <div class="article-date">2017-06-28</div>
-    
-    <div class="article-taxonomies">
-        
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/long%20form">#long form</a></li>
-                    
-                        <li><a href="/tags/%20thought%20leader"># thought leader</a></li>
-                    
-                        <li><a href="/tags/%20intellectual"># intellectual</a></li>
-                    
-                        <li><a href="/tags/%20academic"># academic</a></li>
-                    
-                        <li><a href="/tags/imported">#imported</a></li>
-                    
-                </ul>
-        
     </div>
 </div>
     </article>
