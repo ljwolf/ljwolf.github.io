@@ -1,157 +1,252 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>/posts/celebs-in-politics/</loc>
-    <lastmod>2022-03-28T13:29:52+01:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2022-03-28T13:29:52+01:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2022-03-28T13:29:52+01:00</lastmod>
-  </url><url>
-    <loc>/posts/stpetersburg/</loc>
-    <lastmod>2021-10-29T09:46:42+01:00</lastmod>
-  </url><url>
-    <loc>/posts/dynamicdispatch/</loc>
-    <lastmod>2021-08-17T13:58:26+01:00</lastmod>
-  </url><url>
-    <loc>/posts/depop/</loc>
-    <lastmod>2021-08-12T17:07:30+01:00</lastmod>
-  </url><url>
-    <loc>/bce/</loc>
-    <lastmod>2021-08-02T11:58:16+01:00</lastmod>
-  </url><url>
-    <loc>/posts/thirty/</loc>
-    <lastmod>2021-07-16T14:59:00+01:00</lastmod>
-  </url><url>
-    <loc>/posts/on-media/</loc>
-    <lastmod>2021-04-16T15:57:51+01:00</lastmod>
-  </url><url>
-    <loc>/posts/boomerang/</loc>
-    <lastmod>2020-09-30T10:59:57+01:00</lastmod>
-  </url><url>
-    <loc>/posts/olsson-counterfactuals/</loc>
-    <lastmod>2020-08-10T22:21:38+01:00</lastmod>
-  </url><url>
-    <loc>/teaching/</loc>
-    <lastmod>2020-08-10T22:21:38+01:00</lastmod>
-  </url><url>
-    <loc>/posts/2020-sm2-lectures/</loc>
-    <lastmod>2020-03-09T12:02:47+00:00</lastmod>
-  </url><url>
-    <loc>/posts/20200208-jan-feb-talks/</loc>
-    <lastmod>2020-02-08T10:07:48+00:00</lastmod>
-  </url><url>
-    <loc>/posts/columbia-gsapp-series/</loc>
-    <lastmod>2019-11-17T15:29:17+00:00</lastmod>
-  </url><url>
-    <loc>/posts/disabling/</loc>
-    <lastmod>2019-09-19T09:48:35+01:00</lastmod>
-  </url><url>
-    <loc>/posts/qestival/</loc>
-    <lastmod>2019-09-10T15:51:29+01:00</lastmod>
-  </url><url>
-    <loc>/posts/deepwork/</loc>
-    <lastmod>2019-07-24T13:19:16-07:00</lastmod>
-  </url><url>
-    <loc>/posts/opencode/</loc>
-    <lastmod>2019-07-15T01:46:40+01:00</lastmod>
-  </url><url>
-    <loc>/posts/email-charter/</loc>
-    <lastmod>2019-06-17T14:13:14+01:00</lastmod>
-  </url><url>
-    <loc>/posts/cenpy-1-0/</loc>
-    <lastmod>2019-04-08T12:44:33+01:00</lastmod>
-  </url><url>
-    <loc>/posts/crunchtober/</loc>
-    <lastmod>2018-10-24T23:25:12+01:00</lastmod>
-  </url><url>
-    <loc>/posts/whose_fixed/</loc>
-    <lastmod>2018-09-13T15:25:50+01:00</lastmod>
-  </url><url>
-    <loc>/posts/geometry/</loc>
-    <lastmod>2018-07-30T09:48:17-07:00</lastmod>
-  </url><url>
-    <loc>/posts/testingmatrix/</loc>
-    <lastmod>2018-07-24T13:52:51-07:00</lastmod>
-  </url><url>
-    <loc>/posts/perftesting/</loc>
-    <lastmod>2018-07-24T11:30:20-07:00</lastmod>
-  </url><url>
-    <loc>/posts/challenge/</loc>
-    <lastmod>2018-04-20T16:54:18+01:00</lastmod>
-  </url><url>
-    <loc>/posts/cdrc-brexit/</loc>
-    <lastmod>2018-04-18T01:46:46+01:00</lastmod>
-  </url><url>
-    <loc>/tags/2018/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/tags/clustering/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/tags/conference-paper/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/tags/gisruk/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/posts/2018-gisruk/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/tags/paper/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/tags/preprints/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2018-04-04T02:20:45+01:00</lastmod>
-  </url><url>
-    <loc>/posts/mpl-is-just-fine/</loc>
-    <lastmod>2018-03-18T22:02:05+00:00</lastmod>
-  </url><url>
-    <loc>/posts/annoscatter/</loc>
-    <lastmod>2018-03-12T23:52:32+00:00</lastmod>
-  </url><url>
-    <loc>/tags/python/</loc>
-    <lastmod>2018-03-12T23:52:32+00:00</lastmod>
-  </url><url>
-    <loc>/tags/dissertation/</loc>
-    <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url><url>
-    <loc>/tags/elections/</loc>
-    <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url><url>
-    <loc>/tags/esda/</loc>
-    <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url><url>
-    <loc>/tags/spatial-autocorrelation/</loc>
-    <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url><url>
-    <loc>/posts/spatial_acf/</loc>
-    <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url><url>
-    <loc>/tags/swing/</loc>
-    <lastmod>2018-03-09T17:34:20+00:00</lastmod>
-  </url><url>
-    <loc>/posts/archive/</loc>
-    <lastmod>2018-03-09T12:00:01+01:00</lastmod>
-  </url><url>
-    <loc>/about/</loc>
-    <lastmod>2018-03-02T19:33:34+00:00</lastmod>
-  </url><url>
-    <loc>/diss-survey/</loc>
-  </url><url>
-    <loc>/posts/another-year/</loc>
-  </url><url>
-    <loc>/rasa/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>/blrc/</loc>
-  </url><url>
-    <loc>/categories/</loc>
-  </url>
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <url>
+        <loc>https://ljwolf.org/</loc>
+        <lastmod>2022-03-28T13:29:52+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/celebs-in-politics/</loc>
+        <lastmod>2022-03-28T13:29:52+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/</loc>
+        <lastmod>2022-03-28T13:29:52+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/stpetersburg/</loc>
+        <lastmod>2021-10-29T09:46:42+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/dynamicdispatch/</loc>
+        <lastmod>2021-08-17T13:58:26+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/depop/</loc>
+        <lastmod>2021-08-12T17:07:30+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/bce/</loc>
+        <lastmod>2021-08-02T11:58:16+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/thirty/</loc>
+        <lastmod>2021-07-16T14:59:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/on-media/</loc>
+        <lastmod>2021-04-16T15:57:51+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/boomerang/</loc>
+        <lastmod>2020-09-30T10:59:57+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/olsson-counterfactuals/</loc>
+        <lastmod>2020-08-10T22:21:38+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/teaching/</loc>
+        <lastmod>2020-08-10T22:21:38+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/2020-sm2-lectures/</loc>
+        <lastmod>2020-03-09T12:02:47+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/20200208-jan-feb-talks/</loc>
+        <lastmod>2020-02-08T10:07:48+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/columbia-gsapp-series/</loc>
+        <lastmod>2019-11-17T15:29:17+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/disabling/</loc>
+        <lastmod>2019-09-19T09:48:35+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/qestival/</loc>
+        <lastmod>2019-09-10T15:51:29+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/deepwork/</loc>
+        <lastmod>2019-07-24T13:19:16-07:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/opencode/</loc>
+        <lastmod>2019-07-15T01:46:40+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/email-charter/</loc>
+        <lastmod>2019-06-17T14:13:14+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/cenpy-1-0/</loc>
+        <lastmod>2019-04-08T12:44:33+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/crunchtober/</loc>
+        <lastmod>2018-10-24T23:25:12+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/whose_fixed/</loc>
+        <lastmod>2018-09-13T15:25:50+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/geometry/</loc>
+        <lastmod>2018-07-30T09:48:17-07:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/testingmatrix/</loc>
+        <lastmod>2018-07-24T13:52:51-07:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/perftesting/</loc>
+        <lastmod>2018-07-24T11:30:20-07:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/challenge/</loc>
+        <lastmod>2018-04-20T16:54:18+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/cdrc-brexit/</loc>
+        <lastmod>2018-04-18T01:46:46+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/2018/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/clustering/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/conference-paper/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/gisruk/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/2018-gisruk/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/paper/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/preprints/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/</loc>
+        <lastmod>2018-04-04T02:20:45+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/mpl-is-just-fine/</loc>
+        <lastmod>2018-03-18T22:02:05+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/annoscatter/</loc>
+        <lastmod>2018-03-12T23:52:32+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/python/</loc>
+        <lastmod>2018-03-12T23:52:32+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/dissertation/</loc>
+        <lastmod>2018-03-09T17:34:20+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/elections/</loc>
+        <lastmod>2018-03-09T17:34:20+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/esda/</loc>
+        <lastmod>2018-03-09T17:34:20+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/spatial-autocorrelation/</loc>
+        <lastmod>2018-03-09T17:34:20+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/spatial_acf/</loc>
+        <lastmod>2018-03-09T17:34:20+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/tags/swing/</loc>
+        <lastmod>2018-03-09T17:34:20+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/archive/</loc>
+        <lastmod>2018-03-09T12:00:01+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/posts/another-year/</loc>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/rasa/</loc>
+        <priority>0</priority>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/blrc/</loc>
+    </url>
+    
+    <url>
+        <loc>https://ljwolf.org/categories/</loc>
+    </url>
+    
 </urlset>

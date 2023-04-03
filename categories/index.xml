@@ -2,13 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Yet Another Geographer</title>
-    <link>/categories/</link>
-    <description>Yet Another Geographer (Categories)</description>
+    <link>https://ljwolf.org/categories/</link>
+    <description>Recent content in Categories on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://ljwolf.org/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

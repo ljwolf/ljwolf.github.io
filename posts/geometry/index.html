@@ -1,75 +1,145 @@
 <!DOCTYPE html>
-<html>
-<head>
-    
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title>The Geometer&#39;s Angle - Yet Another Geographer</title>
+<meta property="og:title" content="The Geometer&#39;s Angle - Yet Another Geographer">
+<meta property="og:type" content="article">
+
+
+<meta property="og:image" content="images/main.jpg">
+
+<meta property="og:url" content="https://ljwolf.org/posts/geometry/"><meta property="og:description" content="">
+<meta name="Description" property="description" content="">
+<link rel="me" href="https://twitter.com/@levijohnwolf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@levijohnwolf">
+<meta name="twitter:creator" content="@levijohnwolf">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://ljwolf.org/css/style.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://ljwolf.org/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
+<meta name="theme-color" content="#ffffff">
+
+
+<script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script>
+
+  </head>
+  <body>
+    <header class="md:px-0 px-2">
+        <nav >
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <div class="nav-main my-2.5">
+      <a href="https://ljwolf.org/" class="nav-title py-2.5 text-2xl
+               text-zinc-600 dark:text-zinc-300 hover:border-b-0">Yet Another Geographer</a>
+    </div>
+    <button type="button"
+            onclick="toggleMenu()"
+            class="inline-flex items-center p-2 ml-3
+                  text-sm text-gray-500
+                  rounded-lg md:hidden hover:bg-gray-100
+                  focus:outline-none focus:ring-2
+                  focus:ring-gray-200 dark:text-gray-400
+                  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1
+                           0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="grid md:grid-flow-col items-center justify-between text-lg
+                 my-2.5 grid-cols-1 pl-0 text-center">
         
-<meta charset="utf-8">
-<meta name="HandheldFriendly" content="True">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer-when-downgrade">
-
-<title>The Geometer&#39;s Angle  - Yet Another Geographer</title>
-<meta name="description" content="">
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
-
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon-precomposed" href="/favicon.png">
-
-<link rel="stylesheet" href="/css/style.css?rnd=1680532099" />
-
-<meta property="og:title" content="The Geometer&#39;s Angle" />
-<meta property="og:description" content="The Geometer&rsquo;s Angle What John O&rsquo;Loughlin talks about in his recent presidential address in Political Geography strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I got from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [1,2,3] he suggested that electoral analysis needed to go beyond this." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/geometry/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-07-30T09:48:17-07:00" />
-<meta property="article:modified_time" content="2018-07-30T09:48:17-07:00" />
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The Geometer&#39;s Angle"/>
-<meta name="twitter:description" content="The Geometer&rsquo;s Angle What John O&rsquo;Loughlin talks about in his recent presidential address in Political Geography strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I got from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [1,2,3] he suggested that electoral analysis needed to go beyond this."/>
-
-
-
-
-
-
-    
-</head>
-<body>
-    <div class="container">
-        <header> 
-            
-                <h1 class="site-header">
-    <a href="/">Yet Another Geographer</a>
-</h1>
-<nav>
-    
-    
-    <a class="" href="/about/" title="">About</a>
-    
-    <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">CV</a>
-    
-    <a class="" href="https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/" title="">Affiliation</a>
-    
-    <a class="" href="/teaching/" title="">Teaching</a>
-    
-    <a class=" active" href="/posts/" title="Posts">Posts</a>
-    
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://orcid.org/my-orcid?orcid=0000-0003-0274-599X">ORCID</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://github.com/ljwolf">GitHub</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/">Job</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0">CV</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/posts/">Posts</a>
+        </li>
+        
+        <li class="h-7 pl-2.5 pr-0 list-none">
+          <button type="button" onclick="toggleMode()" class="h-full"  aria-label="Toggle between dark and light mode">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline"
+                 id="ligh-mode-button-img"
+                 alt="A sun icon for switching to light mode"
+                 src="https://ljwolf.org/img/light_mode.svg">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden"
+                 id="dark-mode-button-img"
+                 alt="A moon icon for switching to dark mode"
+                 src="https://ljwolf.org/img/dark_mode.svg">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-            
-        </header>
-        <main>
-            
 
-    <article class="post">
-        <header>
-            <h1>The Geometer&#39;s Angle</h1>
-        </header>
-        <div class="content">
-            <h1 id="the-geometers-angle">The Geometer&rsquo;s Angle</h1>
+    </header>
+    <main class="content h-card container mt-2 m-auto
+                 leading-loose md:px-0 px-2 z-0"
+          role="main">
+    
+<article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="title-container">
+        <h1 class="article-title p-name" itemprop="name">The Geometer&#39;s Angle</h1>
+        
+        <div class="flex justify-between items-center">
+            
+            <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://ljwolf.org/posts/geometry/">
+                <time itemprop="datePublished" class="dt-published"
+                    datetime="2018-07-30T09:48:17-0700"
+                    content="2018-07-30T09:48:17-0700">
+                    2018.07.30
+                </time>
+            </a>
+            
+            
+                
+                <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://ljwolf.org/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Levi John Wolf</span></a>
+                
+            
+        </div>
+        
+    </div>
+
+    <div class="article-content e-content" itemprop="articleBody">
+        <h1 id="the-geometers-angle">The Geometer&rsquo;s Angle</h1>
 <p>What John O&rsquo;Loughlin talks about in his recent presidential address in <a href="http://rt2-t.notifications.elsevier.com/r/?id=h750cbdb,5c0f911,5c0f922&amp;p1=www.sciencedirect.com/science?_ob=GatewayURL&amp;_method=citationSearch&amp;_version=1&amp;_piikey=S0962629818301884&amp;_origin=RV_SD_TOC_EMAIL&amp;dgcid=raven_sd_via_email">Political Geography</a> strikes me as substantially similar to many of the things I&rsquo;ve read from him on the field. Indeed, it reminds me of the same track I <em>got</em> from him as a PhD applicant seeking to work in quantitative political geography. I&rsquo;ll never forget; right at the time of (what I thought and still feel is) great ground-breaking work in political science focusing directly on the new understandings possible from aggregate electoral data [<a href="http://www.stat.columbia.edu/~gelman/research/published/rb_qjps.pdf">1</a>,<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-5907.2007.00272.x">2</a>,<a href="http://cdmaps.polisci.ucla.edu/">3</a>] he suggested that electoral analysis needed to go beyond this.</p>
 <p>Maybe sure, yes, this is true. But, <em>right then</em> (as is the case for <em>right now</em>) aggregate election data is cleaner, more useful, more spatial, and more interesting than it <strong>ever</strong> was before. The &ldquo;analytical cartography&rdquo; of previous geographical studies was actively being replaced with statistical analysis of high-quality, high-detail data with national coverage, and linked directly to individual or nearly-individual behavioral data. If there&rsquo;s somewhere else where empirical electoral geography <em>should</em> be going, I was not quite sure how this was not it. Nor am I still sure there is a <em>there</em> there in alternative explorations of space &amp; context in electoral geography:</p>
 <p>The point of context <strong>is</strong> the person-in-space, how the systematic factors a person experiences in their surroundings affect the individuals political statements, beliefs, preferences, or attitudes.</p>
@@ -98,31 +168,42 @@
 <p>I&rsquo;ll be honest; it&rsquo;s not quite as useful to know that a $k$-nearest neighbor model heuristic improves accuracy, or simply <em>that</em> variable weights shift as $k$ shifts. If you don&rsquo;t have a clear, supported mechanism for <em>why</em> that occurs, then how is that finding not geometry itself? I&rsquo;m not buying this distinction between Geographers and Geometers that O&rsquo;Loughlin admits to using in order to gatekeep <em>Political Geography</em>. Why stop these other &ldquo;political geometers&rdquo; but publish your own geometries elsewhere?</p>
 <p>This is a bummer, since he&rsquo;s (at multiple times in many different publications) lamented the lack of &ldquo;good&rdquo; political science work published in PG. And, I agree, there has been. But, that&rsquo;s not because it&rsquo;s &ldquo;weak work,&rdquo; it&rsquo;s because there&rsquo;s clearly turf here being used to reject &ldquo;weak&rdquo; work by the wrong people, who then must expected to consume <em>our &ldquo;weak&rdquo; work.</em> At the end of the day (and the data), this is what these &ldquo;weak&rdquo; perspectives of regional agency provide. They provide repeatable analyses with specific claims and distinct measures of uncertainty, focused on specific mechanisms, without reference to a &ldquo;numinous&rdquo; underspecified regional geography.</p>
 
-        </div>
-        <div class="article-info">
-    
-        <div class="article-date">2018-07-30</div>
-    
-    <div class="article-taxonomies">
-        
-            
     </div>
-</div>
-    </article>
+
     
 
+    
 
-        </main>
-        <footer>
-            
-                <p>© 2023<br>
-Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
-</p>
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-            
-        </footer>
+    
+    <div class="text-neutral-500 mb-4">
+        Last modified <span itemprop="dateModified"
+                            datetime="2018-07-30T09:48:17-0700"
+                            content="2018-07-30T09:48:17-0700">
+        2018.07.30
+        </span>
     </div>
-</body>
+    
+</article>
+
+    </main>
+    <footer class="footer container h-10 text-center mt-1">
+<hr class="my-4">
+  <ul class="pl-0 mt-1">
+    
+    <li class="ml-2 first:before:content-none before:content-['•']
+               inline-block list-none">
+      <a class="ml-2 text-neutral-800
+                dark:text-neutral-400 border-none"
+          href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+    </li>
+    <li class="ml-2 first:before:content-none before:content-['•']
+                text-neutral-800 dark:text-neutral-400 inline-block list-none">
+      <span class="ml-2">© Levi John Wolf 2023</span>
+    </li>
+  </ul>
+</footer>
+
+
+
+  </body>
 </html>

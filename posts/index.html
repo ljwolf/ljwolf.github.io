@@ -1,627 +1,797 @@
 <!DOCTYPE html>
-<html>
-<head>
-    
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title>Posts - Yet Another Geographer</title>
+<meta property="og:title" content="Posts - Yet Another Geographer">
+<meta property="og:type" content="website">
+
+
+<meta property="og:image" content="images/main.jpg">
+
+<meta property="og:url" content="https://ljwolf.org/posts/"><meta property="og:description" content="">
+<meta name="Description" property="description" content="">
+<link rel="me" href="https://twitter.com/@levijohnwolf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@levijohnwolf">
+<meta name="twitter:creator" content="@levijohnwolf">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://ljwolf.org/css/style.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://ljwolf.org/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
+<meta name="theme-color" content="#ffffff">
+
+
+<script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script>
+
+  </head>
+  <body>
+    <header class="md:px-0 px-2">
+        <nav >
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <div class="nav-main my-2.5">
+      <a href="https://ljwolf.org/" class="nav-title py-2.5 text-2xl
+               text-zinc-600 dark:text-zinc-300 hover:border-b-0">Yet Another Geographer</a>
+    </div>
+    <button type="button"
+            onclick="toggleMenu()"
+            class="inline-flex items-center p-2 ml-3
+                  text-sm text-gray-500
+                  rounded-lg md:hidden hover:bg-gray-100
+                  focus:outline-none focus:ring-2
+                  focus:ring-gray-200 dark:text-gray-400
+                  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1
+                           0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="grid md:grid-flow-col items-center justify-between text-lg
+                 my-2.5 grid-cols-1 pl-0 text-center">
         
-<meta charset="utf-8">
-<meta name="HandheldFriendly" content="True">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer-when-downgrade">
-
-<title>Posts  - Yet Another Geographer</title>
-<meta name="description" content="">
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
-
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon-precomposed" href="/favicon.png">
-
-<link rel="stylesheet" href="/css/style.css?rnd=1680532099" />
-
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/posts/" />
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
-
-
-
-
-
-
-    
-</head>
-<body>
-    <div class="container">
-        <header> 
-            
-                <h1 class="site-header">
-    <a href="/">Yet Another Geographer</a>
-</h1>
-<nav>
-    
-    
-    <a class="" href="/about/" title="">About</a>
-    
-    <a class="" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0" title="">CV</a>
-    
-    <a class="" href="https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/" title="">Affiliation</a>
-    
-    <a class="" href="/teaching/" title="">Teaching</a>
-    
-    <a class=" active" href="/posts/" title="Posts">Posts</a>
-    
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://orcid.org/my-orcid?orcid=0000-0003-0274-599X">ORCID</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://github.com/ljwolf">GitHub</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/">Job</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0">CV</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/posts/">Posts</a>
+        </li>
+        
+        <li class="h-7 pl-2.5 pr-0 list-none">
+          <button type="button" onclick="toggleMode()" class="h-full"  aria-label="Toggle between dark and light mode">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline"
+                 id="ligh-mode-button-img"
+                 alt="A sun icon for switching to light mode"
+                 src="https://ljwolf.org/img/light_mode.svg">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden"
+                 id="dark-mode-button-img"
+                 alt="A moon icon for switching to dark mode"
+                 src="https://ljwolf.org/img/dark_mode.svg">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-            
-        </header>
-        <main>
-            
 
-    <h1>Posts</h1>
+    </header>
+    <main class="content h-card container mt-2 m-auto
+                 leading-loose md:px-0 px-2 z-0"
+          role="main">
     
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/celebs-in-politics/">A stray thought on the US, UK, and celebrity in Politics</a>
-                </h2>
-            </header>
-            <div class="article-info">
     
-        <div class="article-date">2022-03-28</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/celebs-in-politics/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">A stray thought on the US, UK, and celebrity in Politics</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2022-03-28T13:29:52&#43;0100">
+                2022.03.28
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/stpetersburg/">A Famously Bad Gamble</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2021-10-29</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/stpetersburg/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">A Famously Bad Gamble</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2021-10-29T09:46:42&#43;0100">
+                2021.10.29
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/dynamicdispatch/">Dynamic Dispatch is Awesome</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2021-08-17</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/dynamicdispatch/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Dynamic Dispatch is Awesome</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2021-08-17T13:58:26&#43;0100">
+                2021.08.17
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/depop/">Is depopulation harder to redistrict?</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2021-08-12</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/depop/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Is depopulation harder to redistrict?</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2021-08-12T17:07:30&#43;0100">
+                2021.08.12
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/thirty/">Something just hit me about a month after I turned thirty</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2021-07-16</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/thirty/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Something just hit me about a month after I turned thirty</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2021-07-16T14:59:00&#43;0100">
+                2021.07.16
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/on-media/">The disappointing finitude of screens</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2021-04-16</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/on-media/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">The disappointing finitude of screens</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2021-04-16T15:57:51&#43;0100">
+                2021.04.16
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/boomerang/">Boomeranging: It&#39;s all coming back to us</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2020-09-30</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/boomerang/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Boomeranging: It&#39;s all coming back to us</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2020-09-30T10:59:57&#43;0100">
+                2020.09.30
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/olsson-counterfactuals/">Gunnar Olsson and the Counterfactual Imagination in Geography</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2020-08-10</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/olsson-counterfactuals/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Gunnar Olsson and the Counterfactual Imagination in Geography</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2020-08-10T22:21:38&#43;0100">
+                2020.08.10
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/2020-sm2-lectures/">Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2020-03-09</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/2020-sm2-lectures/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Spatial Modelling 2 Lectures: Topics in Advanced Spatial Modelling</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2020-03-09T12:02:47Z">
+                2020.03.09
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/20200208-jan-feb-talks/">CUSP London, Exeter, and ASU</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2020-02-08</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/20200208-jan-feb-talks/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">CUSP London, Exeter, and ASU</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2020-02-08T10:07:48Z">
+                2020.02.08
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/columbia-gsapp-series/">Columbia GSAPP Lecture Series</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2019-11-17</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/columbia-gsapp-series/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Columbia GSAPP Lecture Series</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2019-11-17T15:29:17Z">
+                2019.11.17
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/disabling/">Disabling Technologies</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2019-09-19</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/disabling/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Disabling Technologies</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2019-09-19T09:48:35&#43;0100">
+                2019.09.19
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/qestival/">Q-Step Festival &amp; Geosilhouettes</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2019-09-10</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/qestival/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Q-Step Festival &amp; Geosilhouettes</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2019-09-10T15:51:29&#43;0100">
+                2019.09.10
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/deepwork/">Deep work and the reverse todo list</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2019-07-24</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/deepwork/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Deep work and the reverse todo list</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2019-07-24T13:19:16-0700">
+                2019.07.24
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/opencode/">Open Code is Not Enough</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2019-07-15</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/opencode/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Open Code is Not Enough</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2019-07-15T01:46:40&#43;0100">
+                2019.07.15
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/email-charter/">Email Charter</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2019-06-17</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/email-charter/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Email Charter</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2019-06-17T14:13:14&#43;0100">
+                2019.06.17
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/cenpy-1-0/">Cenpy 1.0.0</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2019-04-08</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/cenpy-1-0/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Cenpy 1.0.0</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2019-04-08T12:44:33&#43;0100">
+                2019.04.08
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/crunchtober/">Crunchtober</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-10-24</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/crunchtober/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Crunchtober</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-10-24T23:25:12&#43;0100">
+                2018.10.24
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/whose_fixed/">Who&#39;s Fixed?</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-09-13</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/whose_fixed/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Who&#39;s Fixed?</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-09-13T15:25:50&#43;0100">
+                2018.09.13
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/geometry/">The Geometer&#39;s Angle</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-07-30</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/geometry/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">The Geometer&#39;s Angle</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-07-30T09:48:17-0700">
+                2018.07.30
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/testingmatrix/">Using lookahead testing</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-07-24</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/testingmatrix/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Using lookahead testing</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-07-24T13:52:51-0700">
+                2018.07.24
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/perftesting/">Perftesting</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-07-24</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/perftesting/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Perftesting</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-07-24T11:30:20-0700">
+                2018.07.24
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/challenge/">Challenge in Science</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-04-20</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/challenge/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Challenge in Science</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-04-20T16:54:18&#43;0100">
+                2018.04.20
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/cdrc-brexit/">GISRUK I: CDRC Brexit Analysis Competition</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-04-18</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/cdrc-brexit/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">GISRUK I: CDRC Brexit Analysis Competition</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-04-18T01:46:46&#43;0100">
+                2018.04.18
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/2018-gisruk/">GISRUK II: Spatially-Encouraged Spectral Clustering</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-04-04</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/2018-gisruk/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/clustering">#clustering</a></li>
-                    
-                        <li><a href="/tags/preprints">#preprints</a></li>
-                    
-                        <li><a href="/tags/conference%20paper">#conference paper</a></li>
-                    
-                        <li><a href="/tags/paper">#paper</a></li>
-                    
-                        <li><a href="/tags/gisruk">#gisruk</a></li>
-                    
-                        <li><a href="/tags/2018">#2018</a></li>
-                    
-                </ul>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">GISRUK II: Spatially-Encouraged Spectral Clustering</h3>
         
-    </div>
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-04-04T02:20:45&#43;0100">
+                2018.04.04
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/mpl-is-just-fine/">Mpl Is Just Fine</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-03-18</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/mpl-is-just-fine/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Mpl Is Just Fine</h3>
+        
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-03-18T22:02:05Z">
+                2018.03.18
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/annoscatter/">Annoscatter</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-03-12</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/annoscatter/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/python">#python</a></li>
-                    
-                </ul>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Annoscatter</h3>
         
-    </div>
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-03-12T23:52:32Z">
+                2018.03.12
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/spatial_acf/">Spatial Autocorrelation Functions</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-03-09</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/spatial_acf/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-                <ul class="article-tags">
-                    
-                        <li><a href="/tags/spatial%20autocorrelation">#spatial autocorrelation</a></li>
-                    
-                        <li><a href="/tags/esda">#esda</a></li>
-                    
-                        <li><a href="/tags/dissertation">#dissertation</a></li>
-                    
-                        <li><a href="/tags/swing">#swing</a></li>
-                    
-                        <li><a href="/tags/elections">#elections</a></li>
-                    
-                </ul>
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Spatial Autocorrelation Functions</h3>
         
-    </div>
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-03-09T17:34:20Z">
+                2018.03.09
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
     
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/archive/">Old Posts</a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-        <div class="article-date">2018-03-09</div>
-    
-    <div class="article-taxonomies">
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/archive/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
         
-            
-    </div>
-</div>
-        </div>
-    
-        <div class="post-short-list">
-            <header> 
-                <h2>
-                    <a href="/posts/another-year/"></a>
-                </h2>
-            </header>
-            <div class="article-info">
-    
-    <div class="article-taxonomies">
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Old Posts</h3>
         
-            
-    </div>
+        
+            <div class="list-item-date col-start-4 text-right text-neutral-600 dark:text-neutral-400" itemprop="datePublished"
+                content="2018-03-09T12:00:01&#43;0100">
+                2018.03.09
+            </div>
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
 </div>
-        </div>
+
+    
+        <div class="mb-12 lg:mx-8">
+    <a href="https://ljwolf.org/posts/another-year/" itemprop="url"
+       class="grid grid-cols-list-item items-center pb-2 border-b-2
+             text-black dark:text-zinc-300 hover:text-neutral-500
+             dark:border-zinc-600
+             hover:dark:border-zinc-300
+             hover:dark:text-zinc-100">
+        
+            <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2"></h3>
+        
+        
+    </a>
+    
+    <meta itemprop="author" content="Levi John Wolf">
+</div>
+
     
 
+    </main>
+    <footer class="footer container h-10 text-center mt-1">
+<hr class="my-4">
+  <ul class="pl-0 mt-1">
+    
+    <li class="ml-2 first:before:content-none before:content-['•']
+               inline-block list-none">
+      <a class="ml-2 text-neutral-800
+                dark:text-neutral-400 border-none"
+          href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+    </li>
+    <li class="ml-2 first:before:content-none before:content-['•']
+                text-neutral-800 dark:text-neutral-400 inline-block list-none">
+      <span class="ml-2">© Levi John Wolf 2023</span>
+    </li>
+  </ul>
+</footer>
 
-        </main>
-        <footer>
-            
-                <p>© 2023<br>
-Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
-</p>
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-            
-        </footer>
-    </div>
-</body>
+
+
+  </body>
 </html>

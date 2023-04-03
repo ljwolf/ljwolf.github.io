@@ -2,48 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Yet Another Geographer</title>
-    <link>/tags/python/</link>
-    <description>Yet Another Geographer (python)</description>
+    <link>https://ljwolf.org/tags/python/</link>
+    <description>Recent content in python on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Mon, 12 Mar 2018 23:52:32 +0000</lastBuildDate>
-    
-    <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Mar 2018 23:52:32 +0000</lastBuildDate><atom:link href="https://ljwolf.org/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Annoscatter</title>
-      <link>/posts/annoscatter/</link>
+      <link>https://ljwolf.org/posts/annoscatter/</link>
       <pubDate>Mon, 12 Mar 2018 23:52:32 +0000</pubDate>
       
-      <guid>/posts/annoscatter/</guid>
-      <description>&lt;p&gt;I found this function super useful in my dissertation and more generally in my work. What it does is take &lt;code&gt;x&lt;/code&gt;,&lt;code&gt;y&lt;/code&gt; coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&amp;rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&amp;rsquo;s just a call like &lt;code&gt;annoscatter(df.year, df.leverage, df.district_id)&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/annoscatter.png&#34; alt=&#34;annoscatter&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Not sure if there&amp;rsquo;s a more elegant solution to this using matplotlib, but I really like how it looks, especially since there&amp;rsquo;s also passthrough keyword dictionaries implemented like seaborn. Not sure if &lt;a href=&#34;https://github.com/mwaskom&#34;&gt;@mwaskom&lt;/a&gt; would take a PR for something as simple as this, though.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;plt&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#00f&#34;&gt;annoscatter&lt;/span&gt;(x,y, text, marker&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;, markersize&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                ax &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;None&lt;/span&gt;, fig &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;None&lt;/span&gt;, color&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;k&amp;#39;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                fig_kw &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#008000&#34;&gt;dict&lt;/span&gt;(), 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                scatter_kw &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#008000&#34;&gt;dict&lt;/span&gt;(), ann_kw&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#008000&#34;&gt;dict&lt;/span&gt;()):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; ax &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;None&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; fig &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;None&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            fig &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;figure(&lt;span style=&#34;color:#666&#34;&gt;**&lt;/span&gt;fig_kw)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ax &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; plt&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;gca()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;not&lt;/span&gt; (marker &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;or&lt;/span&gt; markersize &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        scatter_kw[&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;marker&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; marker
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        scatter_kw[&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; markersize
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ax&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;scatter(x,y, &lt;span style=&#34;color:#666&#34;&gt;**&lt;/span&gt;scatter_kw)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;else&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        scatter_kw[&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;alpha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ax&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;scatter(x,y,&lt;span style=&#34;color:#666&#34;&gt;**&lt;/span&gt;scatter_kw)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#008000&#34;&gt;isinstance&lt;/span&gt;(color, &lt;span style=&#34;color:#008000&#34;&gt;str&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        colors &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; [color]&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#008000&#34;&gt;len&lt;/span&gt;(x)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;else&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        colors &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#008000&#34;&gt;list&lt;/span&gt;(color)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;for&lt;/span&gt; xi,yi,string,c &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#008000&#34;&gt;zip&lt;/span&gt;(x,y,text,colors):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ax&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;annotate(s&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;string, xy&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;(xi,yi), color&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;c, &lt;span style=&#34;color:#666&#34;&gt;**&lt;/span&gt;ann_kw)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;return&lt;/span&gt; ax
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <guid>https://ljwolf.org/posts/annoscatter/</guid>
+      <description>I found this function super useful in my dissertation and more generally in my work. What it does is take x,y coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&amp;rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&amp;rsquo;s just a call like annoscatter(df.</description>
     </item>
     
   </channel>
