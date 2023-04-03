@@ -1,76 +1,91 @@
-baseurl = "/"
+# This is the configuration file for the example website of the Hugo theme
+# Astatine (see https://github.com/hugcis/hugo-astatine-theme).
+#
+# The URL from which the site will be served
+baseurl = "https://ljwolf.org/"
+# Language used
+languageCode = "en-us"
+# Website title
 title = "Yet Another Geographer"
-copyright = ""
-languageCode = "en-US"
-canonifyurls = true
-paginate = 5
-theme = "anubis"
+# Theme used
+theme = "hugo-astatine-theme"
 
-googleAnalytics = ""
-disqusShortname = ""
+preserveTaxonomyNames = true
+rssLimit = 10
+paginate = 10
 
-SectionPagesMenu = "main"
+# Code highlighting
+pygmentsCodefences = true
+pygmentsStyle = "native"
 
-# use Chroma for syntax highlight
-pygmentsStyle = "pygments" # other dark style options: vim, fruity, monokai
-# enable syntax highlight for code blocks
-pygmentsCodeFences = true
+# Taxonomies (only tags and categories are supported out of the box but you can
+# add more)
+[taxonomies]
+    category = "categories"  
+    tag = "tags"
 
-#[[menu.main]]
-#  name = "Posts"
-#  weight = -120
-#  identifier = "post"
-#  url = "/posts/"
+# Configure permalinks style
+[permalinks]
+    post = "/:slug/"
+    page = "/:slug/"
 
-#[[menu.main]]
-#  name = "Tags"
-#  weight = -110
-#  identifier = "tag"
-#  url = "/tags/"
+# Configure main navbar links. They can have a weight to select the order.
+# This links to content within the content/post/ folder
+[[menu.main]]
+    name = "ORCID"
+    url = "https://orcid.org/my-orcid?orcid=0000-0003-0274-599X"
+    weight = -180
 
 [[menu.main]]
-    name = "About"
-    weight = 1
-    identifier = "about"
-    url = "/about/"
+    name = "GitHub"
+    url = "https://github.com/ljwolf" 
+    weight = -170
+
+[[menu.main]]
+    name = "Job"
+    url = "https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/"
+    weight = -160
 
 [[menu.main]]
     name = "CV"
-    weight = 2
-    identifier = "cv"
     url = "https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"
+    weight = -150
 
 [[menu.main]]
-    name = "Affiliation"
-    weight = 3
-    identifier = "brizzle"
-    url = "https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/"
+    name = "Posts"
+    url = "/posts/"
+    weight = -140
 
-[[menu.main]]
-    name = "Teaching"
-    weight = 4
-    identifier = "teaching"
-    url = "/teaching/"
-
-[author]
-  name = "Levi John Wolf"
-
-[params.meta]
-  keywords = ""
-  description = "just a geograblog"
-
+# Site wide params and SEO
 [params]
-  email = "levi.john.wolf@gmail.com"
-  github = "https://github.com/ljwolf"
-  #gitlab = "gitlab id"
-  twitter = "https://twitter.com/levijohnwolf"
-  job = "https://bristol.ac.uk/geography/"
-  linkedin = "https://www.linkedin.com/in/levijohnwolf/"
+    # Site description. Individual pages can have descriptions too but if
+    # missing it will fallback to that one.
+    description = """"""
+    # Author of the site
+    authorName = "Levi John Wolf"
+    # Main image for the author. This will be the default image for SEO.
+    [params.imgname]
+        name = "images/main.jpg"
+        # Add an alt description for the image
+        alt = "Profile picture"
 
-[params.colors]
-  # hugo-dusk colors
-  background = "#f5f5f5" # background color for the site
-  main = "#e84848"
-  text = "#444444"
-  code-quote-bg = "" # background color for quotes and code blocks
-  copyright = "#404040" # copyright text color
+    # Indicate if you host Katex yourself. Defaults to using the CDN KaTex.
+    # hostedKaTex = false
+
+    # Optional: add a twitter handle and mastodon handle for SEO.
+    [params.twitter]
+        name = "@levijohnwolf"
+    # [params.mastodon]
+        # name = "@jkharkness"
+        # host = "mastodon.social"
+    
+    # Enable link to feed in footer
+    blogrss = true
+
+    # Enable pingback and webmention via webmention.io
+    # webmention = "hugocisneros.com"
+
+
+# Sitemap location (default is /sitemap.xml)
+[sitemap]
+  filename = "sitemap.xml"
