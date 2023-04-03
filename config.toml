@@ -3,7 +3,7 @@ title = "Yet Another Geographer"
 copyright = ""
 languageCode = "en-US"
 canonifyurls = true
-paginate = 10
+paginate = 5
 theme = "anubis"
 
 googleAnalytics = ""
@@ -44,7 +44,7 @@ pygmentsCodeFences = true
     name = "Affiliation"
     weight = 3
     identifier = "brizzle"
-    url = "http://www.bristol.ac.uk/geography/people/levi-j-wolf/overview.html"
+    url = "https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/"
 
 [[menu.main]]
     name = "Teaching"
@@ -65,7 +65,7 @@ pygmentsCodeFences = true
   #gitlab = "gitlab id"
   twitter = "https://twitter.com/levijohnwolf"
   job = "https://bristol.ac.uk/geography/"
-  #linkedin = "linkedin id"
+  linkedin = "https://www.linkedin.com/in/levijohnwolf/"
 
 [params.colors]
   # hugo-dusk colors
