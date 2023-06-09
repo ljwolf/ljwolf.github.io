@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Mar 2022 13:29:52 +0100</lastBuildDate><atom:link href="https://ljwolf.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jun 2023 13:19:44 +0100</lastBuildDate><atom:link href="https://ljwolf.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reflections on a sabbatical and a spring return</title>
+      <link>https://ljwolf.org/posts/seattle-and-later/</link>
+      <pubDate>Thu, 08 Jun 2023 13:19:44 +0100</pubDate>
+      
+      <guid>https://ljwolf.org/posts/seattle-and-later/</guid>
+      <description>In my sincere hope to make sure this blog extends beyond my grad school to first permanent job period, I will be setting aside some very explicit time to write upates here again. Some of my favorite bits of writing live here. I recall getting told once during graduate school that my exam answers &amp;ldquo;read like a blog post&amp;hellip;&amp;rdquo; I think that was meant to get me to straighten up and write like a spatial scientist, but I actually (unsurprisingly) like the more confessional verbal vernacular way of talking about research.</description>
+    </item>
+    
     <item>
       <title>A stray thought on the US, UK, and celebrity in Politics</title>
       <link>https://ljwolf.org/posts/celebs-in-politics/</link>
@@ -94,15 +103,6 @@ For instance, after finishing the excellent piece on the discontinuing of the Un
 Logistics Courses start at 11AM on the date listed. The &amp;ldquo;Join Remotely&amp;rdquo; links will work at 10AM for students to check their AV equipment. The remote sessions will be open from 11AM, through both practical sessions (1-3PM, 4-6PM).
 Plotting &amp;amp; spatial relationships in R (notebook)
 This practical/component will cover some of the fundamental concepts in quantitative geography, such as:</description>
-    </item>
-    
-    <item>
-      <title>CUSP London, Exeter, and ASU</title>
-      <link>https://ljwolf.org/posts/20200208-jan-feb-talks/</link>
-      <pubDate>Sat, 08 Feb 2020 10:07:48 +0000</pubDate>
-      
-      <guid>https://ljwolf.org/posts/20200208-jan-feb-talks/</guid>
-      <description>Man, it&amp;rsquo;s been a busy start to 2020. I&amp;rsquo;ve had such a great time talking to folks about new ideas on cities, spatial statistics, and machine learning. Back in late January, I gave a talk on our now-published paper on social boundaries in cities at CUSP London (slides), invited by my gracious and wonderful host, Jon Reades. Then, I went off to western Ireland for some short R&amp;amp;R, catching gale force winds at the Cliffs of Moher &amp;amp; some nice evenings in Dingle, Co.</description>
     </item>
     
   </channel>
