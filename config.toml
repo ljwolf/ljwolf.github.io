@@ -52,7 +52,7 @@ pygmentsStyle = "native"
     weight = -150
 
 [[menu.main]]
-    name = "Posts"
+    name = "Blog"
     url = "/posts/"
     weight = -140
 
