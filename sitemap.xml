@@ -23,6 +23,11 @@
     </url>
     
     <url>
+        <loc>https://ljwolf.org/rasa/</loc>
+        <lastmod>2022-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://ljwolf.org/posts/stpetersburg/</loc>
         <lastmod>2021-10-29T09:46:42+01:00</lastmod>
     </url>
@@ -239,11 +244,6 @@
     
     <url>
         <loc>https://ljwolf.org/posts/another-year/</loc>
-    </url>
-    
-    <url>
-        <loc>https://ljwolf.org/rasa/</loc>
-        <priority>0</priority>
     </url>
     
     <url>

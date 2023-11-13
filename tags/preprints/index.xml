@@ -6,16 +6,15 @@
     <description>Recent content in preprints on Yet Another Geographer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Apr 2018 02:20:45 +0100</lastBuildDate><atom:link href="https://ljwolf.org/tags/preprints/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Apr 2018 02:20:45 +0100</lastBuildDate>
+    <atom:link href="https://ljwolf.org/tags/preprints/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GISRUK II: Spatially-Encouraged Spectral Clustering</title>
       <link>https://ljwolf.org/posts/2018-gisruk/</link>
       <pubDate>Wed, 04 Apr 2018 02:20:45 +0100</pubDate>
-      
       <guid>https://ljwolf.org/posts/2018-gisruk/</guid>
       <description>This paper culminates a bit of work I&amp;rsquo;ve started on since seeing a talk by Phil Chodrow on a paper that eventually became his quite interesting NAS paper paper on segregation and entropy surfaces.
 I was intrigued by the prospect of using spectral clustering for constrained clustering problems. Specifically, I&amp;rsquo;d known that affinity matrix clustering could be adapted to constrained contexts ever since reading about hierarchical ward clustering, but I hadn&amp;rsquo;t seen a really convincing method that showed me how I could work this out for a general affinity-matrix clustering method.</description>
     </item>
-    
   </channel>
 </rss>
