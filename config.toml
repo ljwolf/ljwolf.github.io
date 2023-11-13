@@ -42,19 +42,26 @@ pygmentsStyle = "native"
     weight = -170
 
 [[menu.main]]
-    name = "Job"
-    url = "https://www.bristol.ac.uk/people/person/Levi-Wolf-6fd84b18-4172-4b27-aac9-55092de68fdc/"
-    weight = -160
-
-[[menu.main]]
     name = "CV"
     url = "https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"
-    weight = -150
+    weight = -160
 
 [[menu.main]]
     name = "Blog"
     url = "/posts/"
-    weight = -140
+    weight = -150
+
+[[menu.main]]
+    name = "GDS Python"
+    url = "https://geographicdata.science/book"
+    weight=-140
+
+[[menu.main]]
+    name = "RASA"
+    url = "/rasa/"
+    weight=-130
+
+
 
 # Site wide params and SEO
 [params]
