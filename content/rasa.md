@@ -96,7 +96,7 @@ Recent years have brought unprecedented advances in movement data acquisition an
 {{< /expand >}}
 
 
-{{< expand `"Spatial Interaction Modelling: A Manifesto" Francisco Rowe (University of Liverpool), Robin Lovelace (University of Leeds), and Adam Dennet (UCL)` >}}
+{{< expand `"Spatial Interaction Modelling: A Manifesto" Francisco Rowe (University of Liverpool), Robin Lovelace (University of Leeds), and Adam Dennett (UCL)` >}}
 
 Spatial interaction models (SIMs) are a core tool in spatial data modelling to predict spatial flows and understand their underpinning factors. SIMs have been applied to provide data insights and support decision making in multiple settings, notably in transport, human mobility, migration, and epidemiology. While considerable progress has been made on advancing the theoretical and methodological underpinnings of SIMs, key challenges remain to facilitate the application of SIMs, extend existing modelling approaches, and leverage the opportunities afforded by big data. We identify three key challenges: reproducibility, calibration, and Big Data Modelling. We propose a blueprint to tackle these challenges by identifying our areas of development: (1) to enable essential infrastructure to facilitate the training, calibration, and reproducibility of SIMs; (2) to embrace modelling frameworks to capture spatial, temporal, and population heterogeneity; (3) to enhance statistical inference to accommodate big data analysis; and (4) to integrate data science approaches to enhance SIM-generate predictions and statistical inference.
 
