@@ -368,7 +368,7 @@ and the partial spatial autocorrelation function gives an anticipated order at w
 Thus, the (k)th order spatial autocorrelation function is:</p>
 <p>\[\rho_k = cor(y, \mathbf{W}^ky)\]</p>
 <p>where (\mathbf{W}^k) is the adjacency matrix for (k)-minimal neighbors. The (k)th-order <em>partial</em> spatial autocorrelation function is:</p>
-<p>\[ \dot{\rho}_k = cor(y, \mathbf{W}^ky ~|~ \mathbf{W}^{k-1}y, \mathbf{W}^{k-2}y, \dots, \mathbf{W}^{1}y )\]</p>
+<p>\[ \dot{\rho}_k = cor(y, \mathbf{W}^ky <del>|</del> \mathbf{W}^{k-1}y, \mathbf{W}^{k-2}y, \dots, \mathbf{W}^{1}y )\]</p>
 <p>I plot these for the vote shares in 2016 below,</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">spacf</span>
 </span></span></code></pre></div><p>First, the full spatial autocorrelation plot:</p>
