@@ -33,7 +33,7 @@ pygmentsStyle = "native"
 # This links to content within the content/post/ folder
 [[menu.main]]
     name = "ORCID"
-    url = "https://orcid.org/my-orcid?orcid=0000-0003-0274-599X"
+    url =  "https://orcid.org/0000-0003-0274-599X"
     weight = -180
 
 [[menu.main]]

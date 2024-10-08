@@ -1,5 +1,5 @@
 ---
-title: "Reflections on a sabbatical and a spring return"
+title: "A Research Agenda for Spatial Analysis (RASA)" 
 date: 2022-01-01T00:00:00
 ---
 *Levi John Wolf*, *Alison Heppenstall*, and *Rich Harris*
