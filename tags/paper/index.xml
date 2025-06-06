@@ -13,7 +13,7 @@
       <link>https://ljwolf.org/posts/2018-gisruk/</link>
       <pubDate>Wed, 04 Apr 2018 02:20:45 +0100</pubDate>
       <guid>https://ljwolf.org/posts/2018-gisruk/</guid>
-      <description>This paper culminates a bit of work I&amp;rsquo;ve started on since seeing a talk by Phil Chodrow on a paper that eventually became his quite interesting NAS paper paper on segregation and entropy surfaces.&#xA;I was intrigued by the prospect of using spectral clustering for constrained clustering problems. Specifically, I&amp;rsquo;d known that affinity matrix clustering could be adapted to constrained contexts ever since reading about hierarchical ward clustering, but I hadn&amp;rsquo;t seen a really convincing method that showed me how I could work this out for a general affinity-matrix clustering method.</description>
+      <description>&lt;p&gt;This paper culminates a bit of work I&amp;rsquo;ve started on since seeing a talk by &lt;a href=&#34;https://philchodrow.github.io/&#34;&gt;Phil Chodrow&lt;/a&gt; on a paper that eventually became his quite interesting &lt;a href=&#34;https://philchodrow.github.io/publication/structure-segregation-pub/&#34;&gt;NAS paper&lt;/a&gt; paper on segregation and entropy surfaces.&lt;/p&gt;&#xA;&lt;p&gt;I was intrigued by the prospect of using spectral clustering for constrained clustering problems. Specifically, I&amp;rsquo;d known that affinity matrix clustering could be adapted to constrained contexts ever since reading about hierarchical ward clustering, but I hadn&amp;rsquo;t seen a really convincing method that showed me how I could work this out for a general affinity-matrix clustering method.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
