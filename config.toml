@@ -12,7 +12,6 @@ theme = "hugo-astatine-theme"
 
 preserveTaxonomyNames = true
 rssLimit = 10
-paginate = 10
 
 # Code highlighting
 pygmentsCodefences = true
@@ -48,7 +47,7 @@ pygmentsStyle = "native"
 
 [[menu.main]]
     name = "Blog"
-    url = "/posts/"
+    url = "https://blog.ljwolf.org"
     weight = -150
 
 [[menu.main]]

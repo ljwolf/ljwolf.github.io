@@ -4,7 +4,7 @@ date: 2022-01-01T00:00:00
 ---
 *Levi John Wolf*, *Alison Heppenstall*, and *Rich Harris*
 
-*A Research Agenda for Spatial Analysis (RASA)* is a collection (approximately) 5000 word perspectives on the future of spatial analysis published by Edward Elgar Books. 
+*A Research Agenda for Spatial Analysis (RASA)* is a collection (approximately) 5000 word perspectives on the future of spatial analysis published by Edward Elgar Books, [available since the fall of 2024](https://www.e-elgar.com/shop/gbp/a-research-agenda-for-spatial-analysis-9781802203226.html)
 
 ## Concept
 
