@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title> - Yet Another Geographer</title>
+<meta property="og:title" content=" - Yet Another Geographer">
+<meta property="og:type" content="article">
+
+
+<meta property="og:image" content="images/main.jpg">
+
+<meta property="og:url" content="http://localhost:1313/nofeedback/"><meta property="og:description" content="">
+<meta name="Description" property="description" content="">
+<link rel="me" href="https://twitter.com/@levijohnwolf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@levijohnwolf">
+<meta name="twitter:creator" content="@levijohnwolf">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/style.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="http://localhost:1313/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
+<meta name="theme-color" content="#ffffff">
+
+
+<script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script>
+
+  </head>
+  <body>
+    <header class="md:px-0 px-2">
+        <nav >
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <div class="nav-main my-2.5">
+      <a href="http://localhost:1313/" class="nav-title py-2.5 text-2xl
+               text-zinc-600 dark:text-zinc-300 hover:border-b-0">Yet Another Geographer</a>
+    </div>
+    <button type="button"
+            onclick="toggleMenu()"
+            class="inline-flex items-center p-2 ml-3
+                  text-sm text-gray-500
+                  rounded-lg md:hidden hover:bg-gray-100
+                  focus:outline-none focus:ring-2
+                  focus:ring-gray-200 dark:text-gray-400
+                  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1
+                           0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="grid md:grid-flow-col items-center justify-between text-lg
+                 my-2.5 grid-cols-1 pl-0 text-center">
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://orcid.org/0000-0003-0274-599X">ORCID</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://github.com/ljwolf">GitHub</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://www.dropbox.com/scl/fi/47ze08ifgnxhme1d27k1p/currvita.pdf?rlkey=d5ujruhbwb6gevwhrakjinzo8&amp;dl=0">CV</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://blog.ljwolf.org">Blog</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://geographicdata.science/book">GDS Python</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/rasa/">RASA</a>
+        </li>
+        
+        <li class="h-7 pl-2.5 pr-0 list-none">
+          <button type="button" onclick="toggleMode()" class="h-full"  aria-label="Toggle between dark and light mode">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline"
+                 id="ligh-mode-button-img"
+                 alt="A sun icon for switching to light mode"
+                 src="http://localhost:1313/img/light_mode.svg">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden"
+                 id="dark-mode-button-img"
+                 alt="A moon icon for switching to dark mode"
+                 src="http://localhost:1313/img/dark_mode.svg">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    </header>
+    <main class="content h-card container mt-2 m-auto
+                 leading-loose md:px-0 px-2 z-0"
+          role="main">
+    
+<article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="title-container">
+        <h1 class="article-title p-name" itemprop="name"></h1>
+        
+        <div class="flex justify-between items-center">
+            
+            <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="http://localhost:1313/nofeedback/">
+                <time itemprop="datePublished" class="dt-published"
+                    datetime="0001-01-01T00:00:00Z"
+                    content="0001-01-01T00:00:00Z">
+                    0001.01.01
+                </time>
+            </a>
+            
+            
+                
+                <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="http://localhost:1313/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Levi John Wolf</span></a>
+                
+            
+        </div>
+        
+    </div>
+
+    <div class="article-content e-content" itemprop="articleBody">
+        <h1 id="no-feedback">No feedback</h1>
+<p>If you look even a cursory bit into the <a href="https://x.com/search?q=%22no%20feedback%22%20%22academic%22&amp;src=typed_query">academic social media space</a>, you&rsquo;ll notice a pattern. Rejection with no feedback is exceptionally common&mdash;from jobs to grants to papers, academics complain a lot about <em>not getting feedback</em> on how to improve. Indeed, feedback is also a major factor in the undergraduate experience (it&rsquo;s a <a href="https://www.officeforstudents.org.uk/data-and-analysis/national-student-survey-data/provider-level-dashboard/">whole section of the UK national student survey</a>) and the heterogeneity of feedback on <a href="https://phdcomics.com/comics.php?f=1781">graduate student drafts is a perennial issue</a>.</p>
+<p>So, why is it so hard for academics to give good, clear feedback on how to improve?</p>
+<p>I&rsquo;ve reflected on this for a long time&mdash;as I keep encountering this problem of feedback, I think it fundamentally arises because academic prestige has been built in part from <a href="https://www.asu.edu/about/charter-mission">&ldquo;whom it excludes, rather than whom it includes&rdquo;.</a>. After being exposed to this idea as an <a href="https://muse.jhu.edu/book/38428">undegraduate research assistant with Will on new New American University book</a>, I can&rsquo;t help but see how it underlies so much about how academics decide on the relative ``value&rsquo;&rsquo; of different organisations, regardless of the organisation&rsquo;s role or function.</p>
+<p>Good journals and colleges/universities have extremely low acceptance rates for papers/people, and are ranked in part (but a <em>very large</em> part!) on their acceptance rates. Major individual academic fellowships (like NSF CAREER, ERC Starting Grants, and UKRI Future Leaders Fellowships) have extremely low acceptance rates. Good conferences get more applicants than they have speaking time. The classes that really helped, in many <em>academics&rsquo; self-myths</em>, were those where they just managed to scrape by. And, I&rsquo;ve heard from many a hiring board that their great, deep, and highly-qualified list of runners-up indicates the organisation&rsquo;s great status in its field.</p>
+<p>Any competitive selection process will have more applicants than things to select. And, it&rsquo;s reasonable that something ``good,&rsquo;&rsquo; like a journal paper with high visibility, a job at a good organisation with good terms &amp; benefits, or a large grant program, will have many applicants. Fine, this makes sense&mdash;lucrative opportunities with limited space will generally be desirable to many people.</p>
+<p>But, over time, these become prestigious in part because they have <em>threshing value</em>. Like <a href="https://en.wikipedia.org/wiki/Fellow_of_the_Royal_Society">membership in elite clubs</a>, these processes derive value from the labor of sifting, shortlisting, and selecting. Yes, the <em>thing being awarded</em> has value itself, but the labor involved in the process of awarding also creates value for the awarding organisation. As there is value in the threshing of wheat into chaff, academic organisations across the spectrum derive part of their value from the threshing of candidates into .</p>
+<p>This kind of threshing value is core to organisational self- and peer-esteem for pretty much any academic organisation. And, it&rsquo;s why we have such bad feedback, and so little of it in higher education.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</article>
+
+    </main>
+    <footer class="footer container h-10 text-center mt-1">
+<hr class="my-4">
+  <ul class="pl-0 mt-1">
+    
+    <li class="ml-2 first:before:content-none before:content-['•']
+               inline-block list-none">
+      <a class="ml-2 text-neutral-800
+                dark:text-neutral-400 border-none"
+          href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+    </li>
+    <li class="ml-2 first:before:content-none before:content-['•']
+                text-neutral-800 dark:text-neutral-400 inline-block list-none">
+      <span class="ml-2">© Levi John Wolf 2025</span>
+    </li>
+  </ul>
+</footer>
+
+
+
+  </body>
+</html>

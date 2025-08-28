@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Yet Another Geographer</title>
     <link>https://ljwolf.org/tags/python/</link>
-    <description>Recent content in Python on Yet Another Geographer</description>
-    <generator>Hugo</generator>
+    <description>Recent content on Yet Another Geographer</description>
+    
     <language>en-us</language>
     <lastBuildDate>Mon, 12 Mar 2018 23:52:32 +0000</lastBuildDate>
+    
     <atom:link href="https://ljwolf.org/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Annoscatter</title>
-      <link>https://ljwolf.org/posts/annoscatter/</link>
-      <pubDate>Mon, 12 Mar 2018 23:52:32 +0000</pubDate>
-      <guid>https://ljwolf.org/posts/annoscatter/</guid>
-      <description>&lt;p&gt;I found this function super useful in my dissertation and more generally in my work. What it does is take &lt;code&gt;x&lt;/code&gt;,&lt;code&gt;y&lt;/code&gt; coordinates and a set of strings and annotates a scatterplot using those labels. For example, here&amp;rsquo;s a figure from my dissertation where I use it to annotate a plot of regression leverage by year. I jitter the points a little to provide legibility to the text labels, but basically it&amp;rsquo;s just a call like &lt;code&gt;annoscatter(df.year, df.leverage, df.district_id)&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
+    
+    
   </channel>
 </rss>

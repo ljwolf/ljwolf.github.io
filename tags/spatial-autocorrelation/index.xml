@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spatial Autocorrelation on Yet Another Geographer</title>
     <link>https://ljwolf.org/tags/spatial-autocorrelation/</link>
-    <description>Recent content in Spatial Autocorrelation on Yet Another Geographer</description>
-    <generator>Hugo</generator>
+    <description>Recent content on Yet Another Geographer</description>
+    
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Mar 2018 17:34:20 +0000</lastBuildDate>
+    
     <atom:link href="https://ljwolf.org/tags/spatial-autocorrelation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spatial Autocorrelation Functions</title>
-      <link>https://ljwolf.org/posts/spatial_acf/</link>
-      <pubDate>Fri, 09 Mar 2018 17:34:20 +0000</pubDate>
-      <guid>https://ljwolf.org/posts/spatial_acf/</guid>
-      <description>&lt;p&gt;I looked into using spatial autocorrelation functions in my dissertation to characterize the ``scale&amp;rsquo;&amp;rsquo; at which processes operate electorally.&#xA;I did an analysis of presidential vote by county, trying to identify where, exactly, clusters of votes tend to become decorrelated.&#xA;The typical diameter at which the so-called &amp;ldquo;spatial autocorrelation function&amp;rdquo; goes to zero denotes how wide a typical spatial cluster might be,&#xA;and the partial spatial autocorrelation function gives an anticipated order at which spatial autocorrelation may hold.&lt;/p&gt;</description>
-    </item>
+    
+    
   </channel>
 </rss>
