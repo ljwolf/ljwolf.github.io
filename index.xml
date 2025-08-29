@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yet Another Geographer</title>
-    <link>https://ljwolf.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Yet Another Geographer</description>
     
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Aug 2025 16:04:25 +0100</lastBuildDate>
     
-    <atom:link href="https://ljwolf.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
