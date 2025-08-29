@@ -42,7 +42,7 @@ pygmentsStyle = "native"
 
 [[menu.main]]
     name = "CV"
-    url = "https://www.dropbox.com/s/y5mjkduq7bopzex/currvita.pdf?dl=0"
+    url = "https://www.dropbox.com/scl/fi/47ze08ifgnxhme1d27k1p/currvita.pdf?rlkey=d5ujruhbwb6gevwhrakjinzo8&dl=0"
     weight = -160
 
 [[menu.main]]
@@ -51,15 +51,9 @@ pygmentsStyle = "native"
     weight = -150
 
 [[menu.main]]
-    name = "GDS Python"
-    url = "https://geographicdata.science/book"
-    weight=-140
-
-[[menu.main]]
-    name = "RASA"
-    url = "/rasa/"
+    name = "Teaching"
+    url = "/teaching"
     weight=-130
-
 
 
 # Site wide params and SEO
@@ -81,6 +75,16 @@ pygmentsStyle = "native"
     # Optional: add a twitter handle and mastodon handle for SEO.
     [params.twitter]
         name = "@levijohnwolf"
+
+    [params.bsky]
+        name = "@levijohnwolf"
+
+    [params.github]
+        name = "ljwolf"
+
+    [params.orcid]
+	name="0000-0003-0274-599X"
+
     # [params.mastodon]
         # name = "@jkharkness"
         # host = "mastodon.social"

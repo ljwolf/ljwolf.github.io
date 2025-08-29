@@ -3,19 +3,23 @@ title: "Resources for teaching"
 date: 2020-08-10T22:21:38+01:00
 ---
 
-# Courses and Lectures
 
-| Lecture Title              | Course                                              | Place | Date     | Materials      |
-|----------------------------|-----------------------------------------------------|-------|----------|----------------|
-| All of them                |*Data Science and Machine Learning for Geographers*    | Bristol Uni | Spring 2023| Internal
-| All of them                |*Geographic Data Science*                              | Bristol Uni | Spring 2023| Internal
-| All of them                |*Geographic Data Science*                              | Bristol Uni | Fall 2021| [syllabus](/teaching/gds/)
-| All of them                |*Geographic Data Science*                              | Bristol Uni | Fall 2020| [materials](https://www.dropbox.com/s/0raz0u9qivwqxag/gds-2020.tar.gz?dl=0), [video](https://www.youtube.com/watch?v=tz_Ru5NAbfA&list=PLm3AoCNbpeDVjiQHWiVjB9NBa1WcEycvo)
-| Counterfactual Thinking    |*Geographic Thought & Practice*                        | Bristol Uni | Fall 2020| [slides](/teaching/2020_bristol_cfact.pdf)
-| Topics in Advanced Spatial Modelling Series               |*Spatial Modelling II*  | Bristol Uni | Spring 2020| [syllabus](/posts/2020-sm2-lectures/)
-| Intermediate Methods for Geographic Data Analysis | *Scientific Python Conference Tutorials* | UT Austin | Summer 2019 | [video](https://www.youtube.com/watch?v=fc1f4MNLzdQ)
-| Autoregressive Stochastic Processes |*Explanation, Causation, and Longitudinal Analysis*   | Bristol Uni | Spring 2019 | [notes](/teaching/20180323_eclan.html)
-| Intro to Geospatial Data Analysis with Python |*Scientific Python Conference Tutorials*   | UT Austin | Summer 2018 | [video](https://www.youtube.com/watch?v=kJXUUO5M4ok)
+|                                                | Date     |         Materials |
+|:---------------------------------------------------------------------------------|:-------:|----------:|------------------|
+| *Data Science and Machine Learning for Geographers*                      | Spring 2025| [archive](https://www.dropbox.com/scl/fi/65cb039n1o76qnspivsom/2024-25.zip?rlkey=dtkyg88ojnc34wzhb687ql8xs&dl=0)
+|*Geographic Data Science*                                               | Fall   2024| [archive](https://www.dropbox.com/scl/fi/71lmx3s20onr4z2n5ew6n/2024.zip?rlkey=efjyqgd3n20r5svy3q8o9ts2c&dl=0)
+| *Data Science and Machine Learning for Geographers*                      | Spring 2024| [archive](https://www.dropbox.com/scl/fi/0571770sy045mt9b3vb5v/2023-24.zip?rlkey=3xeklhqx2lmws7zpl9tshnpng&dl=0)
+| *Introduction to Spatial Optimization* at [University of Tartu GEM MSc](https://www.gem-msc.eu/)  | Winter 2023| [notebooks](https://github.com/ljwolf/intro-to-spatialopt) 
+| *Geographic Data Science*                                               | Fall   2023| [archive](https://www.dropbox.com/scl/fi/itwym4qig5n7qnrtvlck5/2023.zip?rlkey=a4znz96f5t2vfjcv94vknumnu&dl=0)
+| *Data Science and Machine Learning for Geographers*                      | Spring 2023| [archive](https://www.dropbox.com/scl/fi/30rn7dln5v1luhafx2ti0/2022-23.zip?rlkey=knszr875d36rp7aygz14n9ufi&dl=0)
+| *Geographic Data Science*                                               | Fall 2022| [archive](https://www.dropbox.com/scl/fi/itwym4qig5n7qnrtvlck5/2023.zip?rlkey=a4znz96f5t2vfjcv94vknumnu&dl=0)
+| *Geographic Data Science*                                                | Fall 2021| [syllabus](/teaching/gds/)
+| *Geographic Data Science*                                               | Fall 2020| [archive](https://www.dropbox.com/s/0raz0u9qivwqxag/gds-2020.tar.gz?dl=0), [video](https://www.youtube.com/watch?v=tz_Ru5NAbfA&list=PLm3AoCNbpeDVjiQHWiVjB9NBa1WcEycvo)
+| "Counterfactual Thinking",*Geographic Thought & Practice*                          | Fall 2020| [slides](/teaching/2020_bristol_cfact.pdf)
+| "Topics in Advanced Spatial Modelling Series", *Spatial Modelling II*    | Spring 2020| [syllabus](/posts/2020-sm2-lectures/)
+| "Intermediate Geographic Data Analysis", *SciPy Conference Tutorials*  | Summer 2019 | [video](https://www.youtube.com/watch?v=fc1f4MNLzdQ)
+| "Autoregressive Stochastic Processes", *MSc. Adv. Quant. Methods*     | Spring 2019 | [notes](/teaching/20180323_eclan.html)
+| "Intro to Geospatial Data Analysis", *SciPy Conference Tutorials*    | Summer 2018 | [video](https://www.youtube.com/watch?v=kJXUUO5M4ok)
 
 
 

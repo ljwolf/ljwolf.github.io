@@ -3,3 +3,6 @@ brexit_and_migrants.sql
 geoml-reading-group
 .DS_Store
 content/posts/clean.py
+themes/hugo-astatine-theme/*
+static/talks/2025-melbourne.mp4
+static/talks/2025-melbourne.pptx
