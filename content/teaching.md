@@ -1,6 +1,7 @@
 ---
 title: "Resources for teaching"
-date: 2020-08-10T22:21:38+01:00
+author: "\t"
+date: 2025-08-16 17:32:21
 ---
 
 

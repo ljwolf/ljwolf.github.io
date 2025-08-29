@@ -19,25 +19,34 @@ imgname:
 # An address (you can list multiple)
 address: 
   - 
-    name: "https://orcid.org/0000-0003-0274-599X"
-    street: Associate Professor of Spatial Analysis
-    postal_code: University of Bristol 
+    name: "Associate Professor of Spatial Analysis"
+    street: University of Bristol
+    postal_code: 
 ---
-I am an American expat currently working as an Associate Professor in Spatial Analysis at the University of Bristol's Quantitative Spatial Science Lab. I work in spatial data science, building new methods and software to learn new things about social and environmental processes. [Spatial analysis](https://en.wikipedia.org/wiki/Spatial_analysis) is a way of using the *spatial relationships* between things in a system to build a better understanding *of* that system than would be possible if we studied the elements in isolation. I've worked on detecting gerrymandering [[1](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657689&HistoricalAwards=false#_=_),[2](bce)], [neighborhood social change](https://journals.sagepub.com/doi/10.1177/2399808319875752), [local statistical models](https://onlinelibrary.wiley.com/doi/full/10.1111/gean.12147), [affordable rent](https://www.bristol.gov.uk/council-homes/tackling-the-rent-crisis), [bayesian computation](https://doi.org/10.1111/gean.12135), [species distribution modelling](https://research-information.bris.ac.uk/en/projects/revealing-coccolithophore-trait-diversity-and-its-climatic-impact). If you have a problem that looks like this and would like me to take a look, I am available to consult on spatial analysis, modelling, and optimisation problems. I've worked at [Nextdoor](https://nextdoor.com) and [CARTO](https://carto.com) (twice), and have consulted for [MondialRelay](https://www.mondialrelay.fr) and now [InPost](https://inpost.co.uk/)... all as a *spatial analyst*. 
+
+### About Me 
+
+I am an American expat currently working as an Associate Professor in Spatial Analysis at the University of Bristol's Quantitative Spatial Science Lab. I work in spatial data science, building new methods and software to learn new things about social and environmental processes. [Spatial analysis](https://en.wikipedia.org/wiki/Spatial_analysis) is a way of using the *spatial relationships* between things in a system to build a better understanding *of* that system than would be possible if we studied the elements in isolation. I've worked on detecting gerrymandering [[1](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657689&HistoricalAwards=false#_=_),[2](bce)], [neighborhood social change](https://journals.sagepub.com/doi/10.1177/2399808319875752), [local statistical models](https://onlinelibrary.wiley.com/doi/full/10.1111/gean.12147), [affordable rent](https://www.bristol.gov.uk/council-homes/tackling-the-rent-crisis), [bayesian computation](https://doi.org/10.1111/gean.12135), [species distribution modelling](https://research-information.bris.ac.uk/en/projects/revealing-coccolithophore-trait-diversity-and-its-climatic-impact). If you have a problem like this and would like me to take a look, I am available to consult on spatial analysis, modelling, and optimisation problems. I've worked at [Nextdoor](https://nextdoor.com) and [CARTO](https://carto.com) (twice), and have consulted for [MondialRelay](https://www.mondialrelay.fr) and now [InPost](https://inpost.co.uk/)... all as a *spatial analyst*. I am committed to open science, and serve as a maintainer to [geopandas](https://geopandas.org), [PySAL](https://pysal.org), and have more minor contributions to [scipy](https://scipy.org), [scikit-learn](https://sklearn.org), and [spdep](https://cran.r-project.org/web/packages/spdep/index.html). 
 
 For info on how to *do* spatial analysis, I have written [a book](https://geographicdata.science/book) with [Dani Arribas-Bel](https://darribas.org) and [Sergio Rey](https://sergerey.org). If you're more interested in the theory of spatial analysis, Rich Harris and Alison Heppenstall, and I edited the [*Research Agenda for Spatial Analysis*](https://www.e-elgar.com/shop/gbp/a-research-agenda-for-spatial-analysis-9781802203226.html), a collection of manifestos outlining where spatial analysis *is* and where people think it ought to *go*.
 
 
-## Right Now
+### Right now, I am:
 
-- I am currently on sabbatical 2025-26. 
-- [Nicholas Dorward](https://research-information.bris.ac.uk/en/persons/nicholas-m-dorward) and I are preparing *Causal Inference in Spatial Analysis* for SAGE, expected Fall of 2025. This will offer a first course in causal inference for people coming from spatial domains (like policy studies, environmental/earth science, geography, urban planning) and will introduce spatial concepts to folks who may have had a first course in causal inference already. 
-- I am consulting for Integer.PL about spatial decision support systems. 
-- I'm working with the [Coccotrait](https://gotw.nerc.ac.uk/list_full.asp?pcode=NE%2FX001261%2F1&classtype=Science+Topic&classification=Climate+%26+Climate+Change&cookieConsent=A) team to come up with better models for ocean ecology. 
-- Rachel Franklin and Daniel Arribas-Bel, and I record [the GLaD Podcast, your spatial fix for **G**eography, **L**ife, **a**nd **D**ata](https://open.spotify.com/show/3n79ptWoAM55YfHoTuBfHu?si=91b941c54e274316&nd=1). Listen to hear more about what it's like to be a spatial analyst in academia. 
+- on my sabbatical 2025-26
+- recording [The GLaD Podcast](https://open.spotify.com/show/3n79ptWoAM55YfHoTuBfHu?si=91b941c54e274316&nd=1) with [Dani Arribas-Bel](https://darribas.org) and [Rachel Franklin](https://rachelfranklin.org).
+- writing [Causal Inference in Spatial Analysis](https://spatialcausal.org) with [Nick Dorward](https://www.southampton.ac.uk/people/65qvvz/doctor-nick-dorward),  due to SAGE UK in fall of 2025---wish us luck!
+- consulting for Integer.PL about spatial decision support systems. 
+- writing papers on: 
+  - the relationship between income inequality and scaling in urban systems, 
+  - a new kind of algorithm for spatial prediction problems, 
+  - a new global dataset to capture how "urban" places feel, 
+  - better methods for predicting diverse oceanic phytoplankton communities,
+  - and a review of spatial theory in causal inference
 
 
-## Prospective Students
+
+### Information for Prospective Students
 
 If you're interested in pursuing a PhD at the University of Bristol, that's great! I've got a great track record working with students to [win funding](https://www.swdtp.ac.uk/) on advanced quantitative methods/social science topics. Right now, I'm actively seeking students on the following topics: 
 

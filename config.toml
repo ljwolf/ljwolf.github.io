@@ -8,7 +8,7 @@ languageCode = "en-us"
 # Website title
 title = "Yet Another Geographer"
 # Theme used
-theme = "hugo-astatine-theme"
+theme = ["hugo-shortcode-roneo-collection", "hugo-astatine-theme"]
 
 preserveTaxonomyNames = true
 rssLimit = 10
