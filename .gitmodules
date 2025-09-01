@@ -2,9 +2,3 @@
 	path = public
 	url = git@github.com:ljwolf/ljwolf.github.io.git
 	branch = master
-[submodule "themes/hugo-tufte"]
-	path = themes/hugo-tufte
-	url = git@github.com:shawnohare/hugo-tufte
-[submodule "themes/hugo-shortcode-roneo-collection"]
-	path = themes/hugo-shortcode-roneo-collection
-	url = https://gitlab.com/Roneo/hugo-shortcode-roneo-collection.git
