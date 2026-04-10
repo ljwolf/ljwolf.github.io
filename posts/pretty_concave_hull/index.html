@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title>A simple heuristic for pretty concave hulls - Yet Another Geographer</title>
+<meta property="og:title" content="A simple heuristic for pretty concave hulls - Yet Another Geographer">
+<meta property="og:type" content="article">
+
+
+<meta property="og:image" content="images/main.jpg">
+
+<meta property="og:url" content="https://ljwolf.org/posts/pretty_concave_hull/"><meta property="og:description" content="">
+<meta name="Description" property="description" content="">
+<link rel="me" href="https://twitter.com/@levijohnwolf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@levijohnwolf">
+<meta name="twitter:creator" content="@levijohnwolf">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://ljwolf.org/css/style.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://ljwolf.org/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
+<meta name="theme-color" content="#ffffff">
+
+
+<script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script>
+
+  </head>
+  <body>
+    <header class="md:px-0 px-2">
+        <nav >
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <div class="nav-main my-2.5">
+      <a href="https://ljwolf.org/" class="nav-title py-2.5 text-2xl
+               text-zinc-600 dark:text-zinc-300 hover:border-b-0">Yet Another Geographer</a>
+    </div>
+    <button type="button"
+            onclick="toggleMenu()"
+            class="inline-flex items-center p-2 ml-3
+                  text-sm text-gray-500
+                  rounded-lg md:hidden hover:bg-gray-100
+                  focus:outline-none focus:ring-2
+                  focus:ring-gray-200 dark:text-gray-400
+                  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1
+                           0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="grid md:grid-flow-col items-center justify-between text-lg
+                 my-2.5 grid-cols-1 pl-0 text-center">
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://orcid.org/0000-0003-0274-599X">ORCID</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://github.com/ljwolf">GitHub</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://www.dropbox.com/scl/fi/47ze08ifgnxhme1d27k1p/currvita.pdf?rlkey=d5ujruhbwb6gevwhrakjinzo8&amp;dl=0">CV</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="https://blog.ljwolf.org">Blog</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/teaching">Teaching</a>
+        </li>
+        
+        <li class="h-7 pl-2.5 pr-0 list-none">
+          <button type="button" onclick="toggleMode()" class="h-full"  aria-label="Toggle between dark and light mode">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline"
+                 id="ligh-mode-button-img"
+                 alt="A sun icon for switching to light mode"
+                 src="https://ljwolf.org/img/light_mode.svg">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden"
+                 id="dark-mode-button-img"
+                 alt="A moon icon for switching to dark mode"
+                 src="https://ljwolf.org/img/dark_mode.svg">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    </header>
+    <main class="content h-card container mt-2 m-auto
+                 leading-loose md:px-0 px-2 z-0"
+          role="main">
+    
+<article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="title-container">
+        <h1 class="article-title p-name" itemprop="name">A simple heuristic for pretty concave hulls</h1>
+        
+        <div class="flex justify-between items-center">
+            
+            <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://ljwolf.org/posts/pretty_concave_hull/">
+                <time itemprop="datePublished" class="dt-published"
+                    datetime="2026-04-10T15:44:44&#43;0100"
+                    content="2026-04-10T15:44:44&#43;0100">
+                    2026.04.10
+                </time>
+            </a>
+            
+            
+                
+                <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://ljwolf.org/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Levi John Wolf</span></a>
+                
+            
+        </div>
+        
+    </div>
+
+    <div class="article-content e-content" itemprop="articleBody">
+        <p>If you&rsquo;ve ever tried to draw a tight boundary around a cloud of geographic points, you&rsquo;ve probably met the <strong>convex hull</strong> — the rubber-band-stretched-around-all-the-points shape that&rsquo;s fast and clean, but rarely tells the full story. Real-world data is lumpy, stretched, and full of gaps. What you usually want is a <strong>concave hull</strong>: a shape that hugs your data more closely, dipping inward where the points pull away. Fortunately, <code>geopandas</code> gives us ways to calculate both easily: the <a href="https://geopandas.org/en/latest/docs/reference/api/geopandas.GeoSeries.concave_hull.html"><code>GeoSeries.concave_hull()</code> method</a> and <a href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.convex_hull.html"><code>GeoSeries.convex_hull</code> attribute</a> both can be used to recover these shapes quickly.</p>
+<p>The trouble is, there&rsquo;s no single &ldquo;correct&rdquo; concave hull. Too aggressive, and you get a spiky, fragmented mess. Too conservative, and you&rsquo;ve just recalculated the convex hull.
+Normally, the <code>ratio</code> paramter in <code>GeoDataFrame.concave_hull()</code> is used to solve this, but I find that getting that parameter right the first time is very unintuitive.
+When I worked with <a href="https://darribas.org">@darribas</a> a while ago to <a href="https://github.com/pysal/libpysal/pull/58">implement similar functionality in <code>libpysal</code></a>, I found directly modifying the <code>alpha</code> paramter to be more intuitive, since that represented &ldquo;real&rdquo; distances between points.
+But, I want to use the new <code>.concave_hull()</code> functionality, since we&rsquo;re probably going to deprecate that old <code>alpha_shape()/alpha_shape_auto()</code> code.</p>
+<p>So, I was trying to solve this problem myself, and ended up with this approach. I didn&rsquo;t see it documented anywhere, so I thought a short technical blogpost would be helpful.</p>
+<p>My algorithm below finds a sweet spot — a smooth, well-enclosed boundary — by optimising a clever geometric score.</p>
+<hr>
+<h2 id="what-makes-a-concave-hull-pretty">What makes a concave hull &ldquo;pretty&rdquo;?</h2>
+<p>To find a good concave hull, we need to be able to <em>score</em> one. I think a &ldquo;pretty&rdquo; concave hull reflects a balance between how much empty area it omits from the convex hull and how irregular the boundary needs to be in order to omit this area. So, I thought back to my dissertation work and came up the following scores:</p>
+<h3 id="1-the-enclosure-ratio">1. The Enclosure Ratio</h3>
+<p>The enclosure ratio is an areal measure of how effectively the concave hull &ldquo;squeezes&rdquo; area out of the concave hull for an equivalent set of points.</p>
+<p>$$\text{enclosure ratio} = 1 - \frac{\text{candidate hull area}}{\text{convex hull area}}$$</p>
+<p>This measures <strong>how much area the candidate hull encloses</strong> relative to the convex hull. A score near 0 means the concave hull covers almost as much area as the convex hull — it&rsquo;s barely doing any concave-hugging. A score near 1 means the hull has shrunk dramatically, cutting out large swathes of empty space.</p>
+<h3 id="2-the-boundary-amplitude">2. The Boundary Amplitude</h3>
+<p>The boundary amplitude is a previously-published score that measures how wiggly the perimeter of the concave hull is:</p>
+<p>$$\text{boundary amplitude} = \frac{\text{convex hull perimeter}}{\text{candidate hull perimeter}}$$</p>
+<p>This measures <strong>how indented or wiggly the candidate hull&rsquo;s boundary is</strong>. The convex hull has a minimal, smooth perimeter, so this ratio starts at 1 and decreases as the concave hull develops more intricate, folded edges. A lower score means the boundary is increasingly jagged.</p>
+<h2 id="perimeter-efficiency-as-a-prettiness-metric">Perimeter Efficiency as a &ldquo;prettiness&rdquo; metric</h2>
+<p>These two metrics pull in opposite directions.
+Carving out more area (good enclosure ratio) tends to create more indented, complex boundaries (poor boundary amplitude).
+Using the weighted harmonic mean between these two scores lets us specify how much we care about covering the convex hull&rsquo;s full area:</p>
+<p>$$PE = \left(\frac{1-w_\text{area}}{\text{enclosure ratio}} + \frac{w_{\text{area}}}{\text{boundary amplitude}}\right)^{-1}$$</p>
+<p>The harmonic mean is a natural choice here for a few reasons:</p>
+<ul>
+<li>It&rsquo;s <strong>bounded between 0 and 1</strong>, giving a clean, interpretable score.</li>
+<li>It&rsquo;s <strong>convex</strong>, meaning it has a well-behaved optimum to search for.</li>
+<li>Crucially, it <strong>penalises extremes hard</strong>. If either metric collapses — say, the boundary becomes a tangled mess — the overall score tanks. This pushes the optimiser toward solutions that are <em>reasonably good on both fronts</em>, rather than perfect on one and terrible on the other.</li>
+</ul>
+<p>Given a weight $w_{\text{area}}$, optimising the perimeter efficiency score $PE$ lets us draw a &ldquo;pretty&rdquo; concave hull first try, without manually inspecting many concave hulls.</p>
+<p>I find that an area weight of about .8 (so, we care about coverage 4 times more than convexity) helps set a reasonable prioritization.</p>
+<h2 id="code-for-pretty-concave-hulls">Code for Pretty Concave Hulls</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> geopandas
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.optimize <span style="color:#f92672">import</span> minimize_scalar
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> shapely.constructive <span style="color:#f92672">import</span> convex_hull 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pretty_concave_hull</span>(
+</span></span><span style="display:flex;"><span>    multipoint, 
+</span></span><span style="display:flex;"><span>    area_weight<span style="color:#f92672">=</span><span style="color:#ae81ff">.8</span>, 
+</span></span><span style="display:flex;"><span>    return_optimize<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">**</span>optim_params
+</span></span><span style="display:flex;"><span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> isinstance(multipoint, (geopandas<span style="color:#f92672">.</span>GeoSeries, geopandas<span style="color:#f92672">.</span>GeoDataFrame)):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> pretty_concave_hull(
+</span></span><span style="display:flex;"><span>            multipoint<span style="color:#f92672">.</span>geometry<span style="color:#f92672">.</span>union_all(), 
+</span></span><span style="display:flex;"><span>            area_weight<span style="color:#f92672">=</span>area_weight, 
+</span></span><span style="display:flex;"><span>            return_optimize<span style="color:#f92672">=</span>return_optimize, 
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">**</span>optim_params
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> multipoint<span style="color:#f92672">.</span>geom_type <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;MultiPoint&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;geom type must be MultiPoint. Recieved </span><span style="color:#e6db74">{</span>geoms<span style="color:#f92672">.</span>geom_type<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    geoms <span style="color:#f92672">=</span> geopandas<span style="color:#f92672">.</span>GeoSeries(multipoint)
+</span></span><span style="display:flex;"><span>    vexhull <span style="color:#f92672">=</span> convex_hull(multipoint)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">score</span>(ri):
+</span></span><span style="display:flex;"><span>        cavehull <span style="color:#f92672">=</span> geoms<span style="color:#f92672">.</span>concave_hull(ratio<span style="color:#f92672">=</span>ri, allow_holes<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        ba <span style="color:#f92672">=</span> (vexhull<span style="color:#f92672">.</span>length<span style="color:#f92672">/</span>cavehull<span style="color:#f92672">.</span>length)<span style="color:#f92672">.</span>item()
+</span></span><span style="display:flex;"><span>        fr <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>(cavehull<span style="color:#f92672">.</span>area<span style="color:#f92672">/</span>vexhull<span style="color:#f92672">.</span>area)<span style="color:#f92672">.</span>item()
+</span></span><span style="display:flex;"><span>        peff <span style="color:#f92672">=</span> ((<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>area_weight)<span style="color:#f92672">/</span>fr <span style="color:#f92672">+</span> area_weight<span style="color:#f92672">/</span>ba)<span style="color:#f92672">**-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>peff
+</span></span><span style="display:flex;"><span>    opt_result <span style="color:#f92672">=</span> minimize_scalar(
+</span></span><span style="display:flex;"><span>        score, 
+</span></span><span style="display:flex;"><span>        bounds<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">**</span>optim_params
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> return_optimize:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> opt_result
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> geoms<span style="color:#f92672">.</span>concave_hull(ratio<span style="color:#f92672">=</span>opt_result<span style="color:#f92672">.</span>x)
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> shapely.geometry <span style="color:#f92672">import</span> MultiPoint
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A crescent-shaped point cloud</span>
+</span></span><span style="display:flex;"><span>angles <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, np<span style="color:#f92672">.</span>pi, <span style="color:#ae81ff">80</span>)
+</span></span><span style="display:flex;"><span>noise <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.05</span>, (<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>coords <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>column_stack([np<span style="color:#f92672">.</span>cos(angles), np<span style="color:#f92672">.</span>sin(angles)]) <span style="color:#f92672">+</span> noise
+</span></span><span style="display:flex;"><span>coords <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>vstack([coords, coords <span style="color:#f92672">+</span> [<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0</span>]])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gdf <span style="color:#f92672">=</span> geopandas<span style="color:#f92672">.</span>GeoDataFrame(
+</span></span><span style="display:flex;"><span>    geometry<span style="color:#f92672">=</span>geopandas<span style="color:#f92672">.</span>points_from_xy(coords[:, <span style="color:#ae81ff">0</span>], coords[:, <span style="color:#ae81ff">1</span>]),
+</span></span><span style="display:flex;"><span>    crs<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;EPSG:4326&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pretty_hull <span style="color:#f92672">=</span> pretty_concave_hull(gdf)
+</span></span><span style="display:flex;"><span>default_hull <span style="color:#f92672">=</span> geopandas<span style="color:#f92672">.</span>GeoSeries(
+</span></span><span style="display:flex;"><span>  gdf<span style="color:#f92672">.</span>union_all()
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>concave_hull()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Plot</span>
+</span></span><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> gdf<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;steelblue&#34;</span>, markersize<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>geopandas<span style="color:#f92672">.</span>GeoDataFrame(geometry<span style="color:#f92672">=</span>default_hull)<span style="color:#f92672">.</span>boundary<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;black&#34;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;default&#39;</span>)
+</span></span><span style="display:flex;"><span>geopandas<span style="color:#f92672">.</span>GeoDataFrame(geometry<span style="color:#f92672">=</span>pretty_hull)<span style="color:#f92672">.</span>boundary<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;crimson&#34;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pretty&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="/images/pretty_cavehull_banana_example.png" alt="Pretty Concave Hulls"></p>
+<p>This heuristic with a 4:1 weight on the areal enclosure score (all in the code above) gives a hull that traces the crescent naturally — concave where the data dips away, without jagging into noisy spikes.</p>
+
+    </div>
+
+    
+
+    
+
+    
+    <div class="text-neutral-500 mb-4">
+        Last modified <span itemprop="dateModified"
+                            datetime="2026-04-10T15:44:44&#43;0100"
+                            content="2026-04-10T15:44:44&#43;0100">
+        2026.04.10
+        </span>
+    </div>
+    
+</article>
+
+    </main>
+    <footer class="footer container h-10 text-center mt-1">
+<hr class="my-4">
+  <ul class="pl-0 mt-1">
+    
+    <li class="ml-2 first:before:content-none before:content-['•']
+               inline-block list-none">
+      <a class="ml-2 text-neutral-800
+                dark:text-neutral-400 border-none"
+          href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+    </li>
+    <li class="ml-2 first:before:content-none before:content-['•']
+                text-neutral-800 dark:text-neutral-400 inline-block list-none">
+      <span class="ml-2">© Levi John Wolf 2026</span>
+    </li>
+  </ul>
+</footer>
+
+
+
+  </body>
+</html>
