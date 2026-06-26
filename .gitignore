@@ -3,6 +3,11 @@ brexit_and_migrants.sql
 geoml-reading-group
 .DS_Store
 content/posts/clean.py
-themes/hugo-astatine-theme/*
 static/talks/2025-melbourne.mp4
 static/talks/2025-melbourne.pptx
+
+# Hugo build output (built fresh in CI, deployed via Actions)
+public/
+
+# Too large for git (100MB+); host externally if needed
+static/greatercities.html

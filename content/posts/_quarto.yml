@@ -1,0 +1,10 @@
+project:
+  title: "posts"
+
+# Render .qmd posts to Hugo-ready GitHub-flavored Markdown alongside the source.
+# This is a LOCAL step: run `quarto render content/posts/<post>.qmd`. The heavy
+# geospatial stack (geopandas, libpysal, ...) isn't installed in CI, so the
+# committed .md is the deployable artifact.
+format:
+  gfm:
+    keep-yaml: true
