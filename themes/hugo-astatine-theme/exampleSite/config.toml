@@ -2,16 +2,17 @@
 # Astatine (see https://github.com/hugcis/hugo-astatine-theme).
 #
 # The URL from which the site will be served
-baseurl = "https://ljwolf.org/"
+baseurl = "https://hugcis.github.io/hugo-astatine-theme/"
 # Language used
-locale = "en-us"
+languageCode = "en-us"
 # Website title
-title = "Yet Another Geographer"
+title = "Astatine Theme"
 # Theme used
 theme = "hugo-astatine-theme"
 
 preserveTaxonomyNames = true
 rssLimit = 10
+paginate = 10
 
 # Code highlighting
 pygmentsCodefences = true
@@ -31,41 +32,38 @@ pygmentsStyle = "native"
 # Configure main navbar links. They can have a weight to select the order.
 # This links to content within the content/post/ folder
 [[menu.main]]
-    name = "ORCID"
-    url =  "https://orcid.org/0000-0003-0274-599X"
-    weight = -180
-
-[[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/ljwolf" 
-    weight = -170
-
-[[menu.main]]
-    name = "CV"
-    url = "https://www.dropbox.com/scl/fi/47ze08ifgnxhme1d27k1p/currvita.pdf?rlkey=d5ujruhbwb6gevwhrakjinzo8&dl=0"
-    weight = -160
-
-[[menu.main]]
-    name = "Blog"
-    url = "/posts/"
+    name = "Posts"
+    url = "/post/"
     weight = -150
 
+# This links to the page about.md
 [[menu.main]]
-    name = "Teaching"
-    url = "/teaching"
-    weight=-130
+    name = "About"
+    url = "/about/"
+    weight = -110
 
+# Make the tags and categories pages accessible directly from the navbar.
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = -120
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = -130
 
 # Site wide params and SEO
 [params]
     # Site description. Individual pages can have descriptions too but if
     # missing it will fallback to that one.
-    description = """"""
+    description = """The homepage of Astatine. This website is a demo the of the \
+    Hugo theme Astatine."""
     # Author of the site
-    authorName = "Levi John Wolf"
+    authorName = "Jack Harkness"
     # Main image for the author. This will be the default image for SEO.
     [params.imgname]
-        name = "images/main.jpg"
+        name = "img/main.jpg"
         # Add an alt description for the image
         alt = "Profile picture"
 
@@ -73,18 +71,8 @@ pygmentsStyle = "native"
     # hostedKaTex = false
 
     # Optional: add a twitter handle and mastodon handle for SEO.
-    [params.twitter]
-        name = "@levijohnwolf"
-
-    [params.bsky]
-        name = "@levijohnwolf"
-
-    [params.github]
-        name = "ljwolf"
-
-    [params.orcid]
-	name="0000-0003-0274-599X"
-
+    # [params.twitter]
+        # name = "@Jack_harkness"
     # [params.mastodon]
         # name = "@jkharkness"
         # host = "mastodon.social"
@@ -99,17 +87,3 @@ pygmentsStyle = "native"
 # Sitemap location (default is /sitemap.xml)
 [sitemap]
   filename = "sitemap.xml"
-
-# Markdown rendering. unsafe=true allows raw HTML in content (needed for the
-# Tumblr archive imports and a few hand-written posts). The passthrough
-# extension protects math delimiters from Goldmark's markdown parsing
-# (underscores/backslashes inside $...$ and $$...$$) before KaTeX sees them.
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-    [markup.goldmark.extensions.passthrough]
-      enable = true
-      [markup.goldmark.extensions.passthrough.delimiters]
-        block = [['\[', '\]'], ['$$', '$$']]
-        inline = [['\(', '\)'], ['$', '$']]

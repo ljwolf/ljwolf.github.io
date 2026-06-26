@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/plex-serif-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/plex-serif-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/plex-serif-400-italic.woff2') format('woff2');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply tracking-wide;
+    @apply bg-neutral-100;
+    @apply dark:bg-zinc-800;
+    @apply dark:text-zinc-300;
+    @apply font-serif;
+    @apply font-medium;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h1, h2 {
+    @apply font-light;
+    @apply mb-6;
+    @apply mt-4;
+    @apply font-mono;
+    @apply uppercase;
+    @apply tracking-wider;
+  }
+  h3 {
+    @apply font-light;
+    @apply text-2xl;
+    @apply my-2;
+    @apply font-mono;
+    @apply uppercase;
+    @apply tracking-wider;
+  }
+  h4 {
+    @apply font-light;
+    @apply text-xl;
+    @apply my-1;
+    @apply font-mono;
+    @apply uppercase;
+    @apply tracking-wider;
+  }
+  p, ul, ol {
+      @apply mt-4;
+      @apply mb-8;
+  }
+  a {
+    @apply text-accent-700;
+    @apply dark:text-accent-300;
+  }
+  a:hover {
+    @apply text-gray-900;
+    @apply dark:text-gray-200;
+    @apply border-b-2;
+    @apply border-slate-200;
+  }
+  code {
+      @apply text-base;
+      @apply rounded-md;
+      @apply px-1;
+      @apply py-1;
+      @apply bg-stone-300;
+      @apply dark:bg-stone-600;
+  }
+  pre {
+    overflow: auto;
+    @apply px-2;
+    @apply mx-2;
+    @apply max-w-full;
+    @apply mb-6;
+  }
+  pre code {
+    /* @apply bg-transparent; */
+    @apply bg-inherit;
+    @apply dark:bg-inherit;
+    @apply text-sm;
+  }
+  li {
+      @apply list-disc;
+  }
+  ul, ol {
+      @apply pl-10;
+  }
+  hr {
+      @apply w-8/12;
+      @apply mx-auto;
+      @apply my-10;
+      @apply h-0.5;
+      @apply dark:border-zinc-500
+  }
+  dt {
+    @apply font-bold;
+    @apply font-mono;
+    @apply uppercase;
+    @apply tracking-wide;
+  }
+  dd {
+    @apply mb-4;
+    @apply ml-8;
+  }
+  img {
+    @apply mx-auto;
+    @apply dark:brightness-[.8];
+    @apply dark:contrast-125;
+  }
+  figure {
+    @apply sm:mx-6;
+    @apply md:mx-12;
+  }
+  figcaption {
+    @apply text-center;
+  }
+  blockquote {
+    @apply bg-slate-200;
+    @apply dark:bg-slate-700;
+    @apply my-8;
+    @apply sm:mx-0;
+    @apply md:mx-4;
+    @apply lg:mx-8;
+    @apply py-2;
+    @apply border-l-4;
+    @apply border-slate-400;
+    @apply pl-4;
+    @apply pr-2;
+    @apply italic;
+    @apply font-serif;
+    @apply text-lg;
+    @apply after:content-[close-quote];
+    @apply after:text-5xl;
+    @apply before:text-5xl;
+    @apply before:text-slate-400;
+    @apply after:text-slate-400;
+    @apply after:leading-[.1em];
+    @apply before:leading-[.1em];
+    @apply before:mr-1;
+    @apply after:mr-1;
+    @apply after:align-[-.4em];
+    @apply before:align-[-.4em];
+    @apply before:content-[open-quote];
+  }
+  blockquote p {
+    @apply inline;
+  }
+  .isso-comment-footer {
+    display: inline-flex;
+  }
+}
+
+@layer base {
+  #isso-thread h4 {
+    @apply dark:text-zinc-400;
+  }
+  #isso-thread input, #isso-thread .textarea {
+    @apply dark:bg-zinc-700;
+  }
+}
