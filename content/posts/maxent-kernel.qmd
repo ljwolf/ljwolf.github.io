@@ -1,0 +1,28 @@
+---
+title: "Maxent Kernel"
+date: 2026-04-12T20:53:15+01:00
+draft: true
+---
+
+```{python}
+import geopandas, geodatasets
+from libpysal.graph import Graph
+from scipy import spatial
+df = geopandas.read_file(geodatasets.get_path("geoda.groceries"))
+```
+
+```{python}
+dflat = spatial.distance.pdist(df.geometry.get_coordinates())
+```
+
+```{python}
+a = Graph.build_kernel(
+    df.geometry.explode(), bandwidth='auto', kernel='bisquare'
+)
+k10 = Graph.build_kernel(
+    df.geometry.explode(), k=len(df)//10, kernel='bisquare'
+)
+q20 = Graph.build_kernel(
+    df.geometry.explode(), bandwidth=numpy.quantile(dflat, .2), kernel='bisquare'
+)
+```

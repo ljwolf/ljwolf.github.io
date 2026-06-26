@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ljwolf
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://ljwolf.org
+  * I am ljwolf (https://keybase.io/ljwolf) on keybase.
+  * I have a public key ASAOhoYdj2vbKVhOoA8JlTTsGCky2vx9HyPsLcJ66IETcQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200e86861d8f6bdb29584ea00f099534ec182932dafc7d1f23ec2dc27ae88113710a",
+      "host": "keybase.io",
+      "kid": "01200e86861d8f6bdb29584ea00f099534ec182932dafc7d1f23ec2dc27ae88113710a",
+      "uid": "09558d563cd32dad98574889904e3b19",
+      "username": "ljwolf"
+    },
+    "merkle_root": {
+      "ctime": 1529532602,
+      "hash": "68c531df62e4ec3b791a33771adda49d6a685c4d2d23ae5141697c9fbf1499689c33efe66813ef856c598d99985b20667f5bfc0a971913638ac014a7b52d7a2e",
+      "hash_meta": "cc6cc91d7b23dc81f8c8d9a516440e9f2f49a2bbcf69ff542e7efcc5f52e7bd5",
+      "seqno": 3114508
+    },
+    "service": {
+      "entropy": "AL5v/BTR7/EZidpHdCH31TRL",
+      "hostname": "ljwolf.org",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.1.0"
+  },
+  "ctime": 1529532612,
+  "expire_in": 504576000,
+  "prev": "1732615f38e6c9d606ef5628ae11ecf6d17ad02a6b57ba75baffe314222c9b3d",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgDoaGHY9r2ylYTqAPCZU07BgpMtr8fR8j7C3CeuiBE3EKp3BheWxvYWTESpcCCcQgFzJhXzjmydYG71YorhHs9tF60CprV7p1uv/jFCIsmz3EIO55kmTqZvD2Pi5I829Vem36Xua08MaPV5pULEwMRiC8AgHCo3NpZ8RA14rWiB7SDpLB1I4+TqHzIZ+sPDWqxcdhR2nMc0wXfdvPv78yl3x5o8Jz8RJmE31lK1aWW6o1pbyEugX4rGmYC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEKlviaUn5HI4Su6+zimL2fgUY7BmA5k6K/xLoovhtmJo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ljwolf
+
+==================================================================

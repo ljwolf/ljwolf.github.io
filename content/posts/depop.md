@@ -8,7 +8,7 @@ Over the last month and a half or so, my colleagues at the [University of Bristo
 
 One thing that was *very* surprising to me is the interplay between depopulation and boundary change: 
 
-{{< tweet user="levijohnwolf" id="1422226557741961226" >}}
+{{< x user="levijohnwolf" id="1422226557741961226" >}}
 
 This would suggest that it's not about *change*, but rather the *direction* of change that matters. When you gain districts, you can easily split a "big" district into two smaller districst that follow previous lines. However, when you *lose* districts, the effect cascades, since it's rare that valid districts can be drawn from exact aggregates of previous districts. 
 

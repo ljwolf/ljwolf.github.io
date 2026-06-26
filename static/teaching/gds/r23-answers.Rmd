@@ -1,0 +1,261 @@
+---
+title: "Validating models - answers"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default---
+---
+
+# Your turn
+
+## Regression
+
+
+With `caret`, train the following models:
+
+- Using 5-fold crossvalidation repeated 10 times, train a *linear regression* (`method='lm'`)  to predict the danceability of a song based on the tempo, valence, and energy of a song. 
+
+```{r message=F}
+library(tidyverse)
+library(caret)
+library(knitr)
+spotify <- read_csv('../data/midterm-songs.csv')
+fold5rep10 <- trainControl(method='repeatedcv', 
+                           repeats = 10,
+                           number = 5
+                           )
+```
+
+```{r cache=T}
+dance_lm <- train(danceability ~ tempo + valence + energy, 
+                data=spotify, 
+                method='lm', 
+                trControl=fold5rep10)
+dance_lm
+```
+
+- Using the same configuration, fit a $k$-nearest neighbor classifier (`method='knn'`). Make sure to find the "right" $k$ using the techniques we discussed. 
+
+```{r cache=T}
+dance_knn <- train(danceability ~ tempo + valence + energy,
+                   data=spotify,
+                   method='knn',
+                   trControl=fold5rep10,
+                   tuneGrid=data.frame(k=seq(5, 155, 10)))
+dance_knn
+```
+
+It should be sufficient to search the space from about 2 to 20 to find the proper $k$ value. 
+
+- Using the same configuration, train a *kernel regression* (`method='gamLoess'`) 
+
+```r
+dance_loess <- train(danceability ~ tempo + valence + energy, 
+               data=spotify, 
+               method='gamLoess', 
+               trControl = fold5rep10)
+```
+
+The `gamLoess` does also have tuning parameters, but we haven't discussed how to tune these directly. It's OK to avoid this for now. 
+
+- Which has the best in sample performance? Which has the best out-of-sample performance? Given what you know about the *bias-variance* tradeoff, why might this be the best model?
+
+The KNN model performs the best, with a crossvalidated RMSE of .119, whereas the `lm` has an RMSE of .133 and the loess has a RMSE of .12. These values might vary slightly from crossvalidation run to crossvalidation run, since they rely on the random re-sampling of the data. This is fine, and expected. However, keep in mind: 
+ - the GAM and the KNN models may be very sensitive to scaling
+ - the GAM model has parameters (check the caret website to see `span` and `degree`) that we did not tune! 
+
+- If you use preprocessing (`preprocess=c('center', 'scale')`), do results change
+
+The LOESS might change, and the KNN will definitely change. 
+
+```{r messsage=F, warning=F, cache=T}
+dance_knn_c <- train(danceability ~ tempo + valence + energy,
+                   data=spotify,
+                   method='knn',
+                   trControl=fold5rep10,
+                   preProcess=c("center", "scale"),
+                   tuneGrid=data.frame(k=seq(5, 155, 10)))
+dance_knn_c
+```
+
+You may find it interesting that the RMSE and the R-squared is *larger* in the scaled model... This is somewhat unusual, but entirely possible.
+
+
+```r
+dance_loess_c <- train(danceability ~ tempo + valence + energy,
+                   data=spotify,
+                   method='gamLoess',
+                   trControl=fold5rep10,
+                   preProcess=c("center", "scale"))
+```
+
+- Using the best model, plot the predicted danceability for an r&b song as a function of tempo, given a valence of .5 and an energy of .5.^[Remember, the `predict` function still works with `caret`-trained models. So, build a big new dataframe for yourself using `data.frame(tempo=..., valence=.5, )`! And, remember: `seq(a,b,s)` gives you a set of regularly-spaced numbers from start `a` to finish `b` separated by step-size `s`. Try it now for yourself: run `seq(1,10,2)` at the console. Compare it to `seq(2, 20, 1)` and `seq(1, 5, .1)`!]
+
+To do this, we might use the same strategy we did before to predict based on "fake" data:
+
+```{r}
+surface <- data.frame(
+  tempo = seq(1,210,1),
+  valence=.5,
+  energy=.5,
+  playlist_genre='r&b'
+)
+
+surface %>% head(10) %>% kable()
+```
+
+We use this "fake" data as the `newdata` argument of `predict`, to get predictions for this new set of data. 
+
+```{r}
+surface %>% 
+  mutate(pred_danceability = predict(dance_knn, newdata=surface)) %>% 
+  ggplot() + 
+  geom_point(data=spotify, 
+             aes(x=tempo, y=danceability), 
+             alpha=.01) + 
+  geom_line(aes(x=tempo, 
+                y=pred_danceability), 
+            color='orangered')
+```
+
+you can see the prediction is highly nonlinear and also a bit too variable... 
+
+## Binary Classification
+
+With `caret`, train the following binary classifiers:
+
+- Using 5-fold cross-validation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict whether or not a song is a rock song, based on its danceability, valence, energy, and tempo. 
+
+```{r, cache=T}
+spotify <- spotify %>% mutate(is_rock = as.factor(playlist_genre == 'rock'))
+rock_knn <- train(is_rock ~ danceability + valence + energy + tempo, 
+                  data=spotify,
+                  method='knn',
+                  trControl = fold5rep10,
+                  tuneGrid = data.frame(k=seq(2,20,2))
+                  )
+```
+
+```{r}
+rock_knn
+plot(rock_knn)
+```
+
+- Using the same crossvalidation setup, train a *logistic* model (`method='glm', family='binomial'`) to predict the genre of a song based on the same covariates.
+
+```{r, cache=T}
+rock_glm <- train(is_rock ~ danceability + valence + energy + tempo, 
+                  data=spotify,
+                  method='glm',
+                  family='binomial',
+                  trControl = fold5rep10,
+                  )
+rock_glm
+```
+
+- Which has the best *in-sample* accuracy? which has the worst?
+
+the KNN classifier slightly outperforms the `glm`. 
+
+- If you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+
+Again, we'd expect the KNN classifier to change, but the GLM may not. 
+
+```{r cache=T}
+rock_knn_c <- train(is_rock ~ danceability + valence + energy + tempo, 
+                  data=spotify,
+                  method='knn',
+                  trControl = fold5rep10,
+                  preProcess=c('center','scale'),
+                  tuneGrid = data.frame(k=seq(5,50,5))
+                  )
+rock_knn_c
+```
+
+```{r}
+plot(rock_knn_c)
+```
+
+```{r cache=T}
+rock_glm_c <- train(is_rock ~ danceability + valence + energy + tempo, 
+                  data=spotify,
+                  method='glm',
+                  family='binomial',
+                  preProcess=c('center', 'scale'),
+                  trControl = fold5rep10
+                  )
+rock_glm_c
+```
+
+- Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. Which model performs best, in your view? Make use of the accuracy, sensitivity, and specificity, if useful! 
+
+```{r}
+confusionMatrix(rock_glm)
+```
+
+```{r}
+confusionMatrix(rock_knn)
+```
+
+So, we can see that most of the data is *not* rock, and that both models are fairly good at predicting not rock songs are not rock songs (the FALSE/FALSE value is high!), but that rock songs that are *correctly predicted* as rock songs is quite a bit worse... 
+
+In the KNN model, you can see that the accuracy of predicting non-rock songs falls a little bit, but the accuracy of predicting rock songs increases slightly! 
+
+## Multi-class Classification
+
+With `caret`, train the following multi-class classifiers:
+
+- Using 5-fold crossvalidation repeated 10 times, train a $K$-nearest neighbor classifier (`method='knn'`) to predict a song's genre, based on variables you think might help to predict the outcome.
+
+```{r cache=T}
+genre_knn <- train(playlist_genre ~ duration_ms + 
+                   energy + valence + danceability + 
+                   instrumentalness + acousticness,
+                   data=spotify,
+                   method='knn',
+                   trControl=fold5rep10, 
+                   tuneGrid=data.frame(k=seq(5,50,5))
+                     )
+```
+```{r}
+genre_knn
+```
+
+- Using the same cross-validation setup, train a *multinomial logistic* model (`method='multinom'`) to predict the genre of a song based on the same covariates.
+
+```{r cache=T, message=F}
+genre_glm <- train(playlist_genre ~ duration_ms + 
+                     energy + valence + danceability + 
+                     instrumentalness + acousticness,
+                   data=spotify,
+                   method='multinom',
+                   trControl=fold5rep10
+                   )
+```
+```{r}
+genre_glm
+```
+
+- Which has the best *in-sample* accuracy? which has the worst?
+
+- If you use preprocessing (`preprocess=c('center', 'scale')`), do results change?
+
+Yes, again, we'd expect the KNN to change. 
+
+- Using the `confusionMatrix()` function from the `caret` package, show me the confusion matrix for these models. For the model with the best accuracy, are there any classes that the model generally confuses? 
+
+```{r}
+confusionMatrix(genre_knn)
+```
+
+```{r}
+confusionMatrix(genre_glm)
+```
+
+- **challenge**: The `yardstick` library is a tidy library designed to make it easy to evaluate various model accuracy measures with `caret` models. Using `yardstick::precision()`, compute the precision for these two models. 
+
+```{r}
+install.packages('yardstick')
+library(yardstick)
+precision(genre_knn)
+precision(genre_glm)
+```
