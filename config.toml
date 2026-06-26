@@ -2,7 +2,7 @@
 # Astatine (see https://github.com/hugcis/hugo-astatine-theme).
 #
 # The URL from which the site will be served
-baseurl = "https://ljwolf.org/"
+baseurl = "https://www.ljwolf.org/"
 # Language used
 locale = "en-us"
 # Website title
