@@ -57,13 +57,15 @@ module.exports = {
           800: '#24272a',
           900: '#16181a',
         },
-        // Muted rust/ochre accent, in place of the brighter amber.
+        // Disco-Elysium-leaning orange. Saturated/true-orange hue so it reads
+        // vibrant in light mode (not brown), while 700 stays dark enough to keep
+        // link text legible on the light-grey bg. 300 unchanged (dark-mode links).
         accent: {
           300: '#d8a873',
-          500: '#bf7a4a',
-          600: '#a86038',
-          700: '#8a4a2c',
-          800: '#6b3920',
+          500: '#d9741a',
+          600: '#c25d12',
+          700: '#a8500a',
+          800: '#823c08',
         },
       },
       fontFamily: {
