@@ -57,13 +57,14 @@ module.exports = {
           800: '#24272a',
           900: '#16181a',
         },
-        // Disco-Elysium-leaning orange. Saturated/true-orange hue so it reads
-        // vibrant in light mode (not brown), while 700 stays dark enough to keep
-        // link text legible on the light-grey bg. 300 unchanged (dark-mode links).
+        // Disco-Elysium-leaning orange. 600 is the bright "pop" orange the user
+        // chose for light mode (drives both link text and badge backgrounds);
+        // vividness prioritized over strict contrast. 300 unchanged (dark-mode
+        // links); 700/500 still drive the dark-mode badge bg/hover.
         accent: {
           300: '#d8a873',
           500: '#d9741a',
-          600: '#c25d12',
+          600: '#fb5d07',
           700: '#a8500a',
           800: '#823c08',
         },

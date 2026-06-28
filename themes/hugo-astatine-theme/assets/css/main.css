@@ -95,7 +95,7 @@
       @apply mb-8;
   }
   a {
-    @apply text-[#fb5d07];
+    @apply text-accent-600;
     @apply dark:text-accent-300;
   }
   a:hover {
