@@ -2,14 +2,16 @@
 title: "A simple heuristic for pretty concave hulls"
 date: 2026-04-10T15:44:44+01:00
 katex: true
+markup: pandoc
+bibliography: true
 ---
 
 If you've ever tried to draw a tight boundary around a cloud of geographic points, you've probably met the **convex hull** — the rubber-band-stretched-around-all-the-points shape that's fast and clean, but rarely tells the full story. Real-world data is lumpy, stretched, and full of gaps. What you usually want is a **concave hull**: a shape that hugs your data more closely, dipping inward where the points pull away. Fortunately, `geopandas` gives us ways to calculate both easily: the [`GeoSeries.concave_hull()` method](https://geopandas.org/en/latest/docs/reference/api/geopandas.GeoSeries.concave_hull.html) and [`GeoSeries.convex_hull` attribute](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.convex_hull.html) both can be used to recover these shapes quickly. 
 
 The trouble is, there's no single "correct" concave hull. Too aggressive, and you get a spiky, fragmented mess. Too conservative, and you've just recalculated the convex hull. 
 Normally, the `ratio` parameter in `GeoDataFrame.concave_hull()` is used to solve this, but I find that getting that parameter right the first time is very unintuitive. 
-When I worked with [@darribas](https://darribas.org) a while ago to [implement similar functionality in `libpysal`](https://github.com/pysal/libpysal/pull/58), I found directly modifying the `alpha` parameter to be more intuitive, since that represented "real" distances between points. 
-But, I want to use the new `.concave_hull()` functionality, since we're probably going to deprecate that old `alpha_shape()/alpha_shape_auto()` code. 
+When I worked with [Dani Arribas-Bel](https://darribas.org) a while ago to [implement similar functionality in `libpysal`](https://github.com/pysal/libpysal/pull/58) [@rey2021], I found directly modifying the `alpha` parameter [@edelsbrunner1983] to be more intuitive, since that represented "real" distances between points. 
+But, I want to use the new `.concave_hull()` functionality [@moreira2007], since we're probably going to deprecate that old `alpha_shape()/alpha_shape_auto()` code. 
 
 So, I was trying to solve this problem myself, and ended up with this approach. I didn't see it documented anywhere, so I thought a short technical blogpost would be helpful. 
 
@@ -31,7 +33,7 @@ This measures **how much area the candidate hull encloses** relative to the conv
 
 ### 2. The Boundary Amplitude
 
-The boundary amplitude is a previously-published score that measures how wiggly the perimeter of the concave hull is: 
+The boundary amplitude [@wang2012measurement] is a previously-published score that measures how wiggly the perimeter of the concave hull is: 
 
 $$\text{boundary amplitude} = \frac{\text{convex hull perimeter}}{\text{candidate hull perimeter}}$$
 
@@ -129,3 +131,9 @@ plt.show()
 ![Pretty Concave Hulls](/images/pretty_cavehull_banana_example.png)
 
 This heuristic with a 4:1 weight on the areal enclosure score (all in the code above) gives a hull that traces the crescent naturally — concave where the data dips away, without jagging into noisy spikes.
+
+## References
+
+::: {#refs}
+:::
+
