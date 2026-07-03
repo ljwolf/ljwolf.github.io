@@ -1,0 +1,26 @@
+#!/bin/bash
+# Wrapper called by Hugo's external Pandoc renderer.
+# Adds --citeproc plus the site-wide bibliography and CSL style.
+# Hugo always invokes this from the site root directory.
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SITE_ROOT="$(dirname "$SCRIPT_DIR")"
+
+# Find the real pandoc binary (not this wrapper)
+REAL_PANDOC=$(command -v -a pandoc 2>/dev/null | grep -v "$SCRIPT_DIR" | head -1)
+if [[ -z "$REAL_PANDOC" ]]; then
+    REAL_PANDOC=$(find /opt/homebrew/bin /usr/local/bin /usr/bin -name pandoc 2>/dev/null | head -1)
+fi
+
+BIB="$SITE_ROOT/refs.bib"
+CSL="$SITE_ROOT/assets/csl/chicago-author-date.csl"
+
+EXTRA_ARGS=()
+if [[ -f "$BIB" ]]; then
+    EXTRA_ARGS+=(--citeproc --bibliography="$BIB")
+fi
+if [[ -f "$CSL" ]]; then
+    EXTRA_ARGS+=(--csl="$CSL")
+fi
+
+exec "$REAL_PANDOC" "${EXTRA_ARGS[@]}" "$@"

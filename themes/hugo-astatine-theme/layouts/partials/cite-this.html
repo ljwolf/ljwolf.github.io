@@ -1,0 +1,25 @@
+{{- if .Params.bibliography -}}
+{{- $year := .PublishDate.Format "2006" -}}
+{{- $author := .Site.Params.AuthorName | default "Anonymous" -}}
+{{- /* Build a simple BibTeX key: lastname_year_firstword */}}
+{{- $lastName := index (last 1 (split $author " ")) 0 | lower -}}
+{{- $firstWord := index (split (.Title | urlize) "-") 0 -}}
+{{- $citekey := printf "%s%s%s" $lastName $year $firstWord -}}
+<div class="cite-this">
+  <h3>Cite this post</h3>
+  <p class="cite-formatted">
+    {{ $author }}. {{ $year }}. &ldquo;{{ .Title }}.&rdquo; <em>Yet Another Geographer</em>.
+    <a href="{{ .Permalink }}">{{ .Permalink }}</a>
+  </p>
+  <details>
+    <summary>BibTeX</summary>
+    <pre class="cite-bibtex"><code>@misc{​{{ $citekey }},
+  author    = { {{- $author -}} },
+  title     = { {{- .Title -}} },
+  year      = { {{- $year -}} },
+  url       = { {{- .Permalink -}} },
+  note      = {Yet Another Geographer}
+}</code></pre>
+  </details>
+</div>
+{{- end -}}

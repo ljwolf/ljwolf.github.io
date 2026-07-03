@@ -8,6 +8,8 @@ static/talks/2025-melbourne.pptx
 
 # Hugo build output (built fresh in CI, deployed via Actions)
 public/
+public_test/
+resources/
 
 # Too large for git (100MB+); host externally if needed
 static/greatercities.html

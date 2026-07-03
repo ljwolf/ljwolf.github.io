@@ -15,7 +15,7 @@ rssLimit = 10
 
 # Code highlighting
 pygmentsCodefences = true
-pygmentsStyle = "native"
+pygmentsUseClasses = true
 
 # Taxonomies (only tags and categories are supported out of the box but you can
 # add more)
@@ -95,6 +95,10 @@ pygmentsStyle = "native"
     # Enable pingback and webmention via webmention.io
     # webmention = "hugocisneros.com"
 
+
+# Allow Hugo to call the pandoc wrapper for pages with markup: pandoc
+[security.exec]
+  allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$', '^pandoc$']
 
 # Sitemap location (default is /sitemap.xml)
 [sitemap]

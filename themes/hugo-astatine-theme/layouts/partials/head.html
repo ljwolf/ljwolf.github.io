@@ -22,7 +22,12 @@
 {{ else if .Params.Caption }}
 <meta property="og:image" content="{{ .Params.Caption.Name }}">
 {{ else }}
+{{ $ogimg := resources.Get .Site.Params.imgname.name }}
+{{ if $ogimg }}
+<meta property="og:image" content="{{ ($ogimg.Resize "1200x jpg q82").Permalink }}">
+{{ else }}
 <meta property="og:image" content="{{ .Site.Params.imgname.name }}">
+{{ end }}
 {{ end }}
 <meta property="og:url" content="{{ .Permalink }}">
 {{- if .Description -}}
@@ -71,6 +76,9 @@
 <!-- Style configuration -->
 {{ $style := resources.Get "css/style.css" | resources.Minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<!-- Syntax highlighting (light + dark mode) -->
+{{ $syntax := resources.Get "css/syntax.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $syntax.Permalink }}">
 <!-- Icon configuration -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">

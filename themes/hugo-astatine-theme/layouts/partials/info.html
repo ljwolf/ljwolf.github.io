@@ -3,18 +3,26 @@
      itemscope itemtype="http://schema.org/Person">
     <div class="picture p-8 max-w-[80%] mx-auto basis-20 grow shrink"
          itemscope itemtype="http://schema.org/ImageObject">
-        <picture>
-            {{ if .Params.ImgOther }}
-            {{ range .Params.ImgOther }}
-            <source srcset="{{ .name }}"{{ if .type }} type="{{ .type }}"{{ end }}>
-            {{ end }}
-            {{ end }}
-            <source srcset="{{ .Site.Params.imgname.Name }}"
-                    {{ if .Site.Params.imgname.Type }} type="{{ .Site.Params.Imgname.Type }}"{{ end }}>
-            <img class="main-image u-photo mx-auto"
-            itemprop="contentUrl" alt="{{ .Site.Params.Imgname.Alt }}"
-                 src="{{ .Site.Params.imgname.Name }}">
-        </picture>
+        {{ $img := resources.Get .Site.Params.imgname.Name }}
+        {{ if $img }}
+        {{/* Responsive variants: the profile slot renders ~256px (≈512px @2x),
+             so we ship small WebP variants instead of the multi-MB master. */}}
+        {{ $w256 := ($img.Resize "256x webp q82").RelPermalink }}
+        {{ $w512 := ($img.Resize "512x webp q82").RelPermalink }}
+        {{ $w768 := ($img.Resize "768x webp q80").RelPermalink }}
+        {{ $fallback := $img.Resize "512x jpg q82" }}
+        <img class="main-image u-photo mx-auto"
+             itemprop="contentUrl" alt="{{ .Site.Params.imgname.Alt }}"
+             width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
+             src="{{ $fallback.RelPermalink }}"
+             srcset="{{ $w256 }} 256w, {{ $w512 }} 512w, {{ $w768 }} 768w"
+             sizes="(max-width: 640px) 80vw, 256px"
+             loading="eager" decoding="async">
+        {{ else }}
+        <img class="main-image u-photo mx-auto"
+             itemprop="contentUrl" alt="{{ .Site.Params.imgname.Alt }}"
+             src="{{ .Site.Params.imgname.Name }}">
+        {{ end }}
     </div>
     <div class="mx-4 ml-8 basis-60 grow shrink-2 leading-snug text-base">
         <a  class="u-url font-bold" rel="me" itemprop="url" href="{{ .Permalink }}">
