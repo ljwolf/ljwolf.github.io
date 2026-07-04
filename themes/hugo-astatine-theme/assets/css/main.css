@@ -244,17 +244,6 @@
   @apply mt-0;
   @apply mb-2;
 }
-.cite-this p {
-  @apply mt-0;
-  @apply mb-2;
-}
-.cite-this details summary {
-  @apply cursor-pointer;
-  @apply font-mono;
-  @apply text-sm;
-  @apply text-neutral-500;
-  @apply dark:text-neutral-400;
-}
 .cite-bibtex {
   @apply mt-2;
   @apply text-sm;

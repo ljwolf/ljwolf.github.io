@@ -7,19 +7,12 @@
 {{- $citekey := printf "%s%s%s" $lastName $year $firstWord -}}
 <div class="cite-this">
   <h3>Cite this post</h3>
-  <p class="cite-formatted">
-    {{ $author }}. {{ $year }}. &ldquo;{{ .Title }}.&rdquo; <em>Yet Another Geographer</em>.
-    <a href="{{ .Permalink }}">{{ .Permalink }}</a>
-  </p>
-  <details>
-    <summary>BibTeX</summary>
-    <pre class="cite-bibtex"><code>@misc{​{{ $citekey }},
+  <pre class="cite-bibtex"><code>@misc{​{{ $citekey }},
   author    = { {{- $author -}} },
   title     = { {{- .Title -}} },
   year      = { {{- $year -}} },
   url       = { {{- .Permalink -}} },
   note      = {Yet Another Geographer}
 }</code></pre>
-  </details>
 </div>
 {{- end -}}
