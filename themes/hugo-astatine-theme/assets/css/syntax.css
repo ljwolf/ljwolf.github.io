@@ -78,6 +78,42 @@
 /* GenericUnderline */ .chroma .gl { text-decoration:underline }
 /* TextWhitespace */ .chroma .w { color:#bbb }
 
+/* Light mode syntax highlighting for Pandoc-rendered code (skylighting classes) */
+/* Pandoc's --citeproc pipeline highlights code itself, using its own short
+   class names instead of Chroma's, so it needs its own rules alongside the
+   .chroma ones above; colors are matched to the equivalent Chroma class. */
+pre.sourceCode { background-color:#f0f0f0; }
+.sourceCode .al { color:#f00;font-weight:bold }
+.sourceCode .an { color:#60a0b0;font-style:italic }
+.sourceCode .at { color:#4070a0 }
+.sourceCode .bn { color:#40a070 }
+.sourceCode .bu { color:#007020 }
+.sourceCode .cf { color:#007020;font-weight:bold }
+.sourceCode .ch { color:#4070a0 }
+.sourceCode .cn { color:#60add5 }
+.sourceCode .co { color:#60a0b0;font-style:italic }
+.sourceCode .cv { color:#60a0b0;font-style:italic }
+.sourceCode .do { color:#4070a0;font-style:italic }
+.sourceCode .dt { color:#902000 }
+.sourceCode .dv { color:#40a070 }
+.sourceCode .er { color:#f00;font-weight:bold }
+.sourceCode .ex { color:#007020 }
+.sourceCode .fl { color:#40a070 }
+.sourceCode .fu { color:#06287e }
+.sourceCode .im { color:#007020;font-weight:bold }
+.sourceCode .in { color:#60a0b0;font-style:italic }
+.sourceCode .kw { color:#007020;font-weight:bold }
+.sourceCode .op { color:#666 }
+.sourceCode .ot { color:#007020 }
+.sourceCode .pp { color:#007020 }
+.sourceCode .re { color:#60a0b0;font-style:italic }
+.sourceCode .sc { color:#4070a0;font-weight:bold }
+.sourceCode .ss { color:#517918 }
+.sourceCode .st { color:#4070a0 }
+.sourceCode .va { color:#bb60d5 }
+.sourceCode .vs { color:#4070a0 }
+.sourceCode .wa { color:#60a0b0;background-color:#fff0f0;font-weight:bold }
+
 /* Dark mode syntax highlighting (native theme) */
 
 /* Background */ .dark .bg { color:#d0d0d0;background-color:#202020; }
@@ -154,3 +190,36 @@
 /* GenericTraceback */ .dark .chroma .gt { color:#d22323 }
 /* GenericUnderline */ .dark .chroma .gl { text-decoration:underline }
 /* TextWhitespace */ .dark .chroma .w { color:#666 }
+
+/* Dark mode syntax highlighting for Pandoc-rendered code (skylighting classes) */
+.dark pre.sourceCode { color:#d0d0d0;background-color:#202020; }
+.dark .sourceCode .al { color:#d22323;font-weight:bold }
+.dark .sourceCode .an { color:#999;font-style:italic }
+.dark .sourceCode .at { color:#bbb }
+.dark .sourceCode .bn { color:#3677a9 }
+.dark .sourceCode .bu { color:#24909d }
+.dark .sourceCode .cf { color:#6ab825;font-weight:bold }
+.dark .sourceCode .ch { color:#ed9d13 }
+.dark .sourceCode .cn { color:#40ffff }
+.dark .sourceCode .co { color:#999;font-style:italic }
+.dark .sourceCode .cv { color:#999;font-style:italic }
+.dark .sourceCode .do { color:#ed9d13;font-style:italic }
+.dark .sourceCode .dt { color:#6ab825;font-weight:bold }
+.dark .sourceCode .dv { color:#3677a9 }
+.dark .sourceCode .er { color:#d22323;font-weight:bold }
+.dark .sourceCode .ex { color:#bbb }
+.dark .sourceCode .fl { color:#3677a9 }
+.dark .sourceCode .fu { color:#447fcf }
+.dark .sourceCode .im { color:#6ab825;font-weight:bold }
+.dark .sourceCode .in { color:#999;font-style:italic }
+.dark .sourceCode .kw { color:#6ab825;font-weight:bold }
+.dark .sourceCode .op { color:#d0d0d0 }
+.dark .sourceCode .ot { color:#6ab825 }
+.dark .sourceCode .pp { color:#cd2828;font-weight:bold }
+.dark .sourceCode .re { color:#999;font-style:italic }
+.dark .sourceCode .sc { color:#ed9d13 }
+.dark .sourceCode .ss { color:#ed9d13 }
+.dark .sourceCode .st { color:#ed9d13 }
+.dark .sourceCode .va { color:#40ffff }
+.dark .sourceCode .vs { color:#ed9d13 }
+.dark .sourceCode .wa { color:#e50808;background-color:#520000;font-weight:bold }
