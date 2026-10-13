@@ -14,8 +14,8 @@
          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .futura { font-family: Futura, "Futura Medium", "Century Gothic", "Trebuchet MS", sans-serif; }
   main { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px;
-         padding: 24px 24px 96px; max-width: 1280px; margin: 0 auto; }
-  @media (max-width: 900px) { main { grid-template-columns: 1fr; padding: 16px 16px 96px; } }
+         padding: 24px; max-width: 1280px; margin: 0 auto; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; padding: 16px; } }
   h1 { font-family: Futura, "Futura Medium", "Century Gothic", sans-serif; font-weight: 500;
        font-size: 40px; margin: 0 0 4px; letter-spacing: .01em; }
   .lede { font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif; font-style: italic;
@@ -53,10 +53,7 @@
   .note { font-size: 12px; color: #aaa; line-height: 1.5; margin-top: 10px; }
   .howto { font-size: 15px; line-height: 1.55; max-width: 70ch; }
   .howto ol { padding-left: 20px; }
-  footer { position: fixed; left: 0; right: 0; bottom: 0; background: var(--ink); color: var(--paper);
-           padding: 12px 24px; font-family: Futura, "Futura Medium", "Century Gothic", sans-serif;
-           font-size: 22px; letter-spacing: .02em; }
-  @media (max-width: 600px) { footer { font-size: 16px; } h1 { font-size: 30px; } }
+  @media (max-width: 600px) { h1 { font-size: 30px; } }
 </style>
 </head>
 <body>
@@ -125,7 +122,6 @@
     <p class="note">Auto-rate answers as the dealt persona would. Model: Bradley–Terry reward model over three route features (distance, main-road tiles, park tiles), with all three weights fit by penalised maximum likelihood to every judgement so far. The policy is a shortest-path planner using the learned reward as cost. New pairs are drawn by perturbing the learned weights.</p>
   </aside>
 </main>
-<footer>BREAKOUT 3: REWARD</footer>
 
 <script>
 (() => {
