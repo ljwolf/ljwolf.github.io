@@ -74,6 +74,7 @@
       <span><span class="sw" style="background:#9fd29a"></span>Park</span>
       <span><span class="sw" style="background:#86b9e6"></span>River</span>
       <span><span class="sw" style="background:#8a6a4a"></span>Bridge</span>
+      <span><span class="sw" style="background:#3a3a3a;outline:3px solid #8a6a4a;outline-offset:-3px"></span>Road bridge (counts as main road)</span>
     </div>
     <div class="howto">
       <ol>
@@ -168,9 +169,11 @@
     do { hy = 2 + Math.floor(rng() * (H - 4)); } while (river[idx(vx, hy)]);
     let ry = 0; while (!river[idx(vx, ry)]) ry++;              // where the river crosses the road's column
     const [y0, y1] = hy < ry ? [hy, H - 1] : [0, hy];          // vertical arm runs from the corner across the river
-    for (let y = y0; y <= y1; y++) if (!river[idx(vx, y)]) road[idx(vx, y)] = 1;
+    for (let y = y0; y <= y1; y++) road[idx(vx, y)] = 1;
     const [x0, x1] = rng() < 0.5 ? [0, vx] : [vx, W - 1];      // horizontal arm runs from the corner to one edge
-    for (let x = x0; x <= x1; x++) if (!river[idx(x, hy)]) road[idx(x, hy)] = 1;
+    for (let x = x0; x <= x1; x++) road[idx(x, hy)] = 1;
+    // wherever the road meets the river, it gets a bridge
+    for (let i = 0; i < W * H; i++) if (road[i] && river[i]) bridge[i] = 1;
     // parks
     for (let k = 0; k < 4; k++) {
       const px = 2 + rng() * (W - 4), py = 1 + rng() * (H - 2), r = 1.6 + rng() * 1.6;
@@ -335,9 +338,14 @@
   function render() {
     for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
       const i = idx(x, y);
-      ctx.fillStyle = city.river[i] ? (city.bridge[i] ? "#8a6a4a" : "#86b9e6")
+      const roadBridge = city.river[i] && city.road[i];
+      ctx.fillStyle = roadBridge ? "#8a6a4a" : city.river[i] ? (city.bridge[i] ? "#8a6a4a" : "#86b9e6")
                     : city.road[i] ? "#3a3a3a" : city.park[i] ? "#9fd29a" : "#f2f2f2";
       ctx.fillRect(x * CS, y * CS, CS, CS);
+      if (roadBridge) {                       // road deck on a brown bridge
+        ctx.fillStyle = "#3a3a3a";
+        ctx.fillRect(x * CS + CS * 0.18, y * CS + CS * 0.18, CS * 0.64, CS * 0.64);
+      }
     }
     // grid
     ctx.strokeStyle = "#00000022"; ctx.lineWidth = 1;
