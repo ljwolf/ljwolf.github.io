@@ -79,7 +79,7 @@
         <li>Each round the router proposes two cycling routes from ● to ■. Pick the one your persona would prefer.</li>
         <li>The router never sees your persona, only your clicks. It fits a <i>reward model</i> to them, then plans with that reward.</li>
         <li>After about 15 rounds, press <b>Show router's best route</b>, swap screens with another group, and try to guess their persona from the route and the bars alone.</li>
-        <li>Then <b>Reveal persona</b> to compare what the router learned against what the persona actually wanted.</li>
+        <li>Then <b>Reveal persona</b> to see which persona the router thinks best explains your clicks, and compare what it learned against what the persona actually wanted.</li>
       </ol>
     </div>
   </section>
@@ -368,6 +368,7 @@
     setBar("Road", sh[1], tr[1]);
     setBar("Park", sh[2], tr[2]);
     document.getElementById("undo").disabled = !judgements.length;
+    if (revealed && persona) revealCard();
   }
 
   function stats(F) {
@@ -413,10 +414,45 @@
     render();
   };
   $("peek").onclick = () => { const c = $("personaCard"); c.style.display = c.style.display === "none" ? "block" : "none"; };
+  // Which persona best explains the clicks? Each persona gets its own best-fitting choice scale b,
+  // so a persona can't win just because its weights are bigger numbers; scores become a posterior over personas.
+  function guessPersona() {
+    if (!judgements.length) return null;
+    const scales = Array.from({ length: 60 }, (_, k) => 0.01 * Math.pow(10, k / 20));  // 0.01 .. ~9
+    const ll = PERSONAS.map((p) => {
+      const d = judgements.map((j) => utility(j.A, p.w) - utility(j.B, p.w));
+      let best = -Infinity;
+      for (const b of scales) {
+        let s = 0;
+        judgements.forEach((j, i) => {
+          const q = 1 / (1 + Math.exp(-b * d[i]));
+          s += j.y * Math.log(q + 1e-12) + (1 - j.y) * Math.log(1 - q + 1e-12);
+        });
+        best = Math.max(best, s);
+      }
+      return best;
+    });
+    const m = Math.max(...ll), w = ll.map((v) => Math.exp(v - m)), z = w.reduce((a, b) => a + b, 0);
+    return PERSONAS.map((p, i) => ({ p, prob: w[i] / z })).sort((a, b) => b.prob - a.prob);
+  }
+
+  function revealCard() {
+    const g = guessPersona();
+    let guess = "<br><br><b>THE ROUTER'S GUESS</b>";
+    if (!g) guess += "No judgements yet, so no guess.";
+    else {
+      const top = g[0];
+      guess += `${top.p.name} (${Math.round(100 * top.prob)}%): ${top.p === persona ? "correct!" : "wrong."}<br><br>` +
+               g.map((e) => `${e.p === persona ? "<u>" : ""}${e.p.name}: ${Math.round(100 * e.prob)}%${e.p === persona ? "</u>" : ""}`).join("<br>");
+    }
+    $("personaCard").innerHTML = `<b>${persona.name}</b>${persona.text}${guess}` +
+      `<br><br>Green line: the persona's true best route. Green ticks on the bars: the true weights.`;
+  }
+
   $("reveal").onclick = () => {
     if (!persona) return;
     revealed = true;
-    $("personaCard").innerHTML = `<b>${persona.name}</b>${persona.text}<br><br>Green line: the persona's true best route. Green ticks on the bars: the true weights.`;
+    revealCard();
     $("personaCard").style.display = "block";
     render();
   };
