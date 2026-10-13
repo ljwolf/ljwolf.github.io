@@ -162,10 +162,15 @@
     // bridges at three columns
     const bx = [3 + Math.floor(rng() * 4), 10 + Math.floor(rng() * 4), 17 + Math.floor(rng() * 4)];
     for (const x of bx) for (let y = 0; y < H; y++) if (river[idx(x, y)]) bridge[idx(x, y)] = 1;
-    // main roads: two east-west, two north-south through the outer bridges
-    const rows = [2 + Math.floor(rng() * 3), H - 3 - Math.floor(rng() * 2)];
-    for (const y of rows) for (let x = 0; x < W; x++) if (!river[idx(x, y)]) road[idx(x, y)] = 1;
-    for (const x of [bx[0], bx[2]]) for (let y = 0; y < H; y++) if (!river[idx(x, y)]) road[idx(x, y)] = 1;
+    // one main road in an L: a north-south arm over one of the bridges, meeting an east-west arm at a corner
+    const vx = bx[Math.floor(rng() * 3)];
+    let hy;
+    do { hy = 2 + Math.floor(rng() * (H - 4)); } while (river[idx(vx, hy)]);
+    let ry = 0; while (!river[idx(vx, ry)]) ry++;              // where the river crosses the road's column
+    const [y0, y1] = hy < ry ? [hy, H - 1] : [0, hy];          // vertical arm runs from the corner across the river
+    for (let y = y0; y <= y1; y++) if (!river[idx(vx, y)]) road[idx(vx, y)] = 1;
+    const [x0, x1] = rng() < 0.5 ? [0, vx] : [vx, W - 1];      // horizontal arm runs from the corner to one edge
+    for (let x = x0; x <= x1; x++) if (!river[idx(x, hy)]) road[idx(x, hy)] = 1;
     // parks
     for (let k = 0; k < 4; k++) {
       const px = 2 + rng() * (W - 4), py = 1 + rng() * (H - 2), r = 1.6 + rng() * 1.6;
