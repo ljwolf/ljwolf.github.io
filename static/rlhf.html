@@ -73,8 +73,8 @@
       <span><span class="sw" style="background:#3a3a3a"></span>Main road</span>
       <span><span class="sw" style="background:#9fd29a"></span>Park</span>
       <span><span class="sw" style="background:#86b9e6"></span>River</span>
-      <span><span class="sw" style="background:#8a6a4a"></span>Bridge</span>
-      <span><span class="sw" style="background:#3a3a3a;outline:3px solid #8a6a4a;outline-offset:-3px"></span>Road bridge (counts as main road)</span>
+      <span><span class="sw" style="background:#8a6a4a"></span>Road bridge (counts as main road)</span>
+      <span><span class="sw" style="background:linear-gradient(90deg,#86b9e6 25%,#8a6a4a 25% 75%,#86b9e6 75%)"></span>Footbridge</span>
     </div>
     <div class="howto">
       <ol>
@@ -338,13 +338,14 @@
   function render() {
     for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
       const i = idx(x, y);
-      const roadBridge = city.river[i] && city.road[i];
-      ctx.fillStyle = roadBridge ? "#8a6a4a" : city.river[i] ? (city.bridge[i] ? "#8a6a4a" : "#86b9e6")
+      // road bridges are full brown tiles (and count as main road); footbridges are a thin brown deck over the water
+      const footbridge = city.bridge[i] && !city.road[i];
+      ctx.fillStyle = city.river[i] ? (city.bridge[i] && city.road[i] ? "#8a6a4a" : "#86b9e6")
                     : city.road[i] ? "#3a3a3a" : city.park[i] ? "#9fd29a" : "#f2f2f2";
       ctx.fillRect(x * CS, y * CS, CS, CS);
-      if (roadBridge) {                       // road deck on a brown bridge
-        ctx.fillStyle = "#3a3a3a";
-        ctx.fillRect(x * CS + CS * 0.18, y * CS + CS * 0.18, CS * 0.64, CS * 0.64);
+      if (footbridge) {
+        ctx.fillStyle = "#8a6a4a";
+        ctx.fillRect(x * CS + CS * 0.25, y * CS, CS * 0.5, CS);
       }
     }
     // grid
