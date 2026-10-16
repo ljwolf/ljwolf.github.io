@@ -98,10 +98,13 @@
     <div class="row"><button class="small" id="tie">Can't tell / same</button><button class="small" id="skip">New pair</button></div>
 
     <h3>WHAT THE ROUTER THINKS YOU WANT</h3>
+    <p class="note" style="margin-top:0" id="barsHidden">Hidden until you show the router's best route.</p>
+    <div id="routerBars">
     <p class="note" style="margin-top:0">Each bar is that feature's share of the router's total weight. A negative share means it thinks you want the opposite.</p>
     <div class="bar"><span>Keep it short</span><div class="track"><div class="mid"></div><div class="fill" id="fDist"></div><div class="true" id="tDist"></div></div><span id="vDist">0%</span></div>
     <div class="bar"><span>Avoid main roads</span><div class="track"><div class="mid"></div><div class="fill" id="fRoad"></div><div class="true" id="tRoad"></div></div><span id="vRoad">0%</span></div>
     <div class="bar"><span>Seek out parks</span><div class="track"><div class="mid"></div><div class="fill" id="fPark"></div><div class="true" id="tPark"></div></div><span id="vPark">0%</span></div>
+    </div>
     <div class="row" style="grid-template-columns:1fr"><button id="showBest" aria-pressed="false">Show router's best route</button></div>
 
     <h3>PERSONA</h3>
@@ -368,6 +371,10 @@
     setBar("Road", sh[1], tr[1]);
     setBar("Park", sh[2], tr[2]);
     document.getElementById("undo").disabled = !judgements.length;
+    // the bars give away what the router has learned, so they stay hidden until its route is shown or the persona is revealed
+    const barsOn = showBest || revealed;
+    document.getElementById("routerBars").style.display = barsOn ? "" : "none";
+    document.getElementById("barsHidden").style.display = barsOn ? "none" : "";
     if (revealed && persona) revealCard();
   }
 
